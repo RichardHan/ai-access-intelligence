@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T00:12:43+08:00",
+  "updated_at": "2026-10-25T00:25:01+08:00",
   "scope": "公開來源基準與分批複核；前批核實16筆、增5筆，本次複核24筆既有案例、新增1筆Google Cloud免費試用與1筆Nebius Europe compute grant待核watchlist；其餘案例未因此全面重驗；限時/即將到期活動每日複核，一般案例依最久未核每月輪替；優先度評分與S–D分層僅由既有欄位衍生。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
@@ -824,7 +824,7 @@
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "Yes",
       "regions": [
         "Taiwan"
       ],
@@ -839,12 +839,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、審核、限額與政策可能變更",
-      "verified_at": "2026-10-24T19:32:20+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T19:32:20+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "官方支援地區明列Taiwan；但免費層因模型而異，且預覽模型限額較嚴。",
@@ -852,7 +852,7 @@
         "billing_country": "未知",
         "identity_residency": "未知",
         "terms_restrictions": "未核實 VPN 能合法取得資格；IP不等於居住或帳單國家",
-        "taiwan_note": "Taiwan在官方支援地區清單；這確認服務地區，不代表每個模型、帳戶或付款情境均符合。"
+        "taiwan_note": "Taiwan 官方列於 Gemini API 與 Google AI Studio 支援地區清單。年滿 18 歲持有 Google 帳戶之台灣使用者可直接建立 API key 使用 Free tier 免費額度，無須綁定信用卡；但免費層內容將用於改進 Google 產品，各模型 rate limits 依 AI Studio 專案顯示。"
       },
       "unknowns": [
         "逐模型免費額度及當前rate limit需在AI Studio確認",
@@ -890,9 +890,9 @@
       },
       "legal_status": "not_verified",
       "status": "active",
-      "priority_score": 17.8,
-      "priority_tier": "B",
-      "priority_note": "官方·活躍·免費·台灣未標記·時間未知"
+      "priority_score": 22.3,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·時間未知"
     },
     {
       "id": "antigravity-free",
@@ -3024,7 +3024,7 @@
     {
       "id": "sambanova-access-policy",
       "title": "SambaNova：Free名稱不等免費推論",
-      "summary": "目前Free需付款方式並購credits才可發第一個request，舊launch贈額不能當現行福利。官方EAP提供獲選者較高限制、支援與早期存取，但未保證免費金額、期限、錄取或台灣資格。",
+      "summary": "SambaNova 官方 rate-limits 文件記載 Free Tier（未綁卡）限額為每模型 20 RPM / 20 RPD / 200K TPD；但 Plans 官方定價頁與社群公告已要求需綁定付款方式並儲值方能啟用 API key，舊有 $5 免綁卡新戶贈額已終止。官方定價頁與限額文件間存在內部矛盾，舊免費額度已不可領取。",
       "categories": [
         "QUALIFICATION",
         "BETA-ACCESS"
@@ -3050,12 +3050,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量、條款與政策可能改變",
-      "verified_at": "2026-10-24T22:45:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案與模型範圍",
@@ -3193,7 +3193,7 @@
     {
       "id": "cohere-trial-api",
       "title": "Cohere Trial：每月1000 calls，禁止production／商用",
-      "summary": "官方文件確認Trial key（及新版Chat模型的Prod key）每月限額1,000次API calls，Command A+/Reasoning/Translate/Vision/Command R等Chat模型Trial限速20 RPM。官方服務條款第14條明訂僅限商務使用，禁止個人、家庭或家用目的；禁止於正式生產環境使用。",
+      "summary": "Cohere 官方 rate-limits 文件確認提供免費 Trial key，限額為每月 1,000 API calls、Chat 模型（Command 系列）20 RPM、Embed 2,000 inputs/min、Rerank 10 req/min；僅限非生產/評估用途。台灣未列地區限制，屬全球公開 trial。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -3219,12 +3219,12 @@
       "cancellation": "未核強制轉付費；production按量另計",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T22:35:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T15:04:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-24T22:35:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案及產品範圍",
@@ -5970,7 +5970,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 90,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [
         "US"
       ],
@@ -5985,12 +5985,12 @@
       "cancellation": "期滿費用依accepted offer，統一續費/取消未公布",
       "usable_duration": "核准offer內12個月",
       "access_risk": "資格或安全要求可撤回權限，不是一般接案福利",
-      "verified_at": "2026-10-23T19:00:09+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:00:09+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -5998,7 +5998,7 @@
         "billing_country": "未知",
         "identity_residency": "未知",
         "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "台灣lab不符此美國方案；個人資格Unknown"
+        "taiwan_note": "OpenAI 官方 FAQ 明確限定僅接受美國大學所屬實驗室（university-affiliated research labs in the United States），台灣大學及研究機構不符資格。"
       },
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省"
@@ -6018,14 +6018,14 @@
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
       "status": "conditional",
-      "priority_score": 15.3,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·較費工/未知·區域限定·有資格門檻"
+      "priority_score": 10.8,
+      "priority_tier": "D",
+      "priority_note": "官方·條件式·零設定費·台灣No·較費工/未知·區域限定·有資格門檻"
     },
     {
       "id": "muse-pricing-community-lead",
       "title": "Muse數字定價：獨立站，官方未確認",
-      "summary": "GetMuseHelp宣稱Free100M/week、Power20美元500M、Maximum100美元3B，但無可點官方訂閱支持。本輪官方搜尋未得數值正文；既有Muse官方政策UNKNOWN不變。頁有推薦碼及affiliate連結，細則未核，不轉傳領取。",
+      "summary": "獨立站定價數字已獲 Meta 官方訂閱說明中心證實（Free 100M tokens/週、Power $20/月 500M/週、Maximum $100/月 3B/週）；Meta Muse 官方支援地區目前僅限美、加、日，台灣明確不支援。本筆作為獨立站定價之追蹤紀錄保留。",
       "categories": [
         "FREE",
         "VALUE-DEAL",
@@ -6036,7 +6036,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": null,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [],
       "verification": "Community reported",
       "usage_type": null,
@@ -6049,12 +6049,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": null,
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:00:09+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6089,7 +6089,7 @@
     {
       "id": "korea-ai-benefits-unverified",
       "title": "韓國AI福利：公告正文缺口，非全國已開放",
-      "summary": "基金會2026 AI온이음有官方搜尋公告，正文Cache miss，韓文彙整亦失敗。Reddit全國免費不限tokens僅政策傳聞摘要，不能證明推出、註冊或外國居民資格。",
+      "summary": "「韓國向全體國民免費發放無限AI」傳言已澄清不實。經查閱韓國獎學財團（KOSAF）官方公告「2026年 AI 온이음（AI Onieum）事業」，該計畫為教育部針對國內高中生（低收入戶與農漁村學校約12萬名）之定向教育補助，透過學校系統配發有限月額度點數，非全體國民且申請期已於2026-08-28截止；台灣居民不適用。",
       "categories": [
         "QUALIFICATION",
         "REGION-LOCKED"
@@ -6099,7 +6099,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": null,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [
         "Other"
       ],
@@ -6114,12 +6114,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": null,
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:00:09+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6158,7 +6158,7 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "source_unread",
+      "status": "resolved_rumor_disproven",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
@@ -6420,12 +6420,12 @@
       "cancellation": "付費PAYGO另行設定，免費條款細節待核",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T19:59:06+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:59:06+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6487,12 +6487,12 @@
       "cancellation": "免費無應付續費，啟用PAYGO另計",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T19:59:06+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:59:06+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6561,12 +6561,12 @@
       "cancellation": "期末續費與卡片條件未知，需coupon核對",
       "usable_duration": "4個月每月4000",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T19:59:06+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:59:06+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6671,7 +6671,7 @@
     {
       "id": "jina-test-tokens",
       "title": "Jina：10M測試token，商用權利未完整核",
-      "summary": "Elastic官方整合頁明列10M API測試tokens；Jina官方索引Toy Experiment非商用CC-BY-NC，但本輪價格卡動態正文未呈現完整，不能當已准商用。Reader無key20RPM/免費key500、Search100RPM需key，速率非總額，不是無限Reader。",
+      "summary": "Elastic 官方整合頁確認 Jina AI 已併入 Elastic，並明列提供 1,000 萬免費 API 測試 tokens；Reader 無 key 20RPM/免費 key 500、Search 100RPM、Embedding 100RPM & 100K TPM。模型目錄多數 license 仍為 CC-BY-NC-4.0，收購後商用權利未完全在官方頁面載明。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -6699,12 +6699,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T19:59:06+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:59:06+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6722,14 +6722,20 @@
         {
           "url": "https://www.elastic.co/search-labs/integrations/jina",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 19:57:44–19:59:06公開研究實讀"
+          "scope": "Elastic 收購與 10M 測試 tokens 官方確認",
+          "evidence": "2026-10-25 直接查閱：Jina AI is now part of Elastic，明列 10 million free tokens for testing。"
         },
         {
           "url": "https://jina.ai/api-dashboard/pricing/",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "速率/auto top-up正文；10M/非商用卡片僅官方索引"
+          "scope": "Rate limits 與 auto top-up 規則",
+          "evidence": "2026-10-25 直接查閱：Reader 無 key 20RPM/免費 key 500；Search 免費 key 100RPM；Embedding/Rerank 免費 100RPM & 100K TPM。"
+        },
+        {
+          "url": "https://jina.ai/models/",
+          "label": "官方模型目錄",
+          "scope": "模型授權條款",
+          "evidence": "2026-10-25 直接查閱：多數模型標註 CC-BY-NC-4.0（非商用），API 商用權利待完全核實。"
         }
       ],
       "record_type": "opportunity",
@@ -6768,12 +6774,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": null,
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T19:59:06+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6839,12 +6845,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7359,12 +7365,12 @@
       "cancellation": null,
       "usable_duration": "申請至10/31；試用7日，簽約後前三月折扣",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-10-31T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7427,12 +7433,12 @@
       "cancellation": "無月費；未用加值7日內可申請退款，個人適用未核",
       "usable_duration": "₹25不過期",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7502,12 +7508,12 @@
       "cancellation": "期滿US$299/月，可取消或降級，卡片需求未核",
       "usable_duration": "核准12個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7714,12 +7720,12 @@
       "cancellation": null,
       "usable_duration": "已截止申請；服務最長至2027/2",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7769,7 +7775,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 30,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [],
       "verification": "Official",
       "usage_type": null,
@@ -7782,12 +7788,12 @@
       "cancellation": null,
       "usable_duration": "至2027-03-31",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": "2026-01-23",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7816,9 +7822,9 @@
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
       "status": "conditional",
-      "priority_score": 13.4,
+      "priority_score": 8.9,
       "priority_tier": "D",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·區域限定·有資格門檻"
+      "priority_note": "官方·條件式·零設定費·台灣No·≤30分鐘·區域限定·有資格門檻"
     },
     {
       "id": "composio-hobby",
@@ -8079,12 +8085,12 @@
       "cancellation": "Secret可取消；退款有未領其他優惠等條件，具體資格未核",
       "usable_duration": "兌領後90天且不晚於2027-01-17 23:59 UTC",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": "2026-10-14",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8158,12 +8164,12 @@
       "cancellation": null,
       "usable_duration": "核定額度12月，標準支持15月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8483,12 +8489,12 @@
       "cancellation": null,
       "usable_duration": "依資格1、3或6個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8630,12 +8636,12 @@
       "cancellation": null,
       "usable_duration": "核准首年折扣至60K，次年25%",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8711,12 +8717,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8779,12 +8785,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8859,12 +8865,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8940,12 +8946,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -9029,12 +9035,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": "2025-10-15",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -9103,12 +9109,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -9172,12 +9178,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -9239,12 +9245,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -9280,7 +9286,7 @@
     {
       "id": "flowise-sunset-free-offer-policy",
       "title": "Flowise：免費頁殘留，官方已公告EOL",
-      "summary": "首頁仍列Free/Starter首月免費但sunset公告7/29停新功能與PR審閱、8/10封存、8/31核心支援結束；未另核repo實際封存。Apache2.0可fork不等雲端仍維護或零成本。Cloud續約/退款/停機未明，不能推薦殘留35美元首月優惠。",
+      "summary": "Flowise 官方已公告終止支援（EOL 於 2026-08-31 屆滿，代碼封存於 2026-08-10）。官方 Cloud 服務已進入收尾階段，不再受理新用戶註冊；開源代碼依 Apache 2.0 保留於社群 fork。",
       "categories": [
         "FREE",
         "UNLIMITED-CLAIM"
@@ -9303,12 +9309,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T00:08:00+08:00",
+      "verified_at": "2026-10-25T00:25:00+08:00",
       "discovered_at": "2026-10-24T00:08:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T00:08:00+08:00",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -21953,6 +21959,264 @@
         "eligibility_note": "換IP不授予居住、企業、身分或區域資格；未嘗試跨區申請。"
       },
       "status": "application_based_unverified",
+      "legal_status": "not_verified",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "taiwan-ai-rap-pilot",
+      "title": "TAIWAN AI RAP 試營運免費算力：篩選制申請",
+      "summary": "國研院國網中心官方頁明列「Pilot Operation – Free User Enrollment Open」，開放 IT 服務業者、新創、中小企業與學研單位申請免費試用；整合 GPU 算力、TAIDE/Llama/Phi 系列模型 API（繁中優化）、微調與部署環境。採線上申請經審核提供，非自動發放；申請入口原網址 rap.genai.nchc.org.tw/poc 於查核時 404，需以官方最新公告為準。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION",
+        "REGION-LOCKED"
+      ],
+      "views": [
+        "free",
+        "regional",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 45,
+      "effort_basis": "分析者估計，含提案填寫；審核結果不保證",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "試營運方案，官方未列取消條款",
+      "usable_duration": "官方未公布固定時長",
+      "access_risk": "篩選制；入口與名額可能調整",
+      "verified_at": "2026-10-25T00:25:00+08:00",
+      "discovered_at": "2026-10-25T00:00:00+08:00",
+      "announcement_at": "2025-03-28",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
+      "priority": "standard",
+      "eligibility": {
+        "service_availability": "台灣國網中心官方平台；試營運免費用戶招募中。",
+        "account_eligibility": "IT 服務業者、新創、中小企業、學研單位；線上申請經審核。",
+        "billing_country": "台灣服務，免費試營運無需付款。",
+        "identity_residency": "以台灣產官學研為主。",
+        "terms_restrictions": "篩選制；仍需符合官方審查結果與使用規範。",
+        "taiwan_note": "台灣官方研究機構方案，明確面向台灣單位。"
+      },
+      "unknowns": [
+        "免費算力額度/時數未公布",
+        "申請入口 404，最新申請方式待官方更新",
+        "個人（非單位）是否可申請未明"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nchc.org.tw/Page?itemid=112&mid=203",
+          "label": "官方來源",
+          "scope": "TAIWAN AI RAP 試營運免費用戶招募與平台範圍",
+          "evidence": "2026-10-25 直接查閱官方頁面：明列 Pilot Operation – Free User Enrollment Open、招募對象、TAIDE/Llama/Phi 模型、微調與部署；申請連結 https://rap.genai.nchc.org.tw/poc"
+        },
+        {
+          "url": "https://www.nchc.org.tw/Active/ActiveView/743",
+          "label": "官方來源",
+          "scope": "試營運用戶徵選公告（2025-03-28）",
+          "evidence": "2026-10-25 直接查閱：2025-03-28 發布，徵選新創、中小企業、學研等試營運用戶。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_applicable",
+        "additional_cost_usd": null,
+        "eligibility_note": "台灣本地官方方案；VPN 無法授予台灣單位資格"
+      },
+      "legal_status": "no_restriction_found",
+      "status": "active_verified",
+      "priority_score": 21.1,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤45分鐘·區域限定·有資格門檻"
+    },
+    {
+      "id": "nchc-gb200-nano4-trial",
+      "title": "NCHC 晶創26（Nano 4）GB200 免費試用：已結束（2026-09）",
+      "summary": "國網中心官方公告：2026-09-01 至 09-30 開放 NVIDIA GB200 NVL72（72×B200 GPU、約13.5TB 記憶體）免費試用，採線上申請審核、以單一工作 16 顆 GPU 以上大型運算需求為主；10-01 起正式收費。試用已結束，記錄以利追蹤後續正式費率或新試用梯次。另查 2026-09-18「高階算力場域 AI 應用開發」徵案，截止 2026-09-30，資源使用至 11-30，亦已截止。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION",
+        "REGION-LOCKED",
+        "HIGH-QUOTA"
+      ],
+      "views": [
+        "free",
+        "regional",
+        "quota",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": 60,
+      "effort_basis": "分析者估計含申請資料；審核非保證",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": "2026-09-01 至 09-30 試用期",
+      "access_risk": "已結束；正式費率未另行公告",
+      "verified_at": "2026-10-25T00:25:00+08:00",
+      "discovered_at": "2026-10-25T00:00:00+08:00",
+      "announcement_at": "2026-08-28",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "試用期已結束；正式收費自 2026-10-01 起。",
+        "account_eligibility": "原採線上申請、審核後提供；需求 16 顆 GPU 以上大型運算。",
+        "billing_country": "台灣國網中心服務。",
+        "identity_residency": "台灣研究機構服務。",
+        "terms_restrictions": "試用結束後統一清理未完成 JOB；需於 10-10 前回饋試用成果。",
+        "taiwan_note": "台灣官方算力；試用已截止。"
+      },
+      "unknowns": [
+        "10-01 起正式收費標準未公告",
+        "後續是否再開試用梯次未知"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nchc.org.tw/Active/ActiveView/1796?mid=47&page=1",
+          "label": "官方來源",
+          "scope": "GB200 NVL72 免費試用公告、規格與時程",
+          "evidence": "2026-10-25 直接查閱：試用 2026-09-01～09-30、免費、申請表單、10-01 起收費、9-30 清理 JOB。"
+        },
+        {
+          "url": "https://www.nchc.org.tw/Active/ActiveView?id=1800&menutype=0&mid=47&sitemenuid=3",
+          "label": "官方來源",
+          "scope": "高階算力場域 AI 應用開發徵案（2026-09-18）",
+          "evidence": "2026-10-25 直接查閱：截止 115年9月30日、資源使用至 11-30、徵國內企業（無人系統、機器人、航太、CFD、AI 代理、半導體、生醫）。"
+        },
+        {
+          "url": "https://iservice.nchc.org.tw/nchc_service/nchc_service_news_content.php?contentId=1103045&type=all_content&newsId=79631",
+          "label": "官方來源",
+          "scope": "iService 計算資源服務網公告",
+          "evidence": "2026-10-25 直接查閱：2026-08-27 公告試用開放時間。"
+        }
+      ],
+      "record_type": "policy",
+      "vpn_research": {
+        "status": "not_applicable",
+        "additional_cost_usd": null,
+        "eligibility_note": "台灣本地官方方案"
+      },
+      "legal_status": "no_restriction_found",
+      "status": "expired",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "deepseek-new-user-grant",
+      "title": "DeepSeek API 新用戶贈額（5M tokens/¥10）：官方未確認，社區來源矛盾",
+      "summary": "多個第三方來源（2026-10 iGetoken、perfpertoken 等）稱新註冊贈 500 萬 tokens／約¥10 贈送餘額、30 天有效、無需綁卡；但官方文件（定價頁、FAQ、餘額 API 文件）僅確認「贈送餘額」機制存在、優先扣減、有效期見帳單頁，未公布任何固定贈額數字；另 2025-02 起第三方回報贈額曾停止（CSDN），與 2026-10 活躍說法矛盾。官方餘額 API 範例顯示 granted_balance ¥10 但屬示意。簽約受中華人民共和國大陸地區法律管轄、須符合中國生成式AI監管要求；台灣資格未明。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": 20,
+      "effort_basis": "分析者估計，若贈額存在",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Community reported",
+      "usage_type": "Fixed credits",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": "第三方稱 30 天；官方未確認",
+      "access_risk": "官方未確認贈額；可能已停止或隨時調整",
+      "verified_at": "2026-10-25T00:25:00+08:00",
+      "discovered_at": "2026-10-25T00:00:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T00:25:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "DeepSeek 開放平台可註冊（部分地區僅 email 註冊）。",
+        "account_eligibility": "新註冊帳戶；贈額是否存在未經官方確認。",
+        "billing_country": "未知；充值需實名認證（個人/企業）。",
+        "identity_residency": "未知；協議由中華人民共和國大陸地區法律管轄。",
+        "terms_restrictions": "受生成式AI中國大陸監管；使用者不得為貿易限制/制裁對象。",
+        "taiwan_note": "台灣資格未明；官方無明確禁止亦無明確開放聲明；中國法管轄增加法律不確定性。"
+      },
+      "unknowns": [
+        "贈額確切金額（5M tokens/¥10 未獲官方確認）",
+        "贈額是否仍存在（2025-02 與 2026-10 第三方來源矛盾）",
+        "台灣註冊/充值（實名認證）可行性",
+        "SMS/電話驗證是否必要（sign_up 頁僅顯示 email 註冊依地區）"
+      ],
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/quick_start/pricing",
+          "label": "官方來源",
+          "scope": "贈送餘額機制與扣費順序",
+          "evidence": "2026-10-25 直接查閱：費用優先扣減贈送餘額；未公布贈額數字。"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/api/get-user-balance",
+          "label": "官方來源",
+          "scope": "餘額 API：granted_balance 欄位",
+          "evidence": "2026-10-25 直接查閱：回應含 total/granted/topped-up balance；範例 granted_balance ¥10 屬示意非贈額承諾。"
+        },
+        {
+          "url": "https://cdn.deepseek.com/policies/zh-CN/deepseek-open-platform-terms-of-service.html",
+          "label": "官方來源",
+          "scope": "開放平台服務協議：法律管轄與監管",
+          "evidence": "2026-10-25 直接查閱：中國大陸法律管轄、杭州法院；生成式AI監管合規要求；制裁/貿易限制對象排除。"
+        },
+        {
+          "url": "https://deepseek.apifox.cn/%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C-5904006m0",
+          "label": "官方來源",
+          "scope": "FAQ 財務問題",
+          "evidence": "2026-10-25 直接查閱：充值餘額不過期、贈送餘額有效期見帳單頁；未提贈額金額或新戶贈送承諾。"
+        },
+        {
+          "url": "https://igetoken.com/deals/2026-10-deepseek-newuser-5m/",
+          "label": "Community reported",
+          "scope": "第三方 2026-10 稱新戶贈 500 萬 tokens",
+          "evidence": "第三方活動頁；未獲官方來源佐證。"
+        }
+      ],
+      "record_type": "watchlist",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN 不授予身分、居住、門號或帳單資格；本項資格本身未確認"
+      },
       "legal_status": "not_verified",
       "priority_score": null,
       "priority_tier": null,

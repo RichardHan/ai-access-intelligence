@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：303 筆，包含 230 筆福利研究、40 筆政策、33 筆待覆核線索；不是 303 項可直接領取的優惠。資料集更新至 2026-10-25 00:12:43 Asia/Taipei。前批複核16筆並新增5筆；本次再複核24筆既有案例：時效/政策9筆（Meta Muse、Muse Wonder、Fire Pass、AICU AP、Codex 學生與 Composer、Deepgram Speak/Flux、v0）、新創7筆（Sarvam、ElevenLabs、Modal、Nebius Builder/Startup、Tavily、Algolia）、開發者/教育8筆（AMD、Qoder Free/Lite/Community、Kiro、TinyFish、JetBrains、Thunder）。新增 Google Cloud US$300/90天試用；未升級不自動扣款，台灣個別付款/身分資格未核。另加入 Nebius Europe Compute Grants 待核 watchlist：官方頁列歐洲開放AI開發者/研究團隊，但額度、截止與完整資格未公布，台灣資格 Unknown。重要差異：Codex 學生優惠不適用台灣本地居住/就學情境；Nebius Builder 限原型且超分配30%可自動暫停；Algolia現行條款為7年/US$15M，舊版只在封存文件；Qoder Lite官方活動頁與定價頁獎勵數字矛盾。其餘277筆未於本次直接核實；截至資料更新時間27筆已過next_review_at。限時/即將到期每日複核，其餘依最久未核按月輪替。
+目前資料：306 筆，包含 231 筆福利研究、41 筆政策、34 筆待覆核線索；不是 306 項可直接領取的優惠。資料集更新至 2026-10-25 00:25:00 Asia/Taipei。本次全面複核 30 筆既有案例（清空全部 27 筆 overdue 到期案例並細化 3 筆）：Rosalind Academic（確認 US-only，台灣 No）、Jina 測試 token（官方證實併入 Elastic 並具 10M 免費測試 token）、Suitup 日本試用（10/31 到期倒數）、Meeting Ink（台灣團隊方案，台灣 Yes）、みんなのコード（日本學校限定，台灣 No）、DigitalOcean Secret/GPU 政策、Notion/Retool 新創福利、Dify 教育與 Sandbox（200 credits 總額）、CodeRabbit OSS、Together 新創與研究、Cerebras 早期存取與 Ambassador、Flowise sunset 終止、Gemini API（台灣官方支援地區確認，升級為 S 級）、SambaNova 與 Cohere 限額。新解決 2 項傳聞/獨立站線索：韓國全體免費 AI 傳言證實為高中生特定補助且已截止；Muse 獨立站定價獲 Meta 官方訂閱中心證實（台灣不支援）。新增 3 筆：國網中心 TAIWAN AI RAP 試營運免費算力（台灣 Yes）、NCHC GB200 試用結束政策紀錄、DeepSeek 新戶 5M 贈額 watchlist。其餘 273 筆未於本次直接核實；截至更新時間已無過期 next_review_at。限時/即將到期每日複核，其餘依最久未核按月輪替。
 
 ## 使用方式
 
