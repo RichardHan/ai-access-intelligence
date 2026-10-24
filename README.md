@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：329 筆，包含 246 筆福利研究、43 筆政策、40 筆待覆核線索；非329項可直接領取優惠。資料集更新至 2026-10-25 03:45 Asia/Taipei。本輪直接複核既有案例16筆（Neon/Databricks、Vapi、Friendli、Letta、CodeRabbit、CodeBuddy、Photoroom×2、Relevance AI、HKT.AI csl、Hume AI Voice、Activepieces、Retell AI、Devin、Suno、Ollama Cloud），皆以官方正文對照；新增3筆官方機會（IBM watsonx.ai Lite、LLM7.io、River AI）與2筆待覆核watchlist（Anthropic AI for Science、Inference.net Grants）。原有324筆既有案例仍有308筆未複核；未全面重查。重要變更：Relevance AI官方文件確認Free退役並轉為expired；Activepieces官方專文定案每月1,000 credits解決日/月重置衝突；Devin新增Max $200/月方案並確認SWE-2於Pro免費；Ollama Cloud新增Max $100/月方案並公開並發限制；Suno收款貨幣不含TWD加註付款為條件式；Vapi現行確認$5 free credits；CodeRabbit補齊Team基價$48/user/mo；Letta定價可讀並確認採rotating free models與BYOK。IBM watsonx.ai官方條款PayGo信用卡排除國不含台灣，符合台灣S級標準。台灣資格與付款僅在官方明確支持的欄位判定；法律/監管結論未核實。資料更新不代表全庫重新核實。
+目前資料：336筆，包含252筆機會、43筆政策、41筆待覆核線索；非336項可直接領取優惠。資料集更新至2026-10-25 03:56 Asia/Taipei。本次實讀複核既有3筆（Meta Global AI Developer Hackathon、Claude Team plan for scientists、Vercel Laya），新增6筆機會（Claude for Nonprofits、ChatGPT for Teachers、Claude for Teachers、Snowflake AI Data Cloud trial、Deno Deploy Free、Vultr Match）及1筆待覆核Vultr新客代碼線索；329筆原有紀錄中326筆未於本次重查，未全面重核。重要限制：Meta正式規則尚未發布且waiver頁無法讀取；Claude科學家方案條款雖列台灣於2026-11-12起生效區域政策中，該日期尚未到且在台機構/付款資格仍未知；ChatGPT/Claude教師福利限美國K–12教職；Anthropic非營利台灣等同資格未核；Snowflake試用AI需信用卡啟用且轉付費需手動升級、Cortex Code $40/$400來源不一致；Vultr Match需先存款、GPU抵用資格未知。法律/監管結論未核實；資料更新不代表全庫重新核實。
 
 ## 使用方式
 
