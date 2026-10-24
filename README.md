@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：336筆，包含252筆機會、43筆政策、41筆待覆核線索；非336項可直接領取優惠。資料集更新至2026-10-25 04:01 Asia/Taipei。本次實讀複核既有3筆（Meta Global AI Developer Hackathon、Claude Team plan for scientists、Vercel Laya），新增6筆機會（Claude for Nonprofits、ChatGPT for Teachers、Claude for Teachers、Snowflake AI Data Cloud trial、Deno Deploy Free、Vultr Match）及1筆待覆核Vultr新客代碼線索；329筆原有紀錄中326筆未於本次重查，未全面重核。重要限制：Meta正式規則尚未發布且waiver頁無法讀取；Claude科學家方案條款雖列台灣於2026-11-12起生效區域政策中，該日期尚未到且在台機構/付款資格仍未知；ChatGPT/Claude教師福利限美國K–12教職；Anthropic非營利台灣等同資格未核；Snowflake試用AI需信用卡啟用且轉付費需手動升級、Cortex Code $40/$400來源不一致；Vultr Match需先存款、GPU抵用資格未知。法律/監管結論未核實；資料更新不代表全庫重新核實。
+目前資料：338筆，包含254筆機會、43筆政策、41筆待覆核線索；非338項可直接領取優惠。資料集更新至2026-10-25 04:25 Asia/Taipei。本次實讀複核既有8筆（Meta Global AI Developer Hackathon、Anthropic生命科學客座研究員徵案、Deepgram Speak現場報到、Deepgram Flux TTS、Picsart WAN 3.0、Adobe Firefly 12個月無限促銷、Voyage AI免費額度、DeepSeek API新用戶贈額與法源），新增2筆機會（Poe每日免費運算點數、JetBrains Student Pack全套IDE與AI Assistant）；336筆原有紀錄中328筆未於本次重查，未全面重核。重要限制：Meta黑客松申請即將於10/25 11:59 PM ET（台灣10/26 11:59 AM）截止且正式規則全文尚未發布；Anthropic客座研究員需於錄取14天內取得機構同意函且商業公司排除；Voyage AI免費tokens不適用Batch API；DeepSeek依台灣數發部公告為公務機關禁用但民間未限；Deepgram Speak需赴美親至舊金山現場報到；Picsart WAN 3.0 Prime未納入免點條款；Poe每日點數由系統動態調配且不滾存；JetBrains教育授權嚴格限非商業學術使用。法律/監管結論除有明確官方來源外皆標未核實；資料更新不代表全庫重新核實。
 
 ## 使用方式
 
