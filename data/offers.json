@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-24T22:45:00+08:00",
-  "scope": "公開來源基準與分批複核；2026-10-24 本批次複核既有案例並新增機會研究；其餘歷史條目未全面重驗；優先度評分與 S–D 分層為既有欄位衍生計算。",
+  "updated_at": "2026-10-24T22:46:18+08:00",
+  "scope": "公開來源基準與分批複核；2026-10-24 本批次複核既有案例並新增機會研究；其餘歷史條目未全面重驗；優先度評分與 S–D 分層為既有欄位衍生計算。；2026-10-24 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -2749,12 +2749,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量、條款與政策可能改變",
-      "verified_at": "2026-10-23T14:02:00+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T14:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案與模型範圍",
@@ -2776,6 +2776,12 @@
           "label": "官方來源",
           "scope": "批次列明的公開方案與限制，非個人帳戶核驗",
           "evidence": "2026-10-23 14:00–14:02 公開研究批次查閱"
+        },
+        {
+          "url": "https://docs.mistral.ai/admin/billing-usage/usage-limits",
+          "label": "官方文檔",
+          "scope": "組織與Workspace用量上限及API速率限制架構",
+          "evidence": "2026-10-24直接查閱：Free mode由組織與Workspace共享月用量與速率限制（TPM/RPS），額外用量以預付額度抵扣，不自動升級付費tier。"
         }
       ],
       "record_type": "policy",
@@ -2787,7 +2793,8 @@
       "status": "conditional",
       "priority_score": null,
       "priority_tier": null,
-      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+      "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "legal_status": "not_verified"
     },
     {
       "id": "mistral-education-unresolved",
@@ -3033,12 +3040,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量、條款與政策可能改變",
-      "verified_at": "2026-10-23T14:02:00+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T14:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案與模型範圍",
@@ -3058,7 +3065,7 @@
           "url": "https://cloud.sambanova.ai/plans",
           "label": "官方來源",
           "scope": "批次列明的公開方案與限制，非個人帳戶核驗",
-          "evidence": "2026-10-23 14:00–14:02 公開研究批次查閱"
+          "evidence": "2026-10-24直接查閱官方定價頁：Free方案需綁定付款方式並購買額度才能開始發送推論請求；早期促銷贈額已停止。"
         },
         {
           "url": "https://sambanova.ai/blog/sambanova-cloud-developer-tier-is-live",
@@ -3088,7 +3095,8 @@
       "status": "conditional",
       "priority_score": null,
       "priority_tier": null,
-      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+      "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "legal_status": "not_verified"
     },
     {
       "id": "fireworks-glimmer-sft",
@@ -3279,12 +3287,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T15:04:00+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T15:04:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T15:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案及產品範圍",
@@ -3304,7 +3312,7 @@
           "url": "https://support.together.ai/articles/1862638756-changes-to-free-tier-and-billing-july-2025",
           "label": "官方來源",
           "scope": "現行頁相對更新時間，非精確生效日",
-          "evidence": "2026-10-23 15:03–15:04 公開研究批次查閱"
+          "evidence": "2026-10-24直接查閱官方知識庫：確認Together AI不提供免費用量試用或註冊贈額，初次調用最低需購買US$5預付額度。"
         }
       ],
       "record_type": "policy",
@@ -3317,7 +3325,8 @@
       "setup_cost_basis": "至少US$5基價，稅未知，含稅總額<=10未保證",
       "priority_score": null,
       "priority_tier": null,
-      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+      "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "legal_status": "not_verified"
     },
     {
       "id": "together-150-unresolved",
@@ -3496,7 +3505,7 @@
       "announcement_at": "2026-08-26",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T15:00:00+08:00",
+      "next_review_at": null,
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案及產品範圍",
@@ -4524,7 +4533,7 @@
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T17:05:46+08:00",
+      "next_review_at": null,
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -4588,12 +4597,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T17:05:46+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T17:05:46+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -4612,7 +4621,7 @@
           "url": "https://www.runpod.io/startup-program",
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 17:04–17:05:46公開研究批次實讀"
+          "evidence": "2026-10-24直接查閱官方新創頁：Starter Tier提供US$1,000免費算力額度，適用具備實際AI負載之早期新創；Growth Tier為儲值50,000美元贈送25,000美元。"
         }
       ],
       "record_type": "opportunity",
@@ -4625,7 +4634,8 @@
       "setup_cost_basis": "0只指獲准Starter；Growth非此0成本範圍",
       "priority_score": 18.1,
       "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤45分鐘·有資格門檻"
+      "priority_note": "官方·條件式·零設定費·台灣未標記·≤45分鐘·有資格門檻",
+      "legal_status": "not_verified"
     },
     {
       "id": "amd-developer-credits",
@@ -5026,12 +5036,12 @@
       "cancellation": "超額與到期後扣費，需停止付費資源；具體取消流程未核",
       "usable_duration": "最長一年，舊戶升額不延原到期",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T18:01:35+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T18:01:35+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -5051,6 +5061,12 @@
           "label": "官方來源",
           "scope": "現行Tier3及產品上限；官方回述Tier3由5000升10000、Tier1由250000升350000，非本庫既往快照",
           "evidence": "2026-10-23 18:00:06–18:01:35公開研究實讀"
+        },
+        {
+          "url": "https://developers.cloudflare.com/changelog/post/2026-08-07-workers-ai-unified-billing/",
+          "label": "官方更新公告",
+          "scope": "Workers AI與AI Gateway統一計費與速率限制放寬",
+          "evidence": "2026-10-24直接查閱：Workers AI與AI Gateway完成統一計費，預付額度可直接抵扣前沿模型推論（Kimi K2.6、GLM 5.2放寬至50 RPM）；Tier 3新創總額10,000美元維持Workers AI上限2,500美元。"
         }
       ],
       "record_type": "opportunity",
@@ -5062,7 +5078,8 @@
       "status": "conditional",
       "priority_score": 17.3,
       "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·較費工/未知·有資格門檻"
+      "priority_note": "官方·條件式·零設定費·台灣未標記·較費工/未知·有資格門檻",
+      "legal_status": "not_verified"
     },
     {
       "id": "elevenlabs-startup-grant",
@@ -5175,12 +5192,12 @@
       "cancellation": "刪Workspace及移除付款方式需客服；未實測取消",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T18:01:35+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T18:01:35+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -5199,7 +5216,7 @@
           "url": "https://modal.com/pricing",
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 18:00:06–18:01:35公開研究實讀"
+          "evidence": "2026-10-24直接查閱官方定價：Starter方案月費US$0，每月自動循環發放US$30免費算力額度與3席位，需綁定信用卡，超額按用量月結。"
         },
         {
           "url": "https://modal.com/docs/guide/billing",
@@ -5224,7 +5241,8 @@
       "setup_cost_basis": "固定月費0，超過贈額的使用費另計",
       "priority_score": 18.1,
       "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘"
+      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘",
+      "legal_status": "not_verified"
     },
     {
       "id": "modal-qualified-grants",
@@ -5479,7 +5497,7 @@
       "announcement_at": "2026-06-30",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T18:01:35+08:00",
+      "next_review_at": null,
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -20742,6 +20760,298 @@
       "priority_score": 22.1,
       "priority_tier": "A",
       "priority_note": "官方·活躍·免費·台灣未標記·≤10分鐘"
+    },
+    {
+      "id": "copilot-free",
+      "title": "GitHub Copilot Free：VS Code 每月 2,000 次代碼補全與免費 AI Credits",
+      "summary": "GitHub 官方常態免費方案（Copilot Free），面向未持有組織/企業席位的個人開發者。每月提供 2,000 次編輯器行內代碼建議（completions），並附帶 Copilot Chat 每月 GitHub AI Credits 配額。支援 VS Code Agent mode、Model Context Protocol (MCP) 與個人自訂指令。模型由系統自動配置。無需綁定信用卡，不限試用期。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 15,
+      "effort_basis": "分析者估計，已具備GitHub帳號且於VS Code安裝外掛之登入啟用時間",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "High quota",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費方案無訂閱扣款風險，可隨時自個人設定關閉或移除外掛",
+      "usable_duration": "常態永久方案，無活動截止期限，每月自動重置配額",
+      "access_risk": "模型由系統自動配置不可手動指定進階旗艦模型，每月額度耗盡後行內補全暫停至次月重置",
+      "verified_at": "2026-10-24T22:45:00+08:00",
+      "discovered_at": "2026-10-24T22:40:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "全球開放個人開發者使用（排除美國制裁地區）",
+        "account_eligibility": "個人GitHub帳號，且未透過所屬組織/企業獲派Copilot席位",
+        "billing_country": "全球開放，不需填寫帳單國別或付款方式",
+        "identity_residency": "無學生或企業身分限制，個人開發者皆可使用",
+        "terms_restrictions": "遵循GitHub服務條款與Copilot合理使用規範，禁止多開帳號濫用或自動化刷取配額",
+        "taiwan_note": "台灣開發者可直接以台灣網路環境及一般GitHub帳號登入VS Code啟用，無需信用卡或跨區VPN"
+      },
+      "unknowns": [
+        "每月對話用 GitHub AI Credits 的確切點數與換算比例",
+        "Auto model selection 背後分配之底層模型隨時調整細節"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.github.com/en/copilot/get-started/plans",
+          "label": "官方來源",
+          "scope": "方案功能、配額限制與支援項目",
+          "evidence": "2026-10-24直接查閱：Copilot Free方案確認每月2,000次completions，含GitHub AI Credits配額、Agent mode、MCP及Auto model selection；無信用卡要求。"
+        },
+        {
+          "url": "https://github.blog/news-insights/product-news/github-copilot-in-vscode-free/",
+          "label": "官方公告",
+          "scope": "免費方案發布與適用對象",
+          "evidence": "2026-10-24直接查閱：GitHub官方宣布VS Code內建Copilot Free永久免費層，面向全體個人開發者開放。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需VPN。"
+      },
+      "legal_status": "not_verified",
+      "status": "active",
+      "priority_score": 26.6,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘"
+    },
+    {
+      "id": "deepl-api-free",
+      "title": "DeepL API Free：每月 500,000 字元免費翻譯額度",
+      "summary": "DeepL 官方常態免費開發者 API 方案（DeepL API Free）。每月提供 500,000 字元文字翻譯額度，最多可建立 2 組有效 API Key。支援 REST API 介面與官方 SDK。註冊需輸入信用卡以作防詐欺驗證，但在額度內完全不扣款，超過 500,000 字元時自動停止請求，無意外超額帳單風險。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 15,
+      "effort_basis": "分析者估計，含註冊帳號與信用卡身分防偽驗證時間",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費方案無月租扣款，可於管理後台隨時取消訂閱或刪除帳號",
+      "usable_duration": "常態永久方案，每月重置 500,000 字元額度",
+      "access_risk": "需綁定信用卡通過防偽驗證；免費版文字會用於改善模型（付費Pro版則不保留）",
+      "verified_at": "2026-10-24T22:45:00+08:00",
+      "discovered_at": "2026-10-24T22:40:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "官方支援國家名單，包含台灣、日本、歐盟、美國等主要市場",
+        "account_eligibility": "需具備有效電子郵件與供防詐驗證之有效信用卡",
+        "billing_country": "台灣（Taiwan）列入官方支援名單，可選擇台灣為帳單國家",
+        "identity_residency": "無限制，個人與企業均可申請 API Free 方案",
+        "terms_restrictions": "僅限合法翻譯需求，每人限持一個免費 API 帳戶，禁止重複註冊規避字數限制",
+        "taiwan_note": "Taiwan 明列於 DeepL 官方支援國家名單，台灣發行之信用卡可順利通過驗證啟用"
+      },
+      "unknowns": [
+        "台灣特定發卡銀行之 3D 驗證扣款 0 元授權相容性",
+        "免費版 API 端點對於高併發請求的具體 Concurrency 限制"
+      ],
+      "sources": [
+        {
+          "url": "https://support.deepl.com/hc/en-us/articles/360020685720-Usage-count-and-billing-in-DeepL-API",
+          "label": "官方說明中心",
+          "scope": "API Free 額度定義與計費政策",
+          "evidence": "2026-10-24直接查閱：官方明載 DeepL API Free 每月免費提供 500,000 字元翻譯額度，超額不自動升級收費。"
+        },
+        {
+          "url": "https://support.deepl.com/hc/en-us/articles/360020016339-Countries-and-regions-where-DeepL-paid-plans-are-available",
+          "label": "官方支援地區清單",
+          "scope": "國家與帳單地區相容性",
+          "evidence": "2026-10-24直接查閱：官方國家名單之 Asia 區域明確列出 Taiwan。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需VPN。"
+      },
+      "legal_status": "not_verified",
+      "status": "active",
+      "priority_score": 26.6,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘"
+    },
+    {
+      "id": "mistral-vibe-free",
+      "title": "Mistral Vibe（原 Le Chat）：免費網頁與行動版 AI 工作與對話助理",
+      "summary": "Mistral 官方對話與工作代理產品 Vibe（前身為 Le Chat）。2026年9月升級後將對話（Chat）與多步驟專業任務（Work）整合為單一介面，提供快速模式與深度推理（fast/think toggle）。內建聯網搜尋、文件上傳解析、代碼生成與 Canvas 功能。提供常態免費方案（Free plan），完全不需綁定信用卡。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 10,
+      "effort_basis": "分析者估計，註冊帳號並開始在網頁/App對話時間",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "NO FIXED CAP PUBLISHED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費方案無月租費用，可隨時停止使用或於後台刪除帳號",
+      "usable_duration": "常態永久方案，無活動截止期",
+      "access_risk": "免費方案高峰期可能面臨排隊或速度調控；Canvas 與進階 Agent 工具設有每日用量上限",
+      "verified_at": "2026-10-24T22:45:00+08:00",
+      "discovered_at": "2026-10-24T22:40:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "全球開放，支援網頁（chat.mistral.ai）及 iOS/Android App",
+        "account_eligibility": "年滿 18 歲個人使用者，支援 Google/Apple/Email 登入",
+        "billing_country": "免費方案無地區或帳單付款要求",
+        "identity_residency": "無身分或居住限制",
+        "terms_restrictions": "遵循 Mistral 服務條款，禁止將輸出用於非法用途或模型蒸餾訓練",
+        "taiwan_note": "台灣使用者可直接連線 chat.mistral.ai 註冊使用，App Store / Google Play 均可正常下載，無需 VPN"
+      },
+      "unknowns": [
+        "Free 方案在高峰期對於最新前沿模型（Mistral Large 等）之確切限速次數",
+        "Canvas 每日免費用量具體次數上限"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.mistral.ai/vibe",
+          "label": "官方產品文檔",
+          "scope": "Vibe 功能架構與模式說明",
+          "evidence": "2026-10-24直接查閱：Vibe 將 Chat 與 Work 整合，提供 fast/think 切換，支援 Web、Mobile 與編輯器，提供免費方案。"
+        },
+        {
+          "url": "https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe",
+          "label": "官方說明中心公告",
+          "scope": "Le Chat 更名與方案繼承",
+          "evidence": "2026-10-24直接查閱：確認 Le Chat 正式更名為 Vibe，保留原有帳號與歷史紀錄，免費層功能持續提供。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本服務台灣原生可用，無需VPN。"
+      },
+      "legal_status": "not_verified",
+      "status": "active",
+      "priority_score": 26.6,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤10分鐘"
+    },
+    {
+      "id": "supermaven-sunset-policy",
+      "title": "Supermaven：已併入 Cursor 並停止新付費，現行免費補全維持過渡",
+      "summary": "Supermaven 官方公告正式併入 Cursor 團隊，停止銷售新付費訂閱，並對現有付費訂閱進行退款。目前僅為既有使用者提供過渡期之免費自動補全推論，團隊已全面轉向 Cursor 產品開發。社群流傳之 100 萬 token 長上下文專利補全已不再作為獨立商用服務推廣。",
+      "categories": [
+        "REGION-LOCKED"
+      ],
+      "views": [
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "分析者估計",
+      "taiwan": "No",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "既有付費方案已由官方自動全額退款並停止續訂",
+      "usable_duration": "過渡期服務，隨時可能全面終止",
+      "access_risk": "產品已進入 Sunset 停止維護階段，不建議新工作流採用",
+      "verified_at": "2026-10-24T22:45:00+08:00",
+      "discovered_at": "2026-10-24T22:40:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "已停止新使用者付費加入，過渡支援既有用戶",
+        "account_eligibility": "新使用者無法購買或取得長期服務保證",
+        "billing_country": "不適用，已關閉計費通道",
+        "identity_residency": "未知",
+        "terms_restrictions": "官方服務進入下線收尾階段",
+        "taiwan_note": "不建議台灣使用者嘗試作為新工具採用，應直接評估 Cursor 或其他替代方案"
+      },
+      "unknowns": [
+        "既有用戶免費自動補全伺服器的確切關閉日期"
+      ],
+      "sources": [
+        {
+          "url": "https://supermaven.com/blog/sunsetting-supermaven",
+          "label": "官方公告",
+          "scope": "團隊併購、退款與停服政策",
+          "evidence": "2026-10-24直接查閱：Supermaven 公告加入 Cursor，全額退款既有用戶並停止付費訂閱，僅維持既有用戶有限過渡補全。"
+        }
+      ],
+      "record_type": "policy",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。"
+      },
+      "legal_status": "not_verified",
+      "status": "sunset_announced",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
   "latest_research_at": "2026-10-24T21:49:30+08:00"
