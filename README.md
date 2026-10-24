@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：296 筆，包含 225 筆福利研究、39 筆政策、32 筆待覆核線索，不是 296 項可直接領取的優惠。資料集更新至 2026-10-24 23:35:00 Asia/Taipei。前批已核對4筆既有案例。此批直接複核12筆既有案例（Browserbase 免費層擴充與模型額度、Cloudflare 學生方案服務級用量與兌換規則、Granola 學生限量版與學生證驗證、Granola 新創排除自籌與投資人門檻、Composio Hobby 擴充 1M 沙箱 LLM tokens、Composio 新創 6 個月 Pro 與 5M 募資上限、Replicate 免綁卡試跑與計費、OpenAI Student Collective 截止且未開放新期、E2B 新創 20K 額度與 100 並發、LangSmith 新創 Build 折扣與 Scale 額度、Baseten 新創推論與模型 API 分離、Pinecone 新創 Standard 方案與支援）；新增3筆（Upstash Vector 每日 10K 向量查詢免費層、Upstash QStash 每日 1K 訊息與 Workflow 免費層、GitHub Models 2026-07-30 退役政策紀錄）。其餘281筆既有案例未於本批直接核實；仍有46筆已到複核日，先按限時風險及最久未核順序處理。優先度評分與 S–D 分層由既有欄位衍生計算。
+目前資料：301 筆，包含 229 筆福利研究、40 筆政策、32 筆待覆核線索，不是 301 項可直接領取的優惠。資料集更新至 2026-10-24 23:35:00 Asia/Taipei。此批直接複核16筆既有案例（Meta Muse 訂閱公開與台灣未開放、Meta Muse Wonder 模型 rollout、v0 新舊戶額度與 10/23 文件、AICU 10/22 條款與 AP 評估用途、Mango Inference 官方 $10 額度、Fire Pass 維持關閉新訂閱、Gladia 新創條款實讀與台灣合格、Sarvam ₹100 永不過期與新創標記、Deepgram Speak '26 現場出席硬性截止、Deepgram Flux TTS 1:1 match 至年底、Replit Free Mode 計費涵蓋範圍、ElevenLabs 新創 33M 與轉 Free 規則、AMD 開發者 30 天/90 天二選一、Nebius Builder 90 天效期與制裁審查、Nebius 新創 VC $5M 門檻、Modal 新創/學術綁卡防濫用）；新增5筆（Qdrant Cloud 1GB RAM 永久免費叢集、Supabase Free 2 專案含 pgvector 原生支援、Pinecone Starter 免費 Serverless 向量庫、Weaviate Cloud 100K 物件免費叢集、Hyperbolic 推論需儲值 $5 轉 Pro 政策紀錄）。其餘280筆既有案例未於本批直接核實；仍有30筆已到複核日，先按限時風險及最久未核順序輪替處理。優先度評分與 S–D 分層由既有欄位衍生計算。
 
 ## 使用方式
 

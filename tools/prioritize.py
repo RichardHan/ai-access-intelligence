@@ -103,7 +103,8 @@ def main():
         o["priority_note"] = note_of(o, o.get("priority_score"))
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
     data["updated_at"] = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
-    data["scope"] += "；" + now.strftime("%Y-%m-%d") + " 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）"
+    if "加入優先度評分與 S–D 分層" not in data.get("scope", ""):
+        data["scope"] += "；" + now.strftime("%Y-%m-%d") + " 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）"
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2))
     print("優先度已寫入：", " ".join(f"{t}={counts[t]}" for t in (*TIERS, "未評級")))
 
