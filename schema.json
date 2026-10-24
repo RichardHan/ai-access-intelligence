@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "updated_at",
+    "offers"
+  ],
+  "properties": {
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "categories",
+          "sources",
+          "verified_at",
+          "taiwan",
+          "quota_classification",
+          "setup_cost_usd",
+          "recurring_cost_usd",
+          "benefit_cost_ratio",
+          "eligibility",
+          "unknowns",
+          "record_type"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "taiwan": {
+            "enum": [
+              "Yes",
+              "No",
+              "Unknown"
+            ]
+          },
+          "verification": {
+            "enum": [
+              "Official",
+              "Community reported",
+              "Unverified"
+            ]
+          },
+          "quota_classification": {
+            "enum": [
+              "OFFICIALLY UNLIMITED",
+              "NO FIXED CAP PUBLISHED",
+              "HIGH BUT LIMITED",
+              "TEMPORARILY UNLIMITED",
+              "UNKNOWN"
+            ]
+          },
+          "setup_cost_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "recurring_cost_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "benefit_cost_ratio": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "FREE",
+                "LOW-COST",
+                "VALUE-DEAL",
+                "EASY-EFFORT",
+                "QUALIFICATION",
+                "REGION-LOCKED",
+                "HIGH-QUOTA",
+                "UNLIMITED-CLAIM",
+                "BETA-ACCESS"
+              ]
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "url",
+                "scope",
+                "evidence"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "pattern": "^https://"
+                }
+              }
+            }
+          },
+          "record_type": {
+            "enum": [
+              "opportunity",
+              "policy",
+              "watchlist"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
