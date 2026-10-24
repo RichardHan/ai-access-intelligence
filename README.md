@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：306 筆，包含 231 筆福利研究、41 筆政策、34 筆待覆核線索；不是 306 項可直接領取的優惠。資料集更新至 2026-10-25 00:25:00 Asia/Taipei。本次全面複核 30 筆既有案例（清空全部 27 筆 overdue 到期案例並細化 3 筆）：Rosalind Academic（確認 US-only，台灣 No）、Jina 測試 token（官方證實併入 Elastic 並具 10M 免費測試 token）、Suitup 日本試用（10/31 到期倒數）、Meeting Ink（台灣團隊方案，台灣 Yes）、みんなのコード（日本學校限定，台灣 No）、DigitalOcean Secret/GPU 政策、Notion/Retool 新創福利、Dify 教育與 Sandbox（200 credits 總額）、CodeRabbit OSS、Together 新創與研究、Cerebras 早期存取與 Ambassador、Flowise sunset 終止、Gemini API（台灣官方支援地區確認，升級為 S 級）、SambaNova 與 Cohere 限額。新解決 2 項傳聞/獨立站線索：韓國全體免費 AI 傳言證實為高中生特定補助且已截止；Muse 獨立站定價獲 Meta 官方訂閱中心證實（台灣不支援）。新增 3 筆：國網中心 TAIWAN AI RAP 試營運免費算力（台灣 Yes）、NCHC GB200 試用結束政策紀錄、DeepSeek 新戶 5M 贈額 watchlist。其餘 273 筆未於本次直接核實；截至更新時間已無過期 next_review_at。限時/即將到期每日複核，其餘依最久未核按月輪替。
+目前資料：308 筆，包含 231 筆福利研究、41 筆政策、36 筆待覆核線索；不是 308 項可直接領取的優惠。資料集更新至 2026-10-25 00:57:56 Asia/Taipei。本次直接複核 12 筆既有案例：8 筆限時/政策高風險案例（Vercel Baseten、BIZTEL、台灣 ADI、Supership、AICU、Laya、Picsart、DeepSeek Search/Fetch）、3 筆教育/學生福利（OpenAI、Google、Cloudflare）及 Meta hackathon。ADI 的 G4871 資格差異由 8/18 擴大公告解釋；BIZTEL 以發佈者新聞稿補出福利內容但活動頁仍無法讀取；Google 學生資格官方公告、Help Center 與台灣FAQ仍互相矛盾；Meta 截止換算為 10/26 11:59 台灣時間且可能提前額滿關閉。新增 TRAE、Kimi 兩筆官方免費方案追蹤線索（額度/台灣資格未完整核實）；QwenCloud 與既有 Alibaba Model Studio 新戶額度高度重疊，未另列。其餘 294 筆既有紀錄未於本次直接複核；本更新不代表全面驗證。限時/即將到期案例每日查核，其餘依最久未核按月輪替。
 
 ## 使用方式
 
