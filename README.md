@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：351筆，包含265筆機會、44筆政策、42筆待覆核線索；非351項可直接領取優惠。資料集更新至2026-10-25 06:55 Asia/Taipei。本次直接重開官方來源複核8筆既有案例：Genspark Free/付費額度、Vercel AI Gateway Free tier、Baseten模型限時免費、Lawson AI Pro抽選、Deepgram Speak、Supership Creative AI、Qoder 1024、Picsart WAN 3.0；318筆既有紀錄仍未於本次複核，未全面重核。新增2筆機會：Auphonic Free每月2小時音訊處理（非轉錄）、Krea Free每日100 compute units；另將Meshy Free官方定價與Help Center下載權益矛盾列為待覆核線索。重要變更：Vercel官方模型目錄列$5月額credit但定價文件未確認，保留來源差異；Supership公告未限定日本法人，現行Standard列¥45,000/月、1,000 banners且試用後自動轉付費；Qoder即時頁顯示前三輪Unlocked但領取期限不明；Lawson購買期已截止、既有合格日本居民可応募至10/26；Deepgram US$500需舊金山實體報到且限商務email；Picsart條款與行銷頁截止日不同，訂閱仍續費；Genspark Free每日100點有未公開終身上限。台灣個別資格與法律狀態未核者均保留未知；詳見各筆來源與缺口。
+目前資料：351筆，包含265筆機會、44筆政策、42筆待覆核線索；非351項可直接領取優惠。資料集更新至2026-10-25 06:59 Asia/Taipei。本次直接重開官方來源複核8筆既有案例：Genspark Free/付費額度、Vercel AI Gateway Free tier、Baseten模型限時免費、Lawson AI Pro抽選、Deepgram Speak、Supership Creative AI、Qoder 1024、Picsart WAN 3.0；318筆既有紀錄仍未於本次複核，未全面重核。新增2筆機會：Auphonic Free每月2小時音訊處理（非轉錄）、Krea Free每日100 compute units；另將Meshy Free官方定價與Help Center下載權益矛盾列為待覆核線索。重要變更：Vercel官方模型目錄列$5月額credit但定價文件未確認，保留來源差異；Supership公告未限定日本法人，現行Standard列¥45,000/月、1,000 banners且試用後自動轉付費；Qoder即時頁顯示前三輪Unlocked但領取期限不明；Lawson購買期已截止、既有合格日本居民可応募至10/26；Deepgram US$500需舊金山實體報到且限商務email；Picsart條款與行銷頁截止日不同，訂閱仍續費；Genspark Free每日100點有未公開終身上限。台灣個別資格與法律狀態未核者均保留未知；詳見各筆來源與缺口。
 
 ## 使用方式
 
