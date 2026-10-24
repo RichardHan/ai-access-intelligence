@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：308 筆，包含 231 筆福利研究、41 筆政策、36 筆待覆核線索；不是 308 項可直接領取的優惠。資料集更新至 2026-10-25 00:57:56 Asia/Taipei。本次直接複核 12 筆既有案例：8 筆限時/政策高風險案例（Vercel Baseten、BIZTEL、台灣 ADI、Supership、AICU、Laya、Picsart、DeepSeek Search/Fetch）、3 筆教育/學生福利（OpenAI、Google、Cloudflare）及 Meta hackathon。ADI 的 G4871 資格差異由 8/18 擴大公告解釋；BIZTEL 以發佈者新聞稿補出福利內容但活動頁仍無法讀取；Google 學生資格官方公告、Help Center 與台灣FAQ仍互相矛盾；Meta 截止換算為 10/26 11:59 台灣時間且可能提前額滿關閉。新增 TRAE、Kimi 兩筆官方免費方案追蹤線索（額度/台灣資格未完整核實）；QwenCloud 與既有 Alibaba Model Studio 新戶額度高度重疊，未另列。其餘 294 筆既有紀錄未於本次直接複核；本更新不代表全面驗證。限時/即將到期案例每日查核，其餘依最久未核按月輪替。
+目前資料：310 筆，包含 233 筆福利研究、41 筆政策、36 筆待覆核線索；不是 310 項可直接領取的優惠。資料集更新至 2026-10-25 01:45:00 Asia/Taipei。本次直接複核 17 筆既有案例：8 筆限時/即將到期/活動案例（WorkBuddy Step 5 於 10/25 結束轉 expired、astamuse 404 持續追蹤、Fireworks SFT 維持至 11/30、Meta hackathon 證實每位入選者享 $150 Meta API credits 且截止換算為 10/26 11:59 台北、Jio Gemini 確認官方期限至 10/29 剩 4 天、Replicate Try for Free 有限試跑維持、Granola 學生 12 個月與新創 1 年維持）；7 筆開發工具與觀測方案（Langfuse Hobby 50k、LangSmith Developer 5k、Composio Hobby 100k 工具與新創 Pro 6 個月、Baseten 新創修正條款日期為 2025-10-07、Pinecone 新創 Standard、Browserbase 免費 1 小時）；1 筆 Cerebras 試用（官方 Rate Limits 文件公布 Free Trial 精確限速 5 RPM / 30K uncached TPM）；1 筆 Alibaba Model Studio（新加坡國際站 90 天各模型 100 萬 tokens 免費額度與 Free Quota Only 說明，化解先前地區矛盾，升格為福利研究）。新增 2 筆：騰訊雲 TokenHub 新人免費體驗包（各語言模型 100 萬 tokens，1 年有效，活動至 2026-12-31）入福利研究；Kimi API 新用戶 15 元券（限中國大陸手機號與實名，台灣 No，標 REGION-LOCKED）入 watchlist。其餘 291 筆既有紀錄未於本次直接複核；本更新不代表全面驗證。限時/即將到期案例每日查核，其餘依最久未核按月輪替。
 
 ## 使用方式
 
