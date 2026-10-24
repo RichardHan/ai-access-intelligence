@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T06:59:25+08:00",
+  "updated_at": "2026-10-25T07:23:41+08:00",
   "scope": "公開來源基準與分批複核。2026-10-25前一批由官方頁複核12筆既有案例並新增3筆機會；本次另以官方來源複核8筆既有案例（Genspark、Vercel Free tier與Baseten限期模型、Lawson、Deepgram Speak、Supership、Qoder、Picsart），本次前326筆未覆核案例尚有318筆未覆核；新增2筆機會（Auphonic Free、Krea Free）及1筆官方來源矛盾待追線索（Meshy Free）。本次後共351筆：265筆機會、44筆政策、42筆待覆核線索；非351項可直接領取優惠。優惠狀態、服務條款資格與法律/監管結論分開記錄；未找到適用官方法律來源者保留未核實。限時案例每日追蹤，其他案例按最久未核月輪替。優先度為資料欄位衍生評分，不代表已核實。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
       "title": "ChatGPT Dots：對話與深度工作分開看",
-      "summary": "dots 是持續運作的 AI 代理，可在 ChatGPT、Slack、Teams 使用，對話不計入 ChatGPT 用量。深度工作（Work/Codex 指派任務）按各產品額度計算。Pro100/200/500 及 Business Premium/Enterprise 適用；個人需18歲以上，排除 EEA、英國、瑞士。首月推出後 deep work allowance 較高，之後降低；實際數字未於官方頁面公開。逐步推出中，並非立即人人可用。",
+      "summary": "dots為持續運作AI代理（GPT-6 Astra），對話不計入ChatGPT用量。深度工作（Work/Codex）按各產品額度計算，首月有extended limits。支援Pro 100/200/500（18歲以上且排除EEA/UK/CH）、Business及Enterprise。分批釋出不保證即刻取得；暫停主任務不自動取消委派或排程任務。",
       "categories": [
         "QUALIFICATION"
       ],
@@ -15,7 +15,7 @@
       "recurring_cost_usd": 100,
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "Yes",
       "regions": [],
       "verification": "Official",
       "usage_type": null,
@@ -28,20 +28,20 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、推出階段及政策可能改變",
-      "verified_at": "2026-10-24T20:23:58+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T10:40:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T20:23:58+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "Pro100/200/500；Business Premium全球推出中；Enterprise預設關閉需管理員啟用",
-        "account_eligibility": "個人18歲以上；依方案與推出",
-        "billing_country": "未知",
-        "identity_residency": "個人排除 EEA、英國、瑞士",
-        "terms_restrictions": "未核實海外帳戶例外",
-        "taiwan_note": "台灣不在 EEA/UK/CH 排除清單，但仍依帳戶推出進度；帳戶資格與 deep work 額度未完整核實"
+        "service_availability": "Pro 100/200/500（排除EEA/UK/CH）、Business及Enterprise分批釋出",
+        "account_eligibility": "需付費Pro/Business/Enterprise帳戶，個人限18歲以上",
+        "billing_country": "台灣TWD及信用卡/簽帳卡正式支援",
+        "identity_residency": "排除EEA、英國及瑞士；其餘支援國家（含台灣）可依資格使用",
+        "terms_restrictions": "深度工作按所屬產品扣額；暫停主任務不取消子任務；禁止多帳號洗用",
+        "taiwan_note": "Taiwan Yes（地區層級）；台灣名列OpenAI支援國家且非EEA/UK/CH排除區，但需Pro付費方案且依分批rollout取得資格"
       },
       "unknowns": [
         "deep work 額度數字與重置週期",
@@ -54,6 +54,18 @@
           "label": "官方來源",
           "scope": "對話計量、方案、地區及推出首月",
           "evidence": "2026-10-24 20:00 公開研究批次查閱，確認功能仍有效"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+          "label": "ChatGPT 支援國家與地區清單",
+          "scope": "台灣地區支援",
+          "evidence": "2026-10-25查閱：官方支援國家與地區清單明確列有 Taiwan。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/10421635-multicurrency-billing",
+          "label": "多幣別帳單說明",
+          "scope": "台灣TWD結帳與卡片支援",
+          "evidence": "2026-10-25查閱：支援 TWD (NT$) Taiwan，所有國家均支援信用卡與簽帳卡。"
         }
       ],
       "record_type": "policy",
@@ -64,7 +76,8 @@
       },
       "priority_score": null,
       "priority_tier": null,
-      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+      "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "status": "active"
     },
     {
       "id": "work-codex-free",
@@ -5843,7 +5856,7 @@
     {
       "id": "chatgpt-pro200-transition",
       "title": "ChatGPT Pro 三方案：Pro200新戶額度較低，Pro500含Ultrafast",
-      "summary": "官方文章（約2天前更新）：Pro100/200/500 三方案仍有效。舊Pro200 grandfathering 截止10/29；10/29後舊戶降至較低 allowance，月費仍$200。Pro200重新開放新訂閱，但新戶 allowance 較低。Pro500新增 GPT-6 Astra/Sol Ultrafast（8x訂閱消耗，6x credits消耗）。VPN/帳號分享/轉售禁止。台灣資格未明確說明。",
+      "summary": "Pro 100 ($100/月)、Pro 200 ($200/月)、Pro 500 ($500/月) 三方案有效。9/22-9/29 10AM PT前已訂舊Pro200用戶之較高額度保留至10/29，10/29後移至較低額度且月費不變；新Pro200直接採較低額度。Pro 500獨享GPT-6 Astra與GPT-6.1 Sol Ultrafast（消耗8×額度）。台灣支援TWD信用卡付款；取消訂閱僅停止次期續費。",
       "categories": [
         "QUALIFICATION",
         "HIGH-QUOTA"
@@ -5853,7 +5866,7 @@
       "recurring_cost_usd": 200,
       "effort_minutes_max": 10,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "Yes",
       "regions": [],
       "verification": "Official",
       "usage_type": null,
@@ -5866,20 +5879,20 @@
       "cancellation": "取消停止後續續費，通常保留到當期末",
       "usable_duration": "舊額度至10/29，精確時刻時區未知",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T20:23:58+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T20:23:58+08:00",
+      "next_review_at": "2026-10-26T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "Pro100($100/月), Pro200($200/月，新戶allowance較舊戶低), Pro500($500/月，含Ultrafast)",
-        "account_eligibility": "18歲以上；不得分享帳號、轉售或自動擷取資料",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "ToU禁止帳號分享/轉售/自動擷取；違規可能限制存取",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "Pro 100/200/500公開提供訂閱",
+        "account_eligibility": "需註冊帳戶，舊Pro 200 grandfathering限9/22-9/29已訂用戶",
+        "billing_country": "台灣正式支援，提供TWD多幣別結帳與信用卡付款",
+        "identity_residency": "支援國家用戶可訂閱，年齡依OpenAI條款",
+        "terms_restrictions": "禁止共用帳密、轉售或自動化截取；支援人員無法手動重置額度；取消不退前款",
+        "taiwan_note": "Taiwan Yes；台灣支援訂閱Pro 100/200/500及TWD結帳，但舊Pro200較高額度保留僅限9/22-9/29 10AM PT前已訂用戶至10/29"
       },
       "unknowns": [
         "台灣帳戶付款與身份條件",
@@ -5891,6 +5904,12 @@
           "label": "官方來源",
           "scope": "Pro方案、額度、grandfathering條款及Pro500詳情",
           "evidence": "2026-10-24 20:05 官方頁面全文查閱"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+          "label": "ChatGPT 支援國家清單",
+          "scope": "台灣支援",
+          "evidence": "2026-10-25查閱：官方支援國家清單包含 Taiwan。"
         }
       ],
       "record_type": "policy",
@@ -5975,7 +5994,7 @@
     {
       "id": "claude-duet-preview",
       "title": "Claude Duet：美國候補，背景共用額度",
-      "summary": "美國 Pro/Max 候補邀請預覽。不含 Team/Enterprise（計畫之後推出）。使用 Claude Opus 5.5，預覽期包含 Pro/Max 月費無額外費。背景 morning brief 及 check-in 仍計入五小時及週限。入選時一次完整重置（5小時+週限），可用至2026-11-30。支援 Gmail、Google Calendar、Drive、Slack、QuickBooks、HubSpot 等 connectors 及 Link（Stripe）、Shop Pay 支付整合。",
+      "summary": "Claude Duet研究預覽限美國Pro/Max訂閱用戶經候選邀請加入。採用Claude Opus 5.5，背景晨報與核對共用方案之5小時與每週上限；入選包含一次上限重置福利（至11/30截止，非預覽截止日）。預覽無額外收費但需維持Pro/Max付費（Pro $20/月）。預覽明載US only，台灣帳戶不適用。",
       "categories": [
         "BETA-ACCESS",
         "QUALIFICATION",
@@ -5990,7 +6009,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 25,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [
         "US"
       ],
@@ -6005,20 +6024,20 @@
       "cancellation": null,
       "usable_duration": "預覽期；一次重置可用至2026-11-30",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T20:23:58+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T20:23:58+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "美國 Pro 或 Max 方案候補；Team/Enterprise 待未來推出",
-        "account_eligibility": "美國 Claude 帳戶，Pro 或 Max 方案持有人；候補等待邀請",
-        "billing_country": "未知",
-        "identity_residency": "僅限美國帳戶（預覽期間）",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "台灣帳戶不符美國預覽資格；不是永久限制，預覽條款可能變動"
+        "service_availability": "限美國Claude Pro/Max用戶，經waitlist邀請分梯加入",
+        "account_eligibility": "需美國Claude Pro或Max付費帳戶，Team/Enterprise尚不支援",
+        "billing_country": "限美國帳單與美國帳戶",
+        "identity_residency": "官方文件明文規定僅限美國（US only）",
+        "terms_restrictions": "敏感動作（發訊、付款、刪除）需人工核准；禁止證券交易、帳戶轉帳或存取他人帳號",
+        "taiwan_note": "台灣No；官方支援文件明文標示Claude Duet在research preview期間僅限美國（US only）"
       },
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省",
@@ -6040,9 +6059,9 @@
       },
       "status": "conditional",
       "setup_cost_basis": "已具方案增量0；Pro月20另稅，非免費訂閱",
-      "priority_score": 13.6,
+      "priority_score": 9.1,
       "priority_tier": "D",
-      "priority_note": "官方·條件式·費用未知·台灣未標記·≤25分鐘·區域限定·有資格門檻"
+      "priority_note": "官方·條件式·費用未知·台灣No·≤25分鐘·區域限定·有資格門檻"
     },
     {
       "id": "rosalind-academic",
@@ -7731,7 +7750,7 @@
     {
       "id": "openai-student-collective-2026",
       "title": "OpenAI Student Collective：本期申請已關閉",
-      "summary": "18+大學生、2027/12後畢業及就學國工作資格，2026/8–2027/6每週4–6小時，不得兼其他AI品牌大使/實習。提供訂閱、Codex及學期津貼但數字未列。日韓英德法8/31截止，美加印Fall也關閉，其他地區僅未來意向，非當期開通。",
+      "summary": "本期學生大使申請已於8/31（日韓英德法）及更早（美加印）截止；提供ChatGPT訂閱、Codex credits與學期津貼，期間2026/8-2027/6（每週4-6小時）。在學國不含台灣；目前僅開放填寫未來梯次意向表，未重啟本期招募。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -7742,7 +7761,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 40,
       "effort_basis": "歷史申請估20–40分鐘，實際活動每週4–6小時另計",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [],
       "verification": "Official",
       "usage_type": null,
@@ -7755,12 +7774,12 @@
       "cancellation": null,
       "usable_duration": "僅program期間，非當期可申請",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T23:25:00+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T23:25:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7768,7 +7787,7 @@
         "billing_country": "未知",
         "identity_residency": "未知",
         "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "台灣本地學籍未列當期國家，個人Unknown"
+        "taiwan_note": "台灣在校生No；本期僅限日韓英德法及美加印，台灣學生僅可填寫未來梯次意向表"
       },
       "unknowns": [
         "Exact stipend and Codex/credits value",
@@ -8324,7 +8343,7 @@
     {
       "id": "langsmith-startups-build-scale",
       "title": "LangSmith新創：Build折扣不等Scale一萬額度",
-      "summary": "Build首次客戶、種子資金至少25K且融資低於10M，席位折扣價未公開；Scale合作VC、首次客戶、Series A或更早且融資至50M，10K credits/一年，YC另列兩年。追蹤/評測/部署優惠，不是外部模型API贈額。",
+      "summary": "Build方案提供首度客戶席位折扣（募資$25K-$10M）；Scale方案提供$10,000 LangSmith額度可用一年（YC團隊兩年，募資限$50M且須為合作VC投資）。需以公司網域信箱註冊；額度限LangSmith平台使用，不含外部LLM代付。台灣公司資格未明載。",
       "categories": [
         "QUALIFICATION",
         "HIGH-QUOTA"
@@ -8350,12 +8369,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T23:25:00+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T23:25:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8482,7 +8501,7 @@
     {
       "id": "e2b-startups-20k-publicity",
       "title": "E2B新創：20K沙箱額度有公開條件",
-      "summary": "首次使用、公司未滿3年、融資低於5M、公司/機構信箱；一次20K Pro額度兌領後一年到期。100並行與會話24小時不等無限，沙箱不含外部LLM token。條款保留容量/撤銷且不保證未來折扣。",
+      "summary": "新創首度用戶可申請一次性$20,000沙箱額度（兌領後一年有效）及Pro會員（100並行、24小時會話）。成立未滿3年且募資低於$5M；須用公司信箱申請。獲選團隊必須在核准7日內公開發表正面評價並展示徽章，否則得撤銷額度。CPU沙箱不含外部LLM費用。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -8510,12 +8529,12 @@
       "cancellation": null,
       "usable_duration": "兌領後一年",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T23:25:00+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T23:25:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -11955,7 +11974,7 @@
     {
       "id": "qodo-fourteen-day-unlimited-trial",
       "title": "Qodo：14天免卡不限試用，非永久免費",
-      "summary": "官方14天試用稱unlimited reviews/credits且免卡；結束審查暫停，選付費方案才恢復。沒有永久免費層，OSS另申請。Pro Team 30美元起按團隊共享credits計，超量續跑至自設月花費上限；不限repo/使用者不等不限付費額度。安裝需repo Admin，未安裝。",
+      "summary": "官方提供14天試用，宣稱unlimited reviews與unlimited credits且免信用卡；到期審查暫停，選付費方案（Pro Team $30/月起，含2,500 credits，超量$0.012/credit）才恢復。無永久免費層，開源專案需另申請。",
       "categories": [
         "FREE",
         "UNLIMITED-CLAIM",
@@ -11983,12 +12002,12 @@
       "cancellation": "試用免卡，結束停止；付費每月credits不累積",
       "usable_duration": "14天",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-24T04:05:37+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -12017,14 +12036,15 @@
         "additional_cost_usd": null,
         "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
       },
-      "priority_score": 17.9,
-      "priority_tier": "B",
-      "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻"
+      "priority_score": 20.6,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·時間未知·有資格門檻",
+      "status": "active"
     },
     {
       "id": "llamaparse-free-tenk",
       "title": "LlamaParse Free：10K解析credits非10K頁",
-      "summary": "Free頁列10K credits，頁面未在已查欄位清楚寫補充週期，不能當每日或永久。不同解析模式耗量不同，credits不等頁數；升Starter才有pay-as-you-go。US/EU入口不等限定國籍或台灣已核。",
+      "summary": "Free方案每月提供10,000 credits（每期重置），用盡回傳402不自動轉付費。解析模式依複雜度扣點：Fast 1點/頁、Cost-effective 3點/頁、Agentic 10點/頁、Agentic Plus 45點/頁；限5並行Parse與5並行Extract、10,000保留檔案/10GB。非10,000頁通用AI解析。",
       "categories": [
         "FREE"
       ],
@@ -12050,12 +12070,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-24T04:05:37+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -12066,7 +12086,6 @@
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
-        "10K補充週期",
         "各模式換算、台灣與帳單資格"
       ],
       "sources": [
@@ -12075,6 +12094,18 @@
           "label": "官方公開來源",
           "scope": "LlamaParse Free：10K解析credits非10K頁",
           "evidence": "公開頁面相關正文查閱；未登入或驗證領取"
+        },
+        {
+          "url": "https://developers.llamaindex.ai/llamaparse/general/billing/",
+          "label": "LlamaParse 計費文檔",
+          "scope": "月度重置與402錯誤",
+          "evidence": "2026-10-25查閱：Credits reset at the start of your next billing cycle；額度用盡回傳402不自動扣款。"
+        },
+        {
+          "url": "https://developers.llamaindex.ai/llamaparse/general/pricing/",
+          "label": "解析模式點數計算",
+          "scope": "各模式消耗點數",
+          "evidence": "2026-10-25查閱：Fast 1、Cost-effective 3、Agentic 10、Agentic Plus 45 credits/page；Layout額外3/page。"
         }
       ],
       "record_type": "opportunity",
@@ -12083,14 +12114,15 @@
         "additional_cost_usd": null,
         "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
       },
-      "priority_score": 16.3,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+      "priority_score": 19.0,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·時間未知",
+      "status": "active"
     },
     {
       "id": "llamaparse-startups-two-k",
       "title": "LlamaParse新創：2K一年，須募資至少250K",
-      "summary": "新創官方列2,000美元平台credits可用一年、首度客戶、累計募資至少250,000且少於50,000,000美元。不是所有bootstrapped或個人可領；社群曝光列為福利，但完整合作義務未核。",
+      "summary": "新創計畫提供首次客戶$2,000平台credits可用一年，要求募資至少$250K且低於$50M；不含無融資之bootstrapped新創。福利含大量購買折扣與社群曝光，額度用盡後依常態費率計費。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -12117,12 +12149,12 @@
       "cancellation": null,
       "usable_duration": "核准額度可用一年；起算點未載",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-24T04:05:37+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -12153,7 +12185,8 @@
       },
       "priority_score": 16.3,
       "priority_tier": "C",
-      "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻"
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻",
+      "status": "conditional"
     },
     {
       "id": "genshi-growth-japan-trial",
@@ -20359,7 +20392,7 @@
     {
       "id": "robinhood-luna-token-promotion-december",
       "title": "Robinhood Luna：指定聊天與自動化代付token至年底",
-      "summary": "已具合格Agents帳戶才適用，GPT-6 Luna聊天／自動化token促銷至12/31 23:59 ET或提前終止；訊息長度仍有限。非其他模型、Agent Apps或交易費。期滿自動化不停止、恢復一般token收費。",
+      "summary": "GPT-6 Luna聊天與自動化token促銷至2026/12/31 23:59 ET或提前終止；單則訊息token仍有限額。開立投資主帳戶限18歲以上具美籍/綠卡/有效美簽、美國居住地與SSN（不收ITIN）。促銷期過後或選其他模型，未變更模型之自動化按預付標準費率自動扣款（最低加值$1），非其他模型或Agent Apps。已有美籍合資格帳戶在台使用未實測。",
       "categories": [
         "QUALIFICATION",
         "FREE"
@@ -20371,7 +20404,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 20,
       "effort_basis": "分析者估計公開資格核對與設定；不含申請審核時間",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [
         "Global"
       ],
@@ -20386,20 +20419,20 @@
       "cancellation": null,
       "usable_duration": "至2026-12-31 23:59 ET，或提前終止",
       "access_risk": "台灣合法帳戶資格未核；不得為AI福利建議開金融帳戶，非投資推薦",
-      "verified_at": "2026-10-24T18:10:29+08:00",
+      "verified_at": "2026-10-25T07:23:05+08:00",
       "discovered_at": "2026-10-24T18:10:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-25T18:10:29+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:23:05+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開頁可讀，不等於台灣帳戶可用",
-        "account_eligibility": "已具合格Agents帳戶才適用，GPT-6 Luna聊天／自動化token促銷至12/31 23:59 ET或提前終止；訊息長度仍有限。非其他模型、Agent Apps或交易費。期滿自動化不停止、恢復一般token收費。",
-        "billing_country": "未核實",
-        "identity_residency": "未核實",
-        "terms_restrictions": "不以換IP、借帳號或假資料取得資格",
-        "taiwan_note": "尚無充分台灣及個人資格證據，Unknown"
+        "service_availability": "依Robinhood Agents帳戶審核",
+        "account_eligibility": "須開立Robinhood primary individual investing account後方能開立Agentic account",
+        "billing_country": "限美國合法居住地與美國帳單",
+        "identity_residency": "滿18歲、美國居住地址、SSN（不收ITIN）、具美籍/永久居留/有效美簽",
+        "terms_restrictions": "禁止多帳號與自動化規避；到期前承諾App內通知，期滿自動化繼續以標準費率扣款",
+        "taiwan_note": "台灣純居住無美籍/綠卡/美簽者No；開立投資帳戶需美籍/綠卡/有效美簽、美居留地址與SSN；既有合資格帳戶在台使用未實測"
       },
       "unknowns": [
         "台灣合法帳戶資格未核；不得為AI福利建議開金融帳戶，非投資推薦",
@@ -20412,6 +20445,24 @@
           "scope": "Robinhood Luna：指定聊天與自動化代付token至年底",
           "evidence": "已具合格Agents帳戶才適用，GPT-6 Luna聊天／自動化token促銷至12/31 23:59 ET或提前終止；訊息長度仍有限。非其他模型、Agent Apps或交易費。期滿自動化不停止、恢復一般token收費。",
           "accessed_time_range": "2026-10-24T18:05:35+08:00–2026-10-24T18:10:29+08:00"
+        },
+        {
+          "url": "https://robinhood.com/us/en/support/articles/setting-up-an-agent/",
+          "label": "Agent帳戶先決條件",
+          "scope": "帳戶開立要求",
+          "evidence": "2026-10-25查閱：You must have an open primary Robinhood individual investing account before you can open an Agentic account。"
+        },
+        {
+          "url": "https://robinhood.com/us/en/support/articles/what-you-need-to-get-started/",
+          "label": "開戶資格要求",
+          "scope": "身分與居住資格",
+          "evidence": "2026-10-25查閱：需滿18歲、具有效SSN（不收ITIN）、美國合法居住地址、美籍/綠卡/有效美簽。"
+        },
+        {
+          "url": "https://robinhood.com/us/en/support/articles/token-usage-billing/",
+          "label": "Token計費與自動加值",
+          "scope": "預付token扣款與加值機制",
+          "evidence": "2026-10-25查閱：一般Token為預付制，最低$1；自動加值可隨時關閉；期滿活動模型自動依標準費率計費。"
         }
       ],
       "record_type": "opportunity",
@@ -20420,9 +20471,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "priority_score": 16.6,
+      "priority_score": 14.8,
       "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤20分鐘·有資格門檻"
+      "priority_note": "官方·活躍·零設定費·台灣No·≤20分鐘·有資格門檻",
+      "status": "active"
     },
     {
       "id": "freshservice-agent-studio-promotion-extension",
@@ -26277,6 +26329,250 @@
         "additional_cost_usd": null,
         "eligibility_note": "未推薦或操作跨區；VPN不授予身分、居住或付款資格。"
       },
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "elevenlabs-free-monthly-tenk",
+      "title": "ElevenLabs Free：每月10,000 credits，免綁卡、限非商用",
+      "summary": "免費方案每月10,000 credits（官方估約10分鐘Eleven v4音訊），包含文字轉語音、語音轉文字、音效與Voice Design。Eleven v4適用免費層；無商用授權，公開發布須署名（標註elevenlabs.io或11.ai）；未用額度不結轉。每人及每IP限一免費帳戶。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free"
+      ],
+      "quota_classification": "HIGH BUT LIMITED",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "benefit_cost_ratio": null,
+      "effort_minutes_max": null,
+      "effort_basis": "未實測註冊或設定時間",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global"
+      ],
+      "verification": "Official",
+      "status": "active",
+      "record_type": "opportunity",
+      "legal_status": "not_verified",
+      "verified_at": "2026-10-25T07:22:00+08:00",
+      "discovered_at": "2026-10-25T07:22:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:22:00+08:00",
+      "priority": "normal",
+      "usage_type": "Capped",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "註冊自動進入Free免信用卡；未加購付費方案不會自動轉付費扣款。",
+      "usable_duration": "每月補充額度；官方未公布免費方案截止日期。",
+      "access_risk": "免費API無法存取Voice Library；Voice Cloning須付費Starter以上；多帳號或共用IP可能觸發風控封鎖。",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "條款明載每使用者及每IP限一免費帳戶；VPN可能被視為共用IP遭限制。"
+      },
+      "eligibility": {
+        "service_availability": "官方公開提供Free方案，制裁封鎖名單不含台灣",
+        "account_eligibility": "需以個人email註冊並完成驗證，每人及每IP限一免費帳戶",
+        "billing_country": "免費方案免信用卡，未測試台灣付費卡結帳",
+        "identity_residency": "須滿18歲或所在地法定成年年齡，台灣個別帳戶資格未實測",
+        "terms_restrictions": "僅限個人非商用；公開發布須署名標註；免費API不支援Voice Library",
+        "taiwan_note": "台灣Unknown；制裁封鎖清單未列台灣，但未取得明列Taiwan的官方支援清單，未實測在台註冊"
+      },
+      "unknowns": [
+        "台灣個別IP與帳戶註冊實測風控結果",
+        "各語音模型與API之完整消耗點數細則",
+        "未來免費方案是否調整額度或終止"
+      ],
+      "sources": [
+        {
+          "url": "https://elevenlabs.io/pricing",
+          "scope": "免費方案價格、每月10k credits及功能範圍",
+          "evidence": "2026-10-25查閱：Free方案$0/月、10k credits/月，含Text to Speech、Speech to Text、Sound Effects、Voice Design、3 Projects in Studio。"
+        },
+        {
+          "url": "https://elevenlabs.io/v4",
+          "scope": "免信用卡、Eleven v4免費支援與音訊時長估算",
+          "evidence": "2026-10-25查閱：No credit card required；10,000 credits a month roughly 10 minutes of audio，Personal use。"
+        },
+        {
+          "url": "https://elevenlabs.io/docs/help-center/legal/can-i-publish-the-content-i-generate-on-the-platform",
+          "scope": "非商用限制與公開署名義務",
+          "evidence": "2026-10-25查閱：Free plan不含商用授權，發布內容標題須包含elevenlabs.io或11.ai。"
+        },
+        {
+          "url": "https://elevenlabs.io/docs/help-center/account/general/how-does-credit-rollover-work.md",
+          "scope": "免費額度不結轉",
+          "evidence": "2026-10-25查閱：Credit rollover does not apply to accounts on the free tier。"
+        },
+        {
+          "url": "https://elevenlabs.io/docs/overview/administration/account.md",
+          "scope": "帳戶驗證與單一IP限制",
+          "evidence": "2026-10-25查閱：Only allow one free account per user and IP；警告VPN/共用網路可能觸發abuse限制。"
+        },
+        {
+          "url": "https://elevenlabs.io/docs/help-center/legal/do-you-restrict-access-to-the-service-and-platform-for-any-specific-countries",
+          "scope": "地區受限制清單",
+          "evidence": "2026-10-25查閱：受限地區包含白俄羅斯、古巴、伊朗、北韓、俄羅斯、敘利亞及烏克蘭部分地區，不含台灣。"
+        }
+      ],
+      "priority_score": 19.0,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "cartesia-free-monthly-twentyk",
+      "title": "Cartesia Free：每月20,000語音credits，限非商用",
+      "summary": "Free方案US$0/月，每月提供20,000 credits共用於Sonic語音合成（TTS約27分鐘）與Ink語音轉文字（STT約1小時51分），二者消耗同一個額度池不能兼得。另附每月US$1 Managed Agents額度（但電話號碼及通話時間可能另計）。Free僅限個人非商用，無商用授權。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free"
+      ],
+      "quota_classification": "HIGH BUT LIMITED",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "benefit_cost_ratio": null,
+      "effort_minutes_max": null,
+      "effort_basis": "未實測註冊或API串接時間",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global"
+      ],
+      "verification": "Official",
+      "status": "active",
+      "record_type": "opportunity",
+      "legal_status": "not_verified",
+      "verified_at": "2026-10-25T07:22:00+08:00",
+      "discovered_at": "2026-10-25T07:22:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:22:00+08:00",
+      "priority": "normal",
+      "usage_type": "Capped",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "Free方案免月費；超額請求直接回傳錯誤（Overages disabled），不自動扣款升級。",
+      "usable_duration": "每月重置；官方未公布Free方案結束日期。",
+      "access_risk": "Free不含商用授權、無Instant Voice Cloning；STT與TTS共用20K額度池；Agent telephony另外收費。",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "未操作VPN；條款未聲明特定國家排除，但亦未明載台灣保證可用。"
+      },
+      "eligibility": {
+        "service_availability": "公開提供Free方案及API存取",
+        "account_eligibility": "需註冊帳戶（支援Google/GitHub或email）並產生API Key",
+        "billing_country": "台灣付款與帳單資格未核",
+        "identity_residency": "須達所在地法定簽約年齡，未取得台灣專屬條款保證",
+        "terms_restrictions": "僅限個人非商用；商用授權需Pro方案以上；無即時語音複製",
+        "taiwan_note": "台灣Unknown；國際條款未排除台灣，但未實測台灣門號/信用卡註冊驗證流程"
+      },
+      "unknowns": [
+        "Free方案註冊時是否強制要求信用卡（註冊頁HTTP 429未實測完成）",
+        "台灣IP與門號之實際註冊成功率",
+        "UI-created agent LLM限時免收費之確切終止日期"
+      ],
+      "sources": [
+        {
+          "url": "https://www.cartesia.ai/pricing",
+          "scope": "Free方案價格、20K月額度、模型與並行上限",
+          "evidence": "2026-10-25查閱：Free $0/mo、20K credits/month、$1 prepaid agents/month；Sonic-3.6約27分鐘（2並行）、Ink-2約1小時51分（8並行）；Pro以上才有Commercial use license。"
+        },
+        {
+          "url": "https://docs.cartesia.ai/pricing.md",
+          "scope": "API扣點與超額處理",
+          "evidence": "2026-10-25查閱：TTS標準約1 credit/字元；Ink-2 STT約3 credits/秒；Overages disabled，超量直接失敗不自動扣款。"
+        },
+        {
+          "url": "https://www.cartesia.ai/legal/terms",
+          "scope": "非商用限制與帳戶義務",
+          "evidence": "2026-10-25查閱：Personal, non-commercial use only unless commercial use is permitted by subscription tier；需建立帳戶。"
+        }
+      ],
+      "priority_score": 19.0,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "hedra-free-credit-unverified",
+      "title": "Hedra AI：影片生成免費額度與重置週期未獲官方定價證實",
+      "summary": "搜尋引擎索引頁曾宣稱100 free credits，但直接查閱官方定價頁與Billing FAQ未載明固定免費額度或每日/每月重置；非商用權益及台灣帳戶可用性未明。列待追蹤線索，不列為可領承諾。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free"
+      ],
+      "quota_classification": "UNKNOWN",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "benefit_cost_ratio": null,
+      "effort_minutes_max": null,
+      "effort_basis": "未實測註冊流程",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global"
+      ],
+      "verification": "Unverified",
+      "status": "unverified",
+      "record_type": "watchlist",
+      "legal_status": "not_verified",
+      "verified_at": "2026-10-25T07:22:00+08:00",
+      "discovered_at": "2026-10-25T07:22:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T07:22:00+08:00",
+      "priority": "watch",
+      "usage_type": null,
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "尚未證實免費方案之續期或升級機制",
+      "usable_duration": "未明",
+      "access_risk": "免費額度未獲官方定價頁支持，可能隨時變動或需付費",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "未操作VPN"
+      },
+      "eligibility": {
+        "service_availability": "服務運作中但免費方案額度未獲官方定價頁證實",
+        "account_eligibility": "需帳戶",
+        "billing_country": "未知",
+        "identity_residency": "未知",
+        "terms_restrictions": "商用與非商用權利未明",
+        "taiwan_note": "台灣可用性未獲官方證實"
+      },
+      "unknowns": [
+        "官方是否提供常態免費點數及確切額度",
+        "免費點數重置週期（日/月/一次性）",
+        "台灣帳戶註冊與免綁卡條件"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hedra.com/pricing",
+          "scope": "定價頁未載固定免費額度",
+          "evidence": "2026-10-25查閱：定價頁未列出明確的免費額度數字或每月重置週期。"
+        },
+        {
+          "url": "https://www.hedra.com/docs/pages/app/billing/how-credits-work",
+          "scope": "點數機制說明",
+          "evidence": "2026-10-25查閱：說明點數計算方式，但未載明免費方案額度保證。"
+        }
+      ],
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"

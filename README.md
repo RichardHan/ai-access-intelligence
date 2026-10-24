@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：351筆，包含265筆機會、44筆政策、42筆待覆核線索；非351項可直接領取優惠。資料集更新至2026-10-25 06:59 Asia/Taipei。本次直接重開官方來源複核8筆既有案例：Genspark Free/付費額度、Vercel AI Gateway Free tier、Baseten模型限時免費、Lawson AI Pro抽選、Deepgram Speak、Supership Creative AI、Qoder 1024、Picsart WAN 3.0；318筆既有紀錄仍未於本次複核，未全面重核。新增2筆機會：Auphonic Free每月2小時音訊處理（非轉錄）、Krea Free每日100 compute units；另將Meshy Free官方定價與Help Center下載權益矛盾列為待覆核線索。重要變更：Vercel官方模型目錄列$5月額credit但定價文件未確認，保留來源差異；Supership公告未限定日本法人，現行Standard列¥45,000/月、1,000 banners且試用後自動轉付費；Qoder即時頁顯示前三輪Unlocked但領取期限不明；Lawson購買期已截止、既有合格日本居民可応募至10/26；Deepgram US$500需舊金山實體報到且限商務email；Picsart條款與行銷頁截止日不同，訂閱仍續費；Genspark Free每日100點有未公開終身上限。台灣個別資格與法律狀態未核者均保留未知；詳見各筆來源與缺口。
+目前資料：354筆，包含267筆機會、44筆政策、43筆待覆核線索；非354項可直接領取優惠。資料集更新至2026-10-25 07:22 Asia/Taipei。本次直接重開官方來源複核10筆既有案例：Robinhood GPT-6 Luna token促銷（美籍SSN門檻/No）、ChatGPT Dots代理（GPT-6 Astra/Yes）、ChatGPT Pro三方案（舊Pro200保留至10/29/Yes）、Claude Duet預覽（US only/No）、OpenAI Student Collective（本期已截止/No）、LangSmith新創（Build折扣與Scale 10K額度）、E2B新創（20K沙箱與7天宣傳條款）、Qodo 14天免卡試用、LlamaParse Free（月度10K點重置確認非10K頁）、LlamaParse新創（$2K一年）；341筆既有紀錄未於本次複核，未全面重核。新增2筆機會：ElevenLabs Free每月10,000 credits（免綁卡、限非商用）、Cartesia Free每月20,000 credits（Sonic TTS與Ink STT共用池、非商用）；另將Hedra AI影片生成免費額度未獲官方定價證實列為待覆核線索。重要變更：ChatGPT Dots與ChatGPT Pro確認台灣支援並標為Taiwan Yes；Robinhood Luna與Claude Duet確認限美國身分/境內並標為Taiwan No；LlamaParse Free確認補充週期為每月重置而非未知；E2B確認7天強制公開正面評價與徽章展示條款。台灣個別資格與法律狀態未核者均保留未知；詳見各筆來源與缺口。
 
 ## 使用方式
 
