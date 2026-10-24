@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：344筆，包含259筆機會、44筆政策、41筆待覆核線索；非344項可直接領取優惠。資料集更新至2026-10-25 05:25 Asia/Taipei。本輪直接重開官方來源複核8筆案例（AICU熊本支援API、Meta Global AI Developer Hackathon、Vercel Laya、DeepSeek Search/Fetch、Suitup、WorkBuddy Step 5、Astamuse、GitHub Copilot Student，另修正Cursor文字），新增3筆紀錄（Novita Sandbox新戶問卷US$100額度、Baseten新工作區部署贈額、GitLab Education排除Duo AI credits政策）。341筆既有紀錄中，本輪深入查核8筆，尚有333筆未於本輪重查，未全面重核。重要變更與限制：AICU熊本災害支援API官方申請頁明列募集終了，新申請已關閉（狀態改為applications_closed，既有支援標至10/31）；Meta Hackathon申請將於10/25 11:59 PM EDT（台灣10/26 11:59 AM）截止或20,000名額滿提前關閉，正式規則預告發布中，入選者合作夥伴額度包含Baseten $100、Modal $100、Fireworks $25；Laya僅經Boundless免費至10/31；DeepSeek Search/Fetch確認11/1 00:00 UTC+8起每千次收US$0.75，目前暫免範圍收斂為Harness/Claude Code/Codex伺服器端呼叫；Suitup 7日試用及前三月20%折扣仍刊載至10/31，需先面談並於表單填寫活動名稱；WorkBuddy Step 5於10/25重查維持社群待核；Astamuse公告仍404維持待核；GitHub Copilot Student修正為13歲以上在學生（含高中與自學），無全面商業禁止條款，代碼補全不限但月AI credits未公布且無法自行取消；Novita Sandbox US$100額度限CPU/RAM沙箱且voucher期限未知，非LLM模型API；Baseten新workspace贈額依帳戶而異，綁卡後預算通知不停止專用部署；GitLab教育方案不配發included GitLab credits，需專案申請自託管100% DAP折扣。法律/監管結論除有明確官方來源外皆標未核實；資料更新不代表全庫重新核實。
+目前資料：345筆，包含260筆機會、44筆政策、41筆待覆核線索；非345項可直接領取優惠。資料集更新至2026-10-25 05:51 Asia/Taipei。本輪實際重開官方來源複核7筆既有案例：Jio Gemini、ChatGPT學生促銷、台灣ADI算力補助、Trelis、HOSTKEY、Kiro首次升付費、TWAI Cloud；新增1筆 Lambda Inception 台灣可申請GPU額度。337筆既有紀錄尚未於本輪複核，未全面重核。主要變更：Trelis官方表單標示2026夏秋申請暫停，重開時間未知；HOSTKEY申請頁稱因硬體短缺暫停，其他官方頁仍顯示收件，保留來源衝突；Kiro首次US$20訂閱抵扣仍存在，但官方帳單國家清單未列台灣；台灣ADI算力計畫限符合資格的台灣登記企業，10/30截止，官方現行申請須知列訓練點數1,000/2,000/6,000及推論每點10萬tokens，另有嚴格用途限制，商業使用邊界未釐清；Jio需印度門號與充值，活動10/29截止，台灣居民境外KYC資格未知；ChatGPT美國學生優惠需美國學位授予院校學籍且需付款方式，10/31截止，台灣學籍本身不符；Lambda Inception需會員資格、信用卡及審核，額度核准後12個月，閒置GPU/儲存仍可收費。台灣可用不代表每位使用者符合資格。法律/監管狀態除有明確適用官方來源者外均未核實。
 
 ## 使用方式
 
