@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：310 筆，包含 233 筆福利研究、41 筆政策、36 筆待覆核線索；不是 310 項可直接領取的優惠。資料集更新至 2026-10-25 01:45:00 Asia/Taipei。本次直接複核 17 筆既有案例：8 筆限時/即將到期/活動案例（WorkBuddy Step 5 於 10/25 結束轉 expired、astamuse 404 持續追蹤、Fireworks SFT 維持至 11/30、Meta hackathon 證實每位入選者享 $150 Meta API credits 且截止換算為 10/26 11:59 台北、Jio Gemini 確認官方期限至 10/29 剩 4 天、Replicate Try for Free 有限試跑維持、Granola 學生 12 個月與新創 1 年維持）；7 筆開發工具與觀測方案（Langfuse Hobby 50k、LangSmith Developer 5k、Composio Hobby 100k 工具與新創 Pro 6 個月、Baseten 新創修正條款日期為 2025-10-07、Pinecone 新創 Standard、Browserbase 免費 1 小時）；1 筆 Cerebras 試用（官方 Rate Limits 文件公布 Free Trial 精確限速 5 RPM / 30K uncached TPM）；1 筆 Alibaba Model Studio（新加坡國際站 90 天各模型 100 萬 tokens 免費額度與 Free Quota Only 說明，化解先前地區矛盾，升格為福利研究）。新增 2 筆：騰訊雲 TokenHub 新人免費體驗包（各語言模型 100 萬 tokens，1 年有效，活動至 2026-12-31）入福利研究；Kimi API 新用戶 15 元券（限中國大陸手機號與實名，台灣 No，標 REGION-LOCKED）入 watchlist。其餘 291 筆既有紀錄未於本次直接複核；本更新不代表全面驗證。限時/即將到期案例每日查核，其餘依最久未核按月輪替。
+目前資料：318 筆，包含 240 筆福利研究、41 筆政策、37 筆待覆核線索；非318項可直接領取優惠。資料集更新至 2026-10-25 01:59 Asia/Taipei。本輪直接複核既有案例15筆，新增7筆官方機會與1筆待覆核線索；其餘218筆既有機會未在本輪重查。主要新案：Azure US$200/30天（台灣列入但需卡、到期須升PAYG）、Oracle Free Tier（台灣US$300資格未核）、GitHub教師/OSS維護者Copilot Pro、Cohere公益API補助、NVIDIA Inception（符合資格者最高US$100,000 DGX Cloud credits）、Oracle新創credits；另列OCI AI免費定價層。Hugging Face GPU補助金額/資格未公布，列watchlist。Tencent官方來源對90天/1年期限衝突；Alibaba新加坡多數文字模型額度更新為1M/90天。Perplexity Education頁回HTTP 403，未更新verified_at。台灣帳戶/付款及個人資格未全部核實，法律結論未核實；其餘案例不代表已重新查核。限時活動每日查核，其餘按最久未核每月輪替。
 
 ## 使用方式
 
