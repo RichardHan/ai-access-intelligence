@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：354筆，包含267筆機會、44筆政策、43筆待覆核線索；非354項可直接領取優惠。資料集更新至2026-10-25 07:22 Asia/Taipei。本次直接重開官方來源複核10筆既有案例：Robinhood GPT-6 Luna token促銷（美籍SSN門檻/No）、ChatGPT Dots代理（GPT-6 Astra/Yes）、ChatGPT Pro三方案（舊Pro200保留至10/29/Yes）、Claude Duet預覽（US only/No）、OpenAI Student Collective（本期已截止/No）、LangSmith新創（Build折扣與Scale 10K額度）、E2B新創（20K沙箱與7天宣傳條款）、Qodo 14天免卡試用、LlamaParse Free（月度10K點重置確認非10K頁）、LlamaParse新創（$2K一年）；341筆既有紀錄未於本次複核，未全面重核。新增2筆機會：ElevenLabs Free每月10,000 credits（免綁卡、限非商用）、Cartesia Free每月20,000 credits（Sonic TTS與Ink STT共用池、非商用）；另將Hedra AI影片生成免費額度未獲官方定價證實列為待覆核線索。重要變更：ChatGPT Dots與ChatGPT Pro確認台灣支援並標為Taiwan Yes；Robinhood Luna與Claude Duet確認限美國身分/境內並標為Taiwan No；LlamaParse Free確認補充週期為每月重置而非未知；E2B確認7天強制公開正面評價與徽章展示條款。台灣個別資格與法律狀態未核者均保留未知；詳見各筆來源與缺口。
+目前資料：357筆，包含269筆機會、44筆政策、44筆待覆核線索；非357項可直接領取優惠。資料集更新至2026-10-25 07:51 Asia/Taipei，本次直接重開官方來源複核6筆既有案例：Meta Global AI Developer Hackathon（申請截止台灣時間10/26 11:59，20,000名額，正式規則待發布）、AIコンパス（10/29截止，仍需每帳號月費JPY880）、GENSHI Voice（信用卡、自動續費與月額560點規則確認）、Upstage Mini4（五折已於10/22 UTC截止，餘額耗盡可能轉收費）、AI21（官方7天／3個月試用說明衝突、僅限內部評估）、Lolipop日本活動（申請已截止，既有點數可能仍有效）。約312筆既有案例未於本次複核，未全面重核。新增2筆機會：Adobe Express K–12免費教育版（每月250生成點數、由台灣合格學校部署）及Azure非營利年度US$2,000額度（需卡、額度用盡轉付費；台灣舊頁US$3,500與現行頁矛盾）；AWS非營利抵用額最高US$5,000列待追蹤，台灣商品與行政費未核。服務條款資格與法律／監管結論分開；無適用官方法律來源者仍標未核實。
 
 ## 使用方式
 
