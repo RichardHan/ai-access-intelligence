@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：293 筆，包含 223 筆福利研究、38 筆政策、32 筆待覆核線索，不是 293 項可直接領取的優惠。資料集更新至 2026-10-24 22:50:00 Asia/Taipei。本批次接續複核 6 筆既有案例（Mistral API 組織共用限額與官方 Usage/Limits 管理文檔、SambaNova Cloud Free 方案需綁卡購點政策、Together AI 無免費試用且最低 US$5 預付政策、Modal Starter 每月 US$30 免費算力額度與 3 席位條款、Runpod Starter US$1,000 新創核准贈額、Cloudflare 新創 Tier 3 與 Workers AI / AI Gateway 統一計費架構）並清理過期項目；新增 4 筆案例（GitHub Copilot Free 每月 2,000 次代碼補全與 AI Credits 對話【台灣 Yes】、DeepL API Free 每月 50 萬字元免費翻譯額度【台灣 Yes】、Mistral Vibe 原 Le Chat 升級之免費網頁與行動版 AI 工作助理【台灣 Yes】、Supermaven 併入 Cursor 停止新付費並過渡之政策紀錄）。其餘 283 筆既有案例未於本批次直接核實；仍有 49 筆已到複核日，將先按限時風險及最久未核順序處理。優先度評分與 S–D 分層由既有欄位衍生計算。
+目前資料：293 筆，包含 223 筆福利研究、38 筆政策、32 筆待覆核線索，不是 293 項可直接領取的優惠。資料集更新至 2026-10-24 22:50:41 Asia/Taipei。前批已核對6筆、增列4筆。此批直接複核4筆既有案例（Cloudflare Workers AI 免費額度及付費模型例外、Meta Hackathon 申請截止與台灣排除條款、Google台灣學生優惠與官方資格文案矛盾、ChatGPT美國學生優惠期限與續費/取消）；新增0筆，未重複加入僅線索或已存在方案。其餘279筆既有案例未於本批直接核實；仍有49筆已到複核日，先按限時風險及最久未核順序處理。優先度評分與 S–D 分層由既有欄位衍生計算。
 
 ## 使用方式
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-24T22:46:18+08:00",
-  "scope": "公開來源基準與分批複核；2026-10-24 本批次複核既有案例並新增機會研究；其餘歷史條目未全面重驗；優先度評分與 S–D 分層為既有欄位衍生計算。；2026-10-24 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-24T22:50:41+08:00",
+  "scope": "公開來源基準與分批複核；本次直接核實4筆既有案例，不代表其餘資料已全面重驗；限時活動按日追蹤、一般案例按最久未核月輪替；優先度評分與 S–D 分層為既有欄位衍生計算。",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -761,12 +761,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、審核、限額與政策可能變更",
-      "verified_at": "2026-10-24T19:32:20+08:00",
+      "verified_at": "2026-10-24T22:45:34+08:00",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T19:32:20+08:00",
+      "next_review_at": "2026-11-24T22:45:34+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Workers AI Free/Paid皆含每日10,000 neurons；部分資源密集模型需付費方案或預付點數。台灣個人帳戶適用條件未核。",
@@ -785,9 +785,8 @@
         {
           "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
           "label": "官方來源",
-          "scope": "標價、方案或資格摘要；不是個人帳戶核驗",
-          "evidence": "2026-10-24直接查閱：10,000 neurons/day、00:00 UTC重置、Paid超額單價及需付費方案/預付點數的模型清單。另查官方7/28 changelog，確認免費方案已排除部分資源密集模型。",
-          "accessed_time_range": "2026-10-24T19:32:20+08:00–2026-10-24T19:32:20+08:00"
+          "scope": "免費每日額度、超額費率、付費模型例外及 UTC 重置",
+          "evidence": "2026-10-24T22:45:34+08:00 直接開啟官方定價文件（頁面標示2026-10-20更新）：免費方案每日10,000 neurons、00:00 UTC重置，超額需Workers Paid並按US$0.011/1,000計費；Kimi 2.6/2.7 Code、GLM-5.2/5.3/5.3 Flash及部分DeepSeek v4模型必須付費方案或預付AI Gateway credits."
         }
       ],
       "record_type": "opportunity",
@@ -1632,8 +1631,8 @@
     },
     {
       "id": "meta-hackathon-oct2026",
-      "title": "Meta開發者黑客松：入選免費，規則待補",
-      "summary": "全球線上、入選者免費參加Meta Global AI Developer Hackathon，最多20,000人，申請滾動審查；官方期限10/25 23:59 ET或額滿即提前關閉（台灣時間10/26 11:59）。10/26開始、11/4 21:00 ET交件。官方頁稱全球開放但排除受制裁/出口管制人士及列舉地區；正式活動規則頁目前只顯示載入中，台灣參賽及獎項資格、API額度與活動後存取未核。",
+      "title": "Meta Global AI Developer Hackathon：限時申請至10/26台灣時間",
+      "summary": "Meta官方頁於2026-10-24確認申請仍開放，最多20,000名、額滿即提前關閉；截止為10/25 23:59 ET（10/26 11:59台灣時間）。全球開放但受當地法律與制裁/出口管制限制；台灣未列排除地區。正式規則尚未發布；入選者活動期間免費存取模型及活動，Meta API額度、獎項完整資格與活動後存取未公布。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -1664,40 +1663,40 @@
       "cancellation": null,
       "usable_duration": "活動10/26–11/4；之後存取未知",
       "access_risk": "資格、名額、政策與供應可能改變",
-      "verified_at": "2026-10-24T21:45:32+08:00",
+      "verified_at": "2026-10-24T22:46:00+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T21:45:32+08:00",
+      "next_review_at": "2026-10-25T12:00:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "Meta稱虛擬、全球且入選後免費參與；最多20,000位。指定Muse/SAM模型與Muse Code僅活動存取。",
+        "service_availability": "Meta Global Hackathon為線上活動；入選者免費參加。活動期間提供Muse Spark系列、Muse Image、SAM 3.1、Meta開源權重模型與Muse Code；主辦方頁稱部分入選者另有Baseten US$100+2M TPM、Modal US$100、Fireworks US$25 credits；沒有個人Meta API固定額度資料。",
         "account_eligibility": "須提交申請並通過滾動評選；上限20,000人，額滿可提前關閉。不得重複申請、虛報身分或垃圾申請；Meta/Cerebral Valley員工、承包人、實習生、政府關聯者及指定家屬排除。",
         "billing_country": "未知",
-        "identity_residency": "官方活動頁列全球開放，但以當地法律禁止參與/獲獎及制裁/出口管制限制為例外；列舉白俄羅斯、中國、俄羅斯、烏克蘭、敘利亞、古巴、北韓、伊朗與克里米亞、頓內茨克、盧甘斯克。正式活動規則仍需接受，主辦方外部waiver頁本次僅載入中。",
-        "terms_restrictions": "不可把VPN/IP視為合法資格；未操作VPN",
-        "taiwan_note": "官方活動頁稱全球開放且未列台灣為排除地區，但以當地法律及制裁/出口管制限制為例外；台灣個人能否申請及獲獎待完整規則，法律狀態未核實。"
+        "identity_residency": "官方活動頁稱全球開放，惟排除當地法律禁止參與/獲獎及制裁/出口管制對象，列舉白俄羅斯、中國、俄羅斯、烏克蘭、敘利亞、古巴、北韓、伊朗與克里米亞、頓內茨克、盧甘斯克；台灣不在列舉排除區。正式規則將於10/26前發布，獎項條件未核。",
+        "terms_restrictions": "不可把VPN/IP視為合法資格；未操作VPN。正式活動規則尚未發布，入選者須接受。",
+        "taiwan_note": "Meta頁面層級全球開放且台灣不在列舉排除地區；完整正式規則、台灣獎項資格及適用法律/監管判斷均未核。"
       },
       "unknowns": [
-        "官方活動規則與waiver正文（點入主辦方頁僅顯示Loading）及其法律/獎項細則",
-        "官方申請入口是否仍開放或已達20,000人上限",
-        "入選後模型/API credits、rate limits及活動後存取"
+        "申請名額是否已接近20,000人上限；尚確認仍開放，但剩餘名額未知",
+        "官方活動規則與waiver正文（主辦方頁僅顯示Loading，Meta稱將於10/26前發布），獎項/台灣資格細則",
+        "個人Meta API credits、rate limits及活動結束後存取未公布"
       ],
       "sources": [
         {
           "url": "https://dev.meta.ai/events/global-hackathon",
           "label": "官方或活動來源",
-          "scope": "全球/排除資格、評選、名額、官方申請與活動時程",
-          "evidence": "重開Meta官方活動頁：申請10/25 23:59 ET截止或滿20,000人提前關閉；全球開放但受當地法及制裁/出口管制排除，規則將在10/26活動開始前公布。台灣個人入選/API额度未核。",
-          "accessed_time_range": "2026-10-24T21:45:32+08:00–2026-10-24T21:45:32+08:00"
+          "scope": "全球/排除資格、評選、名額、官方申請、活動時程及獎項規則發布狀態",
+          "evidence": "2026-10-24 22:46 Asia/Taipei直接讀取Meta官方頁：申請入口顯示開放，截止10/25 23:59 ET或滿20,000人提前關閉；全球開放但受當地法律/制裁與出口管制限制，列出台灣未在排除名單。10/26前公布正式規則。入選可使用列出的Meta模型/工具；未列個人API credits。",
+          "accessed_time_range": "2026-10-24T22:46:00+08:00–2026-10-24T22:46:00+08:00"
         },
         {
           "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/waiver",
-          "label": "官方或活動來源",
-          "scope": "官方頁連結之活動規則/waiver正文",
-          "evidence": "2026-10-24T19:41:50+08:00 由Meta活動官方頁點入主辦方Cerebral Valley活動waiver；目前只返回Loading，條款正文無法核實。",
-          "accessed_time_range": "2026-10-24T19:41:50+08:00–2026-10-24T19:41:50+08:00"
+          "label": "官方活動主辦方連結條款",
+          "scope": "官方規則/waiver原文可讀性與活動額外利益",
+          "evidence": "2026-10-24 22:46直接開啟及檢查主辦方頁：內容僅顯示JavaScript Loading，Markdown版本404；waiver正文未能核實。活動主辦方頁另列select participants partner credits：Baseten $100+2M TPM、Modal $100、Fireworks $25，非所有申請者保證可得。",
+          "accessed_time_range": "2026-10-24T22:46:00+08:00–2026-10-24T22:46:00+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -4298,7 +4297,7 @@
       "cancellation": "提前取消僅保留當月，剩餘優惠月份失去；期滿US$20/月",
       "usable_duration": "四個月；10/31兌換截止時區未核",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T19:41:50+08:00",
+      "verified_at": "2026-10-24T22:45:34+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -4322,8 +4321,8 @@
           "url": "https://help.openai.com/en/articles/20001493-chatgpt-back-to-school-offer-for-students",
           "label": "官方來源",
           "scope": "學籍、兌換截止、四個免費月、付款、續費與取消",
-          "evidence": "2026-10-24T19:41:50+08:00 直接重開官方Help Center：限合格美國學位授予院校全/兼職大專及研究所學生；10/31前兌換；四個帳期免費、需有效付款方式、之後US$20/月；Apple/Google代收不適用；提前取消失去剩餘促銷月。頁面未要求居住地在美國。",
-          "accessed_time_range": "2026-10-24T19:41:50+08:00–2026-10-24T19:41:50+08:00"
+          "evidence": "2026-10-24T22:45:34+08:00直接開啟OpenAI Help Center（頁面標示13分鐘前更新）：僅合格美國學位授予院校全/兼職大專及研究所學生；10/31前兌換；四個月帳期免費、需有效付款方式、之後US$20/月續費；Apple/Google代收不適用；提前取消會失去剩餘促銷月份。頁面未要求居住地在美國。",
+          "accessed_time_range": "2026-10-24T22:45:34+08:00–2026-10-24T22:45:34+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -4340,8 +4339,8 @@
     },
     {
       "id": "google-students-tw-plus",
-      "title": "Google台灣學生：一年AI Plus，非美國Pro",
-      "summary": "台灣大專學生 Google AI Plus 免費一年（Gemini Omni、2倍用量上限、400GB儲存、無限上傳）。兌換期至2026-12-31。台灣官方FAQ明確：**美國版只限18歲以上美國大學生**（免費AI Plus），台灣版也需18歲以上、Google Payments合格付款方式、個人帳戶。期滿自動按NT$165/月續訂，需主動取消。家庭群組/企業/第三方訂閱帳戶不合格；學校 Workspace 帳戶不適用。",
+      "title": "Google學生：一年AI Plus，台灣公告開放、學生頁FAQ資格文字矛盾",
+      "summary": "Google台灣官方公告（8/20）明列符合資格台灣大專生一年免費AI Plus（Gemini Omni、2倍用量、400GB），需學校專屬email；12/31前兌換。通用官方條款要求18歲以上、支援地區高教學生、SheerID、個人Google帳戶與Google Payments合格付款方式。需注意同一台灣學生頁FAQ仍寫限美國大學生；與台灣公告/條款存在官方來源不一致，實際SheerID/結帳資格未驗。台灣官方公告列優惠期滿NT$165/月自動續訂；通用條款說可取消、優惠期內取消可持續到期末，優惠不得轉讓/轉售。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -4371,33 +4370,47 @@
       "cancellation": "台灣官方說明列期滿後自動按NT$165/月續訂，可隨時取消；若在12個月優惠期內取消，正式條款允許會員持續至優惠期末。取消後如儲存超過免費容量，需刪檔或購買方案才能新增儲存。",
       "usable_duration": "12個月，12/31前兌換",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T21:45:32+08:00",
+      "verified_at": "2026-10-24T22:45:34+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-25T21:45:32+08:00",
+      "next_review_at": "2026-10-25T22:45:34+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Google台灣官方公告列一年免費Google AI Plus、Gemini Omni、相較無AI訂閱者2倍用量及400GB；學生優惠額度可能與一般付費會員不同且可因容量改變。",
-        "account_eligibility": "年滿18歲、就讀支援地區高等教育機構、SheerID驗證、個人Google帳戶與Google Payments合格付款方式。台灣公告另要求學校專屬email；曾領免費學生方案或目前有其他訂閱者須待原方案結束。家庭群組、企業、第三方/affiliate訂閱、受監督帳戶及學校Workspace帳戶排除。",
-        "billing_country": "Google台灣公告列期滿NT$165/月；登記需Google Payments帳戶及合格付款方式。美元等值未換算。",
+        "account_eligibility": "年滿18歲、就讀有支援Google AI方案的國家/地區高等教育機構、以SheerID驗證、使用個人Google帳戶與Google Payments合格付款方式。台灣官方公告指定台灣大專校院學生及學校專屬email；曾領免費學生方案或目前已有其他訂閱者須待原方案結束。家庭群組、企業、第三方/affiliate訂閱、受監督帳戶及學校Workspace帳戶排除。",
+        "billing_country": "Google台灣官方公告列期滿NT$165/月；報名須Google Payments帳戶及合格付款方式。",
         "identity_residency": "官方條款按就讀高等教育機構所在國家/地區判定方案；台灣官方公告明列台灣大專學生。",
         "terms_restrictions": "不得轉讓或轉售，不得任意與其他Google One優惠併用；非學校Workspace帳戶。優惠用量可與一般付費計畫不同並可能不預告變動；優惠期滿按所在地標準月費自動扣款，除非先取消。",
-        "taiwan_note": "台灣官方公告明列台灣大專學生 Yes；但美國版資格（免費AI Plus）為美國大學生；台灣學生享 AI Plus（非AI Pro）一年；需18歲以上、Google Payments合格付款方式"
+        "taiwan_note": "Google台灣官方8/20公告明列符合資格的台灣大專校院學生可領一年AI Plus；但台灣學生頁FAQ仍寫限美國大學生，與台灣公告/條款存在官方文案矛盾。台灣適用為公告層級核實，個人SheerID/結帳資格未核。"
       },
       "unknowns": [
-        "個人SheerID核驗與結帳頁實際可領狀態",
-        "NT$165續訂價是否在本優惠期後變更",
+        "台灣官方學生頁FAQ限定美國大學生，但台灣公告明列台灣大專學生，個人SheerID/結帳結果未核",
+        "台灣官方公告列續訂NT$165/月；學生頁文案僅寫$165，結帳幣別及優惠後實際價格未獨立核實",
         "優惠專屬Gemini各功能實際用量上限"
       ],
       "sources": [
         {
           "url": "https://gemini.google/tw/students/?hl=zh-TW",
-          "label": "官方來源（台灣）",
-          "scope": "台灣學生方案說明、資格、FAQ、自動續訂警告",
-          "evidence": "重開Google繁中台灣學生頁：FAQ限定18歲以上合格美國大學生，兌換至12/31；需有效付款方式，優惠結束後自動扣每月NT$165（除非先取消）。台灣在地官方公告/SheerID資格來源支持台灣方案；美國規則不得套用。",
-          "accessed_time_range": "2026-10-24T21:45:32+08:00–2026-10-24T21:45:32+08:00"
+          "label": "Google官方台灣學生頁",
+          "scope": "AI Plus內容、兌換期限、續訂價；FAQ資格文字與台灣官方公告不一致",
+          "evidence": "2026-10-24T22:45:34+08:00直接查閱：頁面列一年AI Plus、400GB、2倍用量、12/31兌換與期滿每月$165，FAQ卻限定18歲以上美國大學生；此FAQ文字與Google台灣官方公告相矛盾，不能單獨據以判定台灣資格。",
+          "accessed_time_range": "2026-10-24T22:45:34+08:00–2026-10-24T22:45:34+08:00"
+        },
+        {
+          "url": "https://blog.google/intl/zh-tw/products/explore-get-answers/back-to-school-2026/",
+          "label": "Google台灣官方公告（2026-08-20）",
+          "scope": "台灣大專學生資格、學校信箱驗證、福利、台灣價及兌換期限",
+          "evidence": "2026-10-24T22:45:34+08:00 直接查閱台灣Google官方公告：符合資格的台灣大專校院學生以學校專屬email驗證可獲一年免費AI Plus，包含Gemini Omni、2倍用量、400GB；須遵守所連結條款，12/31前兌換，期滿自動NT$165/月扣款，可取消。",
+          "accessed_time_range": "2026-10-24T22:45:34+08:00–2026-10-24T22:45:34+08:00"
+        },
+        {
+          "url": "https://one.google.com/offer/studentoffer8",
+          "label": "Google One官方學生優惠條款",
+          "scope": "通用年齡、國家、帳戶、支付、排除條件、扣款與優惠條件",
+          "evidence": "2026-10-24T22:45:34+08:00 直接查閱，條款更新日2026-08-19：18歲以上、受支援地區高等教育學生、SheerID、個人Google帳戶、Google Payments合格付款方式；家庭、企業、第三方方案、受監督及學校Workspace帳戶排除；12/31截止，12個月後按所在地標準月費自動扣款，優惠不可轉讓/轉售，優惠用量可異於付費方案且不預告變更。",
+          "accessed_time_range": "2026-10-24T22:45:34+08:00–2026-10-24T22:45:34+08:00"
         }
       ],
       "record_type": "opportunity",
