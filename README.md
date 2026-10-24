@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：301 筆，包含 229 筆福利研究、40 筆政策、32 筆待覆核線索，不是 301 項可直接領取的優惠。資料集更新至 2026-10-24 23:35:00 Asia/Taipei。此批直接複核16筆既有案例（Meta Muse 訂閱公開與台灣未開放、Meta Muse Wonder 模型 rollout、v0 新舊戶額度與 10/23 文件、AICU 10/22 條款與 AP 評估用途、Mango Inference 官方 $10 額度、Fire Pass 維持關閉新訂閱、Gladia 新創條款實讀與台灣合格、Sarvam ₹100 永不過期與新創標記、Deepgram Speak '26 現場出席硬性截止、Deepgram Flux TTS 1:1 match 至年底、Replit Free Mode 計費涵蓋範圍、ElevenLabs 新創 33M 與轉 Free 規則、AMD 開發者 30 天/90 天二選一、Nebius Builder 90 天效期與制裁審查、Nebius 新創 VC $5M 門檻、Modal 新創/學術綁卡防濫用）；新增5筆（Qdrant Cloud 1GB RAM 永久免費叢集、Supabase Free 2 專案含 pgvector 原生支援、Pinecone Starter 免費 Serverless 向量庫、Weaviate Cloud 100K 物件免費叢集、Hyperbolic 推論需儲值 $5 轉 Pro 政策紀錄）。其餘280筆既有案例未於本批直接核實；仍有30筆已到複核日，先按限時風險及最久未核順序輪替處理。優先度評分與 S–D 分層由既有欄位衍生計算。
+目前資料：302 筆，包含 230 筆福利研究、40 筆政策、32 筆待覆核線索；不是 302 項可直接領取的優惠。資料集更新至 2026-10-25 00:07:14 Asia/Taipei。前批複核16筆並新增5筆；本次再複核24筆既有案例：時效/政策9筆（Meta Muse、Muse Wonder、Fire Pass、AICU AP、Codex 學生與 Composer、Deepgram Speak/Flux、v0）、新創7筆（Sarvam、ElevenLabs、Modal、Nebius Builder/Startup、Tavily、Algolia）、開發者/教育8筆（AMD、Qoder Free/Lite/Community、Kiro、TinyFish、JetBrains、Thunder）。新增 Google Cloud US$300/90天試用；未升級不自動扣款，台灣個別付款/身分資格未核。重要差異：Codex 學生優惠不適用台灣本地居住/就學情境；Nebius Builder 限原型且超分配30%可自動暫停；Algolia現行條款為7年/US$15M，舊版只在封存文件；Qoder Lite官方活動頁與定價頁獎勵數字矛盾。其餘277筆未於本次直接核實；截至資料更新時間19筆已過next_review_at。限時/即將到期每日複核，其餘依最久未核按月輪替。
 
 ## 使用方式
 
