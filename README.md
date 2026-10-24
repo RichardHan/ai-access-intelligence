@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：338筆，包含254筆機會、43筆政策、41筆待覆核線索；非338項可直接領取優惠。資料集更新至2026-10-25 04:25 Asia/Taipei。本次實讀複核既有8筆（Meta Global AI Developer Hackathon、Anthropic生命科學客座研究員徵案、Deepgram Speak現場報到、Deepgram Flux TTS、Picsart WAN 3.0、Adobe Firefly 12個月無限促銷、Voyage AI免費額度、DeepSeek API新用戶贈額與法源），新增2筆機會（Poe每日免費運算點數、JetBrains Student Pack全套IDE與AI Assistant）；336筆原有紀錄中328筆未於本次重查，未全面重核。重要限制：Meta黑客松申請即將於10/25 11:59 PM ET（台灣10/26 11:59 AM）截止且正式規則全文尚未發布；Anthropic客座研究員需於錄取14天內取得機構同意函且商業公司排除；Voyage AI免費tokens不適用Batch API；DeepSeek依台灣數發部公告為公務機關禁用但民間未限；Deepgram Speak需赴美親至舊金山現場報到；Picsart WAN 3.0 Prime未納入免點條款；Poe每日點數由系統動態調配且不滾存；JetBrains教育授權嚴格限非商業學術使用。法律/監管結論除有明確官方來源外皆標未核實；資料更新不代表全庫重新核實。
+目前資料：341筆，包含257筆機會、43筆政策、41筆待覆核線索；非341項可直接領取優惠。資料集更新至2026-10-25 04:52 Asia/Taipei。本輪直接重開官方來源複核3筆限時案例（Meta Global AI Developer Hackathon、Vercel Laya、Rime STT；Meta為同日再次查核），新增3筆機會（Figma Education每月3,000 AI credits、ASUS指定筆電綁定Google AI Pro/Plus三個月、國網中心大學H200優惠）。既有8筆複核與Poe、JetBrains兩筆新增仍屬前一輪；336筆原有紀錄中，先前328筆未查核，本輪新增核查Laya與Rime後尚有326筆未核，未全面重核。重要限制：Meta申請將於10/25 11:59 PM ET（台灣10/26 11:59 AM）截止或額滿提前關閉，正式規則全文未發布；Laya僅經Boundless免費至10/31；Rime STT免費至11/19、11/20起每分鐘US$0.002且總免費量、台灣資格未公布；Figma每月3,000 credits僅限高等教育/核准bootcamp AI用戶且台灣資格未核；ASUS優惠僅指定筆電，需付款方式且試用期滿自動續費；國網大學算力須由校方申請並付費，非個人免費點數；Anthropic客座研究員需於錄取14天內取得機構同意函且商業公司排除；Voyage AI免費tokens不適用Batch API；DeepSeek依台灣數發部公告為公務機關禁用但民間未限；Deepgram Speak需赴美親至舊金山現場報到；Picsart WAN 3.0 Prime未納入免點條款；Poe每日點數由系統動態調配且不滾存；JetBrains教育授權嚴格限非商業學術使用。法律/監管結論除有明確官方來源外皆標未核實；資料更新不代表全庫重新核實。
 
 ## 使用方式
 
