@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：285 筆，包含 216 筆福利研究、36 筆政策、33 筆待覆核線索，不是 285 項可直接領取的優惠。資料集更新至 2026-10-24 21:49:30 Asia/Taipei。本批次直接複核 7 筆既有案例，將 Jio、Mistral 官方線索升級為條件式機會；新增 1 筆 Vercel AI Gateway 短期模型優惠。其餘 277 筆既有案例未於本批次複核；仍有 62 筆已到複核日，將先按限時風險及最久未核順序處理。2026-10-24 21:12 加入的優先度評分與 S–D 分層仍由既有欄位衍生計算。
+目前資料：288 筆，包含 219 筆福利研究、37 筆政策、32 筆待覆核線索，不是 288 項可直接領取的優惠。資料集更新至 2026-10-24 22:35:00 Asia/Taipei。本批次直接複核 10 筆既有案例（涵蓋 NVIDIA Build 替換失效端點並確認 40 RPM、Cohere 試用限額與商用條款、Azure 新創與學生、Lovable 瑞典學生退場機制、Google Cloud 新創排除條件、SoftBank Perplexity 自動扣款路徑、Hugging Face Pro 與 ZeroGPU 24小時重置、Antigravity 免費個人版、Grok 新創額度發放機制，以及 Cursor 停辦舊版學生方案轉為官方政策）；新增 3 筆機會（GitHub Copilot Free、GitHub Copilot Student、Lovable 學生與教師半價）。其餘 275 筆既有案例未於本批次複核；仍有 70 筆已到複核日，將先按限時風險及最久未核順序處理。2026-10-24 加入的優先度評分與 S–D 分層仍由既有欄位衍生計算。
 
 ## 使用方式
 

@@ -3845,5 +3845,156 @@
       "https://www.jio.com/help/faq/mobile/offers/google-gemini-offer/who-is-eligible-for-the-google-gemini-offer-from-jio/",
       "https://www.jio.com/google-gemini-offer/"
     ]
+  },
+  {
+    "record_id": "nvidia-build-free",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "官方Build提供免費模型推論，數字仍未知；原docs.api.nvidia.com/nim/reference/limits失效404",
+    "current_classification": "HIGH BUT LIMITED · UP TO 40 RPM RATE LIMIT",
+    "change_type": "dead_link_fixed_and_quota_confirmed",
+    "note": "官方說明中心FAQ端點（help-center-faq.yaml）明確證實：所有模型均可免費原型測試，免收token費用；免費層受速率限制（大部分模型至多40 RPM），個人速率顯示於儀表板右上角。替換已失效的404文檔網址。",
+    "sources": [
+      "https://build.nvidia.com/",
+      "https://build.nvidia.com/api/runtime/content/help-center-faq.yaml",
+      "https://forums.developer.nvidia.com/t/clarity-on-nim-api-free-tier-rate-limit-increases/369624"
+    ]
+  },
+  {
+    "record_id": "cohere-trial-api",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "每月1000 calls，禁止production/商用；服務條款細節未覆核",
+    "current_classification": "HIGH BUT LIMITED · 1000 CALLS/MO · BUSINESS USE ONLY",
+    "change_type": "terms_restriction_confirmed",
+    "note": "覆核Rate limits與Terms of Use：Trial key每月1,000次呼叫；Chat模型限速20 req/min；條款第14條明訂服務僅供商務使用（business use），嚴格禁止個人或家庭用途（personal, family or household purposes）；禁止將試用金鑰用於生產環境。",
+    "sources": [
+      "https://docs.cohere.com/v2/docs/rate-limits",
+      "https://cohere.com/terms-of-use"
+    ]
+  },
+  {
+    "record_id": "azure-startups",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "Startup FAQ先前讀取失敗，新客分階段額度細節未核實",
+    "current_classification": "CONDITIONAL · ,000 INITIAL (90 DAYS) + ,800 POST-VERIFICATION (180 DAYS)",
+    "change_type": "faq_source_recovered_and_terms_clarified",
+    "note": "成功讀取2026-10-22最新Microsoft for Startups FAQ：無投資人推薦碼之新Azure客戶提供,000（90天），商業驗證後追加,800（180天）；有合格機構代碼之投資人方案起步00,000。需信用卡驗證；不可變更現有帳單國別。解決FAQ無法讀取之缺口。",
+    "sources": [
+      "https://azure.microsoft.com/en-us/free/students/",
+      "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/mfs-faqs"
+    ]
+  },
+  {
+    "record_id": "lovable-sweden-2026",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "瑞典學生免費至年底，元旦可能自動扣款續費存疑",
+    "current_classification": "CONDITIONAL · NO AUTO CHARGE · REVERTS TO FREE PLAN POST DEC 31",
+    "change_type": "renewal_terms_clarified",
+    "note": "覆核官方活動頁FAQ確認：2026-12-31活動結束後，帳號自動保留並降為Free方案，不強制自動續費扣款；若自願續約Pro可自動享有學生5折優惠。化解扣款風險疑慮。",
+    "sources": [
+      "https://back-to-school.lovable.app/"
+    ]
+  },
+  {
+    "record_id": "google-cloud-startups",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "最高額不當實際價值；顧問/接案排除條款未在頁面直接驗證",
+    "current_classification": "CONDITIONAL · START K / SCALE UP TO 50K · 1P CONSUMPTION ONLY",
+    "change_type": "exclusion_terms_verified",
+    "note": "覆核官方FAQ確認：Start等級提供k（成立2年內具MVP新創）；Scale最高50k。FAQ明訂排除dev shops、consultancies、agencies、crypto mining；額度僅限Google 1P PayG產品，排除第三方Model Garden與Marketplace。消除缺口。",
+    "sources": [
+      "https://cloud.google.com/startup"
+    ]
+  },
+  {
+    "record_id": "softbank-perplexity",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "日本電信Perplexity 6個月¥0；取消條件與電信帳單扣款細節未核",
+    "current_classification": "REGION-LOCKED · AUTO-RENEWS TO JPY 2,950/MO UNLESS CANCELED",
+    "change_type": "cancellation_and_auto_renewal_verified",
+    "note": "覆核官方條款確認：申辦須關閉Wi-Fi透過SoftBank/Y!mobile/LINEMO網路認證；若未於6個月內透過My SoftBank主動解約，將自動續訂並隨電信帳單收取每月2,950日圓。解約電信門號時Perplexity Pro隨同終止。",
+    "sources": [
+      "https://www.softbank.jp/mobile/service/perplexity-ai/"
+    ]
+  },
+  {
+    "record_id": "huggingface-pro",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "US/月，ZeroGPU重置時區與換算未核",
+    "current_classification": "HIGH BUT LIMITED · 40 MIN DAILY GPU · 24H ROLLING RESET",
+    "change_type": "zerogpu_reset_specs_verified",
+    "note": "覆核ZeroGPU官方文檔確認：PRO用戶每日40分鐘RTX Pro 6000 Blackwell額度於首次使用後滿24小時精確重置（rolling reset）；超額可按每10分鐘加購；可host 10個ZeroGPU Spaces（免費用戶限2個且每日5分鐘）。消除重置機制缺口。",
+    "sources": [
+      "https://huggingface.co/pro",
+      "https://huggingface.co/docs/hub/spaces-zerogpu"
+    ]
+  },
+  {
+    "record_id": "antigravity-free",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "免費代理有週限；週限重置與模型可用性細節未核",
+    "current_classification": "HIGH BUT LIMITED · WEEKLY REFRESHED AGENT QUOTA",
+    "change_type": "plans_doc_verified",
+    "note": "覆核官方Plans文件確認：個人帳戶US/月享有基本每週重置限額、無限Tab代碼補全、無限Command指令、支援Gemini 3.8 Flash及多款代理模型；依任務負載動態扣額。官網支援繁體中文（台灣）。",
+    "sources": [
+      "https://antigravity.google/pricing",
+      "https://antigravity.google/docs/plans"
+    ]
+  },
+  {
+    "record_id": "grok-watch",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "共享贈額按案核定；釋出機制與適用範圍未核",
+    "current_classification": "CONDITIONAL · 20% UPFRONT / 80% MILESTONE RELEASE",
+    "change_type": "grant_structure_verified",
+    "note": "覆核官方新創頁面確認：單一額度通用Grok、Grok Build、Grok Bot與Grok API（6-12個月用量）。核准發放20%，上線啟用後自動釋出其餘80%。限創投資金、上線產品與公司網域，每家公司限領一次。",
+    "sources": [
+      "https://x.ai/startups"
+    ]
+  },
+  {
+    "record_id": "cursor-watch",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": "待輪替核實線索，無來源",
+    "current_classification": "CLOSED TO NEW SUBSCRIPTIONS · POLICY",
+    "change_type": "legacy_student_discount_discontinued_verified",
+    "note": "官方說明文件明確證實：Cursor已於2026年6月25日終止舊版學生一年免費Pro申請；既有已領取者保留至期滿後自動轉為US0/月續訂。現行學生管道改為碩博/研究員/教師填表申請credits，大學生改由校園/線上活動提供。從未驗證watchlist升級為官方policy。",
+    "sources": [
+      "https://cursor.com/help/account-and-billing/student-discount",
+      "https://cursor.com/pricing"
+    ]
+  },
+  {
+    "record_id": "github-copilot-free",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED · 2,000 COMPLETIONS/MO · AUTO MODEL SELECTION",
+    "change_type": "initial_opportunity_baseline",
+    "note": "新增：GitHub官方個人免費方案，每月提供2,000次代碼補全與基礎AI Credits，支援IDE Chat、MCP、Prompt files與CLI。模型由系統自動配置。",
+    "sources": [
+      "https://docs.github.com/en/copilot/get-started/plans"
+    ]
+  },
+  {
+    "record_id": "github-copilot-student",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED · VERIFIED STUDENTS · MONTHLY RE-EVALUATION",
+    "change_type": "initial_opportunity_baseline",
+    "note": "新增：GitHub Education認證學生享免費Copilot資格，含AI Credits、Cloud agent、Agent mode、PR summaries與代碼審查；資格每月自動複查。",
+    "sources": [
+      "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students",
+      "https://docs.github.com/en/copilot/get-started/plans"
+    ]
+  },
+  {
+    "record_id": "lovable-student-discount",
+    "verified_at": "2026-10-24T22:35:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED · 50% OFF PRO (2.50/MO) · 100 CREDITS/MO",
+    "change_type": "initial_opportunity_baseline",
+    "note": "新增：Lovable官方在校學生與教師5折優惠（Pro方案US2.50/月），每月100 credits，效期最長12個月。免卡驗證學校信箱，支援手動網域審查。",
+    "sources": [
+      "https://lovable.dev/students"
+    ]
   }
 ]
