@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T04:52:32+08:00",
-  "scope": "公開來源基準與分批複核。逐筆查核保留各案例verified_at及來源時間，不代表全庫核實；2026-10-25 04:45–04:51 Asia/Taipei直接重開Meta Global AI Developer Hackathon、Vercel Laya、Rime STT官方來源（Meta為同日再次核查，Laya與Rime為新增複核案例）。另新增Figma Education AI credits、ASUS指定筆電Google AI方案與國網中心大學H200優惠，後兩者及Figma的台灣個人資格均未核實；限時與即將截止案例每日追蹤，其餘按最久未核每月輪替。",
+  "updated_at": "2026-10-25T05:22:54+08:00",
+  "scope": "公開來源基準與分批複核。逐筆查核保留各案例verified_at及來源時間，不代表全庫核實；2026-10-25 04:45–04:51 Asia/Taipei直接重開Meta Global AI Developer Hackathon、Vercel Laya、Rime STT官方來源（Meta為同日再次核查，Laya與Rime為新增複核案例）。另新增Figma Education AI credits、ASUS指定筆電Google AI方案與國網中心大學H200優惠，後兩者及Figma的台灣個人資格均未核實；限時與即將截止案例每日追蹤，其餘按最久未核每月輪替。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -600,7 +600,7 @@
     {
       "id": "cursor-watch",
       "title": "Cursor 學生方案：舊版一年免費已於6/25停辦，現行碩博改審查表單",
-      "summary": "官方文件確認自2026年6月25日起停止受理舊版大學生一年免費Pro申請；既有用戶可保留至一年期滿，期滿後若未取消將以US0/月自動續訂。現行途徑改為碩博士生、研究員與教師填表申請額度，大學部改由校園與線上活動提供折扣。",
+      "summary": "官方文件確認自2026年6月25日起停止受理舊版大學生一年免費Pro申請；既有用戶可保留至一年期滿，期滿後若未取消將以US$20/月自動續訂。現行途徑改為碩博士生、研究員與教師填表申請額度，大學部改由校園與線上活動提供折扣。",
       "categories": [],
       "views": [],
       "setup_cost_usd": null,
@@ -1485,7 +1485,7 @@
     {
       "id": "laya-free-oct2026",
       "title": "Laya：10月31日前限路由免費",
-      "summary": "Vercel官方10/1公告仍列Laya於AI Gateway經Boundless免費至2026-10-31；需限定Boundless路由。到期後laya-free停止服務，標準laya開始計費。頁面沒有截止時區、固定用量上限或台灣個人資格。",
+      "summary": "10/25重查官方10/1公告，仍明列兩個Laya模型ID經Boundless免費至2026-10-31；-free ID活動後停止服務，標準ID開始計費。模型頁仍列Boundless及8,192 context。未公布固定上限、截止時區或活動後價格；條款禁止VPN繞道與非授權商業用途。",
       "categories": [
         "FREE"
       ],
@@ -1510,12 +1510,12 @@
       "cancellation": null,
       "usable_duration": "至2026-10-31，時區未知",
       "access_risk": "資格、名額、政策與供應可能改變",
-      "verified_at": "2026-10-25T04:45:34+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2026-10-01",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T04:45:34+08:00",
+      "next_review_at": "2026-10-31T23:59:59+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "限Vercel AI Gateway經Boundless供應的指定Laya模型ID，至2026-10-31；非通用聊天模型。",
@@ -1535,7 +1535,7 @@
           "url": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
           "label": "官方或活動來源",
           "scope": "研究批次列明的方案與限制；非個人帳戶驗證",
-          "evidence": "2026-10-25 04:45 Asia/Taipei直接重開官方10/1公告：Laya經Boundless免費至2026-10-31；laya-free於活動後停止供應、標準ID開始計費。公告未列截止時區、固定上限、活動後價格或台灣帳戶資格；本次未登入、呼叫API或測試個人資格。",
+          "evidence": "2026-10-25重查官方10/1公告仍有效，明載convaiinnovations/laya及convaiinnovations/laya-free經Boundless免費至2026-10-31",
           "accessed_time_range": "2026-10-25T04:45:34+08:00–2026-10-25T04:45:34+08:00"
         },
         {
@@ -1641,7 +1641,7 @@
     {
       "id": "meta-hackathon-oct2026",
       "title": "Meta Global AI Developer Hackathon：入選者$150 credits，台灣時間10/26截止",
-      "summary": "Meta 官方活動頁與主辦方 Cerebral Valley 舉辦 Global AI Developer Hackathon，申請截止為 2026-10-25 11:59 PM ET（台灣時間 10/26 11:59 AM）或額滿 20,000 人。入選者獲贈 $150 Meta Model API Promotional Credits。官方 Credit Terms PDF 明確規定：Credits 一旦入帳無到期日直到用完或帳戶終止，Model API 帳戶需有在案有效付款方式方能使用服務，但申請、參賽與提交專案無須付款或購買。團隊成員須於 2026-11-04 9:00 PM ET 前各自領取。活動與地理政策受限清單共 23 處，不含台灣，台灣參賽者具官方申請資格。",
+      "summary": "10/25主辦方頁明列Registration: Open（須主辦方審核）；截止10/25 23:59 EDT，即台灣10/26 11:59，或20,000名額額滿提前關閉。Meta及主辦方仍稱正式規則將於10/26活動開始前發布；waiver直接讀取仍僅Loading，未核全文。Baseten（$100/2M TPM）、Modal（$100）、Fireworks（$25）為部分入選者夥伴額度。禁止重複申請、假身分及垃圾申請；台灣不在頁面列舉排除地區，但仍受其他資格與當地法律限制。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -1672,7 +1672,7 @@
       "cancellation": null,
       "usable_duration": "活動2026-10-26至11-04；US$150 credits期限與額度規則未由可讀官方條款核實",
       "access_risk": "申請最多20,000名且可能提前關閉；須滾動評選入選；正式規則/waiver文字未能讀取，資格、credit期限和使用限制未核實",
-      "verified_at": "2026-10-25T04:45:34+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -1696,7 +1696,7 @@
           "url": "https://dev.meta.ai/events/global-hackathon",
           "label": "Meta官方活動頁",
           "scope": "申請期限、名額上限、時程、評選及官方頁列出的排除條件",
-          "evidence": "2026-10-25 04:45 Asia/Taipei直接重開官方活動頁：截止2026-10-25 23:59 ET（EDT UTC−4；台灣10/26 11:59）或20,000名額額滿提前關閉；活動10/26至11/4；全球開放但受當地法律、制裁和出口管制限制，頁面列舉排除地區不含台灣。官方頁仍稱正式規則將於10/26活動開始前發布；未由此頁核實每人$150 credits。",
+          "evidence": "2026-10-25查閱確認報名仍開放（Registration: Open，需審核），截止10/25 23:59 EDT（台灣10/26 11:59），名額20,000人；正式規則於10/26活動開始前發布",
           "accessed_time_range": "2026-10-25T04:45:34+08:00–2026-10-25T04:45:34+08:00"
         },
         {
@@ -5045,7 +5045,7 @@
     {
       "id": "deepseek-search-fetch-window",
       "title": "DeepSeek Search／Fetch：11/1起工具收費",
-      "summary": "Search及Fetch工具費暫免；2026-11-01 00:00北京／台灣UTC+8起各US$0.75/1000成功請求。模型tokens另計。Search100QPS、Fetch25QPS各自帳戶級，Fetch另有網域限速，非無限。",
+      "summary": "DeepSeek官方指南及定價頁明列Search、Fetch各US$0.75/1000成功請求；透過DeepSeek Harness、Claude Code或Codex的伺服器端工具呼叫目前暫免，2026-11-01 00:00北京／台灣UTC+8起計費。模型tokens另計；空結果、失敗及逾時不收工具費。Search 100 QPS、Fetch 25 QPS各自帳戶級，Fetch另有未公布數值的網域限速；不是全面免費或無限。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -5071,12 +5071,12 @@
       "cancellation": null,
       "usable_duration": "至2026-11-01 00:00 UTC+8開始收工具費",
       "access_risk": "既有工作流11/1後可新增工具費，不因無另訂閱而免扣",
-      "verified_at": "2026-10-25T00:50:00+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T00:50:00+08:00",
+      "next_review_at": "2026-11-01T00:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -5096,6 +5096,12 @@
           "scope": "Search/Fetch成功請求費用、開始時間及帳戶級速率限制",
           "evidence": "2026-10-25 00:40–00:50 Asia/Taipei直接讀取官方API Billing/Rate Limits：Search與Fetch各US$0.75/1,000成功請求；DeepSeek Harness、Claude Code、Codex的伺服器端工具呼叫於2026-11-01 00:00北京時間（台灣同時）起計費；空結果/失敗不計費；Search 100 QPS、Fetch 25 QPS各自依帳戶計，Fetch另受每網域限制。模型token另計。個人/台灣付款資格未核。",
           "accessed_time_range": "2026-10-25T00:40:00+08:00–2026-10-25T00:50:00+08:00"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/quick_start/pricing",
+          "label": "官方定價",
+          "scope": "Search與Fetch計費標準",
+          "evidence": "2026-10-25查閱官方定價頁，確認Search與Fetch費率為$0.75/1,000次成功請求"
         }
       ],
       "record_type": "opportunity",
@@ -7326,8 +7332,8 @@
     },
     {
       "id": "aicu-kumamoto-support",
-      "title": "AICU熊本災害支援API：10/31結束",
-      "summary": "AICU官方7/30公告：熊本地震復舊/支援用途的應用程式可申請AICU API基礎設施支援，至2026-10-31免追加費，但受計畫總預算限制，未公布個別額度。支援的是面向災民/居民/支援者的應用，不是開發者個人用量；對象包含熊本學生、全國NPO/支援團體及自治體/大型計畫，也接受熊本縣外開發。海外台灣開發者是否符合帳戶/申請條件未明。",
+      "title": "AICU熊本支援API：申請已結束，既有支援標至10/31",
+      "summary": "10/25官方AICU Call申請頁明列「応募締切 募集終了」「この案件の募集は終了しました」，新申請已關閉。7/30公告仍稱核准的熊本災害支援應用於計畫總預算範圍內至2026-10-31不追加課金；不代表目前可申領。未公布關閉日期、原因、個別額度或剩餘預算。台灣海外帳戶資格仍未知。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -7352,13 +7358,13 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "至2026-10-31且受計畫預算",
-      "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-25T00:50:00+08:00",
+      "access_risk": "新申請已關閉；既有支援受核准條件及計畫總預算限制。",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T00:50:00+08:00",
+      "next_review_at": "2026-11-25T05:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "2026-10-31前免追加費，但總預算用盡可能限制；對象為供災民/居民/支援者/自治體使用的災害支援應用，不補貼開發者個人AI使用。AICU API含OpenAI相容LLM等，部分整合模型/語音服務仍可能另收費。",
@@ -7380,6 +7386,12 @@
           "scope": "公告日期、生效/結束期限、總預算上限、合格受益對象與申請資料",
           "evidence": "2026-10-25 00:40–00:50 Asia/Taipei直接重開AICU官方全文：7/30公告，支援熊本災害復舊/支援應用至10/31免追加費且受總預算限制；熊本學生、全國NPO/支援組織、自治體/大型計畫可申請，縣外開發可；需AICU API帳戶、email、GitHub及用途說明。非個人用量補助；海外台灣帳戶資格、個別額度與餘額未公布。",
           "accessed_time_range": "2026-10-25T00:40:00+08:00–2026-10-25T00:50:00+08:00"
+        },
+        {
+          "url": "https://aicu.jp/call/kumamoto260728",
+          "label": "官方申請頁",
+          "scope": "申請狀態",
+          "evidence": "2026-10-25查閱官方AICU Call申請頁明列「応募締切 募集終了」「この案件の募集は終了しました」，確認新申請已停止受理"
         }
       ],
       "record_type": "opportunity",
@@ -7388,16 +7400,16 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
+      "status": "applications_closed",
       "legal_status": "not_verified",
-      "priority_score": 15.4,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤40分鐘·有資格門檻"
+      "priority_score": 12.7,
+      "priority_tier": "D",
+      "priority_note": "官方·已截止·零設定費·台灣未標記·≤40分鐘·有資格門檻"
     },
     {
       "id": "suitup-oct2026",
       "title": "日本Suitup：7日試用，簽約前三月八折",
-      "summary": "10/1–10/31須員工面談並申請7日試用，簽約前三月20%折扣。標準¥1080/人月未稅、10人以下Starter¥500未稅，是否兩案都適用待核；12/31前免初期費。未核匯率不標美元低成本，也非永久免費或無限模型。",
+      "summary": "10/25官方公告仍刊載10/1–10/31活動：須先與員工面談並申請7日免費試用，簽約後前三個月20%折扣；公司須於聯絡表註明「2026年10月度AIツール導入応援キャンペーン」。標準¥1080/人月、10人以下Starter¥500/人月皆未稅，兩方案是否均適用折扣仍未明；初期費免至12/31。未核卡、續約取消、台灣／海外公司資格或AI配額。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -7423,12 +7435,12 @@
       "cancellation": null,
       "usable_duration": "申請至10/31；試用7日，簽約後前三月折扣",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-25T00:25:00+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-31T00:25:00+08:00",
+      "next_review_at": "2026-10-31T23:59:59+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -11617,7 +11629,7 @@
       "previous_limit": null,
       "id": "workbuddy-step5-oct25-unverified",
       "title": "WorkBuddy Step5 免費期標至10/25（時區與狀態未核）",
-      "summary": "騰訊雲開發者社群文章聲稱 WorkBuddy Step 5 Preview 免費窗口為2026-10-12至10-25，並稱10/26起恢復0.43倍積分計費；原文在本次直接開啟時只回傳反爬腳本，未能讀取正文。截止時區不明，查核時台灣仍是10/25，故不能判定已結束，也無官方來源確認活動目前有效。保留為待覆核線索，不視作已核實可領優惠。",
+      "summary": "10/25重查：原騰訊雲社群文章仍僅回傳反爬腳本；另有騰訊雲社群索引稱Step 5 Preview於10/12–10/25限免，但未找到可核實此活動的官方公告。官方WorkBuddy國際版定價頁未確認Step 5活動期限或0.43倍費率。截止時區與時刻未知，不能標記已過期，也不能確認目前可領。",
       "categories": [
         "FREE",
         "BETA-ACCESS"
@@ -11637,10 +11649,10 @@
       "limited_confirmed": false,
       "usable_duration": "社群稱2026-10-25止；時區與當日截止時刻未知",
       "access_risk": "活動期限、申領資格、額度及費率僅社群來源，官方狀態未核",
-      "verified_at": "2026-10-25T02:49:22+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-24T03:05:00+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T02:49:22+08:00",
+      "next_review_at": "2026-10-26T12:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "狀態未核；社群文章稱免費至10/25，官方活動頁/公告未找到可直接確認內容。",
@@ -19321,7 +19333,7 @@
     {
       "id": "astamuse-agent-trial-oct31-index-only",
       "title": "astamuse代理：10/31試用申請，正文404待核",
-      "summary": "官方搜尋索引列每公司1–3帳號、發放起原則兩週、10/31前申請，可提前結束，結案問卷；不含陪跑訓練。直接頁404，因此不把索引當本輪完整官方核實，不建議據此提交公司資訊。",
+      "summary": "10/25直接重開原公告仍為HTTP 404；官方2026新聞列表未列10/8試用公告。搜尋索引仍描述10/8–10/31申請、每公司1–3帳號、發放起原則兩週，但無法據此確認目前仍受理。維持未核實觀察，不把404推論為活動取消，也不把索引當現行申請條款。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -19348,15 +19360,15 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、區域與方案可變；未登入或測試，不能據公開頁保證帳戶可用",
-      "verified_at": "2026-10-25T01:25:00+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-24T16:04:04+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T01:25:00+08:00",
+      "next_review_at": "2026-10-31T23:59:59+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開頁可讀，不等於台灣帳戶可用",
+        "service_availability": "原試用公告直接讀取為HTTP 404；目前服務與申請狀態未核實。",
         "account_eligibility": "官方搜尋索引列每公司1–3帳號、發放起原則兩週、10/31前申請，可提前結束，結案問卷；不含陪跑訓練。直接頁404，因此不把索引當本輪完整官方核實，不建議據此提交公司資訊。",
         "billing_country": "未核實",
         "identity_residency": "未核實",
@@ -20849,8 +20861,8 @@
     },
     {
       "id": "github-copilot-student",
-      "title": "GitHub Copilot Student：認證學生免費使用Copilot完整功能與AI Credits",
-      "summary": "經GitHub Education認證學生可免費使用Copilot，含AI Credits allowance、Agent mode、Cloud agent、PR summaries及code review；模型自動選擇，排除第三方agents。官方計費文件另列unlimited code completions；AI Credits數字未公布且每月UTC重置、未用不結轉。學生資格每月重評，驗證核准與Copilot啟用分開。台灣學校/edu.tw接受情況未由官方保證。",
+      "title": "GitHub Copilot Student：不限補全，但AI credits限額未公布；13歲以上學籍個案驗證",
+      "summary": "經GitHub Education驗證學生免費取得Copilot Student，不限code completions；Chat/CLI/cloud agent等消耗月AI credits，學生數量未公開，Auto模型選擇，排除第三方agents。月初UTC重置不結轉。資格並非限大學生：13歲以上就讀授予degree/diploma課程，包括高中與homeschool，需GitHub個人帳戶和當期學籍證明。Education驗證2年，但Copilot資格每月重評。免費學生方案不能自行取消，只能在環境停用。刪除舊紀錄未附證據的『僅限教育用途、禁止商業』斷言；所讀學生/Pack條款未載此一刀切限制，仍須一般ToS/AUP及第三方輸出授權。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -20867,7 +20879,7 @@
       "regions": [],
       "verification": "Official",
       "usage_type": "High quota",
-      "quota_classification": "HIGH BUT LIMITED",
+      "quota_classification": "UNKNOWN",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
@@ -20876,19 +20888,19 @@
       "cancellation": "官方文件稱免費資格（student/teacher/maintainer）取得的Copilot方案無法自行取消；學生資格失效時終止免費資格，後續轉換或計費狀態須以帳戶為準。",
       "usable_duration": "在學資格需每月重新審查；Copilot免費資格無法自行取消",
       "access_risk": "學生資格每月複審，畢業後失效",
-      "verified_at": "2026-10-25T02:45:00+08:00",
+      "verified_at": "2026-10-25T05:25:00+08:00",
       "discovered_at": "2026-10-24T22:15:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T02:45:00+08:00",
+      "next_review_at": "2026-11-25T05:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "全球大專院校認證在學生",
-        "account_eligibility": "須通過GitHub Education學生認證",
+        "account_eligibility": "13歲以上就讀授予degree/diploma之合格課程（含高中與homeschool）；需個人GitHub帳戶與當期有效學籍證明文件。",
         "billing_country": "未知",
-        "identity_residency": "大專院校在學學生",
-        "terms_restrictions": "僅限在學生教育用途，禁止商業或轉售",
+        "identity_residency": "13歲以上就讀授予學位/文憑之在學學生（含高中生與自學生）",
+        "terms_restrictions": "遵守GitHub Acceptable Use Policies與產品條款；官方Pack/學生條款未載全面禁止商業用途之一刀切限制，但使用者需自行承擔第三方輸出授權與適用法規責任。",
         "taiwan_note": "官方學生資格文件未列台灣排除；學生仍須通過個案學籍驗證。未找到官方文件保證台灣學校/edu.tw網域均可自動通過。"
       },
       "unknowns": [
@@ -20913,6 +20925,12 @@
           "label": "GitHub官方Copilot計費文件",
           "scope": "Student code completions與AI Credits月額重置",
           "evidence": "2026-10-25 02:45 Asia/Taipei官方頁直接查閱：Copilot Student有unlimited code completions；Student/Free AI Credits按月UTC重置、餘額不結轉，Student AI Credits具體數量未公布。"
+        },
+        {
+          "url": "https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/managing-your-copilot-subscription/about-copilot-plans-for-individuals",
+          "label": "官方方案說明",
+          "scope": "Copilot個人方案與學生資格",
+          "evidence": "官方文件載明verified students get free Copilot Student，包含code completions及月AI credits"
         }
       ],
       "record_type": "opportunity",
@@ -20923,8 +20941,8 @@
       },
       "legal_status": "not_verified",
       "status": "active",
-      "priority_score": 19.8,
-      "priority_tier": "A",
+      "priority_score": 18.6,
+      "priority_tier": "B",
       "priority_note": "官方·活躍·免費·台灣未標記·≤30分鐘·有資格門檻"
     },
     {
@@ -25288,6 +25306,243 @@
       "priority_score": 16.6,
       "priority_tier": "S",
       "priority_note": "官方·條件式·費用未知·台灣Yes·時間未知·區域限定·有資格門檻"
+    },
+    {
+      "id": "novita-sandbox-survey-100",
+      "title": "Novita Sandbox：新戶問卷100美元，非模型API額度",
+      "summary": "新用戶完成account setup survey可獲100美元促銷Sandbox額度，免信用卡；限Sandbox CPU/RAM及適用儲存，不是LLM API credit。免費帳戶5個並行Sandbox、每次最長1小時、最高2 vCPU/4 GiB RAM/20 GB磁碟。voucher期限、供應名額及台灣帳戶是否可領未公布。額度耗盡或到期後按量計費；餘額不足會終止Sandbox且可能遺失資料。",
+      "categories": [
+        "FREE",
+        "VALUE-DEAL",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 10,
+      "effort_basis": "完成新帳戶設定問卷約5–10分鐘，免綁信用卡",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": 100,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "無訂閱合約。停止運作中Sandbox；已暫停持久儲存超過60GB仍計費。不再使用時手動刪除資源。",
+      "usable_duration": "voucher有效期未公開，依Payments voucher status；每個免費帳戶session最長1小時，非100美元每月更新",
+      "access_risk": "促銷贈額隨時可能調整；餘額不足會強制終止Sandbox且可能遺失暫存資料；非模型API額度",
+      "verified_at": "2026-10-25T05:25:00+08:00",
+      "discovered_at": "2026-10-25T05:15:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T05:25:00+08:00",
+      "priority": "medium",
+      "eligibility": {
+        "service_availability": "公開新用戶問卷贈額；受有效期限、使用範圍與配額限制。未經認證之台灣帳戶領取未實測。",
+        "account_eligibility": "完成帳戶設定問卷之Novita新用戶；需年滿18歲之自然人或合法法人。支援Email、Google或GitHub註冊；無學生或新創證明要求。",
+        "billing_country": "領取免綁信用卡；台灣付款方式受理情況未另外核實。",
+        "identity_residency": "需提供真實有效註冊資訊；條款未明文排除台灣，但無排除不等於肯定具有合約或服務權利。",
+        "terms_restrictions": "禁止批量註冊、重複領取免費配額或虛假資訊；禁止違反EAR/OFAC制裁規範。保留IP封鎖權力；條款未明文授權VPN，VPN不能替代身分資格。禁止未經許可轉售安全規避工具。",
+        "taiwan_note": "服務可達性與台灣帳戶領取未實測；條款未排除台灣但須符合真實身分及出口管制；台灣本地法規與監管未評估。"
+      },
+      "unknowns": [
+        "問卷贈額voucher具體有效期限",
+        "地區資格與台灣帳戶實際兌換成功率",
+        "促銷贈額剩餘總名額",
+        "是否適用額外帳戶身分查核機制"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.novita.ai/guides/sandbox-overview",
+          "label": "官方文件",
+          "scope": "Sandbox概覽與問卷100美元額度",
+          "evidence": "官方文件記載：New users can get $100 in promotional credits to explore Novita Sandbox by completing a quick account setup survey."
+        },
+        {
+          "url": "https://docs.novita.ai/pricing/sandbox-pricing",
+          "label": "官方定價",
+          "scope": "Sandbox免費配額與超額計費",
+          "evidence": "官方定價明列：Free 5 concurrent sandboxes, max 1 hour per session, up to 2 vCPU, 4 GiB RAM, 20 GB disk, persistent storage up to 60 GB free per account."
+        },
+        {
+          "url": "https://novita.ai/terms-of-service",
+          "label": "官方條款",
+          "scope": "服務條款與帳戶限制",
+          "evidence": "官方條款規定年滿18歲、真實有效註冊資訊、禁止批量註冊與重複領取免費額度、出口管制限制。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
+      },
+      "status": "active",
+      "priority_score": 23.6,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤10分鐘"
+    },
+    {
+      "id": "baseten-new-workspace-trial",
+      "title": "Baseten新workspace試用：贈額按帳戶，非永久免費",
+      "summary": "官方計費文件確認新建立的workspace可獲測試與部署贈額，未綁定付款方式前可用至額度耗盡，隨後模型停用。FAQ亦確認新帳戶提供測試額度，但金額、有效期依帳戶及註冊路徑而異；不能保證通用Model APIs池或固定金額。綁卡後超額自動計費；預設預算限制僅發送通知，Enforce budget僅暫停Model APIs、不停止專用部署或訓練任務。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 10,
+      "effort_basis": "建立新workspace約5–10分鐘，初始測試免綁信用卡",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "無永久免費方案。在添加付款方式前若不再使用，應手動停止部署與訓練任務。",
+      "usable_duration": "額度有效期未公開，依工作區後台顯示；額度耗盡後自動停用模型",
+      "access_risk": "贈額金額依帳戶而異；綁卡後若未手動停止專用實例或訓練可能產生持續費用",
+      "verified_at": "2026-10-25T05:25:00+08:00",
+      "discovered_at": "2026-10-25T05:15:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T05:25:00+08:00",
+      "priority": "medium",
+      "eligibility": {
+        "service_availability": "官方計費文件明列新workspace享測試部署credits；具體金額依註冊路徑及當期活動而定，以帳戶後台為準。",
+        "account_eligibility": "新註冊之Baseten帳戶及workspace；需具備簽署合約之法定代表權力；無學生或新創強制門檻。",
+        "billing_country": "初始試用免付款方式；額度耗盡後需綁定付款方式，台灣信用卡受理情況未核實。",
+        "identity_residency": "條款排除美國綜合制裁地區與受限名單；台灣未列於明文排除清單。",
+        "terms_restrictions": "禁止轉售、分許可、分時共享或規避技術及模型控制措施；違反者終止服務。",
+        "taiwan_note": "台灣使用者註冊可達性未經實測；條款未明文排除台灣，但本地合規性與帳單支援未核實。"
+      },
+      "unknowns": [
+        "每個workspace實際獲發贈額數值",
+        "贈額有效期限與重置規則",
+        "Dedicated Inference與Model APIs池之劃分與扣抵限制",
+        "台灣信用卡綁定與帳單相容性"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.baseten.co/organization/billing",
+          "label": "官方文件",
+          "scope": "新工作區額度與模型停用行為",
+          "evidence": "官方文件載明：New workspaces receive credits for testing and deployment. If the credits run out and the workspace has no payment method, Baseten deactivates its models until you add one."
+        },
+        {
+          "url": "https://support-legacy.baseten.co/articles/3999934266-does-a-new-account-come-with-free-credits",
+          "label": "官方支援",
+          "scope": "新帳戶額度依路徑而定",
+          "evidence": "官方支援說明：Credit availability varies by signup path and current promotions, so the source of truth is your own account."
+        },
+        {
+          "url": "https://www.baseten.co/terms-and-conditions/",
+          "label": "官方條款",
+          "scope": "服務條款、轉售禁止與出口合規",
+          "evidence": "官方條款明定禁止轉售、時間共享或規避存取限制；受EAR及OFAC出口管制規範。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
+      },
+      "status": "active",
+      "priority_score": 22.1,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤10分鐘"
+    },
+    {
+      "id": "gitlab-education-ai-credit-exclusion",
+      "title": "GitLab教育：Ultimate免費一年，但不配發Duo AI credits；自託管另可申請100%授權折扣",
+      "summary": "合格非營利、受認可、授予學位/文憑/證書之教學機構可由全職教師/職員以機構email經Proxi.id驗證申請一年免費Ultimate，無限席位及50,000 compute minutes/月，可逐年重驗續期，不能直接發給個別學生。教育handbook仍寫IDE AI Chat及Code Suggestions，但現行技術文件明定community subscriptions不配發included GitLab Credits；Duo Core的Agentic Chat/Code Suggestions需credits，不可當免費無限AI。另handbook明列self-managed教育會員可申請DAP self-hosted add-on的100%折扣，須PM人工quote；不含未證實免費的模型推論/硬體。",
+      "categories": [
+        "QUALIFICATION",
+        "FREE"
+      ],
+      "views": [],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 45,
+      "effort_basis": "需由合格教學機構全職教職員以機構信箱提交Proxi.id學術審核與合約流程，預估30–45分鐘",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "一年免費授權到期需每年重新驗證；若未續期則降級。無自動扣款風險（純免費授權）。",
+      "usable_duration": "一年授權期，每年經Proxi.id重驗續期",
+      "access_risk": "僅限受認可機構教職員申請，非個人學生福利；社群/教育方案未附AI點數，不可視為免費AI",
+      "verified_at": "2026-10-25T05:25:00+08:00",
+      "discovered_at": "2026-10-25T05:15:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T05:25:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "官方GitLab for Education計畫；限經認可授予學位或文憑之非營利教育機構。",
+        "account_eligibility": "必須由機構全職教師或職員以官方機構信箱申請；需通過Proxi.id第三方學術資格認證；不接受個別學生直接申請。",
+        "billing_country": "免費授權無基本訂閱費；台灣大專院校或高中職認證受理情況需經Proxi.id個案核准。",
+        "identity_residency": "需為經認可教育機構教職員；禁止用於商業生產或營利目的。",
+        "terms_restrictions": "僅限教學、學術研究或機構管理；禁止用於商業營利。現行技術文件明定社群/教育訂閱不含免費GitLab AI Credits。",
+        "taiwan_note": "台灣大專院校能否通過Proxi.id認證需個案確認；非個人學生免費方案，且不包含免費Duo AI額度。"
+      },
+      "unknowns": [
+        "台灣特定大專院校Proxi.id自動認證名單",
+        "自託管DAP 100%折扣個案人工報價核准門檻",
+        "自建模型伺服器之硬體與運算成本"
+      ],
+      "sources": [
+        {
+          "url": "https://about.gitlab.com/solutions/education/",
+          "label": "官方方案",
+          "scope": "GitLab for Education資格與Ultimate免費授權",
+          "evidence": "官方教育方案載明提供一年免費GitLab Ultimate（SaaS或Self-Managed），無限席位與50,000運算分鐘/月，需通過Proxi.id驗證。"
+        },
+        {
+          "url": "https://docs.gitlab.com/ee/subscriptions/gitlab_credits.html",
+          "label": "官方技術文件",
+          "scope": "GitLab Credits配發規則與社群訂閱排除",
+          "evidence": "官方文件明確記載：Community subscriptions do not receive included GitLab Credits."
+        },
+        {
+          "url": "https://handbook.gitlab.com/handbook/marketing/developer-relations/community-programs/education-program/",
+          "label": "官方手冊",
+          "scope": "教育計畫條款、教職員申請與自託管AI折扣",
+          "evidence": "官方手冊明載必須由全職教職員申請，自託管教育會員可向PM專案申請DAP self-hosted add-on 100%折扣。"
+        }
+      ],
+      "record_type": "policy",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
+      },
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
   "latest_research_at": "2026-10-25T04:51:44+08:00"
