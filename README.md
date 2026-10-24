@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：336筆，包含252筆機會、43筆政策、41筆待覆核線索；非336項可直接領取優惠。資料集更新至2026-10-25 03:56 Asia/Taipei。本次實讀複核既有3筆（Meta Global AI Developer Hackathon、Claude Team plan for scientists、Vercel Laya），新增6筆機會（Claude for Nonprofits、ChatGPT for Teachers、Claude for Teachers、Snowflake AI Data Cloud trial、Deno Deploy Free、Vultr Match）及1筆待覆核Vultr新客代碼線索；329筆原有紀錄中326筆未於本次重查，未全面重核。重要限制：Meta正式規則尚未發布且waiver頁無法讀取；Claude科學家方案條款雖列台灣於2026-11-12起生效區域政策中，該日期尚未到且在台機構/付款資格仍未知；ChatGPT/Claude教師福利限美國K–12教職；Anthropic非營利台灣等同資格未核；Snowflake試用AI需信用卡啟用且轉付費需手動升級、Cortex Code $40/$400來源不一致；Vultr Match需先存款、GPU抵用資格未知。法律/監管結論未核實；資料更新不代表全庫重新核實。
+目前資料：336筆，包含252筆機會、43筆政策、41筆待覆核線索；非336項可直接領取優惠。資料集更新至2026-10-25 04:01 Asia/Taipei。本次實讀複核既有3筆（Meta Global AI Developer Hackathon、Claude Team plan for scientists、Vercel Laya），新增6筆機會（Claude for Nonprofits、ChatGPT for Teachers、Claude for Teachers、Snowflake AI Data Cloud trial、Deno Deploy Free、Vultr Match）及1筆待覆核Vultr新客代碼線索；329筆原有紀錄中326筆未於本次重查，未全面重核。重要限制：Meta正式規則尚未發布且waiver頁無法讀取；Claude科學家方案條款雖列台灣於2026-11-12起生效區域政策中，該日期尚未到且在台機構/付款資格仍未知；ChatGPT/Claude教師福利限美國K–12教職；Anthropic非營利台灣等同資格未核；Snowflake試用AI需信用卡啟用且轉付費需手動升級、Cortex Code $40/$400來源不一致；Vultr Match需先存款、GPU抵用資格未知。法律/監管結論未核實；資料更新不代表全庫重新核實。
 
 ## 使用方式
 
