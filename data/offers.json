@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-24T22:22:47+08:00",
-  "scope": "公開來源基準與分批複核；2026-10-24本批次直接複核7筆既有案例（含Jio、Mistral線索升級為條件式機會）；新增1筆未重複官方來源支持的短期模型促銷；其餘歷史條目未全面重驗；優先度為既有欄位衍生計算。；2026-10-24 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）；2026-10-24 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-24T22:45:00+08:00",
+  "scope": "公開來源基準與分批複核；2026-10-24 本批次複核既有案例並新增機會研究；其餘歷史條目未全面重驗；優先度評分與 S–D 分層為既有欄位衍生計算。",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -3605,7 +3605,7 @@
     {
       "id": "assemblyai-trial",
       "title": "AssemblyAI：US$50免卡音訊試用",
-      "summary": "US$50可用轉錄與Speech Understanding，不含LLM Gateway。最多185小時預錄或333小時串流是替代情境，不是兩份獨立額度，更非每月補充；依模型／功能消耗。",
+      "summary": "AssemblyAI官方說明中心確認：免費試用帳戶提供最高US$50語音處理額度，無需綁定信用卡。官方FAQ明文確認「免費額度不過期（do not expire）」，升級付費後未用額度亦予以保留。可用於預錄音訊轉錄、語音理解與即時串流端點，但不含LLM Gateway。額度用盡後API將暫停並回傳負餘額錯誤，需綁卡儲值後方可繼續。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -3633,36 +3633,37 @@
       "cancellation": "用盡需升級／付費；升級前未用餘額可保留，試用期限未知",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T16:02:28+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T16:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
+        "service_availability": "提供非同步/v2/transcript語音辨識與Speech Understanding，以及wss串流端點；不支援LLM Gateway。",
+        "account_eligibility": "註冊即可享有US$50免費額度，無需填寫信用卡。",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "terms_restrictions": "額度上限US$50，額度不限期；耗盡後若未儲值會收到負餘額錯誤。一人一帳號，禁止濫用。",
+        "taiwan_note": "台灣開發者可直接註冊並免卡使用US$50額度進行語音專案測試，符合官方試用政策。"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省"
+        "台灣發卡行信用卡升級扣款時的跨境手續費與稅金處理",
+        "免費層並發請求數（Concurrency Limit）之動態限額"
       ],
       "sources": [
         {
-          "url": "https://www.assemblyai.com/pricing",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 15:58:45–16:02:28研究實讀"
+          "url": "https://support.assemblyai.com/articles/5370767329-can-i-sign-up-for-free",
+          "label": "官方FAQ：免費試用",
+          "scope": "US$50免卡額度、支援端點與LLM Gateway限制",
+          "evidence": "2026-10-24直接查閱：免費帳戶可處理最高US$50音訊，無需信用卡，可用非同步與串流端點，不含LLM Gateway。"
         },
         {
-          "url": "https://support.assemblyai.com/articles/5370767329-can-i-sign-up-for-free",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 15:58:45–16:02:28研究實讀"
+          "url": "https://support.assemblyai.com/articles/8688235663-do-my-free-credits-expire",
+          "label": "官方FAQ：額度效期",
+          "scope": "確認免費額度不過期",
+          "evidence": "2026-10-24直接查閱：官方明文確認免費額度不會過期（No - your free credits don't expire and will remain in your account until used）。"
         }
       ],
       "record_type": "opportunity",
@@ -3671,10 +3672,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 19.6,
+      "status": "active_verified",
+      "priority_score": 22.3,
       "priority_tier": "A",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤20分鐘"
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤20分鐘"
     },
     {
       "id": "v0-free-policy",
@@ -3759,7 +3760,7 @@
     {
       "id": "v0-students",
       "title": "v0學生：特定學校一年免費",
-      "summary": "需有效學生email驗證，目前官方列15校如Stanford、Harvard、MIT、Waterloo，未列台灣學校。只有台灣學籍不足主張符合，但居住台灣不等於不合格；贈額、卡片、期滿續費未知。",
+      "summary": "v0 for Students提供合格學校在學生1年免費v0 Premium方案（等值US$20/月額度）。官方資格清單嚴格限制於15所北美大學（Stanford、Harvard、Princeton、UC Berkeley、MIT、SFSU、ASU、Georgia Tech、Waterloo、NYU、Grand Canyon、Northwestern、UW、Cornell、USC），須具備該校學生email驗證。台灣大專院校目前均不在合格名單內，台灣一般學生無法領取。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -3771,7 +3772,7 @@
       "recurring_cost_usd": null,
       "effort_minutes_max": 20,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
-      "taiwan": "Unknown",
+      "taiwan": "No",
       "regions": [],
       "verification": "Official",
       "usage_type": null,
@@ -3784,30 +3785,31 @@
       "cancellation": null,
       "usable_duration": "核准後一年，期滿條件未核",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T16:02:28+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T16:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "官方列名學校有效學生信箱，使用者資格未知",
+        "service_availability": "官方v0 for Students活動頁提供1年免費v0 Premium。",
+        "account_eligibility": "嚴格限制於官方清單列出的15所指定美加大學在校學生，須使用機構email註冊驗證。",
         "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "identity_residency": "需就讀於指定15所大學；純居住地未受限制，但必須具備該校學生身分與edu信箱。",
+        "terms_restrictions": "優惠期1年；每位合格學生限領一次；不得偽造或借用他人學校信箱。",
+        "taiwan_note": "不適用於台灣學校在學生。官方合格清單未列入任何台灣大專院校，持台灣學校email無法通過資格驗證；故台灣標記No。"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省"
+        "未來是否開放更多國際學校或整合GitHub Student Developer Pack",
+        "1年期滿後的續約費用與學生專案扣款機制"
       ],
       "sources": [
         {
           "url": "https://v0.app/students",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 15:58:45–16:02:28研究實讀"
+          "label": "官方學生優惠頁",
+          "scope": "1年免費v0 Premium與合格學校名單",
+          "evidence": "2026-10-24直接查閱官方學校清單：目前僅列Stanford、Harvard、Princeton、UC Berkeley、MIT、SFSU、ASU、Georgia Tech、Waterloo、NYU、Grand Canyon、Northwestern、UW、Cornell、USC共15校，無任何台灣學校。"
         }
       ],
       "record_type": "opportunity",
@@ -3817,9 +3819,9 @@
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
       "status": "conditional",
-      "priority_score": 15.4,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤20分鐘·有資格門檻"
+      "priority_score": 10.9,
+      "priority_tier": "D",
+      "priority_note": "官方·條件式·零設定費·台灣No·≤20分鐘·有資格門檻"
     },
     {
       "id": "gladia-startup-studio",
@@ -3987,7 +3989,7 @@
     {
       "id": "deepgram-trial",
       "title": "Deepgram：US$200免卡試用仍有限額",
-      "summary": "官方現列新戶US$200、免卡、無最低消費及no expiration，仍有限模型／並發。舊一年期限第三方說法所指官方頁讀取失敗，不能宣稱現行官方矛盾已證實。通用條款提醒餘額延遲、超額可能付費；另購PAYG自動補值/Growth續約義務不能反推免卡試用必然續訂。",
+      "summary": "官方定價頁直接確認：新註冊帳戶立即可得US$200免費額度，無需綁定信用卡（No credit card required），且額度永久有效無使用期限（No expiration，不同於常見的12個月限期）。適用於Nova-3、Flux等公開模型之REST與WSS串流。並發受Pay As You Go層級約束（STT REST上限50、WSS上限150；TTS上限45；Voice Agent上限45）。額度耗盡後轉為依使用量計費。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -4015,43 +4017,31 @@
       "cancellation": "關閉帳戶／特定方案終止可能失去餘額；試用不等於開啟自動補值",
       "usable_duration": "官方價格頁no expiration；帳戶條款需再核",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T16:02:28+08:00",
+      "verified_at": "2026-10-24T22:45:00+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-24T16:00:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
+        "service_availability": "涵蓋Nova-3、Flux對話語音、Whisper Cloud、Aura/Flux TTS與Voice Agent API等完整端點。",
+        "account_eligibility": "新帳號註冊即送US$200，無需填寫信用卡資訊。",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "terms_restrictions": "受並發上限限制（STT REST 50、WSS 150；TTS 45；Voice Agent 45）；嚴禁惡意濫用或多帳戶洗額度。",
+        "taiwan_note": "台灣個人與企業開發者均可直接註冊並免卡取得US$200試用額度；台灣在台使用受一般服務條款管轄，無特定地區封鎖。"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "個別帳戶額度條款與模型並發"
+        "台灣發卡行信用卡若後續綁定轉為付費Pay As You Go之跨境交易手續費與稅金處理",
+        "語音代理人（Voice Agent API）在長連線高延遲網路環境下的穩定度"
       ],
       "sources": [
         {
           "url": "https://deepgram.com/pricing",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 15:58:45–16:02:28研究實讀"
-        },
-        {
-          "url": "https://deepgram.com/terms",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 15:58:45–16:02:28研究實讀"
-        },
-        {
-          "url": "https://developers.deepgram.com/guides/fundamentals/managing-projects",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "本輪開啟失敗，未據此認定到期"
+          "label": "官方定價頁與FAQ",
+          "scope": "US$200免卡額度、永久有效（No expiration）、並發限制與計費規則",
+          "evidence": "2026-10-24直接查閱：Pay As You Go明列Free $200 Credit、No minimums、No expiration、No credit card required；並發限制列明STT REST 50/WSS 150、TTS 45、Voice Agent 45；FAQ確認無12個月到期限制。"
         }
       ],
       "record_type": "opportunity",
@@ -4060,10 +4050,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 19.6,
+      "status": "active_verified",
+      "priority_score": 22.3,
       "priority_tier": "A",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤20分鐘"
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤20分鐘"
     },
     {
       "id": "deepgram-speak-attendee",
@@ -20676,6 +20666,82 @@
       "priority_score": 20.1,
       "priority_tier": "A",
       "priority_note": "官方·活躍·零設定費·台灣未標記·≤15分鐘·有資格門檻"
+    },
+    {
+      "id": "windsurf-free-quota",
+      "title": "Windsurf Editor (Devin)：永久免費方案與代理配額",
+      "summary": "Cognition官方定價與公告確認：Windsurf Editor（前身為Codeium）提供永久免費方案（$0/month）。包含不限量Tab程式碼自動補全（Unlimited Tab completions）、不限量行內編輯（Unlimited inline edits），以及日常自動按日/週更新之代理輕量配額（Light quota to code with agents）。2026年3月起取消舊式點數制，改採自動重置配額制度；超出額度時可持續呼叫免費基礎模型（如SWE-1.5）。無需填寫信用卡即可使用。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 10,
+      "effort_basis": "分析者估計；下載編輯器、註冊帳號並開始使用之時間，無需付款綁卡或審核",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global"
+      ],
+      "verification": "Official",
+      "usage_type": "High quota",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "永久免費方案無月費與綁約，無需綁定信用卡，不產生取消手續費。",
+      "usable_duration": "永久免費方案，依日與週額度自動滾動重置",
+      "access_risk": "官方於2026年3月由點數制改為配額制，模型支援清單與每日上限可能動態調整",
+      "verified_at": "2026-10-24T22:45:00+08:00",
+      "discovered_at": "2026-10-24T22:15:00+08:00",
+      "announcement_at": "2026-03-18",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "官方公開提供個人免費方案，官網可直接下載Windsurf Editor桌面端軟體。",
+        "account_eligibility": "個人開發者註冊帳戶即可使用，無企業或學籍資格限制。",
+        "billing_country": "免費方案0元，免填信用卡；無帳單國別限制。",
+        "identity_residency": "全球個人開發者開放，需遵守Cognition平台與可接受使用政策。",
+        "terms_restrictions": "代理用量受日與週配額限制；高階前沿模型（Opus/GPT-5.4等）受限或需付費方案；禁止濫用或自動化逆向。",
+        "taiwan_note": "台灣開發者可直接自官方網站下載並免費使用Tab補全與輕量代理功能；官方未在定價頁做台灣個別限制，但身分與隱私管轄條件未核，維持Unknown。"
+      },
+      "unknowns": [
+        "免費層每日代理請求的精確Token消耗上限",
+        "未來第三方模型納入免費層的政策變動"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/pricing",
+          "label": "官方定價頁",
+          "scope": "Windsurf Free方案權益（不限量補全、行內編輯、輕量代理配額）",
+          "evidence": "2026-10-24直接查閱：Free方案$0/month，含Light quota to code with agents、Limited model availability、Unlimited inline edits、Unlimited Tab completions。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-pricing-plans",
+          "label": "官方定價改版公告",
+          "scope": "配額制度架構、每日/每週重置與額度用盡後免費模型支援",
+          "evidence": "2026-10-24直接查閱2026-03-18官方公告：由點數制改為日/週配額制，額度耗盡仍可免費使用SWE-1.5等免費模型。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
+      },
+      "status": "active",
+      "legal_status": "not_verified",
+      "priority_score": 22.1,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤10分鐘"
     }
   ],
   "latest_research_at": "2026-10-24T21:49:30+08:00"
