@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：322 筆，包含 242 筆福利研究、43 筆政策、37 筆待覆核線索；非322項可直接領取優惠。資料集更新至 2026-10-25 02:25 Asia/Taipei。本輪直接複核既有案例18筆，新增3筆官方機會與1筆政策紀錄；其餘224筆既有機會未在本輪重查。主要新案：DeepL API Developer（100萬字元一次性免費額度，新用戶改此方案，台灣Yes）、Microsoft Foundry Local（GA本機SDK推理開源模型，免Azure訂閱與Token費，台灣Yes）、GitHub Student Developer Pack（Copilot Student＋Codespaces 180h/月＋Actions 3K/月，台灣學生Yes）、Microsoft Foundry政策（雲端部署需Azure訂閱且標準免費層配額為0 TPM）。複核重大變更：DeepL API Free（每月500K）官方確認已停售新戶改列政策；EuroHPC AI Factories因歐盟VAT與締約國門檻台灣資格更正為No；CoreWeave Distillation官方定價頁與產品頁存在測試期免費vs標準SFT費率衝突；Portkey併入Palo Alto Networks更名為PRISMA AIRS（Developer 10k logs維持）；WorkBuddy Step5限免於10/25結束確認無延長保留為expired；Codex企業促銷複核確認表單持續關閉。台灣帳戶/付款及個人資格未全部核實，法律結論未核實；其餘案例不代表已重新查核。限時活動每日查核，其餘按最久未核每月輪替。
+目前資料：324 筆，包含 243 筆福利研究、43 筆政策、38 筆待覆核線索；非324項可直接領取優惠。資料集更新至 2026-10-25 03:01 Asia/Taipei。本輪直接複核既有案例20筆（17筆機會、2筆政策、1筆待覆核），原有242筆機會仍有225筆未複核；新增1筆官方機會與1筆watchlist，未全面重查。新機會：GitHub Codespaces個人免費額度（Free每月120 compute hours＋15 GB-month，Pro 180h/20GB-month）。新watchlist：Civo新戶US$250 credit，但官方綁卡窗口和有效期限互相衝突、台灣付款資格未核。重要變更：AWS Activate新增US$200K+邀請級AI新創tier；Azure Students補充名額有限/每年續領/90天閒置資源移除；DeepL API Free停止新購且舊戶保留期限不明；WorkBuddy免費截止時區未知，修正為未確認而非已過期。台灣資格與付款僅在官方明確支持的欄位判定；法律/監管結論未核實。資料更新不代表全庫重新核實。
 
 ## 使用方式
 
