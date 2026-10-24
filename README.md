@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：293 筆，包含 223 筆福利研究、38 筆政策、32 筆待覆核線索，不是 293 項可直接領取的優惠。資料集更新至 2026-10-24 22:50:41 Asia/Taipei。前批已核對6筆、增列4筆。此批直接複核4筆既有案例（Cloudflare Workers AI 免費額度及付費模型例外、Meta Hackathon 申請截止與台灣排除條款、Google台灣學生優惠與官方資格文案矛盾、ChatGPT美國學生優惠期限與續費/取消）；新增0筆，未重複加入僅線索或已存在方案。其餘279筆既有案例未於本批直接核實；仍有49筆已到複核日，先按限時風險及最久未核順序處理。優先度評分與 S–D 分層由既有欄位衍生計算。
+目前資料：296 筆，包含 225 筆福利研究、39 筆政策、32 筆待覆核線索，不是 296 項可直接領取的優惠。資料集更新至 2026-10-24 23:35:00 Asia/Taipei。前批已核對4筆既有案例。此批直接複核12筆既有案例（Browserbase 免費層擴充與模型額度、Cloudflare 學生方案服務級用量與兌換規則、Granola 學生限量版與學生證驗證、Granola 新創排除自籌與投資人門檻、Composio Hobby 擴充 1M 沙箱 LLM tokens、Composio 新創 6 個月 Pro 與 5M 募資上限、Replicate 免綁卡試跑與計費、OpenAI Student Collective 截止且未開放新期、E2B 新創 20K 額度與 100 並發、LangSmith 新創 Build 折扣與 Scale 額度、Baseten 新創推論與模型 API 分離、Pinecone 新創 Standard 方案與支援）；新增3筆（Upstash Vector 每日 10K 向量查詢免費層、Upstash QStash 每日 1K 訊息與 Workflow 免費層、GitHub Models 2026-07-30 退役政策紀錄）。其餘281筆既有案例未於本批直接核實；仍有46筆已到複核日，先按限時風險及最久未核順序處理。優先度評分與 S–D 分層由既有欄位衍生計算。
 
 ## 使用方式
 

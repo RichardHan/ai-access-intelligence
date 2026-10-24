@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-24T22:50:41+08:00",
-  "scope": "公開來源基準與分批複核；本次直接核實4筆既有案例，不代表其餘資料已全面重驗；限時活動按日追蹤、一般案例按最久未核月輪替；優先度評分與 S–D 分層為既有欄位衍生計算。",
+  "updated_at": "2026-10-24T23:24:09+08:00",
+  "scope": "公開來源基準與分批複核；本次直接核實4筆既有案例，不代表其餘資料已全面重驗；限時活動按日追蹤、一般案例按最久未核月輪替；優先度評分與 S–D 分層為既有欄位衍生計算。；2026-10-24 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -6852,31 +6852,32 @@
       "cancellation": null,
       "usable_duration": "12個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
+        "service_availability": "活動頁在線，Apply按鈕有效，限量版申請中",
+        "account_eligibility": "需目前於美國/英國/加拿大accredited大學在學並上傳學生證驗證",
         "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "台灣本地大學不符；台灣人就讀指定三國仍需驗證，個人Unknown"
+        "identity_residency": "美國/英國/加拿大accredited大學在學生（以學生證驗證）",
+        "terms_restrictions": "限量版，名額/截止未公布；VPN不能替代在學身分驗證",
+        "taiwan_note": "台灣本地大學不符（限US/UK/CA in學）；台灣人就讀指定三國accredited大學並可出示學生證者另核 → 維持 Unknown（就讀三國者可申請，非一律排除）"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "額度、付款、期末續費取消及截止"
+        "限量名額、申請截止日與候補機制",
+        "台灣帳戶/付款/身分條件及個人實際兌換（未實測）",
+        "12個月到期後續費價格與取消規則（頁面未明示）"
       ],
       "sources": [
         {
           "url": "https://www.granola.ai/students",
           "label": "官方來源",
-          "scope": "主文及資格，FAQ答案未呈現",
-          "evidence": "2026-10-23 21:03:49–21:05:05公開研究實讀"
+          "scope": "主文、meta描述與FAQ（已展開讀全文）",
+          "evidence": "2026-10-24公開實讀：meta描述『Limited edition: Get 12 months free of Granola Business as a student. Available for US, UK, and Canada.』；FAQ展開確認：限量版需申請、目前於美國/英國/加拿大accredited大學在學、需上傳學生證驗證在學、12個月Granola Business、可推薦同大學至多5位友人（各得12個月）。"
         }
       ],
       "record_type": "opportunity",
@@ -6885,10 +6886,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 14.2,
+      "status": "active",
+      "priority_score": 16.9,
       "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤15分鐘·區域限定·有資格門檻"
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤15分鐘·區域限定·有資格門檻"
     },
     {
       "id": "granola-startups",
@@ -6919,31 +6920,33 @@
       "cancellation": null,
       "usable_duration": "12個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "活動頁在線，Apply按鈕有效，申請審核制",
+        "account_eligibility": "<30員工、pre-seed或seed、資金須來自其500+核准投資人清單、從未付費或用過promo code",
+        "billing_country": "未知（未見國別限制）",
+        "identity_residency": "未知（未見國別限制）",
+        "terms_restrictions": "不開放bootstrapped/self-funded（本輪新增關鍵排除）；VPN不能替代資金/身分資格",
+        "taiwan_note": "未見國別排除；台灣新創若符合<30人+pre-seed/seed+核准投資人清單者可申請，個人/公司實際審核未實測 → 維持 Unknown"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "國別、席次/用量、付款、續費取消及截止"
+        "500+核准投資人清單之具體內容（是否含台灣/亞洲創投）",
+        "台灣公司註冊/付款/身分條件之實際審核結果（未實測）",
+        "12個月到期後Business標準定價金額",
+        "申請審核時程（審核制，未見明示回應時間）"
       ],
       "sources": [
         {
           "url": "https://www.granola.ai/startups",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:03:49–21:05:05公開研究實讀"
+          "scope": "主文與FAQ（已展開讀全文）",
+          "evidence": "2026-10-24公開實讀：主文『Get 1 year free of Granola Business for your startup』、『Available to startups with fewer than 30 employees who have raised a pre-seed or seed』；FAQ展開確認：<30員工、pre-seed/seed且資金來自其500+核准投資人清單；從未付費購買Granola或使用過promo code；目前不開放bootstrapped/self-funded；一年後轉入標準Business定價；整合Notion/HubSpot/Affinity/Slack/Zapier。"
         }
       ],
       "record_type": "opportunity",
@@ -6952,10 +6955,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 15.4,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·有資格門檻"
+      "status": "active",
+      "priority_score": 18.1,
+      "priority_tier": "B",
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤30分鐘·有資格門檻"
     },
     {
       "id": "thunder-students",
@@ -7058,36 +7061,38 @@
       "cancellation": "期滿預設Free，但使用期超額照付",
       "usable_duration": "12個月免底費",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:05:05+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:05:05+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "名稱/專案logo行銷使用權，可能撤福利，不保證匿名",
-        "taiwan_note": "台灣本地不符，.edu.tw未支援；海外美國學生另核，個人Unknown"
+        "service_availability": "活動在線、兌換自助進行，無申請截止日",
+        "account_eligibility": "需18+美國在學、驗證.edu帳單email、有效信用卡；為一次性，每人限領一次",
+        "billing_country": "未明示限定美國帳單國，但要求美國.edu驗證email與有效卡（存量條款未核）",
+        "identity_residency": "美國在學身分（.edu驗證email）",
+        "terms_restrictions": "名稱/專案logo行銷使用權；可能隨時變更或中止；期滿不續則自動轉Free不扣款",
+        "taiwan_note": "台灣本地學校不符（.edu.tw未支援、非美國）；台灣人就讀美國學校並具.edu驗證email者另核，個人Unknown；官方明言正擴充其他國家並可申請加學校域（候補/等待）"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省"
+        "台灣人就讀美國學校（.edu）之個人實際兌換結果（未實測）",
+        "非美國機構域加域申請之審核時程與成功條件",
+        "帳單國別要求之明文條款（Terms僅言US學生與.edu帳單email+有效卡）"
       ],
       "sources": [
         {
           "url": "https://www.cloudflare.com/students/",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:03:49–21:05:05公開研究實讀"
+          "scope": "兌換步驟、包含內容、FAQ與Terms",
+          "evidence": "2026-10-24公開實讀全文：US .edu驗證帳單email+有效卡+新增Workers Paid即兌換，$5/mo底費自動免12個月；10M requests/月(+$0.30/百萬)、6,000 build minutes/月($0.005/min)、500 Worker Scripts、20M logs/月、KV edge storage等；期末預設轉Free；Terms列18+、美國在學、.edu、一次性、行銷名稱使用權。"
         },
         {
           "url": "https://blog.cloudflare.com/workers-for-students/",
           "label": "官方來源",
-          "scope": "2025/9/22歷史發布與用量表",
-          "evidence": "2026-10-23 21:03:49–21:05:05公開研究實讀"
+          "scope": "2025-09-22發布、用量比較表與新舊帳戶兌換表",
+          "evidence": "2026-10-24重開全文：Free Plan vs Student Accounts比較表（Workers 10M/月、KV 10M讀/1M寫、Hyperdrive unlimited/day、DO 1M/day、Logs 20M/月7天、Logpush 10M/月、Queues 1M/月）；新帳戶(2025-09-22後註冊)與既有.edu帳戶兌換步驟；非美國機構可申請加域等待。"
         }
       ],
       "record_type": "opportunity",
@@ -7096,11 +7101,11 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
+      "status": "active",
       "setup_cost_basis": "免基本費，綁卡超額另計，非所有AI免費",
-      "priority_score": 16.1,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤20分鐘·區域限定·有資格門檻"
+      "priority_score": 18.8,
+      "priority_tier": "B",
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤20分鐘·區域限定·有資格門檻"
     },
     {
       "id": "algolia-startups",
@@ -7485,12 +7490,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7501,16 +7506,29 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "次數、期限、模型分配及重置",
-        "商用/國別授權"
+        "Exact free run count and reset",
+        "Taiwan account / card / identity conditions",
+        "Actual savings value",
+        "Per-model commercial license (evaluate per model card)"
       ],
       "sources": [
         {
           "url": "https://replicate.com/collections/try-for-free",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:58:56–21:59:43公開研究實讀"
+          "scope": "Free collection list + FAQ (limited runs, billing needed after limit, commercial-use-per-license)",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://replicate.com/pricing",
+          "scope": "Pay-as-you-go rates per model/hardware",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://replicate.com/docs/topics/billing",
+          "scope": "Free limits overview + billing lifecycle",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         }
       ],
       "record_type": "opportunity",
@@ -7551,12 +7569,12 @@
       "cancellation": null,
       "usable_duration": "僅program期間，非當期可申請",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7567,15 +7585,16 @@
         "taiwan_note": "台灣本地學籍未列當期國家，個人Unknown"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "額度數字、續費取消"
+        "Exact stipend and Codex/credits value",
+        "Next cohort opening date",
+        "Taiwan rollout date (register interest only, no date given)"
       ],
       "sources": [
         {
           "url": "https://openai.com/student-collective/",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:58:56–21:59:43公開研究實讀"
+          "scope": "Program status, eligibility countries, deadline, benefits",
+          "evidence": "Live read 2026-10-24: 'Applications are open through August 31, 2026 for students in Japan, Korea, the United Kingdom, Germany, and France. Applications for the Fall 2026 cohort have closed in the United States, Canada, and India.'",
+          "label": "官方來源"
         }
       ],
       "record_type": "policy",
@@ -7752,31 +7771,32 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "連接帳戶需另外授權，本輪未做",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "公開自助方案，免卡免申請",
+        "account_eligibility": "任何註冊帳戶皆可選Hobby，3人限",
+        "billing_country": "未知（未見國別限制）",
+        "identity_residency": "未知（未見國別限制）",
+        "terms_restrictions": "Managed OAuth apps額度計入免額內（非額外）；Instant Tools從餘額另扣且費率可能變；連接帳戶需各平台另行授權",
+        "taiwan_note": "未見國別排除或支援明示；台灣使用者以既有管道註冊者個人未實測 → 維持 Unknown"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "超額停止/付款、取消及國別"
+        "台灣註冊/付款/身分條件之實際結果（免卡方案理論上可全球註冊，未實測）",
+        "tool calls/triggers額度重置週期之明文（頁面為『/ mo』，重置機制細則未另公布）",
+        "Instant Tools完整費率表變動頻率"
       ],
       "sources": [
         {
           "url": "https://composio.dev/pricing",
           "label": "官方來源",
-          "scope": "方案比較與managed apps；4938行工具價目僅抽查，未全覆蓋",
-          "evidence": "2026-10-23 21:58:56–21:59:43公開研究實讀"
+          "scope": "方案表、用量表、Managed apps與Instant Tools",
+          "evidence": "2026-10-24公開實讀：Hobby $0含100K tool calls/月、50K triggers/月、3 team members、免卡、無限connected accounts；Sandbox LLM tokens 1M/月免（超過$3.75/M）；Managed apps 20K/100K tool calls、10K/50K triggers、前1K connected accounts免費；Pro $29/月含$29月用量額（未用月底失效不累積）；Instant Tools另計價（費率頁標『Rates last refreshed: 2026-10-24T14:44:40.240Z』，與本日一致）。"
         }
       ],
       "record_type": "opportunity",
@@ -7785,10 +7805,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 18.1,
-      "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘"
+      "status": "active",
+      "priority_score": 20.8,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤30分鐘"
     },
     {
       "id": "composio-startups",
@@ -7819,37 +7839,38 @@
       "cancellation": null,
       "usable_duration": "核准六個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "活動頁在線，申請表單有效，審核制",
+        "account_eligibility": "Early-stage/growth-stage軟體公司；募資<US$5M；加速器非必要",
+        "billing_country": "未知（未見國別限制）",
+        "identity_residency": "未知（未見國別限制）",
+        "terms_restrictions": "六個月後自動續標準Pro（US$29/月），六個月內取消不扣款；VPN不能替代公司/募資資格",
+        "taiwan_note": "未見國別排除；台灣新創符合<US$5M募資之軟體新創可申請，個人/公司實際審核未實測 → 維持 Unknown"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "正式資格、贈額、期末續費/取消"
+        "台灣公司註冊/付款/身分條件之實際審核結果（未實測）",
+        "募資<US$5M之驗證方式與『Bootstrapped』選項之實際審核（表單允許Bootstrapped選項）",
+        "核准Pro六個月之實際兌換流程與額度細節"
       ],
       "sources": [
         {
           "url": "https://composio.dev/startups",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:58:56–21:59:43公開研究實讀"
+          "scope": "主文、申請表單與FAQ（已展開讀全文）",
+          "evidence": "2026-10-24公開實讀：『Our Pro plan. Six months. On the house.』『Accepted startups get six months on our Pro plan, completely free』；表單欄位含網站、角色、募資階段（Bootstrapped/Up to $500K/Between $1-5M/More than $5M）、用途與『We typically respond within a week』；FAQ展開確認：Early-stage and growth-stage companies building software products、<US$5M募資可申請、加速器非必要、六個月後自動續為標準Pro（不想續約可於六個月內任時取消不扣款）。"
         },
         {
           "url": "https://github.com/sourcey/startup-credits/issues/97",
           "label": "GitHub歷史線索",
-          "scope": "舊Business/5M說法未作官方資格",
-          "evidence": "搜尋摘要及頁外框，正文未完整核"
+          "scope": "舊Business六個月/<5M說法之對照",
+          "evidence": "歷史index說法與新官方FAQ之<US$5M一致；此線索非官方資格，僅作背景。"
         }
       ],
       "record_type": "opportunity",
@@ -7858,10 +7879,10 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
-      "priority_score": 15.4,
-      "priority_tier": "C",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·有資格門檻"
+      "status": "active",
+      "priority_score": 18.1,
+      "priority_tier": "B",
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤30分鐘·有資格門檻"
     },
     {
       "id": "browserbase-free-developer",
@@ -7893,38 +7914,38 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T21:59:43+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T21:59:43+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "需符合方案條件，個人未核",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "公開方案，全球營運；亞太基礎設施僅企業客戶按需求提供（Asia Pacific: available upon request for enterprise customers），未見對Free/Developer帳戶的台灣禁止條款",
+        "account_eligibility": "免申請、免卡、公開註冊即可用",
+        "billing_country": "未知（未見明示）",
+        "identity_residency": "未知（未見明示）",
+        "terms_restrictions": "各方案超量均按方案費率計費，不設硬上限；VPN不能替代帳戶/身分/帳單資格",
+        "taiwan_note": "台灣未標記為排除也無明示支援；亞太節點僅企業按需，台灣一般帳戶可用性個人未實測 → 維持 Unknown"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "Free超額需升級或直接計費",
-        "卡片、取消、各新額度重置及工具費"
+        "台灣帳戶/付款/身分條件及個人實際可用性（未實測註冊）",
+        "Search/Fetch/Model tokens 各額度之重置規則未公布（僅browser hour自註冊日每月重置有歷史依據）",
+        "Free超額是否直接計費或需先升級（頁面僅說按方案費率計費）"
       ],
       "sources": [
         {
           "url": "https://www.browserbase.com/pricing",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 21:58:56–21:59:43公開研究實讀"
+          "scope": "方案比較表与FAQ（地區）",
+          "evidence": "2026-10-24公開實讀全文：Free $0/mo含3並發、1 browser hour、3 Agent runs、1,000 Search calls、1,000 Fetch calls、15min/session、$5 Model tokens；Developer $20/mo含100小時(超額$0.12/hr)、15 Agent runs、1,000 Search/Fetch(超額$5/1k、$1/1k)、1GB proxies($12/GB)、Model Gateway按市場PAYGO；Search RPS 2、Fetch RPS 5；Free資料保留7天。"
         },
         {
           "url": "https://www.browserbase.com/blog/free-plan",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2025/2/25歷史公告僅搜尋正文，未重開全文"
+          "scope": "2025-02-25歷史發布（原Free方案）",
+          "evidence": "2026-10-24重開全文：原始Free方案為60 browser minutes/月（自註冊日每月重複）、15分鐘session上限、7天資料保留；當時無agent runs/search/fetch/model tokens。今日Pricing已擴充上述新構成。"
         }
       ],
       "record_type": "opportunity",
@@ -7933,24 +7954,24 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
+      "status": "active",
       "plan_variants": [
         {
           "plan": "Free",
           "setup_usd": 0,
           "monthly_usd": 0,
-          "usage": "有限browser/agent/search與模型tokens，重置分別未全核"
+          "usage": "3並發/1 browser hour/3 agent runs/1,000 search/1,000 fetch/15min session/US$5 model tokens；資料保留7天"
         },
         {
           "plan": "Developer",
           "setup_usd": 20,
           "monthly_usd": 20,
-          "usage": "100小時/15agent runs；模型另費，超額按量"
+          "usage": "25並發/100 hours(超額$0.12/hr)/15 agent runs/1,000 search+fetch(超額$5 per 1k search, $1 per 1k fetch)/1GB proxies(Model Gateway PAYGO另計)"
         }
       ],
-      "priority_score": 18.1,
-      "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘"
+      "priority_score": 20.8,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤30分鐘"
     },
     {
       "id": "digitalocean-secret-ai-startup-100-2026",
@@ -8143,12 +8164,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8159,21 +8180,22 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "折扣席位實付、超額、續費取消"
+        "Build tier seat discount percentage/amount",
+        "Taiwan startup eligibility/billing",
+        "Exact credit dollar-value conversion (LSU pricing)"
       ],
       "sources": [
         {
           "url": "https://www.langchain.com/startups",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Build & Scale tiers, eligibility, credit amounts, VC partners",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         },
         {
           "url": "https://www.langchain.com/pricing",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Baseline plans (Developer/Plus/Enterprise) + startup credit mention",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         }
       ],
       "record_type": "opportunity",
@@ -8219,12 +8241,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8235,15 +8257,28 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "完整資格、贈額期限、付款/超額及取消"
+        "Taiwan company eligibility/billing",
+        "Exact credit discount and overage rates",
+        "Review timeline (not published; third-party cites 2-10 day review, unverified)"
       ],
       "sources": [
         {
           "url": "https://www.baseten.co/talk-to-us/startup-program/",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Application page (offered URL) - same program",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://www.baseten.co/startup-program",
+          "scope": "Canonical program page: $25K + $2.5K credits, eligibility (AI-first, Seed-Series A, <5yrs, net-new)",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://www.baseten.co/startup-program-legal-disclaimers",
+          "scope": "Legal disclaimers (last updated 2026-10-07): exclusions, 31-day rule, 6-month expiry",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         }
       ],
       "record_type": "opportunity",
@@ -8289,12 +8324,12 @@
       "cancellation": null,
       "usable_duration": "兌領後一年",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8305,21 +8340,28 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "續費與超額費用"
+        "Taiwan startup account/billing conditions",
+        "Exact approval decision details (capacity-dependent)",
+        "Overage pricing beyond credit balance"
       ],
       "sources": [
         {
           "url": "https://e2b.dev/startups",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Program benefits, eligibility, apply",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         },
         {
           "url": "https://e2b.dev/startups/terms",
-          "label": "官方來源",
-          "scope": "2026-09-09條款，公開引用與期限",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Terms & conditions (last modified 2026-09-09) credit expiry, attribution, restrictions",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://e2b.dev/pricing",
+          "scope": "Plan quotas (Hobby/Pro/Pro+/Pro++), usage rates",
+          "evidence": "Live read 2026-10-24 (pricing.md)",
+          "label": "官方來源"
         }
       ],
       "record_type": "opportunity",
@@ -8436,12 +8478,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-23T23:05:00+08:00",
+      "verified_at": "2026-10-24T23:25:00+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-24T23:05:00+08:00",
+      "next_review_at": "2026-10-25T23:25:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8452,15 +8494,22 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "額度、期限、設定費、續費超額取消"
+        "Usage credit / discount amount and duration",
+        "Taiwan company eligibility and billing",
+        "Overage and cancellation terms"
       ],
       "sources": [
         {
           "url": "https://www.pinecone.io/startup-program/",
-          "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 23:01–23:05公開研究實讀；本次整合未重新查閱"
+          "scope": "Program benefits, eligibility (Standard tier, Pro support, credits & discounts)",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
+        },
+        {
+          "url": "https://www.pinecone.io/pricing/",
+          "scope": "Baseline tiers (Starter/Builder/Standard/Enterprise) + support pricing",
+          "evidence": "Live read 2026-10-24",
+          "label": "官方來源"
         }
       ],
       "record_type": "opportunity",
@@ -21065,6 +21114,228 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "upstash-vector-free",
+      "title": "Upstash Vector 免費層：10K 查詢+更新／天，免綁卡",
+      "summary": "官方定價頁確認伺服器無狀態向量資料庫免費層：每日 10,000 次查詢 + 10,000 次更新、最高 200M vectors×dims、1 GB 資料、100 個 namespaces，永久免費、不需信用卡、按需計費產品。簽約可用 GitHub/Google/Amazon 或 Email+密碼，無國家註冊限制。進階 Pay-as-You-Go 每 10 萬次請求 $0.40、儲存 $0.25/GB。資料僅託管於 AWS us-east-1、AWS eu-west-1、GCP us-central-1（延遲考量，非可用性封鎖）。台灣開發者可直接註冊使用免費層，無需 VPN 或美方帳單。",
+      "categories": [
+        "FREE",
+        "HIGH-QUOTA",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 15,
+      "effort_basis": "分析者估計，已具 GitHub/Google 帳號且含建立資料庫與索引時間",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "Limited",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費層無訂閱扣款風險；升級需主動加付款方式才轉為按量計費",
+      "usable_duration": "永久免費層（活動無截止日期），每日自動重置限額",
+      "access_risk": "資料託管僅限美/歐三區，台灣存取延遲；產品政策可能變更",
+      "verified_at": "2026-10-24T23:18:00+08:00",
+      "discovered_at": "2026-10-24T10:00:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T23:18:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "免費層上限：10K 查詢+10K 更新／天、200M vectors×dims、1 GB 資料、100 namespaces；資料僅託管於 AWS us-east-1、AWS eu-west-1、GCP us-central-1",
+        "account_eligibility": "註冊可用 GitHub/Google/Amazon 或 Email+密碼；免費層不需信用卡",
+        "billing_country": "無需付款方式即可用免費層",
+        "identity_residency": "無國籍或居住限制（官方未列封鎖清單）",
+        "terms_restrictions": "遵循 Upstash 服務條款；未發現台灣列為排除",
+        "taiwan_note": "台灣開發者可直接註冊並使用免費層，無需 VPN 或美方帳單；僅注意資料位於美/歐區域的連線延遲"
+      },
+      "unknowns": [
+        "免費層重置週期精確時區",
+        "超過每日 10K 上限時是否直接阻擋或軟性降速",
+        "個人實際延遲與效能受網路影響"
+      ],
+      "sources": [
+        {
+          "url": "https://upstash.com/pricing/vector",
+          "label": "官方來源",
+          "scope": "免費/PAYG/固定方案額度與價格、區域、尺寸上限",
+          "evidence": "2026-10-24 直接查閱官方價格頁：免費層 10K 查詢+更新/天、200M vectors×dims、1 GB、100 namespaces；PAYG $0.4/100K；免費不需信用卡"
+        },
+        {
+          "url": "https://upstash.com/docs/common/account/createaccount",
+          "label": "官方來源",
+          "scope": "註冊方式（GitHub/Google/Amazon/Email）",
+          "evidence": "2026-10-24 官方文件確認註冊無國家限制，可多種第三方帳號"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需 VPN。"
+      },
+      "status": "active",
+      "priority_score": 28.1,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘",
+      "legal_status": "not_verified"
+    },
+    {
+      "id": "upstash-qstash-workflow-free",
+      "title": "Upstash QStash／Workflow 免費層：1,000 訊息／天，免綁卡",
+      "summary": "官方定價頁確認伺服器無狀態訊息佇列／排程（QStash）免費層：每日 1,000 條訊息、50 GB 頻寬、訊息最大 1 MB、10 個 URL groups／queues、2 並行；重試免費、最多延遲 7 天。QStash Workflow（持久化 serverless 函式）免費層另每日 1,000 steps。皆永久免費、不需信用卡，按量計費產品。發布/入隊 API 無 RPS 限制。資料託管於 EU 與 US 兩區。台灣開發者可註冊使用，無需 VPN 或台幣/美金帳單限制。",
+      "categories": [
+        "FREE",
+        "HIGH-QUOTA",
+        "EASY-EFFORT"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 15,
+      "effort_basis": "分析者估計，已具 GitHub/Google 帳號且含建立 namespace 與收發測試時間",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "Limited",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費層無訂閱扣款風險；升級需主動加付款方式才轉為按量計費",
+      "usable_duration": "永久免費層（活動無截止日期），每日自動重置",
+      "access_risk": "資料託管僅 EU/US 兩區，台灣存取延遲可能；超過每日限額為軟性限制，持續超量才可能 429；政策可能變更",
+      "verified_at": "2026-10-24T23:18:00+08:00",
+      "discovered_at": "2026-10-24T10:05:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T23:18:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "QStash 免費層：1,000 訊息/天、50GB 頻寬、1 MB/訊息、10 URL groups、10 queues、並行2；發布/入隊無 RPS 限制；QStash Workflow 免費層另 1,000 steps/天",
+        "account_eligibility": "註冊可用 GitHub/Google/Amazon 或 Email+密碼；免費層不需信用卡",
+        "billing_country": "無需付款方式即可用免費層",
+        "identity_residency": "無國籍或居住限制（官方未列封鎖清單）",
+        "terms_restrictions": "遵循 Upstash 服務條款；未發現台灣列為排除",
+        "taiwan_note": "台灣開發者可直接註冊並使用免費層，無需 VPN 或美方帳單；僅注意資料位於 EU/US 區域的連線延遲"
+      },
+      "unknowns": [
+        "每日重置的精確時區",
+        "託管區域延遲對台灣端點的實測影響",
+        "Workflow 免費層 steps 與 QStash 訊息是否共用額度"
+      ],
+      "sources": [
+        {
+          "url": "https://upstash.com/pricing/qstash",
+          "label": "官方來源",
+          "scope": "免費/PAYG/固定方案額度、訊息計價、區域與限制",
+          "evidence": "2026-10-24 直接查閱官方價格頁：免費層 1,000 訊息/天、50GB、1MB、並行2；重試免費；無 RPS 限制；資料在 EU/US 兩區"
+        },
+        {
+          "url": "https://upstash.com/docs/common/account/createaccount",
+          "label": "官方來源",
+          "scope": "註冊方式（GitHub/Google/Amazon/Email）",
+          "evidence": "2026-10-24 官方文件確認註冊無國家限制"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需 VPN。"
+      },
+      "status": "active",
+      "priority_score": 28.1,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘",
+      "legal_status": "not_verified"
+    },
+    {
+      "id": "github-models-retired",
+      "title": "GitHub Models：2026-07-30 已全面退役",
+      "summary": "官方文件確認 GitHub Models 已於 2026-07-30 全面退役：playground、模型目錄、inference API 與 bring-your-own-key（BYOK）對所有客戶均不再可用。GitHub Models 與 GitHub Copilot 為獨立服務。官方建議改用 Azure AI Foundry（涵蓋大量模型目錄）於 GitHub 上建置 AI 工作流程，或改用 GitHub Copilot 取得多模型存取。此紀錄屬停用政策通知，非機會；請勿再搜尋 GitHub Models 免費額度。",
+      "categories": [
+        "QUALIFICATION"
+      ],
+      "views": [
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 5,
+      "effort_basis": "分析者估計：閱讀退役公告確認",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "NO FIXED CAP PUBLISHED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": null,
+      "access_risk": "服務已退役，無可用額度；不屬可領取福利",
+      "verified_at": "2026-10-24T23:18:00+08:00",
+      "discovered_at": "2026-10-24T10:10:00+08:00",
+      "announcement_at": "2026-07-30T00:00:00+08:00",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-24T23:18:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "已全面退役（2026-07-30 起），playground/模型目錄/inference API/BYOK 均不可用",
+        "account_eligibility": "不適用",
+        "billing_country": "不適用",
+        "identity_residency": "不適用",
+        "terms_restrictions": "服務已退役，無條款可適用",
+        "taiwan_note": "退役對所有地區（含台灣）一致；建議改用 Azure AI Foundry 或 GitHub Copilot"
+      },
+      "unknowns": [
+        "退役後歷史額度是否仍計入任何既有配額"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.github.com/en/github-models",
+          "label": "官方來源",
+          "scope": "GitHub Models 退役公告與後續指引",
+          "evidence": "2026-10-24 直接查閱文件：GitHub Models 已於 2026-07-30 全面退役，建議改 Azure AI Foundry / GitHub Copilot"
+        }
+      ],
+      "record_type": "policy",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不適用——服務已退役"
+      },
+      "status": "expired",
+      "quota_classification_note": "退役服務；此分類僅反映退役前未發布固定上限之歷史狀態，不代表現在可領",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "legal_status": "not_verified"
     }
   ],
   "latest_research_at": "2026-10-24T21:49:30+08:00"
