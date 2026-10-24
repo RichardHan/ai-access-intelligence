@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：318 筆，包含 240 筆福利研究、41 筆政策、37 筆待覆核線索；非318項可直接領取優惠。資料集更新至 2026-10-25 01:59 Asia/Taipei。本輪直接複核既有案例15筆，新增7筆官方機會與1筆待覆核線索；其餘218筆既有機會未在本輪重查。主要新案：Azure US$200/30天（台灣列入但需卡、到期須升PAYG）、Oracle Free Tier（台灣US$300資格未核）、GitHub教師/OSS維護者Copilot Pro、Cohere公益API補助、NVIDIA Inception（符合資格者最高US$100,000 DGX Cloud credits）、Oracle新創credits；另列OCI AI免費定價層。Hugging Face GPU補助金額/資格未公布，列watchlist。Tencent官方來源對90天/1年期限衝突；Alibaba新加坡多數文字模型額度更新為1M/90天。Perplexity Education頁回HTTP 403，未更新verified_at。台灣帳戶/付款及個人資格未全部核實，法律結論未核實；其餘案例不代表已重新查核。限時活動每日查核，其餘按最久未核每月輪替。
+目前資料：322 筆，包含 242 筆福利研究、43 筆政策、37 筆待覆核線索；非322項可直接領取優惠。資料集更新至 2026-10-25 02:25 Asia/Taipei。本輪直接複核既有案例18筆，新增3筆官方機會與1筆政策紀錄；其餘224筆既有機會未在本輪重查。主要新案：DeepL API Developer（100萬字元一次性免費額度，新用戶改此方案，台灣Yes）、Microsoft Foundry Local（GA本機SDK推理開源模型，免Azure訂閱與Token費，台灣Yes）、GitHub Student Developer Pack（Copilot Student＋Codespaces 180h/月＋Actions 3K/月，台灣學生Yes）、Microsoft Foundry政策（雲端部署需Azure訂閱且標準免費層配額為0 TPM）。複核重大變更：DeepL API Free（每月500K）官方確認已停售新戶改列政策；EuroHPC AI Factories因歐盟VAT與締約國門檻台灣資格更正為No；CoreWeave Distillation官方定價頁與產品頁存在測試期免費vs標準SFT費率衝突；Portkey併入Palo Alto Networks更名為PRISMA AIRS（Developer 10k logs維持）；WorkBuddy Step5限免於10/25結束確認無延長保留為expired；Codex企業促銷複核確認表單持續關閉。台灣帳戶/付款及個人資格未全部核實，法律結論未核實；其餘案例不代表已重新查核。限時活動每日查核，其餘按最久未核每月輪替。
 
 ## 使用方式
 
