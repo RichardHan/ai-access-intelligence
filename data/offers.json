@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T18:50:02+08:00",
-  "scope": "2026-10-25 18:45–18:50 Asia/Taipei 本輪實讀官方頁抽樣複核 18 筆既有紀錄（含不改欄位的部分複核）；新增 Weaviate Engram 機會與 Z.ai Startups 待覆核線索；修正 Gladia 期後 PAYG 與 Upstash 額度及來源矛盾。verified_at 只更新本輪有回寫且確實查核的案例；其餘舊紀錄未全面重驗。限時活動每日查，其餘依最久未核按月輪替；法律層面未有適用官方法規來源時維持未核實。優先度評分為衍生值，非新的外部查核。",
+  "updated_at": "2026-10-25T19:52:39+08:00",
+  "scope": "2026-10-25 19:45–19:52 Asia/Taipei 本輪實讀官方來源抽樣複核23筆舊紀錄，僅對取得具體可回寫變動的 Claude API credits、Cloudflare Tier3、Tavily Startups、Nebius Builder、Pinecone Starter 更新 verified_at；其餘局部複核未整批刷新。新增 Resemble Builder’s Grant 一筆。Z.ai夜間活動仍已截止，Meta Hackathon、Laya 限時及地區案例須每日查；其餘按最久未核月輪替。台灣帳戶資格與適用法律缺乏官方證據時維持未核實。優先度評分為衍生值。",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -5525,40 +5525,40 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "超額與到期後扣費，需停止付費資源；具體取消流程未核",
+      "cancellation": "官方條款明示超額自動計費，贈額到期後向留存信用卡扣款（除非另簽預付合約）；需自行停止付費資源，具體取消流程未核",
       "usable_duration": "最長一年，舊戶升額不延原到期",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T22:45:00+08:00",
+      "verified_at": "2026-10-25T19:47:00+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "next_review_at": "2026-11-25T19:47:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "公司網站、商業email、審核及有效付款方式；自籌與最近12月募資措辭待釐清",
+        "account_eligibility": "十年內設立、營利科技產品、公開網站及 LinkedIn/X/GitHub、網域一致公司信箱、首次申請、有效付款方式；Tier3自籌／募資少於100萬美元，與共通近12個月募資文字衝突；既有Enterprise客戶不適用",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "允許公司名稱/logo行銷，不保證匿名",
+        "terms_restrictions": "教育機構、個人部落格、顧問、服務代理商、MSP與轉售商不適用；點數不可轉移、買賣或換現金；允許公司名稱/logo行銷",
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "自籌及共通募資條件疑義"
+        "自籌 Tier3 與共通近12個月募資條件衝突；頁面宣傳100% SLA但內嵌條款排除SLA"
       ],
       "sources": [
         {
           "url": "https://www.cloudflare.com/startups/",
           "label": "官方來源",
           "scope": "現行Tier3及產品上限；官方回述Tier3由5000升10000、Tier1由250000升350000，非本庫既往快照",
-          "evidence": "2026-10-23 18:00:06–18:01:35公開研究實讀"
+          "evidence": "2026-10-25 19:47 Asia/Taipei 實讀：Tier3總額US$10,000、Workers AI上限US$2,500，申請要件及排除、有效付款方式、超額／到期扣款；SLA及募資文字同頁矛盾"
         },
         {
           "url": "https://developers.cloudflare.com/changelog/post/2026-08-07-workers-ai-unified-billing/",
           "label": "官方更新公告",
           "scope": "Workers AI與AI Gateway統一計費與速率限制放寬",
-          "evidence": "2026-10-24直接查閱：Workers AI與AI Gateway完成統一計費，預付額度可直接抵扣前沿模型推論（Kimi K2.6、GLM 5.2放寬至50 RPM）；Tier 3新創總額10,000美元維持Workers AI上限2,500美元。"
+          "evidence": "2026-10-25 19:47 Asia/Taipei 複核：此公告談購買的 AI Gateway 預付額度及統一計費，並未支持 Tier3 新創 Workers AI 上限；上限僅據新創方案頁"
         }
       ],
       "record_type": "opportunity",
@@ -5828,7 +5828,7 @@
     {
       "id": "nebius-builder",
       "title": "Nebius Builder：條款25＋25，非保證400",
-      "summary": "Nebius AI Builder Program 官方條款（Service-Specific Terms，2026 年 9 月修訂）實讀確認：通過註冊驗證之會員獲贈 (1) US$25 Nebius Token Factory 額度及 (2) US$25 Tavily 合作額度，額度自發放日起 90 天有效。僅供合法 AI 原型實驗與研究，嚴禁轉售、多帳號或商業生產部署；需通過 OFAC/BIS 制裁清單審查，台灣非制裁地區具申請資格。",
+      "summary": "Nebius AI Builder Program 官方條款：通過註冊驗證後 US$25 Token Factory 額度及 US$25 Tavily 合作額度，發放起90天有效。限 AI 原型／實驗，禁止 production、大規模商業部署、轉售或多帳戶。申請受國家及 OFAC/BIS 篩查；台灣個案資格未核。月資源用量超過 allocation 30% 時 Nebius 得暫停，不是保證硬停防超支。",
       "categories": [
         "FREE",
         "EASY-EFFORT",
@@ -5854,21 +5854,21 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "發放後90天，非申請期限",
-      "access_risk": "額度僅限原型/實驗，不得production或營利；月用量超credits allocation 30%即自動暫停；需OFAC/BIS制裁篩查",
-      "verified_at": "2026-10-24T23:50:00+08:00",
+      "access_risk": "額度僅限原型／實驗；月資源用量超 allocation 30% 時官方保留暫停權，非必然停用；用盡／期滿可轉 PAYG；需國家與制裁篩查",
+      "verified_at": "2026-10-25T19:49:00+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": "2026-09-10",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:50:00+08:00",
+      "next_review_at": "2026-11-25T19:49:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
         "account_eligibility": "註冊需姓名/email/公司或學校/國家/專案描述及驗證；disposable email封鎖，個人email可能另審；需符合制裁篩查。",
-        "billing_country": "需填國家並接受OFAC/BIS制裁審核；台灣未被列為制裁地區。",
-        "identity_residency": "需通過身分/國別制裁篩查；台灣本地資格未個人申請驗證。",
-        "terms_restrictions": "credits僅限原型與實驗，禁止production/營利；不得轉售、多帳號；月用量超過已分配credits 30%可自動暫停帳戶。",
-        "taiwan_note": "台灣未列為制裁地區；但個別帳戶/付款/身份審核未測，不能推定個人申請合格。"
+        "billing_country": "需填國家並接受國家及 OFAC/BIS 等篩查；台灣帳單接受條件未明。",
+        "identity_residency": "需通過身分與國別篩查；未證實台灣個案能核准。",
+        "terms_restrictions": "credits 限原型實驗，不得 production、大規模商業部署或超出實驗的營利用途；不得轉售、多帳號；月資源用量超 allocation 30% 時可能暫停，非保證停止扣款。",
+        "taiwan_note": "Unknown：未找到台灣帳戶獲准及付款證據；非制裁名單缺席不足以推定資格。"
       },
       "unknowns": [
         "實際核准之Token Factory/Tavily額度及其他合作credits依方案/申請結果為準",
@@ -5879,8 +5879,8 @@
           "url": "https://nebius.com/builders-terms-and-conditions",
           "label": "Nebius官方服務專屬條款",
           "scope": "2026年9月修訂之 Builder Service-Specific Terms：額度、期限、用途、停用與制裁條款",
-          "evidence": "2026-10-24 23:42–23:50 Asia/Taipei直接查閱：H.2(d)限原型/實驗、禁production/營利；H.4月用量超allocation 30%即auto-pause；C.1/C.2各$25 Token Factory與Tavily、各自90日；禁止轉售/多帳號並有OFAC/BIS篩查。",
-          "verified_at": "2026-10-24T23:50:00+08:00"
+          "evidence": "2026-10-25 19:49 Asia/Taipei 實讀：H.4用 may（得暫停）而非必然硬停；H.2(d)限制 production；C.1/C.2各 US$25 Token Factory/Tavily、90日；國家篩查非台灣核准證據。",
+          "verified_at": "2026-10-25T19:49:00+08:00"
         },
         {
           "url": "https://nebius.com/blog/posts/introducing-the-nebius-ai-builder-program",
@@ -5893,8 +5893,8 @@
           "url": "https://dev.nebius.com/builders",
           "label": "Nebius官方Builder方案/FAQ",
           "scope": "核對官方合作項目之各自額度",
-          "evidence": "2026-10-24 23:42–23:50 Asia/Taipei直接查閱FAQ：LangSmith US$100、Toloka US$50及Tandem US$50；另有US$1身份驗證。各合作額度與Token Factory/Tavily分開，非保證總額。",
-          "verified_at": "2026-10-24T23:50:00+08:00"
+          "evidence": "2026-10-25 19:49 Asia/Taipei 實讀：landing 列 LangSmith US$100、Toloka US$100，FAQ 卻列 Toloka US$50、Tandem US$50；合作福利分配衝突。US$1 是可選 Academy certification 費，非身分驗證費。",
+          "verified_at": "2026-10-25T19:49:00+08:00"
         },
         {
           "url": "https://dev.nebius.com/builders-compute-grants",
@@ -6300,20 +6300,20 @@
       "valuation_scenario": null,
       "cancellation": "取消/降級停止新贈額，已得額度至到期",
       "usable_duration": "每帳期失效，不累積",
-      "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T20:23:58+08:00",
+      "access_risk": "資格、容量及政策可能改變；組織如已有購買額度／自動加值會在贈額耗盡後續用並可能扣款，開啟自動加值會對指定付款方式週期性收費",
+      "verified_at": "2026-10-25T19:46:18+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": "2026-10-07",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T20:23:58+08:00",
+      "next_review_at": "2026-11-25T19:46:18+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Max5x($100/月)、Max20x($200/月)、Team Standard($20/席)、Team Premium($100/席)；含折扣 Team 方案（非營利、科學家）；Pro/Free/Enterprise 不含",
         "account_eligibility": "有效訂閱滿7日；Max需本人訂閱；Team需Owner/Primary Owner角色；Console組織需Owner/Admin/Billing角色",
         "billing_country": "依 claude.ai 付款方式，未明確列台灣排除或允許；Mobile（iOS/Android）訂閱者也能在網頁 claude.ai 領取",
         "identity_residency": "未知",
-        "terms_restrictions": "每方案只能連結一個Console組織；Console組織只能接一個方案的credits；不可用於Bedrock/Vertex/Azure；Claude Code互動模式不含",
+        "terms_restrictions": "每方案只能連結一個Console組織；Console組織只能接一個方案的credits；不可用於Bedrock/Vertex/Azure；Claude Code互動模式不含。官方 Credit Terms 禁止轉讓或出售點數；帳戶關閉時失效",
         "taiwan_note": "台灣可用claude.ai，但 Claude Console/Platform 組織付款資格未確認；建議實際嘗試前確認帳單設定"
       },
       "unknowns": [
@@ -6324,8 +6324,14 @@
         {
           "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
           "label": "官方來源",
-          "scope": "全部方案金額、資格、領取流程、用途與限制",
-          "evidence": "2026-10-24 20:05 官方頁面全文查閱"
+          "scope": "方案金額、資格、領取流程、用途、到期及贈額耗盡後計費條件；非台灣帳單核實",
+          "evidence": "2026-10-25 19:46 Asia/Taipei 實讀：Max 100/200 美元、Team 每席20/100美元且池上限500；滿七日可領，贈額每帳期失效；用盡後若有已購額度或自動加值則續用，無額度則停止 API 請求"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/credit-terms",
+          "label": "官方補充點數條款",
+          "scope": "點數不可轉售轉讓、自動加值授權與帳戶關閉失效；非台灣監管法律意見",
+          "evidence": "2026-10-25 19:46 Asia/Taipei 實讀；條款標示 2024-03-04 生效，促銷點數按核發時期限到期"
         }
       ],
       "record_type": "opportunity",
@@ -7072,8 +7078,8 @@
     },
     {
       "id": "tavily-startups",
-      "title": "Tavily新創：最高100k總額六個月",
-      "summary": "面向打造agents/LLMs的早期VC-backed新創，通常pre-seed至Series A；核准額最高US$100K API credits、總期6個月，不是每月額度或保證金額。官方公開頁未列公司email、網站或募資文件作為明確申請必要件；申請表單細節、付款/超額及與一般免費額疊加未公布。",
+      "title": "Tavily新創：最高10萬 API credits，六個月",
+      "summary": "面向打造 agents/LLMs 的早期 VC-backed 新創，通常 pre-seed 至 Series A；核准最多 100,000 Tavily API credits、使用期六個月，不是 US$100,000、每月額度或保證金額。公開頁未列公司 email、網站或募資文件為明確必要件；申請表、付款、超額及免費池疊加未核。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -7101,12 +7107,12 @@
       "cancellation": null,
       "usable_duration": "核准六個月",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T23:50:00+08:00",
+      "verified_at": "2026-10-25T19:48:00+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:50:00+08:00",
+      "next_review_at": "2026-11-25T19:48:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7124,8 +7130,8 @@
         {
           "url": "https://www.tavily.com/startups",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-24 23:42–23:47 Asia/Taipei直接查閱官方新創計畫與FAQ：最多US$100K API credits、總期6個月，面向早期VC-backed的agents/LLMs新創並rolling basis審查；公開頁未寫公司email/網站/募資文件為必要條件，表單條件及付款/超額未核。"
+          "scope": "100,000 API credits 單位、六個月與早期 VC-backed 資格；非美元金額、非台灣個人核驗",
+          "evidence": "2026-10-25 19:48 Asia/Taipei 實讀官方 FAQ：最多 100k Tavily API credits／六個月，rolling 審核；舊紀錄 US$100K 為單位誤植"
         }
       ],
       "record_type": "opportunity",
@@ -22941,7 +22947,7 @@
     {
       "id": "pinecone-starter-free",
       "title": "Pinecone Starter：免費 Serverless 向量資料庫（AWS us-east-1）",
-      "summary": "官方定價頁確認 Starter 免費方案：最小用量 $0/月，Serverless On-Demand 索引最高 2GB 儲存、200 萬 write units/月、100 萬 read units/月、1GB egress/月、最多 5 個索引、每索引 100 namespaces；內含 Embedding 免費額度（llama-text-embed-v2 / multilingual-e5-large / pinecone-sparse-english-v0 各 5M tokens/月）與 bge-reranker-v2-m3 500 次/月；僅 AWS us-east-1 區域（Starter）。免費索引 7 天未使用會被封存為 collection（可重建）；付款方式僅在升級付費方案時需要。台灣未列排除，可註冊使用。",
+      "summary": "Starter 免費 Serverless On-Demand：最高 2GB 儲存、200萬 write units/月、100萬 read units/月、1GB egress/月、最多5索引、每索引100 namespaces；嵌入模型各5M tokens/月與 bge-reranker-v2-m3 500次/月；僅 AWS us-east-1。另有 Assistant 免費用量，詳官方定價。舊紀錄「7天閒置封存為 collection」不適用 Serverless：官方文件明言 collection 為舊 pod-only 功能；現行 Starter 閒置與資料保留政策待核。台灣註冊資格未明列。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -22954,10 +22960,8 @@
       "recurring_cost_usd": 0,
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計，已具資格且含建立索引與取得 API key 時間",
-      "taiwan": "Yes",
-      "regions": [
-        "Taiwan"
-      ],
+      "taiwan": "Unknown",
+      "regions": ["Other"],
       "verification": "Official",
       "usage_type": "Limited",
       "quota_classification": "HIGH BUT LIMITED",
@@ -22967,26 +22971,26 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "免費 Starter 無月費扣款風險；升級 Builder/Standard/Enterprise 時才以卡片或 marketplace 付款",
-      "usable_duration": "永久免費層；免費索引 7 天未使用封存（可從 collection 重建）",
-      "access_risk": "僅 AWS us-east-1，台灣延遲較高；免費索引閒置封存；用量超過免費額度後限制；政策可能改變",
-      "verified_at": "2026-10-24T23:35:00+08:00",
+      "usable_duration": "免費層未公布終止日；Starter 閒置與保留期限未核",
+      "access_risk": "僅 AWS us-east-1，台灣延遲與資料所在地需評估；免費用量限制；現行閒置處理未證實",
+      "verified_at": "2026-10-25T19:50:00+08:00",
       "discovered_at": "2026-10-24T23:00:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:35:00+08:00",
+      "next_review_at": "2026-11-25T19:50:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Starter：2GB 儲存、2M write units、1M read units、1GB egress、5 索引×100 namespaces；Embedding 3 模型各 5M tokens/月、bge-reranker-v2-m3 500 次/月；僅 AWS us-east-1",
         "account_eligibility": "Start for Free 註冊；官方文件顯示卡片僅在升級至付費方案時需要",
         "billing_country": "免費方案無最小消費；未見國家/帳單限制清單",
-        "identity_residency": "全球開放，未見國家或居住排除",
-        "terms_restrictions": "符合 Pinecone 條款；未見台灣排除；不建議以跨區繞行規避任何限制",
-        "taiwan_note": "官方未列台灣排除、Starter 免月費，台灣可註冊使用；僅 us-east-1 區域需注意延遲。個人註冊未操作驗證"
+        "identity_residency": "官方已讀定價未明列台灣帳戶／居住資格，不能從未列排除推定全球開放",
+        "terms_restrictions": "Serverless 不支援 collection；不得將舊 pod collection 文件套用至 Starter；其餘按 Pinecone 條款",
+        "taiwan_note": "Unknown：僅 AWS us-east-1 服務區域，未取得台灣個人註冊或帳單核准證據"
       },
       "unknowns": [
         "官方未明文標示 Starter 註冊『不需信用卡』，僅由免費方案無計費項目與升級須卡片推論",
-        "個人實際註冊與索引建立未操作驗證"
+        "個人實際註冊與索引建立未操作；現行 Starter 閒置及資料保留期限未核"
       ],
       "sources": [
         {
@@ -23002,19 +23006,25 @@
           "scope": "Starter 最小用量 $0/月",
           "evidence": "2026-10-24 直接查閱：Starter minimum usage $0/month；Builder $20/Standard $50/Enterprise $500 為付費最小消費",
           "verified_at": "2026-10-24T23:35:00+08:00"
+        },
+        {
+          "url": "https://docs.pinecone.io/guides/indexes/pods/understanding-collections",
+          "label": "官方 Collections 文件",
+          "scope": "collection 僅舊 pod 索引可用，不支援 serverless；未證明 Starter 閒置期限",
+          "evidence": "2026-10-25 19:50 Asia/Taipei 實讀：文件明言 collections aren't available for serverless indexes；舊7天自動封存說法不適用"
         }
       ],
       "record_type": "opportunity",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "本方案台灣原生可註冊（無國家限制），無需 VPN；僅 us-east-1 延遲考量"
+        "eligibility_note": "台灣帳戶資格尚未獲官方確認；IP 不授予帳單或身份資格"
       },
       "status": "active",
       "legal_status": "not_verified",
-      "priority_score": 26.6,
-      "priority_tier": "S",
-      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘"
+      "priority_score": 22.1,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤15分鐘"
     },
     {
       "id": "weaviate-cloud-free",
@@ -33033,7 +33043,72 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "resemble-builder-grant-trust-apis",
+      "title": "Resemble Builder’s Grant：信任與偵測 API 核准補助 US$500–30,000",
+      "summary": "官方新創補助按產品用途、階段及預期用量核定 US$500–30,000 credits，效期自核准起最多12個月，可用於偵測、watermarking、Identity、fraud signals 與 AI agent detection API；不是通用 LLM 或 TTS 免費額度。非現有付費客戶且須持續打造產品，一公司限一次；需先建立免費帳戶並經審核，台灣帳戶資格未核實。",
+      "categories": ["FREE", "QUALIFICATION", "HIGH-QUOTA"],
+      "views": ["free", "quota", "developer"],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "申請及審核時間未實測；官方稱約一週審核",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "期滿未選付費方案轉 Flex；Flex 無訂閱費但用量點數須購買；是否自動用付費餘額未核",
+      "usable_duration": "核准起最多12個月，個案可能更短",
+      "access_risk": "核配不保證；需要核准起12個月行銷合作權；付款卡片、超額與期後設定未核",
+      "verified_at": "2026-10-25T19:50:00+08:00",
+      "discovered_at": "2026-10-25T19:50:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T19:50:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "公開申請，非保證獲准；官方稱一週左右審核、核准後48小時入額",
+        "account_eligibility": "少於50名員工，或正開發內建指定信任功能的新產品；持續產品投入、非單次原型／活動；非現有付費客戶，免費戶可申請；一公司一次",
+        "billing_country": "台灣帳單與付款方式未核實",
+        "identity_residency": "官方未明列台灣；一般條款不保證全球服務可用",
+        "terms_restrictions": "須先有免費帳戶；核准起12個月授予行銷合作權，不得把額度當可轉售現金",
+        "taiwan_note": "Unknown：公開申請不等於台灣公司獲准，未登入或申請"
+      },
+      "unknowns": ["台灣公司與帳單資格", "核配金額與個案期限", "grant 啟用是否須綁卡、超額扣款及取消流程"],
+      "sources": [
+        {
+          "url": "https://www.resemble.ai/start/builders-grant-startup-program",
+          "label": "官方 Builder’s Grant 與 FAQ",
+          "scope": "US$500–30,000、用途、審核資格、期限及行銷權；非台灣申請結果",
+          "evidence": "2026-10-25 19:50 Asia/Taipei 實讀：最高12個月、可能更短；非付費戶、一公司一次，核准非保證"
+        },
+        {
+          "url": "https://www.resemble.ai/pricing",
+          "label": "官方定價",
+          "scope": "Flex 期後為按量購買 credits，非永久免費推論",
+          "evidence": "2026-10-25 19:46–19:50 Asia/Taipei 研究批次實讀"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "IP 變更不授予公司或帳單資格；不規避限制。"
+      },
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "priority_score": 17.3,
+      "priority_tier": "B",
+      "priority_note": "官方·條件式·零設定費·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-10-25T18:50:02+08:00"
+  "latest_research_at": "2026-10-25T19:52:39+08:00"
 }

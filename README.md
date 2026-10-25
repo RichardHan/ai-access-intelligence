@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **419 筆**（313 項機會、46 項政策、60 筆觀察線索），更新時間 **2026-10-25 18:50 Asia/Taipei**（不代表全庫已複核）。本輪抽樣實讀官方來源複核 **18 筆既有紀錄**，仍有 **400 筆舊紀錄未在本輪複核**。新增 [Weaviate Engram Free](https://weaviate.io/pricing) 每月 1,000 次記憶 API pipeline runs（台灣帳戶資格未證實）；[Z.ai Startups Program](https://startup.z.ai/)「最高 10 億 tokens」僅列待覆核線索，非保證分配。修正 [Gladia Startup Studio](https://www.gladia.io/start-up-studio-terms) 期滿自動轉 PAYG 後任何用量可計費及申請條件；[Upstash Vector](https://upstash.com/pricing/vector) 官方現頁未明示每日 10K 更新額度；[QStash](https://upstash.com/pricing/qstash) 免費層僅 1 URL group（10 是 queues），重試計量同頁有矛盾。已截止的 Z.ai 夜間活動仍維持退役呈現。限時活動每日查，其餘依最久未核按月輪替；台灣資格與法律結論僅限官方證據支持的範圍。
+資料集目前有 **420 筆**（314 項機會、46 項政策、60 筆觀察線索），更新時間 **2026-10-25 19:52 Asia/Taipei**（不代表全庫已複核）。本輪抽樣實讀官方來源複核 **23 筆既有紀錄**，仍有 **396 筆舊紀錄未在本輪複核**；局部查閱但未改動的紀錄沒有刷新 `verified_at`。新增 [Resemble Builder’s Grant](https://www.resemble.ai/start/builders-grant-startup-program) 信任／偵測 API 補助，US$500–30,000 按申請核配、最多 12 個月，台灣帳戶資格未證實；修正 [Tavily Startups](https://www.tavily.com/startups)「100k」是 API credits 而非 US$100k、[Nebius Builder](https://nebius.com/builders-terms-and-conditions) 超額後僅保留暫停權而非保證硬停，補記 [Cloudflare Tier3](https://www.cloudflare.com/startups/) 資格與超額／期後計費，以及 [Claude API 贈額](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans) 的自動加值風險。限時活動每日查，其餘依最久未核按月輪替；法律結論僅限官方證據支持範圍。
 
 ## 使用方式
 
