@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **438 筆**（329 項機會、46 項政策、63 筆觀察線索），更新時間 **2026-10-26 01:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **20 筆既有紀錄**，其中 **7 筆回寫具體變動並刷新 `verified_at`**；原有436筆中416筆未在本輪查閱。新增 [Blaxel 起始沙箱額度](https://blaxel.ai/pricing) 條件式機會：註冊免費額度未公布，加付款方式或首購後總額最高US$200，台灣帳戶未核；[Salad SSAP](https://blog.salad.com/salad-gpu-cloud-ssap/) 舊公告額度僅列待核線索，不能視為現行可領。Retool定價頁與文件AI額度互異；Dify教育年驗且不自動續費；瑞典Lovable有卡年底後續費與FAQ說法衝突。服務可在台灣使用不代表優惠資格或法律結論已確認。
+資料集目前有 **440 筆**（331 項機會、46 項政策、63 筆觀察線索），更新時間 **2026-10-26 02:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **11 筆既有紀錄**，其中 **5 筆回寫來源或條件並刷新 `verified_at`**；原有438筆中427筆未在本輪查閱。新增 [Tensorlake 免費沙箱](https://www.tensorlake.ai/pricing)（單併發、每次兩小時；[免費方案禁止處理受資料保護法約束的個資](https://www.tensorlake.ai/terms)）與 [JigsawStack 免費 API](https://jigsawstack.com/pricing)（百萬計價 tokens/月含處理毫秒、須放徽章；[產出再散布受限](https://jigsawstack.com/legal/terms)）。CodeRabbit 年約取消知識庫與條款的提前通知互異；Photoroom 沙盒新增每日100次上限且兩API沙盒池別未明；HOSTKEY 申請頁確認暫停。台灣個別資格及法律層面仍未核實。
 
 ## 使用方式
 
