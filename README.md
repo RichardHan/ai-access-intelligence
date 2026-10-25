@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：362筆，包含272筆機會、44筆政策、46筆待覆核線索；非362項可直接領取優惠。資料集更新至2026-10-25 08:54 Asia/Taipei。本批累計14筆次複核、12個不重複既有案例，包括Meta Hackathon、Vercel限免、Picsart WAN、台灣數產署算力、Supership試用、Granola學生/新創、Replicate、Civo、CodeBuddy、Fireworks及富士Soft企業PoC。Meta正式規則已可讀，補入US$150額度付款/超額計費、作品授權與截止時區衝突；台灣資格由Yes調為Unknown。數產署額度分級與使用限制已補全；富士Soft台灣企業資格及PoC資料條款仍未知。新增Roboflow Core Free待覆核線索（每月10共享credits、免卡；台灣資格未確認）；既有MiniMax Design新客點數仍待追蹤。其餘案例未全面重核。
+目前資料：367筆，包含274筆機會、44筆政策、49筆待覆核線索；非367項可直接領取優惠。資料集更新至2026-10-25 09:30 Asia/Taipei。本批複核6筆既有案例並新增5筆研究。複核案例：WorkBuddy（10/25限免終點未獲官方確認，補核一般Free每月100點與新客250點14天效期）、MiniMax Design（確認新客2,000點與3次H3試用，補核贈點3天有效）、CyLeague Cyber Navi（法人40次／30天AI判斷試用延至11/30，不自動轉付費）、AssemblyAI新創（確認12月循環額度非固定1.2萬美元，LLM折扣排除）、台智雲TWSC（正體中文確認NT$10,000／最長60天試用，移除無依據美元換算與H100保證，台灣Yes）、GitHub Copilot學生（補核二年複查週期與中學/大專院校資格，移除自動審核假設）。新增機會：Udio音樂創作（每月100點＋每日10點，個人非商用且禁下載）、國網中心NCHC大專院校課程教學免費算力（台灣Yes，限授課教師具核章選課名單）。新增待覆核線索：台智雲AIGA新創加速投資（綁定算力回購協議非無償補助）、Kling AI免費生成（登入贈點依活動，66點為每美元購買單價非每日贈額）、Luma Dream Machine（定價頁未列Free方案，個人非商用且有浮水印）。其餘案例未全面重核。
 
 ## 使用方式
 
