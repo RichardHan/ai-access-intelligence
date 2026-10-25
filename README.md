@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **433 筆**（326 項機會、46 項政策、61 筆觀察線索），更新時間 **2026-10-25 22:24 Asia/Taipei**（不代表全庫複核）。本輪抽樣實讀官方來源複核 **16 筆既有紀錄**，新增 **1 筆多模態影像理解機會**（TwelveLabs）；原有432筆中 **416筆未在本輪複核**，部分查閱不刷新 `verified_at`。[TwelveLabs](https://www.twelvelabs.io/pricing) 2026-10-15起新制Free為3GB Managed Intelligence儲存與每月Basic工作量（舊600分鐘為累積總額非月贈且僅舊戶過渡）；[Meta全球AI黑客松](https://dev.meta.ai/events/global-hackathon)活動頁與Waiver存在ET/EST時區與效期矛盾，維持較早截止；[Lawson Google AI Pro抽選](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)新購買已截止，合格集點者応募至10/26且限日本在住；[Supermaven](https://supermaven.com/blog/sunsetting-supermaven)公告為2025-11-21且依剩餘時間比例退款，Neovim/JetBrains維持補全；[Mango Inference](https://www.mangoboost.io/)官方確認新戶$10額度與11/11前七折，社群$100 matching無官方依據；[Sarvam](https://docs.sarvam.ai/api/getting-started/ratelimits)驗證用戶₹100額度不過期且可用於商業語音，新創補助額度期滿失效；[Qdrant Cloud](https://qdrant.tech/pricing/)與[Upstash Vector](https://upstash.com/pricing/vector)釐清託管/Serverless規格、閒置刪除與條款矛盾，台灣資格修正為Unknown；[Cerebras](https://inference-docs.cerebras.ai/support/rate-limits)官方明確否認永久免費層，加卡領$5/30天試用。台灣個別帳戶、付款及法律結論不可由服務存在推定；限時案例每日、其他按月輪替。
+資料集目前有 **435 筆**（327 項機會、46 項政策、62 筆觀察線索），更新時間 **2026-10-25 22:50 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **20 筆既有紀錄**，其中僅 **2 筆有可回寫變動而刷新 `verified_at`**；原有433筆中413筆未在本輪查閱。新增 [Go2 Cloud AI-OCR](https://www.lets-co.com/static/ai/ocr/campaign/index.html) 條件式機會（新簽付費底座首年600頁，OCR預計12月中推出、台灣資格未核），以及 [Railway](https://docs.railway.com/pricing/free-trial.md) 一次US$5／30天觀察線索（台灣帳戶資格未核）。[Supership](https://supership.jp/news/2026/09/16/14682/) 10/30前法人申請、期滿自動轉付費，已調為每日複核；[GitHub Models](https://docs.github.com/en/github-models) 已退役，修正替代服務分工。其他已讀案例若無新證據未刷新核實時間；服務可在台灣使用不代表優惠資格或法律結論已確認。
 
 ## 使用方式
 
