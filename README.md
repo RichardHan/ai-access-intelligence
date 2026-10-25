@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：361筆，包含272筆機會、44筆政策、45筆待覆核線索；非361項可直接領取優惠。資料集更新至2026-10-25 08:26 Asia/Taipei，本次直接重開官方來源複核11筆既有案例：Meta Global AI Developer Hackathon（報名仍開放至台灣時間10/26 11:59，20,000名額未宣布額滿，開賽前公布官方規則）、Vercel AI Gateway Mammoth/Elephant（限免至10/27）、Picsart WAN 3.0（條款截止10/31 23:59 PT，行銷10/29落差保留，排除1080p與API）、台灣數產署AI算力（10/30截止，限合格登記企業以工商憑證申請）、Supership Creative AI（10/30截止，法人1個月Standard試用、次月自動轉付費）、Granola學生（美英加限定，Taiwan No）、Granola新創（<30人種子輪，Taiwan Unknown）、Replicate Try for Free（精選模型免卡試跑，有限次數）、Civo新戶額度（$250三處條款矛盾保留）、CodeBuddy（100月點/250新客點/每日活動點分池）、Fireworks Glimmer SFT（免費微調至11/30，推論另計）。約344筆既有案例未於本次複核，未全面重核。新增3筆機會：Brave Search API每方案每月US$5循環免費額度（含1,000次AI/RAG檢索，需綁卡驗證防偽但可設預付額為$0）、Turso Starter免綁卡5GB與5億次讀取（內建向量檢索與FTS，超額直接阻擋不扣款）、智譜BigModel多款Flash模型API零成本調用（GLM-4.7-Flash等輸入輸出免費，支援海外手機註冊，台灣公務機關受數發部限制）；新增1筆MiniMax Design新客2,000點與3次H3試用待追蹤線索。服務條款資格與法律／監管結論分開；無適用官方法律來源者仍標未核實。
+目前資料：362筆，包含272筆機會、44筆政策、46筆待覆核線索；非362項可直接領取優惠。資料集更新至2026-10-25 08:51 Asia/Taipei。本批累計14筆次複核、12個不重複既有案例，包括Meta Hackathon、Vercel限免、Picsart WAN、台灣數產署算力、Supership試用、Granola學生/新創、Replicate、Civo、CodeBuddy、Fireworks及富士Soft企業PoC。Meta正式規則已可讀，補入US$150額度付款/超額計費、作品授權與截止時區衝突；台灣資格由Yes調為Unknown。數產署額度分級與使用限制已補全；富士Soft台灣企業資格及PoC資料條款仍未知。新增Roboflow Core Free待覆核線索（每月10共享credits、免卡；台灣資格未確認）；既有MiniMax Design新客點數仍待追蹤。其餘案例未全面重核。
 
 ## 使用方式
 
