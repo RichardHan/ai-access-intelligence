@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：375筆，包含281筆機會、44筆政策、50筆待覆核線索；非375項可直接領取優惠。資料集更新至2026-10-25 10:59 Asia/Taipei。本輪嘗試複核40筆既有案例：39筆取得可用官方來源內容；Perplexity Education兩官方頁遭HTTP 403，未刷新verified_at。限時優先：Meta AI Hackathon申請最遲10/26 11:59台灣時間（或20,000人額滿前）；Lawson新申請已截止，既有合格者応募至10/26 23:59，限日本居民；Vercel Baseten模型促銷至10/27（時區未公布）。更正HKT AI資格：新兌換已於9/30截止，10/27只為7/28兌換者個別三個月週期範例；Anthropic合作不提供參與者模型或算力；KakaoCloud Boost/Grow 1年與2年效期條款衝突。新增4筆：Google AICore支援裝置預覽（18+、非生產，台灣資格未知）、Google Workspace非營利免費AI（台灣特定組織類別且Goodstack核驗）、OpenAI非營利Business Standard（US$8年繳月均/US$10月繳，台灣計畫資格未知）、Databricks Free Edition（僅非商業、配額有限）。服務在台灣可用不等於符合優惠資格；法律/監管狀態未以此複核推定。其餘案例未全面複核。
+目前資料：375筆，包含281筆機會、44筆政策、50筆待覆核線索；非375項可直接領取優惠。資料集更新至2026-10-25 11:01 Asia/Taipei。本輪完整複核38筆既有案例：37筆取得可讀官方來源正文；Perplexity Education官方頁遭HTTP 403，未刷新verified_at。另對Cloudflare Workers AI及Gemini API僅作局部來源查核，未刷新verified_at。限時優先：Meta AI Hackathon申請最遲10/26 11:59台灣時間（或20,000人額滿前）；Lawson新申請已截止，既有合格者応募至10/26 23:59，限日本居民；Vercel Baseten模型促銷至10/27（時區未公布）。更正HKT AI資格：新兌換已於9/30截止，10/27只為7/28兌換者個別三個月週期範例；Anthropic合作不提供參與者模型或算力；KakaoCloud Boost/Grow 1年與2年效期條款衝突。新增4筆：Google AICore支援裝置預覽（18+、非生產，台灣資格未知）、Google Workspace非營利免費AI（台灣特定組織類別且Goodstack核驗）、OpenAI非營利Business Standard（US$8年繳月均/US$10月繳，台灣計畫資格未知）、Databricks Free Edition（僅非商業、配額有限）。服務在台灣可用不等於符合優惠資格；法律/監管狀態未以此複核推定。其餘案例未全面複核。
 
 ## 使用方式
 
