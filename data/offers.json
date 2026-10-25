@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T18:27:01+08:00",
-  "scope": "2026-10-25 Asia/Taipei 本輪實讀官方來源；既有11筆抽樣複核，其中 fal Builder 有新增有界證據並更新 verified_at，其餘已於今日較早批次查核或無足夠新證據更動。新增 AWS Educate 免費教育機會。其餘紀錄本輪未全面核實；限時活動每日複核，其餘依最久未核按月輪替。updated_at 僅代表資料集更新，服務條款與法律限制分開。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-25T18:50:02+08:00",
+  "scope": "2026-10-25 18:45–18:50 Asia/Taipei 本輪實讀官方頁抽樣複核 18 筆既有紀錄（含不改欄位的部分複核）；新增 Weaviate Engram 機會與 Z.ai Startups 待覆核線索；修正 Gladia 期後 PAYG 與 Upstash 額度及來源矛盾。verified_at 只更新本輪有回寫且確實查核的案例；其餘舊紀錄未全面重驗。限時活動每日查，其餘依最久未核按月輪替；法律層面未有適用官方法規來源時維持未核實。優先度評分為衍生值，非新的外部查核。",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -4182,7 +4182,7 @@
     {
       "id": "gladia-startup-studio",
       "title": "Gladia Startup Studio：US$3000／12月附合作義務",
-      "summary": "Gladia Startup Studio 提供獲選新創 US$3,000 API credits（VC 推薦為 $3,500），有效效期 12 個月，單一額度池無每月上限，期滿自動轉標準 PAYG 無自動扣款。官方服務條款（Effective 13/10/2026）成功實讀：排除名單僅列 Belarus、Cuba、Iran、North Korea、Russia、Sudan、Syria 等受全面制裁地區，台灣非排除地區具申請資格。獲選者具合作義務（社群分享、案例研究、網站展示 Gladia logo 等）。",
+      "summary": "Gladia Startup Studio 提供獲選新創 US$3,000 API credits（VC 推薦為 $3,500），有效期 12 個月，單一額度池無每月上限。期滿或退出自動轉標準 PAYG，後續使用會按標準費率計費，須預先檢查整合與用量。2026-10-25 實讀 2026-10-13 生效條款：排除 Belarus、Cuba、Iran、North Korea、Russia、South Sudan、Sudan、Syria 及其他受全面制裁地區；台灣非列名排除，但仍須新創資格與審核。獲選者須社群分享、案例研究及展示 Gladia logo。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -4207,27 +4207,27 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "書面隨時退出立即沒收未用額度；12 個月期滿不自動續約，自動轉標準自服務 PAYG 方案",
+      "cancellation": "可書面退出但未用額度立即沒收；12 個月期滿不自動續約，帳戶自動轉標準 PAYG，期後任何用量依標準費率計費（條款§9–10）",
       "usable_duration": "12個月，未用額度失效",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-24T23:35:00+08:00",
+      "verified_at": "2026-10-25T18:46:21+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:35:00+08:00",
+      "next_review_at": "2026-11-25T18:46:21+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "全球，排除列明制裁地區；台灣地區資格Yes，個人整體仍Unknown",
-        "account_eligibility": "少於10人、未滿兩年、自有語音AI產品；顧問/代理商不合格，需公開合作",
+        "account_eligibility": "團隊少於10人、註冊未滿兩年、自有語音AI核心產品且有營利路徑；非顧問/代理商、無現行 Gladia 企業合約；申請代表滿18歲，一法人僅一件申請，需審核及公開合作",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
+        "terms_restrictions": "點數不得轉讓、共享、轉售或換現；禁止虛假資料、重複申請及跨區規避；期滿轉 PAYG 後用量收費，條款受法國法與巴黎法院管轄（非台灣法律結論）",
         "taiwan_note": "條款排除清單僅含受制裁國家，台灣不在排除名單，具方案層級申請資格；需符合成立未滿 2 年、團隊 <10 人、自有語音 AI 產品等條件。"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "條款全文、實際審核與續費安排"
+        "台灣公司與申請人實際審核、帳單付款條件及最終優惠資格",
+        "附屬 GTCS／Terms of Use、期後整合用量與個案費率"
       ],
       "sources": [
         {
@@ -4239,9 +4239,9 @@
         {
           "url": "https://www.gladia.io/start-up-studio-terms",
           "label": "官方來源",
-          "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-24 條款全文實讀（Effective 13/10/2026）：第 6 條合作義務、第 5.9 條 12 個月失效、第 10 條轉 PAYG、制裁國排除清單確認台灣合格",
-          "verified_at": "2026-10-24T23:35:00+08:00"
+          "scope": "條款§3資格與排除、§5點數、§6合作、§8–10期滿與 PAYG、§13準據法；不代表個人申請獲准",
+          "evidence": "2026-10-25 18:46 Asia/Taipei 實讀：含 South Sudan 排除、18歲與公司資格；§10.2 期後任何使用按標準 PAYG 計費，非免自動扣款。條款生效日 2026-10-13。",
+          "verified_at": "2026-10-25T18:46:21+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -22543,8 +22543,8 @@
     },
     {
       "id": "upstash-vector-free",
-      "title": "Upstash Vector 免費層：10K 查詢+更新／天，免綁卡",
-      "summary": "官方定價頁確認伺服器無狀態向量資料庫免費層：每日 10,000 次查詢 + 10,000 次更新、最高 200M vectors×dims、1 GB 資料、100 個 namespaces，永久免費、不需信用卡、按需計費產品。簽約可用 GitHub/Google/Amazon 或 Email+密碼，無國家註冊限制。進階 Pay-as-You-Go 每 10 萬次請求 $0.40、儲存 $0.25/GB。資料僅託管於 AWS us-east-1、AWS eu-west-1、GCP us-central-1（延遲考量，非可用性封鎖）。台灣開發者可直接註冊使用免費層，無需 VPN 或美方帳單。",
+      "title": "Upstash Vector 免費層：每日 10K 查詢，更新額度待核",
+      "summary": "2026-10-25 官方定價頁確認免費層每日 10,000 次查詢、最高 200M vectors×dims、1 GB 資料、100 namespaces，US$0；現頁未明列每日 10K 更新額度，不能與查詢額度相加。PAYG 每 10 萬請求 US$0.40、儲存 US$0.25/GB；免費區域為 AWS N. Virginia/Ireland、GCP Iowa。加信用卡才升級 PAYG。台灣帳戶資格未獲明示，註冊未操作。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -22558,10 +22558,8 @@
       "recurring_cost_usd": 0,
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計，已具 GitHub/Google 帳號且含建立資料庫與索引時間",
-      "taiwan": "Yes",
-      "regions": [
-        "Taiwan"
-      ],
+      "taiwan": "Unknown",
+      "regions": [],
       "verification": "Official",
       "usage_type": "Limited",
       "quota_classification": "HIGH BUT LIMITED",
@@ -22573,32 +22571,32 @@
       "cancellation": "免費層無訂閱扣款風險；升級需主動加付款方式才轉為按量計費",
       "usable_duration": "永久免費層（活動無截止日期），每日自動重置限額",
       "access_risk": "資料託管僅限美/歐三區，台灣存取延遲；產品政策可能變更",
-      "verified_at": "2026-10-24T23:18:00+08:00",
+      "verified_at": "2026-10-25T18:47:00+08:00",
       "discovered_at": "2026-10-24T10:00:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:18:00+08:00",
+      "next_review_at": "2026-11-25T18:47:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "免費層上限：10K 查詢+10K 更新／天、200M vectors×dims、1 GB 資料、100 namespaces；資料僅託管於 AWS us-east-1、AWS eu-west-1、GCP us-central-1",
+        "service_availability": "定價頁明列每日 10K queries、200M vectors×dims、1GB、100 namespaces；更新每日上限未明，免費區域僅美/歐三區",
         "account_eligibility": "註冊可用 GitHub/Google/Amazon 或 Email+密碼；免費層不需信用卡",
         "billing_country": "無需付款方式即可用免費層",
-        "identity_residency": "無國籍或居住限制（官方未列封鎖清單）",
-        "terms_restrictions": "遵循 Upstash 服務條款；未發現台灣列為排除",
-        "taiwan_note": "台灣開發者可直接註冊並使用免費層，無需 VPN 或美方帳單；僅注意資料位於美/歐區域的連線延遲"
+        "identity_residency": "本輪官方頁未見台灣明示支援或居住資格清單，不能保證個人申請",
+        "terms_restrictions": "免費帳戶應遵守 Upstash 條款，不可重複建立帳戶規避限制；台灣法律未核實",
+        "taiwan_note": "Taiwan Unknown：免費免卡不等於台灣帳戶申請必獲准；未操作註冊，不推薦 VPN 規避"
       },
       "unknowns": [
-        "免費層重置週期精確時區",
-        "超過每日 10K 上限時是否直接阻擋或軟性降速",
-        "個人實際延遲與效能受網路影響"
+        "更新/upsert 每日固定上限未見當前官方定價明示（舊資料稱 10K，待核）",
+        "台灣帳戶實際資格、免費資源閒置刪除與完整條款適用",
+        "每日重置時區與超量處理方式"
       ],
       "sources": [
         {
           "url": "https://upstash.com/pricing/vector",
           "label": "官方來源",
-          "scope": "免費/PAYG/固定方案額度與價格、區域、尺寸上限",
-          "evidence": "2026-10-24 直接查閱官方價格頁：免費層 10K 查詢+更新/天、200M vectors×dims、1 GB、100 namespaces；PAYG $0.4/100K；免費不需信用卡"
+          "scope": "2026-10-25 局部複核免費查詢、容量、區域及升級；不支持更新每日上限或台灣資格",
+          "evidence": "2026-10-25 18:47 Asia/Taipei 實讀：Free 10K daily queries、200M vectors×dims、1GB、100 namespaces；FAQ 加卡才升 PAYG；未列每日 10K updates。"
         },
         {
           "url": "https://upstash.com/docs/common/account/createaccount",
@@ -22611,18 +22609,18 @@
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需 VPN。"
+        "eligibility_note": "VPN 不授予帳戶或地區資格；台灣註冊未核實，不推薦規避。"
       },
       "status": "active",
-      "priority_score": 28.1,
-      "priority_tier": "S",
-      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘",
+      "priority_score": 23.6,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤15分鐘",
       "legal_status": "not_verified"
     },
     {
       "id": "upstash-qstash-workflow-free",
-      "title": "Upstash QStash／Workflow 免費層：1,000 訊息／天，免綁卡",
-      "summary": "官方定價頁確認伺服器無狀態訊息佇列／排程（QStash）免費層：每日 1,000 條訊息、50 GB 頻寬、訊息最大 1 MB、10 個 URL groups／queues、2 並行；重試免費、最多延遲 7 天。QStash Workflow（持久化 serverless 函式）免費層另每日 1,000 steps。皆永久免費、不需信用卡，按量計費產品。發布/入隊 API 無 RPS 限制。資料託管於 EU 與 US 兩區。台灣開發者可註冊使用，無需 VPN 或台幣/美金帳單限制。",
+      "title": "Upstash QStash／Workflow 免費層：每日 1,000 訊息／步驟",
+      "summary": "2026-10-25 官方定價確認 QStash Free 每日 1,000 訊息、50GB 頻寬、最大 1MB、1 個 URL group、10 queues；queue parallelism 2、整體 max parallelism 10、最多延遲 7 天。Workflow Free 每日 1,000 steps，重試算額外 step。QStash 同頁上方稱 retries free，但 FAQ 明稱每次 delivery attempt（含 retry）算訊息，計量存在官方內部矛盾；應保守估算重試用量。台灣帳戶資格未明示。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -22636,10 +22634,8 @@
       "recurring_cost_usd": 0,
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計，已具 GitHub/Google 帳號且含建立 namespace 與收發測試時間",
-      "taiwan": "Yes",
-      "regions": [
-        "Taiwan"
-      ],
+      "taiwan": "Unknown",
+      "regions": [],
       "verification": "Official",
       "usage_type": "Limited",
       "quota_classification": "HIGH BUT LIMITED",
@@ -22651,32 +22647,39 @@
       "cancellation": "免費層無訂閱扣款風險；升級需主動加付款方式才轉為按量計費",
       "usable_duration": "永久免費層（活動無截止日期），每日自動重置",
       "access_risk": "資料託管僅 EU/US 兩區，台灣存取延遲可能；超過每日限額為軟性限制，持續超量才可能 429；政策可能變更",
-      "verified_at": "2026-10-24T23:18:00+08:00",
+      "verified_at": "2026-10-25T18:47:00+08:00",
       "discovered_at": "2026-10-24T10:05:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:18:00+08:00",
+      "next_review_at": "2026-11-25T18:47:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "QStash 免費層：1,000 訊息/天、50GB 頻寬、1 MB/訊息、10 URL groups、10 queues、並行2；發布/入隊無 RPS 限制；QStash Workflow 免費層另 1,000 steps/天",
+        "service_availability": "QStash Free：1,000 訊息/天、50GB、1MB、1 URL group、10 queues、queue parallelism 2、max parallelism 10；Workflow Free 1,000 steps/天，重試額外計 step",
         "account_eligibility": "註冊可用 GitHub/Google/Amazon 或 Email+密碼；免費層不需信用卡",
         "billing_country": "無需付款方式即可用免費層",
-        "identity_residency": "無國籍或居住限制（官方未列封鎖清單）",
-        "terms_restrictions": "遵循 Upstash 服務條款；未發現台灣列為排除",
-        "taiwan_note": "台灣開發者可直接註冊並使用免費層，無需 VPN 或美方帳單；僅注意資料位於 EU/US 區域的連線延遲"
+        "identity_residency": "官方定價未列台灣帳戶明示資格；無排除不等於保證可申請",
+        "terms_restrictions": "QStash 同頁 retries free 與 FAQ 每次 delivery attempt 均計訊息衝突；Workflow 明示重試加計 steps，不應使用多帳戶繞用量限制",
+        "taiwan_note": "Taiwan Unknown：免卡免費層不證明個人台灣帳戶可取得；帳戶未操作註冊"
       },
       "unknowns": [
-        "每日重置的精確時區",
-        "託管區域延遲對台灣端點的實測影響",
-        "Workflow 免費層 steps 與 QStash 訊息是否共用額度"
+        "QStash 頁首 retries free 與同頁 FAQ 每次 delivery attempt 計訊息互相矛盾，待官方釐清",
+        "台灣帳戶資格與服務地區、每日重置時區",
+        "Workflow steps 與 QStash 訊息是否共用額度"
       ],
       "sources": [
         {
           "url": "https://upstash.com/pricing/qstash",
           "label": "官方來源",
-          "scope": "免費/PAYG/固定方案額度、訊息計價、區域與限制",
-          "evidence": "2026-10-24 直接查閱官方價格頁：免費層 1,000 訊息/天、50GB、1MB、並行2；重試免費；無 RPS 限制；資料在 EU/US 兩區"
+          "scope": "QStash 免費額度、URL groups/queues/parallelism、同頁重試計量衝突",
+          "evidence": "2026-10-25 18:47 Asia/Taipei 實讀：Free 1 URL group、10 queues、queue parallelism 2/max parallelism 10；頁首稱 retries free，FAQ 說重試 delivery attempt 另算訊息。"
+        },
+        {
+          "url": "https://upstash.com/pricing/workflow",
+          "label": "Workflow 官方定價",
+          "scope": "每日免費 1,000 steps、重試與並行計量",
+          "evidence": "2026-10-25 18:47 Asia/Taipei 實讀：Free 1,000 steps/day，retries count as extra steps。",
+          "verified_at": "2026-10-25T18:47:00+08:00"
         },
         {
           "url": "https://upstash.com/docs/common/account/createaccount",
@@ -22689,12 +22692,12 @@
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。本方案台灣原生可用，無需 VPN。"
+        "eligibility_note": "VPN 不授予帳戶或地區資格；台灣註冊未核實，不推薦規避。"
       },
       "status": "active",
-      "priority_score": 28.1,
-      "priority_tier": "S",
-      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘",
+      "priority_score": 23.6,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤15分鐘",
       "legal_status": "not_verified"
     },
     {
@@ -32886,7 +32889,151 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
+    {
+      "id": "weaviate-engram-free",
+      "title": "Weaviate Engram Free：AI 代理記憶 API 每月 1,000 次 pipeline run",
+      "summary": "官方定價列 Engram 獨立於 Weaviate Database 的免費方案：每月 1,000 次 pipeline run、1 個 project、僅 Personalisation pipeline；到達上限限流而非超額扣款。一次 POST /memories 啟動一次 run，非 token 額度。需 Weaviate Cloud 帳戶建立專案和 API key；台灣帳戶可否註冊與適用條款尚未取得官方地區明示。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": "未核實實際設定時間",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Limited",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費方案到額限流、無超額計費；註冊付款要求與升級取消條件未核實",
+      "usable_duration": "免費月度方案，未公告固定結束日期",
+      "access_risk": "地區與帳戶條件未明；方案及額度可能變動",
+      "verified_at": "2026-10-25T18:46:21+08:00",
+      "discovered_at": "2026-10-25T18:46:21+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T18:46:21+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "Engram Free 每月 1,000 pipeline runs、1 project、僅 Personalisation pipeline；與 Database 分開訂閱",
+        "account_eligibility": "官方 quickstart 要求 Weaviate Cloud 帳戶，於 console 建立 project 與 API key；未操作註冊",
+        "billing_country": "免費方案標示 US$0、到額限流；台灣帳單/付款要求未核實",
+        "identity_residency": "未取得官方明示的國家、居住或年齡資格清單",
+        "terms_restrictions": "應遵守 Weaviate 服務條款；本輪未取得 Engram 專屬條款全文，禁止以虛假資料或跨區規避取得",
+        "taiwan_note": "Taiwan Unknown；官方定價和文件未明示台灣帳戶可註冊 Engram，不以 Database 可用性推定 Engram 優惠資格"
+      },
+      "unknowns": [
+        "台灣註冊及 Engram 地區開放條件",
+        "免費帳戶付款方式、升級與取消條款",
+        "Engram 專屬服務條款與資料保留"
+      ],
+      "sources": [
+        {
+          "url": "https://weaviate.io/pricing",
+          "label": "官方定價頁",
+          "scope": "Engram Free 成本、每月用量、獨立於 Database、到額限流",
+          "evidence": "2026-10-25 18:46 Asia/Taipei 實讀：$0/月，1,000 pipeline runs/月，1 project，Personalisation pipeline only，無超額計費；一個 POST /memories 為一 run。",
+          "verified_at": "2026-10-25T18:46:21+08:00"
+        },
+        {
+          "url": "https://docs.weaviate.io/engram/quickstart",
+          "label": "官方入門文件",
+          "scope": "Weaviate Cloud 帳戶、專案與 API key 的取得流程",
+          "evidence": "2026-10-25 18:46 Asia/Taipei 實讀：前提為 Weaviate Cloud account；在 console 建立 project 並產生 API key；未證明台灣申請資格。",
+          "verified_at": "2026-10-25T18:46:21+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN 不授予地區、帳單或身分資格；不得跨區規避。"
+      },
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "zai-startups-api-credits-watch",
+      "title": "Z.ai Startups Program：最高 10 億 tokens（資格與額度待核）",
+      "summary": "官方 Startups Program 公開申請入口及『up to 1B tokens』API 額度，屬最高值而非保證分配；實際核給額度、期限、模型、地區與付款條件無可查明細。本筆為待覆核線索，不作台灣可領取的結論。",
+      "categories": [
+        "QUALIFICATION"
+      ],
+      "views": [
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "申請及審核時間未公布",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": null,
+      "access_risk": "僅有最高值宣傳，無個別核配、區域及條款明細",
+      "verified_at": "2026-10-25T18:46:00+08:00",
+      "discovered_at": "2026-10-25T18:46:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T18:46:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "官方公開申請入口；申請開放程度及核准結果未操作確認",
+        "account_eligibility": "新創資格、成立年限與公司文件未公布或未取得",
+        "billing_country": "付款方法、用罄後計費未知",
+        "identity_residency": "台灣法人與居住資格未知",
+        "terms_restrictions": "專屬方案條款未取得；不可轉售、重複申請或偽造身分以規避限制",
+        "taiwan_note": "Taiwan Unknown；宣傳全球成長不構成台灣新創可取得保證"
+      },
+      "unknowns": [
+        "實際核配 tokens、適用模型、期限及計價",
+        "台灣法人資格、審核與付款",
+        "正式活動條款、資料處理及法律限制"
+      ],
+      "sources": [
+        {
+          "url": "https://startup.z.ai/",
+          "label": "官方活動網站",
+          "scope": "Startups Program 入口；僅部分主張由官方頁面前端資源顯示",
+          "evidence": "2026-10-25 18:46 Asia/Taipei 實讀官方頁與其前端資源：宣稱最高 1B tokens、技術支援及 Apply；未見個案額度、台灣資格或方案條款。",
+          "verified_at": "2026-10-25T18:46:00+08:00"
+        }
+      ],
+      "record_type": "watchlist",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN 不授予台灣公司與身分資格；不得規避限制。"
+      },
+      "status": "unverified",
+      "legal_status": "not_verified",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-10-25T17:48:57+08:00"
+  "latest_research_at": "2026-10-25T18:50:02+08:00"
 }
