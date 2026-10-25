@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T15:29:16+08:00",
-  "scope": "公開官方資料基準與分批複核。2026-10-25 15:00–15:06 Asia/Taipei本輪實讀官方來源複核9筆既有紀錄（5筆最久未核機會、4筆限時/政策/地區案例），新增1項Soniox App機會、2筆證據矛盾觀察線索。資料集400筆：300機會、44政策、56觀察；累計既有實讀官方來源複核41筆，仍有348筆既有記錄未查核（依先前批次基線；不代表本日其他批次未核）。verified_at僅更新本輪確實查核案例；限時/即將到期每日追蹤，其餘依最久未核案例按月輪替。有效性、條款資格及法律/監管限制分開；未取得適用台灣官方法律來源者維持未核實。priority tier/score/note僅為既有欄位衍生計算，非新增外部查核。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-25T15:52:47+08:00",
+  "scope": "公開官方資料基準與分批複核。2026-10-25 15:45–15:48 Asia/Taipei實讀11筆既有紀錄的官方來源（最久未核10筆及Codex重置政策）；其中5筆已按新證據更新條件、來源與verified_at，其餘6筆僅完成來源閱讀，尚待逐筆寫入，不能視為全面核實。新增1項Serper B2B搜尋機會。資料集404筆：302機會、44政策、58觀察；沿用先前批次基線，累計實讀70筆既有紀錄，尚有319筆既有紀錄未查核。限時／即將到期案例每日複核，其餘最久未核按月輪替。公開方案有效性、條款資格與法律限制分開；台灣個別資格與適用法律未取得官方證據時保持未核實。updated_at僅代表資料集更新，verified_at僅更新實際寫入本輪來源與核實範圍的紀錄；評分是既有欄位衍生計算。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -12161,7 +12161,7 @@
     {
       "id": "codex-banked-reset-policy",
       "title": "Codex免費重置：依帳戶授予，非永久加額",
-      "summary": "官方區分可保存的一次免費重置、自動套用重置與付費即時重置。授予無保證排程；取得不等已使用。手動兌用需至少一個覆蓋額度低於80%，代理自動使用選項另需主要5小時或週額度≤10%。Go覆蓋月、Plus/Business Standard覆蓋5小時與週、Pro覆蓋週；不是現金或API credits，不泛化為人人可領。",
+      "summary": "官方區分可保存的一次免費重置、自動套用重置與付費即時重置。授予無保證排程；取得不等已使用。手動兌用需至少一個覆蓋額度低於80%，代理自動使用選項另需主要5小時或週額度≤10%。Go覆蓋月、Plus/Business Standard覆蓋5小時與週、Pro 100/200/500覆蓋週；不是現金或API credits，不泛化為人人可領。已用重置可能改變下次額度刷新時間，帳單日期不變；與後續自動重置不疊加。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -12188,19 +12188,19 @@
       "cancellation": null,
       "usable_duration": "個別重置到期日未知",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-24T04:05:37+08:00",
+      "verified_at": "2026-10-25T15:46:13+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T15:46:13+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
         "account_eligibility": "僅獲官方授予符合活動的帳戶；到期與覆蓋以帳戶顯示為準",
         "billing_country": "未核",
         "identity_residency": "未核；地區標籤不代表該國所有人均符合",
-        "terms_restrictions": "未操作註冊、付款、安裝或任何跨區繞行",
+        "terms_restrictions": "免費重置由OpenAI酌情授予，不保證、不得轉讓或折現；到期未使用、意外使用或後續自動重置均不補發。已用重置可能改變額度週期刷新時間，不能與自動重置疊加。未操作帳戶或跨區繞行。",
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
@@ -12212,7 +12212,7 @@
           "url": "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
           "label": "官方公開來源",
           "scope": "Codex免費重置：依帳戶授予，非永久加額",
-          "evidence": "公開頁面相關正文查閱；未登入或驗證領取"
+          "evidence": "2026-10-25 15:46 Asia/Taipei直接查閱：免費banked/automatic與付費即時重置分開；Go月、Plus/Business Standard五小時及週、Pro 100/200/500週；不得轉讓，期限依個別帳戶，重置可改變用量刷新時間但不改訂閱結帳日。僅核實公開規則，未驗個人授予、台灣帳戶資格或法律。"
         }
       ],
       "record_type": "policy",
@@ -16441,7 +16441,7 @@
     {
       "id": "plaud-preview-one-time-work-credits",
       "title": "Plaud Preview：Work一次贈額，非每月補充",
-      "summary": "官方10月21日更新：升級新版Mobile App給一次免費Plaud Credits，額度依方案在帳戶顯示。活動到2026-12-31，個別贈額自更新日起3個月有效，可超過活動截止日。Work代理任務耗credits，Chat不耗；轉錄分鐘另按月重置。更新與贈額無新增費，原訂閱照常；額外購買須確認。",
+      "summary": "官方10月21日說明：新版Mobile App更新時Starter一次贈600、Pro 2,400、Unlimited 6,000 Plaud Credits；活動至2026-12-31，贈額自更新起3個月有效，不按月續補。Work代理任務扣點，Chat不扣；轉錄分鐘另按月重置。原訂閱照常，新增購點須另確認。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -16464,15 +16464,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "取消或降級不收回既有credits，但仍依原日期到期",
+      "cancellation": "每個方案層級僅一次贈額；升級可立即取得新層級贈額，已領過層級不重發，降級不贈。取消或降級不收回既有credits，但仍依原日期到期。",
       "usable_duration": "活動截止2026-12-31；一次贈額自更新日起3個月，非每月續補",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-24T09:59:58+08:00",
+      "verified_at": "2026-10-25T15:48:11+08:00",
       "discovered_at": "2026-10-24T09:59:58+08:00",
       "announcement_at": "2026-10-21",
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-10-26T15:48:11+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -16483,7 +16483,7 @@
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
-        "各方案贈額數字與使用者實際帳戶",
+        "使用者實際方案及帳戶是否符合一次贈額",
         "台灣可用及設備／原訂閱成本"
       ],
       "sources": [
@@ -16491,8 +16491,14 @@
           "url": "https://support.plaud.ai/hc/en-us/articles/62338939503129-Updating-to-New-Plaud-Intelligence-What-existing-users-need-to-know",
           "label": "官方公開正文",
           "scope": "Plaud Preview：Work一次贈額，非每月補充",
-          "evidence": "官方10月21日更新：升級新版Mobile App給一次免費Plaud Credits，額度依方案在帳戶顯示。活動到2026-12-31，個別贈額自更新日起3個月有效，可超過活動截止日。Work代理任務耗credits，Chat不耗；轉錄分鐘另按月重置。更新與贈額無新增費，原訂閱照常；額外購買須確認。",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei重讀官方說明（頁面更新日10/21）：Starter 600、Pro 2,400、Unlimited 6,000各一次；3個月效期、活動至12/31。僅公開規則，未讀個人帳戶。",
           "accessed_time_range": "2026-10-24T09:56:07+08:00–2026-10-24T09:58:24+08:00"
+        },
+        {
+          "url": "https://support.plaud.ai/hc/en-us/articles/62338924842521-Does-upgrading-change-my-subscription",
+          "label": "Plaud官方升級FAQ",
+          "scope": "升降方案對一次贈額及原訂閱影響",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei實讀：各方案層級只贈一次，升級取得新層級，降級不再發放；不代表台灣個人帳戶已領取。"
         }
       ],
       "record_type": "opportunity",
@@ -17421,8 +17427,8 @@
     },
     {
       "id": "realads-once-fifty-no-watermark",
-      "title": "RealAds：一次50credits，非每月免費",
-      "summary": "官方正文明示註冊50credits，圖片無浮水印且可商用；只是一次起始池。首頁目前4張圖示範需20credits，不能把舊索引約16張當任何模型保證產量。付費方案與年繳月發點另計。",
+      "title": "RealAds：一次50credits；免費商用／浮水印條款衝突",
+      "summary": "註冊一次50credits，非每月補充；價格頁估算約16張快速草圖或約2張一般產品圖，非所有模型保證產量。首頁FAQ宣稱無浮水印、可商用，但服務條款第8條只授付費會員商用權，免費／預覽輸出須留浮水印且僅非商用；免費作品權利未釐清前不可當作商用福利。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -17444,37 +17450,49 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "未啟用付費；取消、退款與續費條款未核。",
+      "cancellation": "免費起始點數不等於付費訂閱；付費方案自動續訂，可停止下一期扣款，本期至期末；已付期間部分退款由客服審核，非保證。",
       "usable_duration": "一次50；效期未知",
-      "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
-      "verified_at": "2026-10-24T12:07:50+08:00",
+      "access_risk": "免費商用及浮水印官方頁面互相矛盾；2026-10-28新版扣點政策才生效，生成前應核對實際點數及權利；台灣帳戶未驗。",
+      "verified_at": "2026-10-25T15:48:11+08:00",
       "discovered_at": "2026-10-24T12:07:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": null,
+      "next_review_at": "2026-10-28T09:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
-        "account_eligibility": "需註冊；台灣付款國、身分限制及免費點數效期未核。",
+        "account_eligibility": "需本人email註冊、年滿14歲；臨時信箱或多帳戶刷免費點數可被拒絕；台灣資格未核。",
         "billing_country": "未核",
         "identity_residency": "未核",
-        "terms_restrictions": "不得以換IP取得身分資格；未操作VPN或註冊。",
+        "terms_restrictions": "條款第8條免費／預覽作品須保留浮水印、僅非商用，與首頁FAQ牴觸；不可轉賣帳號或重複領點。2026-10-28才生效的v1.3按供應商成本及模型倍率調整扣點，不作為本日現行規則。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
-        "台灣可領資格",
-        "credits到期",
-        "付款和取消條款",
-        "價格連結讀取失敗"
+        "台灣可領資格與付款地區",
+        "免費credits到期日",
+        "首頁FAQ與條款第8條的免費商用／浮水印矛盾",
+        "首頁與條款對免費影片可用性口徑不同"
       ],
       "sources": [
         {
           "url": "https://ai.realads.kr/",
           "label": "官方正文或明示索引範圍",
           "scope": "RealAds：一次50credits，非每月免費",
-          "evidence": "官方正文明示註冊50credits，圖片無浮水印且可商用；只是一次起始池。首頁目前4張圖示範需20credits，不能把舊索引約16張當任何模型保證產量。付費方案與年繳月發點另計。",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei查閱：首頁FAQ稱起始50點、無浮水印可商用；與條款第8條相衝，不能單獨作商用保證。",
           "accessed_time_range": "2026-10-24T12:04:31+08:00–2026-10-24T12:07:50+08:00"
+        },
+        {
+          "url": "https://ai.realads.kr/pricing",
+          "label": "官方價格頁",
+          "scope": "一次起始點數及按工作類型估算圖片數",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei實讀：一次50點，快速草圖約16張或一般產品圖約2張，不是所有模型固定產量。"
+        },
+        {
+          "url": "https://ai.realads.kr/terms",
+          "label": "官方服務條款",
+          "scope": "免費輸出權利、訂閱取消及2026-10-28預告扣點新規",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei實讀：第8條免費／預覽輸出留浮水印且非商用；v1.3於10/28生效，不能提前當現行規則。"
         }
       ],
       "record_type": "opportunity",
@@ -17491,7 +17509,7 @@
     {
       "id": "e2e-explorer-free-versus-usage-discounts",
       "title": "E2E Explorer：5K免費，其餘50K/100K是折扣",
-      "summary": "官方Explorer列USD5K（另列₹5Lakh），不能視為精確匯率。Builder最高50K、Scaler最高100K是usage-based折扣非贈額；FAQ只有題目，本輪未從官方核出12個月效期或超量計費。",
+      "summary": "Explorer提供USD5K（另列₹5Lakh）免費雲額度，Builder最高50K、Scaler最高100K為usage-based折扣而非等額贈款。官方FAQ說明額度自啟用起12個月、用完轉標準按量付費；台灣列在一般服務國家清單，但新創審核與付款仍須個別確認。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -17515,37 +17533,48 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "額度耗盡後安排待核，不把二手按量轉收費當已核。",
-      "usable_duration": "官方可讀正文未列有效期",
+      "cancellation": "Explorer額度耗盡後轉標準按量付費；Builder/Scaler延續適用usage-based折扣，須在使用前確認付款及停用機制。",
+      "usable_duration": "額度自啟用起12個月；官方FAQ稱可申請延長但不保證",
       "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
-      "verified_at": "2026-10-24T12:07:50+08:00",
+      "verified_at": "2026-10-25T15:47:45+08:00",
       "discovered_at": "2026-10-24T12:07:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T15:47:45+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開來源可讀，未驗台灣帳戶",
+        "service_availability": "官方一般服務國家清單明列Taiwan，仍須新創方案審核及帳戶開通。",
         "account_eligibility": "Explorer合法公司不限國家、5年內、10人以下、早期AI-first，VC／accelerator只是偏好；其他tier另需募資2M／5M。",
         "billing_country": "未核",
         "identity_residency": "未核",
         "terms_restrictions": "不得以換IP取得身分資格；未操作VPN或註冊。",
-        "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
+        "taiwan_note": "一般服務涵蓋台灣，不等於台灣每家新創符合Explorer資格；公司審核、付款及實際可用性未驗。"
       },
       "unknowns": [
-        "台灣使用者公司資格",
-        "付款方式",
-        "效期FAQ答案缺失",
-        "美元／盧比標額不應自行等值換算"
+        "台灣公司個別審核及付款要求",
+        "Builder/Scaler折扣實際級距與最低消費",
+        "12個月到期後帳戶費用及資源停用細節"
       ],
       "sources": [
         {
           "url": "https://www.e2enetworks.com/startup-program",
           "label": "官方正文或明示索引範圍",
           "scope": "E2E Explorer：5K免費，其餘50K/100K是折扣",
-          "evidence": "官方Explorer列USD5K（另列₹5Lakh），不能視為精確匯率。Builder最高50K、Scaler最高100K是usage-based折扣非贈額；FAQ只有題目，本輪未從官方核出12個月效期或超量計費。",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei重讀官方頁及其頁面載入的FAQ程式：Explorer 5K免費、Builder/Scaler為使用折扣；FAQ稱啟用起12個月、用完按量收費。公開資料查核，不代表個別公司獲批。",
           "accessed_time_range": "2026-10-24T12:04:31+08:00–2026-10-24T12:07:50+08:00"
+        },
+        {
+          "url": "https://www.e2enetworks.com/countries-served",
+          "label": "官方服務國家清單",
+          "scope": "一般服務地區，非新創優惠個人核准",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei實讀：清單明列Taiwan；新創申請仍需審核。"
+        },
+        {
+          "url": "https://www.e2enetworks.com/_next/static/chunks/app/startup-program/page-bd588ea6f5429828.js",
+          "label": "官方新創頁所載FAQ程式",
+          "scope": "12個月效期、超額後按量計費",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei讀取官方頁載入的FAQ答案；主頁文字擷取只顯示問題，故限定為頁面程式證據。"
         }
       ],
       "record_type": "opportunity",
@@ -17631,7 +17660,7 @@
     {
       "id": "tinyfish-startup-monthly-refresh",
       "title": "TinyFish新創：月刷新100，不是12K現金額度",
-      "summary": "官方索引全文：Tier1未募資且pre-production，每月wallet刷新100共6月、不累積；Tier2需投資／accelerator證明，一次500及Agent／Browser兩年半價。Search／Fetch本來免費；7K／12K是高頻使用估值非實發點。",
+      "summary": "Tier1未募資且pre-production，每月wallet刷新至USD100共6月、不累積；Tier2需投資／accelerator證明，一次USD500及Agent／Browser兩年半價。Search／Fetch本來免費；wallet可用於TinyAgent、TinyBrowser、TinyMonitor。7K／12K是高頻使用估值非實發點。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -17654,36 +17683,47 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "期滿Search／Fetch仍免費，Agent／Browser按使用付費。",
+      "cancellation": "期滿Search／Fetch仍免費，Agent／Browser／Monitor按使用付費；即使未開自動加值，超出wallet仍可能產生負餘額並向已存付款方式收費，須確認用量與停用。",
       "usable_duration": "Tier1六個月；Tier2限速優惠12月、半價24月",
-      "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
-      "verified_at": "2026-10-24T12:07:50+08:00",
+      "access_risk": "審核不保證；wallet超支可形成負餘額，若有已存付款方式可能扣款；Tier2贈額確切期限依個別通知。",
+      "verified_at": "2026-10-25T15:47:45+08:00",
       "discovered_at": "2026-10-24T12:07:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T15:47:45+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
         "account_eligibility": "驗證公司域名信箱、審核不保證、一公司一tier；bootstrapped已production另議。",
         "billing_country": "未核",
         "identity_residency": "未核",
-        "terms_restrictions": "不得以換IP取得身分資格；未操作VPN或註冊。",
+        "terms_restrictions": "每公司一次申請、不可轉讓或折現；促銷wallet先扣，超支可能向已存付款方式收費。不得重複申領或跨區規避。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
-        "直接頁Cache miss，官方搜尋全文可讀",
-        "台灣資格",
-        "Tier2點數到期與付款條件"
+        "台灣公司審核與付款條件",
+        "Tier2 USD500贈額的確切到期通知（12個月限速、24個月折扣不等於點數效期）"
       ],
       "sources": [
         {
           "url": "https://future.tinyfish.io/startups",
           "label": "官方正文或明示索引範圍",
           "scope": "TinyFish新創：月刷新100，不是12K現金額度",
-          "evidence": "官方索引全文：Tier1未募資且pre-production，每月wallet刷新100共6月、不累積；Tier2需投資／accelerator證明，一次500及Agent／Browser兩年半價。Search／Fetch本來免費；7K／12K是高頻使用估值非實發點。",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei由官方新網址重讀：Tier1月刷新100共6月、Tier2一次500及24月半價，7K／12K僅估值；非台灣帳戶核准。",
           "accessed_time_range": "2026-10-24T12:04:31+08:00–2026-10-24T12:07:50+08:00"
+        },
+        {
+          "url": "https://www.tinyfish.ai/startups",
+          "label": "TinyFish官方新創方案",
+          "scope": "兩層wallet、適用產品與審核",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei直接讀取正文：wallet可用於TinyAgent、TinyBrowser、TinyMonitor；Search/Fetch原本免費。"
+        },
+        {
+          "url": "https://www.tinyfish.ai/terms",
+          "label": "TinyFish服務條款",
+          "scope": "負餘額、已存付款方式及促銷期限",
+          "evidence": "2026-10-25 15:45–15:47 Asia/Taipei實讀（條款2026-08-17生效）：超出wallet可成負餘額向已存付款方式收費，Auto Reload另須啟用；促銷額度以指定期限優先，未指定時預設12個月。"
         }
       ],
       "record_type": "opportunity",
@@ -31505,7 +31545,82 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "status": "conflicting_official_usage_claims",
       "legal_status": "not_verified"
+    },
+    {
+      "id": "serper-once-2500-b2b-search",
+      "title": "Serper：免卡2,500次搜尋，限B2B用途",
+      "summary": "官方提供一次2,500次免費Google搜尋API查詢，免信用卡，可供AI搜尋整合；不是模型推論額度，也未承諾每月補充。僅成功回應扣點，餘額歸零停止接受查詢。條款限定B2B，台灣個人開發者是否符合資格未核。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": "未估；不含商業資格確認或帳戶審核",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費查詢免卡；付費採另購top-up，無月訂閱。未操作帳戶或付款。",
+      "usable_duration": "一次起始2,500次，免費額度效期未明",
+      "access_risk": "B2B用途限制及台灣帳戶資格未核；第三方搜尋內容仍受原權利約束",
+      "verified_at": "2026-10-25T15:48:00+08:00",
+      "discovered_at": "2026-10-25T15:48:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T15:48:00+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "公開搜尋API方案；未實測台灣帳戶或服務連線",
+        "account_eligibility": "條款限定business-to-business，個人消費用途不符合；單一帳戶",
+        "billing_country": "免費查詢免卡，付費top-up可用主要卡片或PayPal；台灣發卡支援未核",
+        "identity_residency": "官方未逐項明列台灣地區資格",
+        "terms_restrictions": "不得多帳戶或繞過限制；搜尋結果第三方內容權利仍適用，不等於模型推論額度",
+        "taiwan_note": "Unknown：台灣服務或帳戶資格未明，且須符合B2B用途，不能泛稱台灣個人皆可領。"
+      },
+      "unknowns": [
+        "免費查詢效期與QPS",
+        "台灣帳戶與付款接受情況",
+        "個人開發者是否符合B2B條款"
+      ],
+      "sources": [
+        {
+          "url": "https://serper.dev/",
+          "label": "Serper官方方案與FAQ",
+          "scope": "2,500起始查詢、免卡、扣點及停止規則",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei實讀：2,500 free queries、No credit card required；僅成功回應扣點，歸零停止查詢；付費為top-up非月訂閱。"
+        },
+        {
+          "url": "https://serper.dev/terms",
+          "label": "Serper服務條款",
+          "scope": "B2B用途及單帳戶限制",
+          "evidence": "2026-10-25 15:46–15:48 Asia/Taipei實讀（條款標示2024-05-29更新）：限定B2B、不得多帳戶或繞過限制；未見台灣個別資格保證。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "VPN不授予B2B身分或付款資格，不建議跨區規避。"
+      },
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-10-25T15:06:18+08:00"
+  "latest_research_at": "2026-10-25T15:48:11+08:00"
 }
