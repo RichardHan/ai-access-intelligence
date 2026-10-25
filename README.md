@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：362筆，包含272筆機會、44筆政策、46筆待覆核線索；非362項可直接領取優惠。資料集更新至2026-10-25 08:51 Asia/Taipei。本批累計14筆次複核、12個不重複既有案例，包括Meta Hackathon、Vercel限免、Picsart WAN、台灣數產署算力、Supership試用、Granola學生/新創、Replicate、Civo、CodeBuddy、Fireworks及富士Soft企業PoC。Meta正式規則已可讀，補入US$150額度付款/超額計費、作品授權與截止時區衝突；台灣資格由Yes調為Unknown。數產署額度分級與使用限制已補全；富士Soft台灣企業資格及PoC資料條款仍未知。新增Roboflow Core Free待覆核線索（每月10共享credits、免卡；台灣資格未確認）；既有MiniMax Design新客點數仍待追蹤。其餘案例未全面重核。
+目前資料：362筆，包含272筆機會、44筆政策、46筆待覆核線索；非362項可直接領取優惠。資料集更新至2026-10-25 08:54 Asia/Taipei。本批累計14筆次複核、12個不重複既有案例，包括Meta Hackathon、Vercel限免、Picsart WAN、台灣數產署算力、Supership試用、Granola學生/新創、Replicate、Civo、CodeBuddy、Fireworks及富士Soft企業PoC。Meta正式規則已可讀，補入US$150額度付款/超額計費、作品授權與截止時區衝突；台灣資格由Yes調為Unknown。數產署額度分級與使用限制已補全；富士Soft台灣企業資格及PoC資料條款仍未知。新增Roboflow Core Free待覆核線索（每月10共享credits、免卡；台灣資格未確認）；既有MiniMax Design新客點數仍待追蹤。其餘案例未全面重核。
 
 ## 使用方式
 
