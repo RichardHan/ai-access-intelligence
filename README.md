@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **389 筆**（289 項機會、44 項政策、56 筆觀察線索），資料集更新時間 **2026-10-25 13:30 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **16 筆既有案例**（12 項機會、2 項政策、2 筆觀察線索），新增 **3 項可列機會（Kilo Gateway 免綁卡免費模型、OpenCode 免登入內建免費模型、Notion Business 30天 AI 試用）**；尚有 **370 筆既有記錄未於本輪重查**（274 項機會、42 項政策、54 筆觀察線索）。重要變動：Fireworks Glimmer SFT 經官方 Cookbook 確認截止時間為 2026-12-01 16:00 Asia/Taipei 且排除推論與部署；Anthropic 客座研究員徵案更正 5 個工作天為入選者回覆期限而非官方審核期；Cursor 定價更新為 Free/Plus($8)/Premium($30)/Super($100)/Ultra($200) 且舊版一年免費已停辦；Perplexity Free 確認含每日 3 次 Pro Search，PayPal/Venmo 促銷已於 2025-12-31 截止；Gemini API 官方可用地區文件明文確認支援台灣；fal Builder 轉址至最高 $5,000 之新創計畫；Inworld On-Demand 為 PAYG 試用，Creator 為 $25/月付費訂閱而非免費層。
+資料集目前有 **392 筆**（291 項機會、44 項政策、57 筆觀察線索），資料集更新時間 **2026-10-25 13:53 Asia/Taipei**（不代表全庫已複核）。累計實讀官方來源複核 **19 筆既有案例**（15 項機會、2 項政策、2 筆觀察線索）；本次新增 **2 項機會**（Canva Education、BazaarLink）及 **1 筆待追蹤**（LandingAI ADE）；仍有 **367 筆既有記錄未查核**（271 項機會、42 項政策、54 筆觀察線索）。本次複核Meta Global AI Developer Hackathon、台灣ADI算力與Rime STT：Meta申請截止台灣時間10/26 11:59、20,000名額可提前額滿，台灣API/付款資格未核；ADI至10/30收件且限合格台灣登記事業；Rime STT免費至11/19、11/20起US$0.002/分鐘，免費總量與台灣資格未公布。新機會：Canva Education全球合格K–12教育人員可申請，官方AI額度與功能資格頁矛盾；BazaarLink台灣免費模型閘道每模型10 RPM、每日60額度單位，非固定請求數且有餘額時超額可能轉付費。LandingAI Explore有一次1,000 credits/90天，但台灣資格不明，故列待追蹤。前批新增Kilo Gateway、OpenCode及Notion Business；其他重要變動包括Fireworks Glimmer SFT限期至2026-12-01、Cursor舊一年免費方案停辦、Perplexity PayPal/Venmo促銷已截止、Gemini API明列支援台灣，以及fal與Inworld方案性質更正。
 
 ## 使用方式
 
