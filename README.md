@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **386 筆**（286 項機會、44 項政策、56 筆觀察線索），資料集更新時間 **2026-10-25 12:57 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **19 筆既有機會**，新增 **1 項可列機會（Canva 非營利）及2筆台灣資格待核線索（Gamma、Fathom）**；尚有 **364 筆既有記錄未於本輪重查**（266 項機會、44 項政策、54 筆觀察線索）。重要變動：Microsoft for Startups FAQ/Application 的初始額度有 $2,000 vs $200 官方衝突，且到期/耗盡自動轉 PAYG；Vercel Gateway 的 $5 月額免費額由渲染定價頁確認，但需有效付款方式；Gemini API 限18歲以上專業/商業用途；台灣 Google 學生優惠頁仍與資格說明矛盾。
+資料集目前有 **389 筆**（289 項機會、44 項政策、56 筆觀察線索），資料集更新時間 **2026-10-25 13:30 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **16 筆既有案例**（12 項機會、2 項政策、2 筆觀察線索），新增 **3 項可列機會（Kilo Gateway 免綁卡免費模型、OpenCode 免登入內建免費模型、Notion Business 30天 AI 試用）**；尚有 **370 筆既有記錄未於本輪重查**（274 項機會、42 項政策、54 筆觀察線索）。重要變動：Fireworks Glimmer SFT 經官方 Cookbook 確認截止時間為 2026-12-01 16:00 Asia/Taipei 且排除推論與部署；Anthropic 客座研究員徵案更正 5 個工作天為入選者回覆期限而非官方審核期；Cursor 定價更新為 Free/Plus($8)/Premium($30)/Super($100)/Ultra($200) 且舊版一年免費已停辦；Perplexity Free 確認含每日 3 次 Pro Search，PayPal/Venmo 促銷已於 2025-12-31 截止；Gemini API 官方可用地區文件明文確認支援台灣；fal Builder 轉址至最高 $5,000 之新創計畫；Inworld On-Demand 為 PAYG 試用，Creator 為 $25/月付費訂閱而非免費層。
 
 ## 使用方式
 
