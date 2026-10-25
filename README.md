@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：357筆，包含269筆機會、44筆政策、44筆待覆核線索；非357項可直接領取優惠。資料集更新至2026-10-25 07:51 Asia/Taipei，本次直接重開官方來源複核6筆既有案例：Meta Global AI Developer Hackathon（申請截止台灣時間10/26 11:59，20,000名額，正式規則待發布）、AIコンパス（10/29截止，仍需每帳號月費JPY880）、GENSHI Voice（信用卡、自動續費與月額560點規則確認）、Upstage Mini4（五折已於10/22 UTC截止，餘額耗盡可能轉收費）、AI21（官方7天／3個月試用說明衝突、僅限內部評估）、Lolipop日本活動（申請已截止，既有點數可能仍有效）。約312筆既有案例未於本次複核，未全面重核。新增2筆機會：Adobe Express K–12免費教育版（每月250生成點數、由台灣合格學校部署）及Azure非營利年度US$2,000額度（需卡、額度用盡轉付費；台灣舊頁US$3,500與現行頁矛盾）；AWS非營利抵用額最高US$5,000列待追蹤，台灣商品與行政費未核。服務條款資格與法律／監管結論分開；無適用官方法律來源者仍標未核實。
+目前資料：361筆，包含272筆機會、44筆政策、45筆待覆核線索；非361項可直接領取優惠。資料集更新至2026-10-25 08:26 Asia/Taipei，本次直接重開官方來源複核11筆既有案例：Meta Global AI Developer Hackathon（報名仍開放至台灣時間10/26 11:59，20,000名額未宣布額滿，開賽前公布官方規則）、Vercel AI Gateway Mammoth/Elephant（限免至10/27）、Picsart WAN 3.0（條款截止10/31 23:59 PT，行銷10/29落差保留，排除1080p與API）、台灣數產署AI算力（10/30截止，限合格登記企業以工商憑證申請）、Supership Creative AI（10/30截止，法人1個月Standard試用、次月自動轉付費）、Granola學生（美英加限定，Taiwan No）、Granola新創（<30人種子輪，Taiwan Unknown）、Replicate Try for Free（精選模型免卡試跑，有限次數）、Civo新戶額度（$250三處條款矛盾保留）、CodeBuddy（100月點/250新客點/每日活動點分池）、Fireworks Glimmer SFT（免費微調至11/30，推論另計）。約344筆既有案例未於本次複核，未全面重核。新增3筆機會：Brave Search API每方案每月US$5循環免費額度（含1,000次AI/RAG檢索，需綁卡驗證防偽但可設預付額為$0）、Turso Starter免綁卡5GB與5億次讀取（內建向量檢索與FTS，超額直接阻擋不扣款）、智譜BigModel多款Flash模型API零成本調用（GLM-4.7-Flash等輸入輸出免費，支援海外手機註冊，台灣公務機關受數發部限制）；新增1筆MiniMax Design新客2,000點與3次H3試用待追蹤線索。服務條款資格與法律／監管結論分開；無適用官方法律來源者仍標未核實。
 
 ## 使用方式
 
