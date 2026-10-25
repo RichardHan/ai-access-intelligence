@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **446 筆**（332 項機會、46 項政策、68 筆觀察線索），更新時間 **2026-10-26 05:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **9 筆既有紀錄**，原有 445 筆中 **436 筆未在本輪複核**；新增 Mistral Ambassador 一筆保守觀察。Meta 黑客松台北 10/26 11:59 較早截止與 waiver EST 仍衝突，政府關聯人士排除；DeepSeek 指定整合工具暫免至 11/1，台灣公務機關禁用其 AI 服務；Picsart Pro US$10.50/月為年繳折算（牌價年額 US$126）。多數個人帳戶、台灣付款與法律層面仍未核實。
+資料集目前有 **449 筆**（335 項機會、46 項政策、68 筆觀察線索），更新時間 **2026-10-26 06:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **12 筆既有紀錄**，原有 446 筆中 **434 筆未在本輪複核**；新增 Qoder Ultimate 離峰折扣、Vectara 30 日試用、Convex 新創折扣 3 筆。Trelis 仍停止收件；Meta 黑客松截止 ET/EST 與額度期限、Qoder Lite bonus、Langfuse 學術抵用機制尚有官方文字衝突。台灣個案、付款及多數法律層面仍未核實。
 
 ## 使用方式
 
