@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **442 筆**（331 項機會、46 項政策、65 筆觀察線索），更新時間 **2026-10-26 03:57 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **14 筆既有紀錄**，原有 440 筆中 **426 筆未在本輪查閱**；新增 Tavus Developer Basic 與 ScrapeGraphAI Free 兩筆保守觀察線索，兩者均未確認台灣帳戶資格。Photoroom 新創方案仍須審核；Meta 黑客松 10/26 台北 11:59 截止且官方期限說明互異；Lawson 僅限日本在住者、既有集點者応募至 10/26；DeepSeek Search／Fetch 的限定免費工具呼叫 11/1 起收費。Dhanur 餘額歸零後進行中的工作仍可能從下次儲值扣款。法律層面未核實。
+資料集目前有 **445 筆**（332 項機會、46 項政策、67 筆觀察線索），更新時間 **2026-10-26 04:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **11 筆既有紀錄**，原有 442 筆中 **431 筆未在本輪複核**；新增 Context.dev Free 一筆機會、Smallest.ai 新創補助與 Ultravox 試用兩筆保守觀察。Meta 黑客松今日台北 11:59 較早截止與 waiver EST 仍衝突；DeepSeek Search／Fetch 的限定免費工具呼叫 11/1 起收費，台灣公務機關禁用 DeepSeek 服務。Together 一般帳戶首購額度至少 US$15，補助是否豁免未公布；Firecrawl 學生 10,000 點為一次性。多數台灣個別帳戶、付款或法律層面仍未核實。
 
 ## 使用方式
 
