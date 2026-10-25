@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：369筆，包含276筆機會、44筆政策、49筆待覆核線索；非369項可直接領取優惠。資料集更新至2026-10-25 09:53 Asia/Taipei。本批重查3筆既有案例：Qoder Free/每日100點與Qoder Lite（重核Flash與每日額度，Lite續費及promo條款、帳單週期及台灣付款未知；官方Pricing首次bonus+2,000/續訂+1,000與活動條款+1,000/+500衝突）、Fireworks Glimmer SFT（指定模型SFT免卡至11/30，推論另計，預付額度可自動充值，台灣資格與固定容量未知）。新增2筆：Raycast學生Pro五折（需要學生核驗，台灣學校及折扣期限未知）、Anthropic外部研究者計畫（限核准高優先AI安全研究、US$1,000 API credits，台灣資格與grant效期未知）。其餘既有案例未全面複核。
+目前資料：371筆，包含277筆機會、44筆政策、50筆待覆核線索；非371項可直接領取優惠。資料集更新至2026-10-25 10:24 Asia/Taipei。本批重查7筆既有案例：Lawson AI Pro抽選（新購買已於10/19截止，既有合格者応募至10/26 23:59，限日本居民）、Picsart WAN 3.0限期免扣點（確認10/31 23:59 PT截止，10/29為14天權益領取截止條件，限Pro/Ultra 480p/720p）、WorkBuddy Step 5（專屬限免截止日未發布，重核Free每月100點+新戶250點+日活30點，台灣未滿20歲禁用）、Zed學生方案（全球認可大專院校年滿18歲在學學生免費1年，每月$10 hosted credits硬上限，排除5款頂級模型）、Zed Delta共用14天試用（$5 Luna額度共用池，免卡且滿期自動降為Free）、Upstage（新戶$10免費額度，模型遷移至Solar Pro 4/Mini 4/Document Parse，舊模型10/30退役）、Deepgram新創專案（最高$100,000/12個月，常規新戶$200免卡無到期日）。新增2筆：Duck.ai免帳號多模型對話（含Claude 4.5 Haiku/GPT-6 Luna等，每日00:00 UTC重置，去識別化隱私）、Gemini Code Assist個人免費方案（官方證實已於2026-06-18全面退役並引導至Antigravity）。其餘既有案例未全面複核。
 
 ## 使用方式
 
