@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **436 筆**（328 項機會、46 項政策、62 筆觀察線索），更新時間 **2026-10-25 23:51 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **12 筆既有紀錄**，其中 **10 筆回寫具體變動並刷新 `verified_at`**；原有435筆中423筆未在本輪查閱。新增 [Verda 原創技術內容贈額](https://docs.verda.com/resources/obtaining-free-credits/how-to-receive-credits/) 條件式機會：核准後GPU compute額度不過期，但金額、台灣帳戶與先行成本未核。[Qoder](https://docs.qoder.com/events/communityboost) 領取窗口及 [DeepSeek](https://api-docs.deepseek.com/guides/search/) 免費範圍已釐清；[Cartesia](https://www.cartesia.ai/pricing) 代理超額可能繼續計費，[Notion](https://www.notion.com/help/manage-your-ai-credits) AI額度分池。其他已讀案例若無新證據未刷新核實時間；服務可在台灣使用不代表優惠資格或法律結論已確認。
+資料集目前有 **438 筆**（329 項機會、46 項政策、63 筆觀察線索），更新時間 **2026-10-26 01:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **20 筆既有紀錄**，其中 **7 筆回寫具體變動並刷新 `verified_at`**；原有436筆中416筆未在本輪查閱。新增 [Blaxel 起始沙箱額度](https://blaxel.ai/pricing) 條件式機會：註冊免費額度未公布，加付款方式或首購後總額最高US$200，台灣帳戶未核；[Salad SSAP](https://blog.salad.com/salad-gpu-cloud-ssap/) 舊公告額度僅列待核線索，不能視為現行可領。Retool定價頁與文件AI額度互異；Dify教育年驗且不自動續費；瑞典Lovable有卡年底後續費與FAQ說法衝突。服務可在台灣使用不代表優惠資格或法律結論已確認。
 
 ## 使用方式
 
