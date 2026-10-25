@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：381筆，包含283筆機會、44筆政策、54筆待覆核線索；非381項可直接領取優惠。資料集更新至2026-10-25 12:03 Asia/Taipei。本輪逐筆重查20筆既有案例（限時/校園5筆、API/開發者與新創/學術15筆），並新增Apify Free及Replit for Startups候選各1筆。主要更新：Meta活動截止採官方ET較早換算10/26 11:59台灣時間，名額20,000且可提前關閉，US$150額度期限與Waiver仍有衝突；Lawson僅既有合格日本居民可応募至10/26，¥3,000是course面額；Qoder Round 4為18,478/100,000且贈額未公布；Sarvam Kanpur活動日期總頁與報名頁相差一天；Composio新創六個月後自動續訂US$29/月；Mem0免費方案授予永久、不可撤回的內容訓練權；Google Cloud Express禁止處理個人資料。新增Apify每月US$5共享Free用量、免卡且用盡硬停；Replit新創額度期限在官方頁面6/12個月說法不一致，列待追蹤。資料更新不代表全庫已複核；優惠資格與法律結論分開，台灣未明示條件保留Unknown。尚有102筆案例的verified_at早於10/25，另54筆缺少next_review_at，列下輪優先排程。
+目前資料：381筆，包含283筆機會、44筆政策、54筆待覆核線索；非381項可直接領取優惠。資料集更新至2026-10-25 12:09 Asia/Taipei。本輪逐筆重查21筆既有案例（限時/校園/本地補助6筆、API/開發者與新創/學術15筆），並新增Apify Free及Replit for Startups候選各1筆。主要更新：Meta活動截止採官方ET較早換算10/26 11:59台灣時間，名額20,000且可提前關閉，US$150額度期限與Waiver仍有衝突；Lawson僅既有合格日本居民可応募至10/26，¥3,000是course面額；Qoder Round 4為18,478/100,000且贈額未公布；Sarvam Kanpur活動日期總頁與報名頁相差一天；台灣ADI算力申請至10/30但限合格登記企業；Composio新創六個月後自動續訂US$29/月；Mem0免費方案授予永久、不可撤回的內容訓練權；Google Cloud Express禁止處理個人資料。新增Apify每月US$5共享Free用量、免卡且用盡硬停；Replit新創額度期限在官方頁面6/12個月說法不一致，列待追蹤。資料更新不代表全庫已複核；優惠資格與法律結論分開，台灣未明示條件保留Unknown。尚有101筆案例的verified_at早於10/25，另54筆缺少next_review_at，列下輪優先排程。
 
 ## 使用方式
 
