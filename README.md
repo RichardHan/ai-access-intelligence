@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：381筆，包含283筆機會、44筆政策、54筆待覆核線索；非381項可直接領取優惠。資料集更新至2026-10-25 12:09 Asia/Taipei。本輪逐筆重查21筆既有案例（限時/校園/本地補助6筆、API/開發者與新創/學術15筆），並新增Apify Free及Replit for Startups候選各1筆。主要更新：Meta活動截止採官方ET較早換算10/26 11:59台灣時間，名額20,000且可提前關閉，US$150額度期限與Waiver仍有衝突；Lawson僅既有合格日本居民可応募至10/26，¥3,000是course面額；Qoder Round 4為18,478/100,000且贈額未公布；Sarvam Kanpur活動日期總頁與報名頁相差一天；台灣ADI算力申請至10/30但限合格登記企業；Composio新創六個月後自動續訂US$29/月；Mem0免費方案授予永久、不可撤回的內容訓練權；Google Cloud Express禁止處理個人資料。新增Apify每月US$5共享Free用量、免卡且用盡硬停；Replit新創額度期限在官方頁面6/12個月說法不一致，列待追蹤。資料更新不代表全庫已複核；優惠資格與法律結論分開，台灣未明示條件保留Unknown。尚有101筆案例的verified_at早於10/25，另54筆缺少next_review_at，列下輪優先排程。
+目前資料：383筆，包含285筆機會、44筆政策、54筆待覆核線索；非383項可直接領取優惠。資料集更新至2026-10-25 12:35 Asia/Taipei。本輪逐筆複核14筆既有案例（限時與急迫案件6筆、API/開發者雲端額度8筆），並新增Kaggle與Google Colab免費算力2筆。主要更新：Meta活動截止確立為10/25 23:59 ET（換算台灣10/26 11:59），名額20,000且額滿提前截止，US$150額度期限條款（永不過期）與Waiver（10天）仍有衝突；Lawson僅既有合格日本購買者可応募至10/26 23:59，抽籤需於11/10–16另行參加；ChatGPT美國學生四個月Plus/Work確認仍有效且兌換至10/31，需SheerID與付款方式，期滿US$20/月自動續訂；台灣ADI算力受理至10/30 23:59:59系統時間，限合格登記企業與工商憑證；CyLeague法人30天/40件試用至11/30，註冊頁回傳403保留Unknown；WorkBuddy Step 5限免專屬截止日未獲官方證實維持待覆核，一般Free月贈100點與日活30點確認。開發者API方面：Cloudflare Workers AI確認每日10,000 neurons與300 RPM，新增8款需付費方式模型；Groq Free限額按組織共享，公開表格僅為Developer基礎非Free保證；AssemblyAI新戶US$50免卡額度確立不過期且升級保留；OpenRouter確認累計儲值US$10門檻提高至1,000 RPD並揭露5.5%–8%平台費；fal新創與開源研究補助確立免費/促銷額度一般90天失效條款；SiliconFlow國際站US$1與中國站分開，但國際條款存有商用限制風險；ZeroGPU Free更新為每日5分鐘（RTX Pro 6000 Blackwell）與最多2個Spaces託管。新增Kaggle每週30小時浮動GPU（需門號驗證）與Google Colab互動式免費GPU/TPU運算（最長12小時、台灣Yes但算力動態不保證）。資料更新不代表全庫已複核；優惠資格與法律結論分開，台灣未明示條件保留Unknown。尚有133筆案例的verified_at早於10/25，另71筆缺少next_review_at，列下輪優先排程。
 
 ## 使用方式
 
