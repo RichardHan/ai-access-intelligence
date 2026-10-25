@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **408 筆**（305 項機會、44 項政策、59 筆觀察線索），更新時間 **2026-10-25 16:35 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **17 筆既有紀錄**（Krutrim 促銷橫幅已自首頁移除、Lovable 瑞典在校生正式條款與宣傳 FAQ 衝突且已有付款方式者元旦將自動續費、Lovable 學生 Pro 半價筆誤修正為 US$12.50/月、Tenbin 企業試用同卡不可重複且日額 80 點僅為搜尋索引、Meta Muse 美加日有限免費且台灣未列正式支援、Tripo Studio 免費每月 200 點、EmberCloud 需儲值 $5 驗證公司等）；新增 **3 項機會與 1 筆觀察線索**（Hack Club 青少年免卡 API、Pollinations Classic 免帳戶文字/圖片 API、You.com API 新戶免卡 US$100 與免 key 搜尋 MCP，以及 AI/ML API 官方暫停免費層追蹤）。沿先前批次基線累計已實讀 **87 筆既有紀錄**，尚有 **317 筆既有紀錄未查核**。限時活動每日複核，其餘依最久未核案例按月輪替。服務有效性、條款資格與法律限制分開；本輪未取得適用台灣法律來源，法律狀態仍未核實。
+資料集目前有 **410 筆**（307 項機會、44 項政策、59 筆觀察線索），更新時間 **2026-10-25 16:50 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **15 筆既有紀錄**，其中 7 筆寫入有界更新；新增 **2 項機會**（[Deepnote Education](https://deepnote.com/docs/education-faqs) 免費 Basic notebook 算力、[AI Horde](https://aihorde.net/mission/) 免費匿名排隊 API）。Yotta Rudra 的 Ignite 標示 $25K 與分期合計 $20K 矛盾；AkashML 官方確認驗付款方式後給會到期的試用額度，但金額未知；Lawson 新購買已截止，既有合格者仍須另參加 AI 碼抽選。沿先前批次基線累計已實讀 **102 筆既有紀錄**，尚有 **302 筆既有紀錄未查核**（本輪其餘 393 筆未查核）。限時活動每日複核，其餘依最久未核案例按月輪替。服務有效性、條款資格與法律限制分開；本輪未取得適用台灣法律來源，法律狀態仍未核實。
 
 ## 使用方式
 
