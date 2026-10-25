@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T21:30:00+08:00",
-  "scope": "2026-10-25 20:45–20:50 Asia/Taipei 本輪實讀官方來源抽樣複核17筆既有紀錄（限時6、新創5、教育/台灣2、最久未核AICU/Sarvam/Algolia/Jina 4）；僅Sarvam校園、Daytona、Claude科學家三筆取得可回寫之新證據而刷新verified_at，Jina補充直接來源但未全面覆核；其餘局部查閱未刷新。新增Superwhisper教育/非營利折扣一筆。Meta報名、Kanpur校園、Qoder等限時案例每日追蹤；其他按月輪替。台灣服務可用與優惠核准分開，法律層面未取得適用官方監管來源維持未核實。updated_at僅代表資料集更新。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-25T21:53:37+08:00",
+  "scope": "2026-10-25 21:45–21:53 Asia/Taipei 本輪讀取官方來源抽樣複核16筆既有紀錄（限時／地域6、最久未核8、台灣RAP及Cloudflare學生2）；只有取得可回寫的新證據者更新verified_at，Cloudflare及其他局部查閱不代表個人資格全面核實。新增Unstructured與Gladia機會2筆、Reducto美國限定觀察線索1筆。2025 TAIWAN AI RAP試營運申請及使用期限已過，舊介紹仍寫招募中；2026賦能另案申請已於9月截止。限時案例每日追蹤，其餘依最久未查按月輪替。服務地區、條款資格與法律／監管結論分開；無適用官方法律來源則法律未核實。updated_at僅為資料集更新時間；優先度評分仍僅由既有欄位衍生，不代表新核實。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -1674,25 +1674,26 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "至2026-10-31，時區未知",
-      "access_risk": "資格、名額、政策與供應可能改變",
-      "verified_at": "2026-10-25T14:51:24+08:00",
+      "access_risk": "Vercel Hobby僅個人非商用、Boundless限企業內部用途，兩層條款相容與實際方案資格未核；標準ID期後收費。",
+      "verified_at": "2026-10-25T21:49:05+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2026-10-01",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T14:51:24+08:00",
+      "next_review_at": "2026-10-26T21:49:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "限Vercel AI Gateway經Boundless供應的指定Laya模型ID，至2026-10-31；非通用聊天模型。",
         "account_eligibility": "商業用途、18歲以上及代表權；個人資格未核",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "Boundless條款限18歲以上具代表權者作內部商業/企業用途，非消費用途；禁止VPN繞過地理或存取限制。活動期限後-free模型停止、標準ID按價計費；不是台灣法律意見。",
+        "terms_restrictions": "Boundless需18歲以上且有企業代表權，僅內部商業／企業用途；Vercel Hobby僅個人非商用，兩層條款如何相容未釐清，不承諾Hobby可領。禁止以VPN繞過限制；10/31後-free停止、標準ID計費。",
         "taiwan_note": "服務活動頁未確認台灣帳戶、計費/地區及個人資格，維持Unknown；不要以VPN推定合格。"
       },
       "unknowns": [
         "截止時區及任何容量/公平使用上限",
         "台灣AI Gateway與供應商帳戶/條款適用",
+        "Vercel Hobby非商用與Boundless企業用途衝突下，哪種Gateway方案可合法申請",
         "到期後模型價格與預設route是否自動變更"
       ],
       "sources": [
@@ -1730,6 +1731,12 @@
           "scope": "服務資格、用途與地區規避限制",
           "evidence": "2026-10-25 14:48 Asia/Taipei直接開啟；條款Last Updated 2026-10-22，服務供內部商業/企業用途、非個人/家庭消費；接受者須年滿18歲且有代表權；禁止VPN或匿名工具規避地理/存取限制。條款不確認台灣帳戶資格。",
           "accessed_time_range": "2026-10-25T14:48:00+08:00–2026-10-25T14:48:00+08:00"
+        },
+        {
+          "url": "https://vercel.com/legal/terms",
+          "label": "Vercel官方服務條款",
+          "scope": "Hobby用途限制及第三方模型供應商條款",
+          "evidence": "2026-10-25 21:47–21:49 Asia/Taipei實讀：Hobby僅個人非商用，AI Gateway第三方服務另受其供應商條款；與Boundless內部企業用途相容性未核。"
         }
       ],
       "record_type": "opportunity",
@@ -2571,7 +2578,7 @@
     {
       "id": "aicu-evaluation-ap",
       "title": "AICU：US$10標價AP僅個人評估",
-      "summary": "AICU API 首次呼叫贈送 US$10 等值 AP（1 USD = 10,000 AP）。2026-10-22 生效之 Version 2026-10b 條款明訂：免費 AP 僅限個人非商業評估用途，禁止商業生產與轉售；免費 AP 產出可能包含簡短 AICU 廣告/浮水印；Speech API 需綁定信用卡（不預扣）；AP 餘額歸零即停止服務，無自動訂閱扣款。",
+      "summary": "AICU首次呼叫贈US$10等值AP，現行首頁稱1 USD=10,000 AP；免費AP僅個人非商業評估，Speech需綁卡但不預扣。2026-10b條款稱免費額度到期依dashboard，購買AP180日；FAQ仍寫15,000 AP=$1及購買AP90日，官方來源衝突未解，不套用FAQ數字。違規刷免費額度可能停權或按條款處理。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -2595,27 +2602,27 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": null,
-      "usable_duration": null,
-      "access_risk": "模型可變；請求最長保留90日，勿上傳機密；購AP或auto-top-up可能收費。",
-      "verified_at": "2026-10-24T23:47:00+08:00",
+      "usable_duration": "免費AP依個別dashboard到期日；非購買AP的180日",
+      "access_risk": "第三方處理及請求最長保留90日；違規使用可能請款或停權，無驚喜帳單不涵蓋濫用。",
+      "verified_at": "2026-10-25T21:48:09+08:00",
       "discovered_at": "2026-10-23T13:07:00+08:00",
       "announcement_at": "2026-10-15",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T23:47:00+08:00",
+      "next_review_at": "2026-11-25T21:48:09+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案與模型範圍",
-        "account_eligibility": "未核實個人資格",
+        "account_eligibility": "自然人至少18歲或合法成立之法人／組織；免費credits每人／組織一次，禁多帳戶重領與分享／販售API key。",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "免費僅個人評估，禁止商用/轉售；本任務未接受條款或註冊",
+        "terms_restrictions": "免費AP僅個人非商業評估，禁止商用生產、轉售、假帳戶；商業使用需可聯繫帳戶及合法付款方式，語音複製須明確同意。",
         "taiwan_note": "Unknown；帳戶、模型與條款資格未全部核實"
       },
       "unknowns": [
-        "個人資格及實際節省",
-        "免費AP有效期",
-        "台灣帳戶/付款/居住規則"
+        "個別免費credits的dashboard到期日未登入核驗",
+        "FAQ仍寫15,000 AP=$1與購買AP90日，現行首頁／條款則為10,000 AP=$1與180日",
+        "台灣帳戶／卡片／居住規則及實際價值"
       ],
       "sources": [
         {
@@ -2636,8 +2643,14 @@
           "url": "https://api.aicu.ai/terms",
           "label": "官方來源",
           "scope": "研究批次列明的公開方案與限制，非個人帳戶核驗",
-          "evidence": "2026-10-24 官方首頁與條款 v2026-10b 複核實讀確認",
-          "verified_at": "2026-10-24T23:35:00+08:00"
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：2026-10b條款免費credits依dashboard到期，購買AP180日，個人至少18歲；濫用重領可能停權或依§5.6請款，台灣資格未核。",
+          "verified_at": "2026-10-25T21:48:09+08:00"
+        },
+        {
+          "url": "https://ch.aicu.ai/faq",
+          "label": "官方FAQ（與現行條款矛盾）",
+          "scope": "AP換算與購買點數有效期之官方衝突",
+          "evidence": "2026-10-25 21:45–21:50 Asia/Taipei實讀：FAQ仍寫15,000 AP=$1及90日；首頁與現行條款則為10,000 AP=$1及180日，未自行消解。"
         }
       ],
       "record_type": "opportunity",
@@ -6874,8 +6887,8 @@
     },
     {
       "id": "exa-starter",
-      "title": "Exa Starter：每月10＋一次onboarding10",
-      "summary": "免付款方法，每月US$10及一次onboarding US$10分開，非立即年額120。10 Search QPS/50 Agent並發，所有endpoints可用但消耗不同：Search起4/千次、Agent每次0.012–1。非訂閱額度或每call免費。",
+      "title": "Exa Free：每月US$10重置＋首team一次onboarding US$10",
+      "summary": "新team立即獲US$10，每月1日免費餘額重置為US$10，不累積；只有每人第一team可領月贈額，完成onboarding另有不過期的一次US$10。免付款方式；免費層不含Snapshot，額度耗盡回402。搜尋10 QPS、Deep Search 5、Contents 100、Agent啟動5 QPS並最多50 active runs。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -6885,7 +6898,7 @@
         "developer"
       ],
       "setup_cost_usd": 0,
-      "recurring_cost_usd": null,
+      "recurring_cost_usd": 0,
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計，已具資格且不含候補等待",
       "taiwan": "Unknown",
@@ -6898,15 +6911,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "付費PAYGO另行設定，免費條款細節待核",
-      "usable_duration": null,
-      "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-25T00:25:00+08:00",
+      "cancellation": "免費層無訂閱；選用PAYGO儲值及auto recharge會收費。月自動儲值上限填0或留白代表無上限，不是關閉。",
+      "usable_duration": "月贈額每月1日重置且不結轉；一次onboarding贈額不過期",
+      "access_risk": "額度耗盡回402；若自行開啟auto recharge可依門檻扣款。",
+      "verified_at": "2026-10-25T21:48:09+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-11-25T00:25:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T21:48:09+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -6917,8 +6930,8 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "結轉、重置時區、onboarding期限及取消"
+        "台灣帳戶／付款／身份條件及實際可申請性",
+        "每月1日重置的時區"
       ],
       "sources": [
         {
@@ -6926,6 +6939,12 @@
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
           "evidence": "2026-10-23 19:57:44–19:59:06公開研究實讀"
+        },
+        {
+          "url": "https://exa.ai/docs/admin/billing.md",
+          "label": "官方Billing與Rate Limits文件",
+          "scope": "首team月額、一次贈額、重置、免費層限制與選用自動儲值",
+          "evidence": "2026-10-25 21:45–21:50 Asia/Taipei實讀：每月1日重置US$10且不結轉，onboarding另一次US$10不過期；免費不含Snapshot，耗盡402；自動儲值月上限0代表無上限。"
         }
       ],
       "record_type": "opportunity",
@@ -6935,9 +6954,9 @@
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
       "status": "conditional",
-      "priority_score": 18.9,
-      "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤15分鐘",
+      "priority_score": 19.4,
+      "priority_tier": "A",
+      "priority_note": "官方·條件式·免費·台灣未標記·≤15分鐘",
       "legal_status": "not_verified"
     },
     {
@@ -14504,7 +14523,7 @@
     {
       "id": "rime-stt-nov19-free-window",
       "title": "Rime STT：免費至11/19，並發仍有限",
-      "summary": "各方案STT至2026/11/19免費，11/20起PAYG每分鐘US$0.002；TTS不免費。STT的PAYG並發10，串流每連線一段最長2分鐘且15秒靜音超時，檔案每次一件最大16MB。無公布總免費分鐘不等於無限。",
+      "summary": "各方案STT至2026/11/19免費，11/20起PAYG每分鐘US$0.002；TTS不免費。PAYG並發10，串流每連線一段最長2分鐘且15秒靜音超時，檔案WAV每次一件最大16MB。無公布總免費分鐘不等於無限；官方條款限18歲以上企業/組織工作用途，不是一般消費者福利。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -14530,19 +14549,19 @@
       "cancellation": "11/20起按量收費，需自行停用不需要的工作",
       "usable_duration": "至2026-11-19；時區未列",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T13:48:11+08:00",
+      "verified_at": "2026-10-25T21:49:05+08:00",
       "discovered_at": "2026-10-24T07:05:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T13:48:11+08:00",
+      "next_review_at": "2026-10-26T21:49:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Official free STT through Nov19,2026; PAYG0.002USD/min fromNov20;10concurrentSTT; English/Spanish only; streaming2min utterance/15s silence; file WAV16MB.",
-        "account_eligibility": "支援方案帳戶；實際台灣資格未核",
-        "billing_country": "Normal PAYG monthly card billing and $50 introductory credits published; Taiwan card acceptance and free-window card prerequisite not confirmed.",
-        "identity_residency": "未核；地區標籤不代表該國所有人均符合",
-        "terms_restrictions": "STT僅英/西語，免費期並發限制仍適用",
+        "account_eligibility": "18歲以上具締約能力、企業或組織工作用途；代表實體者需有授權，非一般個人消費用途。",
+        "billing_country": "一般PAYG每月卡片付款與US$50起始額度已公布；台灣卡片接受及免費期綁卡要求未核。",
+        "identity_residency": "須真實帳戶資訊；台灣帳戶接受及身份資格未核。",
+        "terms_restrictions": "STT限英/西語且並發、檔案/串流限制仍適用；禁止多帳號、虛假身分、規避存取、未授權轉售及用輸出訓練AI模型；音訊須有權利與同意。",
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
@@ -14557,6 +14576,12 @@
           "scope": "2026-10-25 urgent offer reverification",
           "evidence": "2026-10-25 13:45 Asia/Taipei直接讀Rime官方定價頁：頁面明載STT全方案免費至2026/11/19、11/20起PAYG US$0.002/分鐘、每月刷卡扣款、STT並發10；免費期限時區、免費總分鐘、台灣付款/申請資格仍未公布。頁面標示起始US$50 credits為所有模型，但不據此推STT截止後自動抵扣。",
           "accessed_time_range": "2026-10-25T13:45:37+08:00–2026-10-25T13:48:11+08:00"
+        },
+        {
+          "url": "https://www.rime.ai/terms",
+          "label": "Rime官方服務條款",
+          "scope": "企業用途、年齡、代表權、資料與帳戶限制；非法律意見",
+          "evidence": "2026-10-25 21:47–21:49 Asia/Taipei實讀：條款生效2025-04-08，限18歲以上具締約能力的企業/組織工作用途；禁止多帳號、假身分、規避限制、未授權轉售與輸出訓練模型。"
         }
       ],
       "record_type": "opportunity",
@@ -16906,29 +16931,29 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": null,
-      "usable_duration": "連續兩個月，最晚2026-12-31 UTC日末",
-      "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
-      "verified_at": "2026-10-25T14:45:00+08:00",
+      "cancellation": "贈額不得抵Enterprise座位／訂閱／稅；取消座位、停用或帳戶暫停可喪失贈額；耗盡後按token收費。",
+      "usable_duration": "連續兩個組織周年月，最晚2026-12-31 UTC日末",
+      "access_risk": "Enterprise付費席位及用量計費須啟用；額度耗盡／到期直接按token計費；不支援ZDR。",
+      "verified_at": "2026-10-25T21:49:05+08:00",
       "discovered_at": "2026-10-24T11:00:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-26T14:45:00+08:00",
+      "next_review_at": "2026-10-26T21:49:05+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
-        "account_eligibility": "需Claude Enterprise組織；新Security專案，僅掃描具權利的自有公司程式",
-        "billing_country": "未核",
-        "identity_residency": "未核",
-        "terms_restrictions": "僅限Enterprise組織的新Claude Security功能，需掃描自己或公司有權處理的程式碼；額度用盡或活動結束即按token標準費率計費。不得以換IP取得身分資格；未操作VPN或註冊。",
+        "account_eligibility": "Enterprise組織（含AWS Marketplace），各使用者需premium seat、啟用consumption billing與usage credits、owner開通；僅新Security專案，舊專案須遷移。",
+        "billing_country": "台灣Enterprise實際合約／帳單未核。",
+        "identity_residency": "台灣地區名單連結顯示未來2026-11-12生效版，不能當作10/25資格確證。",
+        "terms_restrictions": "僅掃描自己公司codebase，排除第三方所有或授權程式碼（含公司外OSS）；不支援ZDR。贈額不抵座位或稅，耗盡直接計費。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
         "Enterprise基礎訂閱價格",
         "個人／公司是否符合",
         "台灣帳戶條件",
-        "組織取消及信用撤銷條款"
+        "組織取消及信用撤銷的個別合約影響"
       ],
       "sources": [
         {
@@ -23342,8 +23367,8 @@
     },
     {
       "id": "taiwan-ai-rap-pilot",
-      "title": "TAIWAN AI RAP 試營運免費算力：篩選制申請",
-      "summary": "國研院國網中心官方頁明列「Pilot Operation – Free User Enrollment Open」，開放 IT 服務業者、新創、中小企業與學研單位申請免費試用；整合 GPU 算力、TAIDE/Llama/Phi 系列模型 API（繁中優化）、微調與部署環境。採線上申請經審核提供，非自動發放；申請入口原網址 rap.genai.nchc.org.tw/poc 於查核時 404，需以官方最新公告為準。",
+      "title": "TAIWAN AI RAP 2025 試營運免費算力：徵選與使用均已結束",
+      "summary": "國網中心2025-03-28徵選公告列出兩階段申請：2025-04-24及07-16截止，獲選者分別可使用至2025-07-31及09-30；約等值新台幣65萬元iService算力，須審核、提供回饋並同意公開成果。舊平台介紹仍寫招募中，但不能覆蓋有日期的徵選公告。2026年另有TAIWAN AI RAP暨TAIDE賦能方案，申請至2026-09-30，非本筆2025試營運可延續領取。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -23370,41 +23395,52 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "試營運方案，官方未列取消條款",
-      "usable_duration": "官方未公布固定時長",
-      "access_risk": "篩選制；入口與名額可能調整",
-      "verified_at": "2026-10-25T00:25:00+08:00",
+      "cancellation": "2025試營運兩階段使用分別於2025-07-31及09-30結束；無續費資訊",
+      "usable_duration": "獲選啟用至2025-07-31或2025-09-30",
+      "access_risk": "2025徵選已截止；舊介紹頁仍顯示招募中，勿當成開放申請",
+      "verified_at": "2026-10-25T21:45:34+08:00",
       "discovered_at": "2026-10-25T00:00:00+08:00",
       "announcement_at": "2025-03-28",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T00:25:00+08:00",
+      "next_review_at": "2026-11-25T21:45:34+08:00",
       "priority": "standard",
       "eligibility": {
-        "service_availability": "台灣國網中心官方平台；試營運免費用戶招募中。",
-        "account_eligibility": "IT 服務業者、新創、中小企業、學研單位；線上申請經審核。",
-        "billing_country": "台灣服務，免費試營運無需付款。",
-        "identity_residency": "以台灣產官學研為主。",
-        "terms_restrictions": "篩選制；仍需符合官方審查結果與使用規範。",
-        "taiwan_note": "台灣官方研究機構方案，明確面向台灣單位。"
+        "service_availability": "平台仍有服務；本筆2025試營運徵選申請與使用期均已結束。",
+        "account_eligibility": "2025徵選限符合台灣法規之企業、機構或法人，主要資服業、新創、中小企業及學研單位；需提案審核。",
+        "billing_country": "台灣單位；獲選試營運算力免費，未查新方案付款條件。",
+        "identity_residency": "符合台灣法規之企業、機構或法人；個人非本次徵選對象。",
+        "terms_restrictions": "2025徵選須提供平台回饋，同意公開成果及Demo素材；免費額度不可冒用身分或延長已終止梯次。",
+        "taiwan_note": "台灣單位當時可申請，但2025徵選已截止；台灣個人不因平台可用而合格。"
       },
       "unknowns": [
-        "免費算力額度/時數未公布",
-        "申請入口 404，最新申請方式待官方更新",
-        "個人（非單位）是否可申請未明"
+        "後續新梯次是否開放及新條件；2026賦能方案申請亦於09-30截止",
+        "2025額度的實際GPU時數與機型換算"
       ],
       "sources": [
         {
           "url": "https://www.nchc.org.tw/Page?itemid=112&mid=203",
           "label": "官方來源",
           "scope": "TAIWAN AI RAP 試營運免費用戶招募與平台範圍",
-          "evidence": "2026-10-25 直接查閱官方頁面：明列 Pilot Operation – Free User Enrollment Open、招募對象、TAIDE/Llama/Phi 模型、微調與部署；申請連結 https://rap.genai.nchc.org.tw/poc"
+          "evidence": "2026-10-25 21:45 Asia/Taipei實讀：介紹仍寫Pilot Operation – Free User Enrollment Open，未標新梯次日期，與2025徵選公告衝突；不據此認定可申請。"
         },
         {
           "url": "https://www.nchc.org.tw/Active/ActiveView/743",
           "label": "官方來源",
           "scope": "試營運用戶徵選公告（2025-03-28）",
-          "evidence": "2026-10-25 直接查閱：2025-03-28 發布，徵選新創、中小企業、學研等試營運用戶。"
+          "evidence": "2026-10-25 21:45 Asia/Taipei實讀：第一階段2025-04-24截止、使用至07-31；第二階段07-16截止、使用至09-30；僅台灣企業/機構/法人，約等值NT$650,000算力，需回饋與公開成果。"
+        },
+        {
+          "url": "https://www.nchc.org.tw/Message/MessageView/5000?mid=46&page=1",
+          "label": "國網中心2026賦能方案公告",
+          "scope": "區分2026另案與2025試營運",
+          "evidence": "2026-10-25 21:45 Asia/Taipei實讀：2026-06-18公告新案審核後NT$20,000算力；屬不同梯次，非2025試營運展延。"
+        },
+        {
+          "url": "https://www.digitimes.com.tw/seminar/NCHC_genai/",
+          "label": "國網中心公告連結之合作活動頁",
+          "scope": "2026賦能方案申請期限與限制",
+          "evidence": "2026-10-25 21:45 Asia/Taipei實讀：申請流程列至9月30日；免費資源非現金補助，禁挖礦、武器、網路攻擊，須遵守平台規範。"
         }
       ],
       "record_type": "opportunity",
@@ -23413,11 +23449,11 @@
         "additional_cost_usd": null,
         "eligibility_note": "台灣本地官方方案；VPN 無法授予台灣單位資格"
       },
-      "legal_status": "no_restriction_found",
-      "status": "active_verified",
-      "priority_score": 21.1,
-      "priority_tier": "S",
-      "priority_note": "官方·活躍·免費·台灣Yes·≤45分鐘·區域限定·有資格門檻"
+      "legal_status": "not_verified",
+      "status": "expired",
+      "priority_score": 15.7,
+      "priority_tier": "D",
+      "priority_note": "官方·已截止·免費·台灣Yes·≤45分鐘·區域限定·有資格門檻"
     },
     {
       "id": "nchc-gb200-nano4-trial",
@@ -33960,7 +33996,251 @@
       "priority_score": 17.8,
       "priority_tier": "B",
       "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "unstructured-transform-once-tenk-pages",
+      "title": "Unstructured Transform：新戶免卡一次10,000頁",
+      "summary": "Transform新帳戶起始10,000處理頁、免信用卡；非每月重置，超過後標價US$0.015/頁。官方條款限內部商業用途、不得提供第三方處理服務；輸入與輸出非機密，授權Unstructured用於自身模型訓練與改進。Pipelines另售，不能把定價頁所有功能視為免費Pipelines額度。",
+      "categories": [
+        "FREE",
+        "HIGH-QUOTA"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費額度用盡後轉付費須依帳戶付款條件；轉付費後條款不保證可回免費層，勿預設硬停。",
+      "usable_duration": "新戶一次10,000頁；免費額度到期日未公布",
+      "access_risk": "文件非機密且可供服務方訓練；付費轉換及頁數計算需確認",
+      "verified_at": "2026-10-25T21:48:19+08:00",
+      "discovered_at": "2026-10-25T21:45:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T21:48:19+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "Transform API自助帳戶新戶起始10,000頁；Pipelines另售。",
+        "account_eligibility": "須註冊單用戶工作區，免費額度免卡；轉付費時可能需要付款方法。",
+        "billing_country": "台灣帳單及付款接受度未見明文。",
+        "identity_residency": "條款排除制裁地區／對象；台灣未獲明文肯定支援。",
+        "terms_restrictions": "限內部商業目的，禁止第三方處理服務及競品開發；敏感資料限制，輸入／輸出非機密並授權自身模型訓練；不可用重複帳戶規避限制。",
+        "taiwan_note": "未列台灣明文可申請；非制裁清單不等於每位台灣用戶有資格。"
+      },
+      "unknowns": [
+        "免費額度到期日與付費前硬停行為",
+        "台灣帳戶及帳單條件",
+        "免費層速率／並發限制與實際頁數計算"
+      ],
+      "sources": [
+        {
+          "url": "https://unstructured.io/pricing",
+          "label": "官方定價",
+          "scope": "一次10,000頁、免卡與超額標價",
+          "evidence": "2026-10-25 21:45–21:50 Asia/Taipei實讀：新戶10,000頁、no card required；後續US$0.015/頁，非每月贈額。"
+        },
+        {
+          "url": "https://docs.unstructured.io/overview-developer-guide",
+          "label": "官方開發文件",
+          "scope": "Transform與Pipelines區別、頁面計量",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：Pipelines另售；不同檔案按頁／大小計數。"
+        },
+        {
+          "url": "https://unstructured.io/platform-terms-of-service",
+          "label": "平台服務條款",
+          "scope": "內部用途、資料授權與付款轉換",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：2026-09-23更新，限制第三方處理與競品開發；輸入輸出非機密並可用於自身模型訓練，付款條件依適用情形。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不建議跨區規避；IP不代替帳戶及帳單資格。"
+      },
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "priority_score": 17.3,
+      "priority_tier": "B",
+      "priority_note": "官方·條件式·零設定費·台灣未標記·時間未知"
+    },
+    {
+      "id": "gladia-welcome-fifty-eur-year",
+      "title": "Gladia新戶：一次€50語音額度，有效一年",
+      "summary": "自助新帳戶一次€50免費額度，開戶後一年失效；非月度免費時數。Solaria-3非同步€0.16/音訊小時、Solaria-1 €0.27、即時€0.68，三者共用錢包且加值功能另計。用盡後須儲值；手動儲值或自選自動加值，後者會扣已存付款方式。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "自助制無訂閱；自動加值可關閉，已開啟者會扣款；免費額度一年到期。",
+      "usable_duration": "自開戶起一年，一次€50，不重置",
+      "access_risk": "預設模型訓練opt-in；自動加值及附加功能可產生費用",
+      "verified_at": "2026-10-25T21:48:19+08:00",
+      "discovered_at": "2026-10-25T21:45:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T21:48:19+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "自助語音轉錄API；非同步25並發、即時30並發，限支援地區。",
+        "account_eligibility": "新戶一次領取；條款原文要求成年且more than 18，真實帳戶資料，一人不得重複個人空間刷贈額。",
+        "billing_country": "免費期綁卡要求與台灣卡片支援未核；付費儲值可手動或自動。",
+        "identity_residency": "條款列禁用國家但未明列台灣是否受支援。",
+        "terms_restrictions": "不得重複領取或轉讓API；自助資料訓練預設opt-in，可免費退出；敏感資料及未成年人個資有限制。",
+        "taiwan_note": "台灣未列於禁用清單不等於已確認台灣帳戶、付款與個人資格。"
+      },
+      "unknowns": [
+        "免費帳戶是否需卡、台灣帳戶和付款資格",
+        "個別資料留存及跨境DPA",
+        "可用語言與附加功能對錢包的實際扣法"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gladia.io/pricing",
+          "label": "官方定價",
+          "scope": "€50一次、期限與共用語音錢包",
+          "evidence": "2026-10-25 21:45–21:50 Asia/Taipei實讀：頁標2026-10-15；€50一年、三種語音模式共用，附加項付費、25/30並發，自動加值為選用。"
+        },
+        {
+          "url": "https://www.gladia.io/general-terms-of-use-gladia-sas",
+          "label": "官方使用條款",
+          "scope": "地區、年齡、重複領取與資料訓練",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：2026-10-14更新；禁用國家未列台灣但無肯定名單；一次個人空間贈額、不得重複濫用。"
+        },
+        {
+          "url": "https://www.gladia.io/terms-conditions",
+          "label": "官方付費條款",
+          "scope": "加值、額度消耗與免費轉付費",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：付費錢包條件與餘額不足暫停服務。"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不建議以VPN規避服務地區或實際帳戶資格。"
+      },
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "priority_score": 15.8,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "reducto-standard-initial-credit-us-only",
+      "title": "Reducto Standard起始額度：條款限美國，台灣不可推定可領",
+      "summary": "定價頁列Standard起始15,000 credits，另處稱US$150免費額度；遷移文件再確認新戶15,000 credits。credits不等於固定免費頁數，兩種措辭換算未釐清。服務條款明訂僅供位於美國者使用，故不列台灣可領取機會。",
+      "categories": [
+        "REGION-LOCKED"
+      ],
+      "views": [
+        "regional",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": null,
+      "taiwan": "No",
+      "regions": [
+        "United States"
+      ],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "Standard含訂閱條款，帳戶費用與取消日需個別查；不可假設免費額度用盡硬停。",
+      "usable_duration": null,
+      "access_risk": "美國境內限定；頁面金額／credits換算及付費轉換未釐清",
+      "verified_at": "2026-10-25T21:48:19+08:00",
+      "discovered_at": "2026-10-25T21:45:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T21:48:19+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "Standard解析／擷取API有起始credits，但條款限位於美國者。",
+        "account_eligibility": "須符合Standard帳戶及地區條款，付款要求未核。",
+        "billing_country": "未知；不可借用美國地址或付款身分。",
+        "identity_residency": "服務條款僅供位於美國的人使用。",
+        "terms_restrictions": "禁止敏感個資及假身分；帳戶不可轉讓，非機密上傳內容有廣泛服務改善授權。",
+        "taiwan_note": "位於台灣者不符官方US-only條款；不建議跨區規避。"
+      },
+      "unknowns": [
+        "15,000 credits與US$150換算及各操作扣法",
+        "有效期、重置、綁卡及自動續費細節",
+        "若供應商另行書面核准台灣使用之條件"
+      ],
+      "sources": [
+        {
+          "url": "https://reducto.ai/pricing",
+          "label": "官方定價",
+          "scope": "15,000 credits／US$150措辭",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀；同頁不同單位不可推成免費頁數。"
+        },
+        {
+          "url": "https://docs.reducto.ai/reference/pricing-migration",
+          "label": "官方遷移說明",
+          "scope": "新戶起始credits",
+          "evidence": "2026-10-25 21:45–21:48 Asia/Taipei實讀：遷移後新戶仍獲15,000 credits。"
+        },
+        {
+          "url": "https://reducto.ai/terms",
+          "label": "官方服務條款",
+          "scope": "US-only地理限制及訂閱／資料條款",
+          "evidence": "2026-10-25 21:45–21:50 Asia/Taipei實讀：2026-04-17生效，Geographic Restrictions明文僅供位於美國者使用。"
+        }
+      ],
+      "record_type": "watchlist",
+      "vpn_research": {
+        "status": "not_applicable",
+        "additional_cost_usd": null,
+        "eligibility_note": "不得以VPN或虛假地址繞過US-only條款。"
+      },
+      "status": "restricted",
+      "legal_status": "not_verified",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": null
     }
   ],
-  "latest_research_at": "2026-10-25T20:50:00+08:00"
+  "latest_research_at": "2026-10-25T21:49:05+08:00"
 }

@@ -14,7 +14,7 @@ for o in d['offers']:
  if o['record_type']=='opportunity':
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
   if o.get('status') in dead:assert o['priority_tier']=='D'
-  if o['taiwan']=='Yes':assert o['priority_tier']=='S'
+  if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
  else:assert o['priority_tier'] is None and o['priority_score'] is None
 print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions.')
 print('tiers:',{t:sum(1 for o in d['offers'] if o.get('priority_tier')==t) for t in ['S','A','B','C','D']})
