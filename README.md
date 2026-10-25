@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **445 筆**（332 項機會、46 項政策、67 筆觀察線索），更新時間 **2026-10-26 04:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **11 筆既有紀錄**，原有 442 筆中 **431 筆未在本輪複核**；新增 Context.dev Free 一筆機會、Smallest.ai 新創補助與 Ultravox 試用兩筆保守觀察。Meta 黑客松今日台北 11:59 較早截止與 waiver EST 仍衝突；DeepSeek Search／Fetch 的限定免費工具呼叫 11/1 起收費，台灣公務機關禁用 DeepSeek 服務。Together 一般帳戶首購額度至少 US$15，補助是否豁免未公布；Firecrawl 學生 10,000 點為一次性。多數台灣個別帳戶、付款或法律層面仍未核實。
+資料集目前有 **446 筆**（332 項機會、46 項政策、68 筆觀察線索），更新時間 **2026-10-26 05:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **9 筆既有紀錄**，原有 445 筆中 **436 筆未在本輪複核**；新增 Mistral Ambassador 一筆保守觀察。Meta 黑客松台北 10/26 11:59 較早截止與 waiver EST 仍衝突，政府關聯人士排除；DeepSeek 指定整合工具暫免至 11/1，台灣公務機關禁用其 AI 服務；Picsart Pro US$10.50/月為年繳折算（牌價年額 US$126）。多數個人帳戶、台灣付款與法律層面仍未核實。
 
 ## 使用方式
 
