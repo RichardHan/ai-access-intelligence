@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **410 筆**（307 項機會、44 項政策、59 筆觀察線索），更新時間 **2026-10-25 16:50 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **15 筆既有紀錄**，其中 7 筆寫入有界更新；新增 **2 項機會**（[Deepnote Education](https://deepnote.com/docs/education-faqs) 免費 Basic notebook 算力、[AI Horde](https://aihorde.net/mission/) 免費匿名排隊 API）。Yotta Rudra 的 Ignite 標示 $25K 與分期合計 $20K 矛盾；AkashML 官方確認驗付款方式後給會到期的試用額度，但金額未知；Lawson 新購買已截止，既有合格者仍須另參加 AI 碼抽選。沿先前批次基線累計已實讀 **102 筆既有紀錄**，尚有 **302 筆既有紀錄未查核**（本輪其餘 393 筆未查核）。限時活動每日複核，其餘依最久未核案例按月輪替。服務有效性、條款資格與法律限制分開；本輪未取得適用台灣法律來源，法律狀態仍未核實。
+資料集目前有 **412 筆**（309 項機會、44 項政策、59 筆觀察線索），更新時間 **2026-10-25 17:40 Asia/Taipei**（不代表全庫已複核）。本輪實讀官方來源複核 **20 筆既有紀錄**，其中包含算力新創、平台教育與特定免費 API 方案；新增 **2 項機會**（[Ideogram 免費版](https://ideogram.ai/pricing) 每週 30 credits、[Recraft 免費版](https://www.recraft.ai/pricing) 每日 30 credits 個人非商用圖像與向量）。Vast.ai 專頁現行消費等額匹配與舊公告 $2500 免費說法仍矛盾（標記 conflicting_official_usage_claims）；Together Startup Accelerator 官方專頁證實已擴展為三級（最高 $15K／$30K／$50K），且官方 JSON-LD areaServed 明列 Worldwide（涵蓋台灣申請範圍）；Together $150 贈額仍開放申請但平台計費文件要求首次購買最低 $15，贈額是否豁免首購門檻未解；AWS Free Tier 台灣頁正常讀取，移除連線缺口，但 FAQ 內部存在 6 個月 vs 升級後 12 個月抵用金到期之矛盾；Core.Today (AI놀이터) 條款明確免費點數亦每月不遞延；Z.ai 官方定價確認 GLM-4.7-Flash、4.5-Flash、4.6V-Flash 免費，新一代 GLM-5.3-Flash 付費；Ideogram 現為文件公告每週 30 credits（限第三方登入），否定舊傳每日 10 credits 或無限 slow queue；Recraft 每日 30 credits，但輸出公開且所有權歸 Recraft，限個人非商用；Azure Students 每年可續領 US$100 免卡，地域涵蓋台灣，但 OpenAI 一般模型配額不保證（正式配額表列 Batch 為 N/A）；Voyage AI 撤回無官方地區證據之 Taiwan Yes 改為 Unknown，且模型免費名單在定價表與正文間存在衝突。沿先前批次基線累計已實讀 **122 筆既有紀錄**，尚有 **288 筆既有紀錄未查核**（本輪其餘 390 筆未查核）。限時活動每日複核，其餘依最久未核案例按月輪替。服務有效性、條款資格與法律限制分開；本輪未取得適用台灣法律來源，法律狀態仍未核實。
 
 ## 使用方式
 
