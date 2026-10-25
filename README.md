@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **435 筆**（327 項機會、46 項政策、62 筆觀察線索），更新時間 **2026-10-25 22:50 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **20 筆既有紀錄**，其中僅 **2 筆有可回寫變動而刷新 `verified_at`**；原有433筆中413筆未在本輪查閱。新增 [Go2 Cloud AI-OCR](https://www.lets-co.com/static/ai/ocr/campaign/index.html) 條件式機會（新簽付費底座首年600頁，OCR預計12月中推出、台灣資格未核），以及 [Railway](https://docs.railway.com/pricing/free-trial.md) 一次US$5／30天觀察線索（台灣帳戶資格未核）。[Supership](https://supership.jp/news/2026/09/16/14682/) 10/30前法人申請、期滿自動轉付費，已調為每日複核；[GitHub Models](https://docs.github.com/en/github-models) 已退役，修正替代服務分工。其他已讀案例若無新證據未刷新核實時間；服務可在台灣使用不代表優惠資格或法律結論已確認。
+資料集目前有 **436 筆**（328 項機會、46 項政策、62 筆觀察線索），更新時間 **2026-10-25 23:51 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源抽樣複核 **12 筆既有紀錄**，其中 **10 筆回寫具體變動並刷新 `verified_at`**；原有435筆中423筆未在本輪查閱。新增 [Verda 原創技術內容贈額](https://docs.verda.com/resources/obtaining-free-credits/how-to-receive-credits/) 條件式機會：核准後GPU compute額度不過期，但金額、台灣帳戶與先行成本未核。[Qoder](https://docs.qoder.com/events/communityboost) 領取窗口及 [DeepSeek](https://api-docs.deepseek.com/guides/search/) 免費範圍已釐清；[Cartesia](https://www.cartesia.ai/pricing) 代理超額可能繼續計費，[Notion](https://www.notion.com/help/manage-your-ai-credits) AI額度分池。其他已讀案例若無新證據未刷新核實時間；服務可在台灣使用不代表優惠資格或法律結論已確認。
 
 ## 使用方式
 
