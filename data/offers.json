@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-25T17:28:47+08:00",
-  "scope": "公開官方資料基準與分批複核；本輪2026-10-25 16:46–16:48 Asia/Taipei實讀官方來源，複核15筆既有紀錄（其中7筆寫入有界更新），新增Deepnote Education與AI Horde兩項機會。其餘393筆既有紀錄本輪未複核；沿先前批次基線累計實讀102筆既有紀錄，尚有302筆既有紀錄未查核。限時活動每日複核，其餘按最久未核按月輪替。updated_at僅代表資料集更新，verified_at僅更新實際寫入本輪來源與核實範圍的紀錄；公開活動有效性、條款資格與法律限制分開，台灣個案與適用法律未核實時保持未核實。優先度由既有欄位衍生計算。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-25T17:49:52+08:00",
+  "scope": "2026-10-25 Asia/Taipei 本輪實讀官方來源；既有11筆抽樣複核，其中 fal Builder 有新增有界證據並更新 verified_at，其餘已於今日較早批次查核或無足夠新證據更動。新增 AWS Educate 免費教育機會。其餘紀錄本輪未全面核實；限時活動每日複核，其餘依最久未核按月輪替。updated_at 僅代表資料集更新，服務條款與法律限制分開。；2026-10-25 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
     {
       "id": "chatgpt-dots",
@@ -15543,7 +15543,7 @@
     {
       "id": "fal-builder-redirect-unresolved",
       "title": "fal Builder：原頁轉址至新創計畫（最高$5,000額度）",
-      "summary": "原 builder-grant 網址已正式轉址至 startup-program。新創計畫提供核准後初始 $1,000 額度，於月消費達標後可依序申請增至 $2,500 與 $5,000。適用歐洲與亞洲團隊，需有用戶/營收或機構創投資金。一般帳號提供 2 並發請求，購買點數可增至 40 並發。",
+      "summary": "舊 Builder Grant 頁轉至 Startup Program；現行申請頁提供獲准團隊初始 $1,000，fal 月消費達 $1,000／$2,500 可申請升至累計 $2,500／$5,000。歐洲與亞洲的新創團隊，實際用戶、營收等成績或機構創投支持擇一；每公司三個月僅可申請一次，不得轉讓或轉售。舊 Builder $25–$250 索引不作現行可領優惠。",
       "categories": [
         "QUALIFICATION",
         "REGION-LOCKED"
@@ -15560,10 +15560,10 @@
         "EU",
         "Asia"
       ],
-      "verification": "Unverified",
+      "verification": "Official",
       "usage_type": null,
-      "quota_classification": "UNKNOWN",
-      "limited_confirmed": false,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
@@ -15571,25 +15571,25 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T13:30:00+08:00",
+      "verified_at": "2026-10-25T17:48:57+08:00",
       "discovered_at": "2026-10-24T09:06:16+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T13:30:00+08:00",
+      "next_review_at": "2026-11-25T17:48:57+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
-        "account_eligibility": "帳戶與台灣資格未核",
+        "service_availability": "現行 Startup Program 申請頁公開，尚未驗證核准或額度發放；舊 Builder Grant 低門檻方案是否終止未有明文。",
+        "account_eligibility": "歐洲或亞洲新創團隊，需有真實用戶、營收等實績或機構創投支持；通常有介紹通話；每公司三個月一次申請。",
         "billing_country": "未核",
-        "identity_residency": "未核；地區標籤不代表該國所有人均符合",
-        "terms_restrictions": "依來源限定，不登入、不申請、不付費；跨IP不構成資格。",
+        "identity_residency": "團隊須位於歐洲或亞洲；台灣團隊地區上屬亞洲但個案、企業與帳戶資格未核。",
+        "terms_restrictions": "不得轉售或轉讓；升級額度取決於 fal 本身月消費且須聯繫官方；不以跨區或虛構企業取得資格。",
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
-        "轉址是否表示合併或停止",
-        "伙伴申請路徑及現行金額",
-        "台灣個人資格"
+        "舊 Builder Grant 的 $25–$250 活動是否正式終止未明文，不能視同現行 Startup Program 優惠",
+        "免費額度有效期限、適用模型與課稅/付款條件未公布",
+        "台灣公司個別申請核准與帳單資格未核"
       ],
       "sources": [
         {
@@ -15605,6 +15605,13 @@
           "scope": "fal Builder：25–250舊索引，直接頁已轉址",
           "evidence": "官方搜尋索引仍列25／100／250美元且限核准伙伴推薦、歐亞直接生成媒體產品；直接開builder-grant卻轉Startup。不能假稱較低門檻申請目前可用，保留待核，不將舊索引當現行申請表。",
           "accessed_time_range": "2026-10-24T09:03:58+08:00–2026-10-24T09:04:41+08:00"
+        },
+        {
+          "url": "https://fal.ai/startup-program",
+          "label": "fal 現行新創計畫",
+          "scope": "本輪直接閱讀現行三級額度、資格、地域及轉讓限制；不驗證舊 Builder Grant 存續",
+          "evidence": "2026-10-25 17:45–17:49 Asia/Taipei 閱讀：核准後 $1,000；fal 月消費達 $1,000 可加 $1,500 至 $2,500，達 $2,500 可再加 $2,500 至 $5,000；歐亞團隊有用戶/營收等成績或機構 VC 擇一，通常介紹通話，每公司三個月申請一次，不可轉售/轉讓。",
+          "accessed_time_range": "2026-10-25T17:48:57+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -32505,7 +32512,87 @@
       "priority_score": 16.3,
       "priority_tier": "C",
       "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "aws-educate-free-ai-learning",
+      "title": "AWS Educate：免費 AI／雲端學習與實作實驗室",
+      "summary": "AWS 台灣官方頁開放任何個人免費學習雲端與 AI，電子郵件註冊且免信用卡；含自主進度課程、實作實驗室與數位徽章。這不是可部署商業服務的 AWS 帳戶贈額；實驗室限教育用途。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer",
+        "student"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Global",
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費課程無訂閱續費；學習者可依 AWS 條款隨時退出，AWS 可取消註冊。",
+      "usable_duration": null,
+      "access_risk": "實作實驗室具各自限制；未公布統一時數或點數，不得推定無限。",
+      "verified_at": "2026-10-25T17:48:57+08:00",
+      "discovered_at": "2026-10-25T17:48:57+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-25T17:48:57+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "AWS 台灣官方頁仍提供註冊連結，未登入測試個別註冊或實驗室。",
+        "account_eligibility": "任何個人可參與；13歲以上可用 email 註冊，未滿18歲須家長、監護人或教育工作者參與；招聘欄限18歲以上。",
+        "billing_country": "免費課程免信用卡；非 AWS 商業雲端帳戶抵用金。",
+        "identity_residency": "台灣繁中頁開放任何個人；條款年齡表台灣屬未特別列出之地區，最低13歲。",
+        "terms_restrictions": "僅教育訓練，不得用於正式、即時或商業環境；不得在實驗室輸入個資、財務或受規管資料；帳戶不得授權他人使用。",
+        "taiwan_note": "台灣官方頁與年齡條款支持地區層級 Yes；仍須本人符合年齡及教育用途規定，不代表帳戶實測核准。"
+      },
+      "unknowns": [
+        "個別實驗室時數、重置週期與停止提供日期未公布",
+        "個別帳戶實際註冊與實驗室可用性未測試"
+      ],
+      "sources": [
+        {
+          "url": "https://aws.amazon.com/tw/education/awseducate/",
+          "label": "AWS Educate 台灣官方頁",
+          "scope": "免費、免卡、任何個人、13歲及學習內容",
+          "evidence": "2026-10-25 17:45–17:49 Asia/Taipei 直接查閱：繁中頁稱對任何個人開放，免費自主課程及實作實驗室，13歲只需電子郵件，無需信用卡；18歲以上可存取招聘欄。",
+          "accessed_time_range": "2026-10-25T17:48:57+08:00"
+        },
+        {
+          "url": "https://aws.amazon.com/legal/learner-terms-conditions/",
+          "label": "AWS 學習者條款（2026-06-17 修訂）",
+          "scope": "未成年、教育用途、禁止商業與敏感資料；非法律意見",
+          "evidence": "2026-10-25 17:45–17:49 Asia/Taipei 直接查閱 §2.2–2.3、§6.1、§6.3：未滿18歲需家長/監護人/教育者參與；台灣未列例外最低年齡，適用13歲；僅教育用途，不得正式/商業使用或輸入個資、財務及受規管資料。",
+          "accessed_time_range": "2026-10-25T17:48:57+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不得虛構年齡、身分或借用帳戶；未操作跨區。"
+      },
+      "status": "active",
+      "legal_status": "not_verified",
+      "priority_score": 22.3,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-10-25T16:49:00+08:00"
+  "latest_research_at": "2026-10-25T17:48:57+08:00"
 }
