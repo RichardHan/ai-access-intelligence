@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-目前資料：375筆，包含281筆機會、44筆政策、50筆待覆核線索；非375項可直接領取優惠。資料集更新至2026-10-25 11:01 Asia/Taipei。本輪完整複核38筆既有案例：37筆取得可讀官方來源正文；Perplexity Education官方頁遭HTTP 403，未刷新verified_at。另對Cloudflare Workers AI及Gemini API僅作局部來源查核，未刷新verified_at。限時優先：Meta AI Hackathon申請最遲10/26 11:59台灣時間（或20,000人額滿前）；Lawson新申請已截止，既有合格者応募至10/26 23:59，限日本居民；Vercel Baseten模型促銷至10/27（時區未公布）。更正HKT AI資格：新兌換已於9/30截止，10/27只為7/28兌換者個別三個月週期範例；Anthropic合作不提供參與者模型或算力；KakaoCloud Boost/Grow 1年與2年效期條款衝突。新增4筆：Google AICore支援裝置預覽（18+、非生產，台灣資格未知）、Google Workspace非營利免費AI（台灣特定組織類別且Goodstack核驗）、OpenAI非營利Business Standard（US$8年繳月均/US$10月繳，台灣計畫資格未知）、Databricks Free Edition（僅非商業、配額有限）。服務在台灣可用不等於符合優惠資格；法律/監管狀態未以此複核推定。其餘案例未全面複核。
+目前資料：379筆，包含282筆機會、44筆政策、53筆待覆核線索；非379項可直接領取優惠。資料集更新至2026-10-25 11:25 Asia/Taipei。本輪完整複核27筆既有案例（12筆即期/限時/快到期案例＋15筆開發者工具與新創/學術觀測工具案例）；官方來源正文全面核實。限時優先：Meta AI Hackathon申請最遲10/26 11:59台灣時間（或20,000人額滿前），入選US$150限10天開發期使用；Lawson新消費已於10/19截止，既有合格日本居民應募至10/26 23:59 JST；Vercel Baseten模型促銷至10/27（時區未公布）；Qoder Community Round 4進度達18,108/100,000，活動持續至10/30 23:59 UTC+8；Sarvam校園巡迴10/25 IIT BHU及10/27 IIT Kanpur確認舉行，額度於活動前發放。重要條件釐清：Bruin新創官方FAQ證實額度耗盡不自動向付款方式扣款；Dust Credit Management文件證實Business採預付加值，僅Enterprise支援後付PAYG；Braintrust移除未獲官方支持的30天取消通知宣稱；Composio新創6個月Pro有效。新增4筆：OpenAI研究者計畫（最高US$1,000 API額度，有效12個月，季審，台灣合格研究者具地區資格，台灣Yes）、Parallel代理搜尋每月US$5額度（綁卡送$5、超量扣款，台灣未知，watchlist）、Linkup工作信箱US$20初始額度與合格帳戶每月補回20美元（條款歐元與文件美元衝突，台灣未知，watchlist）、Valyu免卡US$10/公司信箱$20評估額度（有效12個月，超量402不扣款，禁模型訓練，台灣未知，watchlist）。服務在台灣可用不等於符合優惠資格；法律/監管狀態未以此複核推定。其餘案例按月輪替複核。
 
 ## 使用方式
 
