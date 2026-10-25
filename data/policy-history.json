@@ -10877,5 +10877,113 @@
     "change_type": "application_suspension_source_conflict",
     "sources": ["https://landing.hostkey.com/grant_for_scientific_projects", "https://landing.hostkey.com/grant_for_scientific_projects_formhtml"],
     "note": "入口稱收件，實際申請頁稱因硬體不足暫停；保留關閉狀態，無重開日期。"
+  },
+  {
+    "record_id": "work-codex-free",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "UNKNOWN",
+    "current_classification": "UNKNOWN",
+    "change_type": "free_image_exclusion_and_shared_usage_clarified",
+    "sources": ["https://learn.chatgpt.com/docs/pricing"],
+    "note": "Free明列不含圖像生成；Luna Standard桌面依rollout，Work/Codex共池，不套用Plus五小時估計作Free配額。台灣帳戶rollout仍Unknown。"
+  },
+  {
+    "record_id": "work-codex-go",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "UNKNOWN",
+    "current_classification": "UNKNOWN",
+    "change_type": "taiwan_billing_support_and_reference_price_scoped",
+    "sources": ["https://learn.chatgpt.com/docs/pricing", "https://help.openai.com/en/articles/10421635-multicurrency-billing"],
+    "note": "US$8為USD官方參考價而非台灣結帳總額；網頁訂閱明列TWD及卡片支援，個別Go付款與桌面rollout仍未測試。"
+  },
+  {
+    "record_id": "work-codex-plus",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "HIGH BUT LIMITED",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "model_estimates_and_fast_usage_multipliers_clarified",
+    "sources": ["https://learn.chatgpt.com/docs/pricing", "https://help.openai.com/en/articles/10421635-multicurrency-billing"],
+    "note": "補模型別每5小時估計Astra 5–45、6.1 Sol 15–160、6 Sol 15–150、Luna 350–3,000，非固定權利；Fast訂閱用量2.5倍、購買credits 2倍，不混用倍率。"
+  },
+  {
+    "record_id": "replit-free-mode-policy",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "HIGH BUT LIMITED",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "monthly_and_annual_price_basis_clarified",
+    "sources": ["https://replit.com/blog/replit-introduces-free-mode", "https://replit.com/pricing", "https://docs.replit.com/category/billing"],
+    "note": "Core月付US$20與年付折算US$18/月分開，維持20月付比較；credits含Agent、部署、資料庫但超額另付，刪除已解決的泛稱部署費未知，改保留實際消耗/超額費率及取消時間。"
+  },
+  {
+    "record_id": "codex-composer-beta-policy",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "NO FIXED CAP PUBLISHED",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "change_type": "supported_region_and_pro_subscription_cost_clarified",
+    "sources": ["https://help.openai.com/en/articles/20001601-composer-predictions-in-codex", "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries", "https://learn.chatgpt.com/docs/pricing"],
+    "note": "精確模型GPT-6 Astra/GPT-6.1 Sol，18+個人Pro、桌面local/SSH；台灣改Yes僅支援地區層級，帳戶未測。既有Pro增量0，新Pro最低US$100/月參考價，不是預測本身收費；政策紀錄不評級。"
+  },
+  {
+    "record_id": "dhanur-paygo-policy",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "HIGH BUT LIMITED",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "zero_balance_inflight_cost_and_refund_exception_clarified",
+    "sources": ["https://dhanurai.com/blog/a-new-direction", "https://dhanurai.com/pricing", "https://dhanurai.com/terms", "https://dhanurai.com/refunds"],
+    "note": "零餘額只停止新工作，已啟動工作可完成並自下次加值扣費，不是絕對零成本硬停。退款限購入top-up完全未用且7日內，免費/bonus不換現；18+商業/專業用途及台灣境外付款未核。穩定政策改月度，修正舊daily/月後日期不一致。"
+  },
+  {
+    "record_id": "digitalocean-startups-core-gpu-policy",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "UNKNOWN",
+    "current_classification": "UNKNOWN",
+    "change_type": "core_exclusions_and_termination_obligations_expanded",
+    "sources": ["https://www.digitalocean.com/startups", "https://www.digitalocean.com/legal/startups-program-terms-of-service", "https://www.digitalocean.com/legal/hatch-terms-of-service"],
+    "note": "補融資≤US$10m、企業網站/email、新team有效卡、未領過startup及服務公司排除；core排除更多GPU/Inference/第三方模型與轉付費。通知終止即福利/未用額度失效、既有費用仍付；US$10,000月消耗上限非授額。改穩定月度，舊2025部落格未重讀。"
+  },
+  {
+    "record_id": "retool-cli-beta-ai-credit-policy",
+    "verified_at": "2026-10-26T03:47:27+08:00",
+    "previous_limit": "NO FIXED CAP PUBLISHED",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "change_type": "host_authentication_requirement_clarified",
+    "sources": ["https://docs.retool.com/build/apps/concepts/cli"],
+    "note": "補instance/host有效登入、browser OAuth/device code及需host命令的active session；beta免Retool AI credits仍不含外部代理、部署或席位。改月度以符合穩定輪替，未安裝/實測。"
+  },
+  {
+    "record_id": "qoder-community-1024",
+    "verified_at": "2026-10-26T03:47:00+08:00",
+    "previous_limit": "HIGH BUT LIMITED",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "community_milestone_snapshot_updated",
+    "sources": ["https://docs.qoder.com/events/communityboost", "https://qoder.com/community-boost"],
+    "note": "03:45–03:47 Chromium累積124,226，Round 4單輪24,226/100,000、尚差75,774，獎勵仍????；更新舊超119,000快照，不推定前三輪個人領取窗口仍有效。保留日查。"
+  },
+  {
+    "record_id": "photoroom-startup-equivalent-images",
+    "verified_at": "2026-10-26T03:47:00+08:00",
+    "previous_limit": "HIGH BUT LIMITED",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "conditional_approval_and_grant_billing_scope_clarified",
+    "sources": ["https://www.photoroom.com/api/startup-plan", "https://www.photoroom.com/api/pricing", "https://photoroom.typeform.com/to/mQ5t5pn6"],
+    "note": "補status conditional；60k Basic或等值12k Plus、一年、需審批不變。表單可讀未提交；一般付費取消/不結轉不能推出Startup耗盡/到期停扣。無即將截止日期，改穩定月度；原條件式B評級維持。"
+  },
+  {
+    "record_id": "tavus-developer-basic-free-reset-unconfirmed",
+    "verified_at": "2026-10-26T03:49:00+08:00",
+    "previous_limit": null,
+    "current_classification": "UNKNOWN",
+    "change_type": "initial_watchlist_baseline",
+    "sources": ["https://www.tavus.io/pricing", "https://www.tavus.io/terms-of-service", "https://docs.tavus.io/source-content/signing-up-subscribing", "https://www.tavus.io/acceptable-use-policy"],
+    "note": "Developer Basic免費25分鐘對話+5分鐘生成，非PALs 15分鐘；續發/到期、Basic免卡及一般試用自動轉付費條款適用未解。肖像/聲音同意及免費濫用限制保留；台灣Unknown、法律未核、僅觀察不評級。"
+  },
+  {
+    "record_id": "scrapegraph-free-credit-reset-conflict",
+    "verified_at": "2026-10-26T03:49:00+08:00",
+    "previous_limit": null,
+    "current_classification": "UNKNOWN",
+    "change_type": "initial_watchlist_baseline",
+    "sources": ["https://scrapegraphai.com/", "https://docs.scrapegraphai.com/knowledge-base/account/pricing.md", "https://scrapegraphai.com/terms", "https://scrapegraphai.com/signup"],
+    "note": "US$0 Free 500點，首頁one-time與文件每月矛盾未解；不同API耗點，非500次通用請求。免費輸入/輸出/目標內容/log/metadata可供訓練，敏感未授權資料禁用；台灣Unknown、法律未核、僅觀察不評級。"
   }
 ]

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **440 筆**（331 項機會、46 項政策、63 筆觀察線索），更新時間 **2026-10-26 02:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **11 筆既有紀錄**，其中 **5 筆回寫來源或條件並刷新 `verified_at`**；原有438筆中427筆未在本輪查閱。新增 [Tensorlake 免費沙箱](https://www.tensorlake.ai/pricing)（單併發、每次兩小時；[免費方案禁止處理受資料保護法約束的個資](https://www.tensorlake.ai/terms)）與 [JigsawStack 免費 API](https://jigsawstack.com/pricing)（百萬計價 tokens/月含處理毫秒、須放徽章；[產出再散布受限](https://jigsawstack.com/legal/terms)）。CodeRabbit 年約取消知識庫與條款的提前通知互異；Photoroom 沙盒新增每日100次上限且兩API沙盒池別未明；HOSTKEY 申請頁確認暫停。台灣個別資格及法律層面仍未核實。
+資料集目前有 **442 筆**（331 項機會、46 項政策、65 筆觀察線索），更新時間 **2026-10-26 03:57 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源複核 **14 筆既有紀錄**，原有 440 筆中 **426 筆未在本輪查閱**；新增 Tavus Developer Basic 與 ScrapeGraphAI Free 兩筆保守觀察線索，兩者均未確認台灣帳戶資格。Photoroom 新創方案仍須審核；Meta 黑客松 10/26 台北 11:59 截止且官方期限說明互異；Lawson 僅限日本在住者、既有集點者応募至 10/26；DeepSeek Search／Fetch 的限定免費工具呼叫 11/1 起收費。Dhanur 餘額歸零後進行中的工作仍可能從下次儲值扣款。法律層面未核實。
 
 ## 使用方式
 
