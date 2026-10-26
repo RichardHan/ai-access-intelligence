@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **467 筆**（346 項機會、46 項政策、75 筆觀察線索），更新時間 **2026-10-26 12:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源研究 **14 筆既有紀錄**，其中 **3 筆已寫入更新及查閱時間**；原有 466 筆中 **452 筆未在本輪重讀**，其餘 11 筆僅研究比對、未刷新 `verified_at`。新增 [Otter 學生教師個人 Pro 八折](https://help.otter.ai/hc/en-us/articles/4402467517847-Student-Teacher-discount-program-for-the-Pro-plan)；Meta 黑客松新報名已由主辦頁確認關閉，但入選者申領額度另有期限。NVIDIA 原型推論不含生產授權，Alibaba 新創額度不得轉讓。台灣個案資格、付款及法律層面多未核實。
+資料集目前有 **470 筆**（348 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 13:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源研究 **17 筆既有紀錄**，其中 **6 筆寫入局部更新及查閱時間**；原有 467 筆中 **450 筆未在本輪重讀**，其餘 11 筆僅研究比對、未刷新 `verified_at`。新增 [Mintlify 新創方案](https://www.mintlify.com/startups)及[非商業開源方案](https://www.mintlify.com/oss-program)，另列 [Neo4j 新創申請表暫不可用](https://neo4j.com/startup-program/apply/)觀察線索。Daytona 試用額度不適用 GPU，Crusoe 免卡公告與開戶指南付款要求矛盾；台灣個案資格、付款及法律層面多未核實。
 
 ## 使用方式
 
