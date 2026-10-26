@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **497 筆**（371 項機會、46 項政策、80 筆觀察線索），更新時間 **2026-10-27 01:11 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 494 筆中的 **6 筆既有紀錄**，**488 筆尚未更新本輪複核證據**；新增 [Murf API 新戶 US$10](https://murf.ai/pricing?product=api)、[Murf 新創 US$1,500／三月](https://murf.ai/startup-program) 與 [Sarashina 日本限定免費 Beta](https://sarashina.ai/terms) 觀察。Murf 新戶額度與舊文件的 10 萬字元、Murf 新創正文與 metadata 金額不一致；Sarashina 限日本居住或日本總部。HOSTKEY 申請頁仍暫停但產品頁稱收件，DeepSeek 指定工具 11/1 起收費；LlamaParse 新創方案月費未知，Azure 非營利需信用卡且額度耗盡轉付費。限時活動每日追蹤，其餘按月輪替；台灣個案資格與法律／監管結論多未核。
+資料集目前有 **499 筆**（372 項機會、46 項政策、81 筆觀察線索），更新時間 **2026-10-27 02:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 497 筆中的 **9 筆既有紀錄**，**488 筆尚未更新本輪複核證據**。新增 [X API／xAI 付費回饋](https://docs.x.com/x-api/getting-started/free-credits.md)（需首購或累計消費、逐戶推出，台灣卡未核）與 [Project Hatcher 台灣新創加速器](https://project-hatcher.sparklabstaiwan.com/) 已截止梯次觀察。Antigravity 免費第三方模型預定 11/2 移除；Sloyd 兩個月免費顯示缺資格與期限；Genspark Pro 週池為 Plus 十倍但絕對量未知。只複核各筆新標示的官方來源主張，並未全面重查其條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
 
 ## 使用方式
 
