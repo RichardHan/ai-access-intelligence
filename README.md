@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **458 筆**（340 項機會、46 項政策、72 筆觀察線索），更新時間 **2026-10-26 09:52 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **8 筆既有紀錄**，原有 454 筆中 **446 筆未在本輪複核**；新增 Mixedbread 新創機會 1 筆、Fastino／Cerebrium／Hindsight 觀察線索 3 筆。國網中心校級 10/31 截止；Meta 截止時區、Tencent 額度期限及 Mixedbread stores 數字仍有官方來源衝突。台灣個案資格、付款及法律層面多未核實。
+資料集目前有 **462 筆**（343 項機會、46 項政策、73 筆觀察線索），更新時間 **2026-10-26 11:01 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **12 筆既有紀錄**，原有 458 筆中 **446 筆未在本輪複核**；新增 Supadata、Opik 免費方案及 GMI × a16z 條件式新創優惠共 3 項機會，另增 SambaCloud × Rundown 舊活動待核線索 1 筆。TRAE 官方支援地區未列台灣；Meta 截止 ET/EST 與額度期限、BIZTEL 完整條款及新創活動剩餘名額未釐清。台灣個案資格、付款及法律層面多未核實。
 
 ## 使用方式
 
