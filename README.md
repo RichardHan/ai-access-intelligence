@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **484 筆**（360 項機會、46 項政策、78 筆觀察線索），更新時間 **2026-10-26 18:53 Asia/Taipei**（不代表全庫複核）。本輪更新複核 **10 筆既有紀錄**；原有 482 筆中 **472 筆未在本輪更新核驗**。新增 [Maxim Developer](https://www.getmaxim.ai/evals/pricing) 免費每月最多 10,000 logs（非模型推論），並將 [Hyperbrowser](https://www.hyperbrowser.ai/pricing) 起始 5,000 共享點列入觀察，因自動化條款與台灣資格待釐清。ASUS 台灣官方條款明列指定筆電三個月 Google AI 優惠，但需合格序號及付款方式且期滿自動續費；Claude 非營利 Access 的低中所得地區價格不適用於世界銀行分類為高所得的台灣總部機構。Novita Sandbox US$100 公開標示有效 90 日，Deno Free 完整額度涉及連卡驗證。限時案例每日追蹤，其餘按月輪替；法律結論未核處均明示。
+資料集目前有 **485 筆**（361 項機會、46 項政策、78 筆觀察線索），更新時間 **2026-10-26 19:54 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **5 筆既有紀錄**；原有 484 筆中 **479 筆未在本輪更新核驗**。新增 [Tactiq Free](https://tactiq.io/buy) 每月10份會議逐字稿及5 AI credits（扣點單位官方來源矛盾），台灣帳戶與錄音法律未核。Anthropic 科學補助公告最高 US$50,000 與支援頁 US$20,000／6個月衝突；Snowflake CoCo US$400 試用拆為 US$40 推論與 US$360 其他用量，試用後 US$20／月另計平台費；Baseten 額度池官方說法相互矛盾。限時案例每日追蹤，其餘按月輪替；法律結論未核處均明示。
 
 ## 使用方式
 
