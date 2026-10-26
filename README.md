@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **462 筆**（343 項機會、46 項政策、73 筆觀察線索），更新時間 **2026-10-26 11:01 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **12 筆既有紀錄**，原有 458 筆中 **446 筆未在本輪複核**；新增 Supadata、Opik 免費方案及 GMI × a16z 條件式新創優惠共 3 項機會，另增 SambaCloud × Rundown 舊活動待核線索 1 筆。TRAE 官方支援地區未列台灣；Meta 截止 ET/EST 與額度期限、BIZTEL 完整條款及新創活動剩餘名額未釐清。台灣個案資格、付款及法律層面多未核實。
+資料集目前有 **466 筆**（345 項機會、46 項政策、75 筆觀察線索），更新時間 **2026-10-26 11:59 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **15 筆既有紀錄**，原有 462 筆中 **447 筆未在本輪複核**；新增 Streamlit Community Cloud 與 Langdock 企業試用 2 項機會，Browserless 條款衝突與 OpenAI 新創 VC 推薦 2 筆待核線索。GitHub Student Pack 的 Codespaces 為 180 core-hours 而非機器小時；Google 台灣學生公告與學生頁美國資格 FAQ 矛盾。Meta 黑客松較早 ET 申請期限已過，但 waiver EST 晚一小時，暫不視為可新申請。台灣個案資格、付款及法律層面多未核實。
 
 ## 使用方式
 
