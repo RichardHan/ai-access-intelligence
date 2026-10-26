@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **494 筆**（369 項機會、46 項政策、79 筆觀察線索），更新時間 **2026-10-27 00:14 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 491 筆中的 **13 筆既有紀錄**，**478 筆尚未在本輪複核**；新增 [阿里雲教師百煉科研教學五折](https://help.aliyun.com/zh/model-studio/introduction-to-yungongkaiwu)、[Scrapfly 新戶一次 1,000 共用點](https://scrapfly.io/pricing) 與 [ndp one 10/31 前企業網站診斷](https://prtimes.jp/main/html/rd/p/000000038.000139644.html)。Kiro 台灣帳單不在付費支援國家清單；阿里雲學生券推理排除 Wan、HappyHorse、Omni；Nebius 綁卡試用可後付超額且有資料訓練退出選項。限時活動每日追蹤，其餘按月輪替；台灣個案資格與法律／監管結論多未核。
+資料集目前有 **497 筆**（371 項機會、46 項政策、80 筆觀察線索），更新時間 **2026-10-27 01:11 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 494 筆中的 **6 筆既有紀錄**，**488 筆尚未更新本輪複核證據**；新增 [Murf API 新戶 US$10](https://murf.ai/pricing?product=api)、[Murf 新創 US$1,500／三月](https://murf.ai/startup-program) 與 [Sarashina 日本限定免費 Beta](https://sarashina.ai/terms) 觀察。Murf 新戶額度與舊文件的 10 萬字元、Murf 新創正文與 metadata 金額不一致；Sarashina 限日本居住或日本總部。HOSTKEY 申請頁仍暫停但產品頁稱收件，DeepSeek 指定工具 11/1 起收費；LlamaParse 新創方案月費未知，Azure 非營利需信用卡且額度耗盡轉付費。限時活動每日追蹤，其餘按月輪替；台灣個案資格與法律／監管結論多未核。
 
 ## 使用方式
 
