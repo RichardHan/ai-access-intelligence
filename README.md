@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **473 筆**（351 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 14:54 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源並局部更新 **9 筆既有紀錄**，原有 470 筆中 **461 筆未在本輪重新查核**；新增 [Requesty 免卡每日200次指定免費模型](https://www.requesty.ai/free-models)、[Awan Lite 按模型大小設每日上限](https://www.awanllm.com/pricing)、[Consensus 學生與教師40%折扣](https://help.consensus.app/en/articles/10064359-how-to-get-a-student-or-clinician-discount)。BazaarLink免費搜尋有獨立每日額度及超額費；Google台灣方案頁列Cloud抵免但個別兌換未核。Kakao青年活動頁不可讀不等於已終止；Yotta Rudra金額與條款版本矛盾仍待釐清。台灣個別帳戶、付款與法律層面未核處均明示。
+資料集目前有 **474 筆**（352 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 15:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **12 筆既有紀錄**；原有473筆中 **461 筆未在本輪重新查核**。新增 [Runpod學術GPU研究方案](https://www.runpod.io/academic-research)：院系優先，個人個案審查；最高US$25K僅見於[官方研究文章](https://www.runpod.io/articles/guides/b200-ai-research)，正式方案頁不保證授額。Go2 AI-OCR 的底座服務明限日本國內，標準1人年費及初期費另計；Daytona新創上限及回覆時程仍有官方矛盾。Sarvam指定校活動及Lawson既有集點者今日截止階段仍須追蹤；台灣個別帳戶、付款與法律層面未核處均明示。
 
 ## 使用方式
 
