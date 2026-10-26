@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **488 筆**（363 項機會、46 項政策、79 筆觀察線索），更新時間 **2026-10-26 22:15 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 486 筆中的 **8 筆既有紀錄**，**478 筆未在本輪複核**；新增 [Leonardo Free](https://leonardo.ai/pricing/) 每日 150 生成 tokens（作品公開、非免費 API），以及 [Eden AI 註冊額度](https://www.edenai.co/post/how-to-generate-an-image-with-ai) 觀察線索（當日核發與台灣資格未核）。River US$25 僅見舊公告、當日發額未證；Claude Teachers 有五小時及週限；Laya Gateway 可能有額外用量費。台灣 App 上架或服務可用不等於個人優惠資格。限時／即將到期每日追蹤，其餘按月輪替；無適用官方法律或監管來源時法律結論未核實。
+資料集目前有 **491 筆**（366 項機會、46 項政策、79 筆觀察線索），更新時間 **2026-10-26 23:14 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 488 筆中的 **5 筆既有紀錄**，**483 筆未更新複核欄位**；新增 [CoralBricks 新戶 US$5 試用額](https://www.coralbricks.ai/docs/getting-started)、[Circleback 學生／非營利折扣](https://circleback.ai/pricing) 與 [VideoGen Model 1 選案補助](https://videogen.io/news/videogen-model-1-launch)。Lawson 日本集點申請依 JST 推定已截止、11 月抽選仍只限既有合格者；GitLab 教育不得作校務 IT，且 AI credits 不自動配發。Vultr 促銷須綁有效卡或 PayPal；Manus 公開申請暫停、現須 VC 推薦。台灣帳戶核准與法律／監管結論多未核；限時／即將到期每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
