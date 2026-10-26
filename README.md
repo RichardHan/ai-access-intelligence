@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **474 筆**（352 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 15:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **12 筆既有紀錄**；原有473筆中 **461 筆未在本輪重新查核**。新增 [Runpod學術GPU研究方案](https://www.runpod.io/academic-research)：院系優先，個人個案審查；最高US$25K僅見於[官方研究文章](https://www.runpod.io/articles/guides/b200-ai-research)，正式方案頁不保證授額。Go2 AI-OCR 的底座服務明限日本國內，標準1人年費及初期費另計；Daytona新創上限及回覆時程仍有官方矛盾。Sarvam指定校活動及Lawson既有集點者今日截止階段仍須追蹤；台灣個別帳戶、付款與法律層面未核處均明示。
+資料集目前有 **476 筆**（354 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 16:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **11 筆既有紀錄**；原有474筆中 **463 筆未在本輪重新查核**。新增 [Napkin Free](https://www.napkin.ai/pricing/) 每週500共用AI點數及 [Elicit Basic](https://elicit.com/pricing) 免費論文搜尋與有限代理月池；兩者台灣帳戶仍未核。Activepieces現行定價頁月度／每日重置說法矛盾，Retell額外月費不隨試用點數用盡而停止；限時案例每日追蹤，其餘按月輪替。台灣個別帳戶、付款與法律層面未核處均明示。
 
 ## 使用方式
 
