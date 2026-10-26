@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **476 筆**（354 項機會、46 項政策、76 筆觀察線索），更新時間 **2026-10-26 16:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **11 筆既有紀錄**；原有474筆中 **463 筆未在本輪重新查核**。新增 [Napkin Free](https://www.napkin.ai/pricing/) 每週500共用AI點數及 [Elicit Basic](https://elicit.com/pricing) 免費論文搜尋與有限代理月池；兩者台灣帳戶仍未核。Activepieces現行定價頁月度／每日重置說法矛盾，Retell額外月費不隨試用點數用盡而停止；限時案例每日追蹤，其餘按月輪替。台灣個別帳戶、付款與法律層面未核處均明示。
+資料集目前有 **479 筆**（356 項機會、46 項政策、77 筆觀察線索），更新時間 **2026-10-26 17:52 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **9 筆既有紀錄**；原有476筆中 **467 筆未在本輪重新查核**。新增 [Riza Hobby](https://riza.io/pricing) 每月10萬次程式執行及 [Aryn DocParse](https://www.aryn.ai/pricing) 免卡三個月、每月最多1萬頁；[Extend](https://www.extend.ai/pricing) 首次額度因API服務合約、扣款及台灣資格未核暫列觀察。Sarvam Kanpur與BHU新報名關閉，Kanpur頁內仍有OPEN矛盾；IBM Cloud US$200需首次升級PAYG且非Lite超額計費。限時案例每日追蹤，其餘按月輪替；台灣個別帳戶及法律結論未核處均明示。
 
 ## 使用方式
 
