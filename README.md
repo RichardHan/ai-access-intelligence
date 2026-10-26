@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **499 筆**（372 項機會、46 項政策、81 筆觀察線索），更新時間 **2026-10-27 02:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 497 筆中的 **9 筆既有紀錄**，**488 筆尚未更新本輪複核證據**。新增 [X API／xAI 付費回饋](https://docs.x.com/x-api/getting-started/free-credits.md)（需首購或累計消費、逐戶推出，台灣卡未核）與 [Project Hatcher 台灣新創加速器](https://project-hatcher.sparklabstaiwan.com/) 已截止梯次觀察。Antigravity 免費第三方模型預定 11/2 移除；Sloyd 兩個月免費顯示缺資格與期限；Genspark Pro 週池為 Plus 十倍但絕對量未知。只複核各筆新標示的官方來源主張，並未全面重查其條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
+資料集目前有 **501 筆**（372 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 03:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 499 筆中的 **10 筆既有紀錄**，**489 筆尚未更新本輪複核證據**。新增 [Pipedream Connect 開發環境](https://pipedream.com/docs/connect/managed-auth/environments)（最多10個測試使用者，非生產用途）及 [StackAI Free](https://www.stackai.com/pricing)（每月500 runs、外部模型可另計費）兩筆台灣資格未證的觀察線索。Sloyd「兩個月免費」實為年繳價差；Genspark舊會員無限權益12/31到期；AI21試用期限官方七天與三個月仍衝突。只複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
 
 ## 使用方式
 
