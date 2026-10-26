@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **491 筆**（366 項機會、46 項政策、79 筆觀察線索），更新時間 **2026-10-26 23:14 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 488 筆中的 **5 筆既有紀錄**，**483 筆未更新複核欄位**；新增 [CoralBricks 新戶 US$5 試用額](https://www.coralbricks.ai/docs/getting-started)、[Circleback 學生／非營利折扣](https://circleback.ai/pricing) 與 [VideoGen Model 1 選案補助](https://videogen.io/news/videogen-model-1-launch)。Lawson 日本集點申請依 JST 推定已截止、11 月抽選仍只限既有合格者；GitLab 教育不得作校務 IT，且 AI credits 不自動配發。Vultr 促銷須綁有效卡或 PayPal；Manus 公開申請暫停、現須 VC 推薦。台灣帳戶核准與法律／監管結論多未核；限時／即將到期每日追蹤，其餘按月輪替。
+資料集目前有 **494 筆**（369 項機會、46 項政策、79 筆觀察線索），更新時間 **2026-10-27 00:14 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 491 筆中的 **13 筆既有紀錄**，**478 筆尚未在本輪複核**；新增 [阿里雲教師百煉科研教學五折](https://help.aliyun.com/zh/model-studio/introduction-to-yungongkaiwu)、[Scrapfly 新戶一次 1,000 共用點](https://scrapfly.io/pricing) 與 [ndp one 10/31 前企業網站診斷](https://prtimes.jp/main/html/rd/p/000000038.000139644.html)。Kiro 台灣帳單不在付費支援國家清單；阿里雲學生券推理排除 Wan、HappyHorse、Omni；Nebius 綁卡試用可後付超額且有資料訓練退出選項。限時活動每日追蹤，其餘按月輪替；台灣個案資格與法律／監管結論多未核。
 
 ## 使用方式
 
