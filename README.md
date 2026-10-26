@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **479 筆**（356 項機會、46 項政策、77 筆觀察線索），更新時間 **2026-10-26 17:52 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **9 筆既有紀錄**；原有476筆中 **467 筆未在本輪重新查核**。新增 [Riza Hobby](https://riza.io/pricing) 每月10萬次程式執行及 [Aryn DocParse](https://www.aryn.ai/pricing) 免卡三個月、每月最多1萬頁；[Extend](https://www.extend.ai/pricing) 首次額度因API服務合約、扣款及台灣資格未核暫列觀察。Sarvam Kanpur與BHU新報名關閉，Kanpur頁內仍有OPEN矛盾；IBM Cloud US$200需首次升級PAYG且非Lite超額計費。限時案例每日追蹤，其餘按月輪替；台灣個別帳戶及法律結論未核處均明示。
+資料集目前有 **482 筆**（359 項機會、46 項政策、77 筆觀察線索），更新時間 **2026-10-26 18:42 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **14 筆既有紀錄**；原有 479 筆中 **465 筆未在本輪重新查核**。新增 [Traceloop](https://traceloop.com/pricing) 每月 50,000 spans、[HoneyHive](https://www.honeyhive.ai/pricing) 每月 10,000 events，以及 [Splunk Observability Cloud Free Edition](https://www.splunk.com/en_us/download/observability-cloud-free-edition.html) 最多 15 hosts；皆為觀測工具免費額度，非免費模型推論。Traceloop 席次表述互相矛盾，HoneyHive 服務合約未取得，台灣帳戶資格仍未核。複核糾正 Together 首次購點最低 US$15、Vapi 加購項目可能自動扣款，以及 NCHC 申請截止與資源使用期限之別。限時案例每日追蹤，其餘按月輪替；法律結論未核處均明示。
 
 ## 使用方式
 
