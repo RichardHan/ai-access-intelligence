@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **466 筆**（345 項機會、46 項政策、75 筆觀察線索），更新時間 **2026-10-26 11:59 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源局部複核 **15 筆既有紀錄**，原有 462 筆中 **447 筆未在本輪複核**；新增 Streamlit Community Cloud 與 Langdock 企業試用 2 項機會，Browserless 條款衝突與 OpenAI 新創 VC 推薦 2 筆待核線索。GitHub Student Pack 的 Codespaces 為 180 core-hours 而非機器小時；Google 台灣學生公告與學生頁美國資格 FAQ 矛盾。Meta 黑客松較早 ET 申請期限已過，但 waiver EST 晚一小時，暫不視為可新申請。台灣個案資格、付款及法律層面多未核實。
+資料集目前有 **467 筆**（346 項機會、46 項政策、75 筆觀察線索），更新時間 **2026-10-26 12:49 Asia/Taipei**（不代表全庫複核）。本輪實讀官方來源研究 **14 筆既有紀錄**，其中 **3 筆已寫入更新及查閱時間**；原有 466 筆中 **452 筆未在本輪重讀**，其餘 11 筆僅研究比對、未刷新 `verified_at`。新增 [Otter 學生教師個人 Pro 八折](https://help.otter.ai/hc/en-us/articles/4402467517847-Student-Teacher-discount-program-for-the-Pro-plan)；Meta 黑客松新報名已由主辦頁確認關閉，但入選者申領額度另有期限。NVIDIA 原型推論不含生產授權，Alibaba 新創額度不得轉讓。台灣個案資格、付款及法律層面多未核實。
 
 ## 使用方式
 
