@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **501 筆**（372 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 03:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 499 筆中的 **10 筆既有紀錄**，**489 筆尚未更新本輪複核證據**。新增 [Pipedream Connect 開發環境](https://pipedream.com/docs/connect/managed-auth/environments)（最多10個測試使用者，非生產用途）及 [StackAI Free](https://www.stackai.com/pricing)（每月500 runs、外部模型可另計費）兩筆台灣資格未證的觀察線索。Sloyd「兩個月免費」實為年繳價差；Genspark舊會員無限權益12/31到期；AI21試用期限官方七天與三個月仍衝突。只複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
+資料集目前有 **503 筆**（374 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 04:11 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 501 筆中的 **7 筆既有紀錄**，**494 筆尚未更新本輪複核證據**。新增 [Autodesk Flow Studio Education](https://blogs.autodesk.com/media-and-entertainment/2026/09/28/autodesk-flow-studio-pricing-and-subscription-guide/)（合資格教育使用者每月2,100點）及 [Aiven PostgreSQL Free](https://aiven.io/docs/products/postgresql/concepts/pg-free-tier)（免卡1GB資料庫）兩筆機會，台灣個案資格均未核。Brave與Turso的台灣資格由 Yes 改 Unknown；Brave後付可超額計費；智譜原引用的數發部公告其實僅針對DeepSeek，法律狀態改未核實。Granola新創頁未列先前所稱投資人名單。只複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
 
 ## 使用方式
 
