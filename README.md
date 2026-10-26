@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **482 筆**（359 項機會、46 項政策、77 筆觀察線索），更新時間 **2026-10-26 18:42 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **14 筆既有紀錄**；原有 479 筆中 **465 筆未在本輪重新查核**。新增 [Traceloop](https://traceloop.com/pricing) 每月 50,000 spans、[HoneyHive](https://www.honeyhive.ai/pricing) 每月 10,000 events，以及 [Splunk Observability Cloud Free Edition](https://www.splunk.com/en_us/download/observability-cloud-free-edition.html) 最多 15 hosts；皆為觀測工具免費額度，非免費模型推論。Traceloop 席次表述互相矛盾，HoneyHive 服務合約未取得，台灣帳戶資格仍未核。複核糾正 Together 首次購點最低 US$15、Vapi 加購項目可能自動扣款，以及 NCHC 申請截止與資源使用期限之別。限時案例每日追蹤，其餘按月輪替；法律結論未核處均明示。
+資料集目前有 **484 筆**（360 項機會、46 項政策、78 筆觀察線索），更新時間 **2026-10-26 18:53 Asia/Taipei**（不代表全庫複核）。本輪更新複核 **10 筆既有紀錄**；原有 482 筆中 **472 筆未在本輪更新核驗**。新增 [Maxim Developer](https://www.getmaxim.ai/evals/pricing) 免費每月最多 10,000 logs（非模型推論），並將 [Hyperbrowser](https://www.hyperbrowser.ai/pricing) 起始 5,000 共享點列入觀察，因自動化條款與台灣資格待釐清。ASUS 台灣官方條款明列指定筆電三個月 Google AI 優惠，但需合格序號及付款方式且期滿自動續費；Claude 非營利 Access 的低中所得地區價格不適用於世界銀行分類為高所得的台灣總部機構。Novita Sandbox US$100 公開標示有效 90 日，Deno Free 完整額度涉及連卡驗證。限時案例每日追蹤，其餘按月輪替；法律結論未核處均明示。
 
 ## 使用方式
 
