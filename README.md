@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **507 筆**（378 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 08:47 Asia/Taipei**（不代表全庫複核）。本輪在原有 505 筆中**局部複核 3 筆**（Replicate、CodeBuddy、ChatGPT 美國學生），**502 筆尚未更新本輪複核證據**；新增 [Laminar Free](https://laminar.sh/pricing)（每週期1GB代理追蹤，Signals免費額度說法衝突）及 [Fireflies Free](https://guide.fireflies.ai/articles/8632872350-unlock-unlimited-transcriptions-on-the-fireflies-free-plan)（合格Auto-join可不限原始逐字稿，400分鐘儲存，AI額度文件衝突）。CodeBuddy Pro七日試用須卡且自動續費，取代Free月額；Replicate原台灣GitHub註冊說法無官方證據；ChatGPT學生驗證途徑與活動頁校方信箱說法不同。僅複核各筆新增官方來源主張，未全面重查台灣個案或法律／監管；限時每日追蹤，其餘按月輪替。
+資料集目前有 **508 筆**（379 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 11:44 Asia/Taipei**（不代表全庫複核）。本輪在原有 507 筆中**局部複核 7 筆**（AICU 熊本、Tencent TokenHub、Fastino、Claude 科學家、Suitup、台灣 ADI、ChatGPT Pro 200），**500 筆未更新本輪複核證據**；新增 [Firecrawl 新創年繳點數翻倍](https://www.firecrawl.dev/startups)，非免費訂閱。Tencent 一年／90 天效期衝突仍在，每模型 US$10 凍結款須退回帳戶；科學家 API 點需訂閱有效七日與連結 Console；AICU 新申請仍關閉。只核實所列官方來源的特定主張，台灣個案、法律與部分續費／兌換未知；限時每日，其餘按月輪替。
 
 ## 使用方式
 

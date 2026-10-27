@@ -1,8 +1,79 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-27T08:47:08+08:00",
-  "scope": "2026-10-27 08:05–08:42 Asia/Taipei 本次新增2筆（Laminar、Fireflies），局部複核既有3筆（Replicate、CodeBuddy、ChatGPT學生）；原有505筆中502筆未更新本輪複核證據，共507筆（378機會、46政策、83觀察）。各筆僅核對所列官方頁的特定主張，非全面條款、台灣個案或法律複核；台灣ADI入口逾時，公告僅能證截止日期，未刷新其查核時間。限時每日、其他按月輪替。優先度為既有欄位衍生評分，非外部查核。",
+  "updated_at": "2026-10-27T11:44:50+08:00",
+  "scope": "2026-10-27 10:05–11:13 Asia/Taipei 本輪於原507筆中局部複核7筆（AICU、Tencent TokenHub、Fastino、Claude科學家、Suitup、台灣ADI、ChatGPT Pro200），另加一筆Firecrawl新創；原庫500筆未查。共508筆（379機會、46政策、83觀察）。各筆僅所列官方來源特定主張，非全面台灣個案、法律或全部條款複核；限時每日、其他按月輪替。updated_at僅資料集更新。；2026-10-27 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
+    {
+      "id": "firecrawl-startups-annual-double-credits",
+      "title": "Firecrawl新創：年繳方案月額度翻倍一年，非免費訂閱",
+      "summary": "官方新創計畫將合格年繳方案每月credits翻倍一年，Standard示例由10萬增至20萬/月；額外點數最高價值US$2,500/月、US$30,000/年不是現金或保證核准額。限成立未滿五年、少於50人且募資低於US$10M的新創；既有年繳客戶亦可申請。須付年費，超額PAYG可扣卡，台灣企業與帳單未核。",
+      "categories": [
+        "VALUE-DEAL",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "developer",
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "須申請審核及年繳，未申請或付款",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "年繳訂閱退款、取消及優惠到期續約條款未核；PAYG月上限空白可持續扣卡、設零可停用超額。",
+      "usable_duration": "核准後一年，年繳方案每月額度翻倍；申請截止未公布",
+      "access_risk": "需先承擔年繳付費方案；超額PAYG每US$5增量扣款。募資US$10M邊界官方頁正文與metadata說法不同；優惠點數結轉及期後帳單未核。",
+      "verified_at": "2026-10-27T11:07:27+08:00",
+      "discovered_at": "2026-10-27T10:53:05+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-27T11:07:27+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "新創申請頁仍刊登年繳方案每月credits翻倍一年，最高額外價值US$2,500/月、US$30,000/年；非免費訂閱。",
+        "account_eligibility": "成立未滿五年、少於50人、募資低於US$10M；既有年繳用戶可申請；YC另有其他優惠，不能推定疊加。",
+        "billing_country": "年繳Hobby一般US$190/年、Standard US$990/年；台灣結帳、稅及申請時是否須先購年約未核。",
+        "identity_residency": "未見台灣企業明確排除或核准承諾，個案需審核。",
+        "terms_restrictions": "標準方案示例每月10萬變20萬；價值上限不是可提領現金。一般Hobby/Standard/Growth點數不結轉，活動加贈點數未明；PAYG須自行設月上限，不得假造企業資格。",
+        "taiwan_note": "Unknown：網站可讀不證台灣公司可核准或台灣付款成功；無法律/監管結論。"
+      },
+      "unknowns": [
+        "台灣公司申請、付款與稅",
+        "募資剛好US$10M的正文與metadata邊界差異",
+        "優惠點數結轉、期後續約與取消退款",
+        "實際核准、活動截止及年約購買時點"
+      ],
+      "sources": [
+        {
+          "url": "https://www.firecrawl.dev/startups",
+          "scope": "新創資格、年繳月額翻倍一年、價值上限；非個案核准",
+          "evidence": "頁面正文列募資under US$10M、少於50人、成立未滿五年，年繳方案含既有客戶可申請；Standard由每月100,000增至200,000 credits，額外價值上限US$2,500/月、US$30,000/年；metadata稱no more than US$10M，邊界衝突。",
+          "accessed_at": "2026-10-27T10:53:05+08:00"
+        },
+        {
+          "url": "https://www.firecrawl.dev/pricing",
+          "scope": "一般年繳費用、PAYG扣費與一般點數結轉；非優惠續約條款",
+          "evidence": "Hobby年繳US$190、Standard年繳US$990；PAYG每US$5增量收費，月額空白無上限、設零關閉；一般Hobby/Standard/Growth點數不結轉，活動贈點是否相同未明。",
+          "accessed_at": "2026-10-27T11:07:27+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
     {
       "id": "fireflies-free-auto-join-storage-credit-conflicts",
       "title": "Fireflies Free：Auto-join條件式不限逐字稿，AI額度文件衝突",
@@ -2661,7 +2732,7 @@
     {
       "id": "claude-scientists",
       "title": "Claude科學研究方案：Standard免費／Premium US$15",
-      "summary": "Anthropic方案頁與2026-08-27生效條款確認：限量10,000名經核驗研究者、每實驗室一個1–25席方案；PI/同等職位於認可大學或非營利研究機構申請，Standard US$0、Premium US$15/席/月，優惠12個月。需有效付款方式，超過席位配額的用量另按標準費率計費；期滿自動按當時價格續訂，取消可避免續費。額度、在台實際申請資格與付款尚未核實。",
+      "summary": "科學家Team限首批10,000位核驗者、每實驗室1–25席；Standard US$0/席月、Premium US$15/席月優惠12個月，需有效付款方式，期滿按當時價格自動續訂。另有每月Standard US$20/席、Premium US$100/席API點，工作區合計最高US$500；須有效訂閱滿7天並由Owner連結Console，帳期不結轉，非互動Claude Code額度。名額、台灣機構核准及個案付款未核。",
       "categories": [
         "FREE",
         "VALUE-DEAL",
@@ -2685,22 +2756,22 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": null,
+      "cancellation": "於優惠期末前取消避免按當時價格自動續訂；條款稱存取通常至下一帳期，已收費通常不退（適用法律例外）。既有年約轉月付之未用預付費轉帳戶點數，非退至付款工具。",
       "usable_duration": "核准後12個月促銷；期滿按當時價格",
       "access_risk": "資格、名額、政策與供應可能改變",
-      "verified_at": "2026-10-26T10:47:09+08:00",
+      "verified_at": "2026-10-27T10:42:17+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2026-08-27",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T10:47:09+08:00",
+      "next_review_at": "2026-10-28T10:42:17+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Claude Team for scientists；Standard US$0/席/月、Premium US$15/席/月（官方稱5倍用量），優惠期12個月。每方案1–25席；多席共享研究團隊。每Standard席每月另有US$20、每Premium席US$100 API credits，所有席位合併後每工作區每月最多US$500。",
         "account_eligibility": "須由認可大學或非營利研究機構PI/同等職位驗證並申請；通過後可邀請博士後、研究生、研究人員。營利公司、CRO及產業R&D不合格；每實驗室一方案，僅限一個；不可轉讓或與其他優惠併用。",
         "billing_country": "須在計畫可用地區，並提供有效付款方式；Premium超額用量另以標準費率計費。條款價格未含適用稅，付款方式/台灣結帳未核。",
         "identity_residency": "Claude現行官方支援說明已列Taiwan；2026-11-12生效之另一地區政策亦列Taiwan。服務可用不代表科學家方案個人或機構必獲核准。",
-        "terms_restrictions": "10,000名額、限量且可隨時結束；優惠12個月，期滿自動按當時價格續訂，需於優惠期末前取消避免收費。連續90日無合格使用可能結束優惠；失去資格、虛假資料、建立多帳號或加入不合格使用者可能失去優惠/遭停權。席位額度外用量另收標準費率。 官方FAQ/Help稱連續90日無活動可取消促銷；促銷條款§6則描述結束促銷並停用帳戶，處置有官方文字差異，未推定相同結果。",
+        "terms_restrictions": "10,000名額可隨時關閉；優惠12個月後自動續費，超額使用另收費。API點須有效訂閱滿7日並由Team Owner連結單一Console組織，每帳期過期、不結轉；非互動Claude Code或席位超額點數，Console自動儲值/已購點可造成額外費用。FAQ與促銷條款對90日無活動的恢復原價或停帳（含可能按比例退款）說法不同；不得虛報或多帳。",
         "taiwan_note": "現行Claude支援說明列台灣，但科學家方案的台灣研究機構核驗、帳單及個人付款仍未核實，故優惠資格Unknown。"
       },
       "unknowns": [
@@ -2761,6 +2832,18 @@
           "label": "Anthropic 科學家方案促銷條款本輪複核",
           "scope": "有效付款方式、超額費、到期續訂及 90 日條款；非法律或個案帳單結論",
           "evidence": "2026-10-26 10:47 Asia/Taipei 實讀：2026-08-27 生效條款仍列前 10,000 名、PI 核驗、有效付款方式；優惠僅席位費，額外用量標準價；12 個月後按當時價格自動續訂，提前取消。§6 可停用帳戶，與方案 FAQ 回標準價文字不同。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
+          "scope": "科學家Team API月額、七日資格、Console連結、不結轉及超額分池；非個案核准",
+          "evidence": "Standard US$20/席、Premium US$100/席，工作區每月合計上限US$500；訂閱有效滿七日，由Owner連結Console，帳期末未用點過期；不含互動Claude Code及席位額外用量。Console免新增付款方式不免科學家方案付款要求。",
+          "accessed_at": "2026-10-27T10:42:17+08:00"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/team-plan-for-scientists-terms",
+          "scope": "本輪12月優惠、付款、續費及取消條款；法律適用未核",
+          "evidence": "條款2026/08/27生效，首批10,000核驗者、1–25席，每實驗室一次；需有效付款工具，12個月後自動按時價續費，超額另計；90日無活動處置與FAQ文字不同。",
+          "accessed_at": "2026-10-27T10:42:17+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -7073,12 +7156,12 @@
       "cancellation": "取消停止後續續費，通常保留到當期末",
       "usable_duration": "舊額度至10/29，精確時刻時區未知",
       "access_risk": "舊額度10/29精確截止時區與新舊數值未公開；服務台灣可訂不等於個案有歷史過渡資格。",
-      "verified_at": "2026-10-26T10:49:00+08:00",
+      "verified_at": "2026-10-27T10:42:23+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": "舊Pro200可保留高額度至10/29；Ultrafast僅Pro500，依包含額度8倍計量。",
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T10:49:00+08:00",
+      "next_review_at": "2026-10-28T10:42:23+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Pro 100/200/500公開提供訂閱",
@@ -7119,6 +7202,12 @@
           "url": "https://help.openai.com/en/articles/10421635-multicurrency-billing",
           "scope": "台灣TWD與信用/簽帳卡一般結帳，不證明個人過渡資格",
           "evidence": "2026-10-26 10:46–10:49 Asia/Taipei實讀台灣TWD與卡片支援；支援國家清單另列Taiwan。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+          "scope": "本輪僅重查公開Pro價格、過渡資格、10/29額度終點與取消規則；未核個人帳戶及法律",
+          "evidence": "官方列Pro 100/200/500每月US$100/200/500；9/22至9/29 10AM PT曾持有效Pro200者，同帳戶重新訂閱且訂閱有效時可保留舊額度至10/29，之後降低但月費不變；未列新舊額度數字或10/29時區。取消停止後續續費，當期通常仍可使用；不自動退款。",
+          "accessed_at": "2026-10-27T10:42:23+08:00"
         }
       ],
       "record_type": "policy",
@@ -8733,12 +8822,12 @@
       "cancellation": null,
       "usable_duration": "至2026-10-31且受計畫預算",
       "access_risk": "新申請已關閉；既有支援受核准條件及計畫總預算限制。",
-      "verified_at": "2026-10-26T08:47:39+08:00",
+      "verified_at": "2026-10-27T10:29:27+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T08:47:39+08:00",
+      "next_review_at": "2026-10-28T10:29:27+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "2026-10-31前免追加費，但總預算用盡可能限制；對象為供災民/居民/支援者/自治體使用的災害支援應用，不補貼開發者個人AI使用。AICU API含OpenAI相容LLM等，部分整合模型/語音服務仍可能另收費。",
@@ -8773,6 +8862,18 @@
           "scope": "新申請關閉，非既有支援全部終止",
           "evidence": "2026-10-26 08:46–08:47 Asia/Taipei實讀仍列募集終了；企業7/30公告仍列核准支援至10/31、受總預算限制。關閉日期與餘額未公告。",
           "accessed_time_range": "2026-10-26T08:46:29+08:00–2026-10-26T08:47:39+08:00"
+        },
+        {
+          "url": "https://aicu.jp/call/kumamoto260728",
+          "scope": "本輪僅確認新申請仍關閉",
+          "evidence": "頁面明列応募締切／募集終了；不能推論已核准支援提前終止。",
+          "accessed_at": "2026-10-27T10:29:27+08:00"
+        },
+        {
+          "url": "https://corp.aicu.ai/ja/kumamoto260728",
+          "scope": "公告原有10/31期限、預算及付費整合；非台灣資格或法律查核",
+          "evidence": "7/30公告仍列核准災害支援用途至10/31受總預算限制；Gemini及ElevenLabs多語音整合標為付費，申請頁未列同樣付費標示。",
+          "accessed_at": "2026-10-27T10:29:27+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -8816,12 +8917,12 @@
       "cancellation": "試用期可由聯絡表要求取消並刪帳戶；付費契約期間取消不退款。試用後要開始付費契約須登記方案與付款資訊。",
       "usable_duration": "申請至10/31（時區未明）；試用7日，簽約後前三月折扣",
       "access_risk": "試用免卡不代表活動折扣自動核准；付費需信用卡，取消付費契約期間不退款。台灣法人/卡未核。",
-      "verified_at": "2026-10-26T10:49:00+08:00",
+      "verified_at": "2026-10-27T10:41:17+08:00",
       "discovered_at": "2026-10-23T21:05:05+08:00",
       "announcement_at": "2026-09-27",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T10:49:00+08:00",
+      "next_review_at": "2026-10-28T10:41:17+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "官方10/1–10/31活動仍刊載，需先員工面談再申請7日免費試用。",
@@ -8849,6 +8950,18 @@
           "label": "Suitup官方方案FAQ本輪複核",
           "scope": "試用免卡、付費卡、取消及退款；非活動折扣自動資格",
           "evidence": "2026-10-26 10:46–10:49 Asia/Taipei實讀：7日試用免卡且全功能，付費契約須登記方案/信用卡；可經聯絡表取消試用並刪帳，付費契約期間取消不退款。"
+        },
+        {
+          "url": "https://suitup.jp/blog/35123/",
+          "scope": "本輪10/31活動資格與12/31另項免初期費；非台灣付款核准",
+          "evidence": "10/1–10/31期間須經員工面談並申請7日試用，聯絡表註明2026年10月度AIツール導入応援キャンペーン；簽約後前三月八折。未列精確時區；初期費免到12/31是獨立優惠。",
+          "accessed_at": "2026-10-27T10:41:17+08:00"
+        },
+        {
+          "url": "https://suitup.jp/plan/",
+          "scope": "本輪試用免卡、付費登卡與取消；非折扣核准",
+          "evidence": "7日全功能試用免卡；付費契約需卡，可用聯絡表取消試用並刪帳；已付費期間取消不退款。",
+          "accessed_at": "2026-10-27T10:41:17+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -11791,12 +11904,12 @@
       "cancellation": null,
       "usable_duration": "核准通知所載起訖，最多3個月；點數用罄或到期即終止，無自動付費條款資料。",
       "access_risk": "須審查核定且額度按級別決定；訓練點數按平台使用時間扣除且含閒置，沒有SLA保證；禁止商轉營運、營利用途、中港澳遠端IP及中國/中資來源模型/工具。",
-      "verified_at": "2026-10-26T11:48:00+08:00",
+      "verified_at": "2026-10-27T10:54:32+08:00",
       "discovered_at": "2026-10-24T02:02:00+08:00",
       "announcement_at": "2026-06-17",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T11:48:00+08:00",
+      "next_review_at": "2026-10-28T10:54:32+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "數產署受理至2026/10/30 23:59:59系統時間，入口仍開放；核定後3個月免費算力，屬資源服務而非現金補助。",
@@ -11862,6 +11975,18 @@
           "scope": "訓練按平台時間計點含閒置、與卡數無直接關係；非個案核准",
           "evidence": "2026-10-26 11:46–11:48 Asia/Taipei實讀QA與入口：10/30 23:59:59依系統紀錄；扣點按平台時間含閒置，不能換算保證多卡GPU時數。時區及實際申請未核。",
           "accessed_time_range": "2026-10-26T11:46:00+08:00–2026-10-26T11:48:00+08:00"
+        },
+        {
+          "url": "https://aipower.dginfra.gov.tw/front/index",
+          "scope": "本輪入口申請期限；非個案核准或法律查核",
+          "evidence": "入口仍列民國115/10/30 23:59:59系統時間截止及11/02審查，未列時區。",
+          "accessed_at": "2026-10-27T10:29:27+08:00"
+        },
+        {
+          "url": "https://aipower.dginfra.gov.tw/front/filePush?pFolder=content&pName=%E6%95%B8%E7%99%BC%E9%83%A8%E6%95%B8%E4%BD%8D%E7%94%A2%E6%A5%AD%E7%BD%B2%20115%E5%B9%B4%E7%AE%97%E5%8A%9B%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E9%A0%88%E7%9F%A5.pdf",
+          "scope": "本輪下載15頁須知：企業資格、免費資源、點數及禁用範圍；QA未重讀",
+          "evidence": "p.2列台灣合格登記事業、工商憑證、排除分公司及陸資且資源免費；p.3列核定三個月、1千/2千/6千點及每點0.5 GPU小時或10萬輸入/輸出token；pp.5,8–9列固定來源IP、禁中港澳遠端及中資模型工具、禁營利與轉售。QA連線失敗，閒置扣點與卡數關係未於本輪核實。",
+          "accessed_at": "2026-10-27T10:54:32+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -25311,7 +25436,7 @@
         "quota",
         "developer"
       ],
-      "setup_cost_usd": 0,
+      "setup_cost_usd": null,
       "recurring_cost_usd": 0,
       "effort_minutes_max": 25,
       "effort_basis": "分析者估計：註冊Tencent Cloud國際/中國站帳號並在TokenHub控制台領取；未代為註冊或充值。",
@@ -25325,15 +25450,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "未開後付費則免費額耗盡停服務，開啟則超額計費；每模型領取/啟用凍結US$10，解除需刪除該模型全部endpoint，預設endpoint需客服處理，模型隨之停用。",
+      "cancellation": "未開後付費則額度耗盡停止，開通則超額計費；每模型凍結US$10，刪除所有endpoint後退回Tencent帳戶，預設endpoint須客服協助；外部提領未核。",
       "usable_duration": "官方文件稱領取後1年；官方促銷頁稱領取後90天，期限衝突未解；活動整體至2026-12-31",
-      "access_risk": "一份官方文件稱1年、活動FAQ稱90天；每模型領取或後付費開通可能凍結US$10，退回需終止所有endpoint。活動整體至12/31，台灣支付未核。",
-      "verified_at": "2026-10-26T09:47:26+08:00",
+      "access_risk": "官方一年與90天效期、共用池與每模型額度互相矛盾；每模型US$10凍結需資金或信用，首次API呼叫可能自動領取。付費訂閱與試用token分開；台灣付款未核。",
+      "verified_at": "2026-10-27T10:50:09+08:00",
       "discovered_at": "2026-10-25T00:58:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T09:47:26+08:00",
+      "next_review_at": "2026-10-28T10:50:09+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "TokenHub 國際站（console.tencentcloud.com）與中國站皆提供；OpenAI/Anthropic相容API；國際版可用新加坡等接入點（tokenhub-intl.tencentcloudapi.com）。",
@@ -25368,6 +25493,18 @@
           "scope": "每模型凍結、退款步驟及衝突中的一年期限",
           "evidence": "2026-10-26 09:46–09:47 Asia/Taipei 實讀：每模型領取或開通後付費凍結US$10，退回須刪除所有endpoint；文件一年，促銷FAQ 90天及共享池描述仍矛盾。",
           "accessed_time_range": "2026-10-26T09:46:00+08:00–2026-10-26T09:47:26+08:00"
+        },
+        {
+          "url": "https://intl.cloud.tencent.com/document/product/1300/80423",
+          "scope": "本輪產品文件一年期限及每模型US$10帳戶凍結",
+          "evidence": "每語言模型100萬tokens、有效一年；領取或開後付費按模型凍結US$10，額度耗盡未開後付費停用；刪除所有endpoint後退回帳戶，預設endpoint需客服。",
+          "accessed_at": "2026-10-27T10:29:27+08:00"
+        },
+        {
+          "url": "https://www.tencentcloud.com/act/pro/tokenhub",
+          "scope": "本輪促銷頁90天期限與獨立付費訂閱；未核台灣付款",
+          "evidence": "活動至2026/12/31，hero稱最多100萬tokens有效90天；FAQ同時稱共用池及每模型100萬，與文件一年衝突；另列Lite/Standard/Pro/Max付費月訂閱，非試用額。",
+          "accessed_at": "2026-10-27T10:50:09+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -25376,11 +25513,11 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN換IP不建立國際站身分、付款或資料驗證資格；未操作或推薦跨區規避。"
       },
-      "status": "active",
+      "status": "conditional",
       "legal_status": "not_verified",
-      "priority_score": 22.8,
+      "priority_score": 19.6,
       "priority_tier": "A",
-      "priority_note": "官方·活躍·免費·台灣未標記·≤25分鐘"
+      "priority_note": "官方·條件式·費用未知·台灣未標記·≤25分鐘"
     },
     {
       "id": "kimi-api-free-voucher-cn-locked",
@@ -37821,14 +37958,14 @@
       "usage_type": "Fixed credits",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "cancellation": "額度用盡拒絕請求，除非另購額度或啟用超額。",
+      "cancellation": "免費每日點數用盡則請求拒絕至每日重置，或另購點/依明示設定啟用超額；購買點不隨每日重置，活動贈點效期未核。",
       "usable_duration": null,
-      "access_risk": "活動期限與台灣付款驗證未知；預設內容可用於訓練，opt-out通常需Pro。",
-      "verified_at": "2026-10-26T09:49:40+08:00",
+      "access_risk": "活動截止與兌換、贈點效期及台灣付款驗證未知；內容訓練opt-out一般限Pro以上，啟用ZDR推論另有例外。",
+      "verified_at": "2026-10-27T10:41:17+08:00",
       "discovered_at": "2026-10-26T09:49:40+08:00",
       "announcement_at": "2026-10-22",
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T09:49:40+08:00",
+      "next_review_at": "2026-10-28T10:41:17+08:00",
       "eligibility": {
         "service_availability": "GLiDE API推廣碼公告，未操作兌換。",
         "account_eligibility": "每自然人/法人一帳戶；既有戶是否可用未核。",
@@ -37857,6 +37994,12 @@
           "url": "https://docs.fastino.ai/pricing",
           "scope": "GLiDE按token付費基價",
           "evidence": "2026-10-26 09:46–09:50 Asia/Taipei實讀：輸入US$0.04/百萬tokens，輸出US$0。"
+        },
+        {
+          "url": "https://agent.fastino.ai/terms",
+          "scope": "本輪付款驗證、每日與購買點數分池、超額及帳戶限制；未核促銷碼領取",
+          "evidence": "2026/08/06生效條款：推論須驗證付款方式但驗證本身不扣款；免費每日點數不結轉、購買點數保留；用盡拒絕請求至重置或另購；每自然人/法人一帳戶，禁止規避；ZDR啟用後訓練/保留有例外。",
+          "accessed_at": "2026-10-27T10:41:17+08:00"
         }
       ],
       "record_type": "watchlist",
