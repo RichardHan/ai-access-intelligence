@@ -1,14 +1,94 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-28T00:08:42+08:00",
-  "scope": "2026-10-28 00:06–00:08 Asia/Taipei於原518筆中局部複核9筆（Zed學生、GitHub新創、Vast新創、DeepInfra DeepStart、Anyscale新戶、ndp one、astamuse、Laya、Robinhood）；其餘509筆本輪未更新複核證據。新增Confident AI免費機會及LangWatch條款衝突觀察，共520筆（387機會、46政策、87觀察）。官方來源僅支持所列主張；台灣個案、條款及法律結論分開，updated_at不代表全庫複核。限時每日、其他依最久未核按月輪替。",
+  "updated_at": "2026-10-28T04:11:10+08:00",
+  "scope": "2026-10-28 04:06–04:10 Asia/Taipei於原520筆中局部複核12筆（Antigravity、Jio、Deepgram Speak、Lawson、Lovable瑞典、SambaNova、Rime STT、GitHub學生、Udio、國網教學、Raycast學生、Anthropic研究者）；原有508筆本輪未逐筆複核。新增Respan免費觀測方案條款衝突觀察1筆，共521筆（387機會、46政策、88觀察）。官方來源僅支持列明的查核範圍，台灣個案與法律未核；updated_at不代表全庫複核。限時每日、其他依最久未核按月輪替。；2026-10-28 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
+    {
+      "id": "respan-free-hundred-k-logs-terms-conflict",
+      "title": "Respan Free：10萬logs與自動化條款衝突待釐清",
+      "summary": "原Keywords AI的Respan定價列Free US$0、免卡、10萬logs及1,000 scores；未標明額度重置週期。這是觀測與評估額度，不是模型推論點數；Gateway模型額度另須至少US$10預付。官方條款禁止自動化存取的廣泛措辭與API用途相衝，暫不宣稱API工作流程可依條款直接使用。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "developer",
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Observability logs and scores",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "Free免卡；另訂付費方案會自動續約，取消當期末生效不退款；Gateway可另選auto reload扣卡。",
+      "usable_duration": "Free定價仍刊登；logs/scores重置週期未標。",
+      "access_risk": "免費觀測額度的超限硬停或付費方式未核；Gateway預付餘額用盡401不能推論觀測額度行為。",
+      "verified_at": "2026-10-28T04:07:35+08:00",
+      "discovered_at": "2026-10-28T04:07:35+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-28T04:07:35+08:00",
+      "priority": "watch",
+      "status": "unverified",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方定價列Free，未登入確認帳戶開通。",
+        "account_eligibility": "1 workspace、不限席次、5 datasets、2 evaluators、5 prompts；台灣個案未核。",
+        "billing_country": "Free免卡；Gateway預付最低US$10、auto reload須另選，台灣卡未核。",
+        "identity_residency": "條款最低13歲，未成年人需監護同意；台灣帳戶及居住資格未核。",
+        "terms_restrictions": "條款§2述個人非商業或內部業務用途，§3/7廣泛限制自動化和商業使用，與API用途衝突；不可規避限額或假帳戶。",
+        "taiwan_note": "Unknown：公開定價不證台灣帳戶或API使用符合條款；法律/監管未核。"
+      },
+      "unknowns": [
+        "logs與scores額度重置週期",
+        "免費觀測超限行為",
+        "API自動化及商業用途授權衝突",
+        "台灣帳戶/付款及法律適用"
+      ],
+      "sources": [
+        {
+          "url": "https://www.respan.ai/pricing",
+          "scope": "Free觀測額度與免卡；非免費模型推論",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：Free US$0、100,000 logs、1,000 scores、7日保存、1 workspace；重置週期未標。",
+          "accessed_at": "2026-10-28T04:07:35+08:00"
+        },
+        {
+          "url": "https://www.respan.ai/docs/documentation/admin/credits-billing.md",
+          "scope": "另購Gateway預付模型額度與auto reload，不外推至免費觀測",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：每次最低US$10預付；Gateway金鑰餘額耗盡回401，BYOK可繼續。",
+          "accessed_at": "2026-10-28T04:07:35+08:00"
+        },
+        {
+          "url": "https://www.respan.ai/legal/terms-of-use",
+          "scope": "年齡、§2用途與§3/7自動化限制衝突、付費續約",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀2026-02-25版：Keywords AI Inc. DBA Respan；最低13歲、未成年監護同意；付費訂閱自動續約，取消期末生效。",
+          "accessed_at": "2026-10-28T04:07:35+08:00"
+        }
+      ],
+      "record_type": "watchlist",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
     {
       "id": "confident-ai-free-five-weekly-runs-gbmonth",
       "title": "Confident AI免費：每週5次測試、1 GB-month追蹤",
       "summary": "Free平台方案永久US$0、免卡，2席、1專案、每週5次test runs；額外測試鎖定，1 GB-month trace spans超量丟棄。這是評估與觀測平台，不是免費模型推論。台灣帳戶、外部模型費及個人資格未核。",
-      "categories": ["FREE"],
-      "views": ["developer", "free"],
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "developer",
+        "free"
+      ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
@@ -42,11 +122,32 @@
         "terms_restrictions": "條款§2限內部用途、禁止轉售與繞過控制；§7限制敏感資料，§13.9出口規則；不得用假身分或多帳戶規避。",
         "taiwan_note": "Unknown：服務頁可讀與免卡不等於台灣帳戶核准；法律/監管未核。"
       },
-      "unknowns": ["台灣帳戶及個人用途資格", "第三方模型與judge費用", "1 GB-month保存計算及帳戶刪除", "付費訂單取消與FAQ衝突的適用範圍", "台灣法律/監管"],
+      "unknowns": [
+        "台灣帳戶及個人用途資格",
+        "第三方模型與judge費用",
+        "1 GB-month保存計算及帳戶刪除",
+        "付費訂單取消與FAQ衝突的適用範圍",
+        "台灣法律/監管"
+      ],
       "sources": [
-        {"url":"https://www.confident-ai.com/pricing","scope":"Free費用、每週測試、容量與超限；不證台灣帳戶","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：Free Forever $0、2席1專案、5 test runs/week，超量鎖定；1 GB-month trace spans超量丟棄，FAQ稱開始免卡。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"},
-        {"url":"https://cloud.confident-ai.com/auth/signup","scope":"公開註冊頁，非台灣核准","evidence":"2026-10-28 00:06–00:07 Asia/Taipei直接讀取註冊頁及US選項，未建立帳號。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"},
-        {"url":"https://www.confident-ai.com/terms","scope":"內部用途、敏感資料、續約與出口規則；非法律結論","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀2026-03-02版§2、7、12、13.9；付費訂單30日不續約通知與定價FAQ待調和。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"}
+        {
+          "url": "https://www.confident-ai.com/pricing",
+          "scope": "Free費用、每週測試、容量與超限；不證台灣帳戶",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：Free Forever $0、2席1專案、5 test runs/week，超量鎖定；1 GB-month trace spans超量丟棄，FAQ稱開始免卡。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        },
+        {
+          "url": "https://cloud.confident-ai.com/auth/signup",
+          "scope": "公開註冊頁，非台灣核准",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei直接讀取註冊頁及US選項，未建立帳號。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        },
+        {
+          "url": "https://www.confident-ai.com/terms",
+          "scope": "內部用途、敏感資料、續約與出口規則；非法律結論",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀2026-03-02版§2、7、12、13.9；付費訂單30日不續約通知與定價FAQ待調和。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        }
       ],
       "record_type": "opportunity",
       "priority_score": 16.3,
@@ -57,8 +158,13 @@
       "id": "langwatch-developer-free-fiftyk-terms-conflict",
       "title": "LangWatch Developer每月5萬events：永久免費與14日試用衝突",
       "summary": "定價稱Developer €0永久免費、免卡、每月5萬events；正式條款§3.2卻稱新戶14日後停用直到升級，取消通知亦與FAQ矛盾。暫列觀察，不宣稱可長期免費。",
-      "categories": ["FREE"],
-      "views": ["developer", "free"],
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "developer",
+        "free"
+      ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
@@ -92,11 +198,31 @@
         "terms_restrictions": "條款至少14歲且未成年人受監護；不得以假帳號規避試用或額度。",
         "taiwan_note": "Unknown：公開app shell不證台灣註冊或永久免費資格；法律未核。"
       },
-      "unknowns": ["永久Developer與14日試用的適用先後", "超量硬停與保存時間口徑", "外部模型費", "台灣個案資格與法律"],
+      "unknowns": [
+        "永久Developer與14日試用的適用先後",
+        "超量硬停與保存時間口徑",
+        "外部模型費",
+        "台灣個案資格與法律"
+      ],
       "sources": [
-        {"url":"https://langwatch.ai/pricing","scope":"免費定價及5萬events宣稱","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：Developer €0 forever、免卡、每月50k events、2 users及14日資料可讀。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"},
-        {"url":"https://langwatch.ai/docs/pricing","scope":"事件組成、保存與Instant Evals獨立預算","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：49日儲存、14日以上內容遮蔽；Instant Evals組織一次US$1免費預算。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"},
-        {"url":"https://langwatch.ai/legal/terms-conditions","scope":"14日停用、續約與年齡，與定價衝突","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀2026-09-22版§3.2、8：14日試用後停用待升級，續約需30日書面通知。","accessed_time_range":"2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"}
+        {
+          "url": "https://langwatch.ai/pricing",
+          "scope": "免費定價及5萬events宣稱",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：Developer €0 forever、免卡、每月50k events、2 users及14日資料可讀。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        },
+        {
+          "url": "https://langwatch.ai/docs/pricing",
+          "scope": "事件組成、保存與Instant Evals獨立預算",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：49日儲存、14日以上內容遮蔽；Instant Evals組織一次US$1免費預算。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        },
+        {
+          "url": "https://langwatch.ai/legal/terms-conditions",
+          "scope": "14日停用、續約與年齡，與定價衝突",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀2026-09-22版§3.2、8：14日試用後停用待升級，續約需30日書面通知。",
+          "accessed_time_range": "2026-10-28T00:06:51+08:00–2026-10-28T00:07:36+08:00"
+        }
       ],
       "record_type": "watchlist",
       "priority_score": null,
@@ -107,13 +233,21 @@
       "id": "google-gemini-academy-taiwan-educators-workshop-watch",
       "title": "台灣 Gemini 學院教育工作者免費工作坊：當期報名未核",
       "summary": "台灣Grow with Google官方說明教育工作者專場免費、各級教師適用，Gemini學院提供生成式AI教學培訓；公開報名連結卻顯示private event／驗證錯誤，未確認當期活動、名額與報名開放。僅列觀察，不等於免費Gemini訂閱或可立即領取。",
-      "categories": ["FREE", "QUALIFICATION"],
-      "views": ["education", "free"],
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "education",
+        "free"
+      ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
       "taiwan": "Yes",
-      "regions": ["Taiwan"],
+      "regions": [
+        "Taiwan"
+      ],
       "verification": "Official",
       "usage_type": "AI educator workshop",
       "quota_classification": "UNKNOWN",
@@ -142,11 +276,31 @@
         "terms_restrictions": "不得冒用教師或Google帳戶；登入、年齡、學校和內容使用規則尚未取得。",
         "taiwan_note": "Yes僅指台灣官方教育工作者工作坊範圍；當期申請、個案資格及法律未核。"
       },
-      "unknowns": ["當期報名是否開放及截止日", "教師身分驗證與平台帳戶要求", "課程內容完成及證書條件", "台灣法律或監管適用"],
+      "unknowns": [
+        "當期報名是否開放及截止日",
+        "教師身分驗證與平台帳戶要求",
+        "課程內容完成及證書條件",
+        "台灣法律或監管適用"
+      ],
       "sources": [
-        {"url":"https://grow.google/intl/zh-TW_tw/ai-skills/","scope":"台灣免費教育工作者工作坊介紹；非當期報名證據","evidence":"2026-10-27 22:14–22:15 Asia/Taipei實讀官方FAQ：台灣Grow with Google提供Gemini學院教育工作者專場等免費工作坊。","accessed_time_range":"2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"},
-        {"url":"https://grow.google/intl/zh-TW_tw/gemini-academy/","scope":"學院內容、各級教師對象與報名入口；非名額保證","evidence":"2026-10-27 22:14–22:15 Asia/Taipei實讀官方台灣學院頁，教師生成式AI培訓與各級教師適用，連結至報名頁。","accessed_time_range":"2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"},
-        {"url":"https://growonairtw.withgoogle.com/events/gemini-academy-tw","scope":"本輪報名頁不可公開讀取，不證活動終止","evidence":"2026-10-27 22:14–22:15 Asia/Taipei直接開啟顯示private event及authentication error；未讀到可申請日期/名額。","accessed_time_range":"2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"}
+        {
+          "url": "https://grow.google/intl/zh-TW_tw/ai-skills/",
+          "scope": "台灣免費教育工作者工作坊介紹；非當期報名證據",
+          "evidence": "2026-10-27 22:14–22:15 Asia/Taipei實讀官方FAQ：台灣Grow with Google提供Gemini學院教育工作者專場等免費工作坊。",
+          "accessed_time_range": "2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"
+        },
+        {
+          "url": "https://grow.google/intl/zh-TW_tw/gemini-academy/",
+          "scope": "學院內容、各級教師對象與報名入口；非名額保證",
+          "evidence": "2026-10-27 22:14–22:15 Asia/Taipei實讀官方台灣學院頁，教師生成式AI培訓與各級教師適用，連結至報名頁。",
+          "accessed_time_range": "2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"
+        },
+        {
+          "url": "https://growonairtw.withgoogle.com/events/gemini-academy-tw",
+          "scope": "本輪報名頁不可公開讀取，不證活動終止",
+          "evidence": "2026-10-27 22:14–22:15 Asia/Taipei直接開啟顯示private event及authentication error；未讀到可申請日期/名額。",
+          "accessed_time_range": "2026-10-27T22:14:00+08:00–2026-10-27T22:15:14+08:00"
+        }
       ],
       "record_type": "watchlist",
       "priority_score": null,
@@ -2542,7 +2696,7 @@
     {
       "id": "antigravity-free",
       "title": "Antigravity：免費代理有週限",
-      "summary": "個人方案US$0/月，代理基本每週限額，Tab補全與Command請求不限次，支援排程任務與CLI。既有FAQ證據列Taiwan及18歲以上個人帳戶，本輪未重查。模型表目前免費列Gemini 3.8 Flash、Claude Sonnet/Opus 4.6及GPT-OSS-120b；三個第三方模型註腳均為2026-11-02移除，並非僅免費層移除。",
+      "summary": "個人方案US$0/月，代理基本每週限額，Tab補全與Command請求不限次，支援排程任務與CLI。FAQ列Taiwan及18歲以上個人帳戶，不保證個案開通。模型表免費列Gemini 3.8 Flash、Claude Sonnet/Opus 4.6及GPT-OSS-120b；三個第三方模型註腳均為2026-11-02移除，並非僅免費層移除。",
       "categories": [
         "FREE",
         "UNLIMITED-CLAIM",
@@ -2570,25 +2724,25 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、審核、限額與政策可能變更",
-      "verified_at": "2026-10-27T03:06:36+08:00",
+      "verified_at": "2026-10-28T04:07:52+08:00",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T03:06:36+08:00",
+      "next_review_at": "2026-10-29T04:07:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "個人US$0/月；代理週池，Tab與Command請求不限次。模型表免費列Gemini 3.8 Flash、Claude Sonnet/Opus 4.6及GPT-OSS-120b；第三方三模型註腳統一2026-11-02移除，非僅免費層。",
         "account_eligibility": "限年滿18歲、核准地區的個人Google帳戶；Workspace驗證可能不適用，個別帳戶仍須符合推出條件。",
         "billing_country": "未知",
         "identity_residency": "官方FAQ明定僅限年滿18歲使用者，未成年人無法使用；可能觸發年齡驗證。",
-        "terms_restrictions": "未核實 VPN 能合法取得資格；IP不等於居住或帳單國家",
+        "terms_restrictions": "官方條款§6禁止透過第三方工具存取服務（例：OpenClaw使用Antigravity OAuth），違反可能停權；各模型另適用相應條款。VPN/IP不授予帳戶或地區資格。",
         "taiwan_note": "官方FAQ明列Taiwan為支援地區；不保證每個台灣個人帳戶均已開通，未操作登入。"
       },
       "unknowns": [
-        "每週具體動態token上限數字（依伺服器負載浮動）",
+        "官方未公布固定週配額；代理用量依工作量消耗，容量與限制可變",
         "高負載時段個別降速幅度",
-        "11月2日指定第三方模型移除的確切時區；本輪未重查FAQ地區與年齡條件"
+        "11月2日指定第三方模型移除的確切時區；個別帳戶開通未測"
       ],
       "sources": [
         {
@@ -2615,6 +2769,18 @@
           "url": "https://antigravity.google/docs/faq/",
           "scope": "年齡與地區資格",
           "evidence": "2026-10-27 02:07 Asia/Taipei複核：18歲以上、個人Google帳戶及核准地區；清單明列Taiwan，不證個別帳戶已開通。"
+        },
+        {
+          "url": "https://antigravity.google/docs/faq/",
+          "scope": "本輪重查台灣列入地區、18歲個人帳戶；非個別開通證據",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：Taiwan列在支援地區，18歲以上個人帳戶；Workspace須管理員配置。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
+        },
+        {
+          "url": "https://antigravity.google/terms",
+          "scope": "第三方工具與模型條款，非法律/監管意見",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀§6禁止第三方工具經服務存取（舉OpenClaw/OAuth例）；§8另適用模型條款。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -3297,7 +3463,12 @@
           "evidence": "2026-10-26 22:07–22:08 Asia/Taipei實讀：§8.1要求遵守供應商條款；§10.2預付額度耗盡後可能仍需支付額外用量；§10.3可選自動補值；§12不保證美國以外可用。",
           "accessed_time_range": "2026-10-26T22:07:00+08:00–2026-10-26T22:08:55+08:00"
         },
-        {"url":"https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31","scope":"本輪指定路由、10/31與期後計費局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：指定Boundless路由10/31前免費，-free期後停用，標準ID計費；時區及台灣資格未核。","accessed_time_range":"2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"}
+        {
+          "url": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
+          "scope": "本輪指定路由、10/31與期後計費局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：指定Boundless路由10/31前免費，-free期後停用，標準ID計費；時區及台灣資格未核。",
+          "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -3826,12 +3997,12 @@
       "cancellation": "優惠期滿不自動續訂；Jio §VI 可於 MyJio／MySubscription 取消、不能暫停。失去合格充值可暫停存取，恢復不延長期限；攜出或門號失效則撤銷。",
       "usable_duration": "最多18個月；本期申領Offer Period為2025-10-30至2026-10-29。Google AI Pro促銷期依Jio條款，且需持續合格Jio方案。",
       "access_risk": "印度Jio門號與合格充值限定；本期申請期限2026-10-29，活動過期後不可新領。",
-      "verified_at": "2026-10-27T03:06:21+08:00",
+      "verified_at": "2026-10-28T04:07:52+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2025-10-30",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T03:06:21+08:00",
+      "next_review_at": "2026-10-29T04:07:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Jio仍公開宣傳，T&C活動期至2026/10/29；Google一般服務可用不能替代Jio活動資格。",
@@ -3854,6 +4025,12 @@
           "scope": "本輪重查18個月申領期、Jio本人門號/充值、取消及無自動續費；非台灣個人可申領證據",
           "evidence": "本輪Chromium實讀：§III仍列2025-10-30至2026-10-29，未見延期，時間/時區未列；§V本人Jio門號/CAF、above18、₹349+無限5G或限期₹299+ 1.5GB/day；最長18月且不自動續費。§VI失去充值可暫停、恢復不延長，攜出撤銷；Google ToS另適用。本輪未操作申領或核實台灣居民海外資格。",
           "accessed_time_range": "2026-10-27T03:06:11+08:00–2026-10-27T03:06:21+08:00"
+        },
+        {
+          "url": "https://www.jio.com/jcms/en-in/jio-google-gemini-terms-and-conditions/",
+          "scope": "本輪Chromium渲染重查活動期、充值及不自動續訂；不證海外領取",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀§III、V、VI：申領至10/29，above 18、本人Jio門號及持續₹349+或限期₹299+合格方案，最長18月不自動續訂；截止時區未列。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -4481,12 +4658,12 @@
       "cancellation": null,
       "usable_duration": "中獎AI Pro三個月；規約稱碼須三個月內使用，起算點未明；兌換至11/23 23:59",
       "access_risk": "購買與集點course応募已截止（JST時區推定）；不應再為取得資格新消費。既有合格者尚須另參加11月抽選。",
-      "verified_at": "2026-10-26T23:09:25+08:00",
+      "verified_at": "2026-10-28T04:07:52+08:00",
       "discovered_at": "2026-10-23T13:07:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T23:09:25+08:00",
+      "next_review_at": "2026-10-29T04:07:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "10/19購買與初次entry截止；既有合格者10/26 23:59 course応募按JST推定亦截止，無新申請路徑。已完成course者11/10 10:00–11/16 23:59仍須另參AI碼抽選，11/23 23:59前領取；官方未明列時區。",
@@ -4508,6 +4685,12 @@
           "scope": "本輪查核集點申請截止及後續獨立抽選，JST換算為推定；未核Google付款及續訂",
           "evidence": "2026-10-26 23:09 Asia/Taipei實讀：10/26 23:59 course応募截止，若為JST則台灣22:59已過；11/10–16另抽1,000名，11/23前領取；日本居民限定。頁面未明列時區，不據此宣稱整體抽選已終止。",
           "accessed_time_range": "2026-10-26T23:04:00+08:00–2026-10-26T23:09:25+08:00"
+        },
+        {
+          "url": "https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/",
+          "scope": "本輪重查購買和course已截止、11月抽選仍待開始；非Google兌碼續費證據",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：10/19購買、10/26 course応募已過；既有合格者11/10–16抽選、11/23前領取，限日本居民。¥3,000是抽獎課程面額而非額外申請費。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -4945,12 +5128,12 @@
       "cancellation": "2027/1/1有有效付款方式將收學生五折Pro費，須之前取消；無卡則邀請加卡。",
       "usable_duration": "至2026-12-31",
       "access_risk": "原已付款期不退款；優惠從原周期結束才開始，條款可改/終止，錯誤資格可撤回。",
-      "verified_at": "2026-10-26T17:48:20+08:00",
+      "verified_at": "2026-10-28T04:07:52+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T17:48:20+08:00",
+      "next_review_at": "2026-10-29T04:07:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "瑞典學籍活動2026/9/1–12/31，宣傳每月100 credits；正式條款限Free或Pro 1單一workspace。",
@@ -4962,7 +5145,8 @@
       },
       "unknowns": [
         "瑞典留學/交換之台灣學生實際認證情境",
-        "代碼匯出完整性"
+        "代碼匯出完整性",
+        "FAQ稱期滿轉Free、正式條款稱已有付款方式者元旦按五折續扣，衝突未解"
       ],
       "sources": [
         {
@@ -4976,6 +5160,12 @@
           "label": "官方正式條款",
           "scope": "本輪重查Free或Pro 1學籍資格及付款方式續訂",
           "evidence": "2026-10-26 17:46–17:48 Asia/Taipei實讀：瑞典合格學校、18歲、同帳號校郵、每人一workspace；限Free或Pro 1，已有卡者2027/1/1未取消按學生五折收費，原已付期間不退款。"
+        },
+        {
+          "url": "https://back-to-school.lovable.app/terms",
+          "scope": "本輪重查瑞典學籍及續費；與FAQ矛盾未解",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：指定瑞典學校在學及相符校郵；已有有效付款方式者若未取消，2027/1/1起五折續費；無付款方式不扣款。活動首頁FAQ卻稱期滿回Free。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -5019,12 +5209,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量、條款與政策可能改變",
-      "verified_at": "2026-10-26T17:48:20+08:00",
+      "verified_at": "2026-10-28T04:06:29+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T17:48:20+08:00",
+      "next_review_at": "2026-10-29T04:06:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Plans要求綁卡購credits；rate-limit文件仍列未綁卡Free Tier，需供應商釐清。",
@@ -5045,15 +5235,15 @@
           "url": "https://cloud.sambanova.ai/plans",
           "label": "官方來源",
           "scope": "實際開始請求的付款前提",
-          "evidence": "2026-10-26 17:46–17:48 Asia/Taipei實讀：Free方案仍要求先加付款方式並購credits才可發第一個請求；無新戶免費點數證據。",
-          "verified_at": "2026-10-26T17:48:20+08:00"
+          "evidence": "2026-10-28 04:06 Asia/Taipei實讀：Free仍要求先加付款方式並購credits才可發第一個請求；無新戶免費點數證據。",
+          "verified_at": "2026-10-28T04:06:29+08:00"
         },
         {
           "url": "https://docs.sambanova.ai/docs/en/models/rate-limits",
           "label": "官方來源",
           "scope": "量化限額與Preview用途限制",
-          "evidence": "2026-10-26 17:46–17:48 Asia/Taipei實讀：未綁卡Free Tier仍列各模型20 RPM/20 RPD/200K TPD，Developer跨模型20M tokens/day；Preview限評估/實驗不可production，與Plans付款前提衝突。",
-          "verified_at": "2026-10-26T17:48:20+08:00"
+          "evidence": "2026-10-28 04:06 Asia/Taipei實讀：未綁卡Free Tier仍列各模型20 RPM/20 RPD/200K TPD，Developer跨模型20M tokens/day；Preview限評估/實驗不可production，與Plans付款前提衝突。",
+          "verified_at": "2026-10-28T04:06:29+08:00"
         },
         {
           "url": "https://community.sambanova.ai/t/sambanova-cloud-terms-of-service/244",
@@ -6107,17 +6297,17 @@
       "cancellation": null,
       "usable_duration": "額度無到期，帳戶／專案刪除等可失去",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-27T04:05:58+08:00",
+      "verified_at": "2026-10-28T04:07:52+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T04:05:58+08:00",
+      "next_review_at": "2026-10-29T04:07:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "活動要求10/29現場badge scan；Deepgram帳戶須於11/6期限前以相同business-domain email建立。",
         "account_eligibility": "每business email限一次US$500；需相同企業網域帳戶所擁有且本人具member角色的有效project。依近30日API requests最高者分配；皆無用量則給最近建立的合格project，沒有合格project則額度失效。",
-        "billing_country": "本項credit無需先付款；API超額、其他服務費及台灣付款方式未核。",
+        "billing_country": "本項credit無需先付款；若另加入PAYG自動加值，條款允許觸發時自動扣款，餘額不足而請求仍完成也可能須付超額費。接受活動本身不等於已啟用自動加值；台灣付款方式未核。",
         "identity_residency": "條款要求符合服務可合法提供地區；未列出台灣名單或明確個人居住資格。",
         "terms_restrictions": "現場badge scan、企業網域信箱及合格project必要；只抵入帳後API使用，不抵稅、第三方或專業服務。原則不得與促銷疊加，標準$200 signup credit例外；額度不可轉讓。公部門或受監管組織須自行確認採購、餽贈與締約規則及所需批准；活動可錄音錄影並依條款用於行銷，須有肖像聲音授權。",
         "taiwan_note": "台灣遠端參與不符合舊金山現場門檻；赴現場者是否合格仍取決企業email、帳戶、服務地區與個案資格，未核。"
@@ -6161,6 +6351,18 @@
           "scope": "本輪僅重查活動資格、10/29現場報到、11/6帳戶期限與額度用途；未核台灣個案、服務帳單或法律限制",
           "evidence": "官方§1–3仍要求企業網域信箱、10/29現場badge scan、同信箱11/6 23:59 PT前建立帳戶；合格專案一次US$500，11/13前入帳，僅抵入帳後API用量且不可轉讓。§2.5僅說合法提供服務地區，未確認台灣資格。",
           "accessed_at": "2026-10-27T04:05:58+08:00"
+        },
+        {
+          "url": "https://deepgram.com/speak-attendee-credit-promotion-terms",
+          "scope": "本輪重查現場報到、11/6帳戶期限及額度，非實際名額或台灣核准",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀：10/29 badge scan、企業信箱、11/6 23:59 Pacific同信箱帳戶、一次US$500，無需deposit且不可轉讓。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
+        },
+        {
+          "url": "https://deepgram.com/terms",
+          "scope": "另啟PAYG自動加值及可能超額費；非活動本身啟用扣款",
+          "evidence": "2026-10-28 04:06–04:07 Asia/Taipei實讀§5.3–5.5：自動加值依設定觸發，餘額不足而完成的請求可能產生超額責任；未登入核對個別設定。",
+          "accessed_at": "2026-10-28T04:07:52+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -16729,12 +16931,12 @@
       "cancellation": "11/20起按量收費，需自行停用不需要的工作",
       "usable_duration": "至2026-11-19；時區未列",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-27T04:05:58+08:00",
+      "verified_at": "2026-10-28T04:06:46+08:00",
       "discovered_at": "2026-10-24T07:05:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T04:05:58+08:00",
+      "next_review_at": "2026-10-29T04:06:46+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Official free STT through Nov19,2026; PAYG0.002USD/min fromNov20;10concurrentSTT; English/Spanish only; streaming2min utterance/15s silence; file WAV16MB.",
@@ -16768,6 +16970,12 @@
           "scope": "本輪只重查STT定價與免費活動期限；未重新核對服務條款或台灣申請資格",
           "evidence": "官方定價仍寫STT Free until Nov 19、Nov 20起PAYG每分鐘US$0.002，PAYG列10路STT並發；頁首FREE for 30 days與固定截止文字並存，不能推定個別註冊後30天。PAYG稱按月向卡片計費；免費期綁卡條件未明。",
           "accessed_at": "2026-10-27T04:05:58+08:00"
+        },
+        {
+          "url": "https://www.rime.ai/pricing",
+          "scope": "本輪僅重查公開STT限時免費與付費費率；台灣資格和條款未重查",
+          "evidence": "2026-10-28 04:06 Asia/Taipei實讀：Flex及Scale仍標示STT Free until Nov 19；Flex標示期後US$0.002/min、按月向卡片收費。Free方案另有每月US$50共用用量且免卡，不可混為限時STT不限額。",
+          "accessed_at": "2026-10-28T04:06:46+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -20042,7 +20250,12 @@
           "scope": "地區限制及支付",
           "evidence": "2026-10-25 17:22 Asia/Taipei: ‘users may only access and use GitHub.com in compliance with applicable law, including U.S. export control and sanctions laws.’ ‘We accept all major credit cards, but third parties process payments for us’. Taiwan not identified as a restricted destination; blocked parties can be restricted wherever located."
         },
-        {"url":"https://github.com/enterprise/startups","scope":"本輪共池額度、資格、轉付費與降級局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：共US$10K最長12月，夥伴及外部募資、有效付款方式；額度用盡或到期已啟用產品自動付費；台灣個案未核。","accessed_time_range":"2026-10-28T00:07:20+08:00"}
+        {
+          "url": "https://github.com/enterprise/startups",
+          "scope": "本輪共池額度、資格、轉付費與降級局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：共US$10K最長12月，夥伴及外部募資、有效付款方式；額度用盡或到期已啟用產品自動付費；台灣個案未核。",
+          "accessed_time_range": "2026-10-28T00:07:20+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -20668,7 +20881,12 @@
           "scope": "一般付費及出口管制，非DeepStart特別授額",
           "evidence": "2026-10-26 15:46–15:47 Asia/Taipei實讀：條款版本2026-10-15，個別Service Order優先；出口管制限制適用，但未核台灣個案或法律結論。"
         },
-        {"url":"https://deepinfra.com/deepstart","scope":"本輪額度價格換算、資格與效期局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：約50B DeepSeek V4 Flash等價tokens，成立兩年內、募資US$250K–10M、核准後一年；美元授額和台灣核准未列。","accessed_time_range":"2026-10-28T00:07:20+08:00"}
+        {
+          "url": "https://deepinfra.com/deepstart",
+          "scope": "本輪額度價格換算、資格與效期局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：約50B DeepSeek V4 Flash等價tokens，成立兩年內、募資US$250K–10M、核准後一年；美元授額和台灣核准未列。",
+          "accessed_time_range": "2026-10-28T00:07:20+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -20898,7 +21116,12 @@
           "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：公開Anyscale費率排除客戶雲算力費；不證特定贈額抵扣範圍。",
           "accessed_time_range": "2026-10-28T00:07:20+08:00"
         },
-        {"url":"https://www.anyscale.com/pricing","scope":"本輪US$100及Hosted/BYOC局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：US$100起始額度、Hosted有限區域與信用卡月結；未證台灣個案及統一效期。","accessed_time_range":"2026-10-28T00:07:20+08:00"}
+        {
+          "url": "https://www.anyscale.com/pricing",
+          "scope": "本輪US$100及Hosted/BYOC局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：US$100起始額度、Hosted有限區域與信用卡月結；未證台灣個案及統一效期。",
+          "accessed_time_range": "2026-10-28T00:07:20+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -21440,7 +21663,12 @@
           "scope": "付款及持續儲存費",
           "evidence": "2026-10-25 17:21 Asia/Taipei: ‘Vast requires pre-payment of credits for GPU rentals.’ Cards via Stripe; crypto via BitPay/Crypto.com. ‘Even stopped instances continue to accrue storage charges.’ Saved card can automatically cover negative balances; destroy unneeded instances to avoid storage charges."
         },
-        {"url":"https://vast.ai/startup","scope":"本輪匹配條件局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：核准上限內核實compute消費等額匹配，無預先贈額或免費試用；舊公告仍稱US$2,500與2,500小時，矛盾未解。","accessed_time_range":"2026-10-28T00:07:20+08:00"}
+        {
+          "url": "https://vast.ai/startup",
+          "scope": "本輪匹配條件局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：核准上限內核實compute消費等額匹配，無預先贈額或免費試用；舊公告仍稱US$2,500與2,500小時，矛盾未解。",
+          "accessed_time_range": "2026-10-28T00:07:20+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -22954,7 +23182,12 @@
           "evidence": "2026-10-26 22:07–22:08 Asia/Taipei列表可讀，未見10/8試用公告；缺席不證明撤銷。",
           "accessed_time_range": "2026-10-26T22:07:00+08:00–2026-10-26T22:08:32+08:00"
         },
-        {"url":"https://www.astamuse.co.jp/news/2026/26261008-report/","scope":"本輪原公告直接讀取404，非撤銷證據","evidence":"2026-10-28 00:06–00:07 Asia/Taipei直接讀取HTTP 404；官方2026新聞列表亦未列10/8試用，未重查搜尋索引或申請表。","accessed_time_range":"2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"}
+        {
+          "url": "https://www.astamuse.co.jp/news/2026/26261008-report/",
+          "scope": "本輪原公告直接讀取404，非撤銷證據",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei直接讀取HTTP 404；官方2026新聞列表亦未列10/8試用，未重查搜尋索引或申請表。",
+          "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
+        }
       ],
       "record_type": "watchlist",
       "vpn_research": {
@@ -24014,7 +24247,12 @@
           "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀§7、12、21、23：US resident、僅個人非商用；§12稱Loop runs不收token，與促銷期後自動化計費文字待釐清。",
           "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
         },
-        {"url":"https://robinhood.com/us/en/support/articles/using-gpt-luna/","scope":"本輪期限與期後automations文字局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：12/31 23:59 ET或提前終止；§8稱期後active automations產生token費，與Agents Agreement的Loops免費文字衝突。","accessed_time_range":"2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"}
+        {
+          "url": "https://robinhood.com/us/en/support/articles/using-gpt-luna/",
+          "scope": "本輪期限與期後automations文字局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：12/31 23:59 ET或提前終止；§8稱期後active automations產生token費，與Agents Agreement的Loops免費文字衝突。",
+          "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
+        }
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -24669,9 +24907,15 @@
           "url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
           "scope": "認可教育機構背景與學生福利",
           "evidence": "2026-10-25直接查閱：student or faculty member at an accredited educational institution可申請Education；verified students取得Copilot免費權益。一般Education資格不代表教師可領Student Pack。"
+        },
+        {
+          "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students",
+          "scope": "本輪重查免費學生啟用與每月資格複審；不保證台灣個案",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei實讀：Education通過後須另啟Copilot Student，每月重評資格；只有付費選項時勿購買。",
+          "accessed_at": "2026-10-28T04:10:15+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:20:01+08:00",
+      "verified_at": "2026-10-28T04:10:15+08:00",
       "taiwan": "Unknown",
       "quota_classification": "UNKNOWN",
       "setup_cost_usd": 0,
@@ -24705,7 +24949,7 @@
       "limited_confirmed": true,
       "usable_duration": "Education驗證2年後須重驗；Copilot免費資格每月另行重評，並非保證2年不間斷服務",
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:20:00+08:00",
+      "next_review_at": "2026-11-28T04:10:15+08:00",
       "regions": [
         "Global"
       ],
@@ -31233,9 +31477,15 @@
           "url": "https://help.udio.com/en/articles/10739216-answers-to-common-usage-questions",
           "scope": "官方FAQ與ToS衝突警示、免費署名",
           "evidence": "2026-10-25直接查閱：FAQ仍稱不主張輸出所有權、可repurpose，免費建立的歌須註明Udio，即使日後升級仍需署名；所有權/重用敘述與現行ToS6.1/6.3矛盾，不用FAQ推導免費商用權。"
+        },
+        {
+          "url": "https://www.udio.com/terms-of-service",
+          "scope": "本輪重查16歲、非商用、禁止下載及FAQ所有權衝突；非台灣帳戶核准",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei以Chromium實讀2025-11-12修訂版§1.2、2、5.2、6.1–6.4；免費作品不可下載/商用，FAQ另稱使用者擁有輸出而有衝突。",
+          "accessed_at": "2026-10-28T04:10:15+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:20:01+08:00",
+      "verified_at": "2026-10-28T04:10:15+08:00",
       "taiwan": "Unknown",
       "quota_classification": "HIGH BUT LIMITED",
       "setup_cost_usd": 0,
@@ -31268,7 +31518,7 @@
       "usable_duration": "持續免費層，日/月池不結轉；政策可變更",
       "cancellation": "免費層無訂閱費；不要與會自動轉付費的subscription trial混淆。",
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:20:00+08:00",
+      "next_review_at": "2026-11-28T04:10:15+08:00",
       "effort_minutes_max": 10,
       "effort_basis": "分析者估註冊與介面熟悉約5–10分鐘；不含音樂生成與編輯時間",
       "regions": [
@@ -31311,9 +31561,15 @@
           "url": "https://iservice.nchc.org.tw/nchc_service/nchc_service_qa.php?target=54",
           "scope": "避免將一般學術GPU優惠費率寫成免費",
           "evidence": "2026-10-25直接查閱：Nano5 H100國科會/學術每GPU-hour NTD25/50；H200 NTD30/60，屬收費。教學免費頁未包含這些GPU機型，因此不擴張為通用免費GPU承諾。"
+        },
+        {
+          "url": "https://iservice.nchc.org.tw/nchc_service/nchc_service_qa.php?target=57",
+          "scope": "本輪重查國內教師教學免費額度、有效期及申請資料；儲存費未核",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei實讀：授課教師申請並附系所蓋章名單，需填付款聯絡資料；台灣杉三號與創進一號、課後一個月到期。",
+          "accessed_at": "2026-10-28T04:10:15+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:20:01+08:00",
+      "verified_at": "2026-10-28T04:10:15+08:00",
       "taiwan": "Yes",
       "regions": [
         "Taiwan"
@@ -31326,8 +31582,8 @@
       "effort_minutes_max": 30,
       "eligibility": {
         "service_availability": "課程教學用台灣杉三號、創進一號計算資源，申請審核制；非公用免費LLM API或GPU時數包。",
-        "account_eligibility": "國內大專院校授課教師/研究人員提出，建立學術計畫後邀請修課成員；學生不能僅憑學術email單獨領取此優惠。",
-        "billing_country": "核准教學免費額度範圍內免費；一般或超出核准用途資源另依付費規則，USD費用不推估。",
+        "account_eligibility": "國內大專院校授課教師/研究人員提出，註冊需簡訊驗證，建立學術計畫後邀請修課成員；學生不能僅憑學術email單獨領取。",
+        "billing_country": "核准教學額度內免費；申請需填付款與聯絡資料，不等同必須信用卡。一般/超出額度資源及儲存費涵蓋範圍待核。",
         "identity_residency": "國內大專院校；須系所蓋章修課名單，不是要求台灣公司統編。HPC登入預設僅本國IP，境外來源IP需提出特殊申請審核。",
         "terms_restrictions": "限教學目的，接受平台服務條款與計算設施SLA；依課程師生規模提出所需額度，審核後可用；有效至課程結束後一個月。",
         "taiwan_note": "Yes：官方明定國內大專院校教師/研究人員資格，台灣申請路徑直接列示；不代表學生個人自動獲配額。"
@@ -31336,7 +31592,8 @@
         "每課程核准額度及上限",
         "是否有年度申請窗口/剩餘資源",
         "審核所需時間與可能的其他資格文件",
-        "個別AI課程是否適合支援主機（未承諾GPU）"
+        "個別AI課程是否適合支援主機（未承諾GPU）",
+        "教學額度是否涵蓋HFS或其他儲存費"
       ],
       "record_type": "opportunity",
       "priority_tier": "S",
@@ -31349,7 +31606,7 @@
       "limited_confirmed": true,
       "usable_duration": "至課程結束後一個月",
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:20:00+08:00",
+      "next_review_at": "2026-11-28T04:10:15+08:00",
       "effort_basis": "授課教師備齊課綱、選課名單核章並送件申請，估約30分鐘；不含國網中心行政審核",
       "usage_type": "Compute grant",
       "savings_usd": null,
@@ -31654,9 +31911,15 @@
           "label": "Raycast 使用條款",
           "scope": "最低年齡、訂閱與禁止規避",
           "evidence": "2026-10-25 09:45–09:47 Asia/Taipei查閱：未滿13歲不得使用，未成年人需監護人同意；訂閱依週期扣款；禁止規避IP封鎖及服務限制。未查得適用台灣法律結論。"
+        },
+        {
+          "url": "https://manual.raycast.com/billing",
+          "scope": "本輪重查學生折扣僅Pro、月年訂閱及iOS取消；台灣學籍核准未測",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei實讀：學生五折僅Pro，500 AI credits/月；網站帳戶取消及iOS由Apple管理，單次折扣碼取消後需另索取。",
+          "accessed_at": "2026-10-28T04:10:15+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:47:41+08:00",
+      "verified_at": "2026-10-28T04:10:15+08:00",
       "taiwan": "Unknown",
       "verification": "Official",
       "quota_classification": "HIGH BUT LIMITED",
@@ -31672,7 +31935,7 @@
         "account_eligibility": "需提交學生身分申請並經Raycast驗證；要求姓名、學校、學生email、學位、預計畢業日期及Raycast帳號；未公布學校/國家名單、審核時程及教師資格。",
         "billing_country": "Pro標價USD；官方接受卡及PayPal等付款方式，但台灣發卡付款未測試。",
         "identity_residency": "學生折扣頁未明列居住國限制；台灣學校是否認可未知，不可由服務可用推定折扣資格。",
-        "terms_restrictions": "學生折扣碼一次性；不得假冒學籍或規避IP/服務限制；Pro自動續費，取消於週期末生效；折扣適用帳期及持續期限未公布。",
+        "terms_restrictions": "學生折扣碼單次使用且僅適用Pro，不含Pro+/Max頂級模型；不得假冒學籍或規避限制。Pro自動續費，折扣適用帳期與期限未公開。",
         "taiwan_note": "Unknown；台灣未被服務排除清單列出，但官方沒有明列台灣學校、.edu.tw資格或台灣付款成功保證。"
       },
       "unknowns": [
@@ -31700,14 +31963,14 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "Pro訂閱自動續費，可在帳戶設定取消且權益延續到本帳期末；學生折扣碼單次使用，取消後重訂需聯絡Billing索取新碼。折扣到期及續訂價格未公布。",
+      "cancellation": "Pro月/年訂閱自動續費；網站帳戶設定取消，iOS訂閱須經Apple管理。學生折扣碼單次使用，取消後重訂需聯絡Billing。條款續約通知十日措辭與手冊續費前取消說明須個案釐清。",
       "usable_duration": null,
       "access_risk": "學生審核、促銷碼、地區資格及折扣條件可能變更",
       "discovered_at": "2026-10-25T09:47:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:47:41+08:00",
+      "next_review_at": "2026-11-28T04:10:15+08:00",
       "priority": "watch",
       "vpn_research": {
         "status": "not_verified",
@@ -31718,7 +31981,7 @@
     {
       "id": "anthropic-external-researcher-access-safety",
       "title": "Anthropic外部研究者計畫：AI安全研究核准後US$1,000 API credits",
-      "summary": "官方計畫限Anthropic認定的高優先AI安全/對齊研究，核准者獲US$1,000 API credits；每月第一個週一審核、是否核准由Anthropic裁量。只限公開標準API模型，不含Claude網頁/APP、非公開模型或API微調；不豁免Usage Policy。台灣Claude服務可用不代表API計畫資格，台灣列為Unknown；未公布申請截止、必備付款卡或本計畫credit到期日。",
+      "summary": "官方計畫限高優先AI安全/對齊研究，核准者通常獲US$1,000 API credits，少數個案可更高；每月第一個週一審核。限公開標準API模型，不含Claude網頁/APP、非公開模型或API微調，也不豁免Usage Policy。現行Platform API地區清單列Taiwan，但研究授予須另行審核，非每位台灣使用者必然合格；付款卡及本計畫credit效期未公告。",
       "categories": [
         "QUALIFICATION",
         "HIGH-QUOTA"
@@ -31765,10 +32028,22 @@
           "label": "Anthropic Commercial Terms",
           "scope": "API使用適用條款",
           "evidence": "官方研究計畫頁連結API存取須遵守Commercial Terms；本次未將一般條款當成法律意見，台灣法律/監管適用結論未核。"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/api/supported-regions",
+          "scope": "現行Platform API地區清單列Taiwan；非研究授予或個案帳戶核准",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei實讀：API supported regions列Taiwan，頁面未標未來生效日；研究計畫仍須獨立審核。",
+          "accessed_at": "2026-10-28T04:09:54+08:00"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9125743-what-is-the-external-researcher-access-program",
+          "scope": "高優先安全研究、通常US$1,000及少數較高額度",
+          "evidence": "2026-10-28 04:06–04:08 Asia/Taipei實讀：通常US$1,000、罕見個案更高；每月第一週一審查、不豁免Usage Policy。",
+          "accessed_at": "2026-10-28T04:09:54+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:48:53+08:00",
-      "taiwan": "Unknown",
+      "verified_at": "2026-10-28T04:09:54+08:00",
+      "taiwan": "Yes",
       "verification": "Official",
       "quota_classification": "HIGH BUT LIMITED",
       "setup_cost_usd": null,
@@ -31779,25 +32054,25 @@
         "recurring_credit_usd": null
       },
       "eligibility": {
-        "service_availability": "核准後使用Anthropic公開API模型；Unsupported-country residents不能取得此計畫。Claude web/app在台灣可用不等於本計畫/API資格。",
-        "account_eligibility": "AI safety/alignment且符合Anthropic高優先研究範圍；核准具裁量，團隊應由單一帳戶申請並歸入一個Console organization；每月第一個週一審查。",
+        "service_availability": "現行Platform API supported-regions列Taiwan；研究計畫僅供獲批的高優先安全/對齊研究，非公開API地區可用即自動獲獎。",
+        "account_eligibility": "須現有Console organization ID、簡短研究計畫及學術/GitHub資料；每月首週一審查，核准由Anthropic裁量。提案資料視為非機密，員工推薦非必要；低服務品質容忍度可能影響審查。",
         "billing_country": "計畫未公布申請費、必須付款卡或台灣帳單支援；auto-reload為可選且啟用後可能自動扣款。",
-        "identity_residency": "Anthropic明訂unsupported-country residents不合資格；現行適用API國家名單未由本次可生效官方頁面明確確認，Taiwan計畫資格Unknown。",
-        "terms_restrictions": "不豁免Usage Policy，包括red-teaming/jailbreaking；credits不可轉讓/退款/兌現，關閉帳戶會失去餘額；發放通知指定效期，若未指定則一般促銷條款預設發放日起一年。",
-        "taiwan_note": "Unknown；Claude服務清單含台灣，但API supported-regions頁面標示2026-11-12未來生效；不能以未來規則推定目前申請資格。"
+        "identity_residency": "研究計畫排除unsupported-country居民；現行API支援清單列Taiwan，但帳戶所在地及個案核准未實測。",
+        "terms_restrictions": "不豁免Usage Policy；提案資料視為非機密，勿提交機密資料。credits不可轉讓/退款/兌現，關戶失去餘額；授予通知效期優先，未指定時一般促銷條款預設一年。",
+        "taiwan_note": "Yes僅指現行API地區清單列Taiwan；仍須安全研究審核、合格帳戶和個案核准，法律/監管結論未核。"
       },
       "unknowns": [
-        "申請截止日、具體問題/審核時程及核准保證",
-        "此計畫grant是否屬於Credit Terms所稱promotional credits，以及發放通知所定的確切效期",
-        "台灣居住者在本次查閱日的API/研究計畫資格及是否需付款方式",
-        "具體使用額度/速率限制與發放後是否可補額"
+        "申請核准、通知時程及是否需付款方式",
+        "此計畫grant是否適用一般促銷額度一年預設效期",
+        "個案帳戶與台灣付款接受條件",
+        "具體速率限制與發放後是否可補額"
       ],
       "record_type": "opportunity",
       "status": "conditional",
       "legal_status": "not_verified",
-      "priority_score": 13.8,
-      "priority_tier": "D",
-      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻",
+      "priority_score": 18.3,
+      "priority_tier": "S",
+      "priority_note": "官方·條件式·費用未知·台灣Yes·時間未知·有資格門檻",
       "views": [
         "developer",
         "qualification"
@@ -31805,7 +32080,7 @@
       "effort_minutes_max": null,
       "effort_basis": "申請審查耗時與必要資料未公布",
       "regions": [
-        "Global; country eligibility unverified"
+        "Taiwan"
       ],
       "usage_type": "API credits",
       "limited_confirmed": true,
@@ -31814,12 +32089,12 @@
       "valuation_scenario": null,
       "cancellation": "無訂閱或自動續費要求公告；API使用通常採預付，auto-reload為可選並可在Billing關閉。",
       "usable_duration": null,
-      "access_risk": "範圍窄、核准具裁量、國家資格與grant效期未知",
+      "access_risk": "安全研究範圍窄、核准具裁量；本計畫grant效期與個案帳戶未核",
       "discovered_at": "2026-10-25T09:48:53+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:48:53+08:00",
+      "next_review_at": "2026-11-28T04:09:54+08:00",
       "priority": "watch",
       "vpn_research": {
         "status": "not_verified",
@@ -41909,7 +42184,12 @@
           "evidence": "2026-10-27 00:05–00:08 Asia/Taipei Chromium實讀：能動模式送類攻擊請求、遵守robots.txt、不作持續監控；個人欄位不推翻商業用途條款。",
           "accessed_time_range": "2026-10-27T00:05:58+08:00–2026-10-27T00:08:01+08:00"
         },
-        {"url":"https://ndp-one.com/terms","scope":"本輪資格、掃描及資料保存條款局部重查","evidence":"2026-10-28 00:06–00:07 Asia/Taipei實讀：§3商業用途、§4核准、§7第三方授權、§13.7資料原則三個月後刪除、§17.4付費另同意；台灣個案未核。","accessed_time_range":"2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"}
+        {
+          "url": "https://ndp-one.com/terms",
+          "scope": "本輪資格、掃描及資料保存條款局部重查",
+          "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：§3商業用途、§4核准、§7第三方授權、§13.7資料原則三個月後刪除、§17.4付費另同意；台灣個案未核。",
+          "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
+        }
       ],
       "record_type": "opportunity",
       "status": "conditional",

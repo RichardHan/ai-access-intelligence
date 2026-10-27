@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **520 筆**（387 項機會、46 項政策、87 筆觀察線索），更新時間 **2026-10-28 00:08 Asia/Taipei**（不代表全庫複核）。本輪於原有 518 筆中**局部複核 9 筆**（Zed 學生、GitHub 新創、Vast 新創、DeepInfra DeepStart、Anyscale 新戶、ndp one、astamuse、Laya、Robinhood），**509 筆未更新本輪複核證據**；新增 [Confident AI Free](https://www.confident-ai.com/pricing) 與 [LangWatch Developer 條款衝突觀察](https://langwatch.ai/pricing)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。另有其他官方頁未納入逐筆全面複核。
+資料集目前有 **521 筆**（387 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 04:11 Asia/Taipei**（不代表全庫複核）。本輪於原有 520 筆中**局部複核 12 筆**（Antigravity、Jio、Deepgram Speak、Lawson、Lovable 瑞典、SambaNova、Rime STT、GitHub 學生、Udio、國網教學、Raycast 學生、Anthropic 研究者），**508 筆未更新本輪複核證據**；新增 [Respan Free 條款衝突觀察](https://www.respan.ai/pricing)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。
 
 ## 使用方式
 
