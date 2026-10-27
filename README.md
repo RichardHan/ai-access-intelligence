@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **503 筆**（374 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 04:11 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 501 筆中的 **7 筆既有紀錄**，**494 筆尚未更新本輪複核證據**。新增 [Autodesk Flow Studio Education](https://blogs.autodesk.com/media-and-entertainment/2026/09/28/autodesk-flow-studio-pricing-and-subscription-guide/)（合資格教育使用者每月2,100點）及 [Aiven PostgreSQL Free](https://aiven.io/docs/products/postgresql/concepts/pg-free-tier)（免卡1GB資料庫）兩筆機會，台灣個案資格均未核。Brave與Turso的台灣資格由 Yes 改 Unknown；Brave後付可超額計費；智譜原引用的數發部公告其實僅針對DeepSeek，法律狀態改未核實。Granola新創頁未列先前所稱投資人名單。只複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
+資料集目前有 **505 筆**（376 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 07:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 503 筆中的 **11 筆**，**492 筆尚未更新本輪複核證據**。新增 [Linear for Startups](https://linear.app/startups)（合作夥伴新創最多六個月 Business，額外 AI credits 未證）與 [Resend Free](https://resend.com/pricing)（寄收共用每月3,000封、每日100封，需自有網域；非模型推論額度）。Qoder Community 的 Round 4 現況未核；Bubble 公告與手冊對 MCP 讀取 logs 矛盾；Vercel Baseten 公告免費至10/27但時區及期後計費未知；Resend 定價與條款對超額付費矛盾。Granola Students 限美英加認可學籍，台灣籍不必然排除；OpenAI 非營利方案須 Goodstack 核驗，台灣服務可用不等於折扣合格。富士Soft名額、Trelis重開、Meshy下載權益及台灣個案仍待查。僅複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
 
 ## 使用方式
 
