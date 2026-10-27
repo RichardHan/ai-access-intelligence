@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **518 筆**（386 項機會、46 項政策、86 筆觀察線索），更新時間 **2026-10-27 22:15 Asia/Taipei**（不代表全庫複核）。本輪於原有 515 筆中**局部複核 7 筆**（Vercel Baseten、OpenAI Student Collective、AWS 非營利、Sarvam 校園、RealAds、Daytona 新創、Deepgram 新創），**508 筆未更新本輪複核證據**；新增 [Agenta Hobby 免費代理點數](https://agenta.ai/pricing)、[Anyscale 新創最高 US$20K 平台額度](https://www.anyscale.com/startup)與 [台灣 Gemini 學院教育工作坊觀察](https://grow.google/intl/zh-TW_tw/gemini-academy/)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。另查閱部分到期與最久未核案例的官方來源，但未全面更新其紀錄。
+資料集目前有 **520 筆**（387 項機會、46 項政策、87 筆觀察線索），更新時間 **2026-10-28 00:08 Asia/Taipei**（不代表全庫複核）。本輪於原有 518 筆中**局部複核 9 筆**（Zed 學生、GitHub 新創、Vast 新創、DeepInfra DeepStart、Anyscale 新戶、ndp one、astamuse、Laya、Robinhood），**509 筆未更新本輪複核證據**；新增 [Confident AI Free](https://www.confident-ai.com/pricing) 與 [LangWatch Developer 條款衝突觀察](https://langwatch.ai/pricing)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。另有其他官方頁未納入逐筆全面複核。
 
 ## 使用方式
 
