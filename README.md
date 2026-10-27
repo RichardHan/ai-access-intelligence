@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **508 筆**（379 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 11:44 Asia/Taipei**（不代表全庫複核）。本輪在原有 507 筆中**局部複核 7 筆**（AICU 熊本、Tencent TokenHub、Fastino、Claude 科學家、Suitup、台灣 ADI、ChatGPT Pro 200），**500 筆未更新本輪複核證據**；新增 [Firecrawl 新創年繳點數翻倍](https://www.firecrawl.dev/startups)，非免費訂閱。Tencent 一年／90 天效期衝突仍在，每模型 US$10 凍結款須退回帳戶；科學家 API 點需訂閱有效七日與連結 Console；AICU 新申請仍關閉。只核實所列官方來源的特定主張，台灣個案、法律與部分續費／兌換未知；限時每日，其餘按月輪替。
+資料集目前有 **510 筆**（381 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 13:49 Asia/Taipei**（不代表全庫複核）。本輪在原有 508 筆中**局部複核 3 筆**（Adobe Express K–12 授權、Rime Free、Qoder Ultimate 離峰），**505 筆未更新本輪複核證據**；新增 [HeyGen Free](https://www.heygen.com/pricing) 與 [Notta 教育折扣](https://support.notta.ai/hc/en-us/articles/17418832708251-How-to-apply-for-Notta-educational-discount)。Rime 現行免卡每月 US$50 不結轉，取代舊一次性說法；HeyGen 免費輸出限非商用，Notta 網頁教育訂閱續費規則與 iOS 說明關係未明。其他到期案例雖曾調查，未更新即不計入複核；台灣個案、法律及部分付款／兌換未知。限時每日，其餘按月輪替。
 
 ## 使用方式
 
