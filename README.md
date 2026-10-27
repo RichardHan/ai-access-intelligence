@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **510 筆**（381 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 13:49 Asia/Taipei**（不代表全庫複核）。本輪在原有 508 筆中**局部複核 3 筆**（Adobe Express K–12 授權、Rime Free、Qoder Ultimate 離峰），**505 筆未更新本輪複核證據**；新增 [HeyGen Free](https://www.heygen.com/pricing) 與 [Notta 教育折扣](https://support.notta.ai/hc/en-us/articles/17418832708251-How-to-apply-for-Notta-educational-discount)。Rime 現行免卡每月 US$50 不結轉，取代舊一次性說法；HeyGen 免費輸出限非商用，Notta 網頁教育訂閱續費規則與 iOS 說明關係未明。其他到期案例雖曾調查，未更新即不計入複核；台灣個案、法律及部分付款／兌換未知。限時每日，其餘按月輪替。
+資料集目前有 **512 筆**（382 項機會、46 項政策、84 筆觀察線索），更新時間 **2026-10-27 15:45 Asia/Taipei**（不代表全庫複核）。本輪於原有 510 筆中**局部複核 9 筆**（國網中心大學算力、Plaud、Daytona、Crusoe、Lightning、Meta 黑客松、BIZTEL、GMI、SambaCloud），**501 筆未更新本輪複核證據**；新增 [臺北青年 AI 訂閱補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796) 及 [Descript 教育／非營利觀察線索](https://help.descript.com/billing-payments-plans/nfp-edu)。臺北補助限合格既有支出與戶籍學籍，不能當作現在新訂即可免費；Meta 新報名已關閉，已入選者額度申領另有期限；SambaCloud 舊活動名額未證。台灣個案、法律及部分付款／兌換未知。限時每日，其餘按月輪替。
 
 ## 使用方式
 
