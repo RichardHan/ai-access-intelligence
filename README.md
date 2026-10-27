@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **513 筆**（383 項機會、46 項政策、84 筆觀察線索），更新時間 **2026-10-27 16:36 Asia/Taipei**（不代表全庫複核）。本輪於原有 512 筆中**局部複核 3 筆**（AkashML、Neo4j、BazaarLink），**509 筆未更新本輪複核證據**；新增 [Gemini Notebook 個人免費標準版](https://support.google.com/gemininotebook/answer/16213268?hl=zh-Hant)。台灣瀏覽器地區列入但個別帳戶未測；運算額度數值未公布，舊每日 FAQ 與新運算制並列。Neo4j 申請表仍暫不可用，BazaarLink 有餘額超額可能付費；法律、付款與個案資格不作全面判斷。另查閱部分到期限時來源但未全面更新；限時每日，其餘按月輪替。
+資料集目前有 **515 筆**（384 項機會、46 項政策、85 筆觀察線索），更新時間 **2026-10-27 19:06 Asia/Taipei**（不代表全庫複核）。本輪於原有 513 筆中**局部複核 4 筆**（Hedra、DigitalOcean × Secret、Claude Security、AI Compass），**509 筆未更新本輪複核證據**；新增 [PostHog AI Observability 免費額度](https://posthog.com/ai-observability/pricing) 及 [教育部磨課師 AI 課程觀察](https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=D7DCCB20AF940CF8)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。另查閱部分到期與最久未核案例的官方來源，但未全面更新其紀錄。
 
 ## 使用方式
 

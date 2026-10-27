@@ -1,8 +1,149 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-27T16:36:12+08:00",
-  "scope": "2026-10-27 16:06–16:15 Asia/Taipei 於原512筆中局部複核3筆（AkashML、Neo4j、BazaarLink），其餘509筆未更新本輪複核證據；新增1筆個人Gemini Notebook標準版，共513筆（383機會、46政策、84觀察）。官方頁僅支持各筆列明主張，不代表個案開通、所有條款或台灣法律結論。Vast、Codex及其他地區限時案例亦已閱讀部分官方資料但未刷新完整紀錄；限時每日、其他按月輪替。updated_at僅表示資料集更新。優先度由既有欄位衍生，非外部查核。",
+  "updated_at": "2026-10-27T19:06:29+08:00",
+  "scope": "2026-10-27 18:05–18:42 Asia/Taipei於原513筆中局部複核4筆（Hedra、DigitalOcean × Secret、Claude Security、AI Compass），其餘509筆未更新本輪複核證據；新增PostHog AI Observability機會與教育部磨課師觀察，共515筆（384機會、46政策、85觀察）。另研究多筆到期/最久未查案例之官方頁，但未全面更新或刷新verified_at。各筆來源只支持列明主張，不代表個案核准、全面服務條款或台灣法律結論；限時每日，其餘按月輪替。updated_at僅表示資料集更新；優先度由既有欄位衍生，非外部查核。",
   "offers": [
+    {
+      "id": "posthog-ai-observability-free-monthly-hundred-k-events",
+      "title": "PostHog AI Observability：免卡每月10萬events，非免費模型API",
+      "summary": "官方免費層每月100,000個AI Observability events、單一project，無需信用卡；generation、span與trace均記為events，並非10萬次完整追蹤或免費模型推論。超額付費起價每event US$0.000350；免費額度後是否硬停未核，台灣帳戶資格未知。",
+      "categories": [
+        "FREE",
+        "HIGH-QUOTA"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Monthly event count",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "條款§7.1列30日書面終止通知，已產生費用仍應支付；免費層超額是否自動收費或硬停未證。",
+      "usable_duration": "公開常態免費層，每月重置；未列促銷截止日。",
+      "access_risk": "需確認超額計費與支出控制；內容可能用於PostHog產品/模型開發，除非退出，退出不追溯已訓練模型或衍生資料。",
+      "verified_at": "2026-10-27T18:42:00+08:00",
+      "discovered_at": "2026-10-27T18:42:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-27T18:42:00+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方定價顯示常態免費層；未登入或驗證台灣帳戶",
+        "account_eligibility": "免費平台一個project；註冊流程、年齡條件與個別核准未核",
+        "billing_country": "免費額度免卡，升級與超額付費、台灣付款接受度未核",
+        "identity_residency": "公開條款未提供台灣專屬資格保證；出口管制/制裁條款仍適用",
+        "terms_restrictions": "限開發自身/關聯公司軟體的內部用途；禁止轉售、規避限額與未授權資料上傳。資料須有權利與同意，依條款§5.1可選擇退出模型開發使用但不追溯。",
+        "taiwan_note": "Unknown：沒有找到官方台灣帳戶可開通的明確證據；無禁令不等於法律或個案資格結論。"
+      },
+      "unknowns": [
+        "台灣帳戶註冊及帳單國家",
+        "免費額度耗盡後硬停或自動計費",
+        "事件重置精確日期與資料保留",
+        "台灣法律適用"
+      ],
+      "sources": [
+        {
+          "url": "https://posthog.com/ai-observability/pricing",
+          "scope": "免費每月10萬events、免卡、單project、超額單價；不證台灣帳戶",
+          "evidence": "2026-10-27 18:05–18:42 Asia/Taipei實讀：Totally free含每月100,000 AI Observability events；超額US$0.000350/event起。events包含generations/spans/traces，非模型推論贈額。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:42:00+08:00"
+        },
+        {
+          "url": "https://posthog.com/terms",
+          "scope": "內部使用、內容權利、模型訓練退出、付費及終止；非台灣法律結論",
+          "evidence": "2026-10-27 18:05–18:42 Asia/Taipei實讀2026-06-29版§1、2、4、5、6、7；需有資料權利，§5.1退出模型開發不追溯，§7.1終止需30日書面通知。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:42:00+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 17.8,
+      "priority_tier": "B",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
+    {
+      "id": "taiwan-moe-moocs-eighteen-free-ai-courses",
+      "title": "教育部磨課師：18門免費AI課程，平台報名待核",
+      "summary": "教育部115/9/1公告遴選18門AI課程，免費開放全民學習；修畢可取得修課證明，學分抵免依各校規定。課程平台本輪憑證驗證失敗，未核實個別課程現況、報名方式及證明門檻，暫列觀察而非可立即領取。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "AI online learning",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費課程無已證實訂閱扣款；第三方連結、報名流程及資料刪除未核。",
+      "usable_duration": "公告未載統一截止日；各課程時程未核。",
+      "access_risk": "平台本輪無法完成TLS憑證驗證，不能確認目前可選課；不繞過憑證檢查。",
+      "verified_at": "2026-10-27T18:42:00+08:00",
+      "discovered_at": "2026-10-27T18:42:00+08:00",
+      "announcement_at": "2026-09-01",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-27T18:42:00+08:00",
+      "priority": "watch",
+      "status": "unverified",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "教育部公告全民免費學習；本輪課程平台憑證錯誤，個別課程開放狀態未核",
+        "account_eligibility": "公告不限大學生；註冊、年齡及完成證明門檻待平台查核",
+        "billing_country": "公告稱免費課程；平台未核，不推論任何外部教材或服務費用",
+        "identity_residency": "未見居住門檻；台灣公開教育服務公告不保證每人可完成平台註冊",
+        "terms_restrictions": "修課證明非保證可抵學分，需依個別學校規定；不得冒用學籍或身分",
+        "taiwan_note": "Yes僅指教育部免費開放全民學習的地區範圍；個案報名與法律未核。"
+      },
+      "unknowns": [
+        "平台憑證與開課狀態",
+        "個別課程報名和證明條件",
+        "年齡、帳戶及隱私條款",
+        "適用法律/監管結論"
+      ],
+      "sources": [
+        {
+          "url": "https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=D7DCCB20AF940CF8",
+          "scope": "公告日期、18門AI課、全民免費及修課證明；不證當前平台選課",
+          "evidence": "2026-10-27 18:05–18:42 Asia/Taipei直接閱讀教育部115-09-01公告：遴選18課、免費開放全民學習，修畢可取修課證明，學分抵免依校規。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:42:00+08:00"
+        },
+        {
+          "url": "https://moocs.moe.edu.tw/moocs/#/course/theme/20",
+          "scope": "課程入口本輪TLS憑證驗證失敗；不是關閉證據",
+          "evidence": "2026-10-27 18:05–18:42 Asia/Taipei嘗試官方課程入口，憑證驗證失敗；未讀到報名或個別課程條款。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:42:00+08:00"
+        }
+      ],
+      "record_type": "watchlist",
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
     {
       "id": "google-gemini-notebook-standard-free",
       "title": "Gemini Notebook 標準版：台灣免費來源研究助理",
@@ -10091,8 +10232,8 @@
     },
     {
       "id": "digitalocean-secret-ai-startup-100-2026",
-      "title": "DigitalOcean × Secret：100美元，會員年費149美元",
-      "summary": "前50家合格AI新創，每公司US$100，需新DO企業戶、合法企業/網站及Secret Premium審核；兌領截止2027-01-17 23:59 UTC（台灣1/18 07:59）。額度入帳後90天且不晚於2027-01-17失效，額度到期時分未列；Secret年費US$149自動續訂且資格遭拒不退款。合作頁舊metadata $5,000不等於現行福利。",
+      "title": "DigitalOcean × Secret：合格新創US$100額度，Secret會員另收費",
+      "summary": "前50家合格AI新創每公司US$100，需新DO企業戶、合法企業/網站及有效Secret會員；兌領截止2027-01-17 23:59 UTC（台灣1/18 07:59）。額度入帳後90天且不晚於2027-01-17失效；適用Core Cloud及部分GPU/AI服務，不含第三方轉付費模型與稅，超額另計。Secret Premium年費US$149或終身US$399，年約自動續訂且資格遭拒不退款；合作頁舊metadata $5,000並非個別福利。",
       "categories": [
         "QUALIFICATION"
       ],
@@ -10115,21 +10256,21 @@
       "valuation_scenario": "僅面額/會員費上界100/149約0.67，不是實際效益成本比；不建議只為100額度購會員。",
       "cancellation": "Secret年繳訂閱自動續一年，須期末至少一日前書面通知取消；因不符合作方資格遭拒不退款。",
       "usable_duration": "兌領後90天且不晚於2027-01-17；23:59 UTC為兌領截止而非已證實額度失效時分。",
-      "access_risk": "最多50家公司、剩餘名額未公布；超出適用服務/贈額按標準價收費，Secret訂閱另自動續期。",
-      "verified_at": "2026-10-26T16:50:00+08:00",
+      "access_risk": "最多50家公司、餘額未知；第三方pass-through模型、稅與超額另收費。Secret會員審核與訂閱費不因DO拒絕而退款。",
+      "verified_at": "2026-10-27T18:33:51+08:00",
       "discovered_at": "2026-10-23T23:05:00+08:00",
       "announcement_at": "2026-10-14",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T16:50:00+08:00",
+      "next_review_at": "2026-10-28T18:33:51+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開方案，具體地區條件未完整核實",
-        "account_eligibility": "新DO企業戶、AI產品/網站、有效Secret Premium、公司LinkedIn與網域信箱",
-        "billing_country": "未知",
-        "identity_residency": "未知",
-        "terms_restrictions": "VPN不能替代帳戶、身分或活動資格",
-        "taiwan_note": "Unknown；不是可領或禁止結論"
+        "service_availability": "官方活動條款仍列10/19–1/17且限首50個合格兌領；剩餘名額與個案核准未核",
+        "account_eligibility": "AI產品或AI原生、登記有效企業及公開網站；有效Secret會員、新DO帳戶。每公司/帳戶/組織只得一次，DO審核後始核發",
+        "billing_country": "Secret年US$149或終身US$399另稅；DO超額按標準費用，台灣付款接受度未核",
+        "identity_residency": "要求真實登記企業與授權代表；制裁與出口限制適用，未找到台灣法人核准保證",
+        "terms_restrictions": "不可轉讓、轉售、多帳號套利或未授權疊加；贈額含合格GPU Droplets，排除第三方pass-through模型與稅；不等同DO Startups另一方案",
+        "taiwan_note": "Unknown：服務條款未明列台灣企業可核准；法律/監管適用未核，不能由制裁排除名單推論個案合法性"
       },
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省",
@@ -10162,8 +10303,9 @@
         },
         {
           "url": "https://www.digitalocean.com/legal/promotional-offer-100-in-digitalocean-credits-for-50-ai-startups-on-secret",
-          "scope": "兌領23:59 UTC與額度最晚失效日期分開；名額不保證",
-          "evidence": "2026-10-26 16:46–16:50 Asia/Taipei實讀DO條款及Secret現行正文；未核剩餘名額或台灣法人審核。"
+          "scope": "本輪重查首50家、日期、核准後核發、GPU服務、第三方模型排除及超額費用；不證剩餘名額或台灣核准",
+          "evidence": "2026-10-27 18:33 Asia/Taipei直接讀取10/14版官方活動條款：首50家、1/17 23:59 UTC截止、核准後US$100，90天或1/17較早者失效；GPU Droplets可用、pass-through模型不可用，超額按標準價。DO可撤銷濫用額度。",
+          "accessed_time_range": "2026-10-27T18:33:51+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -10173,7 +10315,7 @@
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
       "status": "conditional",
-      "setup_cost_basis": "新購Secret Premium標價149美元/年另稅；已有會員新增成本未核，不列免費。",
+      "setup_cost_basis": "新購Secret Premium年US$149或終身US$399另稅；已有會員新增成本未核，不列免費。",
       "recurring_cost_annual_usd": 149,
       "priority_score": 13.1,
       "priority_tier": "D",
@@ -18664,7 +18806,7 @@
     {
       "id": "claude-security-enterprise-two-month-credit",
       "title": "Claude Security：企業新介面兩月贈額，非通用API點數",
-      "summary": "符合資格Enterprise組織（含AWS Marketplace）新Claude Security自動享連續兩月各最高US$25,000，不遞延；既有組織10/21起，新組織開通日起，不使用仍計時，最晚12/31 UTC結束。舊專案須遷移才涵蓋，但GitHub Enterprise舊專案不可遷移；遷移不複製成員、webhooks、排除目錄、掃描歷史與排程。額度耗盡／到期後按token收費，非一般API或Claude Code外掛贈額。",
+      "summary": "符合資格Enterprise組織（含AWS Marketplace）新Claude Security自動享連續兩個組織周年月各最高US$25,000，不遞延；既有組織10/21起，新組織開通日起，不使用仍計時，11/1後新註冊不足兩個完整月，最晚12/31 UTC結束。舊專案須遷移才涵蓋，但GitHub Enterprise舊專案不可遷移；遷移不複製成員、webhooks、排除目錄、掃描歷史與排程。額度耗盡／到期後按token收費，非一般API或Claude Code外掛贈額。",
       "categories": [
         "QUALIFICATION",
         "HIGH-QUOTA",
@@ -18688,20 +18830,20 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "贈額不得抵Enterprise座位／訂閱／稅；取消座位、停用或帳戶暫停可喪失贈額；耗盡後按token收費。",
-      "usable_duration": "連續兩個組織周年月，最晚2026-12-31 UTC日末",
-      "access_risk": "Enterprise付費席位及用量計費須啟用；用盡／到期按token計費，不支援ZDR。舊GitHub Enterprise專案不可遷移，其他舊專案遷移亦不複製設定與歷史。",
-      "verified_at": "2026-10-26T15:48:54+08:00",
+      "usable_duration": "連續兩個組織周年月，最晚2026-12-31 UTC日末；11/1後註冊無法取得兩個完整月",
+      "access_risk": "Enterprise付費席位及用量計費須啟用；11/1後新企業無完整兩月，耗盡／到期按token計費，不支援ZDR。舊GitHub Enterprise專案不可遷移，其他舊專案遷移亦不複製設定與歷史。",
+      "verified_at": "2026-10-27T18:37:09+08:00",
       "discovered_at": "2026-10-24T11:00:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T15:48:54+08:00",
+      "next_review_at": "2026-10-28T18:37:09+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
         "account_eligibility": "Enterprise組織（含AWS Marketplace），各使用者需premium seat、啟用consumption billing與usage credits、owner開通；僅新Security專案，既有專案須遷移，GitHub Enterprise專案不可遷移。",
         "billing_country": "台灣Enterprise實際合約／帳單未核。",
-        "identity_residency": "台灣列於未來2026-11-12生效的地區名單，不能倒推10/26完整企業資格。",
+        "identity_residency": "目前可讀台灣地區清單標示2026-11-12生效，不能倒推2026-10-27企業資格。",
         "terms_restrictions": "僅掃描自己公司codebase，排除第三方所有或授權程式碼（含公司外OSS）；不支援ZDR。贈額不抵座位或稅，耗盡直接計費。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
@@ -18716,9 +18858,9 @@
         {
           "url": "https://support.claude.com/en/articles/14661296-use-claude-security",
           "label": "官方公開正文",
-          "scope": "Claude Security：企業新介面兩月贈額，非通用API點數",
-          "evidence": "2026-10-26 15:46–15:48 Asia/Taipei實讀：Enterprise premium seat與consumption billing；新Security月最高US$25K連兩月、不結轉、12/31 UTC終止；舊專案需遷移，但GitHub Enterprise不可遷移，成員、webhooks、排除目錄、掃描歷史、排程不複製；用罄按token收費。台灣個案未核。",
-          "accessed_time_range": "2026-10-26T15:46:00+08:00–2026-10-26T15:48:54+08:00"
+          "scope": "本輪重查Enterprise席位、連續兩月額度、11/1後不足完整兩月、12/31 UTC截止及遷移限制；非個案核准",
+          "evidence": "2026-10-27 18:05–18:37 Asia/Taipei實讀：每組織周年月最高US$25K、連續兩月；11/1後新註冊不足完整兩月，最晚12/31 UTC；付費席位與consumption billing必需，耗盡後計費，舊GitHub Enterprise專案不能遷移。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:37:09+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -21138,25 +21280,26 @@
       "cancellation": "終止後重啟是否保留優惠、帳號費扣款與取消方式待核。",
       "usable_duration": "申請至2026/10/29 18:00；優惠隨持續使用有效，時區未核",
       "access_risk": "官方活動頁可不預告結束；有帳號仍收¥880/月，非所有比較AI產品免費；台灣法人/帳單未核。",
-      "verified_at": "2026-10-26T10:49:00+08:00",
+      "verified_at": "2026-10-27T18:37:09+08:00",
       "discovered_at": "2026-10-24T13:59:38+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-10-15",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T10:49:00+08:00",
+      "next_review_at": "2026-10-28T18:37:09+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "10/29 18:00截止（時區未明），¥33,000/月平台費於持續使用期間免除；活動可無預告結束。",
-        "account_eligibility": "法人向教育支援服務，需email且同一email不可重複登記；海外法人/個人資格未核。",
+        "account_eligibility": "法人向教育支援服務，需email且同一email不可重複登記；登記後由工作人員另行引導辦理，非登記即已開通。海外法人/個人資格未核。",
         "billing_country": "每帳號¥880/月含稅；台灣企業付款方式未核。",
         "identity_residency": "未核",
         "terms_restrictions": "0帳號平台費可為零，實際席位仍每帳號¥880/月含稅；email資料供活動/服務郵件。非第三方AI/API免費方案；取消/續約條款未取得。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
-        "台灣帳戶及身分／付款國家資格",
-        "個案條款及實際可用額度",
-        "美元換算未核，不硬填數字"
+        "台灣或海外法人簽約、付款方式與個案核准",
+        "取消/重啟平台費豁免及完整續約條款",
+        "可用AI功能與席位實際額度",
+        "10/29 18:00截止時區"
       ],
       "sources": [
         {
@@ -21168,8 +21311,9 @@
         },
         {
           "url": "https://www.ai-compass.biz/campaign/education",
-          "scope": "官方活動頁零帳號、提前結束、email限制及訊息用途",
-          "evidence": "2026-10-26 10:46–10:49 Asia/Taipei實讀：0帳號可維持免平台費；活動可不預告終止、同email不可重複登記，登記資料用於活動/服務訊息。公告另確認¥33,000與¥880均含稅。"
+          "scope": "本輪重查10/29申請、平台費豁免、每席月費、零帳號及工作人員後續辦理；非台灣資格",
+          "evidence": "2026-10-27 18:05–18:37 Asia/Taipei實讀：10/15–29申請，持續使用期間免¥33,000/月平台費，實際帳號仍¥880/月；0帳號可登記，email登記後另有工作人員引導，活動可提前終止。",
+          "accessed_time_range": "2026-10-27T18:05:00+08:00–2026-10-27T18:37:09+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -29899,7 +30043,7 @@
     {
       "id": "hedra-free-credit-unverified",
       "title": "Hedra AI：影片生成免費額度與重置週期未獲官方定價證實",
-      "summary": "搜尋引擎索引頁曾宣稱100 free credits，但直接查閱官方定價頁與Billing FAQ未載明固定免費額度或每日/每月重置；非商用權益及台灣帳戶可用性未明。列待追蹤線索，不列為可領承諾。",
+      "summary": "2026/10/27官方定價頁目前主列API預付美元餘額、依輸出或token計價，Studio方案從US$20/月起；未列影片生成固定免費點數或重置週期。舊索引所稱100 free credits未獲本次頁面證實；不據此推定免費方案已終止，保留待追蹤。",
       "categories": [
         "FREE"
       ],
@@ -29920,12 +30064,12 @@
       "status": "unverified",
       "record_type": "watchlist",
       "legal_status": "not_verified",
-      "verified_at": "2026-10-25T07:22:00+08:00",
+      "verified_at": "2026-10-27T18:05:27+08:00",
       "discovered_at": "2026-10-25T07:22:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T07:22:00+08:00",
+      "next_review_at": "2026-11-27T18:05:27+08:00",
       "priority": "watch",
       "usage_type": null,
       "limited_confirmed": null,
@@ -29934,14 +30078,14 @@
       "valuation_scenario": null,
       "cancellation": "尚未證實免費方案之續期或升級機制",
       "usable_duration": "未明",
-      "access_risk": "免費額度未獲官方定價頁支持，可能隨時變動或需付費",
+      "access_risk": "本次只重查公開定價頁；API採預付計價，Studio付費方案從US$20/月起。免費點數與台灣帳戶資格未證，不應視為可領取。",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
         "eligibility_note": "未操作VPN"
       },
       "eligibility": {
-        "service_availability": "服務運作中但免費方案額度未獲官方定價頁證實",
+        "service_availability": "公開定價頁列API預付使用及Studio付費方案；未證實影片生成免費點數，不代表舊免費活動已終止",
         "account_eligibility": "需帳戶",
         "billing_country": "未知",
         "identity_residency": "未知",
@@ -29956,8 +30100,9 @@
       "sources": [
         {
           "url": "https://www.hedra.com/pricing",
-          "scope": "定價頁未載固定免費額度",
-          "evidence": "2026-10-25查閱：定價頁未列出明確的免費額度數字或每月重置週期。"
+          "scope": "本輪僅核對公開API與Studio定價及未列固定影片免費額度；不證明免費活動終止或個別帳戶條款",
+          "evidence": "2026-10-27 18:05 Asia/Taipei直接查閱：API以預付美元餘額依輸出或token計價，無訂閱/席位/最低額；Studio方案meta說明自US$20/月起。頁面未列影片免費點數與重置數字。",
+          "accessed_time_range": "2026-10-27T18:05:27+08:00"
         },
         {
           "url": "https://www.hedra.com/docs/pages/app/billing/how-credits-work",
