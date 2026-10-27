@@ -1,8 +1,169 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-27T07:53:18+08:00",
-  "scope": "2026-10-27 05:05–07:53 Asia/Taipei 局部複核原有503筆中11筆（Granola Students、TWAI Cloud、Meshy、Qoder Community、Bubble Agent 2、Vercel Baseten、OpenAI非營利、Qoder Free、Qoder Lite、富士Soft PoC、Trelis），492筆未更新本輪複核證據；新增Linear for Startups與Resend Free兩筆，共505筆（376機會、46政策、83觀察）。只核對各筆新增官方來源支持的特定主張，未全面重查條款、台灣個案或法律監管；限時每日、其他按月輪替。優先度評分僅由既有欄位衍生，非外部查核。",
+  "updated_at": "2026-10-27T08:47:08+08:00",
+  "scope": "2026-10-27 08:05–08:42 Asia/Taipei 本次新增2筆（Laminar、Fireflies），局部複核既有3筆（Replicate、CodeBuddy、ChatGPT學生）；原有505筆中502筆未更新本輪複核證據，共507筆（378機會、46政策、83觀察）。各筆僅核對所列官方頁的特定主張，非全面條款、台灣個案或法律複核；台灣ADI入口逾時，公告僅能證截止日期，未刷新其查核時間。限時每日、其他按月輪替。優先度為既有欄位衍生評分，非外部查核。",
   "offers": [
+    {
+      "id": "fireflies-free-auto-join-storage-credit-conflicts",
+      "title": "Fireflies Free：Auto-join條件式不限逐字稿，AI額度文件衝突",
+      "summary": "Free為US$0；新戶開啟合格Auto-join可不限原始會議逐字稿，但每席僅400分鐘錄音儲存，摘要、上傳與進階AI並非不限。官方對20 AI credits為每月或一次、摘要扣點與試用自動升級的描述衝突；台灣帳戶未核，錄音須每位參與者同意。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": "未註冊、未連接日曆或錄音",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Conditional meeting transcription",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "純Free額度用盡顯示付費牆，未主動升級不扣費；另選七日Business試用須卡且自動續費，AI點試用可能須另取消。",
+      "usable_duration": "Auto-join開啟時原始逐字稿不限次；錄音儲存每席400分鐘，可刪舊檔釋放。",
+      "access_risk": "Auto-join可能自動加入會議；每位錄音參與者須同意，下載逐字稿要付費；試用／付費的自動升級規則與Free不同。",
+      "verified_at": "2026-10-27T08:25:06+08:00",
+      "discovered_at": "2026-10-27T08:22:42+08:00",
+      "announcement_at": "2026-09-01",
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-27T08:25:06+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "Free原始逐字稿須合格Auto-join才不限；僅邀請fred@不符合，關閉時新戶預設三場。",
+        "account_eligibility": "需Google或Outlook登入；條款要求18歲以上及每位被錄者許可。",
+        "billing_country": "純Free不升級不收費；付費試用需卡並可能自動續費，台灣帳單國家未核。",
+        "identity_residency": "未找到台灣個別帳戶明文資格。",
+        "terms_restrictions": "400分鐘每席儲存；上傳100MB/150分鐘，逐字稿下載付費；不得未經參與者同意錄音。",
+        "taiwan_note": "Unknown：網站可讀不等於台灣帳戶開通或錄音合法性結論。"
+      },
+      "unknowns": [
+        "20 AI credits每月或一次衝突",
+        "摘要扣transcription或AI credits說法衝突",
+        "付費試用自動升級條款差異與台灣帳戶資格"
+      ],
+      "sources": [
+        {
+          "url": "https://guide.fireflies.ai/articles/4027724828-learn-about-the-fireflies-free-plan",
+          "scope": "Free儲存、初始逐字稿點及上傳限制",
+          "evidence": "400分鐘/席；網站初始3點、extension 5點、新手機10點；摘要或上傳消耗逐字稿點。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
+        },
+        {
+          "url": "https://guide.fireflies.ai/articles/8632872350-unlock-unlimited-transcriptions-on-the-fireflies-free-plan",
+          "scope": "9/1後Auto-join條件，不含摘要",
+          "evidence": "開啟合格Auto-join不限原始逐字稿；僅邀請機器人不算，關閉預設三場；摘要不不限。",
+          "accessed_at": "2026-10-27T08:25:06+08:00"
+        },
+        {
+          "url": "https://guide.fireflies.ai/articles/9606045468-fireflies-billing-terms",
+          "scope": "純Free無扣款與AI點衝突",
+          "evidence": "Free US$0且額度用盡付費牆，須主動升級才扣費；20 AI點稱一次新戶點，與Free指南月點衝突。",
+          "accessed_at": "2026-10-27T08:25:06+08:00"
+        },
+        {
+          "url": "https://fireflies.ai/terms-of-service",
+          "scope": "年齡、錄音同意及付費國家；法律未核",
+          "evidence": "18歲以上及各錄音參與者許可；付費須選帳單國家。",
+          "accessed_at": "2026-10-27T08:25:06+08:00"
+        },
+        {
+          "url": "https://guide.fireflies.ai/articles/9184301760-manage-fireflies-free-trial-start-upgrade-downgrade-cancel-billing",
+          "scope": "獨立Business試用的卡及續費，不適用純Free",
+          "evidence": "七日Business試用需卡且自動續費，選配AI點試用須另處理取消。",
+          "accessed_at": "2026-10-27T08:25:06+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 15.8,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知"
+    },
+    {
+      "id": "laminar-free-gb-hard-cap-signals-conflict",
+      "title": "Laminar Free：每週期1GB代理追蹤，Signals免費額度說法衝突",
+      "summary": "Free每週期1GB追蹤資料、7日資料存取、1專案與1席；超限停止匯入而非自動付費，並非模型推論額度。定價頁稱不含Signals，但用量文件稱新workspace各方案有一次US$5 Signals額度，不能保證可領。台灣帳戶與免卡未核。",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "effort_basis": "未開戶或整合SDK",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Per billing cycle data",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "Free用盡停止匯入，文件稱不會計費；升級後取消規則未核。",
+      "usable_duration": "每帳單週期1GB；資料可讀7日，週期精確邊界未核。",
+      "access_risk": "超額新資料遭拒且不可補回；Free/Starter隱私模式預設關，Signals運作資料可能用於訓練，敏感資料需審慎。",
+      "verified_at": "2026-10-27T08:25:06+08:00",
+      "discovered_at": "2026-10-27T08:22:42+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-27T08:25:06+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方Free每週期1GB追蹤匯入，非AI模型推論額；Signals免費資格有官方頁面衝突。",
+        "account_eligibility": "須建立workspace；未成年者不得使用，未開戶測試。",
+        "billing_country": "Free標價零且超額硬停，台灣付款與升級流程未核。",
+        "identity_residency": "台灣居住／帳戶資格未明列。",
+        "terms_restrictions": "API、SDK及CLI內部商業使用允許；不得規避限制。Signals資料訓練與Privacy Mode須依條款處理。",
+        "taiwan_note": "Unknown：公開方案不等於台灣個別開戶資格；法律限制未核。"
+      },
+      "unknowns": [
+        "台灣帳戶與免卡資格",
+        "Signals一次US$5與定價頁No Signals的衝突",
+        "帳單週期邊界及Privacy Mode實際控制"
+      ],
+      "sources": [
+        {
+          "url": "https://laminar.sh/pricing",
+          "scope": "Free價格、1GB、7日、席位及No Signals；非台灣核准",
+          "evidence": "US$0/月、1GB、無超額、7日、1專案/1席，列No Signals。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
+        },
+        {
+          "url": "https://laminar.sh/docs/platform/usage-limits.md",
+          "scope": "每週期硬停及Signals一次額度衝突",
+          "evidence": "Free永不計費，1GB後HTTP 403或gRPC RESOURCE_EXHAUSTED且拒收資料不補回；稱所有新workspace有一次US$5 Signals。",
+          "accessed_at": "2026-10-27T08:25:06+08:00"
+        },
+        {
+          "url": "https://laminar.sh/policies/terms",
+          "scope": "成年、內部使用及資料訓練；非法律意見",
+          "evidence": "不得為當地未成年人；允許文件化API/SDK/CLI內部業務；僅Signal Run Data可供訓練，Privacy Mode停止後續使用。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 15.8,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知"
+    },
     {
       "id": "resend-free-transactional-agent-email",
       "title": "Resend Free：每月3,000封收發共額，每日100封",
@@ -5268,16 +5429,16 @@
       "cancellation": "提前取消僅保留當月，剩餘優惠月份失去；期滿US$20/月",
       "usable_duration": "四個月；10/31兌換截止時區未核",
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-26T11:48:00+08:00",
+      "verified_at": "2026-10-27T08:42:21+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T11:48:00+08:00",
+      "next_review_at": "2026-10-28T08:42:21+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Official 2026 student promotion remains published; claim by Oct 31, timezone unspecified.",
-        "account_eligibility": "全職或兼職就讀合格美國學位授予院校的大專／研究所學生，須以校方核發email經SheerID核驗（不要求與ChatGPT帳戶email相同）；新戶與直接由ChatGPT按月扣款的Plus訂戶可領。",
+        "account_eligibility": "全／兼職就讀合格美國學位授予院校的大專／研究所學生，經SheerID核驗；Help Center稱可用可信紀錄、校方SSO或文件，驗證email可與ChatGPT帳戶不同；另活動入口稱須校方email，兩頁口徑不一致。新戶與ChatGPT直接月付Plus可領。",
         "billing_country": "啟用須有效付款方式；可用國家／付款國別未在該活動頁完整說明。",
         "identity_residency": "學籍須屬合格美國學位授予院校；活動頁未要求居住地必須在美國。",
         "terms_restrictions": "限本次領取一次，SheerID及有效付款方式；直付月繳Plus適用、商店代收不適用；取消即失去未使用免費月份，已套用帳戶不得轉移優惠至其他帳戶；曾領舊學生優惠不當然排除。",
@@ -5314,6 +5475,12 @@
           "scope": "10/31兌換、四月月結及取消/不可轉移；非台灣居住個案付款驗證",
           "evidence": "2026-10-26 11:46–11:48 Asia/Taipei實讀：US合格學籍、SheerID、有效付款，四月後US$20/月自動續費；提前取消失去剩餘促銷月份，優惠不得轉移帳戶；截止時區未列。",
           "accessed_time_range": "2026-10-26T11:46:00+08:00–2026-10-26T11:48:00+08:00"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/20001493-chatgpt-back-to-school-offer-for-students",
+          "scope": "本輪僅複核SheerID驗證途徑、截止、扣款及取消；非台灣個案核准",
+          "evidence": "10/31前領四個免費月結週期，需有效付款，期後US$20/月；SheerID可可信紀錄、SSO或文件，email可不同，與活動入口校方email措辭不同。",
+          "accessed_at": "2026-10-27T08:42:21+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -8866,7 +9033,7 @@
     {
       "id": "replicate-try-free",
       "title": "Replicate Try for Free：指定模型有限次試跑",
-      "summary": "Replicate 官方 Try for Free 專區允許註冊用戶免綁信用卡試跑精選模型（如 minimax/video-01、luma/reframe-video、google/imagen-4、flux-1.1-pro、ideogram-v3-turbo、topazlabs 等）；免費額度為有限次數試跑（limited number of runs），未公布固定數值上限或美元金額；用盡後需購買額度轉為按量計費；台灣帳號可透過 GitHub 註冊體驗。",
+      "summary": "Replicate Try for Free 專區讓註冊者免信用卡有限次試跑指定模型；未公布固定次數、重置週期或金額。用盡須新增帳單資料並購買額度；商用權依各模型授權而異。台灣帳戶與註冊途徑未核，非所有推薦模型均保證免費。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -8891,13 +9058,13 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": null,
-      "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-25T08:26:00+08:00",
+      "access_risk": "限指定模型及有限次數；購買額度後依模型計價，私人部署另可能有閒置與設定費；台灣帳戶未核。",
+      "verified_at": "2026-10-27T08:22:42+08:00",
       "discovered_at": "2026-10-23T21:59:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T08:20:00+08:00",
+      "next_review_at": "2026-11-27T08:22:42+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8927,6 +9094,18 @@
           "scope": "帳戶免費額度耗盡後之後續計費模式",
           "evidence": "免費試跑有限次數；後續依硬體規格與請求次數按量計費。",
           "accessed_time_range": "2026-10-25（Asia/Taipei）"
+        },
+        {
+          "url": "https://replicate.com/collections/try-for-free",
+          "scope": "本輪僅複核指定模型有限次免卡試跑；非台灣帳戶核准",
+          "evidence": "註冊後指定模型可有限次免卡試跑，未公布數字或重置。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
+        },
+        {
+          "url": "https://replicate.com/pricing",
+          "scope": "用盡後購點及模型計價；非個別模型授權",
+          "evidence": "額度用盡須加入帳單及購買信用額；計價依硬體時間或輸入輸出而異。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -21475,15 +21654,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": null,
-      "usable_duration": "迎新14天，月額當月；活動截止尚未公告，非永久",
-      "access_risk": "資格、區域與方案可變；未登入或測試，不能據公開頁保證帳戶可用",
-      "verified_at": "2026-10-25T08:26:00+08:00",
+      "cancellation": "Free不需取消；另有Pro七日500點試用須信用卡並自動續費，須於試用期內取消；提前一天截止尚未核實。",
+      "usable_duration": "迎新14天，月額當月；日活動截止尚未公告。Pro七日試用500點取代Free月額，非疊加。",
+      "access_risk": "Pro試用須卡並自動續費，與Free分開；台灣付款未核；官方年價US$96與試用FAQ誤寫US$96/月矛盾。",
+      "verified_at": "2026-10-27T08:22:42+08:00",
       "discovered_at": "2026-10-24T16:04:04+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T08:20:00+08:00",
+      "next_review_at": "2026-11-27T08:22:42+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，不等於台灣帳戶可用",
@@ -21495,7 +21674,7 @@
       },
       "unknowns": [
         "台灣使用者個別資格、付款國家及居住要求未確認",
-        "官網7天試用需卡與提前一天取消之續費細節僅見搜尋索引，官方正文仍空白未證實"
+        "Pro七日試用取消的精確截止時間、FAQ年價單位矛盾尚未釐清"
       ],
       "sources": [
         {
@@ -21511,6 +21690,18 @@
           "scope": "每日 30/50 點活躍獎勵與扣款順序",
           "evidence": "每日活動任務獎勵（Free 30點/日，Pro 50點/日）；點數扣除優先扣除最早到期資源包。",
           "accessed_time_range": "2026-10-25（Asia/Taipei）"
+        },
+        {
+          "url": "https://www.codebuddy.ai/docs/zh/ide/Account/Subscription",
+          "scope": "本輪Free及Pro試用條款、續費；非台灣帳戶核准",
+          "evidence": "Free月100、迎新250/14日；未購買或試用者Pro七日500點需卡自動續費，試用期內取消，取代Free；價格表年US$96與FAQ月US$96口徑衝突。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
+        },
+        {
+          "url": "https://www.codebuddy.ai/docs/zh/ide/Account/credits",
+          "scope": "每日活動及點數扣序",
+          "evidence": "Free每日30、Pro每日50活動點，須客戶端有效任務，通常次日入帳；優先扣最早到期額。",
+          "accessed_at": "2026-10-27T08:22:42+08:00"
         }
       ],
       "record_type": "opportunity",

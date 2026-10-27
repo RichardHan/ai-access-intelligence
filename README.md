@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **505 筆**（376 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 07:53 Asia/Taipei**（不代表全庫複核）。本輪局部複核原有 503 筆中的 **11 筆**，**492 筆尚未更新本輪複核證據**。新增 [Linear for Startups](https://linear.app/startups)（合作夥伴新創最多六個月 Business，額外 AI credits 未證）與 [Resend Free](https://resend.com/pricing)（寄收共用每月3,000封、每日100封，需自有網域；非模型推論額度）。Qoder Community 的 Round 4 現況未核；Bubble 公告與手冊對 MCP 讀取 logs 矛盾；Vercel Baseten 公告免費至10/27但時區及期後計費未知；Resend 定價與條款對超額付費矛盾。Granola Students 限美英加認可學籍，台灣籍不必然排除；OpenAI 非營利方案須 Goodstack 核驗，台灣服務可用不等於折扣合格。富士Soft名額、Trelis重開、Meshy下載權益及台灣個案仍待查。僅複核各筆新標示的官方來源主張，未全面重查條款、台灣個案或法律／監管。限時活動每日追蹤，其他案例按月輪替。
+資料集目前有 **507 筆**（378 項機會、46 項政策、83 筆觀察線索），更新時間 **2026-10-27 08:47 Asia/Taipei**（不代表全庫複核）。本輪在原有 505 筆中**局部複核 3 筆**（Replicate、CodeBuddy、ChatGPT 美國學生），**502 筆尚未更新本輪複核證據**；新增 [Laminar Free](https://laminar.sh/pricing)（每週期1GB代理追蹤，Signals免費額度說法衝突）及 [Fireflies Free](https://guide.fireflies.ai/articles/8632872350-unlock-unlimited-transcriptions-on-the-fireflies-free-plan)（合格Auto-join可不限原始逐字稿，400分鐘儲存，AI額度文件衝突）。CodeBuddy Pro七日試用須卡且自動續費，取代Free月額；Replicate原台灣GitHub註冊說法無官方證據；ChatGPT學生驗證途徑與活動頁校方信箱說法不同。僅複核各筆新增官方來源主張，未全面重查台灣個案或法律／監管；限時每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
