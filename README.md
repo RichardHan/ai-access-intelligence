@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **523 筆**（389 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 08:10 Asia/Taipei**（不代表全庫複核）。本輪於原有 521 筆中**局部複核 6 筆**（Roboflow、台智雲、Kling、Duck.ai、Qoder、X API），**515 筆未更新本輪複核證據**；新增 [Adobe Express 非營利一年免費](https://www.adobe.com/tw/nonprofits.html)與 [Hetzner 實驗性免費推論 API](https://docs.hetzner.com/general/company-and-policy/experiments/inference/)。Qoder Round 4 分三日各 4,096 點當日領用；X API 的 xAI 回饋以購點金額而非用量計。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。
+資料集目前有 **525 筆**（391 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 12:11 Asia/Taipei**（不代表全庫複核）。本輪在原有 523 筆中**局部更新複核證據 5 筆**（ChatGPT Dots、Zed 試用、Runpod Creator、AI놀이터、WorkBuddy Step 5），**518 筆未更新本輪複核證據**；另實讀若干到期案例但未視作逐筆更新。新增 [台灣 e等公務園+ 免費 AI 概論課](https://elearn.hrd.gov.tw/info/10042743)與 [Crawl4AI Cloud 免卡月 1,000 點](https://crawl4ai.com/)；課程非模型額度，Crawl4AI 點數依操作與模型用量扣除。WorkBuddy 台灣服務未滿 20 歲不可使用，Step 5 專屬促銷仍缺官方證據。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。
 
 ## 使用方式
 

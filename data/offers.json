@@ -1,8 +1,110 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-28T08:10:50+08:00",
-  "scope": "2026-10-28 08:06–08:09 Asia/Taipei局部複核既有6筆（Roboflow、台智雲、Kling、Duck.ai、Qoder、X API），新增Adobe非營利Express與Hetzner實驗API，共523筆；原521筆中515筆本輪未逐筆複核。官方來源僅支持列明範圍，台灣個案及法律未核；限時每日，其餘最久未核按月輪替。；2026-10-28 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-10-28T12:11:41+08:00",
+  "scope": "2026-10-28 12:06–12:09 Asia/Taipei局部更新原523筆中5筆（ChatGPT Dots、Zed試用、Runpod Creator、AI놀이터、WorkBuddy Step 5），其餘518筆未更新本輪複核證據；新增台灣e等公務園+免費AI課及Crawl4AI Cloud免卡月點，共525筆。另研究其他到期案例但未逐筆寫入驗證時間；限時每日，其餘最久未核按月輪替。來源支持限於列明範圍，台灣個案與法律未核；優先度為既有欄位衍生計算。",
   "offers": [
+    {
+      "id": "taiwan-hrd-free-ai-introduction-2026",
+      "title": "e等公務園+：一般民眾免費AI概論課程，年底截止",
+      "summary": "公務人力發展學院AI概論及發展趨勢線上課程，任何人可報名，2026/1/1–12/31上課；教材製作於民國110年，非最新模型實作。免費學習非模型/API額度；認證須達課程專屬75分、閱讀一小時及問卷。",
+      "categories": ["FREE"],
+      "views": ["free", "education"],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": ["Taiwan"],
+      "verification": "Official",
+      "usage_type": "Online course",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "課程未列付費訂閱或自動續扣；未建立帳戶或操作課程。",
+      "usable_duration": "報名及上課：2026-01-01至2026-12-31",
+      "access_risk": "教材製作於2021年；學習時數需登入與身分資料，不同時開多課，閒置可能登出。未實測認證核發。",
+      "verified_at": "2026-10-28T12:09:34+08:00",
+      "discovered_at": "2026-10-28T12:09:34+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-10-29T12:09:34+08:00",
+      "priority": "watch",
+      "status": "active",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方課程頁列2026年全年報名與上課，未登入測試播放。",
+        "account_eligibility": "報名身分任何人；一般民眾以我的e政府登入，學習時數留存需身分證號註冊。",
+        "billing_country": "官方免費學習公告；無已核付款步驟。",
+        "identity_residency": "不要求公務員身分；無身分證者認證與學習時數資格未核。",
+        "terms_restrictions": "按平台真實身分登錄並完成課程專屬測驗與閱讀條件；不可將免費課程解讀為商用AI服務額度。",
+        "taiwan_note": "台灣官方平台明列任何人及一般社會大眾；個別帳號與證書未實測，法律結論未核。"
+      },
+      "unknowns": ["個別帳號核准及證書核發", "無台灣身分證者的時數取得方式", "台灣適用法律與監管"],
+      "sources": [
+        {"url": "https://elearn.hrd.gov.tw/info/10042743", "scope": "課程對象、報名及上課期間、教材年份與認證門檻", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀：任何人、一般社會大眾；全年2026報名上課，105分鐘；教材製作110年；專屬條件75分、閱讀一小時及問卷，通用文字另列60分。", "accessed_at": "2026-10-28T12:09:34+08:00"},
+        {"url": "https://elearn.hrd.gov.tw/mooc/co_login_dialog.php", "scope": "一般民眾登入與學習時數身分條件", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀：一般民眾使用我的e政府；留存時數需身分證號註冊，未實際登入。", "accessed_at": "2026-10-28T12:09:34+08:00"},
+        {"url": "https://moda.gov.tw/press/press-releases/13258", "scope": "2024公告證實一般民眾可免費瀏覽學習，不代表2026實體活動仍開放", "evidence": "2026-10-28 12:07 Asia/Taipei實讀數發部2024-08-07公告：平台AI課一般民眾申請帳號即可免費瀏覽學習。", "accessed_at": "2026-10-28T12:07:07+08:00"}
+      ],
+      "record_type": "opportunity",
+      "priority_score": 22.3,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣可用·時間未知"
+    },
+    {
+      "id": "crawl4ai-cloud-monthly-thousand-no-card",
+      "title": "Crawl4AI Cloud：免卡每月1,000共享credits",
+      "summary": "驗證email後免費每月1,000 credits，訪客20點；可供擷取、搜尋及AI擷取，但操作與模型tokens分別耗點，不等於1,000次任意模型呼叫。軟啟動可調整免費額度；台灣註冊及服務資格未核。",
+      "categories": ["FREE"],
+      "views": ["free", "developer"],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Monthly shared scraping and AI credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "Free免卡；升級付費方案預收月費，取消於當期結束生效，auto-recharge可關閉。",
+      "usable_duration": "每月1,000點，不結轉；軟啟動額度可能變更。",
+      "access_risk": "每分鐘10請求、並行2；點數用盡回402，付費plan另購。舊條款年齡16歲與新版隱私政策未滿18歲不適用有衝突，保守以18歲以上追蹤。",
+      "verified_at": "2026-10-28T12:09:34+08:00",
+      "discovered_at": "2026-10-28T12:09:34+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-28T12:09:34+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方首頁及文件仍列Free；未建立台灣帳號或實測API。",
+        "account_eligibility": "驗證email；每人或每組織一帳號，須有權擷取資料及遵守目標網站條款。",
+        "billing_country": "Free免卡；付費升級及台灣付款方式未核。",
+        "identity_residency": "新舊官方頁年齡門檻不一致；台灣開戶及個別資格未知。",
+        "terms_restrictions": "不得繞過登入或付費牆、重售服務、侵權或多帳號規避；保密API key。",
+        "taiwan_note": "EU/新加坡/美國資料區域不等於台灣帳戶核准；地區資格Unknown，法律未核。"
+      },
+      "unknowns": ["台灣email註冊與API實際開通", "新版及舊版年齡/退款條款優先順序", "超額與付費升級付款條件", "台灣法律/監管"],
+      "sources": [
+        {"url": "https://crawl4ai.com/", "scope": "Free 1,000點/月、訪客20點、免卡及速率", "evidence": "2026-10-28 12:07 Asia/Taipei實讀：驗證email後月1,000點、免卡、10請求/分鐘與並行2；訪客20點。", "accessed_at": "2026-10-28T12:07:07+08:00"},
+        {"url": "https://api.crawl4ai.com/v1/prices", "scope": "即時費率，區分贈點與用量欄位", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀：credit.monthly=1000、guest=20；scrape base 0.5、search/serp base 1，AI功能另計tokens；allowance_per_month=2500非贈額。", "accessed_at": "2026-10-28T12:09:34+08:00"},
+        {"url": "https://crawl4ai.com/docs/", "scope": "不結轉、用盡402及區域/付費區別", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀：免費點不結轉、用盡回402；服務區域EU/新加坡/美國，不能推定台灣開戶資格。", "accessed_at": "2026-10-28T12:09:34+08:00"},
+        {"url": "https://crawl4ai.com/legal/", "scope": "2026-10-15新版付款與soft launch條款", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀：免費額度可變；付費月費預收、取消期末生效，auto-recharge可關；隱私政策不面向18歲以下。", "accessed_at": "2026-10-28T12:09:34+08:00"},
+        {"url": "https://docs.crawl4ai.com/terms/", "scope": "舊版年齡條款與新版衝突", "evidence": "2026-10-28 12:09 Asia/Taipei批次實讀舊2026-04-20條款：至少16歲或當地數位同意年齡；與新版隱私描述不同。", "accessed_at": "2026-10-28T12:09:34+08:00"}
+      ],
+      "record_type": "opportunity",
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
     {
       "id": "hetzner-inference-experimental-free",
       "title": "Hetzner Inference 實驗：Qwen 免費 API，帳戶資格待核",
@@ -1834,7 +1936,7 @@
     {
       "id": "chatgpt-dots",
       "title": "ChatGPT Dots：對話與深度工作分開看",
-      "summary": "dots為持續運作AI代理（GPT-6 Astra），對話不計入ChatGPT用量。深度工作（Work/Codex）按各產品額度計算，首月有extended limits。支援Pro 100/200/500（18歲以上且排除EEA/UK/CH）、Business及Enterprise。分批釋出不保證即刻取得；暫停主任務不自動取消委派或排程任務。",
+      "summary": "dots為持續運作AI代理（GPT-6 Astra），對話不計入ChatGPT用量。深度工作（Work/Codex）按各產品額度計算，首月有extended limits。支援Pro 100/200/500（18歲以上且排除EEA/UK/CH）、Business Premium及Enterprise。分批釋出不保證即刻取得；暫停主任務不自動取消委派或排程任務。",
       "categories": [
         "QUALIFICATION"
       ],
@@ -1856,16 +1958,16 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、推出階段及政策可能改變",
-      "verified_at": "2026-10-25T07:23:05+08:00",
+      "verified_at": "2026-10-28T12:06:38+08:00",
       "discovered_at": "2026-10-23T10:40:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T07:23:05+08:00",
+      "next_review_at": "2026-11-28T12:06:38+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "Pro 100/200/500（排除EEA/UK/CH）、Business及Enterprise分批釋出",
-        "account_eligibility": "需付費Pro/Business/Enterprise帳戶，個人限18歲以上",
+        "service_availability": "官方文件仍列分批釋出：Pro 100/200/500（排除EEA/UK/CH）、Business Premium及Enterprise（後兩者全球）；未登入檢查個別帳戶",
+        "account_eligibility": "需付費Pro、Business Premium或Enterprise帳戶；Pro個人限18歲以上；Enterprise管理員預設關閉並須啟用",
         "billing_country": "台灣TWD及信用卡/簽帳卡正式支援",
         "identity_residency": "排除EEA、英國及瑞士；其餘支援國家（含台灣）可依資格使用",
         "terms_restrictions": "深度工作按所屬產品扣額；暫停主任務不取消子任務；禁止多帳號洗用",
@@ -1881,7 +1983,8 @@
           "url": "https://learn.chatgpt.com/docs/dots",
           "label": "官方來源",
           "scope": "對話計量、方案、地區及推出首月",
-          "evidence": "2026-10-24 20:00 公開研究批次查閱，確認功能仍有效"
+          "evidence": "2026-10-28 12:06 Asia/Taipei實讀：Pro 100/200/500須18歲以上且不在EEA/UK/CH；Business Premium與Enterprise全球分批推出，Enterprise管理員預設關閉；對話不扣ChatGPT額度，Work/Codex深度工作依各自額度；未核實個別帳戶。",
+          "accessed_at": "2026-10-28T12:06:38+08:00"
         },
         {
           "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
@@ -14746,40 +14849,49 @@
       "limited_confirmed": false,
       "usable_duration": "Step 5促銷截止日期/時區未獲官方確認；一般Free按月，新戶250點14天，日活活動結束另行通知",
       "access_risk": "Step 5促銷不能據第三方日期認定有效或過期；一般免費額度與專屬模型限免須分開。",
-      "verified_at": "2026-10-26T16:50:00+08:00",
+      "verified_at": "2026-10-28T12:07:19+08:00",
       "discovered_at": "2026-10-24T03:05:00+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T16:50:00+08:00",
+      "next_review_at": "2026-10-29T12:07:19+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "一般國際版Free公開定價存在；Step 5專屬促銷未核。",
         "account_eligibility": "一般新戶250積分；日活限個人Free/Pro正常本人帳戶，須客戶端有效使用。",
         "billing_country": "一般Free無訂閱費；台灣付款接受性未知；Step 5專屬要求未知。",
-        "identity_residency": "Step 5活動身分/居住條件未取得官方證據；一般服務的先前台灣年齡記錄本輪未重新核對。",
-        "terms_restrictions": "不得腳本刷獎、多帳戶濫用；一般額度與全模型限免不能推出Step 5不限量或延長。",
+        "identity_residency": "官方隱私政策台灣附錄明定未滿20歲不得使用服務；滿20歲仍不代表Step 5活動資格已核准。",
+        "terms_restrictions": "一般條款要求真實註冊、禁止規避；日活不得腳本刷獎或多帳戶濫用。一般模型促銷不證Step 5不限量或延長。",
         "taiwan_note": "Unknown：未取得Step 5專屬國家、電話、付款、身分與期限條款。"
       },
       "unknowns": [
         "Step 5 Preview是否存在獨立活動、10/25截止時區、是否已結束或延長",
-        "台灣活動資格及專屬配額"
+        "台灣活動資格、+886註冊與專屬配額；位於台灣未滿20歲不符合一般服務年齡條件"
       ],
       "sources": [
         {
           "url": "https://www.workbuddy.ai/docs/zh/workbuddy/Subscription",
           "label": "官方訂閱及活動規則",
           "scope": "2026-10-25 time-sensitive review",
-          "evidence": "本輪實讀：Free每月100點；新戶250點14天；個人Free/Pro客戶端有效任務才計日活，Free30/Pro50點，次日通常發放；結束另行通知；禁止批量帳戶及刷獎。沒有Step 5專屬期限。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：Free每月100點、新戶250點14天；個人Free/Pro客戶端有效任務可領日活30/50點，通常次日入帳，活動結束另通知；未證Step 5專屬促銷。",
+          "accessed_at": "2026-10-28T12:07:19+08:00"
         },
         {
           "url": "https://www.workbuddy.ai/docs/workbuddy/Changelog",
           "label": "官方更新紀錄",
           "scope": "2026-10-25 time-sensitive review",
-          "evidence": "本輪實讀5.8.4及舊版，未找到Step 5 Preview促銷截止或延長公告。官方站內搜尋亦未取得專屬官方活動證據。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：最新顯示5.8.4，未找到Step 5專屬公告；搜尋落空不等於已終止。",
+          "accessed_at": "2026-10-28T12:07:19+08:00"
         },
         {
-          "url": "https://www.workbuddy.ai/pricing/",
-          "scope": "一般Free Auto routing；非Step5專屬促銷",
-          "evidence": "2026-10-26 16:46–16:50 Asia/Taipei實讀官方定價、訂閱及更新紀錄；未找到Step5活動日期，不能據此判結束。"
+          "url": "https://www.workbuddy.ai/docs/workbuddy/pricing",
+          "scope": "一般Free促銷期間可用所有模型，不證Step 5專屬免費或無限使用",
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀官方定價文件：Free在促銷期間可用所有模型，仍有點數額度；Step 5活動日期未知。",
+          "accessed_at": "2026-10-28T12:07:19+08:00"
+        },
+        {
+          "url": "https://www.workbuddy.ai/document/privacy-policy",
+          "scope": "台灣服務年齡條件，非Step 5活動資格",
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀台灣附錄：persons under the age of 20 shall not use the Service。",
+          "accessed_at": "2026-10-28T12:07:19+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -16319,17 +16431,17 @@
       "cancellation": "自動轉Free，不須取消防Pro扣款",
       "usable_duration": "啟動後14天",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T10:35:00+08:00",
+      "verified_at": "2026-10-28T12:06:38+08:00",
       "discovered_at": "2026-10-24T06:03:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-25T10:35:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-28T12:06:38+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
         "account_eligibility": "一般試用；帳戶是否已用過與台灣條款未核。",
-        "billing_country": "未核",
+        "billing_country": "官方定價稱試用免信用卡；台灣帳戶啟用與升級付款未核",
         "identity_residency": "未核；地區標籤不代表該國所有人均符合",
         "terms_restrictions": "未操作註冊、付款、安裝或任何跨區繞行",
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
@@ -16337,22 +16449,22 @@
       "unknowns": [
         "台灣帳戶/付款/居住條件",
         "使用者資格",
-        "免費額度失效時間或取消細節"
+        "免費額度失效後轉Free已由官方說明；個別帳戶是否可啟用仍未核"
       ],
       "sources": [
         {
           "url": "https://zed.dev/pricing",
           "label": "Zed 定價頁",
           "scope": "14天試用、$5 Luna額度、共用池與免信用卡",
-          "evidence": "2026-10-25實查：14-day free trial of Pro with $5 of GPT-6 Luna usage and unlimited accepted edit predictions. No credit card is required. Ends when $5 balance is used or 14 days pass. Shared across Zed and Delta. GPT-6 Luna is only hosted model.",
-          "accessed_time_range": "2026-10-25T10:35:00+08:00"
+          "evidence": "2026-10-28 12:06 Asia/Taipei實讀：Pro試用14天、GPT-6 Luna共用Zed/Delta的US$5餘額、無限接受Edit Predictions、免信用卡；用盡或滿14天先到即止；不證台灣帳戶核准。",
+          "accessed_at": "2026-10-28T12:06:38+08:00"
         },
         {
           "url": "https://zed.dev/docs/account/plans-and-pricing",
           "label": "Zed 方案與計費文檔",
           "scope": "試用結束自動轉為Free",
-          "evidence": "2026-10-25實查：Trials automatically convert to Zed Free when they end. No cancellation is needed to prevent conversion to Zed Pro.",
-          "accessed_time_range": "2026-10-25T10:35:00+08:00"
+          "evidence": "2026-10-28 12:06 Asia/Taipei實讀：試用到期自動轉Free且不須取消；文件另列正式Pro超出每月US$5後按用量計費，與免卡試用不同。",
+          "accessed_at": "2026-10-28T12:06:38+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -21839,7 +21951,7 @@
     {
       "id": "runpod-creator-early-access",
       "title": "Runpod創作者：申請制早期功能與未定額credits",
-      "summary": "面向已創作或準備創作Runpod內容者，提供部分功能與credits早期存取；沒有公開保證金額，官方稱非付費推廣、無腳本及期限。",
+      "summary": "面向已創作或準備創作Runpod內容者，提供部分功能與credits早期存取；沒有公開保證金額或額度效期。官方稱非付費推廣、內容製作無腳本及期限；不代表贈額永不過期。",
       "categories": [
         "QUALIFICATION",
         "BETA-ACCESS"
@@ -21863,13 +21975,13 @@
       "valuation_scenario": "僅在已有實際需求且符合資格時抵用；未估宣傳額為保證價值。免費分母為0時效益成本比不適用。",
       "cancellation": "後續費用、終止及取消未公開，申請前核對。",
       "usable_duration": "額度與有效期未公布",
-      "access_risk": "贈額及期限未公布；一般預付資源餘額歸零時有network volume之Pod停止、無volume之Pod終止且資料不可恢復，volume仍可收費；非Creator領取門檻。",
-      "verified_at": "2026-10-26T15:49:00+08:00",
+      "access_risk": "贈額及效期未公布；一般預付資源餘額歸零時無network volume之Pod終止且資料不可恢復，有volume之Pod停止但volume繼續計費，持續無款亦可能終止或刪除；非Creator領取門檻。",
+      "verified_at": "2026-10-28T12:07:13+08:00",
       "discovered_at": "2026-10-24T13:59:38+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T15:49:00+08:00",
+      "next_review_at": "2026-10-29T12:07:13+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -21890,13 +22002,15 @@
           "url": "https://www.runpod.io/creator-program",
           "label": "官方Creator Program",
           "scope": "申請資格及福利",
-          "evidence": "2026-10-26 15:46–15:47 Asia/Taipei實讀：已創作或準備創作Runpod內容者可申請select features及credits early access；無固定金額；非付費推廣、無腳本及期限。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：創作者可申請select features及credits early access；無固定授額或效期，無腳本與內容製作期限。",
+          "accessed_at": "2026-10-28T12:07:13+08:00"
         },
         {
           "url": "https://docs.runpod.io/accounts-billing/billing",
           "label": "官方一般計費文件",
           "scope": "付款方式及付費資源風險，非保證Creator金額",
-          "evidence": "2026-10-26 15:46–15:47 Asia/Taipei實讀一般計費：預付、Auto-pay須另行啟用、點數不可退款；新Pod需至少一小時配置餘額。歸零時有network volume之Pod停止，無volume之Pod終止且資料不可恢復，volume仍計費；不推定Creator申請須預付。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：一般預付、auto-pay另啟用、點數不退款；無volume的Pod歸零終止，有volume時停止且volume繼續計費，持續無款亦可能刪除；非Creator入金條件。",
+          "accessed_at": "2026-10-28T12:07:13+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -21914,7 +22028,7 @@
     {
       "id": "core-today-free-300",
       "title": "AI놀이터：免卡每月三百點、一GB，免費點不結轉",
-      "summary": "免費每月300 credits及1GB。圖片2–70點、影片120點起、音樂140點／兩首，不能把最大產量當保證。免費月池及訂閱點均不結轉；購買點12月，活動點90日，分池記錄。",
+      "summary": "免費每月300 credits及1GB。圖片2–70點、影片120點起、音樂140點／兩首，不能把最大產量當保證。免費月池及訂閱點不結轉；購買點12月、一般活動獎勵90日，coupon另依發券條件。",
       "categories": [
         "FREE"
       ],
@@ -21928,22 +22042,22 @@
         "Global / country eligibility unverified"
       ],
       "verification": "Official",
-      "usage_type": null,
+      "usage_type": "Fixed credits",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": "僅在已有實際需求且符合資格時抵用；未估宣傳額為保證價值。免費分母為0時效益成本比不適用。",
-      "cancellation": "付費訂閱自動扣款，可於個人付款管理取消，保留至下次結帳日；升級兌換券後可能在券期滿自動續費。",
+      "cancellation": "一般訂閱券免卡到期回Free；只有另選綁卡補差額升級時，券滿後可能轉所選方案自動扣款。付費訂閱可於付款管理取消，保留至下次結帳日。",
       "usable_duration": "免費月池；精確免費重置日未列",
-      "access_risk": "免費及訂閱月池不結轉；六個月閒置且無付費餘額可在30天通知後刪資產。特定人像登錄每件300點，可能耗盡免費月池；台灣資格未核。",
-      "verified_at": "2026-10-26T15:49:00+08:00",
+      "access_risk": "免費及訂閱月池不結轉；六個月閒置且無付費餘額可在30天通知後刪資產；超容量且未收藏/加入project/發feed的舊生成物通知七日後也可能清理。特定人像登錄每件300點；台灣資格未核。",
+      "verified_at": "2026-10-28T12:07:13+08:00",
       "discovered_at": "2026-10-24T13:59:38+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-27T15:49:00+08:00",
+      "next_review_at": "2026-10-29T12:07:13+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -21964,13 +22078,15 @@
           "url": "https://ai.core.today/pricing",
           "label": "官方韓文價格及FAQ",
           "scope": "月額、免費及付款",
-          "evidence": "2026-10-26 15:46–15:47 Asia/Taipei實讀：免卡每月300點、Free 1GB；圖片2–70點、影片120點起、音樂140點／兩首。台灣註冊及海外卡未核。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：免卡免費每月300點；圖片2–70點、影片120點起、音樂140點／兩首。未證台灣註冊。",
+          "accessed_at": "2026-10-28T12:07:13+08:00"
         },
         {
           "url": "https://ai.core.today/terms",
           "label": "官方使用條款",
           "scope": "免費點不結轉及資產保存",
-          "evidence": "2026-10-26 15:46–15:47 Asia/Taipei實讀§2(2)：免費及訂閱月點不結轉；購入點12月、活動獎勵90日。§6六個月閒置且無付費餘額可經30日通知刪資產；§7虛構人像登錄每件300點。"
+          "evidence": "2026-10-28 12:06–12:07 Asia/Taipei批次實讀：§2免費及訂閱點不結轉、購點12月、一般活動獎勵90日，coupon期限另定；§6 Free 1GB，超容量生成物通知七日可清理；一般券無卡到期回Free，綁卡升級才可能續扣。",
+          "accessed_at": "2026-10-28T12:07:13+08:00"
         }
       ],
       "record_type": "opportunity",
