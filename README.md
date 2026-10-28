@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **529 筆**（395 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 16:13 Asia/Taipei**（不代表全庫複核）。本輪針對原有 525 筆**局部複核 15 筆**，**510 筆未在本輪複核**；新增 [Upstage File Search Beta](https://www.upstage.ai/pricing/api)、[Trigger.dev Free](https://trigger.dev/pricing)、[Inngest Free](https://www.inngest.com/pricing) 與 [Miro Education](https://miro.com/education-whiteboard/)。免費搜尋、工作流程與團隊 AI 點數不等於免費模型 token；台灣個別帳戶、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **532 筆**（397 項機會、46 項政策、89 筆觀察線索），更新時間 **2026-10-28 20:12 Asia/Taipei**（不代表全庫複核）。本輪針對原有 529 筆**局部複核 8 筆**，**521 筆未在本輪複核**；新增 [Vercel 新創 Flex Commit](https://vercel.com/startups/credits)、[Google 台灣 AI 教師系列](https://edu.google.com/intl/ALL_tw/learning-center/google-ai-educator-series/) 與 [Pi API Beta 觀察線索](https://www.pi.website/blog/api-beta)。[Vercel/Baseten 兩模型免費活動](https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free) 已截止，現行模型頁列輸入計價；台灣個別帳戶、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
