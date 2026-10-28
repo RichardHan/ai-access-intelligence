@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **537 筆**（401 項機會、46 項政策、90 筆觀察線索），更新時間 **2026-10-29 02:10 Asia/Taipei**（不代表全庫複核）。本輪將原有 535 筆中 **4 筆局部複核結果寫入**，其餘 **531 筆未寫入本輪複核結果**；新增 [imagi 教師額度](https://imagilabs.com/pricing)及 [Whimsical 教育方案](https://whimsical.com/learn/billing/pricing)。Mem0 免費方案及自帶金鑰成本已更新；臺北青年補助排除項目與 Upstage 免費額度用盡後行為已釐清。台灣個別帳戶、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **540 筆**（404 項機會、46 項政策、90 筆觀察線索），更新時間 **2026-10-29 03:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核既有 **11 筆**，其餘 **526 筆未複核**；新增 [Fish Audio 學生點數](https://fish.audio/students/)、[ElevenReader 學生一年免費](https://elevenreader.io/students)及 [ElevenLabs 教授計畫](https://elevenlabs.io/impact-professors)。台灣個別資格、付款與法律結論仍須另核；ElevenReader 免費期後自動續訂。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
