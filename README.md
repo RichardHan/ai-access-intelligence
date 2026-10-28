@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **532 筆**（397 項機會、46 項政策、89 筆觀察線索），更新時間 **2026-10-28 20:12 Asia/Taipei**（不代表全庫複核）。本輪針對原有 529 筆**局部複核 8 筆**，**521 筆未在本輪複核**；新增 [Vercel 新創 Flex Commit](https://vercel.com/startups/credits)、[Google 台灣 AI 教師系列](https://edu.google.com/intl/ALL_tw/learning-center/google-ai-educator-series/) 與 [Pi API Beta 觀察線索](https://www.pi.website/blog/api-beta)。[Vercel/Baseten 兩模型免費活動](https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free) 已截止，現行模型頁列輸入計價；台灣個別帳戶、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **535 筆**（399 項機會、46 項政策、90 筆觀察線索），更新時間 **2026-10-29 01:10 Asia/Taipei**（不代表全庫複核）。本輪將原有 532 筆中 **7 筆局部複核結果寫入**，其餘 **525 筆未寫入本輪複核結果**；新增 [Typhoon 免費研究 API](https://docs.opentyphoon.ai/en/faq/)、[Fish Audio 免費開發模型](https://docs.fish.audio/developer-guide/models-pricing/models-overview.md)及 [Perplexity 新創觀察線索](https://perplexity.typeform.com/startups-apply)。Deepgram Speak 已列候補；Braintrust 模型資格與付費條件、Google Code Assist 付費方案停止新購及國網申請截止文字已釐清。台灣個別帳戶、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
