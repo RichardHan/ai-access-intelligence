@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **521 筆**（387 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 04:11 Asia/Taipei**（不代表全庫複核）。本輪於原有 520 筆中**局部複核 12 筆**（Antigravity、Jio、Deepgram Speak、Lawson、Lovable 瑞典、SambaNova、Rime STT、GitHub 學生、Udio、國網教學、Raycast 學生、Anthropic 研究者），**508 筆未更新本輪複核證據**；新增 [Respan Free 條款衝突觀察](https://www.respan.ai/pricing)。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。
+資料集目前有 **523 筆**（389 項機會、46 項政策、88 筆觀察線索），更新時間 **2026-10-28 08:10 Asia/Taipei**（不代表全庫複核）。本輪於原有 521 筆中**局部複核 6 筆**（Roboflow、台智雲、Kling、Duck.ai、Qoder、X API），**515 筆未更新本輪複核證據**；新增 [Adobe Express 非營利一年免費](https://www.adobe.com/tw/nonprofits.html)與 [Hetzner 實驗性免費推論 API](https://docs.hetzner.com/general/company-and-policy/experiments/inference/)。Qoder Round 4 分三日各 4,096 點當日領用；X API 的 xAI 回饋以購點金額而非用量計。限時每日追蹤，其他依最久未核順序按月輪替；台灣個案資格、付款與法律結論不可從服務可瀏覽推定。
 
 ## 使用方式
 

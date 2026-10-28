@@ -1,8 +1,162 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-28T04:11:10+08:00",
-  "scope": "2026-10-28 04:06–04:10 Asia/Taipei於原520筆中局部複核12筆（Antigravity、Jio、Deepgram Speak、Lawson、Lovable瑞典、SambaNova、Rime STT、GitHub學生、Udio、國網教學、Raycast學生、Anthropic研究者）；原有508筆本輪未逐筆複核。新增Respan免費觀測方案條款衝突觀察1筆，共521筆（387機會、46政策、88觀察）。官方來源僅支持列明的查核範圍，台灣個案與法律未核；updated_at不代表全庫複核。優先度分層由既有欄位衍生，不代表新增外部查核。限時每日、其他依最久未核按月輪替。",
+  "updated_at": "2026-10-28T08:10:50+08:00",
+  "scope": "2026-10-28 08:06–08:09 Asia/Taipei局部複核既有6筆（Roboflow、台智雲、Kling、Duck.ai、Qoder、X API），新增Adobe非營利Express與Hetzner實驗API，共523筆；原521筆中515筆本輪未逐筆複核。官方來源僅支持列明範圍，台灣個案及法律未核；限時每日，其餘最久未核按月輪替。；2026-10-28 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
+    {
+      "id": "hetzner-inference-experimental-free",
+      "title": "Hetzner Inference 實驗：Qwen 免費 API，帳戶資格待核",
+      "summary": "Hetzner實驗性OpenAI相容API於實驗期間免費；官方目前列Qwen3.6與Qwen3.8文字／圖片模型。每金鑰每60秒10請求、輸入400萬及輸出10萬tokens限速，不是保證可持續使用的贈額；台灣帳戶與啟用條件未核。",
+      "categories": [
+        "FREE",
+        "BETA-ACCESS"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Rate-limited API",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "實驗方案無公布固定週期費；免費服務可預告停止或改收費，應留意帳戶郵件。",
+      "usable_duration": "實驗期間；無固定結束日，變更前以email通知",
+      "access_risk": "不保證容量、效能與備份；官方不建議正式環境；開戶與API金鑰未實測。",
+      "verified_at": "2026-10-28T08:09:07+08:00",
+      "discovered_at": "2026-10-28T08:09:07+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-28T08:09:07+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "官方文件仍刊登實驗性免費API，入口要求Hetzner帳戶，未建立API金鑰。",
+        "account_eligibility": "官方邀請Hetzner客戶參與；一般新戶是否可免卡／免審啟用未知。",
+        "billing_country": "實驗API目前免費，帳戶付款或驗證條件及台灣帳單未核。",
+        "identity_residency": "一般條款要求真實資料並可要求證明；台灣個案開戶未核。",
+        "terms_restrictions": "不得以多帳戶規避限速；需遵守底層開源模型授權與適用出口限制。",
+        "taiwan_note": "Unknown：全球文件可讀不證台灣註冊、付款或金鑰發放；法律監管未核。"
+      },
+      "unknowns": [
+        "台灣帳戶核准、綁卡及既有客戶門檻",
+        "實際API金鑰與當前/models清單",
+        "實驗轉收費日與容量",
+        "台灣適用法律或監管"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.hetzner.com/general/company-and-policy/experiments/inference/",
+          "scope": "實驗免費、模型、速率限制、儲存及非正式環境限制",
+          "evidence": "2026-10-28 08:09 Asia/Taipei實讀：實驗期間免費、提前email通知；Qwen3.6/3.8；每金鑰60秒10請求、400萬輸入及10萬輸出tokens，超限429；不保證可用與備份。",
+          "accessed_at": "2026-10-28T08:09:07+08:00"
+        },
+        {
+          "url": "https://docs.hetzner.com/general/company-and-policy/experiments/experiments-platform/",
+          "scope": "Hetzner帳戶及實驗平台資格",
+          "evidence": "2026-10-28 08:09 Asia/Taipei查閱：實驗入口邀請Hetzner客戶，未證台灣新戶核准。",
+          "accessed_at": "2026-10-28T08:09:07+08:00"
+        },
+        {
+          "url": "https://www.hetzner.com/legal/terms-and-conditions/",
+          "scope": "真實資料與免費服務變更之一般條款",
+          "evidence": "2026-10-28 08:09 Asia/Taipei查閱：一般條款允許預告變更免費服務、要求真實帳戶資料，未確認台灣帳戶核發。",
+          "accessed_at": "2026-10-28T08:09:07+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 16.8,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知"
+    },
+    {
+      "id": "adobe-express-nonprofit-annual-250-generative",
+      "title": "Adobe Express 非營利：一年免費、每月250生成點",
+      "summary": "符合資格的非營利組織可申請最多50份具名Adobe Express Premium授權，一年免費且免信用卡；每月250個Firefly生成點，用於影像、填色與文字效果，不是API或無限額度。GoodStack逐人審核，年度不自動續期，須重新申請。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "Monthly generative credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "非營利Express不自動續期；每年須重新申請與核驗。",
+      "usable_duration": "核准兌換後一年；每月250生成點",
+      "access_risk": "組織及每位具名使用者均須核驗；未測台灣組織實際核准、超額及兌換。",
+      "verified_at": "2026-10-28T08:08:00+08:00",
+      "discovered_at": "2026-10-28T08:08:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-28T08:08:00+08:00",
+      "priority": "watch",
+      "status": "conditional",
+      "legal_status": "not_verified",
+      "eligibility": {
+        "service_availability": "Adobe台灣非營利頁提供Express免費申請入口；未提交、未核驗名額。",
+        "account_eligibility": "在註冊國家正式認可的慈善或非營利組織；最多50個具名授權，GoodStack逐人核驗約1–3工作日；學校、大學及政府不符合。",
+        "billing_country": "捐贈Express免信用卡；台灣個案核准與付費升級未核。",
+        "identity_residency": "組織名稱、組織email及基本資料；員工合格，受益人、會員及捐助者不合格。",
+        "terms_restrictions": "每份授權單一具名使用者，禁止共享；一次性兌換碼不可轉讓，須符合反歧視規則。Acrobat的US$10M預算門檻不可外推Express。",
+        "taiwan_note": "台灣官網宣傳此方案，但個別台灣非營利組織與員工是否通過核驗未知；法律或監管限制未核。"
+      },
+      "unknowns": [
+        "台灣組織GoodStack實際核准及國家清單",
+        "每月生成點結轉與超額處置",
+        "兌換後個別功能與模型權限",
+        "台灣適用法律或監管"
+      ],
+      "sources": [
+        {
+          "url": "https://www.adobe.com/tw/nonprofits.html",
+          "scope": "台灣非營利申請入口、50份授權、員工資格",
+          "evidence": "2026-10-28 08:08 Asia/Taipei實讀台灣官網FAQ：Express免費、最多50份；員工合格，須組織資料並逐份核驗。",
+          "accessed_at": "2026-10-28T08:08:00+08:00"
+        },
+        {
+          "url": "https://www.adobe.com/nonprofits/express.html",
+          "scope": "免費免卡、每月250生成點與功能",
+          "evidence": "2026-10-28 08:08 Asia/Taipei實讀：免費免卡；每月250點涵蓋Firefly Generate Image、Generative Fill及Generate Text Effect。",
+          "accessed_at": "2026-10-28T08:08:00+08:00"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/fragments/nonprofits/nonprofit-terms#nonprofit-terms",
+          "scope": "非營利資格、核驗、不共享及不自動續期",
+          "evidence": "2026-10-28 08:08 Asia/Taipei實讀：GoodStack 1–3工作日、單人具名不可共享、Express年度重申不自動續期；教育及政府機構不符。",
+          "accessed_at": "2026-10-28T08:08:00+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻"
+    },
     {
       "id": "respan-free-hundred-k-logs-terms-conflict",
       "title": "Respan Free：10萬logs與自動化條款衝突待釐清",
@@ -7283,8 +7437,8 @@
     },
     {
       "id": "qoder-community-1024",
-      "title": "Qoder 1024：Free需核准、里程碑24小時失效（Round 4待核）",
-      "summary": "Qoder 1024 Community Boost活動至2026-10-30 23:59 UTC+8，申請、審查、領取皆須於此前完成。官方規則頁仍列前三輪，但活動頁本輪無法直接讀取，Round 4進度與獎勵現況未核，先前觀察不等於今日可領。Free用戶需經審核，歡迎點數1,024須於活動結束前領取並於10/31 23:59前使用；輪次額度解鎖後12小時內發放、發放後3日內且活動結束前領取，領取後24小時到期。僅Sonus。",
+      "title": "Qoder 1024：Round 4 每日4,096點，當日領用",
+      "summary": "Community Boost至2026-10-30 23:59 UTC+8；官方規則現列Round 4達20萬點解鎖，總12,288點分三包於10/28、29、30各00:00開放，每包4,096點須當日23:59前領取並用完，不可補領或結轉。Free須申請核准，個人Pro以上自動加入但須手領，Lite不符；歡迎點1,024於10/30前領、10/31前用，前三輪領後24小時到期。僅Sonus；台灣帳戶資格與個人核准未核。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -7309,14 +7463,14 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": null,
-      "usable_duration": "Welcome至10/31 23:59 UTC+8；里程碑領後24小時",
+      "usable_duration": "Welcome至10/31 23:59 UTC+8；前三輪領後24小時；Round 4各包限10/28、29、30當日23:59前領用",
       "access_risk": "短暫領取窗口；促銷額度用盡或過期後Sonus可扣其他可用額度；付費方案續期前至少24小時取消。",
-      "verified_at": "2026-10-27T06:20:00+08:00",
+      "verified_at": "2026-10-28T08:08:00+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": "2026-10-22",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T06:20:00+08:00",
+      "next_review_at": "2026-10-29T08:08:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -7329,15 +7483,15 @@
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省",
         "前三輪Unlocked對應的發放時間、個人領取窗口及實際餘額",
-        "Round 4現況與獎勵未能從本輪可讀官方規則頁確認；活動頁直接讀取404不證明活動終止",
+        "Round 4個人實際核准、當日發放與領取餘額；公開規則不證帳戶已領",
         "目前使用者方案及個別Free審核結果"
       ],
       "sources": [
         {
           "url": "https://docs.qoder.com/events/communityboost",
           "scope": "活動時程、額度與領取規則",
-          "evidence": "2026-10-27 00:05–00:08 Asia/Taipei實讀：申請、審核、加入及領取均10/30 23:59 UTC+8截止；Free一次申請須核准，個人Pro以上手領且領時仍合格。Welcome至10/31用完；輪次12小時內發放、3日內且活動前領、領後24小時。",
-          "accessed_time_range": "2026-10-27T00:05:58+08:00–2026-10-27T00:08:58+08:00"
+          "evidence": "2026-10-28 08:06–08:08 Asia/Taipei重讀官方規則：Round 4總12,288分10/28–30各4,096點，當日23:59前領用；前三輪才是領後24小時。Free需核准，Pro以上手領；非台灣個案核准。",
+          "accessed_at": "2026-10-28T08:08:00+08:00"
         },
         {
           "url": "https://docs.qoder.com/events/communityboost",
@@ -31377,12 +31531,12 @@
       "cancellation": null,
       "usable_duration": "每月重置、不累積；未公布免費方案結束日",
       "access_risk": "台灣註冊與優惠資格未獲官方確認；10 credits為儲存、標註、訓練與推論共用，且新workspace資料使用設定需留意。",
-      "verified_at": "2026-10-25T08:46:00+08:00",
+      "verified_at": "2026-10-28T08:06:35+08:00",
       "discovered_at": "2026-10-25T08:46:00+08:00",
       "announcement_at": "2026-09-18",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T08:46:00+08:00",
+      "next_review_at": "2026-11-28T08:06:35+08:00",
       "priority": "watch",
       "status": "conditional",
       "legal_status": "not_verified",
@@ -31409,7 +31563,8 @@
           "url": "https://roboflow.com/pricing",
           "label": "Roboflow官方定價",
           "scope": "Free方案10 credits/月、免卡、專案/儲存功能與workspace資料設定",
-          "evidence": "2026-10-25 08:46 Asia/Taipei實際查閱：Core Free每月10 credits、US$0且不需卡；方案列私人專案、20 projects與訓練/Serverless Hosted API，資料授權設定與下載模型商用條件分開列示。"
+          "evidence": "2026-10-28 08:06 Asia/Taipei重讀：Free Tier $0、每月10 credits、可預付擴充；頁面列雲端推論與自架模型商業授權差異。僅複核定價與額度，未重查註冊、條款及台灣資格。",
+          "accessed_at": "2026-10-28T08:06:35+08:00"
         },
         {
           "url": "https://roboflow.com/credits",
@@ -31634,10 +31789,11 @@
         {
           "url": "https://www.twcloud.ai/aiga-program/",
           "scope": "臺灣新創資格、投資加速機制與算力回購條件",
-          "evidence": "2026-10-25直接查閱：三方計畫為入選臺灣AI新創提供算力技術資金市場制度支持；在臺註冊8年內優先、AI核心、完成POB/擴張期、創新創意條件擇一、誠信與財務審查；財務評估明列算力回購額度綁定及六個月投資機制。頁面附官方申請表連結，但未公開保證免費額度/金額與本輪截止日。"
+          "evidence": "2026-10-28 08:06 Asia/Taipei重讀：官方頁仍列臺灣AI新創、在臺註冊八年內優先、POB及算力回購額度綁定，並保留申請連結；未開表單確認收件、金額與投資條款，不能認定可立即申領免費算力。",
+          "accessed_at": "2026-10-28T08:06:35+08:00"
         }
       ],
-      "verified_at": "2026-10-25T09:20:01+08:00",
+      "verified_at": "2026-10-28T08:06:35+08:00",
       "taiwan": "Yes",
       "quota_classification": "UNKNOWN",
       "setup_cost_usd": null,
@@ -31668,7 +31824,7 @@
       "legal_status": "not_verified",
       "tos_status": "investment_and_compute_repurchase_terms_not_fully_public",
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:20:00+08:00",
+      "next_review_at": "2026-11-28T08:06:35+08:00",
       "views": [],
       "effort_minutes_max": 60,
       "effort_basis": "新創加速方案申請與BP準備；不含後續遴選與投資審查",
@@ -31703,7 +31859,8 @@
         {
           "url": "https://kling.ai/docs/point-policy",
           "scope": "登入點數、有效期、66點的意義、付費功能",
-          "evidence": "\"During the event (as shown in the interface), Kling subscribers can claim daily credits upon login/refresh. Amounts are subject to platform announcement.\"; \"Issued on the first login each day and reset at 24:00.\"; \"Standard Pricing: $1 USD = 66 Credits\"; \"Fast-track generation, 1080p videos, Watermark removal ... are premium-only functions.\""
+          "evidence": "2026-10-28 08:06 Asia/Taipei重讀：登入點數僅活動期間且數量依介面公告；$1=66 Credits為購買換算。活動點數有效期依介面及公告，點數不得跨帳戶轉移；本次未核免費會員實際發放。",
+          "accessed_at": "2026-10-28T08:06:35+08:00"
         },
         {
           "url": "https://kling.ai/docs/user-policy",
@@ -31716,7 +31873,7 @@
           "evidence": "Official-domain search excerpt: \"Free forever\", \"No monthly Credits\", \"Login to receive monthly credits\", \"Generated content is not for commercial use\", \"VIDEO 2.6 - Voice Control\". Direct read redirects to kling.ai app shell; cannot resolve contradictory monthly-credit wording or establish free model entitlements."
         }
       ],
-      "verified_at": "2026-10-25T09:20:00+08:00",
+      "verified_at": "2026-10-28T08:06:35+08:00",
       "taiwan": "Unknown",
       "verification": "Official",
       "quota_classification": "UNKNOWN",
@@ -31766,7 +31923,7 @@
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T09:20:00+08:00",
+      "next_review_at": "2026-11-28T08:06:35+08:00",
       "priority": "watch",
       "vpn_research": {
         "status": "not_verified",
@@ -32133,12 +32290,12 @@
       "cancellation": "免費無帳號，隨時關閉瀏覽器即停止",
       "usable_duration": "常態免費服務，每日額度於午夜 00:00 UTC 重置",
       "access_risk": "匿名用量配額若受同網段或蜂巢網路影響可能提早達標；未承諾固定服務等級",
-      "verified_at": "2026-10-25T10:35:00+08:00",
+      "verified_at": "2026-10-28T08:06:35+08:00",
       "discovered_at": "2026-10-25T10:15:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T10:35:00+08:00",
+      "next_review_at": "2026-11-28T08:06:35+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "全球開放網頁端存取（duckduckgo.com/aichat 或 duck.ai），免建立帳戶即可使用。",
@@ -32169,7 +32326,8 @@
           "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai/usage-limits",
           "label": "Duck.ai 用量限制",
           "scope": "每日限額與重置週期",
-          "evidence": "2026-10-25實查：Duck.ai is free to use, but there is a daily limit on usage. Daily limits reset at midnight UTC. 未公開固定次數。"
+          "evidence": "2026-10-28 08:06 Asia/Taipei重讀：免費Duck.ai有每日用量限制；訂閱Plus/Pro另有較高用量、每日與每週限制及UTC重置；匿名限流可能影響VPN或行動網路。未重查模型清單或台灣實際連線。",
+          "accessed_at": "2026-10-28T08:06:35+08:00"
         },
         {
           "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai/ai-chat-privacy",
@@ -42447,8 +42605,8 @@
     },
     {
       "id": "x-api-xai-spend-credit-rewards",
-      "title": "X API付費回饋：首購X點數與xAI高額消費獎勵分池",
-      "summary": "X API新付費戶首次合格信用／簽帳卡及首次購點後得一次US$20 X API點數；首次成功自動儲值再配對最多US$50，並非免付款即可領。另連結xAI團隊，X API每帳單週期累積消費US$200以上才依10–20%回贈xAI API點數，X點與xAI點不可混用。活動逐戶推出，不保證現有台灣帳戶可領。",
+      "title": "X API付費回饋：購點門檻與xAI回饋分池",
+      "summary": "新付費戶首次合格卡及首次購點後可得US$20 X API點數，首次成功自動儲值再配對最多US$50；均須真實扣款。另連結xAI團隊後，每帳單週期累積購買X API credits達US$200/500/1000分別按10/15/20%回贈xAI點數；門檻是購點金額而非已消耗API用量。兩種點數分池，活動逐戶推出，台灣資格未核。",
       "categories": [
         "VALUE-DEAL",
         "QUALIFICATION"
@@ -42457,7 +42615,7 @@
         "developer",
         "value"
       ],
-      "setup_cost_usd": 200,
+      "setup_cost_usd": null,
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
       "effort_basis": "未建立帳戶或實測儲值",
@@ -42473,18 +42631,18 @@
       "valuation_scenario": null,
       "cancellation": "Pay-per-use無固定月訂閱；自動儲值開啟後實際扣款，可在Developer Console取消。既有其他訂閱不適用此無訂閱描述。",
       "usable_duration": "X API活動贈點核發後三個月；xAI回饋效期未核",
-      "access_risk": "需真實付費及卡片；首次自動儲值成功才配對；可能產生額外扣款，台灣卡及推出進度未核",
-      "verified_at": "2026-10-27T02:10:20+08:00",
+      "access_risk": "各優惠要求不同真實購點門檻及卡片；自動儲值成功扣款才配對，餘額可能略為負值，台灣卡及推出進度未核。",
+      "verified_at": "2026-10-28T08:09:07+08:00",
       "discovered_at": "2026-10-27T02:10:20+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T02:10:20+08:00",
+      "next_review_at": "2026-10-29T08:09:07+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "X API pay-per-use贈點逐戶推出；xAI回饋需連結xAI團隊並在X API帳單週期累積消費達US$200。",
+        "service_availability": "首購及自動儲值贈點逐戶推出；xAI回饋需連結團隊並於X API帳單週期累積購買credits達US$200起。",
         "account_eligibility": "首購贈點限新付費戶、首次存卡及未曾獲獎勵的卡；自動儲值配對限首次成功扣款，每帳戶／實體卡各一次。",
-        "billing_country": "首次購點金額無公開最低保證；xAI回饋門檻是每週期X API消費US$200，台灣卡受理未核。",
+        "billing_country": "首購最低金額未保證；xAI回饋門檻是每週期購買X API credits累積US$200/500/1000，台灣卡未核。",
         "identity_residency": "開發者協議要求居住於所用服務支援國家且具締約能力；未見X API完整台灣支援清單。",
         "terms_restrictions": "不得用X API內容訓練或微調foundation/frontier模型；不得共享API金鑰、轉讓贈點或以多帳戶／重複卡領取。",
         "taiwan_note": "協議提及台灣消費者訂閱退款規則，不代表X API pay-per-use優惠或台灣卡獲准；地區及個人資格Unknown。"
@@ -42503,7 +42661,8 @@
         {
           "url": "https://docs.x.com/x-api/getting-started/pricing.md",
           "scope": "X API預付及xAI獨立回饋",
-          "evidence": "2026-10-27 02:10 Asia/Taipei查閱：無固定訂閱，連結xAI團隊後當期X API消費US$200/500/1000門檻分別10/15/20%回饋；自動儲值可取消，費用依API使用。"
+          "evidence": "2026-10-28 08:09 Asia/Taipei重讀：官方範例按Purchase累計購點US$200/500/1000給10/15/20% xAI回饋，非消耗量；首購與首次成功自動儲值為另兩種獎勵，點數分池。",
+          "accessed_at": "2026-10-28T08:09:07+08:00"
         },
         {
           "url": "https://docs.x.com/developer-terms/agreement",
@@ -42516,7 +42675,7 @@
       "legal_status": "not_verified",
       "priority_score": 14.3,
       "priority_tier": "C",
-      "priority_note": "官方·條件式·設定US$200·台灣未標記·時間未知·有資格門檻"
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻"
     },
     {
       "id": "project-hatcher-sparklabs-taiwan-2026",
