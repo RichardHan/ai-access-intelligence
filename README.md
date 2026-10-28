@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **546 筆**（410 項機會、46 項政策、90 筆觀察線索），更新時間 **2026-10-29 06:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核既有 **14 筆**，其餘 **530 筆未複核**；新增 [Genially 教育免費方案](https://genially.com/plans/education/)及 [WorkBuddy 開學季學生點數](https://www.workbuddy.cn/events/campus-freshman/)。後者明列港澳台使用者不支援認證；台灣個別資格、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **548 筆**（411 項機會、47 項政策、90 筆觀察線索），更新時間 **2026-10-29 07:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核既有 **12 筆**，其餘 **534 筆未複核**；新增 [經濟部 A+ 早期新創補助](https://service.moea.gov.tw/EE514/tw/aiip/50-7691.html)及 [AWS 學生獎勵台灣排除政策](https://builder.aws.com/faq)。A+ 非 AI 專屬、須符合研發與自籌條件；AWS 明列台灣排除。個別資格、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
