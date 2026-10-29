@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **559 筆**（420 項機會、47 項政策、92 筆觀察線索），更新時間 **2026-10-29 14:11 Asia/Taipei**（不代表全庫複核）。本次局部複核並入庫 **7 筆**既有案例，另有 **9 筆**初步查閱未入庫；**549 筆既有紀錄未完成本次入庫複核**。新增 [Hume 新創語音額度](https://www.hume.ai/startup-program)、[Julius Free](https://julius.ai/docs/billing/credits-overview.md) 與 Confluent 觀察線索；台灣個案資格均未核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **560 筆**（420 項機會、47 項政策、93 筆觀察線索），更新時間 **2026-10-29 15:09 Asia/Taipei**（不代表全庫複核）。本次局部複核入庫 **4 筆**既有案例，**555 筆既有紀錄未完成本次入庫複核**；其他初步查閱未刷新。新增 [YC AI Stack 活動福利](https://deals.ycombinator.com/students)；Ollama 舊免費雲端額度轉為待核。台灣個案資格均須另確認。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
