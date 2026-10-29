@@ -1,1 +1,114 @@
-<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hidden AI Benefits / 超值 AI 福利</title><link rel="stylesheet" href="style.css"><body><header><h1>超值 AI 福利 <span>Hidden AI Benefits</span></h1><p class="sub">先看資格，再看價值。官方核實只涵蓋列明的主張；未知欄位不是零；未公布上限不等於無限。<span id="freshness"></span></p><section id="metrics" aria-label="資料概況"></section></header><main><form id="filters"><label class="grow">搜尋<input name="q" type="search" placeholder="產品、資格、來源關鍵字"></label><label>排序<select name="sort"><option value="priority" selected>綜合優先度 S→D</option><option value="">原始順序</option><option value="fresh">最近核實</option><option value="cost">設定費由低到高</option></select></label><label>優先層級<select name="tier"><option value="">全部</option><option value="S">S · 台灣可用</option><option value="A">A · 高綜合分</option><option value="B">B · 中高</option><option value="C">C · 有門檻</option><option value="D">D · 低分或已截止</option></select></label><label>台灣資格<select name="taiwan"><option value="">全部</option><option>Yes</option><option>No</option><option>Unknown</option></select></label><label>紀錄類別<select name="type"><option value="">全部</option><option value="opportunity">福利研究</option><option value="policy">政策</option><option value="watchlist">待覆核</option></select></label><details class="more"><summary>更多篩選</summary><div class="more-grid"><label>專區<select name="view"><option value="">全部</option><option value="free">免費訂閱 / 免費方案</option><option value="quota">高免費額度</option><option value="unlimited">無限 / 暫時不限量</option><option value="regional">美國與地區限定</option><option value="value">低價高值</option><option value="developer">新創與開發者</option><option value="beta">Beta 存取</option></select></label><label>最高設定費 USD<select name="cost"><option value="">不限 / 含未知</option><option>0</option><option>5</option><option>10</option><option>30</option></select></label><label>設定時間小於<select name="effort"><option value="">不限 / 含未知</option><option value="5">5 分鐘</option><option value="15">15 分鐘</option><option value="30">30 分鐘</option><option value="60">60 分鐘</option></select></label><label>地區<select name="region"><option value="">全部</option><option>Global</option><option>US</option><option>Taiwan</option><option>Other</option></select></label><label>用量類型<select name="usage"><option value="">全部 / 含未知</option><option>Unlimited</option><option>High quota</option><option>Fixed credits</option></select></label><label>證據<select name="verification"><option value="">全部</option><option value="Official">官方來源支持主張</option><option value="Community reported">Community Reported</option><option value="Unverified">Unverified</option></select></label><button type="reset">清除篩選</button></div></details></form><p id="count" role="status" aria-live="polite"></p><section id="cards" aria-label="機會與政策追蹤"></section><details class="guide"><summary>怎麼解讀這些標籤與分級</summary><p>Officially Verified：具目前官方文件支持的特定主張。Community Reported：使用者回報但未獨立確認。未核實、索引摘要與官方全文會分開標示。此處不讀取個人帳戶額度、不代申請或付款。</p><p>免費項目的效益成本比為不適用，不是無限。可用效益、取消條件或資格未知時不估造節省金額。不同服務共用額度不重複加總。</p><p>用量狀態：OFFICIALLY UNLIMITED / NO FIXED CAP PUBLISHED / HIGH BUT LIMITED / TEMPORARILY UNLIMITED / UNKNOWN。</p><p>綜合優先度：S＝台灣資格標記 Yes；A＝≥19 分；B＝17–19 分；C＝14–17 分；D＝低於 14 分或已過期截止。評分＝可靠度×1.2＋價值＋台灣可用度×1.5＋省力×0.8，只由既有欄位計算，不是新的外部查核，也不代表可領取保證。政策與待覆核紀錄不評級，優先度排序時排最後。</p></details><p class="links"><a href="README.md">研究方法與限制</a> · <a href="data/offers.json">完整資料</a> · <a href="data/policy-history.json">政策歷史</a></p></main><footer>僅公開來源研究。地區限定不代表可透過假地址、轉售帳號或繞過存取控制取得。</footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <meta name="description" content="以官方來源研究 AI 免費方案、開發者額度、教育與新創福利。先確認台灣資格、費用與期限，再找到值得使用的機會。">
+  <title>AI Access Intelligence｜值得用的 AI 福利研究</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#opportunities">跳至機會資料庫</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="./" aria-label="AI Access Intelligence 首頁">
+      <span class="brand-symbol" aria-hidden="true">ai<span>↗</span></span>
+      <span class="brand-name">AI ACCESS<span>INTELLIGENCE</span></span>
+    </a>
+    <nav class="site-nav" aria-label="主導覽">
+      <a href="#opportunities">機會資料庫</a>
+      <a href="#method">研究方法</a>
+      <a href="https://github.com/RichardHan/ai-access-intelligence" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>開放研究，精明選擇</p>
+        <h1 id="hero-title">找到值得用的<br><span>AI 福利。</span></h1>
+        <p class="hero-description">免費方案、開發者額度、教育與新創優惠。<br class="desktop-break">把資格、費用和期限查清楚，讓每一次嘗試更有把握。</p>
+        <a class="hero-link" href="#opportunities">探索研究資料庫 <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">以官方來源為依據 · 特別關注台灣使用條件</p>
+      </div>
+      <aside class="research-panel" aria-labelledby="research-title">
+        <div class="panel-kicker"><span class="status-dot" aria-hidden="true"></span>持續追蹤的公開研究</div>
+        <h2 id="research-title">這一輪，查了什麼。</h2>
+        <div id="review-summary" aria-live="polite"></div>
+        <details class="research-disclosure"><summary>本次研究範圍</summary><p id="research-scope"></p></details>
+        <div class="panel-bottom"><span>DATA UPDATE</span><span id="freshness"></span></div>
+      </aside>
+    </section>
+    <section class="overview" aria-label="資料庫概況">
+      <div class="section-caption"><span>研究資料庫概況</span><span>有來源，才有判斷依據。</span></div>
+      <div id="metrics"></div>
+    </section>
+    <section class="workspace" id="opportunities" aria-labelledby="index-title">
+      <aside class="filters-sidebar" aria-label="資料篩選">
+        <details class="filter-shell" open>
+          <summary class="filter-toggle"><span>篩選條件</span><span class="filter-toggle-hint">縮小搜尋範圍</span></summary>
+          <form id="filters">
+            <label class="search-field">搜尋資料庫<input name="q" type="search" placeholder="產品、資格或關鍵字" autocomplete="off"></label>
+            <label>排序方式<select name="sort"><option value="priority" selected>綜合優先度 S → D</option><option value="">原始順序</option><option value="fresh">最近核實</option><option value="cost">設定費由低到高</option></select></label>
+            <label>台灣資格<select name="taiwan"><option value="">全部資格</option><option value="Yes">Yes · 條件式可用</option><option value="No">No · 不符合所列資格</option><option value="Unknown">Unknown · 尚待確認</option></select></label>
+            <label>紀錄類別<select name="type"><option value="">全部紀錄</option><option value="opportunity">福利研究</option><option value="policy">政策</option><option value="watchlist">待覆核</option></select></label>
+            <label>優先層級<select name="tier"><option value="">全部層級</option><option value="S">S · 台灣條件適用</option><option value="A">A · 高綜合分</option><option value="B">B · 中高</option><option value="C">C · 有門檻</option><option value="D">D · 低分或已截止</option></select></label>
+            <details class="more">
+              <summary>更多篩選條件</summary>
+              <div class="more-grid">
+                <label>機會專區<select name="view"><option value="">全部專區</option><option value="free">免費訂閱 / 免費方案</option><option value="quota">高免費額度</option><option value="unlimited">無限 / 暫時不限量</option><option value="regional">美國與地區限定</option><option value="value">低價高值</option><option value="developer">新創與開發者</option><option value="beta">Beta 存取</option></select></label>
+                <label>最高設定費 · USD<select name="cost"><option value="">不限 / 含未知</option><option value="0">0</option><option value="5">5</option><option value="10">10</option><option value="30">30</option></select></label>
+                <label>設定時間小於<select name="effort"><option value="">不限 / 含未知</option><option value="5">5 分鐘</option><option value="15">15 分鐘</option><option value="30">30 分鐘</option><option value="60">60 分鐘</option></select></label>
+                <label>服務地區<select name="region"><option value="">全部地區</option><option value="Global">Global</option><option value="US">US</option><option value="Taiwan">Taiwan</option><option value="Other">Other</option></select></label>
+                <label>用量類型<select name="usage"><option value="">全部 / 含未知</option><option value="Unlimited">Unlimited</option><option value="High quota">High quota</option><option value="Fixed credits">Fixed credits</option></select></label>
+                <label>證據等級<select name="verification"><option value="">全部證據</option><option value="Official">官方來源支持主張</option><option value="Community reported">Community Reported</option><option value="Unverified">Unverified</option></select></label>
+              </div>
+            </details>
+            <button class="reset-button" type="reset">清除所有篩選 <span aria-hidden="true">↺</span></button>
+            <p class="filter-note">「未知」保留證據缺口，<br>不等於免費、無限或不符合資格。</p>
+          </form>
+        </details>
+      </aside>
+      <section class="results-panel" aria-labelledby="index-title">
+        <div class="results-heading">
+          <div><p class="eyebrow">THE OPPORTUNITY INDEX</p><h2 id="index-title">探索你的下一個機會</h2></div>
+          <a class="text-link" href="data/offers.json">完整資料 <span aria-hidden="true">↗</span></a>
+        </div>
+        <nav class="quick-filters" aria-label="快速瀏覽">
+          <button type="button" data-preset="all" aria-pressed="true">全部機會</button>
+          <button type="button" data-preset="taiwan" aria-pressed="false">台灣條件適用</button>
+          <button type="button" data-preset="free" aria-pressed="false">免費方案</button>
+          <button type="button" data-preset="developer" aria-pressed="false">開發者</button>
+          <button type="button" data-preset="recent" aria-pressed="false">本輪更新</button>
+        </nav>
+        <p id="count" role="status" aria-live="polite">正在載入研究資料…</p>
+        <section id="cards" aria-label="機會與政策追蹤"></section>
+        <div class="results-footer"><button id="load-more" class="load-more" type="button" hidden>顯示更多機會 <span aria-hidden="true">↓</span></button></div>
+      </section>
+    </section>
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="method-heading"><p class="eyebrow">HOW WE RESEARCH</p><h2 id="method-title">先看資格，再看價值。</h2><p>這是一份可追溯的研究資料庫。<br>每一筆都保留來源、限制和未解的問題。</p></div>
+      <div class="method-content">
+        <div class="principles">
+          <div><span class="principle-number">01</span><h3>來源支持特定主張</h3><p>官方資料核實的範圍逐項列明，局部複核不代表整筆、整個資料庫都已重新確認。</p></div>
+          <div><span class="principle-number">02</span><h3>資格與優惠分開看</h3><p>台灣可用仍有帳戶、學籍、企業與付款條件。符合服務條款也不等於法律意見。</p></div>
+          <div><span class="principle-number">03</span><h3>未知，就保留未知</h3><p>未公布上限不等於無限；共用額度不重複加總，證據不足時不估造節省金額。</p></div>
+        </div>
+        <details class="guide">
+          <summary>如何解讀證據標籤、用量與優先層級</summary>
+          <p>「官方來源支持主張」只涵蓋列明的官方文件內容；社群回報未獨立確認；未核實、搜尋索引與官方全文分開標示。本站不讀取個人帳戶額度、不代申請或付款。</p>
+          <p>免費項目的效益成本比為不適用，不是無限。用量分類包括官方無限、未公布固定上限、有上限、暫時無限與未知，仍須查看模型、共用池和公平使用限制。</p>
+          <p>優先層級：S＝台灣資格標記 Yes；A＝≥19 分；B＝17–19 分；C＝14–17 分；D＝低於 14 分或已過期截止。評分＝可靠度×1.2＋價值＋台灣可用度×1.5＋省力×0.8，僅由既有資料計算，不是額外查核或可領取保證。政策與待覆核紀錄不評級。</p>
+          <p>限時、即將到期案例每日追蹤，其餘依最久未核實順序按月輪替。資料集更新時間不代表全部案例都已重新查核。</p>
+        </details>
+        <div class="resource-links"><a href="README.md">完整研究方法 <span aria-hidden="true">↗</span></a><a href="data/offers.json">研究資料 JSON <span aria-hidden="true">↗</span></a><a href="data/policy-history.json">政策變動歷史 <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell">
+    <div><a class="footer-brand" href="https://richardhan.github.io/ai-access-intelligence/">AI Access Intelligence</a><p>公開研究。清楚條件。更好的選擇。</p></div>
+    <p class="footer-note">使用前請再次確認官方資訊。<br>地區限定不代表可透過假地址、帳號交易或繞過限制取得。</p>
+    <a class="footer-github" href="https://github.com/RichardHan/ai-access-intelligence" target="_blank" rel="noopener noreferrer">在 GitHub 查看專案 <span aria-hidden="true">↗</span></a>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -11563,5 +11563,245 @@
   ,{"record_id":"cerebras-trial","verified_at":"2026-10-29T19:06:54+08:00","previous_limit":"未列另購PayGo突發使用的負餘額風險","current_classification":"HIGH BUT LIMITED","change_type":"billing_evidence_update","detail":"官方PayGo FAQ稱突發用量可能造成小額負餘額並於帳期末扣款，可設定自動儲值；純試用是否適用未核，試用不自動轉付費的價格腳注仍列。","sources":["https://www.cerebras.ai/pricing","https://support.cerebras.net/articles/5041581099-cerebras-self-serve-paygo-faq"]}
   ,{"record_id":"cursor-watch","verified_at":"2026-10-29T19:07:54+08:00","previous_limit":"舊來源證據誤寫期滿轉0/月及Pro 0/月","current_classification":"UNKNOWN","change_type":"billing_evidence_correction","detail":"官方help稱legacy學生Pro期滿未取消續為US$20/月；更正舊來源證據，非推定政策本日變更。","sources":["https://cursor.com/help/account-and-billing/student-discount","https://cursor.com/pricing","https://x.ai/legal/bundled-subscription-terms"]}
   ,{"record_id":"ai-compass-platform-waiver","verified_at":"2026-10-29T19:08:00+08:00","previous_limit":"active；公告10/29 18時截止，時區未明","current_classification":"UNKNOWN","change_type":"deadline_status_uncertain","detail":"按日本JST推定公告截止已過，官方未標時區、延期或後台收件未核；改conditional並保留既得優惠資訊。","sources":["https://prtimes.jp/main/html/rd/p/000000010.000029778.html","https://www.ai-compass.biz/campaign/education"]}
-  ,{"record_id":"taiwan-adi-ai-compute-115","verified_at":"2026-10-29T19:08:00+08:00","previous_limit":"未記載閒置停權規則","current_classification":"HIGH BUT LIMITED","change_type":"terms_scope_update","detail":"須知列核定期間半數週數未用，通知後3個日曆天仍未使用可停權；非推定本日新增條件。","sources":["https://aipower.dginfra.gov.tw/front/index"]}
+  ,{"record_id":"taiwan-adi-ai-compute-115","verified_at":"2026-10-29T19:08:00+08:00","previous_limit":"未記載閒置停權規則","current_classification":"HIGH BUT LIMITED","change_type":"terms_scope_update","detail":"須知列核定期間半數週數未用，通知後3個日曆天仍未使用可停權；非推定本日新增條件。","sources":["https://aipower.dginfra.gov.tw/front/index"]},
+  {
+    "record_id": "satfaq-ai-trial-index",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "官方公告正文查核確認：2026-09-30至2026-12-31期間，Basic方案以上既有客戶可由租戶管理員於後台免費啟用2,000點AI機器人試用，用於AI對話、模擬測試與學習資料儲存。活動期間不可加購點數。活動結束後若未正式簽約AI方案（月費80,000日圓+生成AI従量課金），混合型AI機器人與贈點將全數刪除。",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_scope_correction",
+    "detail": "補入實讀活動正文、修正仍稱僅索引待核的欄位；2,000點為共享有限額度，補齊每日下次複核，非新增活動或保證台灣資格。",
+    "sources": [
+      "https://www.satfaq.jp/news/20260918_2/",
+      "https://www.satfaq.jp/news/20260918_1/"
+    ]
+  },
+  {
+    "record_id": "nihonbashi-ai-adoption-first-month",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "官方現行顧問頁已全面改為月費100,000日圓之常態方案，正文已不再提供「首10企業首月免顧問費」促銷。搜尋索引仍殘留舊活動描述，但以現行頁面正文為準，不再列為可用之免費機會。",
+    "current_classification": "UNKNOWN",
+    "change_type": "unsupported_closure_correction",
+    "detail": "撤回僅因促銷文字消失而標closed的推論，保留歷史來源，轉watchlist且現行可用性未核；移除無來源的零設定費及不自動續費保證。",
+    "sources": [
+      "https://nihonbashi.ai/consulting",
+      "https://nihonbashi.ai/terms"
+    ]
+  },
+  {
+    "record_id": "grok-watch",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "官方新創條款（2026-10-07更新）：提供跨 Grok、Build、Bot 與 API 之共用額度，需具創投資金、上線產品與公司網域信箱，每企業集團限領一次。核准後先發 20%、上線啟用後發 80%；法律預設到期日為發放後 6 個月。API 計費預設為預付制且餘額歸零即停止請求（$0 hard stop），無強制自動超額扣款。",
+    "current_classification": "UNKNOWN",
+    "change_type": "billing_and_terms_scope_correction",
+    "detail": "補10/27現行方案條款，撤回跨產品均$0硬停的過度保證；揭露頁首Cursor與Eligible Services/FAQ不同，六個月預設不等宣傳6–12月用量。",
+    "sources": [
+      "https://x.ai/startups",
+      "https://x.ai/legal/startup-program-terms"
+    ]
+  },
+  {
+    "record_id": "inworld-shared-credit-free-creator",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "On-Demand 方案為 $0 PAYG，含最高 70 分鐘 TTS 或 400 分鐘 STT 免費試用；但並無每月 $25 免費額度。Creator 方案為每月份 $25 之付費訂閱，提供等額 $25 點數（未用額度在維持訂閱下可滾存最多 3 個月）。專業聲音複製與部分進階模型即便有餘額仍需綁定付款方式。",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "billing_eligibility_evidence_update",
+    "detail": "補至少18歲及付費自動續訂；三個月滾存須同級/更高訂閱，另揭露Creator workspace方案清單與比較表相互矛盾。價格US$25並未判成本日調漲。",
+    "sources": [
+      "https://inworld.ai/pricing",
+      "https://inworld.ai/terms"
+    ]
+  },
+  {
+    "record_id": "warp-factories-pricing-source-conflict",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "官方定價確認終端機 Free 方案為 $0/月，含 Agent CLI 與 PAYG 推論；Build 為 $20/月（含 $20 agent usage），Max 為 $200/月。未用額度月底重置不展延。目前官方未有可兌換之 $10,000 Factories 額度依據。",
+    "current_classification": "UNKNOWN",
+    "change_type": "product_billing_scope_correction",
+    "detail": "將Terminal與Factories價目分開，補Factories PAYG加價20%及用量另計；不把Terminal內含$20推廣成Factories贈額，也不以頁面缺字判舊贈額終止。",
+    "sources": [
+      "https://www.warp.dev/pricing?product=factories"
+    ]
+  },
+  {
+    "record_id": "novita-startup-matched-split-credits",
+    "verified_at": "2026-10-30T00:58:54+08:00",
+    "previous_limit": "新創最高 10K 額度採階梯式配比：前期最高 1K 前置額度，續 5K 採 1:1 配比消費，最後 4K 採 2:1 配比（達滿額需自費約 13K）。額度分 Agent Sandbox（至多 5K）與 Model API（至多 5K）兩池，有效期限 1 年。另推薦計畫提供雙方各 $10（最高 $500）。",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "eligibility_scope_correction",
+    "detail": "將Series B以前修正為Series B或更早（含B輪）；重核配比與分池，移除本輪未查推薦活動在摘要中的混列，原來源與歷史保留。",
+    "sources": [
+      "https://startups.novita.ai/"
+    ]
+  },
+  {
+    "record_id": "krutrim-sandbox-oct22-past-banner",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "未設status，歷史贈額尚未證實有效",
+    "current_classification": "UNKNOWN",
+    "change_type": "verification_scope_clarified",
+    "detail": "明列campaign_current_availability_unverified；首頁僅可核一般價格和免卡註冊，不能把橫幅移除當作截止證據。",
+    "sources": [
+      "https://www.olakrutrim.com/"
+    ]
+  },
+  {
+    "record_id": "yotta-rudra-terms-amount-pending",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "未明列每家公司僅能提交一份申請；無status",
+    "current_classification": "UNKNOWN",
+    "change_type": "terms_scope_update",
+    "detail": "補官方單份申請限制，並以terms_conflict明列既有Ignite金額及Rudra/Shambho版本矛盾；屬補核證據，非宣稱當日政策改動。",
+    "sources": [
+      "https://yotta.com/rudra/application-process.html",
+      "https://yotta.com/rudra/terms-and-conditions.html"
+    ]
+  },
+  {
+    "record_id": "minimax-design-h3-new-user-watch",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "取消/退款未核實",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "billing_evidence_update",
+    "detail": "補核Design會員FAQ：已購會員及點數不可退款、不可轉讓；免費福利綁卡及付費續訂方式仍未核，不推定免費試用會自動扣款。",
+    "sources": [
+      "https://design.minimax.io/media-plan/subscribe"
+    ]
+  },
+  {
+    "record_id": "runway-referral-two-paid-months",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "付費方案現價及取消條款未核",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "billing_evidence_update",
+    "detail": "補核Standard月付US$15（兩月每人US$30未稅）、年付等效US$12但需年繳；推薦仍須雙方付費兩月。不是本日漲價證據。",
+    "sources": [
+      "https://runway.com/pricing",
+      "https://runway.com/terms-of-use"
+    ]
+  },
+  {
+    "record_id": "base44-startup-partner-bootstrapped-separated",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "新創免費結束與續費細節未核",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "billing_scope_clarified",
+    "detail": "補一般條款可提前3週扣續約款及預設自動續訂；明確保留贈送授權是否適用的缺口，不以一般條款斷言新創免費期後必定扣款。",
+    "sources": [
+      "https://base44.com/about-us/legal/terms-of-service"
+    ]
+  },
+  {
+    "record_id": "sloyd-guest-daily-plus-separated-pools",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "Guest只列個人用途，尚未對讀通用授權條款",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "official_terms_conflict",
+    "detail": "新增定價Guest個人用途與通用ToS §6商用文字差異，改conflicting_official_usage_claims並保留較保守用途；補商用3D列印需另議授權、轉售僅Pro及自動續費。",
+    "sources": [
+      "https://www.sloyd.ai/pricing",
+      "https://www.sloyd.ai/terms-of-use"
+    ]
+  },
+  {
+    "record_id": "qoder-lite",
+    "verified_at": "2026-10-30T01:03:04+08:00",
+    "previous_limit": "未明列至少18歲與不可借租轉售帳戶",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "eligibility_evidence_update",
+    "detail": "補核Qoder年齡及個人帳戶限制；BOGO數字未變，動態Pricing未讀到，不宣稱既有bonus矛盾已解。",
+    "sources": [
+      "https://qoder.com/product-service",
+      "https://docs.qoder.com/events/newbogo"
+    ]
+  },
+  {
+    "record_id": "ndp-one-oct31-free-full-security-diagnosis",
+    "verified_at": "2026-10-30T00:59:54+08:00",
+    "previous_limit": "僅記載PoC不自動轉正式版，未說明另約有償診斷的取消退款",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "billing_evidence_update",
+    "detail": "補記§18：另約有償診斷開始後，客戶自行中止不退該次費用；免費轉付費仍須先告知並取得同意。這是本次補充條款證據，非聲稱政策於本日變更。",
+    "sources": [
+      "https://ndp-one.com/terms"
+    ]
+  },
+  {
+    "record_id": "olostep-trial-five-hundred-successful-web-requests",
+    "verified_at": "2026-10-30T01:01:13+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "new_opportunity",
+    "detail": "AI代理網頁資料API提供免卡US$0試用、500次成功請求，未公告每月補發或試用效期。一般網頁額度不可換稱500次AI答案；LLM擷取每次需10 credits。官方條款要求遵守目標網站條款、robots.txt及存取控制，商用另須明確授權；台灣資格未核。",
+    "sources": [
+      "https://www.olostep.com/pricing",
+      "https://docs.olostep.com/features/scrapes",
+      "https://www.olostep.com/terms"
+    ]
+  },
+  {
+    "record_id": "paperpal-free-five-ai-daily-two-hundred-corrections",
+    "verified_at": "2026-10-30T01:01:13+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "new_opportunity",
+    "detail": "學術寫作免費版提供每月200則語言修正、每日最多5次AI功能；另有每曆月7,000字的標準抄襲檢查。不同功能各有配額，不能視為不限量寫作。官方條款限18歲以上，且權益可能因國家不同；台灣實際配額與帳戶資格未核。",
+    "sources": [
+      "https://support.paperpal.com/support/solutions/articles/3000126442-can-i-use-paperpal-for-free-",
+      "https://support.paperpal.com/support/solutions/articles/3000124500-how-many-pages-or-words-can-i-check-every-month-for-plagiarism-",
+      "https://cactusglobal.com/terms-of-use/"
+    ]
+  },
+  {
+    "record_id": "anara-free-daily-shared-research-usage",
+    "verified_at": "2026-10-30T01:01:13+08:00",
+    "previous_limit": null,
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "change_type": "new_opportunity",
+    "detail": "研究工作區Free免卡，提供每日AI用量及Zotero/Mendeley連接。聊天、寫作、擷取與檔案匯入共用用量，僅顯示百分比與重置時間；不是固定訊息或字數保證。Free使用Auto模型、單檔20MB／120頁，額滿暫停新AI請求直到重置。台灣資格未核。",
+    "sources": [
+      "https://anara.com/pricing",
+      "https://support.anara.com/en/articles/14473264-understanding-usage-limits",
+      "https://docs.anara.com/guides/plans-and-billing",
+      "https://anara.com/terms"
+    ]
+  },
+  {
+    "record_id": "tana-outliner-free-monthly-five-hundred-shared",
+    "verified_at": "2026-10-30T01:01:13+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "new_opportunity",
+    "detail": "Tana Outliner免費版免卡，每月500 AI credits跨筆記聊天、語音與會議轉錄共用，不結轉；檔案5MB、總儲存0.5GB。學生、學術人士與NGO可憑證明申請付費方案五折。這是Outliner方案，不將新版Tana會議產品的50 AI queries與30天試用混入。",
+    "sources": [
+      "https://outliner.tana.inc/pricing",
+      "https://outliner.tana.inc/blog/introducing-ai-credits-in-tana-free",
+      "https://outliner.tana.inc/learn/features/payment-billing-and-ai-credits",
+      "https://outliner.tana.inc/terms"
+    ]
+  },
+  {
+    "record_id": "neo4j-startup-aura-twentyk-application-unavailable",
+    "verified_at": "2026-10-30T01:05:47+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "terms_clarification",
+    "detail": "官方條款明列額度不得出售或以物易物，虛假資料及為取得額度重複開戶可撤銷額度；申請表仍顯示暫不可用，並非計畫終止證據。",
+    "sources": [
+      "https://neo4j.com/startup-program/apply/",
+      "https://neo4j.com/startup-program/",
+      "https://neo4j.com/legal-terms/startup-program-aura/"
+    ]
+  },
+  {
+    "record_id": "chatgpt-pro200-transition",
+    "verified_at": "2026-10-30T01:06:35+08:00",
+    "previous_limit": "原宣布Pro200舊額度至10/29後降低，月費不變",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "policy_reversal",
+    "detail": "官方取消9/29宣布的降額，Pro200較低Work/Codex額度翻倍與較高額一致，高額不變；Pro100與500亦翻倍，既有用戶自動適用。Pro200月費仍US$200，額度絕對數值未公布。",
+    "sources": [
+      "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+    ]
+  }
 ]
