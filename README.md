@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **556 筆**（418 項機會、47 項政策、91 筆觀察線索），更新時間 **2026-10-29 13:09 Asia/Taipei**（不代表全庫複核）。本次入庫既有 **9 筆**局部複核、**545 筆既有紀錄未完成本次入庫複核**；另有8筆限時案例初步查閱未整理入庫。新增 [Requesty 新創額度](https://www.requesty.ai/startup) 與 [MagicSchool 教師免費方案](https://www.magicschool.ai/pricing)；台灣個案資格均未核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **559 筆**（420 項機會、47 項政策、92 筆觀察線索），更新時間 **2026-10-29 14:11 Asia/Taipei**（不代表全庫複核）。本次局部複核並入庫 **7 筆**既有案例，另有 **9 筆**初步查閱未入庫；**549 筆既有紀錄未完成本次入庫複核**。新增 [Hume 新創語音額度](https://www.hume.ai/startup-program)、[Julius Free](https://julius.ai/docs/billing/credits-overview.md) 與 Confluent 觀察線索；台灣個案資格均未核。限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
