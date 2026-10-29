@@ -1,8 +1,99 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-29T15:09:59+08:00",
-  "scope": "2026-10-29 15:09 Asia/Taipei：本次4筆既有案例局部複核入庫，555筆既有紀錄未完成本次入庫複核；另初步查閱其他案例但未刷新紀錄。新增1筆機會；僅來源列明主張獲核實，限時每日、其餘按月輪替。",
+  "updated_at": "2026-10-29T16:11:03+08:00",
+  "scope": "2026-10-29 16:11 Asia/Taipei：本次5筆既有案例局部複核入庫，555筆既有紀錄未完成本次入庫複核；其他案例初步查閱未刷新。新增2筆機會與1筆已截止觀察紀錄；僅來源列明主張獲核實，限時每日、其餘按月輪替。",
   "offers": [
+    {
+      "id": "taiwan-moeai-manufacturing-tool-reimbursement-hundred-k",
+      "title": "經濟部AI輔導團：製造業AI工具費最高補助新台幣10萬元",
+      "summary": "國內依法登記且營業項目屬製造業的公司，須先完成AI診斷，依建議採購核定安全AI工具並支付費用後申請核銷；每案最高新台幣10萬元未稅，受理及執行至2027-09-30。須先墊款，非免費工具；剩餘預算及個案核准未核。",
+      "categories": ["QUALIFICATION", "VALUE-DEAL"], "views": ["developer"],
+      "setup_cost_usd": null, "recurring_cost_usd": null, "effort_minutes_max": null,
+      "taiwan": "Yes", "regions": ["Taiwan"], "verification": "Official",
+      "usage_type": "核准工具費用核銷", "quota_classification": "HIGH BUT LIMITED", "limited_confirmed": true,
+      "usable_benefit_usd": null, "benefit_cost_ratio": null, "savings_usd": null,
+      "cancellation": "工具續約及取消依個別供應商，未核；稅額及超額自付，匯款手續費自款項扣除。",
+      "usable_duration": "申請須知列受理及執行至2027-09-30；實際核銷與工具效期依個案。",
+      "access_risk": "先診斷、依建議採購並完成建置後，憑合法費用與授權文件申請；須審核，未確認剩餘預算。",
+      "verified_at": "2026-10-29T16:09:59+08:00", "discovered_at": "2026-10-29T16:09:59+08:00",
+      "announcement_at": null, "previous_limit": null, "review_cadence": "monthly", "next_review_at": "2026-11-29T16:09:59+08:00",
+      "eligibility": {
+        "service_availability": "經濟部產業競爭力AI輔導團，須先完成AI診斷及依核定清單採購建置。",
+        "account_eligibility": "限國內依法公司登記且登記營業項目屬製造業；同筆支出不得重複政府核銷。",
+        "billing_country": "先自行支付工具費並留合法憑證；每案最高新台幣10萬元未稅，稅額與超額自付。",
+        "identity_residency": "國內合資格製造業公司；不適用所有自然人或新創。",
+        "terms_restrictions": "工具須符合診斷建議與核定安全AI工具清單；提供費用、授權及核銷文件，審核通過才撥款。",
+        "taiwan_note": "Yes：限符合國內公司登記、製造業、診斷及核銷條件者，不保證核准。"
+      },
+      "unknowns": ["個案工具費與續約條件、剩餘預算及核准", "適用法律及監管限制未另行查核"],
+      "sources": [
+        {"url":"https://eii.nat.gov.tw/moeai-plus/uploads/downloads/01KZZCKSTDS52J4Z31HHR7HCX5.docx","scope":"115年7月申請須知：資格、核銷上限及期限","evidence":"製造業公司先診斷、採購合資格工具並支付後核銷；每案最高新台幣10萬元未稅，受理及執行至2027-09-30；不可重複核銷，匯款手續費扣除。","accessed_at":"2026-10-29T16:09:59+08:00"},
+        {"url":"https://eii.nat.gov.tw/moeai-plus/notice","scope":"官方作業入口","evidence":"輔導及補助作業資訊；個案資格以申請須知為準。","accessed_at":"2026-10-29T16:09:59+08:00"}
+      ],
+      "record_type":"opportunity", "status":"conditional", "legal_status":"not_verified",
+      "priority_score":18.3, "priority_tier":"S", "priority_note":"官方·條件式·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "runloop-once-fifty-agent-sandbox-pro-trial",
+      "title": "Runloop：AI代理沙盒一次50美元試用額度",
+      "summary": "官方價格頁提供免信用卡試用及一次US$50額度；試用最多3個運行中Devboxes、5 blueprints、10 snapshots及3 objects。這是代理執行沙盒而非模型token。Basic平台免費但算力另計；Pro為US$250/月加用量。",
+      "categories": ["FREE", "QUALIFICATION"], "views": ["free", "developer"],
+      "setup_cost_usd": 0, "recurring_cost_usd": null, "effort_minutes_max": null,
+      "taiwan": "Unknown", "regions": [], "verification": "Official",
+      "usage_type": "一次性沙盒運算credits", "quota_classification": "HIGH BUT LIMITED", "limited_confirmed": true,
+      "usable_benefit_usd": null, "benefit_cost_ratio": null, "savings_usd": null,
+      "cancellation": "試用耗盡是否硬停、轉付費方式及取消程序未核；超過預購額度可能另行計費。",
+      "usable_duration": "US$50到期日未核；條款免費方案初始一期一個月不等於贈額必定30日到期。",
+      "access_risk": "Basic算力及儲存可能計費；100GB免費儲存頁面緊接首月免費，不推定永久。台灣資格未核。",
+      "verified_at": "2026-10-29T16:09:59+08:00", "discovered_at": "2026-10-29T16:09:59+08:00",
+      "announcement_at": null, "previous_limit": null, "review_cadence": "monthly", "next_review_at": "2026-11-29T16:09:59+08:00",
+      "eligibility": {
+        "service_availability": "公開價格頁提供免費試用，未註冊或領取。",
+        "account_eligibility": "免卡試用；實際帳戶資格及單人重複申請限制未核。",
+        "billing_country": "台灣帳單、付費方式及超額設定未核。",
+        "identity_residency": "台灣個人或企業資格未核。",
+        "terms_restrictions": "遵守服務條款；超過預購額度可能另行開帳，未假設自動升級或硬停。",
+        "taiwan_note": "Unknown：未取得台灣帳戶及付款具體資格證據。"
+      },
+      "unknowns": ["試用額度到期、用盡後狀態與續費", "台灣資格及帳單", "適用法律及監管限制"],
+      "sources": [
+        {"url":"https://runloop.ai/pricing","scope":"試用額度、免卡、用量與方案費","evidence":"提供US$50 credits及免卡試用；列3 Devboxes、5 blueprints、10 snapshots、3 objects；Basic算力另計，Pro US$250/月加用量。","accessed_at":"2026-10-29T16:09:59+08:00"},
+        {"url":"https://docs.runloop.ai/docs/overview/what-is-runloop","scope":"沙盒用途","evidence":"建立、執行與優化AI軟體工程代理的沙盒，不是模型token額度。","accessed_at":"2026-10-29T16:09:59+08:00"},
+        {"url":"https://runloop.ai/legal/terms-of-service","scope":"免費方案及超額條款","evidence":"§6超過預購額度另行開帳；§12免費方案預設初始一期一個月，不證實贈額到期日。","accessed_at":"2026-10-29T16:09:59+08:00"}
+      ],
+      "record_type":"opportunity", "status":"conditional", "legal_status":"not_verified",
+      "priority_score":15.8, "priority_tier":"C", "priority_note":"官方·條件式·零設定費·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "taiwan-industrial-ai-tool-points-exhausted-2026",
+      "title": "工業館AI工具庫15萬點：點數用罄停止收件",
+      "summary": "官方公告明列補助點數已用罄、截止收件；原申請截止2026-10-30 17:30，但額度用罄提前停收。合格中小製造業原可申請最多15萬點抵核准工具費最高一半，須至少自籌另一半；追蹤增額或下年度，不可當作現可申請。",
+      "categories": ["QUALIFICATION"], "views": ["developer"],
+      "setup_cost_usd": null, "recurring_cost_usd": null, "effort_minutes_max": null,
+      "taiwan": "Yes", "regions": ["Taiwan"], "verification": "Official",
+      "usage_type": "核准AI方案費抵減", "quota_classification": "HIGH BUT LIMITED", "limited_confirmed": true,
+      "usable_benefit_usd": null, "benefit_cost_ratio": null, "savings_usd": null,
+      "cancellation": "已截止新申請；續購、取消依個別契約。",
+      "usable_duration": "原選購期限為核發後三個月內且最晚2026-10-31 17:30，服務契約最晚11-30；提前停收。",
+      "access_risk": "點數已用罄，不得假設增額或仍可申請；原有客戶續購及重複補助等有排除。",
+      "verified_at": "2026-10-29T16:09:59+08:00", "discovered_at": "2026-10-29T16:09:59+08:00",
+      "announcement_at": null, "previous_limit": null, "review_cadence": "monthly", "next_review_at": "2026-11-29T16:09:59+08:00",
+      "eligibility": {
+        "service_availability": "官方明示點數用罄且截止收件。",
+        "account_eligibility": "原限合格中小製造業，含公司或商業登記、工廠登記或免登記證明；排除分公司及陸資。",
+        "billing_country": "一點等於新台幣一元，最多抵合格費用一半；至少一半自籌。",
+        "identity_residency": "台灣合格中小製造業，不含全部企業。",
+        "terms_restrictions": "排除原有客戶續購及指定重複政府補助；詳細資格以申請須知為準。",
+        "taiwan_note": "Yes：歷史資格限合格台灣中小製造業，但現已截止新申請。"
+      },
+      "unknowns": ["實際用罄日期、是否增額或開放下一年度", "適用法律及監管限制未另行查核"],
+      "sources": [
+        {"url":"https://keid.nat.gov.tw/cloud/Web/news_in.aspx?ListGuid=d6ad9b40-a6bb-1a57-adbc-90dba8297221","scope":"官方截止收件公告","evidence":"標題明列補助點數已用罄、截止收件；公告日期不可當成實際用罄日期。","accessed_at":"2026-10-29T16:09:59+08:00"},
+        {"url":"https://www.ida.gov.tw/ctlr?PRO=filepath.DownloadFile&f=executive&id=20527&t=f","scope":"申請須知與原補助限制","evidence":"最高15萬點、每點新台幣1元，抵工具費最高一半；中小製造業及不得重複補助等限制。","accessed_at":"2026-10-29T16:09:59+08:00"}
+      ],
+      "record_type":"watchlist", "status":"closed", "legal_status":"not_verified",
+      "priority_score":null, "priority_tier":null, "priority_note":"非機會紀錄（政策/待覆核），未評級"
+    },
     {
       "id": "yc-ai-stack-student-event-bundle",
       "title": "YC AI Stack：合資格活動參與者的雲端與 AI 額度",
@@ -8905,15 +8996,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": "僅本來需要付費TTS且能用完後續bonus才有實用價值；不把名目2倍當保證效益。",
-      "cancellation": "活動條款稱auto-reload可關閉；PAYG定價頁列其預設啟用，須確認帳戶設定及已發生費用。",
+      "cancellation": "活動條款稱auto-reload可隨時關閉；舊定價頁曾列預設啟用，本次現行頁未重證預設，須確認帳戶設定及已發生費用。",
       "usable_duration": "合格消費至2026-12-31 23:59 Pacific；bonus無到期",
-      "access_risk": "須先付費消耗；PAYG Pricing列預設餘額US$10時自動補US$100，可關閉。台灣付款及實際扣款未實測。",
-      "verified_at": "2026-10-28T16:07:28+08:00",
+      "access_risk": "須先付費消耗；舊頁曾列餘額US$10時自動補US$100，本次現行頁未重證，不能推定預設已關閉。台灣付款及實際扣款未實測。",
+      "verified_at": "2026-10-29T16:08:37+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-29T16:07:28+08:00",
+      "next_review_at": "2026-10-30T16:08:37+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
@@ -8924,7 +9015,7 @@
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
-        "台灣帳戶及付款資格、適用法律未核；非預先免費額度，須先有合格付費消耗"
+        "台灣帳戶及付款資格、適用法律、實際auto-reload預設未核；非預先免費額度，須先有合格付費消耗"
       ],
       "sources": [
         {
@@ -8945,6 +9036,12 @@
           "scope": "本輪官方局部複核，僅限下列主張",
           "evidence": "付費Flux TTS消耗至12/31 23:59 Pacific每美元回饋一美元、每專案上限500；Pricing PAYG預設餘額10美元時自動補100美元，條款允許關閉；台灣卡未核。 實讀區間2026-10-28 16:06–16:08 Asia/Taipei。",
           "accessed_time_range": "2026-10-28T16:06:00+08:00–2026-10-28T16:08:59+08:00"
+        },
+        {
+          "url": "https://deepgram.com/pricing",
+          "scope": "2026-10-29局部複核定價與舊自動加值證據",
+          "evidence": "現行PAYG及Growth Flux TTS列US$0.0450/千字元；未見舊頁US$10觸發補US$100的預設敘述，不代表已關閉。活動條款確認auto-reload非必要且可關閉。",
+          "accessed_at": "2026-10-29T16:08:37+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -9623,7 +9720,7 @@
     {
       "id": "qoder-free-mechanisms",
       "title": "Qoder：Flash免扣與每日100分開看（Qodo非Qoder）",
-      "summary": "Qoder個人方案Qwen3.8-Flash仍0.0×免扣點，未公布固定請求上限，非不限量保證；桌面用戶端每日10:00至次日10:00 UTC+8可手領100點（各包30天有效、跨產品共用）。首登入有14天／300點Pro試用，排除VM。Qodo是另一產品，其試用到期須付費續用。台灣Mobile上架不證桌面活動或個別帳戶資格。",
+      "summary": "Qoder個人方案Qwen3.8-Flash仍0.0×免扣點，僅實際由Flash完成的呼叫免扣，功能若另呼叫其他模型仍扣費；未公布固定請求上限，非不限量保證。桌面用戶端每日10:00至次日10:00 UTC+8可手領100點（各包30天有效、跨產品共用）。首登入有14天／300點Pro試用，排除VM。台灣Mobile上架不證桌面活動或個別帳戶資格。",
       "categories": [
         "FREE",
         "EASY-EFFORT",
@@ -9650,12 +9747,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-27T07:35:24+08:00",
+      "verified_at": "2026-10-29T16:08:37+08:00",
       "discovered_at": "2026-10-23T17:05:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T07:35:24+08:00",
+      "next_review_at": "2026-10-30T16:08:37+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Qoder International個人版；Qwen3.8-Flash限時0.0x扣點，Free、Pro Trial、Lite、Pro、Pro+、Ultra可用；Teams/Enterprise排除。每日100 Credits為個人帳戶手領。",
@@ -9675,13 +9772,15 @@
           "url": "https://docs.qoder.com/events/flashoffer",
           "label": "官方來源",
           "scope": "Flash 0.0×限時、個人方案範圍與結束日未公布",
-          "evidence": "2026-10-26 06:46–06:47 Asia/Taipei實讀：9/30後仍免費、結束事先公告；個人Free/Trial/Lite/Pro/Pro+/Ultra含零餘額可用，Teams/Enterprise不含；未公布固定請求上限。"
+          "evidence": "2026-10-29局部複核：9/30後仍免費、結束事先公告；個人Free/Trial/Lite/Pro/Pro+/Ultra含零餘額可用，Teams/Enterprise不含。只有Flash完成的呼叫免扣，指定其他模型的功能依其價格扣費。",
+          "accessed_at": "2026-10-29T16:08:37+08:00"
         },
         {
           "url": "https://docs.qoder.com/events/100credits",
           "label": "官方來源",
           "scope": "每日100點桌面手領、窗口與30日效期",
-          "evidence": "2026-10-26 06:46–06:47 Asia/Taipei實讀：每日UTC+8 10:00起至翌日10:00前一窗口、每帳戶一次不可補領；入帳起30日有效，結束待公告。"
+          "evidence": "2026-10-29局部複核：每日UTC+8 10:00至翌日10:00前一窗口、桌面每帳戶手領一次不可補；每包30日有效，結束待公告。台灣個案未核。",
+          "accessed_at": "2026-10-29T16:08:37+08:00"
         },
         {
           "url": "https://docs.qoder.com/Credits",
@@ -10206,7 +10305,7 @@
     {
       "id": "modal-starter",
       "title": "Modal Starter：每月US$30但須綁卡",
-      "summary": "官方定價頁確認：Modal Starter方案每月自動提供US$30免費算力額度，包含3個席位、100個容器並發、10個GPU並發、1 TiB網路出流量與1 TiB儲存。強制綁定信用卡。注意：Shared Endpoints模型Token調用自首個請求起即計費；Sandbox CPU與記憶體採非搶占計費（牌價3倍）。",
+      "summary": "本次局部複核官方定價：Starter月費US$0、每月US$30算力額度，3席位、100容器及10 GPU並發，1 TiB網路出流量與1 TiB儲存免費。需留付款方式，超額按用量計費；Shared Endpoints token不適用算力額度，自首個請求收費。Sandbox CPU與記憶體牌價3倍。",
       "categories": [
         "FREE",
         "HIGH-QUOTA"
@@ -10230,46 +10329,49 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "刪Workspace及移除付款方式需客服；未實測取消",
+      "cancellation": "移除付款方式及刪除Workspace須聯絡客服；未實測取消。帳單週期末自動扣款，達用量門檻亦可能於週期中扣款。",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-10-25T18:30:00+08:00",
+      "verified_at": "2026-10-29T16:06:40+08:00",
       "discovered_at": "2026-10-23T18:01:35+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T22:45:00+08:00",
+      "next_review_at": "2026-11-29T16:06:40+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
         "account_eligibility": "須付款方式，個人帳戶資格未知",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "必須綁定信用卡；超出每月30美元額度後自動扣款。Shared Endpoints之Token計費不包含在30美元免費算力抵扣內。",
+        "terms_restrictions": "須留付款方式；超額用量自動計費，付款可能在週期中發生。Shared Endpoints token不適用免費算力額度，自首個請求收費。Workspace spend limit可限制扣款，但預設並非零。",
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
         "個人資格、台灣帳戶／付款／身份條件及實際節省",
-        "實際帳戶重置週期及預算"
+        "實際帳戶重置日期、付款方式種類及台灣可否使用；本次未重新核實其他全部資格、取消與法律條件"
       ],
       "sources": [
         {
           "url": "https://modal.com/pricing",
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-24直接查閱官方定價：Starter方案月費US$0，每月自動循環發放US$30免費算力額度與3席位，需綁定信用卡，超額按用量月結。"
+          "evidence": "2026-10-24直接查閱官方定價：Starter方案月費US$0，每月自動循環發放US$30免費算力額度與3席位，需綁定信用卡，超額按用量月結。2026-10-29局部複核：算力額度不涵蓋Shared Endpoints token；Sandbox CPU及記憶體3倍牌價。",
+          "accessed_at": "2026-10-29T16:06:40+08:00"
         },
         {
           "url": "https://modal.com/docs/guide/billing",
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 18:00:06–18:01:35公開研究實讀"
+          "evidence": "2026-10-29局部複核：必須留付款方式；週期末自動扣款，首次超過指定門檻亦可在週期內自動扣款；刪除Workspace及移除付款方式聯絡客服。",
+          "accessed_at": "2026-10-29T16:06:40+08:00"
         },
         {
           "url": "https://modal.com/docs/guide/budgets",
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
-          "evidence": "2026-10-23 18:00:06–18:01:35公開研究實讀"
+          "evidence": "2026-10-29局部複核：Workspace spend limit為抵扣後自付金額上限；預設為使用上限減額度，不一定為零。",
+          "accessed_at": "2026-10-29T16:06:40+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -18440,12 +18542,12 @@
       "cancellation": null,
       "usable_duration": "核准日起Prototype3月；Scale1年或額度耗盡",
       "access_risk": "需卡；Prototype超出50/月立即付費，三月後200/月；Scale5000含方案費，耗盡後200/月加usage。取消未知。",
-      "verified_at": "2026-10-25T12:47:44+08:00",
+      "verified_at": "2026-10-29T16:07:34+08:00",
       "discovered_at": "2026-10-24T05:00:33+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T12:47:44+08:00",
+      "next_review_at": "2026-11-29T16:07:34+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -18458,7 +18560,7 @@
       "unknowns": [
         "取消流程",
         "台灣公司/帳單國家",
-        "額外模型及代理成本"
+        "額外模型及代理成本；本次公開頁未重現先前記錄的Prototype年營收低於US$1M條件，不能推定正式取消"
       ],
       "sources": [
         {
@@ -18466,14 +18568,15 @@
           "label": "官方公開頁",
           "scope": "KERNEL新創：需卡且超量即收費",
           "evidence": "2026-10-25 12:47 Asia/Taipei直接重讀：Prototype需年營收低於US$1M、募資至少US$1M；US$200/月方案費免3月並含US$50/月usage，超額按標準費率。Scale需YC/a16z speedrun/Accel等指定VC支援，US$5,000 credits涵蓋US$200/月方案費與一年usage。需卡；按核准日起算。台灣資格/付款及取消未知；未登入或申請。",
-          "accessed_time_range": "2026-10-25T12:47:00+08:00–2026-10-25T12:47:44+08:00"
+          "accessed_time_range": "2026-10-25T12:47:00+08:00–2026-10-25T12:47:44+08:00",
+          "subsequent_review": "2026-10-29T16:07:34+08:00：本頁與官方公告均未重現上述年營收上限；募資至少US$1M等條件仍列。不能據此推定政策取消。"
         },
         {
           "url": "https://www.kernel.sh/blog/startups",
           "label": "官方公開頁",
           "scope": "KERNEL新創：需卡且超量即收費",
-          "evidence": "本輪直接讀相關正文；未申請/驗證帳戶領取。",
-          "accessed_time_range": "2026-10-24T04:58:13+08:00–2026-10-24T04:59:08+08:00"
+          "evidence": "2026-10-29局部複核：Prototype需新客、成立未滿2年及募資至少US$1M；未見年營收上限。未申請或驗證個人資格。",
+          "accessed_at": "2026-10-29T16:07:34+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -18490,7 +18593,7 @@
     {
       "id": "past-memory-once-starting-credits",
       "title": "Past.dev：一次150k，工作信箱400k非月額",
-      "summary": "Memory API一般PAYG一次150000 credits，工作信箱400000。1credit/350 UTF-8 bytes向上取整，recall每次0.1；1專案500RPM。中文常每字3bytes，不能用英文字符估價。零額時send與PAYG recall報billing error；補充最低100k/30美元，不是免費月配額。",
+      "summary": "Memory API一般PAYG一次150000 credits，工作信箱400000。1 credit/350 UTF-8 bytes向上取整；PAYG recall或answer每次1 credit，webhook event每次0.1 credit；1專案500RPM。零額時send與PAYG recall報billing error，PAYG無自動加值；補充最低100k/30美元，不是免費月配額。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -18515,12 +18618,12 @@
       "cancellation": null,
       "usable_duration": "一次贈額；贈額期限未知；買入包90日",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T12:47:44+08:00",
+      "verified_at": "2026-10-29T16:07:34+08:00",
       "discovered_at": "2026-10-24T05:00:33+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T12:47:44+08:00",
+      "next_review_at": "2026-11-29T16:07:34+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -18533,15 +18636,15 @@
       "unknowns": [
         "贈額效期",
         "申請階段是否必須綁卡",
-        "取消/台灣資格"
+        "取消/台灣資格、其他條款；本次僅局部複核公開定價"
       ],
       "sources": [
         {
           "url": "https://past.dev/pricing",
           "label": "官方公開頁",
           "scope": "Past.dev：一次150k，工作信箱400k非月額",
-          "evidence": "2026-10-25 12:47 Asia/Taipei直接重讀定價頁（頁面更新日2026-10-25）：Pay as you go一次150,000 credits，工作信箱400,000；1 credit/350 bytes、起始credits不結轉，額外credits最低100,000/US$30且PAYG購買額90日過期，信用卡付款。未明示免費贈額期限、台灣帳單或申領階段是否需卡；未建立帳戶。",
-          "accessed_time_range": "2026-10-25T12:47:00+08:00–2026-10-25T12:47:44+08:00"
+          "evidence": "2026-10-29局部複核定價頁（頁面更新日2026-10-29）：PAYG recall或answer每次1 credit；0.1 credit為每個webhook event。PAYG無自動加值，零額時send和recall報billing error。贈額期限、台灣帳單及申領是否需卡未核。",
+          "accessed_at": "2026-10-29T16:07:34+08:00"
         }
       ],
       "record_type": "opportunity",
