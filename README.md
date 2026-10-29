@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **548 筆**（411 項機會、47 項政策、90 筆觀察線索），更新時間 **2026-10-29 07:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核既有 **12 筆**，其餘 **534 筆未複核**；新增 [經濟部 A+ 早期新創補助](https://service.moea.gov.tw/EE514/tw/aiip/50-7691.html)及 [AWS 學生獎勵台灣排除政策](https://builder.aws.com/faq)。A+ 非 AI 專屬、須符合研發與自籌條件；AWS 明列台灣排除。個別資格、付款與法律結論仍須另核。限時或即將到期案例每日追蹤，其餘按月輪替。
+資料集目前有 **549 筆**（411 項機會、47 項政策、91 筆觀察線索），更新時間 **2026-10-29 08:09 Asia/Taipei**（不代表全庫複核）。本次局部複核既有 **9 筆**，其餘 **539 筆未複核**；新增 [亞灣 AI 創新實證計畫](https://startupterrace.sme.gov.tw/cp.aspx?n=1809)觀察線索，徵件狀態及個案雲端額度未核。Google Express 舊資料所稱到期後 30 天標記刪除，本次現行文件未確認；限時或即將到期案例每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
