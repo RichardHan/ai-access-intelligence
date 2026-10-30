@@ -1,8 +1,37 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-30T08:08:40+08:00",
-  "scope": "2026-10-30 08:08 Asia/Taipei：本次局部複核7筆既有案例，577筆既有紀錄未完成本次複核；新增1項機會。僅核實各來源及verification_scope明列主張；限時每日，其餘按月輪替。",
+  "updated_at": "2026-10-30T09:08:11+08:00",
+  "scope": "2026-10-30 09:08 Asia/Taipei：本次局部複核3筆既有案例，582筆既有紀錄未完成本次複核；新增1項機會。僅核實各來源及verification_scope明列主張；限時每日，其餘按月輪替。",
   "offers": [
+    {
+      "id": "google-developer-program-standard-gear",
+      "title": "Google Developer Program Standard：GEAR每月35點AI代理實作額度",
+      "summary": "免費加入Google Developer Program Standard並註冊GEAR，可每月取得35點Google Skills學習額度，用於AI代理實作labs；不是Gemini API或Google Cloud帳單抵用金。台灣帳戶是否合格未核，繁體中文頁不代表資格保證。",
+      "record_type": "opportunity", "status": "conditional", "verification": "Official", "legal_status": "not_verified",
+      "categories": ["FREE", "QUALIFICATION"], "views": ["free", "developer", "education"],
+      "setup_cost_usd": 0, "recurring_cost_usd": 0, "effort_minutes_max": null,
+      "taiwan": "Unknown", "regions": [], "usage_type": "Training lab credits", "quota_classification": "HIGH BUT LIMITED", "limited_confirmed": true,
+      "usable_benefit_usd": null, "benefit_cost_ratio": null, "savings_usd": null, "valuation_scenario": null,
+      "verified_at": "2026-10-30T09:07:39+08:00", "discovered_at": "2026-10-30T09:07:39+08:00", "announcement_at": null,
+      "review_cadence": "monthly", "next_review_at": "2026-11-30T09:07:39+08:00",
+      "priority_score": 16.3, "priority_tier": "C", "priority_note": "官方·條件式·免費·台灣未標記·時間未知·有資格門檻",
+      "cancellation": "Standard免費；付款方式要求及超額處理未核。", "usable_duration": "每月35點；重置時間、結轉及活動截止未核。",
+      "access_risk": "需登入並註冊GEAR；各lab扣點及台灣帳戶是否合格未核，勿將學習點數當API抵用金。",
+      "eligibility": {
+        "service_availability": "官方Standard免費，註冊GEAR可每月取得35點Google Skills學習額度，供實作學習。",
+        "account_eligibility": "須登入及註冊GEAR；年齡與個別帳戶資格未核。",
+        "billing_country": "Standard免費；付款方式與台灣帳單資格未核。",
+        "identity_residency": "官方繁體中文頁未證明台灣帳戶資格。",
+        "terms_restrictions": "額度用於Google Skills學習與實作，不是API或Cloud帳單抵用金；重複領取、結轉及超額條件未核。",
+        "taiwan_note": "Unknown；需另確認台灣帳戶及個人資格，不以頁面語言推定適用。"
+      },
+      "unknowns": ["台灣帳戶資格、年齡及付款要求", "各lab扣點、重置日、結轉及超額處理", "申請截止日及法律監管限制"],
+      "verification_scope": "僅核官方免費Standard、GEAR註冊要求、每月點數與學習用途；未申請，台灣個案及法律未核。",
+      "sources": [
+        {"url":"https://developers.google.com/program/plans-and-pricing?hl=zh-TW","scope":"Standard免費及GEAR月額","evidence":"Standard免費；註冊GEAR可每月獲35點Google Skills，API及Cloud美元抵免屬Premium福利。","accessed_at":"2026-10-30T09:07:39+08:00"},
+        {"url":"https://developers.google.com/program/gear?hl=zh-TW","scope":"AI代理實作學習用途","evidence":"GEAR提供每月35點學習抵免額，用於Google Skills實作訓練與AI代理學習路徑。","accessed_at":"2026-10-30T09:07:39+08:00"}
+      ]
+    },
     {
       "id": "google-skills-student-200-credits-taiwan",
       "title": "Google Skills：合格大專學生200點實作課程額度",
@@ -6116,12 +6145,12 @@
       "cancellation": "維持Workers Free超額失敗；Workers Paid及Gateway預付路徑另計，不自動視為免費。",
       "usable_duration": "每日00:00 UTC重置；沒有公布免費層截止日。",
       "access_risk": "資格、審核、限額與政策可能變更",
-      "verified_at": "2026-10-29T05:06:21+08:00",
+      "verified_at": "2026-10-30T09:06:08+08:00",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-29T05:06:21+08:00",
+      "next_review_at": "2026-11-30T09:06:08+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Workers Free/Paid含每日額度；價目包含Llama3.3-70B、GPT-OSS120B/20B、Qwen3.8-27B、Gemma、embeddings、圖像與音訊。",
@@ -6136,6 +6165,7 @@
         "特定模型商用授權",
         "選用stateful服務之個別儲存費用及保留設定"
       ],
+      "verification_scope": "本次僅複核定價頁的每日額度、重置、超額及需付款模型；資料政策、速率、台灣資格與法律未重核。",
       "sources": [
         {
           "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
@@ -6143,7 +6173,7 @@
           "scope": "免費額度、重置、付費模型與超額",
           "evidence": "'10,000 Neurons per day at no charge'; 'All limits reset daily at 00:00 UTC'; Free超限'further operations will fail with an error'; Paid $0.011/1,000超額；八個指定模型require paid billing method。",
           "accessed_time_range": "2026-10-25T20:15:28+08:00/2026-10-25T20:21:58+08:00",
-          "accessed_at": "2026-10-29T05:06:21+08:00"
+          "accessed_at": "2026-10-30T09:06:08+08:00"
         },
         {
           "url": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
@@ -17029,12 +17059,12 @@
       "cancellation": null,
       "usable_duration": "訓練與推論均自入選通知信所示起算至三個月屆滿，起迄日以通知為準；點數用罄或到期即終止。",
       "access_risk": "本輪局部重查入口及申請須知，個案仍須核定；訓練點數含閒置，禁止商轉營利、中港澳遠端IP及中國/中資工具。核定期間半數週數未使用，通知後3個日曆天仍未使用可停權。",
-      "verified_at": "2026-10-29T19:08:00+08:00",
+      "verified_at": "2026-10-30T09:08:11+08:00",
       "discovered_at": "2026-10-24T02:02:00+08:00",
       "announcement_at": "2026-06-17",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-30T19:08:00+08:00",
+      "next_review_at": "2026-10-31T09:08:11+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "數產署入口列受理至2026/10/30 23:59:59系統時間；核定後提供免費算力，訓練與推論期限均自通知信所示起算三個月，起迄以通知為準。",
@@ -17050,7 +17080,9 @@
         "工商憑證、固定IP等外部準備成本與申請審查結果",
         "完整個案資料處理/專案條件及現行法律適用性；法律結論未核"
       ],
+      "verification_scope": "本次僅重查數產署公告的10月30日截止日期、登記事業行業資格及工商憑證；截止時刻、額度、限制、台灣個案與法律未重核。",
       "sources": [
+        {"url":"https://moda.gov.tw/ADI/news/events/20432","scope":"本次局部複核截止日、事業資格及申請方式","evidence":"數產署2026-08-18公告稱115年度申請至10月30日止，列合格國內登記事業及行業，線上申請須工商憑證；公告未列截止時刻。","accessed_time_range":"2026-10-30T09:07:39+08:00/2026-10-30T09:08:11+08:00"},
         {"url":"https://aipower.dginfra.gov.tw/front/index","scope":"本輪局部複核截止、企業資格與使用期限","evidence":"入口列10/30 23:59:59系統時間截止，11/2預計審查；限符合行業的國內登記事業及工商憑證，訓練與推論起迄依入選通知。未申請。","accessed_time_range":"2026-10-29T19:06:51+08:00–2026-10-29T19:08:00+08:00"},
         {"url":"https://aipower.dginfra.gov.tw/front/filePush?pFolder=content&pName=%E6%95%B8%E7%99%BC%E9%83%A8%E6%95%B8%E4%BD%8D%E7%94%A2%E6%A5%AD%E7%BD%B2%20115%E5%B9%B4%E7%AE%97%E5%8A%9B%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E9%A0%88%E7%9F%A5.pdf","scope":"本輪局部複核配額、限制及閒置停權","evidence":"8/14須知列1,000/2,000/6,000點及禁止營利、中港澳IP和中資工具；核定期間半數週數未用，通知後3個日曆天仍未使用可停權。附件列中華民國法及臺北地院管轄，非個案法律結論。","accessed_time_range":"2026-10-29T19:06:51+08:00–2026-10-29T19:08:00+08:00"},
         {"url":"https://aipower.dginfra.gov.tw/front/index","scope":"本次僅複核訓練及推論使用期限和截止時間；未申請或核定個案","evidence":"以瀏覽器檢視官方入口表格，使用期限欄跨訓練和推論兩類：自入選通知信所示起算至三個月屆滿，起迄日以通知為準；先前文字擷取誤將合併儲存格視為推論欄空白。入口列10/30 23:59:59系統時間截止，未標時區。","accessed_at":"2026-10-29T17:09:00+08:00"},
@@ -38704,7 +38736,7 @@
     {
       "id": "notion-business-trial-standard-select-credits",
       "title": "Notion Business：30天免費試用含每月1,500 Standard與500 Select AI額度",
-      "summary": "Notion Business 方案提供 30 天免費試用。自 2026-10-19 起新啟動之試用，每位成員每月獲 1,500 Standard 與 500 Select AI credits（獨立不共用、月底重置不展延），支援 Notion Agent、AI Meeting Notes 及 Research Mode。需使用公司/機構專屬網域信箱，個人與學生信箱不適用。若在試用時填寫付款資料，試用結束後將自動扣款續訂；未填寫付款資料者試用期滿需手動確認升級。",
+      "summary": "Notion Business提供30天試用；2026-10-19起新試用每位成員每月1,500 Standard及500 Select credits，分開計算、帳單週期開始時重置且不結轉；個別購買安排可能不同。10月19日前開始且11月2日仍有效的試用，11月2日切換新制。須專業網域，個人及教育網域不合格；填付款資料者期滿自動續訂。",
       "categories": [
         "FREE",
         "VALUE-DEAL",
@@ -38714,7 +38746,7 @@
         "free"
       ],
       "setup_cost_usd": 0,
-      "recurring_cost_usd": 0,
+      "recurring_cost_usd": null,
       "effort_minutes_max": 15,
       "effort_basis": "使用企業信箱線上啟動試用，流程約 10–15 分鐘。",
       "taiwan": "Unknown",
@@ -38729,49 +38761,51 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "試用期內可於 Settings -> Explore plans 取消，未填信用卡則試用結束不會自動扣款。",
+      "cancellation": "試用期內可在 Settings → Explore plans 取消；提供付款資料者期滿自動續訂，未提供者期滿須確認升級。Plus既有方案取消試用會立即回到Plus。",
       "usable_duration": "30 days",
       "access_risk": "若在試用期間綁定信用卡，到期將自動續訂為付費方案；非長期永久免費方案。",
-      "verified_at": "2026-10-25T13:30:00+08:00",
+      "verified_at": "2026-10-30T09:07:20+08:00",
       "discovered_at": "2026-10-25T13:30:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T13:30:00+08:00",
+      "next_review_at": "2026-11-30T09:07:20+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "30天 Business 試用期間每位成員提供 1,500 Standard + 500 Select AI credits/月，支援 Notion Agent 與會議紀錄等 AI 功能。",
-        "account_eligibility": "必須使用企業或組織專屬信箱網域；個人信箱（如 gmail.com）及教育網域（.edu）不具申請資格。",
-        "billing_country": "官方支援免填付款方式啟動試用；若填寫信用卡則到期自動扣款。",
-        "identity_residency": "不限特定國家，但受美方制裁地區（如俄羅斯）受到封鎖且禁止 VPN 繞過；台灣未受限制。",
-        "terms_restrictions": "AI credits 依成員獨立計算不可共用或轉移；試用期內無法單獨加購 AI 額度；資料預設不提供模型訓練，供應商保留 30 天內記錄。",
-        "taiwan_note": "台灣企業與工作信箱依常規應可啟動試用，但台灣在地發票或扣款支援尚未專案核實，標為 Unknown。"
+        "service_availability": "30天Business試用；新制每位成員每月1,500 Standard與500 Select，依方案及購買安排可能不同。AI Meeting Notes自2026-12-01起消耗Standard。",
+        "account_eligibility": "須使用專業網域且團隊尚未使用Business或Enterprise；教育及個人網域不合格，須在網頁或桌面啟動。",
+        "billing_country": "填付款資料啟動者到期自動續訂；未填者須確認升級。台灣付款及稅務未核。",
+        "identity_residency": "本次未核台灣帳戶、付款或居住資格；專業網域不等於個案核准。",
+        "terms_restrictions": "Standard與Select獨立、不可轉移或結轉，帳單週期開始重置。試用不能加購AI額度，用盡須升級；付費workspace管理員可允許使用另計的Notion credits。",
+        "taiwan_note": "Unknown：台灣專業網域及付款個案未核，勿以VPN規避限制。"
       },
       "unknowns": [
         "團隊最低人數要求",
-        "台灣在地統編發票支援細節"
+        "台灣帳戶、付款及在地統編發票支援細節",
+        "適用法律及監管限制"
       ],
+      "verification_scope": "本次僅核試用資格、續訂、額度、重置及轉換；台灣、法律、資料政策及付費價格未重核。",
       "sources": [
         {
           "url": "https://www.notion.com/help/paid-plan-trials",
           "label": "Notion Paid Plan Trials Help",
           "scope": "30天 Business 試用規則與自動續約條件",
-          "evidence": "2026-10-25 實讀：Business 方案提供 30 天試用；支援免填信用卡啟動；有填卡者到期自動續約。",
-          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+          "evidence": "30天試用限專業網域且非Business/Enterprise；提供付款資料者期滿自動續訂，未提供者須確認升級；可取消。",
+          "accessed_time_range": "2026-10-30T09:06:08+08:00/2026-10-30T09:07:20+08:00"
         },
         {
           "url": "https://www.notion.com/help/manage-your-ai-credits",
           "label": "Notion Manage AI Credits",
           "scope": "1,500 Standard + 500 Select 額度定義與規範",
-          "evidence": "2026-10-25 實讀：2026-10-19 起試用提供每位成員每月 1,500 Standard + 500 Select credits，獨立不共用、月底重置。",
-          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+          "evidence": "每成員每月1,500 Standard及500 Select；帳單週期開始重置、不結轉或轉移，個別方案可不同；會議筆記自2026-12-01消耗Standard。",
+          "accessed_time_range": "2026-10-30T09:06:08+08:00/2026-10-30T09:07:20+08:00"
         },
         {
           "url": "https://www.notion.com/help/guides/get-the-most-out-of-your-business-trial-with-notion-ai",
           "label": "Notion AI Business Trial Guide",
-          "scope": "功能範疇與企業網域要求",
-          "evidence": "2026-10-25 實讀：要求工作網域信箱，個人及學生信箱排除；涵蓋 Notion Agent 與 Research Mode。",
-          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+          "scope": "試用額度及過渡規則",
+          "evidence": "10月19日起新試用適用新額度；較早開始且11月2日仍有效者當日轉新制；試用中不能加購額度，用盡後須升級。",
+          "accessed_time_range": "2026-10-30T09:06:08+08:00/2026-10-30T09:07:20+08:00"
         },
         {
           "url": "https://www.notion.com/help/notion-ai-security-practices",
@@ -38789,9 +38823,9 @@
       },
       "status": "active",
       "legal_status": "not_verified",
-      "priority_score": 22.1,
+      "priority_score": 21.6,
       "priority_tier": "A",
-      "priority_note": "官方·活躍·免費·台灣未標記·≤15分鐘·有資格門檻"
+      "priority_note": "官方·活躍·零設定費·台灣未標記·≤15分鐘·有資格門檻"
     },
     {
       "id": "canva-education-k12-teachers-ai",
@@ -47836,20 +47870,15 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-10-30T08:08:40+08:00",
+  "latest_research_at": "2026-10-30T09:08:11+08:00",
   "last_research_run": {
-    "started_at": "2026-10-30T08:05:24+08:00",
-    "completed_at": "2026-10-30T08:08:40+08:00",
-    "reviewed_ids": [
-      "robinhood-luna-token-promotion-december", "x-api-xai-spend-credit-rewards",
-      "naver-greenhouse-faq-index-only", "tripo-api-free-credits-index-mismatch",
-      "airtop-free-monthly-thousand-signup-bonus-conflict", "workbuddy-campus-student-1000-points-2026",
-      "laya-free-oct2026"
-    ],
-    "attempted_only_ids": [],
-    "new_ids": ["google-skills-student-200-credits-taiwan"],
-    "existing_records_before": 584,
-    "unreviewed_existing_count": 577,
+    "started_at": "2026-10-30T09:05:24+08:00",
+    "completed_at": "2026-10-30T09:08:11+08:00",
+    "reviewed_ids": ["cloudflare-workers-ai-free", "notion-business-trial-standard-select-credits", "taiwan-adi-ai-compute-115"],
+    "attempted_only_ids": ["perplexity-watch"],
+    "new_ids": ["google-developer-program-standard-gear"],
+    "existing_records_before": 585,
+    "unreviewed_existing_count": 582,
     "coverage": "partial"
   }
 }
