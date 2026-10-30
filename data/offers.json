@@ -1,8 +1,62 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-30T11:11:23+08:00",
-  "scope": "2026-10-30 11:11 Asia/Taipei：局部複核並更新4筆既有紀錄，586筆既有紀錄未完成本次資料更新；新增2項機會。其他已查來源尚未整合，各筆僅核列明範圍。",
+  "updated_at": "2026-10-30T12:08:25+08:00",
+  "scope": "2026-10-30 12:08 Asia/Taipei：局部複核並更新5筆既有紀錄，587筆既有紀錄未整合本次複核；新增2項機會及1筆觀察線索。另有已查來源尚未整合，各筆僅核列明範圍。",
   "offers": [
+    {
+      "id":"zenrows-free-monthly-five-k-shared-credits",
+      "title":"ZenRows Free：每月5,000共享網頁擷取點數",
+      "summary":"免費方案每月5,000 credits、5併發且免卡；Fetch、Extract、Crawl、Batch及Browser共用點數。標準請求1點，JavaScript 5點、premium proxy 10點、兩者25點；非5,000次AI推論。用盡後等待下月或自願升級，不結轉。",
+      "record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified",
+      "categories":["FREE"],"views":["free","developer"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"每月共用網頁擷取credits","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T12:08:25+08:00","discovered_at":"2026-10-30T12:08:25+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T12:08:25+08:00",
+      "priority_score":16.3,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知",
+      "cancellation":"免費層用盡須等下月或自願升級，Free不能購買top-up；付款方案取消條件本次未核。",
+      "usable_duration":"每月5,000點，不結轉；未公告固定結束日。",
+      "access_risk":"404及410仍扣點，Free單次回應上限5MB；須確認目標網站授權，不能以免費額度規避使用限制。",
+      "eligibility":{"service_availability":"官方定價及條款列持續每月更新的Free方案；未註冊。","account_eligibility":"須年滿18歲及驗證email；既有或曾有帳戶未必有另開免費帳戶資格。","billing_country":"Free免付款資料；台灣帳戶與付費帳單未核。","identity_residency":"台灣帳戶資格未明示。","terms_restrictions":"禁止假帳戶、繞免費限制及違法抓取或侵害第三方權利。","taiwan_note":"Unknown；未實測台灣帳戶，不代表目標網站授權。"},
+      "unknowns":["台灣帳戶資格及實際註冊核准","重置時區、付費取消條件","台灣法律及目標網站授權"],
+      "verification_scope":"核官方定價、計費文件與服務條款；未註冊，台灣個案及法律未核。",
+      "sources":[{"url":"https://www.zenrows.com/pricing.md","scope":"免費層額度與免卡","evidence":"Free每月5000 credits、5併發、免卡、不結轉；用盡等下月或升級，Free不支援top-up。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"},{"url":"https://docs.zenrows.com/first-steps/pricing.md","scope":"共享額度與扣點","evidence":"Fetch、Extract、Crawl、Batch及Browser共用；標準1點、JS 5點、premium proxy 10點、兩者25點；404/410仍扣點。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"},{"url":"https://www.zenrows.com/legal/terms.md","scope":"免費資格及使用限制","evidence":"§4.1免費方案每月更新且免付款資料；須成年及驗證email，禁止假帳戶及規避限制。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"}]
+    },
+    {
+      "id":"orq-gateway-free-monthly-million-byok-meters",
+      "title":"Orq.ai Gateway：BYOK每月百萬次免閘道費，模型另計",
+      "summary":"自帶供應商金鑰（BYOK）每月前100萬次免閘道費，模型費仍由使用者負擔；超額另收4%。另含每月100K spans及1GB處理資料，超額各自計費。未加帳單資料時限制每日50 requests；加帳單後超額可繼續並計費。",
+      "record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified",
+      "categories":["FREE"],"views":["developer"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"BYOK閘道每月請求及觀測用量","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T12:08:25+08:00","discovered_at":"2026-10-30T12:08:25+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T12:08:25+08:00",
+      "priority_score":15.3,"priority_tier":"C","priority_note":"官方·條件式·費用未知·台灣未標記·時間未知",
+      "cancellation":"付費條款授權付款方式持續扣款至取消；取消當期結束生效，部分期間不退款。可設定hard caps。",
+      "usable_duration":"按月計量；未公布固定優惠結束日。",
+      "access_risk":"BYOK模型費另付；觀測超額每100K spans €7、每GB €3，AI Studio另每席每月€35；加帳單後超額可能計費。",
+      "eligibility":{"service_availability":"定價頁列BYOK免費閘道額度；未登入驗證。","account_eligibility":"條款要求年滿18歲；研究、學生、新創與非營利折扣需另申請，未公布折扣金額。","billing_country":"未加帳單限制每日50 requests；台灣帳單及付款未核。","identity_residency":"台灣帳戶資格未明示。","terms_restrictions":"BYOK須自負供應商費用；禁止繞額，授權限內部業務用途，代第三方託管或轉售須同意。","taiwan_note":"Unknown；EU託管或GDPR宣稱不等於台灣資格或法律合規。"},
+      "unknowns":["台灣帳戶及帳單資格","BYOK超額4%計算基礎及實際免費帳戶功能","適用台灣法律與監管"],
+      "verification_scope":"核官方定價與一般服務條款；未登入或申請，台灣個案及法律未核。",
+      "sources":[{"url":"https://orq.ai/pricing","scope":"BYOK、觀測計量與無帳單限制","evidence":"BYOK首100萬次每月免閘道費、其後4%；另100K spans與1GB免費並有超額費，無帳單限每日50 requests；模型費另計。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"},{"url":"https://orq.ai/legal/terms-of-service","scope":"年齡、支付、取消及用途限制","evidence":"2026-08-23版條款要求18歲，付款授權持續至取消；取消於當期末生效，授權限內部業務用途。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"}]
+    },
+    {
+      "id":"giskard-startup-free-agentic-red-team-closed-beta-watch",
+      "title":"Giskard：新創AI代理免費紅隊封測線索",
+      "summary":"官方頁宣稱新創及小團隊可申請有限名額，在自有代理上免費測試；是否仍收件、免費範圍及台灣資格未確認。修正並通過重測後才可能獲attestation，非報名即獲認證。",
+      "record_type":"watchlist","status":"campaign_current_availability_unverified","verification":"Official","legal_status":"not_verified",
+      "categories":["BETA-ACCESS"],"views":["developer"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"AI代理紅隊封測","quota_classification":"UNKNOWN","limited_confirmed":true,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T12:08:25+08:00","discovered_at":"2026-10-30T12:08:25+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T12:08:25+08:00","priority_score":null,"priority_tier":null,"priority_note":"非機會紀錄（政策/待覆核），未評級",
+      "cancellation":"封測專用取消與後續費用未核。","usable_duration":"封測期限及免費測試數量未核。","access_risk":"有限名額與免費文字不證仍收件；企業合約範本不能直接推定適用免費封測。",
+      "eligibility":{"service_availability":"官方頁列新創與小團隊有限免費封測名額，未提交。","account_eligibility":"需自有代理；審核和實際受理未核。","billing_country":"付款與台灣帳單未核。","identity_residency":"台灣資格未明示。","terms_restrictions":"封測專用合約未取得；通過修正與重測才可能取得attestation。","taiwan_note":"Unknown；未核台灣企業資格。"},
+      "unknowns":["是否仍收件、名額、免費測試數量及期限","封測專用合約、付款及後續收費","台灣資格及法律"],
+      "verification_scope":"僅核官方定價、封測頁及企業合約範本；未申請或核封測專用條款。",
+      "sources":[{"url":"https://www.giskard.ai/saas-ai-agents-red-teaming","scope":"有限免費封測與測試交付","evidence":"頁面稱新創與小團隊可在自有代理免費測試，名額有限；修正後通過重測才發attestation。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"},{"url":"https://www.giskard.ai/pricing","scope":"免費封測宣稱","evidence":"官方定價頁亦列有限免費封測名額，不能證明實際仍收件。","accessed_time_range":"2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00"}]
+    },
     {
       "id":"openlayer-basic-trial-twentyk-inference-logs",
       "title":"Openlayer Basic：免費AI評估試用，每月20,000筆日誌",
@@ -19455,7 +19509,7 @@
       "verification": "Official",
       "usage_type": null,
       "quota_classification": "UNKNOWN",
-      "limited_confirmed": false,
+      "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
@@ -19463,13 +19517,14 @@
       "cancellation": null,
       "usable_duration": "30天",
       "access_risk": "名額先到先得且剩餘名額未知；企業環境、部署與資料接入範圍須事先確認。30日免費PoC不代表後續正式導入免費；未核PoC專屬資料處理與期末條件。",
-      "verified_at": "2026-10-27T07:35:07+08:00",
+      "verified_at": "2026-10-30T12:06:41+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": "2026-10-19",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-28T07:35:07+08:00",
+      "next_review_at": "2026-10-31T12:06:41+08:00",
       "priority": "watch",
+      "verification_scope": "本次重核公告、產品頁及申請表原始HTML；入口存在不證剩餘名額，未提交或核PoC專屬條款及法律。",
       "status": "conditional",
       "eligibility": {
         "service_availability": "富士Soft官方頁仍提供30日免費PoC申請入口；活動公告日期為2026-10-19，先到10家公司，未公布活動截止日或目前餘額。",
@@ -19509,6 +19564,18 @@
           "scope": "表單仍可見的申請入口及必填欄位",
           "evidence": "2026-10-27 07:07–07:19 Asia/Taipei實讀：免費PoC選項、姓名、企業/學校、電話、email與隱私同意；個資告知含行銷與IP/cookie關聯。未提交，不證剩餘名額或PoC遙測條款。",
           "accessed_at": "2026-10-27T07:19:20+08:00"
+        },
+        {
+          "url": "https://www.fsi.co.jp/company/news/20261019.html",
+          "scope": "本次複核限額與活動",
+          "evidence": "官方公告仍列先到10企業、30天免費PoC及風險報告；沒有公布剩餘名額。",
+          "accessed_time_range": "2026-10-30T12:05:50+08:00–2026-10-30T12:06:41+08:00"
+        },
+        {
+          "url": "https://sem-inq.fsi.co.jp/public/application/add/7999",
+          "scope": "本次複核申請欄位",
+          "evidence": "原始HTML仍有免費PoC選項及姓名、組織、電話、email與隱私同意欄位；未提交。",
+          "accessed_time_range": "2026-10-30T12:05:50+08:00–2026-10-30T12:06:41+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -24629,20 +24696,21 @@
       "valuation_scenario": null,
       "cancellation": "免費起始點數不等於付費訂閱；付費方案自動續訂，可停止下一期扣款，本期至期末；已付期間部分退款由客服審核，非保證。",
       "usable_duration": "一次50；效期未知",
-      "access_risk": "免費商用及浮水印官方頁面互相矛盾；10/28日期已到但條款仍標v1.2及「預告」v1.3，生效狀態未確認；生成前核對實際扣點及權利；台灣帳戶未驗。",
-      "verified_at": "2026-10-28T20:06:07+08:00",
+      "access_risk": "免費商用／浮水印及影片資格官方頁面衝突。條款頁首仍標v1.2及10/28修訂預告，但§7.6稱10/28起採新扣點規則；實際執行未驗。生成前核對點數及免費作品權利。",
+      "verified_at": "2026-10-30T12:06:41+08:00",
       "discovered_at": "2026-10-24T12:07:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-29T20:06:07+08:00",
+      "next_review_at": "2026-10-31T12:06:41+08:00",
       "priority": "watch",
+      "verification_scope": "本次僅複核首頁、價格頁及條款的免費點數、權利與扣點日期；未註冊或核實台灣資格及實際扣點。",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
         "account_eligibility": "需本人email註冊、年滿14歲；Free限1人、1 project、3 products；臨時信箱或多帳戶刷免費點數可拒，台灣資格未核。",
         "billing_country": "未核",
         "identity_residency": "未核",
-        "terms_restrictions": "條款第8條免費／預覽作品須保留浮水印、僅非商用，與首頁FAQ牴觸；禁假身分、他人付款方式與多帳戶刷免費點。10/28日已到，但條款頁仍標v1.2並寫v1.3預告，不可斷言新扣點政策已實施。",
+        "terms_restrictions": "條款第8條免費／預覽作品須保留浮水印、僅非商用，與首頁FAQ牴觸；禁假身分、他人付款方式與多帳戶刷免費點。頁首仍標v1.2及v1.3預告，但§7.6稱新扣點自10/28施行；實際執行未驗。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
@@ -24677,6 +24745,12 @@
           "scope": "Free一次50點、免費輸出權利、訂閱取消、10/28新扣點規則；未驗台灣帳戶或法律適用",
           "evidence": "2026-10-28 20:06 Asia/Taipei重讀首頁、價格及條款：一次50點、Free限1 project/3 products；首頁稱可商用無浮水印，§8仍限免費非商用留浮水印。價格頁5秒影片付費與§7.7 Free每日一次矛盾；條款頁仍標v1.2及10/28 v1.3預告，實際生效未證；台灣帳戶未測。",
           "accessed_time_range": "2026-10-28T20:06:00+08:00–2026-10-28T20:07:00+08:00"
+        },
+        {
+          "url": "https://ai.realads.kr/terms",
+          "scope": "本次複核免費權利與扣點時間",
+          "evidence": "§8.3免費輸出非商用及須保留浮水印，與首頁FAQ矛盾；頁首仍標v1.2及修訂預告，§7.6稱新扣點自10/28施行，實際執行未驗。",
+          "accessed_time_range": "2026-10-30T12:05:50+08:00–2026-10-30T12:06:41+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -39128,13 +39202,14 @@
       "cancellation": "免費模型超額時有餘額可能轉付費；需設定X-Free-Fallback: false或關閉付費fallback避免超額收費。",
       "usable_duration": "免費模型清單輪替；未公布固定結束日",
       "access_risk": "免費模型名單及逐模型限額可變；有餘額的超額模型請求可能付費。搜尋與模型額度分開，搜尋超額按次收費；預付另有交易費與台幣通路稅費。",
-      "verified_at": "2026-10-29T06:06:47+08:00",
+      "verified_at": "2026-10-30T12:05:58+08:00",
       "discovered_at": "2026-10-25T13:45:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-30T06:06:47+08:00",
+      "next_review_at": "2026-10-31T12:05:58+08:00",
       "priority": "watch",
+      "verification_scope": "本次僅複核官方文件的免費模型基準、超額付費和官方FAQ免卡說明；搜尋額度、完整條款、個人資格及法律沿用或未核。",
       "eligibility": {
         "service_availability": "官方列Qwen3.7 Flash、Glyph Cluster、Nemotron 3.5 Lightning Free、Reflection Beam/Beam Free、DeepSeek V4 Flash 0731 Free等輪替模型；auto:free只路由到免費模型。各模型可能有不同限制。",
         "account_eligibility": "需註冊帳戶及API key；須年滿18歲，或13–17歲並取得法定代理人同意。",
@@ -39210,6 +39285,18 @@
           "scope": "本次局部複核年齡、轉售限制及帳單條款",
           "evidence": "§1及§15：18歲以上或13–17歲須法定代理人同意；§4限制轉售及受上游政策約束；§5稱NTD計費，與文件口徑未釐清。",
           "accessed_at": "2026-10-29T06:06:47+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "本次複核免費模型基準與付費fallback",
+          "evidence": "基準10 RPM及每日60單位、餘額帳戶×2，長上下文消耗更多，逐模型可不同；有餘額超額可能轉付費，X-Free-Fallback: false可停用。",
+          "accessed_at": "2026-10-30T12:05:58+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/en/faq",
+          "scope": "免卡註冊、免費額度動態性及超額處理",
+          "evidence": "官方稱無須先加信用卡可建立API key；免費模型與額度動態調整，有餘額超額可能按正常費率計費。",
+          "accessed_at": "2026-10-30T12:05:58+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -39764,7 +39851,7 @@
     {
       "id": "google-cloud-teaching-learning-credits",
       "title": "Google Cloud Teaching & Learning Credits：教師申請課程額度",
-      "summary": "教師可為合格課程申請Google Cloud credits：faculty US$100，學生及其他教學人員最高US$50；免信用卡。台灣列於官方合格國家。學校須授予學位且非營利，faculty須在教合格課程、學生須在修讀該課程；只有教師可申請，學生由教師提供的學校email驗證。Credits可用於多數GCP產品，但不得用於課程基礎設施、個人或商業用途。券須在課程開始後16週內兌換，使用至課程開始日起12個月；用罄後VM停止，儲存與磁碟保留30日後移除。",
+      "summary": "教師可為合格課程申請Google Cloud credits：faculty US$100，學生及其他教學人員最高US$50；免信用卡。台灣列於官方合格國家。學校須授予學位且非營利，教師及學生須符合課程條件。券須在課程開始後16週內兌換；官方文件對一年效期起算日有衝突，請核對個別券。用罄後VM停止，儲存與磁碟保留30日後移除。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -39790,15 +39877,16 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "無需信用卡；credits用罄後VM停止，儲存及磁碟保留30日後移除；未見訂閱自動續費",
-      "usable_duration": "須於課程開始後16週內兌換；兌換後可用至課程開始日起12個月，以優惠券載明到期日為準",
+      "usable_duration": "須於課程開始後16週內兌換；方案FAQ稱有效至課程開始日起12個月，Cloud Billing文件稱兌換日起一年，兩者衝突，以個別優惠券及帳單顯示為準。",
       "access_risk": "僅限合格課程與教育用途，額度由Google裁量；GPU預設未啟用且需另申請、視供應而定。",
-      "verified_at": "2026-10-25T14:51:24+08:00",
+      "verified_at": "2026-10-30T12:06:48+08:00",
       "discovered_at": "2026-10-25T14:45:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T14:51:24+08:00",
+      "next_review_at": "2026-11-30T12:06:48+08:00",
       "priority": "watch",
+      "verification_scope": "本次複核申請資格、面額、兌換及教育額度期限的官方文件；未申請或核個人資格、實際SKU及法律。",
       "eligibility": {
         "service_availability": "Google Cloud課程教學/學習額度，可用於多數GCP產品；GPU預設未開啟且需申請、配額依供應；非保證的AI/GPU專用福利。",
         "account_eligibility": "僅faculty可申請；學校須授予學位且非營利，faculty須在教合格課程；學生須修讀合格課程並用學校email驗證。Faculty US$100、學生及其他教學人員最高US$50。",
@@ -39810,6 +39898,7 @@
       "unknowns": [
         "特定台灣學校/課程審核與個人實際核發額度",
         "特定AI服務SKU及GPU能否啟用/取得足夠quota",
+        "官方方案FAQ與Cloud Billing文件對一年效期起算日不一致，須核個別券及帳單",
         "個別兌換券列示的到期日及實際點數發放方式",
         "適用台灣法律或監管結論未查核"
       ],
@@ -39848,6 +39937,18 @@
           "scope": "教育用途、不可轉讓與法律/出口限制",
           "evidence": "2026-10-25 14:51 Asia/Taipei直接開啟：教學credits不可轉讓/販售、不得商用或個人用途；須符合適用法律、出口管制與制裁要求，違法地區優惠無效。",
           "accessed_time_range": "2026-10-25T14:51:24+08:00–2026-10-25T14:51:24+08:00"
+        },
+        {
+          "url": "https://docs.cloud.google.com/billing/docs/how-to/edu-grants",
+          "scope": "教育額度效期與學生帳戶",
+          "evidence": "文件標示2026-10-26 UTC更新，faculty及student額度稱兌換後一年有效；與方案FAQ的課程開始日起12個月不同。學生須驗證學校email，各課程獨立Cloud Billing account。",
+          "accessed_time_range": "2026-10-30T12:05:51+08:00–2026-10-30T12:06:48+08:00"
+        },
+        {
+          "url": "https://support.google.com/google-cloud-higher-ed/answer/10324788?hl=en",
+          "scope": "本次複核方案FAQ效期",
+          "evidence": "方案FAQ稱券可於課程開始後16週內兌換，兌換後使用至課程開始日起12個月；與Cloud Billing文件起算日不一致。",
+          "accessed_time_range": "2026-10-30T12:05:51+08:00–2026-10-30T12:06:48+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -42204,14 +42305,15 @@
       "valuation_scenario": null,
       "cancellation": "免費池無訂閱或trial clock；需避免超額及其他付費端點。綁卡不等於無扣款風險；公開頁未完整說明第6次生成的確認畫面。",
       "usable_duration": "每滾動24小時補發，不累積；本免費池未公布結束日。",
-      "access_risk": "帳戶及卡片驗證、政策變動與超額費用；生成檔案預設URL公開，應另行保存所需輸出。",
-      "verified_at": "2026-10-28T16:07:28+08:00",
+      "access_risk": "帳戶須驗證卡片；官方明示超免費額度生成涉及卡片收費，第六次是否確認或硬停未驗。生成檔案預設URL公開，應另行保存所需輸出。",
+      "verified_at": "2026-10-30T12:06:41+08:00",
       "discovered_at": "2026-10-25T21:22:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-29T16:07:28+08:00",
+      "next_review_at": "2026-10-31T12:06:41+08:00",
       "priority": "watch",
+      "verification_scope": "本次複核免費專頁、模型端點及服務條款；未登入、測試超額、確認台灣個案或法律。",
       "eligibility": {
         "service_availability": "官方免費landing與模型頁Try free連結均指向fal Sandbox；免費額度僅FLUX 3 Max text-to-video。",
         "account_eligibility": "需登入並完成帳戶啟用、有效卡片；18歲或當地成年年齡以上。未找到保證一般新戶自動取得固定美元API試用金的官方證據。",
@@ -42234,6 +42336,12 @@
         "端點折扣11/7與landing 12/31期限不一致，免費池終止日未公告"
       ],
       "sources": [
+        {
+          "url": "https://fal.ai/flux-video-free",
+          "scope": "本次複核免費池及超額費用",
+          "evidence": "Sandbox每滾動24小時5部，不累積；須綁卡，FAQ稱超免費額度生成涉及卡片收費。第六次確認或硬停未實測。",
+          "accessed_time_range": "2026-10-30T12:05:50+08:00–2026-10-30T12:06:41+08:00"
+        },
         {
           "url": "https://fal.ai/flux-video-free",
           "label": "fal官方免費影片專頁",
@@ -48027,15 +48135,15 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-10-30T11:11:23+08:00",
+  "latest_research_at": "2026-10-30T12:08:25+08:00",
   "last_research_run": {
-    "started_at": "2026-10-30T11:05:25+08:00",
-    "completed_at": "2026-10-30T11:11:23+08:00",
-    "reviewed_ids": ["qoder-community-1024", "bubble-agent2-free-monthly-mcp", "sarvam-creator-monthly-posting", "ovh-startup-region-product-scope"],
-    "attempted_only_ids": ["perplexity-watch", "astamuse-agent-trial-oct31-index-only"],
-    "new_ids": ["openlayer-basic-trial-twentyk-inference-logs", "koyeb-startup-up-to-thirtyk-compute"],
-    "existing_records_before": 590,
-    "unreviewed_existing_count": 586,
+    "started_at": "2026-10-30T12:05:00+08:00",
+    "completed_at": "2026-10-30T12:08:25+08:00",
+    "reviewed_ids": ["bazaarlink-taiwan-free-model-gateway", "google-cloud-teaching-learning-credits", "fujisoft-workforce-ai-security-poc", "realads-once-fifty-no-watermark", "fal-flux3-max-five-daily-sandbox"],
+    "attempted_only_ids": [],
+    "new_ids": ["zenrows-free-monthly-five-k-shared-credits", "orq-gateway-free-monthly-million-byok-meters", "giskard-startup-free-agentic-red-team-closed-beta-watch"],
+    "existing_records_before": 592,
+    "unreviewed_existing_count": 587,
     "coverage": "partial"
   }
 }
