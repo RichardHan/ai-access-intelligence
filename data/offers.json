@@ -1,8 +1,38 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-30T07:08:23+08:00",
-  "scope": "2026-10-30 07:08 Asia/Taipei：本次局部複核12筆既有案例，570筆既有紀錄未完成本次複核；新增2項機會。僅核實各來源及verification_scope明列主張；限時每日，其餘按月輪替。",
+  "updated_at": "2026-10-30T08:08:40+08:00",
+  "scope": "2026-10-30 08:08 Asia/Taipei：本次局部複核7筆既有案例，577筆既有紀錄未完成本次複核；新增1項機會。僅核實各來源及verification_scope明列主張；限時每日，其餘按月輪替。",
   "offers": [
+    {
+      "id": "google-skills-student-200-credits-taiwan",
+      "title": "Google Skills：合格大專學生200點實作課程額度",
+      "summary": "合格在學大專學生可申請200 Google Skills credits，供課程目錄中的實作labs使用，發放後一年到期；台灣列入合格地區，但須就讀合格非營利認可院校並通過學生驗證。這是教學實作額度，不是Google Cloud API通用抵用金。",
+      "record_type": "opportunity", "status": "conditional", "verification": "Official", "legal_status": "not_verified",
+      "categories": ["FREE", "QUALIFICATION"], "views": ["free", "developer", "education"],
+      "setup_cost_usd": 0, "recurring_cost_usd": 0, "effort_minutes_max": null,
+      "taiwan": "Yes", "regions": ["Taiwan"], "usage_type": "Training lab credits", "quota_classification": "HIGH BUT LIMITED", "limited_confirmed": true,
+      "usable_benefit_usd": null, "benefit_cost_ratio": null, "savings_usd": null, "valuation_scenario": null,
+      "verified_at": "2026-10-30T08:08:24+08:00", "discovered_at": "2026-10-30T08:08:24+08:00", "announcement_at": null,
+      "review_cadence": "monthly", "next_review_at": "2026-11-30T08:08:24+08:00",
+      "priority_score": 20.8, "priority_tier": "S", "priority_note": "官方·條件式·免費·台灣Yes·時間未知·有資格門檻",
+      "cancellation": "免費教學額度一年後到期；付款方式、超額與取消條件未核。", "usable_duration": "發放後一年；非每月重置。",
+      "access_risk": "需經學生驗證；課程實驗室扣點與可否重複申領未核，勿視為API或雲端帳單額度。",
+      "eligibility": {
+        "service_availability": "Google學生頁提供申請入口與200免費Google Skills credits；可用於目錄中的實作labs。",
+        "account_eligibility": "限目前就讀、已驗證且就讀地區認可院校的大專學生；不支援營利機構。",
+        "billing_country": "學生額度標示免費；是否要求付款方式及超額計費未核。",
+        "identity_residency": "官方合格國家清單列Taiwan；個別院校與學生仍須通過資格驗證。",
+        "terms_restrictions": "額度限Google Skills labs，一年後到期；重複申請與各實驗室規則未核。",
+        "taiwan_note": "Yes為官方合格國家清單包含台灣，非所有台灣帳戶保證核准。"
+      },
+      "unknowns": ["個別院校驗證、核發時間及是否能重複申領", "各lab扣點、付款要求及超額行為", "台灣法律及監管限制"],
+      "verification_scope": "僅核官方學生申請頁、國家與學校資格及額度效期；未申請、未核付款或法律。",
+      "sources": [
+        {"url":"https://services.google.com/fb/forms/googlecloudskillsbooststudenttrainingcreditsapplication/","scope":"申請對象、額度、用途及效期","evidence":"在學認可院校大專學生可申請200 Google Skills credits，用於目錄中的labs；核發一年後到期。","accessed_at":"2026-10-30T08:08:24+08:00"},
+        {"url":"https://support.google.com/google-cloud-higher-ed/answer/10322652?hl=en","scope":"合格地區與學校","evidence":"合格清單包含Taiwan；須為地區認可院校的已驗證大專學生，不支援營利機構。","accessed_at":"2026-10-30T08:08:24+08:00"},
+        {"url":"https://cloud.google.com/edu/students","scope":"免費學生學習資源及AI實驗室","evidence":"學生頁列200免費credits、一年效期，並介紹免費AI與雲端實作學習資源。","accessed_at":"2026-10-30T08:08:24+08:00"}
+      ]
+    },
     {
       "id": "cline-rotating-free-model-promotions",
       "title": "Cline：IDE／CLI輪替免費模型，非免費API",
@@ -949,14 +979,20 @@
       "scope": "新註冊與升級關閉、停服公告",
       "evidence": "官方公告2026-11-13停服，不再接受新註冊或升級；既有帳戶仍可登入、管理訂閱、降級或取消。鐘點、時區與退款未列。",
       "accessed_time_range": "2026-10-30T07:06:16+08:00–2026-10-30T07:06:46+08:00"
+    },
+    {
+      "url": "https://portal.airtop.ai/shutdown",
+      "scope": "本次僅重查停服及新用戶狀態",
+      "evidence": "公告仍列11月13日停服，新註冊及升級關閉；既有帳戶可登入、降級或取消。停服時區、退款及資料匯出未核。",
+      "accessed_time_range": "2026-10-30T08:05:24+08:00–2026-10-30T08:07:01+08:00"
     }
   ],
   "review_cadence": "daily",
-  "verified_at": "2026-10-30T07:06:46+08:00",
+  "verified_at": "2026-10-30T08:07:01+08:00",
   "discovered_at": "2026-10-29T19:05:58+08:00",
   "announcement_at": null,
   "previous_limit": null,
-  "next_review_at": "2026-10-31T07:06:46+08:00",
+  "next_review_at": "2026-10-31T08:07:01+08:00",
   "verification_scope": "本次僅核停服公告、新註冊及升級關閉與公開價格差異；台灣既有用戶、退款及其他條款未全面重核。",
   "priority_score": null,
   "priority_tier": null,
@@ -1817,12 +1853,12 @@
       "cancellation": null,
       "usable_duration": "活動至2026-10-31 23:59（時區未明），點數領取後三個月",
       "access_risk": "快認失敗可補錄取通知書，人工審核通常3個工作日；跨截止日是否受理及剩餘名額未核。未操作註冊或領取，法律結論未核。",
-      "verified_at": "2026-10-30T07:06:46+08:00",
+      "verified_at": "2026-10-30T08:07:01+08:00",
       "discovered_at": "2026-10-29T06:09:43+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-31T07:06:46+08:00",
+      "next_review_at": "2026-10-31T08:07:01+08:00",
       "eligibility": {
         "service_availability": "微信小程序內完成手機授權、登入與學生驗證，PC無法直接領取；未測名額。",
         "account_eligibility": "大陸高校在讀、持中國大陸居民二代身分證；同一學生、手機、微信及WorkBuddy帳號僅一次。",
@@ -1838,6 +1874,7 @@
       ],
       "verification_scope": "僅複核期限、學生身分、地區及審核流程；剩餘名額、時區、個案和法律未核。",
       "sources": [
+        {"url":"https://www.workbuddy.cn/events/campus-freshman/","scope":"本次複核活動期限、資格及點數效期","evidence":"仍列10/31 23:59截止、首批200萬份、一次1000點三個月有效；港澳台及外籍不支援驗證。剩餘名額與截止時區未核。","accessed_time_range":"2026-10-30T08:05:24+08:00–2026-10-30T08:07:01+08:00"},
         {"url":"https://www.workbuddy.cn/events/campus-freshman/","scope":"本次截止、身分及審核","evidence":"10/31截止、首批200萬份；港澳台及外籍不支援驗證。提交補件不保留名額，仍需活動有效時完成認證；剩餘名額與時區未核。","accessed_time_range":"2026-10-30T07:05:00+08:00–2026-10-30T07:05:59+08:00"},
         {"url":"https://www.workbuddy.cn/events/campus-freshman/","scope":"截止、資格及人工審核","evidence":"10/31 23:59截止、首批200萬份；港澳台及外籍用戶不支援驗證。完整材料審核約3個工作日，領取仍須活動期內驗證成功，提交不保留資格。","accessed_time_range":"2026-10-30T02:05:48+08:00–2026-10-30T02:07:23+08:00"},
         {"url":"https://www.workbuddy.cn/events/campus-freshman/","scope":"本輪僅核活動期限、身份地區限制、額度與人工補件；非名額或個案核准","evidence":"正文仍列2026/10/31 23:59截止、首批200萬份先到先得；大陸高校在讀且持二代身分證，港澳台及外籍不支援驗證。微信小程序領一次1,000點、三個月有效；補件完整提交後3個工作日回覆，不保證跨截止受理。截止時區、剩餘名額及台灣法律未核。","accessed_time_range":"2026-10-29T18:06:38+08:00/2026-10-29T18:07:44+08:00"},
@@ -6963,12 +7000,12 @@
       "cancellation": null,
       "usable_duration": "至2026-10-31，時區未知",
       "access_risk": "Vercel Hobby限個人或非商業用途，Boundless限企業內部用途；兩層條款相容未核。Gateway預付額度耗盡後可能仍須支付額外用量，選用自動補值亦會扣款；不可套用Boundless直連預付停用規則。標準ID期後收費。",
-      "verified_at": "2026-10-30T07:06:46+08:00",
+      "verified_at": "2026-10-30T08:07:01+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2026-10-01",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-31T07:06:46+08:00",
+      "next_review_at": "2026-10-31T08:07:01+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "限Vercel AI Gateway經Boundless供應的指定Laya模型ID，至2026-10-31；非通用聊天模型。",
@@ -6986,6 +7023,7 @@
       ],
       "verification_scope": "本輪核查免費期、供應商用途及Gateway額度條款；兩者相容性、台灣及法律未核。",
       "sources": [
+        {"url":"https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31","scope":"本次僅複核免費期限與期後路由","evidence":"經Boundless指定Laya模型免費至10/31；之後laya-free停用、標準laya計費。截止時區及台灣資格未核。","accessed_time_range":"2026-10-30T08:05:24+08:00–2026-10-30T08:07:01+08:00"},
         {"url":"https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31","scope":"免費期及期後模型ID","evidence":"Boundless路由免費至10/31；laya-free期後停用，標準laya開始收費，截止時區與台灣資格未核。","accessed_time_range":"2026-10-30T07:05:00+08:00–2026-10-30T07:05:59+08:00"},
         {"url":"https://vercel.com/legal/ai-product-terms","scope":"供應商條款及額度耗盡風險","evidence":"§8.1要求遵守適用供應商條款；§10.2預付credits耗盡後可能仍需支付額外用量，§10.3可設定自動購點。","accessed_time_range":"2026-10-30T07:06:16+08:00–2026-10-30T07:06:46+08:00"},
         {"url":"https://inference.boundless.network/terms","scope":"供應商資料留存限制","evidence":"§3.2雖稱不保留Inputs/Outputs，Request Records可含API key、team及user識別資料並保留最多90日；是否適用Gateway尚未釐清。","accessed_time_range":"2026-10-30T02:05:48+08:00–2026-10-30T02:07:23+08:00"},
@@ -22692,12 +22730,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T16:35:00+08:00",
+      "verified_at": "2026-10-30T08:07:01+08:00",
       "discovered_at": "2026-10-24T09:06:16+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T16:35:00+08:00",
+      "next_review_at": "2026-11-30T08:07:01+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -22724,6 +22762,12 @@
           "label": "官方FAQ",
           "scope": "Greenhouse FAQ索引",
           "evidence": "取得標題與關聯索引，細則正文未取得。"
+        },
+        {
+          "url": "https://micro.ncloud.com/promotion/",
+          "scope": "活動總覽所列常設方案與額度上限，非個案資格或核准",
+          "evidence": "官方總覽仍列合作Acc/VC旗下新創最高1億韓元credits，並標示常設；FAQ答案與個案申請條件仍未取得。",
+          "accessed_time_range": "2026-10-30T08:05:24+08:00–2026-10-30T08:07:01+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -22735,6 +22779,7 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "verification_scope": "本次僅複核活動總覽及FAQ索引，FAQ正文、台灣資格、費用及法律未核；保留觀察名單。",
       "legal_status": "not_verified"
     },
     {
@@ -25096,12 +25141,12 @@
       "cancellation": "未核自動續費；未登入或啟用。",
       "usable_duration": "未公布",
       "access_risk": "資格、額度或政策可能改變；試用耗盡及效期後可能失去存取。",
-      "verified_at": "2026-10-25T16:35:00+08:00",
+      "verified_at": "2026-10-30T08:07:01+08:00",
       "discovered_at": "2026-10-24T13:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T16:35:00+08:00",
+      "next_review_at": "2026-11-30T08:07:01+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -25128,6 +25173,12 @@
           "label": "v3 Billing文件",
           "scope": "扣點與凍結退還機制",
           "evidence": "任務先凍結點數，成功正式扣除，失敗返還；正文無免費贈額項目。"
+        },
+        {
+          "url": "https://docs.tripo3d.ai/get-started/pricing.html",
+          "scope": "API預付計價；未證明免費贈額不存在",
+          "evidence": "官方正文列預付制及US$1兌100 credits，未列新戶免費贈額；不代表帳戶不可能有其他促銷。",
+          "accessed_time_range": "2026-10-30T08:05:24+08:00–2026-10-30T08:07:01+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -25139,6 +25190,7 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
+      "verification_scope": "本次僅核API定價及計費文件；免費贈額、台灣與法律未核，保留觀察名單。",
       "legal_status": "not_verified"
     },
     {
@@ -28886,7 +28938,7 @@
     {
       "id": "robinhood-luna-token-promotion-december",
       "title": "Robinhood Luna：指定聊天與自動化代付token至年底",
-      "summary": "GPT-6 Luna聊天及自動化token促銷至2026/12/31 23:59 ET或提前終止，功能分批開放。須美國居民、18+、SSN、合法美國地址及美籍／綠卡／有效美簽、主投資帳戶與Agentic帳戶；不含其他模型或交易費。促銷頁稱期滿自動化計費，正式協議另稱Loops不收token，範圍衝突；不建議為AI福利開金融帳戶。",
+      "summary": "GPT-6 Luna聊天及自動化token促銷至2026/12/31 23:59 ET或提前終止，功能分批開放。須美國居民、18+、SSN、合法美國地址及美籍／綠卡／有效美簽、主投資帳戶與Agentic帳戶；不含其他模型或交易費。促銷條款稱期滿自動化計費，協議另稱Loops不收token；促銷事項衝突時促銷條款優先，兩者適用範圍仍待釐清。不建議為AI福利開金融帳戶。",
       "categories": [
         "QUALIFICATION",
         "FREE",
@@ -28914,12 +28966,12 @@
       "cancellation": null,
       "usable_duration": "至2026-12-31 23:59 ET，或提前終止",
       "access_risk": "台灣合法帳戶資格未核；不得為AI福利建議開金融帳戶，非投資推薦",
-      "verified_at": "2026-10-28T00:07:22+08:00",
+      "verified_at": "2026-10-30T08:05:52+08:00",
       "discovered_at": "2026-10-24T18:10:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-29T00:07:22+08:00",
+      "next_review_at": "2026-10-31T08:05:52+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Robinhood Agents分批開放；完整內建agent設定與聊天目前限手機App。",
@@ -28973,6 +29025,12 @@
           "scope": "本輪期限與期後automations文字局部重查",
           "evidence": "2026-10-28 00:06–00:07 Asia/Taipei實讀：12/31 23:59 ET或提前終止；§8稱期後active automations產生token費，與Agents Agreement的Loops免費文字衝突。",
           "accessed_time_range": "2026-10-28T00:06:32+08:00–2026-10-28T00:07:22+08:00"
+        },
+        {
+          "url": "https://robinhood.com/us/en/support/articles/using-gpt-luna/",
+          "scope": "僅複核促銷期限、期後自動化計費、濫用限制及促銷條款優先順序",
+          "evidence": "促銷至2026-12-31 23:59 ET或提前終止；期後活動中automations按標準費率收token。禁止以多帳戶或腳本繞過限制；§10稱促銷事項與Agents Agreement衝突時以促銷條款為準，Loops與automations的適用範圍仍待釐清。",
+          "accessed_at": "2026-10-30T08:05:52+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -28985,6 +29043,7 @@
       "priority_tier": "D",
       "priority_note": "官方·活躍·零設定費·台灣No·≤20分鐘·區域限定·有資格門檻",
       "status": "active",
+      "verification_scope": "2026-10-30僅重查促銷條款期限、期後自動化、濫用限制及衝突優先順序；帳戶與台灣資格沿用較早來源，未申請，法律未核實。",
       "legal_status": "not_verified"
     },
     {
@@ -47665,16 +47724,16 @@
       "cancellation": "Pay-per-use無固定月訂閱；自動儲值開啟後實際扣款，可在Developer Console取消。既有其他訂閱不適用此無訂閱描述。",
       "usable_duration": "X API活動贈點核發後三個月；xAI回饋效期未核",
       "access_risk": "各優惠要求不同真實購點門檻及卡片；自動儲值成功扣款才配對，餘額可能略為負值，台灣卡及推出進度未核。",
-      "verified_at": "2026-10-28T08:09:07+08:00",
+      "verified_at": "2026-10-30T08:06:14+08:00",
       "discovered_at": "2026-10-27T02:10:20+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-29T08:09:07+08:00",
+      "next_review_at": "2026-10-31T08:06:14+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "首購及自動儲值贈點逐戶推出；xAI回饋需連結團隊並於X API帳單週期累積購買credits達US$200起。",
-        "account_eligibility": "首購贈點限新付費戶、首次存卡及未曾獲獎勵的卡；自動儲值配對限首次成功扣款，每帳戶／實體卡各一次。",
+        "account_eligibility": "首購贈點限新付費戶、首次存信用卡或簽帳金融卡及未曾獲獎勵的卡；預付卡不合格。自動儲值配對限首次成功扣款，每帳戶／實體卡各一次。",
         "billing_country": "首購最低金額未保證；xAI回饋門檻是每週期購買X API credits累積US$200/500/1000，台灣卡未核。",
         "identity_residency": "開發者協議要求居住於所用服務支援國家且具締約能力；未見X API完整台灣支援清單。",
         "terms_restrictions": "不得用X API內容訓練或微調foundation/frontier模型；不得共享API金鑰、轉讓贈點或以多帳戶／重複卡領取。",
@@ -47701,10 +47760,17 @@
           "url": "https://docs.x.com/developer-terms/agreement",
           "scope": "帳戶、地區及模型訓練限制",
           "evidence": "2026-10-27 02:10 Asia/Taipei查閱：須居住支援國家、不得共享金鑰或用X內容訓練foundation模型；條款台灣消費者段落非台灣優惠保證。"
+        },
+        {
+          "url": "https://docs.x.com/x-api/getting-started/free-credits.md",
+          "scope": "僅重查首購及首次自動儲值獎勵與卡片要求",
+          "evidence": "逐戶推出；合格新戶首次購點獲US$20，首次成功自動儲值配對最高US$50、最低自動儲值US$5；僅信用卡及簽帳金融卡，預付卡不合格，贈點三個月到期，每帳戶及實體卡各限一次。",
+          "accessed_at": "2026-10-30T08:06:14+08:00"
         }
       ],
       "record_type": "opportunity",
       "status": "conditional",
+      "verification_scope": "2026-10-30僅重查X API首購及首次自動儲值優惠；xAI獨立回饋與地區條件沿用較早來源，未付款或驗證台灣帳戶，法律未核實。",
       "legal_status": "not_verified",
       "priority_score": 14.3,
       "priority_tier": "C",
@@ -47770,21 +47836,20 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-10-30T07:08:23+08:00",
+  "latest_research_at": "2026-10-30T08:08:40+08:00",
   "last_research_run": {
-    "started_at": "2026-10-30T07:05:00+08:00",
-    "completed_at": "2026-10-30T07:08:23+08:00",
+    "started_at": "2026-10-30T08:05:24+08:00",
+    "completed_at": "2026-10-30T08:08:40+08:00",
     "reviewed_ids": [
-      "airtop-free-monthly-thousand-signup-bonus-conflict", "ai-compass-platform-waiver",
-      "workbuddy-campus-student-1000-points-2026", "taipei-youth-ai-subscription-subsidy-2026",
-      "laya-free-oct2026", "qoder-community-1024", "deepseek-search-fetch-window",
-      "qoder-ultimate-offpeak-oct2026", "deepinfra-deepstart-qualified", "anyscale-free-100-credits",
-      "vast-startup-spend-match", "soniox-app-free-weekly-shared"
+      "robinhood-luna-token-promotion-december", "x-api-xai-spend-credit-rewards",
+      "naver-greenhouse-faq-index-only", "tripo-api-free-credits-index-mismatch",
+      "airtop-free-monthly-thousand-signup-bonus-conflict", "workbuddy-campus-student-1000-points-2026",
+      "laya-free-oct2026"
     ],
     "attempted_only_ids": [],
-    "new_ids": ["cline-rotating-free-model-promotions", "nomic-individual-work-email-twenty-trial"],
-    "existing_records_before": 582,
-    "unreviewed_existing_count": 570,
+    "new_ids": ["google-skills-student-200-credits-taiwan"],
+    "existing_records_before": 584,
+    "unreviewed_existing_count": 577,
     "coverage": "partial"
   }
 }
