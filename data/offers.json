@@ -1,8 +1,57 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-30T13:08:31+08:00",
-  "scope": "2026-10-30 13:08 Asia/Taipei：局部複核並整合3筆既有紀錄，592筆既有紀錄未整合本次複核；新增1筆已截止觀察線索。其他已查來源尚未整合，各筆僅核列明範圍。",
+  "updated_at": "2026-10-30T14:09:13+08:00",
+  "scope": "2026-10-30 14:07 Asia/Taipei：局部複核6筆既有紀錄，590筆既有紀錄未納入本輪；新增2項機會及1筆觀察線索，僅核各筆列明範圍。",
   "offers": [
+    {
+      "id":"lindy-free-fifty-dollar-seven-day-trial",
+      "title":"Lindy Free：免卡US$50一次性七天試用",
+      "summary":"Free提供US$50免費credits，免信用卡，七天有效且每位團隊成員免費週限一次；不是每月補充。付費workspace的Slack試用席位可能轉付費，與獨立免卡試用不同。",
+      "record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified",
+      "categories":["FREE"],"views":["free","developer"],"setup_cost_usd":0,"recurring_cost_usd":null,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"一次性七天試用credits","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T14:07:52+08:00","discovered_at":"2026-10-30T14:07:52+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T14:07:52+08:00","priority_score":15.8,"priority_tier":"C","priority_note":"官方·條件式·零設定費·台灣未標記·時間未知",
+      "cancellation":"一般付費訂閱循環扣款，取消於已付費期間末生效；購買不退款。獨立免費帳戶到期處理未核。",
+      "usable_duration":"免費credits七天有效，每位teammate一次。","access_risk":"付費方案每active user每月US$49.99起；加入已付費workspace的試用席位可能轉付費。",
+      "eligibility":{"service_availability":"定價頁列免費credits及免卡；未註冊。","account_eligibility":"條款要求年滿18歲；免費週每位teammate一次。","billing_country":"獨立免費試用免卡；台灣付費帳單與稅費未核。","identity_residency":"台灣帳戶准入未明。","terms_restrictions":"服務授權限內部業務用途；第三方工具另受其條款約束。Phone條款限制非美國電話號碼。","taiwan_note":"Unknown；不能以公開免費試用推定台灣帳戶或電話功能資格。"},
+      "unknowns":["台灣帳戶資格與實際領額","每任務扣額及獨立免費帳戶到期流程","台灣法律及錄音同意要求"],
+      "verification_scope":"核官方定價、試用席位與一般條款；未登入，台灣及法律未核。",
+      "sources":[{"url":"https://www.lindy.ai/pricing","scope":"免費額度及收費","evidence":"Free提供US$50 credits、免卡，免費credits七天有效；付費每active user US$49.99/月起。","accessed_at":"2026-10-30T14:07:52+08:00"},{"url":"https://www.lindy.ai/terms-of-service","scope":"年齡、授權、續費及Phone限制","evidence":"條款要求18歲、內部業務使用；一般訂閱循環扣款及期末取消，Phone不得聯絡或提交非美國電話號碼。","accessed_at":"2026-10-30T14:07:52+08:00"}]
+    },
+    {
+      "id":"openhands-agent-canvas-free-self-hosted-byok",
+      "title":"OpenHands Agent Canvas：免費自架，模型與主機另計",
+      "summary":"Agent Canvas為MIT授權免費自架介面，可在筆電或共享VM運行並自帶LLM金鑰；單使用者或共享身分。免費軟體不包含模型推論、主機或第三方代理訂閱。",
+      "record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified",
+      "categories":["FREE"],"views":["developer"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"自架代理介面，模型費另計","quota_classification":"UNKNOWN","limited_confirmed":false,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T14:07:52+08:00","discovered_at":"2026-10-30T14:07:52+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T14:07:52+08:00","priority_score":14.1,"priority_tier":"C","priority_note":"官方·條件式·費用未知·台灣未標記·時間未知",
+      "cancellation":"免費自架軟體非訂閱；上游模型與主機各有獨立費用及取消條件。","usable_duration":"未公布固定結束日。","access_risk":"Canvas不提供隔離；代理可執行shell並讀寫檔案，應使用容器、sandbox或VM限制權限。",
+      "eligibility":{"service_availability":"官方定價及文件列免費自架，未安裝。","account_eligibility":"須自行設定環境及模型金鑰；上游代理另有資格及授權。","billing_country":"自架軟體免費；模型及主機帳單另核。","identity_residency":"台灣及上游供應商資格未核。","terms_restrictions":"官方稱MIT；未逐一核依賴授權，模型及代理服務另受各自條款限制。","taiwan_note":"Unknown；可下載不保證上游服務台灣資格。"},
+      "unknowns":["台灣及上游模型資格","主機與模型實際成本","依賴授權及適用法律"],
+      "verification_scope":"核官方定價及設定文件，未安裝或核上游資格及法律。",
+      "sources":[{"url":"https://www.openhands.dev/pricing","scope":"免費自架與自帶金鑰","evidence":"Agent Canvas開源、免費自架、自帶LLM key，單使用者或共享身分；付費Teams為不同方案。","accessed_at":"2026-10-30T14:07:52+08:00"},{"url":"https://docs.openhands.dev/openhands/usage/agent-canvas/setup","scope":"安裝與安全","evidence":"設定需Node.js 24+及uv或Docker；代理可執行shell與讀寫檔案，Canvas本身不提供隔離。","accessed_at":"2026-10-30T14:07:52+08:00"}]
+    },
+    {
+      "id":"gumloop-fourteen-day-card-required-pro-trial-watch",
+      "title":"Gumloop Pro：需卡14天試用，試用點數待核",
+      "summary":"新帳戶一次14天Pro試用，須付款卡；未先取消將轉付費訂閱。付費Pro每月US$37含20,000 credits，但官方文件未明確承諾試用也有同額點數。",
+      "record_type":"watchlist","status":"conditional","verification":"Official","legal_status":"not_verified",
+      "categories":["QUALIFICATION"],"views":["developer"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,
+      "taiwan":"Unknown","regions":[],"usage_type":"14天Pro試用，點數未核","quota_classification":"UNKNOWN","limited_confirmed":true,
+      "usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,
+      "verified_at":"2026-10-30T14:07:52+08:00","discovered_at":"2026-10-30T14:07:52+08:00","announcement_at":null,
+      "review_cadence":"monthly","next_review_at":"2026-11-30T14:07:52+08:00","priority_score":null,"priority_tier":null,"priority_note":"非機會紀錄（政策/待覆核），未評級",
+      "cancellation":"Admin可至Settings → Organization → Usage & Limits → Manage Subscription取消；試用內取消可避免期末扣卡。","usable_duration":"每客戶一次14天試用。","access_risk":"需卡且未取消將轉付費；超額可自行啟用，BYOK仍可能產生工具及運算費。",
+      "eligibility":{"service_availability":"官方文件列新帳戶試用；未申請。","account_eligibility":"每客戶一次；試用具體額度及其他資格未核。","billing_country":"須付款卡；台灣卡、預授權及稅費未核。","identity_residency":"台灣資格未明。","terms_restrictions":"試用轉付費及用量依官方計費文件；一般條款正文未取得。","taiwan_note":"Unknown；未驗台灣帳戶及付款卡。"},
+      "unknowns":["試用實配credits及上限","台灣帳戶、卡片及稅費","一般條款正文與適用法律"],
+      "verification_scope":"核官方計費及訂閱文件；未取得一般條款正文，未申請、未核台灣與法律。",
+      "sources":[{"url":"https://docs.gumloop.com/core-concepts/credits.md","scope":"試用與計量","evidence":"新帳戶14天Pro試用須卡、每客戶一次，未取消轉付費；文件未明確承諾試用配發付費月額。","accessed_at":"2026-10-30T14:07:52+08:00"},{"url":"https://docs.gumloop.com/core-concepts/subscription_management.md","scope":"取消流程","evidence":"管理員可透過設定進入Stripe portal取消；試用內取消避免期末扣卡。","accessed_at":"2026-10-30T14:07:52+08:00"}]
+    },
     {
       "id":"tiboost-innovation-growth-program-2026-closed",
       "title":"TiBOOST 2026 AI新創競賽：已截止，追蹤下一梯次",
@@ -7003,33 +7052,48 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "公告最高兩年；個別核准條件未知",
-      "access_risk": "資格、審核、限額與政策可能變更",
-      "verified_at": "2026-10-25T18:30:00+08:00",
+      "access_risk": "Google可依企業所在地拒絕申請；未覆蓋或超額服務費由企業負擔，額度耗盡時Google不必通知。",
+      "verified_at": "2026-10-30T14:05:58+08:00",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-11-24T22:35:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-30T14:05:58+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "已讀官方方案頁，非全球資格保證",
-        "account_eligibility": "依所列條件，個人資格未核",
+        "account_eligibility": "Start為成立24個月內、有MVP與VC募資規劃的新創；Scale須成立5年內並符合指定融資輪及過往Google Cloud額度限制，Google保留審核權。",
         "billing_country": "未知",
         "identity_residency": "未知",
-        "terms_restrictions": "額度僅適用Google Cloud第一方用量（排除第三方Marketplace與預付授權）；次年僅補貼用量之20%（至多10萬美元），並非全額免費。",
+        "terms_restrictions": "額度適用合格Google Cloud服務，第三方模型另計；次年僅補貼用量20%。額度不得轉讓、買賣或以多帳戶重複取得；Google可撤銷，未覆蓋費用由企業負擔。",
         "taiwan_note": "Unknown；尚未核實所有帳戶與條款條件"
       },
       "unknowns": [
         "台灣帳戶及帳單資格",
         "實際可用節省",
-        "個別審核通過率與額度發放階段"
+        "個別審核通過率、額度發放階段與取消條件",
+        "適用台灣法律與監管限制"
       ],
+      "verification_scope": "本次核官方福利頁的額度、部分模型及分級資格，並核計畫條款的超額、轉讓及審核限制；台灣帳單、個案資格與法律未核。舊來源證據保留為歷史紀錄。",
       "sources": [
         {
           "url": "https://cloud.google.com/startup",
           "label": "官方計畫頁與FAQ",
           "scope": "方案分級、排除條款與額度適用範圍",
           "evidence": "2026-10-24直接查閱：Start方案k（2年內新創）；Scale最高50k；FAQ明訂排除dev shops、consultancies、agencies、crypto mining；額度僅限Google 1P PayG產品，排除第三方Model Garden"
+        },
+        {
+          "url": "https://cloud.google.com/startup/benefits",
+          "scope": "分級資格、第一及第二年額度與模型限制",
+          "evidence": "Start最高2,000美元一年；Scale一般最高200,000美元、AI新創最高350,000美元，首年AI最高250,000美元、次年僅20%最高100,000美元。第三方模型另計，不由計畫額度支付；須符合成立及融資條件並經Google審核。",
+          "accessed_at": "2026-10-30T14:05:58+08:00"
+        }
+        ,
+        {
+          "url": "https://cloud.google.com/terms/startup-program-tos",
+          "scope": "地域審核、超額、有效期及額度使用限制",
+          "evidence": "Google可依主要營業所在地拒絕申請；未覆蓋或超額費用由公司負擔且不保證耗盡通知；額度不可轉讓買賣，禁止多帳戶詐領，到期依核發通知或控制台。",
+          "accessed_at": "2026-10-30T14:06:10+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -20359,12 +20423,12 @@
       "cancellation": null,
       "usable_duration": "核准後12月",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T15:01:06+08:00",
+      "verified_at": "2026-10-30T14:07:29+08:00",
       "discovered_at": "2026-10-24T05:00:33+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T15:01:06+08:00",
+      "next_review_at": "2026-11-30T14:07:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -20379,6 +20443,7 @@
         "取消與期滿回原價流程",
         "台灣付款/資格"
       ],
+      "verification_scope": "本次核官方新創頁的折扣、資格與信用卡條件；未核台灣、取消及個別價格或法律。",
       "sources": [
         {
           "url": "https://qdrant.tech/qdrant-for-startups/",
@@ -20390,7 +20455,8 @@
         {
           "url": "https://qdrant.tech/qdrant-for-startups/",
           "scope": "12個月八折、成立年限、申請及帳單條件；不涵蓋台灣付款",
-          "evidence": "2026-10-25 15:01 Asia/Taipei實讀官方方案及FAQ：折扣自錄取起算，僅直接Stripe帳單且須信用卡；成立嚴格少於5年，審核7–10工作天，拒絕後2個月方可再申請。台灣支付與取消未核。"
+          "evidence": "首年20%折扣自錄取起12個月，限直接Stripe結帳並須信用卡，marketplace不適用；新戶或30天內建立Cloud帳戶可申請，資格及審核依官方條件。",
+          "accessed_at": "2026-10-30T14:07:29+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -20636,7 +20702,7 @@
     {
       "id": "scaleway-startup-stage-vouchers",
       "title": "Scaleway新創：分級券，超量自己付",
-      "summary": "Founders一次最多€1000/12月；Early €1500/月6月，Growth €3000/月12月，不能Early轉Growth。後兩級分別要求起始消耗€500/月及€1500/月；超券另付，不把€36000當保證節省或可提款。",
+      "summary": "Founders最多€1000/12月；Early €1500/月6月，Growth為12張每月€3000券，不能Early轉Growth。後兩級分別要求起始消耗€500/月及€1500/月；超券另付，不把€36000當保證節省或可提款。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -20659,14 +20725,14 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "歐洲方案期限後未用券是否保留及持續服務付款流程未核；超券用量由參與者支付",
-      "usable_duration": "Founders最長12月、Early 6月、Growth 12月；Founders/Early不可續期",
+      "usable_duration": "Founders最長12月、Early 6月、Growth 12月；各階段不可續期，起算點官方頁面存在差異。",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T15:01:06+08:00",
+      "verified_at": "2026-10-30T14:07:29+08:00",
       "discovered_at": "2026-10-24T06:03:46+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T15:01:06+08:00",
+      "next_review_at": "2026-11-30T14:07:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -20679,9 +20745,10 @@
       "unknowns": [
         "GPU/Generative API精確適用清單與抵扣細則",
         "台灣公司/卡資格",
-        "月券未用是否展延",
-        "取消程序"
+        "月券未用是否展延；主頁與階段FAQ起算點不一致",
+        "取消程序與法律"
       ],
+      "verification_scope": "本次核官方主頁與三階段頁的面額、部分資格及差異；台灣、適用品項與法律未核。",
       "sources": [
         {
           "url": "https://www.scaleway.com/en/startup-program/",
@@ -20693,8 +20760,12 @@
         {
           "url": "https://www.scaleway.com/en/startup-program/early-stage-program/",
           "scope": "Early方案轉入資格、非續期及審核時間矛盾",
-          "evidence": "2026-10-25 15:01 Asia/Taipei實讀官方主頁與Founders/Early/Growth階段頁：Early容許Founders轉入，Founders/Early不可續；主頁週審與階段FAQ月審、21工作天處理敘述不一。台灣及GPU品項未核。"
+          "evidence": "Early為每月€1500共6個月，最低消耗€500/月；可由Founders轉入且不可續期。",
+          "accessed_at": "2026-10-30T14:07:29+08:00"
         }
+        ,
+        {"url":"https://www.scaleway.com/en/startup-program/founders-program/","scope":"Founders額度期限","evidence":"最高€1000，效期12個月且不可續期。","accessed_at":"2026-10-30T14:07:29+08:00"},
+        {"url":"https://www.scaleway.com/en/startup-program/growth-stage-program/","scope":"Growth券形式","evidence":"最高€36000以12張月券發放，不是一次性現金。","accessed_at":"2026-10-30T14:07:29+08:00"}
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -22288,12 +22359,12 @@
       "cancellation": "訂閱服務可於後台取消，期末生效；Starter贈額本身非訂閱，但加購deposit與bonus不可退款、不可轉讓。",
       "usable_duration": "官方稱不過期，仍依帳戶條款",
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-10-25T15:30:00+08:00",
+      "verified_at": "2026-10-30T14:07:29+08:00",
       "discovered_at": "2026-10-24T08:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-25T15:30:00+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-30T14:07:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -22305,20 +22376,23 @@
       },
       "unknowns": [
         "台灣公司及付款資格",
-        "退款、超量、取消條款"
+        "Starter免卡、超額後精確處理與法律限制"
       ],
+      "verification_scope": "本次核新創計畫及一般條款的額度、資格、適用範圍及取消；未核Starter免卡、台灣及法律。",
       "sources": [
         {
           "url": "https://runware.ai/startup-program",
           "label": "Runware Startup Program",
           "scope": "Starter最高$1,000按評分給予、免押金、credits不過期、deposit與bonus不可退款",
-          "evidence": "2026-10-25查閱：Starter以$100級距最高核給$1,000，免押金且額度不過期；FAQ明訂deposit與bonus不可退款且不可轉讓。"
+          "evidence": "Starter以US$100級距最高核給US$1000，免押金且額度不過期；計畫額度適用model APIs、serverless及compute，deposit與bonus不可退款及轉讓。",
+          "accessed_at": "2026-10-30T14:07:29+08:00"
         },
         {
           "url": "https://runware.ai/terms",
           "label": "Runware服務條款（2026-09-29）",
           "scope": "付款卡別、自動續約、制裁與出口合約條款",
-          "evidence": "2026-10-25查閱：支援Visa/Mastercard/Amex/JCB等；訂閱服務自動續費；要求年滿18歲與遵守出口制裁規定。"
+          "evidence": "一般條款稱餘額不足時存取可能受限；適用訂閱自動續約，後台取消於當期結束生效，購買一般不可退款；不能推定Starter耗盡必然硬停。",
+          "accessed_at": "2026-10-30T14:07:29+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -34100,15 +34174,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "促銷需要實際存款；可用額度12個月到期，退款/取回存款條件未查。",
+      "cancellation": "促銷需要實際存款；促銷贈額自核發起12個月到期，退款及取回本金條件未核。",
       "usable_duration": "促銷credit發放後12個月；活動為限時，結束日未公布",
       "access_risk": "預先存款非免費利益；promo credit只抵50%帳單且限指定產品，GPU適用性未知；活動不得併用",
-      "verified_at": "2026-10-25T14:45:00+08:00",
+      "verified_at": "2026-10-30T14:06:59+08:00",
       "discovered_at": "2026-10-25T03:49:56+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T14:45:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-10-31T14:06:59+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Vultr Match：新戶首筆存款可選$10、$25、$50或$100，逐元配對最高$100；額度按50/50由promo credit與真實存款資金共同抵帳；12個月到期。Vultr另有Cloud GPU，但Match是否抵GPU費用未核。",
@@ -34123,16 +34197,19 @@
         "台灣客戶資格、付款、存款退款及稅務條件",
         "活動結束日期及精確可疊加規則"
       ],
+      "verification_scope": "本次僅核官方活動頁及FAQ的首存配對、促銷金效期與限制；GPU、台灣帳戶、退款及法律未核。",
       "sources": [
         {
           "url": "https://www.vultr.com/coupons/",
           "scope": "VULTRMATCH優惠條款與限制",
-          "evidence": "2026-10-25查閱：100%首存匹配最高$100，限新客戶與指定產品，不可疊加其他優惠。"
+          "evidence": "首存等額匹配最高US$100，限新客戶與指定產品，重複帳戶不合格，不可併用其他優惠；促銷金核發12個月到期。",
+          "accessed_at": "2026-10-30T14:06:59+08:00"
         },
         {
           "url": "https://www.vultr.com/match/",
           "scope": "預存選項與50/50扣款規則",
-          "evidence": "2026-10-25查閱：支援$10/$25/$50/$100預存，消費依50%贈金加50%本金比例扣抵，額度12個月有效。"
+          "evidence": "支援US$10、25、50或100預存，消費以50%促銷贈額及50%實付款抵扣；活動限時但未公布結束日。",
+          "accessed_at": "2026-10-30T14:06:59+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -39697,15 +39774,15 @@
         "rate_limit_scope": "官方一般帳戶預設每模型200並發；不是200 RPM，也未保證活動帳戶無例外。",
         "models": "活動頁展示DeepSeek-V4.1-Flash-1017、NVIDIA-Nemotron-3.5-Super-VL、Step-5-Preview、Hy4-preview、MiMo-V2.6 Flash/Pro，並連往完整目錄；未列US$20是否可抵所有模型/服務。"
       },
-      "usable_duration": "US$20用完為止；申領截止日與credit到期日未公布。",
+      "usable_duration": "公開活動頁未公布申領截止與credits效期；實際到期依帳戶及活動條件確認。",
       "cancellation": "活動無訂閱費承諾；一般服務按用量，耗盡硬停或自動扣款與auto top-up預設未核，不應假定零扣款風險。",
       "access_risk": "活動頁未列完整promo terms；有入口不保證每帳戶可兌換；需要實際申領確認。",
-      "verified_at": "2026-10-25T14:45:00+08:00",
+      "verified_at": "2026-10-30T14:06:59+08:00",
       "discovered_at": "2026-10-25T14:45:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T14:45:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-10-31T14:06:59+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "DeepInfra官方Two Minute Papers活動頁仍提供US$20及Claim入口；API為OpenAI-compatible。一般目錄有文字、多模態、語音、圖片等，但活動抵用範圍未完整列明。",
@@ -39722,18 +39799,21 @@
         "活動帳戶精確限額與超額是否硬停/自動扣款",
         "台灣帳戶/IP、卡片及居住/國籍資格"
       ],
+      "verification_scope": "本次僅核官方活動金額及登入入口；未登入，未重核一般限額、定價、台灣資格或法律。",
       "sources": [
         {
           "url": "https://deepinfra.com/papers",
           "label": "DeepInfra官方活動頁",
           "scope": "活動金額、受眾、申領入口及模型示例",
-          "evidence": "2026-10-25直接查閱：A gift for all fans of Two Minute Papers，offer you $20 in free credits；Claim your $20連向/login?deal=2mpapers；無活動截止/credits效期/卡片條件。"
+          "evidence": "官方活動頁向Two Minute Papers觀眾提供US$20 free credits，Claim按鈕連至活動登入入口；未見申領截止及credits效期。",
+          "accessed_at": "2026-10-30T14:06:59+08:00"
         },
         {
           "url": "https://deepinfra.com/login?deal=2mpapers",
           "label": "官方帶活動參數登入入口",
           "scope": "申領路徑存在，非入帳驗證",
-          "evidence": "2026-10-25直接開啟：登入頁存在，Google/GitHub/Corporate SSO及註冊入口；首次登入可建立帳戶。未登入或建立帳戶。"
+          "evidence": "活動登入頁存在，列Google、GitHub、Corporate SSO及建立帳戶入口；未登入或驗證入帳。",
+          "accessed_at": "2026-10-30T14:06:59+08:00"
         },
         {
           "url": "https://docs.deepinfra.com/account/rate-limits",
@@ -48182,15 +48262,15 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-10-30T13:08:31+08:00",
+  "latest_research_at": "2026-10-30T14:09:13+08:00",
   "last_research_run": {
-    "started_at": "2026-10-30T13:05:25+08:00",
-    "completed_at": "2026-10-30T13:08:31+08:00",
-    "reviewed_ids": ["github-student-developer-pack", "hume-startup-forty-million-twelve-months", "camber-student-compute-agent-monthly"],
+    "started_at": "2026-10-30T14:05:25+08:00",
+    "completed_at": "2026-10-30T14:09:13+08:00",
+    "reviewed_ids": ["google-cloud-startups", "vultr-match-ai-compute", "deepinfra-two-minute-papers-twenty-credit", "qdrant-startup-twenty-percent", "scaleway-startup-stage-vouchers", "runware-startup-starter-no-deposit"],
     "attempted_only_ids": [],
-    "new_ids": ["tiboost-innovation-growth-program-2026-closed"],
-    "existing_records_before": 595,
-    "unreviewed_existing_count": 592,
+    "new_ids": ["lindy-free-fifty-dollar-seven-day-trial", "openhands-agent-canvas-free-self-hosted-byok", "gumloop-fourteen-day-card-required-pro-trial-watch"],
+    "existing_records_before": 596,
+    "unreviewed_existing_count": 590,
     "coverage": "partial"
   }
 }
