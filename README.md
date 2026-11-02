@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **790 筆**（589 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 05:08 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **1 筆**既有案例，其餘 **789 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **790 筆**（589 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 06:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **2 筆**既有案例，其餘 **788 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,9 +38,11 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-03 05:06–05:08 本輪：起始 790 筆，18 筆到期；避開上輪剛核的六筆。局部複核 Sarvam 校園巡迴：官方列 11/3 IIIT Pune、PICT Pune 場次日期確認及 Register，實際報名與名額未核；免費 credits 數量及效期未知。Google Gemini 免費層與 AWS 新戶額度候選已收錄，未重複新增。另初查 SHIFT ASIA、NDP One、Fastino、Mango、Couchbase，尚未完成資料整合，不列入 R；Fastino 與 Mango 條款正文未能重新讀取。未登入、申請或付款。
+2026-11-03 06:06–06:09 本輪：起始 790 筆，開始時 17 筆到期，含 7 筆已截止或到期；避開上輪剛核的 Sarvam。局部複核 `ndp-one-oct31-free-full-security-diagnosis` 及 `shift-asia-prototype-twenty-companies`；前者歷史免費活動已過期，首頁免費 PoC 宣稱與條款個別費用須區分，現行設定費改未知、移出免費入口；後者合意試用範圍免費、20 家且剩餘名額不明。兩者台灣資格均未知。新增 0、未完成複核 788、讀取失敗 attempted 0。未登入、申請或付款。
 
-下輪優先：`ndp-one-oct31-free-full-security-diagnosis` 比對[首頁](https://ndp-one.com/)與[條款](https://ndp-one.com/terms)的免費 PoC 和診斷範圍；`mango-inference-community` 查[官方產品頁](https://www.mangoboost.io/platform/mango-inference)及條款的 11/11 優惠、額度效期及付款；`fastino-glideis1-ten-credit-payment-verification` 查[條款](https://agent.fastino.ai/terms)及活動碼是否仍可用；`couchbase-activate-starter-kit-current-availability-watch` 查[活動頁](https://info.couchbase.com/aws-activate.html)現行申請途徑；`shift-asia-prototype-twenty-companies` 查[活動頁](https://shiftasia.com/ja/ai-driven-development-free-trial/)剩餘名額和台灣資格。依 next_review_at 與新訊號輪替。
+研究線另查 Mango、Fastino、Couchbase，但未整合為本輪複核；Mango 條款正文未讀到、Fastino 的現行兌換及付款條款未核、Couchbase 申請頁混有舊樣板。Curriki [六門免費教育課程](https://grants.curriki.org/ai-courses/)尚未收錄：其[隱私政策](https://www.curriki.org/privacy-policy/)適用範圍提及 library.curriki.org 且稱服務以美國使用者為對象，課程平台適用性及台灣資格待釐清。Deepgram、Nebius 研究候選已有紀錄，未重複新增。
+
+下輪優先：`mango-inference-community` 查[官方活動頁](https://www.mangoboost.io/platform/mango-inference)與條款的 11/11 優惠年份、額度效期及付款；`fastino-glideis1-ten-credit-payment-verification` 查[條款](https://agent.fastino.ai/terms)正文及活動碼可用性；`couchbase-activate-starter-kit-current-availability-watch` 查[活動頁](https://info.couchbase.com/aws-activate.html)是否仍受理及 Enterprise 合約費用；`akashml-free-credit-unconfirmed` 查官方新戶額度及付款；`adobe-firefly-twelve-month-model-promotion` 查官方促銷期限與資格。依實際時間、next_review_at 與新訊號輪替，避免重複核已結束活動。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
