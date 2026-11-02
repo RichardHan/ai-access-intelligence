@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **790 筆**（589 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 04:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **783 筆**未完成本輪複核（其中 2 筆來源讀取失敗）；新增 1 項機會。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **790 筆**（589 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 05:08 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **1 筆**既有案例，其餘 **789 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,9 +38,9 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-03 04:06–04:09 本輪：起始 789 筆，04:06 到期 24 筆（17 筆未標為結束）；避開上一輪剛核 6 筆。複核 Claude 科學家、GMI a16z、Freshservice、富士Soft、Mem0、SambaNova；Perplexity Education及Pro來源403及安全驗證，僅記錄失敗、不刷新核實時間。Claude API點數適用自行以連結Console API key執行的 `claude -p`，修正原有錯誤；Freshservice補列底層年繳價格。SambaNova官方購點前提與未綁卡限額仍衝突。新增 LangSearch 免費搜尋API，不含免費模型推論；每日額度數字及台灣註冊未知。未登入、申請或付款。
+2026-11-03 05:06–05:08 本輪：起始 790 筆，18 筆到期；避開上輪剛核的六筆。局部複核 Sarvam 校園巡迴：官方列 11/3 IIIT Pune、PICT Pune 場次日期確認及 Register，實際報名與名額未核；免費 credits 數量及效期未知。Google Gemini 免費層與 AWS 新戶額度候選已收錄，未重複新增。另初查 SHIFT ASIA、NDP One、Fastino、Mango、Couchbase，尚未完成資料整合，不列入 R；Fastino 與 Mango 條款正文未能重新讀取。未登入、申請或付款。
 
-下輪優先：`sambanova-access-policy` 向[Plans](https://cloud.sambanova.ai/plans)與[限額文件](https://docs.sambanova.ai/docs/en/models/rate-limits.md)確認新戶實際付款前提；`perplexity-education` 追查[官方教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)的現行價格及額度；`perplexity-watch` 追查[官方點數說明](https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity)及促銷狀態；`claude-scientists` 追查[方案](https://claude.com/programs/team-plan-for-scientists)剩餘名額與台灣機構資格；`freshservice-agent-studio-promotion-extension` 追查[官方FAQ](https://support.freshservice.com/support/solutions/articles/50000013885-ai-agent-studio-faqs)促銷後定價。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
+下輪優先：`ndp-one-oct31-free-full-security-diagnosis` 比對[首頁](https://ndp-one.com/)與[條款](https://ndp-one.com/terms)的免費 PoC 和診斷範圍；`mango-inference-community` 查[官方產品頁](https://www.mangoboost.io/platform/mango-inference)及條款的 11/11 優惠、額度效期及付款；`fastino-glideis1-ten-credit-payment-verification` 查[條款](https://agent.fastino.ai/terms)及活動碼是否仍可用；`couchbase-activate-starter-kit-current-availability-watch` 查[活動頁](https://info.couchbase.com/aws-activate.html)現行申請途徑；`shift-asia-prototype-twenty-companies` 查[活動頁](https://shiftasia.com/ja/ai-driven-development-free-trial/)剩餘名額和台灣資格。依 next_review_at 與新訊號輪替。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
