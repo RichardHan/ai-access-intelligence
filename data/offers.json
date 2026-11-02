@@ -1,8 +1,85 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-03T03:09:20+08:00",
-  "scope": "本輪局部複核6筆既有案例、另新增1項機會；782筆既有紀錄未完成本輪複核。僅核各筆列明主張，台灣資格及法律仍可能未知。",
+  "updated_at": "2026-11-03T04:09:19+08:00",
+  "scope": "本輪局部複核6筆既有案例，新增1項機會；783筆既有紀錄未完成本輪複核，其中2筆來源讀取失敗。僅核列明主張，台灣優惠資格及法律仍可能未知。",
   "offers": [
+    {
+      "id": "langsearch-free-daily-token-search-api",
+      "title": "LangSearch Free：AI代理搜尋API每日共享額度",
+      "summary": "Web Search免費提供搜尋、網頁全文及MCP；新帳戶5 RPS，每分鐘及每日token限額由帳戶共用，數值未公開，每日台灣時間08:00重置。不是免費LLM推論或生成答案；台灣註冊及額度未實測。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": "每日00:00 UTC（台灣08:00）重置",
+      "access_risk": "每日token上限未公開；所有API金鑰及MCP共用，耗盡須等待重置；模型推論另計。",
+      "verified_at": "2026-11-03T04:09:19+08:00",
+      "discovered_at": "2026-11-03T04:09:19+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-03T04:09:19+08:00",
+      "verification_scope": "官方定價、限額及條款；台灣帳戶、實際請求及法律未驗。",
+      "eligibility": {
+        "service_availability": "免費搜尋API與MCP；非免費模型或生成答案。",
+        "account_eligibility": "須帳戶及API key；18歲以上或家長／監護人同意。",
+        "billing_country": "官網標示不需信用卡；台灣帳戶及付款情況未實測。",
+        "identity_residency": "條款要求可締約身分；未確認台灣註冊資格。",
+        "terms_restrictions": "條款禁從服務scraping、mining、harvesting；大量擷取及轉售邊界未確認。勿以多金鑰規避共用額度。",
+        "taiwan_note": "Unknown；服務條款未明列台灣排除，並不證明台灣帳戶可註冊。"
+      },
+      "unknowns": [
+        "台灣註冊、實際每日及每分鐘token額度",
+        "大量擷取及轉售權利、服務未來價格與供應持續性"
+      ],
+      "sources": [
+        {
+          "url": "https://langsearch.com/",
+          "scope": "免卡宣告",
+          "evidence": "首頁metadata稱不需信用卡；台灣實際註冊未驗。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://langsearch.com/terms-of-service",
+          "scope": "使用資格與禁止行為",
+          "evidence": "18歲以上或家長/監護人同意；禁止從服務scraping、mining、harvesting。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://docs.langsearch.com/limits/api-limits",
+          "scope": "共用限額及重置",
+          "evidence": "新帳戶5 RPS，TPM與TPD共用；每日00:00 UTC重置。額度上限依帳戶，超限可能429。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://langsearch.com/pricing",
+          "scope": "免費搜尋方案與AI代理",
+          "evidence": "每月US$0，搜尋與支援功能免費，每日token限額，最多50結果；非AI生成答案。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        }
+      ],
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
     {"id":"orkes-developer-playground-free-prototyping","title":"Orkes Developer Playground：免費工作流程與 AI 編排原型","summary":"Developer Edition免費提供託管Conductor工作流程與AI整合供個人探索和原型；不適合正式生產、無SLA，資源及速率可變。OpenAI整合須自備API key，模型費另核；台灣資格及需卡未核。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE","BETA-ACCESS"],"views":["free","developer"],"setup_cost_usd":null,"recurring_cost_usd":0,"setup_cost_basis":"免費平台方案；需卡及外部模型費用未核，不能推定整個工作流程零成本。","effort_minutes_max":null,"effort_basis":"未註冊或執行工作流程。","taiwan":"Unknown","regions":[],"usage_type":null,"quota_classification":"NO FIXED CAP PUBLISHED","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":"免費方案取消與轉付費條件未核。","usable_duration":"未公布。","access_risk":"不適合生產，無SLA；速率與資源可變，外部模型可能另行收費。","verified_at":"2026-11-03T03:08:06+08:00","discovered_at":"2026-11-03T03:08:06+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"monthly","next_review_at":"2026-12-03T03:08:06+08:00","verification_scope":"僅核定價頁與OpenAI整合文件所列方案、限制和自備金鑰；未登入、核實台灣個案、付款或法律。","eligibility":{"service_availability":"開發者入口公開；台灣帳戶資格未核。","account_eligibility":"Playground設計供個人開發者探索及原型，多人協作導向Enterprise。","billing_country":"台灣付款與需卡未核；OpenAI等外部模型費另核。","identity_residency":"台灣居住與身分條件未核。","terms_restrictions":"不適合正式生產；無SLA，資源及速率可變。不得以跨區或虛假身分規避限制。","taiwan_note":"Unknown；公開入口不保證台灣帳戶資格。"},"unknowns":["台灣帳戶、身份及付款資格","是否需卡、轉付費和取消條件","精確資源與速率上限及外部模型費用"],"sources":[{"url":"https://orkes.io/pricing","scope":"免費開發者方案及限制","evidence":"Developer Edition Free；FAQ稱個人原型、無SLA、不適合生產且資源及速率可變。","accessed_at":"2026-11-03T03:08:06+08:00"},{"url":"https://docs.orkes.io/content/integrations/ai-llm/open-ai","scope":"OpenAI整合條件","evidence":"OpenAI整合須取得並提供OpenAI API key；不代表包含免費模型額度。","accessed_at":"2026-11-03T03:08:06+08:00"}],"priority_score":16.8,"priority_tier":"C","priority_note":"官方·條件式·費用未知·台灣未標記·時間未知"},
     {"id":"phala-private-ai-startup-up-to-one-thousand","title":"Phala 私密 AI 新創計畫：最高 US$1,000 雲端額度","summary":"Pre-seed 至 Series A 的私密或可驗證 AI 團隊可申請最高 US$1,000，用於 CVM、GPU TEE 或私密模型 API，並獲架構審查及展示支援；官方目標48小時決定，非保證核准。國際團隊可申請，但台灣個案、需卡及超額條件未核。","record_type":"opportunity","status":"application_based","verification":"Official","legal_status":"not_verified","categories":["FREE","QUALIFICATION"],"views":["free","developer","startup"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"申請制雲端算力及私密模型API額度","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T19:12:24+08:00","discovered_at":"2026-11-02T19:12:24+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02T19:12:24+08:00","verification_scope":"僅核官方計畫頁的額度、目標團隊及全球申請說明；未登入、申請、付款或核實個案及法律。","usable_duration":null,"cancellation":"額度效期、超額計費及取消條件未核。","access_risk":"需審核；48小時為目標，不保證獲額或特定容量。","eligibility":{"service_availability":"頁面稱國際團隊可申請；實際帳戶與容量需核准。","account_eligibility":"適合pre-seed至Series A、建置私密或可驗證AI產品的團隊。","billing_country":"付款方式及台灣帳單資格未核。","identity_residency":"官方稱全球團隊可申請，未明列台灣個案資格。","terms_restrictions":"須依官方條款及審核；完整服務契約與優惠限制未核。","taiwan_note":"Unknown：全球開放申請不保證台灣帳戶、付款及個案核准。"},"unknowns":["台灣新創個案、帳戶及付款資格","額度效期、需卡、稅費、超額與取消條件","適用法律及監管未核"],"sources":[{"url":"https://phala.com/startup-program","label":"Phala 官方新創計畫","scope":"額度上限、適用產品、申請對象與全球申請","evidence":"最高US$1,000 CVM、GPU TEE及私密模型API額度；pre-seed至Series A；全球團隊可申請，48小時為審查目標。","accessed_time_range":"2026-11-02T19:08:05+08:00/2026-11-02T19:12:24+08:00"}],"priority_score":15.3,"priority_tier":"C","priority_note":"官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"},
     {"id":"stitch-free-daily-credit-ui-design-beta","title":"Google Stitch：免費UI設計Beta，每日額度UTC午夜重置","summary":"官方FAQ列目前免費、每日點數於UTC午夜重置，數量在設定查看；可產生介面及匯出HTML/CSS、Figma，非免費部署或後端。限18歲以上與Gemini支援國家；台灣列於Gemini支援名單，但個案帳戶未核。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE","BETA-ACCESS"],"views":["free","developer"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Yes","regions":[],"usage_type":"有限額度","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T18:10:23+08:00","discovered_at":"2026-11-02T18:10:23+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02T18:10:23+08:00","verification_scope":"僅核實列明官方公開來源之主張；未登入、申請、付款、領取或核實台灣個案及法律。","cancellation":"取消、付款方式及自動續費條件未全面核實。","access_risk":"額度、資格與條款可能變動；未驗證個別帳戶。","eligibility":{"service_availability":"目前免費Beta；不含免費部署承諾","account_eligibility":"18歲以上，須符合Gemini支援地區及帳戶條件","billing_country":"是否需要付款資料未核","identity_residency":"Gemini網頁支援名單列台灣","terms_restrictions":"每日限額，數字依帳戶設定；不等於無限或保證商用授權","taiwan_note":"條件式Yes；台灣在名單內，不保證個別帳戶或Workspace合格"},"unknowns":["每日點數、各模式扣點與帳戶差異","Beta截止、完整專屬條款與免卡條件","台灣個案及法律未核"],"sources":[{"url":"https://stitch.withgoogle.com/","scope":"本次公開官方來源所列主張","evidence":"瀏覽器讀取FAQ：目前免費、每日credits於UTC午夜重置；18歲以上、Gemini支援地區；可匯出介面。","accessed_at":"2026-11-02"},{"url":"https://support.google.com/gemini/answer/13575153?hl=en","scope":"本次公開官方來源所列主張","evidence":"Gemini網頁支援地區列Taiwan，不保證Stitch個案帳戶。","accessed_at":"2026-11-02"},{"url":"https://stitch.withgoogle.com/privacy","scope":"本次公開官方來源所列主張","evidence":"預設不以資料訓練生成式AI；opt-in後可使用互動與回饋，抽樣資料可能人工審閱。","accessed_at":"2026-11-02"}],"priority_score":21.8,"priority_tier":"S","priority_note":"官方·條件式·免費·台灣Yes·時間未知"},
@@ -7390,7 +7467,114 @@
       "status": "closed_to_new_subscriptions",
       "legal_status": "not_verified"
     },
-    {"id":"perplexity-watch","title":"Perplexity Pro：週用量與一次4000點分池（PayPal/Airtel已截止）","summary":"歷史資料稱Free每日3次Pro Search、Pro週用量與一次性約4,000點；價格、點數、歷史促銷及續費本輪官方頁受阻，均未重核，不保證現況。","categories":["QUALIFICATION","HIGH-QUOTA"],"views":[],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":15,"effort_basis":"分析者估計填表／設定15分鐘，不含審核、協商或交付","taiwan":"Unknown","regions":["Global"],"verification":"Official","usage_type":null,"quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":null,"usable_duration":"每週池；一次贈點約30天，依帳戶到期欄","access_risk":"帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取","verified_at":"2026-10-25T13:30:00+08:00","last_review_attempt_at":"2026-11-02T08:08:06+08:00","verification_scope":"本輪官方頁受阻，未重核價格、免費搜尋額、點數、促銷或續費；verified_at沿用歷史。","discovered_at":"2026-10-23T10:40:00+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"monthly","next_review_at":"2026-11-03T08:08:06+08:00","priority":"watch","eligibility":{"service_availability":"本次官方頁遭存取阻擋，先前來源可讀；現況及台灣帳戶未核。","account_eligibility":"付費Consumer Pro且rollout已到帳戶；bonus酌情發放","billing_country":"未核","identity_residency":"未核","terms_restrictions":"不得以換IP取得身分資格；未操作VPN或註冊。","taiwan_note":"未取得台灣及個人完整資格證據，Unknown不等於不可用。"},"unknowns":["2026-11-01官方點數、定價與條款頁受阻；歷史數字及促銷狀態未重核。","2026-10-30官方credits與定價頁受403及Cloudflare驗證阻擋，本次未重核現況","台灣及帳戶rollout資格","週用量數字","帳戶bonus精確效期","當地總價與取消條件"],"sources":[{"url":"https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity","label":"官方公開正文","scope":"Perplexity Pro：週用量與一次4000點分池","evidence":"付費Consumer Pro逐步推出每週Computer用量，首次使用起週期、未用不結轉；不含免費促銷Pro、Max或Enterprise。Pro沒有固定月點數，首次可能獲4000點約30天到期，一帳一次，取消重訂不再領。週池先用再扣bonus／plan／purchased；無點僅Light，有點可選較高effort並更快耗週池。auto-refill預設關閉。定價頁USD17/月為年繳折算，非月付承諾。","accessed_time_range":"2026-10-24T10:56:00+08:00–2026-10-24T11:00:43+08:00"},{"url":"https://www.perplexity.ai/enterprise/pricing","label":"官方定價頁（成功讀取後hub重開錯誤）","scope":"年繳折算價與bonus","evidence":"個人Pro USD17/月年繳折算；4000bonus。","accessed_time_range":"2026-10-24T10:56:00+08:00–2026-10-24T11:00:43+08:00"},{"url":"https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity","label":"本輪官方來源受阻，非政策核實","scope":"僅來源可讀性；不刷新verified_at","evidence":"直接讀取HTTP 403；Chromium顯示Performing security verification，未取得方案正文。歷史4,000點、效期及週用量未重核。","accessed_time_range":"2026-11-01T16:05:52+08:00/2026-11-01T16:07:39+08:00"},{"url":"https://www.perplexity.ai/enterprise/pricing","label":"本輪定價來源受阻","scope":"僅來源可讀性；非價格核實","evidence":"直接讀取HTTP 403，未取得定價正文；歷史US$17年繳折算價、贈點及促銷狀態未重核。","accessed_time_range":"2026-11-01T16:05:52+08:00/2026-11-01T16:07:39+08:00"},{"url":"https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity","scope":"本輪來源追查，未核實優惠現況","evidence":"官方頁403或安全驗證，未取得正文；不代表優惠終止。","accessed_time_range":"2026-11-02T08:06:28+08:00/2026-11-02T08:08:06+08:00"}],"record_type":"opportunity","vpn_research":{"status":"not_verified","additional_cost_usd":null,"eligibility_note":"換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"},"priority_score":15.4,"priority_tier":"C","priority_note":"官方·條件式·費用未知·台灣未標記·≤15分鐘·有資格門檻","legal_status":"not_verified","status":"conditional","last_review_attempt_note":"官方點數及定價頁HTTP 403；Chromium仍顯示Cloudflare安全驗證，未取得正文，未重核價格、點數、促銷或台灣資格。"},
+    {
+      "id": "perplexity-watch",
+      "title": "Perplexity Pro：週用量與一次4000點分池（PayPal/Airtel已截止）",
+      "summary": "歷史資料稱Free每日3次Pro Search、Pro週用量與一次性約4,000點；價格、點數、歷史促銷及續費本輪官方頁受阻，均未重核，不保證現況。",
+      "categories": [
+        "QUALIFICATION",
+        "HIGH-QUOTA"
+      ],
+      "views": [],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": 15,
+      "effort_basis": "分析者估計填表／設定15分鐘，不含審核、協商或交付",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global"
+      ],
+      "verification": "Official",
+      "usage_type": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": "每週池；一次贈點約30天，依帳戶到期欄",
+      "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
+      "verified_at": "2026-10-25T13:30:00+08:00",
+      "last_review_attempt_at": "2026-11-03T04:07:20+08:00",
+      "verification_scope": "本輪官方頁受阻，未重核價格、免費搜尋額、點數、促銷或續費；verified_at沿用歷史。",
+      "discovered_at": "2026-10-23T10:40:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-11-03T08:08:06+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "本次官方頁遭存取阻擋，先前來源可讀；現況及台灣帳戶未核。",
+        "account_eligibility": "付費Consumer Pro且rollout已到帳戶；bonus酌情發放",
+        "billing_country": "未核",
+        "identity_residency": "未核",
+        "terms_restrictions": "不得以換IP取得身分資格；未操作VPN或註冊。",
+        "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
+      },
+      "unknowns": [
+        "2026-11-01官方點數、定價與條款頁受阻；歷史數字及促銷狀態未重核。",
+        "2026-10-30官方credits與定價頁受403及Cloudflare驗證阻擋，本次未重核現況",
+        "台灣及帳戶rollout資格",
+        "週用量數字",
+        "帳戶bonus精確效期",
+        "當地總價與取消條件"
+      ],
+      "sources": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+          "scope": "失敗追查，非成功複核",
+          "evidence": "HTTP 403及瀏覽器安全驗證；未取得正文，未重核優惠或資格。",
+          "accessed_at": "2026-11-03T04:07:20+08:00"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+          "label": "官方公開正文",
+          "scope": "Perplexity Pro：週用量與一次4000點分池",
+          "evidence": "付費Consumer Pro逐步推出每週Computer用量，首次使用起週期、未用不結轉；不含免費促銷Pro、Max或Enterprise。Pro沒有固定月點數，首次可能獲4000點約30天到期，一帳一次，取消重訂不再領。週池先用再扣bonus／plan／purchased；無點僅Light，有點可選較高effort並更快耗週池。auto-refill預設關閉。定價頁USD17/月為年繳折算，非月付承諾。",
+          "accessed_time_range": "2026-10-24T10:56:00+08:00–2026-10-24T11:00:43+08:00"
+        },
+        {
+          "url": "https://www.perplexity.ai/enterprise/pricing",
+          "label": "官方定價頁（成功讀取後hub重開錯誤）",
+          "scope": "年繳折算價與bonus",
+          "evidence": "個人Pro USD17/月年繳折算；4000bonus。",
+          "accessed_time_range": "2026-10-24T10:56:00+08:00–2026-10-24T11:00:43+08:00"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+          "label": "本輪官方來源受阻，非政策核實",
+          "scope": "僅來源可讀性；不刷新verified_at",
+          "evidence": "直接讀取HTTP 403；Chromium顯示Performing security verification，未取得方案正文。歷史4,000點、效期及週用量未重核。",
+          "accessed_time_range": "2026-11-01T16:05:52+08:00/2026-11-01T16:07:39+08:00"
+        },
+        {
+          "url": "https://www.perplexity.ai/enterprise/pricing",
+          "label": "本輪定價來源受阻",
+          "scope": "僅來源可讀性；非價格核實",
+          "evidence": "直接讀取HTTP 403，未取得定價正文；歷史US$17年繳折算價、贈點及促銷狀態未重核。",
+          "accessed_time_range": "2026-11-01T16:05:52+08:00/2026-11-01T16:07:39+08:00"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+          "scope": "本輪來源追查，未核實優惠現況",
+          "evidence": "官方頁403或安全驗證，未取得正文；不代表優惠終止。",
+          "accessed_time_range": "2026-11-02T08:06:28+08:00/2026-11-02T08:08:06+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
+      },
+      "priority_score": 15.4,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·≤15分鐘·有資格門檻",
+      "legal_status": "not_verified",
+      "status": "conditional",
+      "last_review_attempt_note": "官方頁HTTP 403，瀏覽器遇安全驗證，替代頁亦受阻；未取得正文、不推定終止；verified_at不變。"
+    },
     {
       "id": "cloudflare-workers-ai-free",
       "title": "Workers AI：每日10,000 Neurons免費，UTC午夜重置",
@@ -8038,8 +8222,8 @@
       "usable_duration": null,
       "access_risk": "資格、審核、限額與政策可能變更",
       "verified_at": "2026-10-25T17:35:00+08:00",
-      "last_review_attempt_at": "2026-11-02T08:08:06+08:00",
-      "last_review_attempt_note": "官方Education及比較頁回403，瀏覽器遇安全驗證，未取得正文；未重核價格或配額，不推定停辦。",
+      "last_review_attempt_at": "2026-11-03T04:07:20+08:00",
+      "last_review_attempt_note": "官方頁HTTP 403，瀏覽器遇安全驗證，替代頁亦受阻；未取得正文、不推定終止；verified_at不變。",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -8060,6 +8244,12 @@
         "確切搜尋／Research／Computer 限額"
       ],
       "sources": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro",
+          "scope": "失敗追查，非成功複核",
+          "evidence": "HTTP 403及瀏覽器安全驗證；未取得正文，未重核優惠或資格。",
+          "accessed_at": "2026-11-03T04:07:20+08:00"
+        },
         {
           "url": "https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro",
           "scope": "本輪來源可讀性，非優惠核實",
@@ -8499,7 +8689,7 @@
     {
       "id": "claude-scientists",
       "title": "Claude科學研究方案：Standard免費／Premium US$15",
-      "summary": "科學家Team限首批10,000位核驗者、每實驗室1–25席；Standard US$0/席月、Premium US$15/席月優惠12個月，需有效付款方式，期滿按當時價格自動續訂。另有每月Standard US$20/席、Premium US$100/席API點，工作區合計最高US$500；須有效訂閱滿7天並由Owner連結Console，帳期不結轉，非互動Claude Code額度。名額、台灣機構核准及個案付款未核。",
+      "summary": "科學家Team限首批10,000位核驗者、每實驗室1–25席；Standard US$0/席月、Premium US$15/席月優惠12個月，需有效付款方式，期滿按當時價格自動續訂。另有每月Standard US$20/席、Premium US$100/席API點，工作區合計最高US$500；須有效訂閱滿7天並由Owner連結Console，帳期不結轉，不含互動Claude Code；自帶連結Console API key自行執行的claude -p及Agent SDK可用。名額、台灣機構核准及個案付款未核。",
       "categories": [
         "FREE",
         "VALUE-DEAL",
@@ -8526,19 +8716,19 @@
       "cancellation": "於優惠期末前取消避免按當時價格自動續訂；條款稱存取通常至下一帳期，已收費通常不退（適用法律例外）。既有年約轉月付之未用預付費轉帳戶點數，非退至付款工具。",
       "usable_duration": "自註冊與促銷推出兩者較晚日期起12個月；期滿按當時價格",
       "access_risk": "名額有限且須付款方式；超額用量另收費，12個月後自動續費。FAQ與條款對90天未活動的後果不一致。",
-      "verified_at": "2026-11-01T03:08:04+08:00",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": "2026-08-27",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-02T03:08:04+08:00",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Claude Team for scientists；Standard US$0/席/月、Premium US$15/席/月（官方稱5倍用量），優惠期12個月。每方案1–25席；多席共享研究團隊。每Standard席每月另有US$20、每Premium席US$100 API credits，所有席位合併後每工作區每月最多US$500。",
         "account_eligibility": "須由認可大學或非營利研究機構PI/同等職位驗證並申請；通過後可邀請博士後、研究生、研究人員。營利公司、CRO及產業R&D不合格；每實驗室一方案，僅限一個；不可轉讓或與其他優惠併用。",
         "billing_country": "須在計畫可用地區，並提供有效付款方式；Premium超額用量另以標準費率計費。條款價格未含適用稅，付款方式/台灣結帳未核。",
         "identity_residency": "Claude現行官方支援說明已列Taiwan；2026-11-12生效之另一地區政策亦列Taiwan。服務可用不代表科學家方案個人或機構必獲核准。",
-        "terms_restrictions": "10,000名額可隨時關閉；優惠12個月後自動續費，超額使用另收費。API點須有效訂閱滿7日並由Team Owner連結單一Console組織，每帳期過期、不結轉；非互動Claude Code或席位超額點數，Console自動儲值/已購點可造成額外費用。FAQ與促銷條款對90日無活動的恢復原價或停帳（含可能按比例退款）說法不同；不得虛報或多帳。",
+        "terms_restrictions": "10,000名額可隨時關閉；優惠12個月後自動續費，超額使用另收費。API點須有效訂閱滿7日並由Team Owner連結單一Console組織，每帳期過期、不結轉；不含互動Claude Code或席位超額點數；自帶連結Console API key自行執行claude -p及Agent SDK適用，方案登入或由GitHub Action、IDE、桌面啟動者不適用，Console自動儲值/已購點可造成額外費用。FAQ與促銷條款對90日無活動的恢復原價或停帳（含可能按比例退款）說法不同；不得虛報或多帳。",
         "taiwan_note": "現行Claude支援說明列台灣，但科學家方案的台灣研究機構核驗、帳單及個人付款仍未核實，故優惠資格Unknown。"
       },
       "unknowns": [
@@ -8547,8 +8737,24 @@
         "超額費率、各席位確切含量與Premium/Standard升級結帳流程"
       ],
       "sources": [
-        {"url":"https://www.anthropic.com/legal/team-plan-for-scientists-terms","scope":"本輪局部核實科學家資格、付款及期滿續訂；台灣方案個案與法律未核","evidence":"須認可大學或非營利研究機構PI驗證及有效付款方式；12個月後依當時價格自動續訂；90日無合格使用可能終止優惠，與FAQ描述差異仍保留。","accessed_time_range":"2026-11-01T03:05:00+08:00/2026-11-01T03:08:04+08:00"},
-        {"url":"https://support.claude.com/en/articles/8461763-where-can-i-access-claude","scope":"本輪局部核實一般服務支援台灣，非優惠資格","evidence":"Claude一般支援地區列Taiwan；不代表科學家方案台灣研究機構或付款已獲核准。","accessed_time_range":"2026-11-01T03:05:00+08:00/2026-11-01T03:08:04+08:00"},
+        {
+          "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-ultra-and-team-plans",
+          "scope": "API點數與Claude Code用途",
+          "evidence": "連結Console API key自行執行claude -p及Agent SDK可用；互動、方案登入或GitHub Action、IDE、桌面啟動不適用。每Standard/Premium席$20/$100，工作區每月上限$500，滿七日及連結要求。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/team-plan-for-scientists-terms",
+          "scope": "本輪局部核實科學家資格、付款及期滿續訂；台灣方案個案與法律未核",
+          "evidence": "須認可大學或非營利研究機構PI驗證及有效付款方式；12個月後依當時價格自動續訂；90日無合格使用可能終止優惠，與FAQ描述差異仍保留。",
+          "accessed_time_range": "2026-11-01T03:05:00+08:00/2026-11-01T03:08:04+08:00"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/8461763-where-can-i-access-claude",
+          "scope": "本輪局部核實一般服務支援台灣，非優惠資格",
+          "evidence": "Claude一般支援地區列Taiwan；不代表科學家方案台灣研究機構或付款已獲核准。",
+          "accessed_time_range": "2026-11-01T03:05:00+08:00/2026-11-01T03:08:04+08:00"
+        },
         {
           "url": "https://www.anthropic.com/legal/team-plan-for-scientists-terms",
           "scope": "本輪局部重查促銷期起算、自動續訂及無活動後果",
@@ -8643,7 +8849,8 @@
       "legal_status": "not_verified",
       "priority_score": 18.1,
       "priority_tier": "B",
-      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·有資格門檻"
+      "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·有資格門檻",
+      "verification_scope": "本輪核官方API額度用途；其他方案資格與付款條款由既有來源及本輪複核支持，台灣個案及法律未核。"
     },
     {
       "id": "claude-startups-closed",
@@ -9652,7 +9859,7 @@
     {
       "id": "sambanova-access-policy",
       "title": "SambaNova：Free名稱不等免費推論",
-      "summary": "官方Plans的Free名稱不等於免費推論：先加付款方式並購買credits才可發首個請求。舊rate-limits文件曾列未綁卡Free Tier及各模型限額；本次文件受安全驗證阻擋，未能重核，與Plans適用關係仍待釐清。Preview及模型授權限制沿用舊來源，台灣資格未明示。",
+      "summary": "官方Plans稱Free須綁付款方式並購點才能首次請求；同時官方rate-limits文件列未綁卡Free Tier及各列模型20 RPM、20 RPD、200,000 TPD。兩者適用關係待供應商釐清；限額表不證免費點數或可免費請求。Preview僅供評估，台灣資格未知。",
       "categories": [
         "QUALIFICATION",
         "BETA-ACCESS"
@@ -9678,13 +9885,13 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、容量、條款與政策可能改變",
-      "verified_at": "2026-11-01T19:07:41+08:00",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-23T14:02:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-02T19:07:41+08:00",
-      "verification_scope": "本次僅複核Plans首請求付款前提；rate-limits文件403及安全驗證，舊限額、Preview、台灣及法律未重核。",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
+      "verification_scope": "本輪重核Plans與rate-limits文件衝突、列示限額及Preview限制；帳戶實際行為、台灣及法律未核。",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Plans要求綁卡購credits；rate-limit文件仍列未綁卡Free Tier，需供應商釐清。",
@@ -9701,8 +9908,30 @@
         "個別模型商用license與服務轉售邊界"
       ],
       "sources": [
-        {"url":"https://cloud.sambanova.ai/plans","scope":"本次複核首請求付款前提","evidence":"Free仍列先加入付款方式並購買credits，才可開始首個請求；不證明活動豁免。","accessed_time_range":"2026-11-01T19:06:58+08:00/2026-11-01T19:07:41+08:00"},
-        {"url":"https://docs.sambanova.ai/docs/en/models/rate-limits","scope":"本次來源讀取限制","evidence":"HTTP 403，瀏覽器為安全驗證頁；未取得限額正文，不推定舊來源衝突已解決。","accessed_at":"2026-11-01T19:07:23+08:00"},
+        {
+          "url": "https://cloud.sambanova.ai/plans",
+          "scope": "首請求付款前提",
+          "evidence": "Free標示加入付款方式及購買credits才能發首個請求；不證免付費額度。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://docs.sambanova.ai/docs/en/models/rate-limits.md",
+          "scope": "未綁卡分級、限額及Preview",
+          "evidence": "Free Tier定義為未綁卡；所列模型各20 RPM、20 RPD、200,000 TPD；Preview僅評估及實驗。與Plans首請求須購點並存。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://cloud.sambanova.ai/plans",
+          "scope": "本次複核首請求付款前提",
+          "evidence": "Free仍列先加入付款方式並購買credits，才可開始首個請求；不證明活動豁免。",
+          "accessed_time_range": "2026-11-01T19:06:58+08:00/2026-11-01T19:07:41+08:00"
+        },
+        {
+          "url": "https://docs.sambanova.ai/docs/en/models/rate-limits",
+          "scope": "本次來源讀取限制",
+          "evidence": "HTTP 403，瀏覽器為安全驗證頁；未取得限額正文，不推定舊來源衝突已解決。",
+          "accessed_at": "2026-11-01T19:07:23+08:00"
+        },
         {
           "url": "https://cloud.sambanova.ai/plans",
           "label": "官方來源",
@@ -19806,14 +20035,14 @@
       "cancellation": null,
       "usable_duration": "30天",
       "access_risk": "名額先到先得且剩餘名額未知；企業環境、部署與資料接入範圍須事先確認。30日免費PoC不代表後續正式導入免費；未核PoC專屬資料處理與期末條件。",
-      "verified_at": "2026-10-30T12:06:41+08:00",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": "2026-10-19",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-10-31T12:06:41+08:00",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
       "priority": "watch",
-      "verification_scope": "本次重核公告、產品頁及申請表原始HTML；入口存在不證剩餘名額，未提交或核PoC專屬條款及法律。",
+      "verification_scope": "本輪重核活動公告、PoC產品頁與未提交申請表；剩餘名額、台灣與法律未核。",
       "status": "conditional",
       "eligibility": {
         "service_availability": "富士Soft官方頁仍提供30日免費PoC申請入口；活動公告日期為2026-10-19，先到10家公司，未公布活動截止日或目前餘額。",
@@ -19829,6 +20058,18 @@
         "PoC專屬合約/DPA、正式部署費用、試用期末自動續約或取消條件"
       ],
       "sources": [
+        {
+          "url": "https://sem-inq.fsi.co.jp/public/application/add/7999",
+          "scope": "申請入口，未提交",
+          "evidence": "表單仍有免費PoC選項與姓名、組織、電話、email及隱私同意；不能證明有剩餘名額。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
+        {
+          "url": "https://www.fsi.co.jp/company/news/20261019.html",
+          "scope": "公告名額與期間",
+          "evidence": "先到10企業、30日免費PoC；公告未公布剩餘名額。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
         {
           "url": "https://www.fsi.co.jp/security/ai-security/index.html",
           "label": "富士Soft官方產品頁",
@@ -23520,27 +23761,44 @@
       "cancellation": null,
       "usable_duration": "Mem0負擔模型費30天；2026-10-26前註冊者過渡至2026-11-25。",
       "access_risk": "免費條款§5.2授權內容永久、不可撤回地用於包括訓練及改善模型；自帶金鑰由模型供應商收費。免費池用盡回錯誤；用量計費須自行啟用並設上限。",
-      "verified_at": "2026-11-01T12:07:40+08:00",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-24T09:59:58+08:00",
       "announcement_at": null,
       "previous_limit": "舊Hobby每月10,000新增及1,000檢索；舊Starter每月US$19，已不向新戶出售。",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-02T12:07:40+08:00",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
         "account_eligibility": "Vercel Marketplace建立的組織由Vercel管理且不能自帶金鑰；一般帳戶未登入或申請。",
         "billing_country": "未核",
         "identity_residency": "未核；地區標籤不代表該國所有人均符合",
-        "terms_restrictions": "官方Terms §5.2：Free Plan對Customer Content授予永久、不可撤回、全球、免權利金權利，可用於任何合法目的，包括訓練/改善AI模型；§10.1免費存取可由任一方隨時終止；§4.1保留usage-based overages。Paid Plan具不同保護。台灣個資法/跨境規定未核。",
+        "terms_restrictions": "官方Terms §5.2：Free Plan對Customer Content授予永久、不可撤回、全球、免權利金權利，可用於任何合法目的，包括訓練/改善AI模型；§10.1免費存取可由任一方隨時終止；§4.1保留usage-based overages。Paid Plan具不同保護。台灣個資法/跨境規定未核。 §1.6將Customer Content定義為輸入、輸出及其他上傳或傳送內容，不含Performance Data與Aggregate Data；自帶金鑰不代表免除免費方案授權。",
         "taiwan_note": "未充分核實台灣可合法領取及使用者資格，維持Unknown"
       },
       "unknowns": [
-        "Free內容永久/不可撤回訓練授權的具體資料範圍與撤回可能性；付費方案相異條款。",
+        "免費授權實際適用範圍、資料刪除與撤回可能性；付費方案不同且有聚合去識別資料例外。",
         "是否免卡、台灣帳戶及付款資格、實際遷移和第三方模型費用。"
       ],
       "sources": [
-        {"url":"https://docs.mem0.ai/platform/pricing","scope":"本輪FAQ的30天、過渡期、額度及Marketplace例外","evidence":"前30天由Mem0付模型費；10/26前註冊過渡至11/25；Vercel Marketplace建立的組織不能BYOK。模型供應商另收費，台灣個案未核。","accessed_time_range":"2026-11-01T12:06:27+08:00/2026-11-01T12:07:40+08:00"},
+        {
+          "url": "https://mem0.ai/terms",
+          "scope": "內容定義及免費授權",
+          "evidence": "§1.6內容含輸入、輸出及上傳或傳送內容；§5.2免費方案授權永久、不可撤回，可用於模型訓練及改善。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
+        {
+          "url": "https://docs.mem0.ai/platform/pricing.md",
+          "scope": "免費額度、過渡及BYOK",
+          "evidence": "前30日每月10,000新增/1,000檢索；BYOK每月50,000/10,000，模型供應商另計費；10/26前註冊過渡至11/25。Vercel Marketplace組織不能BYOK。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
+        {
+          "url": "https://docs.mem0.ai/platform/pricing",
+          "scope": "本輪FAQ的30天、過渡期、額度及Marketplace例外",
+          "evidence": "前30天由Mem0付模型費；10/26前註冊過渡至11/25；Vercel Marketplace建立的組織不能BYOK。模型供應商另收費，台灣個案未核。",
+          "accessed_time_range": "2026-11-01T12:06:27+08:00/2026-11-01T12:07:40+08:00"
+        },
         {
           "url": "https://docs.mem0.ai/platform/pricing",
           "scope": "現行Free及自帶金鑰額度、30天與既有帳戶過渡；台灣個案未核",
@@ -23561,7 +23819,7 @@
           "evidence": "2026-10-25 11:45:58–11:52:15 Asia/Taipei直接查閱；Terms標示2026-08-03更新。§5.2 Free Plan永久、不可撤回、全球免權利金授權Customer Content供任何合法目的，包括AI模型訓練/改善；§10.1 Free存取可由任一方隨時終止；§4.1保留usage-based overages。台灣法源未核。"
         }
       ],
-      "verification_scope": "本輪僅核FAQ額度、30天與11/25過渡、Marketplace例外及條款指定節；未驗個別帳戶、台灣或法律。",
+      "verification_scope": "本輪核免費FAQ、30日、過渡期、BYOK與條款§1.6、§5.2；台灣及個別帳戶未核。",
       "record_type": "opportunity",
       "vpn_research": {
         "status": "not_verified",
@@ -28934,7 +29192,7 @@
     {
       "id": "freshservice-agent-studio-promotion-extension",
       "title": "Freshservice：Agent Studio促銷正文延至12/31",
-      "summary": "官方支援文件與FAQ確認Freddy AI Agent Studio促銷Free Service向Growth、Pro、Enterprise客戶延長開放至2026/12/31；非整套Freshservice免費，MSP模式排除；促銷結束後定價待公布。",
+      "summary": "官方支援文件與FAQ確認Freddy AI Agent Studio促銷Free Service向Growth、Pro、Enterprise客戶延長開放至2026/12/31；非整套Freshservice免費，MSP模式排除；促銷結束後定價待公布。 底層Growth每席US$49/月、Pro US$99/月（均年繳），Enterprise報價。",
       "categories": [
         "QUALIFICATION"
       ],
@@ -28959,28 +29217,45 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "至2026-12-31",
-      "access_risk": "底層訂閱成本、台灣帳戶資格、促銷後價格及固定上限未核",
-      "verified_at": "2026-10-31T15:07:33+08:00",
+      "access_risk": "Growth每席US$49/月、Pro US$99/月均為年繳價格，Enterprise需報價；台灣帳戶資格、促銷後價格及固定上限未核。",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-24T18:10:29+08:00",
       "announcement_at": null,
       "previous_limit": "搜尋摘要呈2026-09-30；並非本輪讀到的現行正文，正文9/29更新為12/31。",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-01T15:07:33+08:00",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，不等於台灣帳戶可用",
         "account_eligibility": "官方公告正文與FAQ均確認Growth／Pro／Enterprise合格客戶可免費使用Agent Studio至2026-12-31；不是整套Freshservice免費，MSP模式不適用。公告metadata亦已列12/31；歷史9/30摘要差異保留於previous_limit。促銷後定價待公布，未列上限不代表無限。",
-        "billing_country": "未核實",
+        "billing_country": "官方定價Growth US$49/agent/月、Pro US$99/agent/月，均年繳；Enterprise需報價。台灣帳單及適用稅費未核。",
         "identity_residency": "未核實",
         "terms_restrictions": "不以換IP、借帳號或假資料取得資格",
         "taiwan_note": "尚無充分台灣及個人資格證據，Unknown"
       },
       "unknowns": [
-        "底層訂閱成本、台灣帳戶資格、促銷後價格及固定上限未核",
+        "台灣帳戶資格、促銷後價格、稅費及固定上限未核；Growth/Pro價格為年繳折算。",
         "未登入或申請；用戶個別資格未確認"
       ],
       "sources": [
-        {"url":"https://support.freshservice.com/support/solutions/articles/50000013885-ai-agent-studio-faqs","scope":"本次局部複核：促銷及資格","evidence":"Growth、Pro、Enterprise促銷至12/31；MSP排除，期後定價待公布。","accessed_at":"2026-10-31T15:07:33+08:00"},
+        {
+          "url": "https://support.freshservice.com/support/solutions/articles/50000012644-free-ai-agent-studio-access-for-growth-pro-and-enterprise",
+          "scope": "促銷對象及期限",
+          "evidence": "合格Growth、Pro、Enterprise客戶Agent Studio促銷Free Service至2026-12-31；期後定價未公布。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://www.freshworks.com/freshservice/pricing/",
+          "scope": "底層訂閱價格，不是促銷後Agent Studio價格",
+          "evidence": "Growth $49/agent/月、Pro $99/agent/月，均按年繳；Enterprise報價。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
+        {
+          "url": "https://support.freshservice.com/support/solutions/articles/50000013885-ai-agent-studio-faqs",
+          "scope": "本次局部複核：促銷及資格",
+          "evidence": "Growth、Pro、Enterprise促銷至12/31；MSP排除，期後定價待公布。",
+          "accessed_at": "2026-10-31T15:07:33+08:00"
+        },
         {
           "url": "https://support.freshservice.com/support/solutions/articles/50000012644-free-ai-agent-studio-access-for-growth-pro-and-enterprise",
           "label": "Freshservice官方支援公告",
@@ -29006,9 +29281,8 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
-      "status": "conditional"
-    ,
-      "verification_scope": "本次僅重查：促銷及資格；台灣個案、其他舊欄位及法律未全面核實。"
+      "status": "conditional",
+      "verification_scope": "重核促銷對象、期限及官方年繳底層價格；台灣、個案及法律未核。"
     },
     {
       "id": "aws-free-tier-new-customer-200-six-months",
@@ -43128,15 +43402,15 @@
       "usage_type": "Fixed credits",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "cancellation": "首月US$2,000須為平台實際消費，非免費註冊即送。一般以預付點數扣用、餘額不足可停用，亦可能另開7日內應付帳單；費用及點數原則不退，但依法或供應商非違約終止等條款例外適用。",
+      "cancellation": "首月US$2,000須為平台實際消費，非免費註冊即送。一般以預付點數扣用、餘額不足可停用，亦可能另開7日內應付帳單；費用及點數原則不退，但依法或供應商非違約終止等條款例外適用。 若GMI同意退還相關預付點數，條款§6.4(b)規定扣除關聯免費點數價值，可能使可退款額為零。",
       "usable_duration": "官方稱90日；確切起算點未明",
       "access_risk": "限前25家a16z投資組合公司，剩餘名額與活動停止日未公布；須首月實際消費US$2,000才解鎖US$5,000。模型條款、來源地及出口審查適用；台灣帳單/公司核准未知，先確認席位及門檻起算再消費。",
-      "verified_at": "2026-10-31T12:06:26+08:00",
+      "verified_at": "2026-11-03T04:09:19+08:00",
       "discovered_at": "2026-10-26T10:50:51+08:00",
       "announcement_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-01T12:06:26+08:00",
-      "verification_scope": "本次僅複核活動頁的a16z資格、消費門檻、額度、折扣及效期；剩餘名額、台灣資格、條款及法律未重查。",
+      "next_review_at": "2026-11-04T04:09:19+08:00",
+      "verification_scope": "本輪重核活動門檻與效期、一般退款條款；台灣個案、剩餘名額及法律未核。",
       "eligibility": {
         "service_availability": "a16z Marketplace專屬，前25家；US$2,000首月平台消費後解鎖US$5,000、90日有效，須驗證核准。",
         "account_eligibility": "須為a16z portfolio company，intro call及onboarding；一般新創或個人不合格。",
@@ -43151,6 +43425,18 @@
         "試跑額度與適用模型、法律/監管適用未核"
       ],
       "sources": [
+        {
+          "url": "https://www.gmicloud.ai/en/legal/console-terms-of-service",
+          "scope": "條款退款抵扣",
+          "evidence": "2026-07-07生效條款§6.4(b)：若同意退還相關預付點數，關聯免費點數價值從可退款金額扣除。",
+          "accessed_at": "2026-11-03T04:07:38+08:00"
+        },
+        {
+          "url": "https://www.gmicloud.ai/a16z",
+          "scope": "活動門檻、效期與折扣",
+          "evidence": "限a16z前25家；首月消費$2,000解鎖$5,000，點數有效90日；另有dedicated endpoint八折最多200小時。",
+          "accessed_at": "2026-11-03T04:09:19+08:00"
+        },
         {
           "url": "https://www.gmicloud.ai/a16z",
           "scope": "前25家a16z新創、首月消費門檻、贈額效期與另一折扣",
@@ -46229,22 +46515,25 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-11-03T03:09:20+08:00",
+  "latest_research_at": "2026-11-03T04:09:19+08:00",
   "last_research_run": {
-    "started_at": "2026-11-03T03:06:01+08:00",
-    "completed_at": "2026-11-03T03:09:20+08:00",
+    "started_at": "2026-11-03T04:06:02+08:00",
+    "completed_at": "2026-11-03T04:09:19+08:00",
     "reviewed_ids": [
-      "coreweave-aria-limited-free",
-      "coreweave-forge-free-pricing-transition",
-      "deepinfra-two-minute-papers-twenty-credit",
-      "vultr-new-customer-credit-codes-watch",
-      "x-api-xai-spend-credit-rewards",
-      "daytona-startup-amount-conflict"
+      "claude-scientists",
+      "gmi-a16z-first25-two-k-spend-five-k-credit",
+      "freshservice-agent-studio-promotion-extension",
+      "fujisoft-workforce-ai-security-poc",
+      "mem0-hobby-memory-api",
+      "sambanova-access-policy"
     ],
     "new_ids": [
-      "orkes-developer-playground-free-prototyping"
+      "langsearch-free-daily-token-search-api"
     ],
-    "unreviewed_existing_count": 782,
-    "attempted_failed_ids": []
+    "unreviewed_existing_count": 783,
+    "attempted_failed_ids": [
+      "perplexity-education",
+      "perplexity-watch"
+    ]
   }
 }

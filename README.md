@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **789 筆**（588 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 03:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **782 筆**未完成本輪複核；新增 1 項機會。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **790 筆**（589 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 04:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **783 筆**未完成本輪複核（其中 2 筆來源讀取失敗）；新增 1 項機會。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,9 +38,9 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-03 03:06–03:09 本輪：起始 788 筆，03:06 到期 26 筆（含已結束歷史）；避開上一輪剛核的 6 筆，局部複核 CoreWeave ARIA、Forge、DeepInfra、Vultr、X API、Daytona。DeepInfra 一般計費要求加卡或預付，活動是否豁免未知，修正設定成本為未知；Daytona 宣傳及正式條款上限仍衝突。新增 Orkes 免費開發者原型環境，非免費模型額度。Pangea 舊免費額度與現行註冊入口未證，未新增；Patronus 未取得免費額度證據。未登入、申請或付款。
+2026-11-03 04:06–04:09 本輪：起始 789 筆，04:06 到期 24 筆（17 筆未標為結束）；避開上一輪剛核 6 筆。複核 Claude 科學家、GMI a16z、Freshservice、富士Soft、Mem0、SambaNova；Perplexity Education及Pro來源403及安全驗證，僅記錄失敗、不刷新核實時間。Claude API點數適用自行以連結Console API key執行的 `claude -p`，修正原有錯誤；Freshservice補列底層年繳價格。SambaNova官方購點前提與未綁卡限額仍衝突。新增 LangSearch 免費搜尋API，不含免費模型推論；每日額度數字及台灣註冊未知。未登入、申請或付款。
 
-下輪優先：`coreweave-aria-limited-free` 查[官方定價](https://coreweave.com/forge-pricing/inference-agents)之期限及台灣資格；`coreweave-forge-free-pricing-transition` 向[官方文件及支援](https://docs.coreweave.com/products/inference/serverless/usage-limits)確認預付與月結適用關係；`deepinfra-two-minute-papers-twenty-credit` 查[活動](https://deepinfra.com/papers)與[一般定價](https://deepinfra.com/pricing)是否豁免加卡或預付；`daytona-startup-amount-conflict` 向[官方](https://www.daytona.io/startups)確認50K／100K衝突；`vultr-new-customer-credit-codes-watch` 向[官方優惠](https://www.vultr.com/coupons/)確認各碼期限、GPU及台灣付款資格。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
+下輪優先：`sambanova-access-policy` 向[Plans](https://cloud.sambanova.ai/plans)與[限額文件](https://docs.sambanova.ai/docs/en/models/rate-limits.md)確認新戶實際付款前提；`perplexity-education` 追查[官方教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)的現行價格及額度；`perplexity-watch` 追查[官方點數說明](https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity)及促銷狀態；`claude-scientists` 追查[方案](https://claude.com/programs/team-plan-for-scientists)剩餘名額與台灣機構資格；`freshservice-agent-studio-promotion-extension` 追查[官方FAQ](https://support.freshservice.com/support/solutions/articles/50000013885-ai-agent-studio-faqs)促銷後定價。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 

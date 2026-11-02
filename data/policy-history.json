@@ -12531,5 +12531,38 @@
     "change_type": "new_opportunity",
     "description": "免費個人工作流程原型環境，無SLA、不適合生產，資源可變；OpenAI整合須自備API key，台灣與付款條件未核。",
     "sources": ["https://orkes.io/pricing", "https://docs.orkes.io/content/integrations/ai-llm/open-ai"]
+  },
+  {
+    "record_id": "claude-scientists",
+    "verified_at": "2026-11-03T04:09:19+08:00",
+    "previous_limit": "曾誤稱非互動Claude Code不適用API點數",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_correction",
+    "sources": [
+      "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-ultra-and-team-plans"
+    ],
+    "note": "自行使用連結Console API key執行claude -p及Agent SDK適用；互動及其他指定入口不適用。"
+  },
+  {
+    "record_id": "freshservice-agent-studio-promotion-extension",
+    "verified_at": "2026-11-03T04:09:19+08:00",
+    "previous_limit": "底層訂閱成本未核",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "change_type": "evidence_clarification",
+    "sources": [
+      "https://www.freshworks.com/freshservice/pricing/"
+    ],
+    "note": "Growth $49/agent/月、Pro $99/agent/月均年繳；Enterprise報價。"
+  },
+  {
+    "record_id": "langsearch-free-daily-token-search-api",
+    "verified_at": "2026-11-03T04:09:19+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "initial_baseline",
+    "sources": [
+      "https://langsearch.com/pricing",
+      "https://docs.langsearch.com/limits/api-limits"
+    ]
   }
 ]
