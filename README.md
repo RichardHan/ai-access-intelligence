@@ -4,11 +4,11 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **788 筆**（587 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 01:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **8 筆**既有案例，其餘 **780 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **788 筆**（587 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 02:08 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **782 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
-可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、證據與用量篩選。免費專區排除明確已截止的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
+可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、證據與用量篩選。免費專區排除明確已截止及宣布終止的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
 
 - [完整研究資料](data/offers.json)
 - [政策歷史](data/policy-history.json)
@@ -38,9 +38,9 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-03 本輪：起始 788 筆、實際到期 38 筆（01:06 台北時間）；複核 Kilo、Vast、Vultr、BazaarLink、DeepInfra、RealAds、Tencent TokenHub 與 Anthropic AI for Science。查閱 Browserbase、LanceDB、Cerebrium、Arcade；後兩者已收錄且未到期，前兩者額度或受理證據不足，不新增。來源局部失敗後改用官方替代頁，無整筆複核失敗。前次本輪 ID 不因刷新時間重查。
+2026-11-03 02:06 本輪：起始 788 筆，當時到期 31 筆；避開上一輪剛核的 8 筆，輪替 Felo、Granola、DigitalOcean × Secret、OpenCode、SpeechifyAI、Upstage，僅核各筆列明範圍。Cloudflare、AssemblyAI、ElevenLabs 候選已收錄，不新增。Felo 靜態頁僅有外殼，以瀏覽器讀取動態定價；未申請或操作帳戶。
 
-下輪優先：`bazaarlink-taiwan-free-model-gateway` 查免費入口與文件的共池、搜尋計費衝突；`vast-startup-spend-match` 查帳單文件與條款退款衝突；`tencent-tokenhub-free-trial` 查產品文件與促銷頁效期及共池；`realads-once-fifty-no-watermark` 查首頁、價格頁與條款的免費商用、浮水印及影片衝突；`vultr-match-ai-compute` 查 Match 官方活動頁與客服文件的 GPU 適用 SKU。依各紀錄 next_review_at 與當時新訊號選擇，不將已結束案例排入每日重查。
+下輪優先：`coreweave-aria-limited-free` 查官方免費期限與台灣資格；`coreweave-forge-free-pricing-transition` 查官方價格及計費轉換；`deepinfra-two-minute-papers-twenty-credit` 查活動期限與現有領取資格；`felo-standard-free-new-user-daily-two-hundred-campaign` 查官方定價之限時贈點及截止；`speechify-api-free-monthly-500k` 於 11/21 前後查官方定價中 Simba 3.5 促銷結束及共池。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
