@@ -91,6 +91,7 @@ function matches(o, f = {}) {
     && (!f.usage || o.usage_type === f.usage)
     && (!f.verification || o.verification === f.verification)
     && (!f.view || (o.views || []).includes(f.view))
+    && !(f.view === 'free' && ['expired', 'closed', 'applications_closed', 'closed_to_new_subscriptions'].includes(o.status))
     && (!f.tier || o.priority_tier === f.tier);
 }
 
