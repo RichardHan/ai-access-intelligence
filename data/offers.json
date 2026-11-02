@@ -1,8 +1,57 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-03T06:09:00+08:00",
-  "scope": "本輪局部複核2筆既有案例，新增0筆；788筆既有紀錄未完成本輪複核。僅核列明主張，台灣優惠資格及法律仍可能未知。",
+  "updated_at": "2026-11-03T07:09:22+08:00",
+  "scope": "本輪局部複核3筆既有案例，新增1筆機會；787筆既有紀錄未完成本輪複核。僅核列明主張，台灣優惠資格及法律仍可能未知。",
   "offers": [
+    {
+      "id": "lmstudio-bionic-free-local-no-account",
+      "title": "LM Studio Bionic Free：免費本機模型與 Agent",
+      "summary": "Bionic Free 提供本機模型與 Agent；本機及 LM Link 模型不耗雲端點數且不需 LM Studio 帳號。須自備相容硬體、下載模型並負擔電力與流量；雲端模型需帳號、計費與可用點數，不是免費代管 GPU。",
+      "record_type": "opportunity",
+      "status": "active",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": ["FREE"],
+      "views": ["free", "developer"],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "cost_note": "僅指 Bionic Free 本機軟體方案；設備、電力、流量及可選雲端推論另計。",
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費本機方案不需訂閱；付費方案與雲端費用另依官方條款。",
+      "usable_duration": "未列固定期限，官方方案可能變動。",
+      "access_risk": "本機模型須下載且符合硬體資源；免費網路搜尋上限、個別模型授權與台灣下載未核。",
+      "verified_at": "2026-11-03T07:07:56+08:00",
+      "discovered_at": "2026-11-03T07:07:56+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-03T07:07:56+08:00",
+      "verification_scope": "僅核官方免費方案、本機模型帳號與雲端計費條件；台灣下載、模型授權及法律未核。",
+      "eligibility": {
+        "service_availability": "官方文件列本機方案；未實測台灣下載。",
+        "account_eligibility": "本機及 LM Link 模型可不使用 LM Studio 帳號；雲端模型需登入及可用 credits。",
+        "billing_country": "本機模型不耗雲端 credits；雲端帳單與台灣付款資格未核。",
+        "identity_residency": "台灣個別可用性未核。",
+        "terms_restrictions": "模型須符合設備資源；個別模型與軟體授權仍須核對。",
+        "taiwan_note": "Unknown：官方所查內容未明列台灣資格，未實測下載。"
+      },
+      "unknowns": ["台灣下載與使用資格", "模型個別授權及最低硬體", "免費網路搜尋額度"],
+      "sources": [
+        {"url":"https://lmstudio.ai/pricing","scope":"Bionic Free 售價、本機模型及可選付費方案","evidence":"Free $0，含 Agent、本機 llama.cpp/MLX、最多五台 LM Link 與有限網路搜尋；Bionic+ 另為每月 US$20。","accessed_at":"2026-11-03T07:07:56+08:00"},
+        {"url":"https://lmstudio.ai/docs/bionic/accounts-plans-and-billing","scope":"本機與雲端帳號及點數差異","evidence":"本機及 LM Link 模型不耗 Bionic 雲端點數，且不需帳號；雲端模型需帳號及可用點數。","accessed_at":"2026-11-03T07:07:56+08:00"},
+        {"url":"https://lmstudio.ai/docs/bionic/models","scope":"本機模型硬體與雲端要求","evidence":"本機模型須下載並符合可用硬體；雲端模型須登入、設定計費及有點數。","accessed_at":"2026-11-03T07:07:56+08:00"}
+      ],
+      "priority_score": 17.8,
+      "priority_tier": "B",
+      "priority_note": "官方·活躍·免費·台灣未標記·時間未知"
+    },
     {
       "id": "langsearch-free-daily-token-search-api",
       "title": "LangSearch Free：AI代理搜尋API每日共享額度",
@@ -807,8 +856,8 @@
 {"id":"quillbot-student-discount-current-terms-watch","title":"Quillbot學生訂閱優惠：官方入口存在，折扣及台灣資格待核","summary":"官方學生入口metadata及頁面文字證明有學生訂閱優惠入口，但實際價格、折扣、核驗及台灣資格未取得。搜尋索引的最高25%與US$6.25/月未作核實證據；稍後重讀入口403。","record_type":"watchlist","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["QUALIFICATION"],"views":["education"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"effort_basis":"未登入、申請、付款或實測設定時間","taiwan":"Unknown","regions":[],"usage_type":"Student discount unconfirmed","quota_classification":"UNKNOWN","limited_confirmed":false,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-10-30T18:07:48+08:00","discovered_at":"2026-10-30T18:09:58+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"monthly","next_review_at":"2026-11-30T18:09:58+08:00","priority":"watch","vpn_research":{"status":"not_verified","additional_cost_usd":null,"eligibility_note":"不以跨區IP、偽造學籍或身分推定資格。"},"last_attempted_at":"2026-10-30T18:09:58+08:00","cancellation":null,"usable_duration":null,"access_risk":"先前僅讀到官方學生入口metadata／宣傳文字，非可兌領證明；稍後403。不得把搜尋摘要當現行優惠。","verification_scope":"Official僅指官方學生定價入口存在；不支持確切折扣、價格、期限、台灣核驗或可領取。18:09:41–18:09:58重讀403不刷新成功核實時間。","eligibility":{"service_availability":"先前官方upgrade/student的title及description顯示學生優惠；現行訂閱價格未取得。","account_eligibility":"學生身份核驗平台及可接受學校未核。","billing_country":"幣別、稅費、付款卡及台灣帳單資格未核。","identity_residency":"未取得台灣學籍／居住支持。","terms_restrictions":"未取得學生優惠完整條款，無法確認續訂、首年限制或疊加。","taiwan_note":"Unknown：學生入口存在不足以證明台灣學籍可兌領。"},"unknowns":["現行折扣與年度總價","核驗平台、台灣學籍及居住資格","有效期限、續費及取消規則","付款與法律適用未核"],"sources":[{"url":"https://quillbot.com/upgrade/student","scope":"僅官方學生定價入口存在，不證價格／折扣","evidence":"先前實讀title Student Pricing: Upgrade to Premium及description Discover exclusive Quillbot Premium plans for students；正文也有學生優惠宣傳。","accessed_time_range":"2026-10-30T18:07:20+08:00/2026-10-30T18:07:48+08:00"},{"url":"https://quillbot.com/upgrade/student","scope":"稍後重讀失敗，非優惠終止證據","evidence":"HTTP 403；只記查閱嘗試，不刷新成功核實時間。","accessed_time_range":"2026-10-30T18:09:41+08:00/2026-10-30T18:09:58+08:00"}],"priority_score":null,"priority_tier":null,"priority_note":"非機會紀錄（政策/待覆核），未評級"},
 {
   "id": "couchbase-activate-starter-kit-current-availability-watch",
-  "title": "Couchbase Capella Starter Kit：官方5,000 credits頁仍在，現行受理待核",
-  "summary": "官方頁列新Capella客戶可申請5,000 Enterprise credits（標稱US$10,000），另含顧問及認證；整包US$12,750非現金或模型API額度。頁面同時有2021活動及Lorem ipsum樣板，未證2026受理；耗盡後運行資源改按量收費。",
+  "title": "Couchbase Capella Starter Kit：新創申請與 Enterprise 合約限制",
+  "summary": "官方頁列新Capella客戶可申請5,000 Enterprise credits（標稱US$10,000），另含顧問及認證；整包US$12,750非現金或模型API額度。申請表可見台灣選項，但需合格新創計畫及Couchbase核准；超額與Enterprise合約可能產生費用。",
   "record_type": "watchlist",
   "status": "conditional",
   "verification": "Official",
@@ -834,12 +883,12 @@
   "benefit_cost_ratio": null,
   "savings_usd": null,
   "valuation_scenario": null,
-      "verified_at": "2026-11-02T03:09:00+08:00",
+      "verified_at": "2026-11-03T07:07:49+08:00",
   "discovered_at": "2026-10-30T18:09:58+08:00",
   "announcement_at": null,
   "previous_limit": null,
   "review_cadence": "daily",
-      "next_review_at": "2026-11-03T03:09:00+08:00",
+      "next_review_at": "2026-11-04T07:07:49+08:00",
   "priority": "watch",
   "vpn_research": {
     "status": "not_verified",
@@ -847,24 +896,27 @@
     "eligibility_note": "不以跨區IP、偽造學籍或身分推定資格。"
   },
   "cancellation": "需選Enterprise Plan；用完5,000 credits後仍運行的資源改按on-demand收費，非自動免費或硬停。完整取消程序未核。",
-  "usable_duration": "頁面稱limited-time但無現行截止，故按日追蹤；credits效期未列。",
-  "access_risk": "頁面未取得可用申請表，且混入2021活動及Lorem ipsum樣板；US$12,750為組合標價，非可直接領取現金。",
-      "verification_scope": "本輪僅複核新列來源明載主張；其他欄位、台灣個案與法律監管未全面重核。",
+  "usable_duration": "專屬條款稱最多12個月，可能提前取消或撤回；起算點及申請截止日未明。",
+  "access_risk": "申請表載入且可選Taiwan，不代表個案獲核；Enterprise須合約，超額收費；Preview條款限制須一併核對。",
+      "verification_scope": "本輪複核動態申請表、專屬促銷條款、Enterprise計費與Preview限制；未送件，台灣個案及法律未核。",
   "eligibility": {
-    "service_availability": "官方landing仍可讀，但限時現況及申請表未證；只列watchlist。",
-    "account_eligibility": "頁面要求新Capella客戶及完整真實資料；是否必須AWS Activate會員未列明。",
-    "billing_country": "歐洲／印度申請者需VAT；此條件不能推論台灣可領，其他付款要求未核。",
-    "identity_residency": "台灣及其他地區支持清單未取得。",
-    "terms_restrictions": "必須選Enterprise Plan避免額外on-demand費；耗盡額度後仍運行的資源恢復on-demand；促銷全文與有效期未取得。",
+    "service_availability": "申請表可見；實際核准與剩餘名額未核。",
+    "account_eligibility": "新Capella客戶、AWS Activate Startup或Google Cloud Startup合格參與者，限商業而非個人用途，須Couchbase核准；Preview條款另適用。",
+    "billing_country": "表單帳單國家可選Taiwan；不保證付款或核准。Enterprise須合約，個案承諾及價格未核。",
+    "identity_residency": "表單國家可選Taiwan，不代表台灣公司自動合格。",
+    "terms_restrictions": "每參與者一次，不得轉讓或兌現；需適用雲端基礎設施，超出贈額費用自付；Preview使用限制另適用。",
     "taiwan_note": "Unknown：無台灣核准、申請或付款證據。"
   },
   "unknowns": [
-    "2026現行受理、申請表、截止及名額",
-    "是否需AWS Activate資格",
-    "台灣公司、付款、領額及有效期",
-    "可抵服務範圍、取消流程及法律適用"
+    "剩餘名額、申請截止與個案核准",
+    "台灣公司付款、領額及12個月起算點",
+    "Enterprise合約最低承諾、取消流程及法律適用",
+    "促銷商業用途資格與Preview評估限制之個案適用"
   ],
   "sources": [
+    {"url":"https://info.couchbase.com/rs/302-GJY-034/images/Couchbase%20Capella%20AWS%20Activate%20%26%20Google%20Cloud%20Startup%20Promotion%20Terms%20and%20Conditions.pdf?version=0","scope":"專屬促銷資格、期限、Preview及超額費用","evidence":"AWS或Google新創計畫合格參與者、新Capella客戶，商業非個人用途；最多12個月、需核准、額外費用自付；Preview條款適用。","accessed_at":"2026-11-03T07:07:49+08:00"},
+    {"url":"https://info.couchbase.com/aws-activate.html","scope":"動態申請表及方案數量","evidence":"動態表單可見Taiwan國家與帳單國家選項；列5,000 Enterprise credits，未提交或證實個案核准。","accessed_at":"2026-11-03T07:07:49+08:00"},
+    {"url":"https://docs.couchbase.com/cloud/billing/billing.html","scope":"Enterprise合約要求","evidence":"Enterprise須合約；實際價格及最低承諾未核。","accessed_at":"2026-11-03T07:07:49+08:00"},
         {"url":"https://info.couchbase.com/aws-activate.html","scope":"本輪局部複核；其他條件未全面核實","evidence":"頁面仍列5,000 Enterprise credits；耗盡後運行資源按on-demand計費。頁面含佔位文字，現時受理及台灣資格未核。","accessed_time_range":"2026-11-02T03:06:18+08:00/2026-11-02T03:07:24+08:00"},
     {
       "url": "https://info.couchbase.com/aws-activate.html",
@@ -25621,12 +25673,12 @@
       "cancellation": "自動加值可選啟用，若開啟需自行管理；一般已付費用依條款不退款，未核個案取消流程。",
       "usable_duration": "試用額度會到期，具體期限未公布",
       "access_risk": "資格、額度或政策可能改變；試用耗盡及效期後可能失去存取。",
-      "verified_at": "2026-10-30T16:05:55+08:00",
+      "verified_at": "2026-11-03T07:07:07+08:00",
       "discovered_at": "2026-10-24T13:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "daily",
-      "next_review_at": "2026-10-31T16:05:55+08:00",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-03T07:07:07+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -25643,6 +25695,7 @@
       ],
       "verification_scope": "本次僅複核官方入門文件所列付款驗證、試用到期與自動加值；其他條款沿用較早來源，台灣、實際領額及法律未核。",
       "sources": [
+        {"url":"https://akashml.com/docs/getting-started/introduction","scope":"付款驗證、試用期限與自動加值","evidence":"試用額度在onboarding驗證付款方式後授予，會到期；自動加值可選。金額及期限未列。","accessed_at":"2026-11-03T07:07:07+08:00"},
         {
           "url": "https://akashml.com/",
           "label": "官方正文；索引差異另註",
@@ -28915,13 +28968,13 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "合格方案起12個月；升級不延長原優惠終止日；官方可修改或提前終止",
-      "access_risk": "僅指定模型/解析度、可能限速；台灣價格與帳戶資格未核，不把EUR回傳價當台灣售價",
-      "verified_at": "2026-10-31T15:07:33+08:00",
+      "access_risk": "僅指定模型/解析度、可能限速；台灣公開標價不保證個別帳戶或結帳符合促銷資格。",
+      "verified_at": "2026-11-03T07:07:07+08:00",
       "discovered_at": "2026-10-24T18:10:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-11-01T15:07:33+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-04T07:07:07+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，不等於台灣帳戶可用",
@@ -28932,10 +28985,12 @@
         "taiwan_note": "尚無充分台灣及個人資格證據，Unknown"
       },
       "unknowns": [
-        "台灣價格、帳戶資格與現行模型表後續可能變動；定價頁回傳EUR，不能當台灣價格",
+        "台灣帳戶及個別促銷資格、取消退款與現行模型表後續可能變動",
         "未登入或申請；用戶個別資格未確認"
       ],
       "sources": [
+        {"url":"https://www.adobe.com/tw/products/firefly/plans.html","scope":"台灣個人方案含稅月繳公開標價與點數","evidence":"瀏覽器顯示Pro NT$704/月4,000點、Pro Plus NT$1,680/月10,000點、Premium NT$6,825/月50,000點；非個案結帳核實。","accessed_at":"2026-11-03T07:07:07+08:00"},
+        {"url":"https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html","scope":"12個月指定模型優惠及限制","evidence":"合格個人方案指定模型及解析度免點數；網頁及手機限定，升級不延長，標準功能期滿仍不限量，官方可變更。","accessed_at":"2026-11-03T07:07:07+08:00"},
         {"url":"https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html","scope":"本次局部複核：促銷適用及期滿條件","evidence":"10/27更新，合格個人方案指定模型12個月免點數；升級不延長，Teams及Enterprise排除，部分標準功能期滿仍不限量。","accessed_at":"2026-10-31T15:07:33+08:00"},
         {
           "url": "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html",
@@ -28970,7 +29025,8 @@
       "priority_tier": "C",
       "priority_note": "官方·條件式·費用未知·台灣未標記·≤20分鐘·有資格門檻"
     ,
-      "verification_scope": "本次僅重查：促銷適用及期滿條件；台灣個案、其他舊欄位及法律未全面核實。"
+      "verification_scope": "本次重查促銷條件及台灣公開標價；未核個人帳戶、結帳、取消退款及法律。",
+      "recurring_cost_original": "台灣公開含稅月繳：Pro NT$704、Pro Plus NT$1,680、Premium NT$6,825；實際結帳及資格未核。"
     },
     {
       "id": "sloyd-guest-daily-plus-separated-pools",
@@ -46559,16 +46615,17 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
     }
   ],
-  "latest_research_at": "2026-11-03T06:09:00+08:00",
+  "latest_research_at": "2026-11-03T07:09:22+08:00",
   "last_research_run": {
-    "started_at": "2026-11-03T06:06:02+08:00",
-    "completed_at": "2026-11-03T06:09:00+08:00",
+    "started_at": "2026-11-03T07:06:04+08:00",
+    "completed_at": "2026-11-03T07:09:22+08:00",
     "reviewed_ids": [
-      "ndp-one-oct31-free-full-security-diagnosis",
-      "shift-asia-prototype-twenty-companies"
+      "couchbase-activate-starter-kit-current-availability-watch",
+      "akashml-free-credit-unconfirmed",
+      "adobe-firefly-twelve-month-model-promotion"
     ],
-    "new_ids": [],
-    "unreviewed_existing_count": 788,
+    "new_ids": ["lmstudio-bionic-free-local-no-account"],
+    "unreviewed_existing_count": 787,
     "attempted_failed_ids": []
   }
 }
