@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **788 筆**（587 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 02:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **782 筆**未完成本輪複核；新增 0 筆。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **789 筆**（588 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-03 03:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **6 筆**既有案例，其餘 **782 筆**未完成本輪複核；新增 1 項機會。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,9 +38,9 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-03 02:06 本輪：起始 788 筆，當時到期 31 筆；避開上一輪剛核的 8 筆，輪替 Felo、Granola、DigitalOcean × Secret、OpenCode、SpeechifyAI、Upstage，僅核各筆列明範圍。Cloudflare、AssemblyAI、ElevenLabs 候選已收錄，不新增。Felo 靜態頁僅有外殼，以瀏覽器讀取動態定價；未申請或操作帳戶。
+2026-11-03 03:06–03:09 本輪：起始 788 筆，03:06 到期 26 筆（含已結束歷史）；避開上一輪剛核的 6 筆，局部複核 CoreWeave ARIA、Forge、DeepInfra、Vultr、X API、Daytona。DeepInfra 一般計費要求加卡或預付，活動是否豁免未知，修正設定成本為未知；Daytona 宣傳及正式條款上限仍衝突。新增 Orkes 免費開發者原型環境，非免費模型額度。Pangea 舊免費額度與現行註冊入口未證，未新增；Patronus 未取得免費額度證據。未登入、申請或付款。
 
-下輪優先：`coreweave-aria-limited-free` 查官方免費期限與台灣資格；`coreweave-forge-free-pricing-transition` 查官方價格及計費轉換；`deepinfra-two-minute-papers-twenty-credit` 查活動期限與現有領取資格；`felo-standard-free-new-user-daily-two-hundred-campaign` 查官方定價之限時贈點及截止；`speechify-api-free-monthly-500k` 於 11/21 前後查官方定價中 Simba 3.5 促銷結束及共池。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
+下輪優先：`coreweave-aria-limited-free` 查[官方定價](https://coreweave.com/forge-pricing/inference-agents)之期限及台灣資格；`coreweave-forge-free-pricing-transition` 向[官方文件及支援](https://docs.coreweave.com/products/inference/serverless/usage-limits)確認預付與月結適用關係；`deepinfra-two-minute-papers-twenty-credit` 查[活動](https://deepinfra.com/papers)與[一般定價](https://deepinfra.com/pricing)是否豁免加卡或預付；`daytona-startup-amount-conflict` 向[官方](https://www.daytona.io/startups)確認50K／100K衝突；`vultr-new-customer-credit-codes-watch` 向[官方優惠](https://www.vultr.com/coupons/)確認各碼期限、GPU及台灣付款資格。依 next_review_at 與新訊號輪替，避免剛查案例無故重複。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
