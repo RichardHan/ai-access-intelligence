@@ -1,7 +1,14 @@
 import json,pathlib,math
 import jsonschema
 p=pathlib.Path(__file__).resolve().parents[1]
-d=json.loads((p/'data/offers.json').read_text());jsonschema.validate(d,json.loads((p/'schema.json').read_text()))
+def unique_keys(pairs):
+ result={}
+ for key,value in pairs:
+  if key in result: raise ValueError(f'duplicate JSON key: {key}')
+  result[key]=value
+ return result
+d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);jsonschema.validate(d,json.loads((p/'schema.json').read_text(),object_pairs_hook=unique_keys))
+json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
 for o in d['offers']:
