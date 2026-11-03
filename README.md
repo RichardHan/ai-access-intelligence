@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **793 筆**（592 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 03:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **2 筆**既有案例，新增 **1 項機會**，其餘 **790 筆**既有紀錄未完成本輪複核（其中 1 筆讀取失敗）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **794 筆**（593 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 04:08 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **4 筆**既有案例，新增 **1 項機會**，其餘 **789 筆**既有紀錄未完成本輪複核（其中 3 筆來源追查失敗）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,11 +38,13 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-04 03:05–03:10 本輪：起始 792 筆，03:06 到期 71 筆（含已結束案例）；避開前輪剛核的數產署、DataCamp、Rime、Mango、Google Flow。局部複核 `aocai-working-free-ai-courses-2026`、`lets-go2-ai-ocr-launch-six-hundred-pages`；新增機會 `coolenglish-taiwan-free-ai-english-learning`，政策及線索各 0。既有未完成複核 790，其中 `astamuse-agent-trial-oct31-index-only` 原公告404，attempted 1，未刷新核實時間。未登入、申請或付款。
+2026-11-04 04:05–04:08 本輪：起始 793 筆，到期 74 筆；避開前輪剛核的經濟部課程、Go2 OCR 與 Cool English。複核 `picsart-wan3-promotion-fair-use`、`chatgpt-back-to-school-us`、`deepseek-search-fetch-window`、`weaviate-engram-free`；其中後三筆未到期，本輪不應排入例行輪替，下輪須先以期限過濾。新增機會 `wiro-student-200-credit`，政策及線索各 0。既有未完成複核 789；`perplexity-education`（403）、`claude-artifacts-expired-lead`（404）、`tabnine-basic-free-retired`（原公告轉址）追查失敗，未刷新核實時間。未登入、申請或付款。
 
-酷英依成大公告向大專師生免費，使用次數與各功能資格未核。經濟部課程高雄11/6班已額滿，台北11/11班公告11/9截止，但內文與報名表名額矛盾；須遴選，午餐自理。Go2 OCR 600頁自付費底座簽約日起算，日本國內使用限定。另查 Picsart正式條款與 Suitup十月公告，與原紀錄相符，未計入本輪整合複核數。
+Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月有效，學校信箱、人工審查；免卡免訂閱，不得轉售或用於客戶工作。台灣個案未測。Picsart 已截止且 Ultra 兩個官方頁價格不一致；美國學生優惠已截止，須美國合格院校學籍，四個免費月後自動續費。DeepSeek 工具免費期結束，每千次成功請求0.75美元；Engram 停止新建專案，既有專案至12/31。均非全面核查。
 
-下輪優先：`aocai-working-free-ai-courses-2026` 查[台北班](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3535)席次矛盾；`astamuse-agent-trial-oct31-index-only` 從[官方公告列表](https://www.astamuse.co.jp/information/archives/2026/)追查新入口；`perplexity-education` 重試[教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)價格資格；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/)價差；`coolenglish-taiwan-free-ai-english-learning` 查[官方平台](https://www.coolenglish.edu.tw/)各工具額度及個資條款。另可追教育部[因材網](https://adl.edu.tw/HomePage/home/)費用及帳號資格，未取得充分證據前不列免費。
+佇列品質：已截止的 `suitup-oct2026`、`qoder-ultimate-offpeak-oct2026` 依既有截止證據由每日改月查；未刷新 verified_at，其他已截止項須逐案判斷是否仍有使用者風險。
+
+下輪優先：`perplexity-education` 重試[教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)；`astamuse-agent-trial-oct31-index-only` 從[公告列表](https://www.astamuse.co.jp/information/archives/2026/)追新入口；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/)價差；`claude-artifacts-expired-lead` 查[官方說明中心](https://support.claude.com/)後續公告；`tabnine-basic-free-retired` 查[官方網站](https://www.tabnine.com/)退役公告替代來源。AISquared [非營利方案](https://nonprofitprogram.aisquared.ai/)及[學生方案](https://studentprogram.aisquared.ai/)尚待確認台灣資格與額度，不列入本輪資料。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
