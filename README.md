@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **792 筆**（591 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 02:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **5 筆**既有案例，新增 **1 項機會**，其餘 **786 筆**既有紀錄未完成本輪複核（其中 1 筆讀取失敗）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **793 筆**（592 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 03:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **2 筆**既有案例，新增 **1 項機會**，其餘 **790 筆**既有紀錄未完成本輪複核（其中 1 筆讀取失敗）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,11 +38,11 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-04 02:05–02:10 本輪：起始 791 筆，02:06 到期 70 筆（含已結束案例）；避開前輪剛核的 AICU、Trelis、NCHC、Picsart 與 Fastino。局部複核 `moda-service-robot-virtual-scene-subsidy-2026`、`datacamp-free-access-week-november-2026`、`rime-stt-nov19-free-window`、`mango-inference-community`、`google-flow-fifty-daily-credit-subscription-conflict-watch`；新增機會 `cubic-free-monthly-twenty-ai-reviews`，新增政策及線索各 0。既有未完成複核 786，其中 `perplexity-education` 官方頁 403／安全驗證，attempted 1，未刷新核實時間。未登入、申請或付款。
+2026-11-04 03:05–03:10 本輪：起始 792 筆，03:06 到期 71 筆（含已結束案例）；避開前輪剛核的數產署、DataCamp、Rime、Mango、Google Flow。局部複核 `aocai-working-free-ai-courses-2026`、`lets-go2-ai-ocr-launch-six-hundred-pages`；新增機會 `coolenglish-taiwan-free-ai-english-learning`，政策及線索各 0。既有未完成複核 790，其中 `astamuse-agent-trial-oct31-index-only` 原公告404，attempted 1，未刷新核實時間。未登入、申請或付款。
 
-Cubic 免費每月 20 次 GitHub AI 審查、組織內私有庫共用，公開庫另有公平使用池；七天試用免卡，付費結帳即計費。條款授權 Cubic 使用內容訓練及改善 AI，台灣資格未知。DataCamp 免費學習週依公告已開始，修正過期的「尚未開始」；Rime 現行頁未列並發數，原 10 路保留為歷史證據。數產署機器人補助補列模型與 API 限制；Mango 條款限專業用途、贈額指定期限或六個月孰早；Google Flow 無訂閱資格的官方文件仍衝突。
+酷英依成大公告向大專師生免費，使用次數與各功能資格未核。經濟部課程高雄11/6班已額滿，台北11/11班公告11/9截止，但內文與報名表名額矛盾；須遴選，午餐自理。Go2 OCR 600頁自付費底座簽約日起算，日本國內使用限定。另查 Picsart正式條款與 Suitup十月公告，與原紀錄相符，未計入本輪整合複核數。
 
-下輪優先：`perplexity-education` 重試[教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)的價格與資格；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/)價差；`lets-go2-ai-ocr-launch-six-hundred-pages` 查官方活動及額度期限；`aocai-working-free-ai-courses-2026` 查官方課程與資格；`mango-inference-community` 查[活動頁](https://www.mangoboost.io/platform/mango-inference)的折扣年份與台灣付款。依 next_review_at 與新訊號輪替；新候選可查 [Cherry Studio](https://github.com/CherryHQ/cherry-studio) 和 [Chatbox](https://chatboxai.app/pricing.md) 的台灣取得及各模型授權。
+下輪優先：`aocai-working-free-ai-courses-2026` 查[台北班](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3535)席次矛盾；`astamuse-agent-trial-oct31-index-only` 從[官方公告列表](https://www.astamuse.co.jp/information/archives/2026/)追查新入口；`perplexity-education` 重試[教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)價格資格；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/)價差；`coolenglish-taiwan-free-ai-english-learning` 查[官方平台](https://www.coolenglish.edu.tw/)各工具額度及個資條款。另可追教育部[因材網](https://adl.edu.tw/HomePage/home/)費用及帳號資格，未取得充分證據前不列免費。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
