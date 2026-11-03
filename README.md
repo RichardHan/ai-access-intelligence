@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **791 筆**（590 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 01:09 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **5 筆**既有案例，其餘 **786 筆**未完成本輪複核；未新增。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **792 筆**（591 項機會、47 項政策、154 筆觀察線索），更新時間 **2026-11-04 02:10 Asia/Taipei**（不代表全庫複核）。本輪局部複核 **5 筆**既有案例，新增 **1 項機會**，其餘 **786 筆**既有紀錄未完成本輪複核（其中 1 筆讀取失敗）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -38,13 +38,11 @@
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
-2026-11-04 01:05–01:09 本輪：起始 791 筆，截至01:06精確到期68筆（含已結束案例）；避開上輪剛核的 Couchbase、AkashML、Adobe 與 LM Studio。局部複核 `aicu-kumamoto-support`、`trelis-selected-grant-not-api-giveaway`、`nchc-gb200-nano4-trial`、`picsart-wan3-promotion-fair-use`、`fastino-glideis1-ten-credit-payment-verification`；新增機會、政策、線索各0，未完成複核786，讀取失敗 attempted 0。未登入、申請或付款。
+2026-11-04 02:05–02:10 本輪：起始 791 筆，02:06 到期 70 筆（含已結束案例）；避開前輪剛核的 AICU、Trelis、NCHC、Picsart 與 Fastino。局部複核 `moda-service-robot-virtual-scene-subsidy-2026`、`datacamp-free-access-week-november-2026`、`rime-stt-nov19-free-window`、`mango-inference-community`、`google-flow-fifty-daily-credit-subscription-conflict-watch`；新增機會 `cubic-free-monthly-twenty-ai-reviews`，新增政策及線索各 0。既有未完成複核 786，其中 `perplexity-education` 官方頁 403／安全驗證，attempted 1，未刷新核實時間。未登入、申請或付款。
 
-NCHC 九月試用已結束，修正無來源支持的「固定點數」分類；另一企業徵案資源期限11/30，非原試用延期。AICU原救災支援已結束新申請，Trelis表單暫停；均不推論既有受領者後續處理。三者改低頻，NCHC 在企業案期限前再查。Picsart Ultra 官方價格頁年繳月折算US$60、WAN活動頁US$24.50，適用差異未明，價格衝突每日追蹤；原促銷已結束。Fastino 推論需付款驗證，訂閱可能自動續訂，停權或終止可沒收點數，推廣碼當前可兌換性未核。
+Cubic 免費每月 20 次 GitHub AI 審查、組織內私有庫共用，公開庫另有公平使用池；七天試用免卡，付費結帳即計費。條款授權 Cubic 使用內容訓練及改善 AI，台灣資格未知。DataCamp 免費學習週依公告已開始，修正過期的「尚未開始」；Rime 現行頁未列並發數，原 10 路保留為歷史證據。數產署機器人補助補列模型與 API 限制；Mango 條款限專業用途、贈額指定期限或六個月孰早；Google Flow 無訂閱資格的官方文件仍衝突。
 
-新線索 Cherry Studio Community 與 Chatbox Apps 均有官方免費本機客戶端資料，但台灣下載及個案資格未核；模型、硬體及第三方API可能另有限制與成本，本輪未新增。Mango 活動頁仍列註冊US$10及11/11前七折，但年份、贈額效期與台灣付款未明；另行研究未納入本輪複核計數。
-
-下輪優先：`mango-inference-community` 查[活動](https://www.mangoboost.io/platform/mango-inference)及[計費](https://inference.mangoboost.io/docs/operations/billing-and-payments/)的折扣年份、贈額效期與台灣付款；`fastino-glideis1-ten-credit-payment-verification` 查[官方條款](https://agent.fastino.ai/terms)及活動碼實際有效期；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/) Ultra 價差及台灣結帳；`lets-go2-ai-ocr-launch-six-hundred-pages` 查官方活動及額度期限；`aocai-working-free-ai-courses-2026` 查官方課程與資格。依實際時間、next_review_at 與新訊號輪替；新候選可查 [Cherry Studio](https://github.com/CherryHQ/cherry-studio) 和 [Chatbox](https://chatboxai.app/pricing.md) 的台灣取得及各模型授權。
+下輪優先：`perplexity-education` 重試[教育方案](https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro)的價格與資格；`picsart-wan3-promotion-fair-use` 查[價格頁](https://picsart.com/pricing/)與[WAN頁](https://picsart.com/ai-models/wan-3-0/)價差；`lets-go2-ai-ocr-launch-six-hundred-pages` 查官方活動及額度期限；`aocai-working-free-ai-courses-2026` 查官方課程與資格；`mango-inference-community` 查[活動頁](https://www.mangoboost.io/platform/mango-inference)的折扣年份與台灣付款。依 next_review_at 與新訊號輪替；新候選可查 [Cherry Studio](https://github.com/CherryHQ/cherry-studio) 和 [Chatbox](https://chatboxai.app/pricing.md) 的台灣取得及各模型授權。
 
 每輪先索引到期清單及前次 reviewed/new IDs；成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
 
