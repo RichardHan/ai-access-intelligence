@@ -1,8 +1,81 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-04T11:16:57+08:00",
-  "scope": "本輪局部複核3筆既有案例，未新增；796筆既有紀錄未完成本輪複核。僅核列明主張，台灣個案與法律可能未知。",
+  "updated_at": "2026-11-04T13:10:34+08:00",
+  "scope": "本輪局部複核2筆既有案例，新增1筆觀察線索；797筆既有紀錄未完成本輪複核，其中2筆追查失敗。台灣個案與法律可能未知。",
   "offers": [
+    {
+      "id": "emergent-free-ten-credits-publishing-watch",
+      "title": "Emergent Free：10點額度與發布限制待核",
+      "summary": "官方價格頁列免費每月10點，可用AI建置應用；文件另稱首日10點、按帳單日每月補充。免費方案一般不能正式發布，但文件又稱部分用戶可能發布純前端；適用條件、台灣及免卡未核。",
+      "record_type": "watchlist",
+      "status": "needs_verification",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": "AI應用建置共用點數",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "verified_at": "2026-11-04T13:10:34+08:00",
+      "discovered_at": "2026-11-04T13:10:34+08:00",
+      "announcement_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-04T13:10:34+08:00",
+      "verification_scope": "僅核官方定價、免費方案文件及服務條款列明內容；台灣帳號、實際補點、付款、發布資格與法律未核。",
+      "usable_duration": "文件稱每月帳單日補點，未用訂閱點數週期末到期；免費帳戶實際計算方式未實測。",
+      "cancellation": "付費訂閱自動續期，須於續期前在帳戶頁取消；超額可能另收費。免費方案免卡未核。",
+      "access_risk": "免費方案僅供個人非商業使用；文件對純前端發布有例外描述，是否合格未核。條款允許內容用於模型訓練等用途，可免費退出未來使用；勿直接投入機密資料。",
+      "eligibility": {
+        "service_availability": "官方公開列示免費方案；台灣註冊及可用性未測。",
+        "account_eligibility": "須符合帳戶及年齡條款；未滿18歲僅部分服務可先取得監護人書面同意。",
+        "billing_country": "台灣付款方式及免費方案是否須綁卡未核。",
+        "identity_residency": "台灣個案資格未核。",
+        "terms_restrictions": "免費方案限個人非商業使用；禁止未授權共用帳戶、轉售或規避限制。",
+        "taiwan_note": "Unknown：全球授權不保證台灣帳戶與實際領取資格。"
+      },
+      "unknowns": [
+        "台灣帳戶註冊、免卡及實際補點未核",
+        "純前端免費發布之具體資格、消耗與條款適用未核",
+        "法律與個案資格未核"
+      ],
+      "sources": [
+        {
+          "url": "https://emergent.sh/pricing",
+          "scope": "公開免費價格及額度，非台灣個案保證",
+          "evidence": "Free列US$0/月及每月10點，用於建置網頁與行動應用。",
+          "accessed_at": "2026-11-04T13:10:34+08:00"
+        },
+        {
+          "url": "https://help.emergent.sh/plans-the-free-tier",
+          "scope": "點數週期與免費發布限制",
+          "evidence": "文件稱首日10點、各方案每月帳單日補點；免費一般不能正式發布、需至少50點，但可能允許純前端發布，未列資格。",
+          "accessed_at": "2026-11-04T13:10:34+08:00"
+        },
+        {
+          "url": "https://app.emergent.sh/terms-of-service",
+          "scope": "免費使用限制、年齡、內容授權及續費",
+          "evidence": "免費限個人非商業；未滿18歲僅部分服務得先經監護人書面同意；內容可用於訓練且可退出未來使用，付費訂閱自動續期。",
+          "accessed_at": "2026-11-04T13:10:34+08:00"
+        }
+      ],
+      "priority_score": null,
+      "priority_tier": null,
+      "priority_note": "非機會紀錄（政策/待覆核），未評級"
+    },
     {
       "id": "posthog-startups-fifty-k-twelve-month-ai-observability",
       "title": "PostHog 新創：12個月 US$50,000 觀測額度，AI工具排除",
@@ -374,7 +447,7 @@
     {"id":"elements-of-ai-building-free-course-paid-certificate","title":"Elements of AI：Building AI免費課程、證書另費","summary":"AI演算法課程及各難度練習免費；證書另付€50（含適用VAT）且須通過課程，購證非上課必要條件。建議具Python基礎。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education","developer"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"免費AI教育資源，非模型或API額度","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T13:08:38+08:00","discovered_at":"2026-11-02T13:08:38+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02T13:08:38+08:00","verification_scope":"僅核列明官方來源主張；未申請、付款、確認台灣個案或法律。","eligibility":{"service_availability":"課程及各難度練習免費，自學；建議具基本Python。","account_eligibility":"完成21題至少19題，正確率至少50%；中進階練習需程式能力。","billing_country":"上課免費；可分享證書另付€50含適用VAT，台灣付款接受情況未核。","identity_residency":"台灣居住與個案資格未核。","terms_restrictions":"Introduction to AI建議先修而非必要；每題任一難度可計入。","taiwan_note":"Unknown：公開方案不保證台灣帳戶、付款或個別申請資格。"},"unknowns":["台灣註冊、證書付款及學分認可","報名、結業及購證截止日"],"sources":[{"url":"https://www.elementsofai.com/","scope":"課程與背景","evidence":"Building AI課程免費，建議基本Python。","accessed_time_range":"2026-11-02T13:06:00+08:00–2026-11-02T13:08:38+08:00"},{"url":"https://www.elementsofai.com/faq/i-have-passed-an-elements-of-ai-course-where-is-my-certificate-2","scope":"證書費用","evidence":"Building AI數位證書另付€50含適用VAT；練習免費。","accessed_time_range":"2026-11-02T13:06:00+08:00–2026-11-02T13:08:38+08:00"},{"url":"https://www.elementsofai.com/faq/what-are-the-requirements-for-completing-the-introduction-to-ai-and-building-ai-courses-2","scope":"結業條件","evidence":"21題中至少19題完成，正確率至少50%。","accessed_time_range":"2026-11-02T13:06:00+08:00–2026-11-02T13:08:38+08:00"}],"cost_note":"免費上課；可選數位證書€50，含適用VAT。","priority_score":15.1,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
     {"id":"google-ai-educator-series-free","title":"Google AI Educator Series：免費教師 AI 素養課程","summary":"小學、中學及高等教育工作者免費線上學習；小中學單元約10–15分鐘、高教約30–45分鐘，可自學或帶領，完成短測驗獲徽章。非 Gemini 訂閱或 API 額度。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"免費AI教育資源，非模型或API額度","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T12:11:07+08:00","discovered_at":"2026-11-02T12:11:07+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02T12:11:07+08:00","verification_scope":"僅核官方頁所列課程內容與免費聲明；未登入、申請或核實台灣個案及法律。","usable_duration":null,"cancellation":null,"access_risk":"個別課程及第三方服務可能另有帳戶或地區條件。","eligibility":{"service_availability":"依官方課程或活動條件；台灣個案未核","account_eligibility":"教育工作者；登入及個別課程要求未核","billing_country":"台灣帳戶與付款條件未核","identity_residency":"台灣個案資格未核","terms_restrictions":"個別課程或第三方服務條款需另查","taiwan_note":"未核台灣個案；全球宣傳不代表每項第三方活動皆可用"},"unknowns":["台灣帳戶、語言及徽章領取條件未核","法律及個別工具服務條款未核"],"sources":[{"url":"https://edu.google.com/intl/zh-TW/learning-center/google-ai-educator-series/","scope":"課程對象、費用、時間及徽章","evidence":"小學、中學及高等教育工作者免費線上學習；小中學單元約10–15分鐘、高教約30–45分鐘，可自學或帶領，完成短測驗獲徽章。非 Gemini 訂閱或 API 額度。","accessed_time_range":"2026-11-02T12:05:59+08:00–2026-11-02T12:11:07+08:00"}],"priority_score":15.1,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
     {"id":"codeai-ai-101-free-educator-course","title":"CodeAI AI 101：免費教師 AI 素養課程","summary":"2026更新的免費自學課程，無須學區核准；五個單元各約一小時，涵蓋AI基礎、教學應用、偏誤與隱私。非模型使用額度。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"免費AI教育資源，非模型或API額度","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T12:11:07+08:00","discovered_at":"2026-11-02T12:11:07+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02T12:11:07+08:00","verification_scope":"僅核官方頁所列課程內容與免費聲明；未登入、申請或核實台灣個案及法律。","usable_duration":null,"cancellation":null,"access_risk":"個別課程及第三方服務可能另有帳戶或地區條件。","eligibility":{"service_availability":"依官方課程或活動條件；台灣個案未核","account_eligibility":"課程面向教育工作者；台灣帳戶要求未核","billing_country":"台灣帳戶與付款條件未核","identity_residency":"台灣個案資格未核","terms_restrictions":"個別課程或第三方服務條款需另查","taiwan_note":"未核台灣個案；全球宣傳不代表每項第三方活動皆可用"},"unknowns":["台灣教師帳戶與課程語言未核","證書、法律及其他工具條款未核"],"sources":[{"url":"https://code.org/en-US/professional-learning/artificial-intelligence-101","scope":"課程對象、免費及五單元","evidence":"2026更新的免費自學課程，無須學區核准；五個單元各約一小時，涵蓋AI基礎、教學應用、偏誤與隱私。非模型使用額度。","accessed_time_range":"2026-11-02T12:05:59+08:00–2026-11-02T12:11:07+08:00"}],"priority_score":15.1,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
-    {"id":"codeai-hour-of-ai-2026","title":"Hour of AI：免費一小時 AI 學習活動","summary":"官方提供各年齡免費約一小時AI實作，有不需設備的活動；新活動11月16日推出，12月7–11日為CSEdWeek。不同合作活動條件各異，並非免費API額度。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"免費AI教育資源，非模型或API額度","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02T12:11:07+08:00","discovered_at":"2026-11-02T12:11:07+08:00","announcement_at":null,"review_cadence":"daily","next_review_at":"2026-11-03T12:11:07+08:00","verification_scope":"僅核官方頁所列課程內容與免費聲明；未登入、申請或核實台灣個案及法律。","usable_duration":null,"cancellation":null,"access_risk":"個別課程及第三方服務可能另有帳戶或地區條件。","eligibility":{"service_availability":"依官方課程或活動條件；台灣個案未核","account_eligibility":"官方稱任何國家可參與；個別合作活動要求未核","billing_country":"台灣帳戶與付款條件未核","identity_residency":"台灣個案資格未核","terms_restrictions":"個別課程或第三方服務條款需另查","taiwan_note":"未核台灣個案；全球宣傳不代表每項第三方活動皆可用"},"unknowns":["台灣各活動與第三方帳戶資格未核","活動結束日期及個別工具費用未核","法律未核"],"sources":[{"url":"https://hourofai.org/en-US","scope":"免費活動、年齡、設備及日期","evidence":"官方提供各年齡免費約一小時AI實作，有不需設備的活動；新活動11月16日推出，12月7–11日為CSEdWeek。不同合作活動條件各異，並非免費API額度。","accessed_time_range":"2026-11-02T12:05:59+08:00–2026-11-02T12:11:07+08:00"}],"priority_score":15.1,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
+    {"id":"codeai-hour-of-ai-2026","title":"Hour of AI：免費一小時 AI 學習活動","summary":"官方提供各年齡免費約一小時AI實作，有不需設備的活動；新活動11月16日推出，12月7–11日為CSEdWeek。不同合作活動條件各異，並非免費API額度。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"免費AI教育資源，非模型或API額度","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-04T13:07:00+08:00","discovered_at":"2026-11-02T12:11:07+08:00","announcement_at":null,"review_cadence":"daily","next_review_at":"2026-11-05T13:07:00+08:00","verification_scope":"僅核免費一小時活動、全球宣傳與11月16日新活動及CSEdWeek日期；台灣個案、第三方費用與法律未核。","usable_duration":null,"cancellation":null,"access_risk":"個別課程及第三方服務可能另有帳戶或地區條件。","eligibility":{"service_availability":"依官方課程或活動條件；台灣個案未核","account_eligibility":"官方稱任何國家可參與；個別合作活動要求未核","billing_country":"台灣帳戶與付款條件未核","identity_residency":"台灣個案資格未核","terms_restrictions":"個別課程或第三方服務條款需另查","taiwan_note":"未核台灣個案；全球宣傳不代表每項第三方活動皆可用"},"unknowns":["台灣各活動與第三方帳戶資格未核","活動結束日期及個別工具費用未核","法律未核"],"sources":[{"url":"https://hourofai.org/en-US","scope":"免費活動與日期、全球參與宣傳；非台灣個案保證","evidence":"官方提供各年齡免費約一小時AI實作，有不需設備的活動；新活動11月16日推出，12月7–11日為CSEdWeek。不同合作活動條件各異，並非免費API額度。","accessed_time_range":"2026-11-02T12:05:59+08:00–2026-11-02T12:11:07+08:00","accessed_at":"2026-11-04T13:07:00+08:00"}],"priority_score":15.1,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
     {"id":"aocai-youth-ai-training-2026","title":"青年AI實戰養成班：符合條件最高新臺幣5萬元獎勵","summary":"18至35歲、具副學士以上學歷的待業青年或應屆畢業生可洽培訓單位申請，須經篩選。符合出席、測驗與實作成果條件，兩階段獎勵金合計最高新臺幣50,000元；各班名額、報名及費用須另確認。","record_type":"opportunity","status":"application_based","verification":"Official","legal_status":"not_verified","categories":["QUALIFICATION"],"views":["education","regional"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Yes","regions":["Taiwan"],"usage_type":"審核制AI培訓與條件式學習獎勵金","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02","discovered_at":"2026-11-02","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02","verification_scope":"僅核官方總頁的資格、獎勵及列出班次；未逐班確認收件、費用、個案或法律。","usable_duration":"各班不同；官方列2026-11-16起後續班次，須洽培訓單位確認。","cancellation":null,"eligibility":{"service_availability":"官方列各地課程；須洽培訓單位報名並經篩選，非保證錄取。","account_eligibility":"開訓日年滿18至35歲，副學士以上，待業青年或應屆畢業生；不得為在職或自營工作者。","billing_country":"課程及其他費用未逐班核實。","identity_residency":"須依官方要求提交身分、學歷及其他證明；個案資格由培訓單位審核。","terms_restrictions":"第一階段出席率超過90%且測驗至少80分可領新臺幣20,000元；第二階段出席率超過90%、提交報告並通過發表評核可領30,000元。","taiwan_note":"台灣計畫適用須符合年齡、學歷、就業狀態及培訓單位審核。"},"unknowns":["各班剩餘名額、報名截止與實際費用","個人資格、錄取與獎勵金實際核發","適用法律及監管未核"],"sources":[{"url":"https://serv.gcis.nat.gov.tw/AOCAI/courses/youth","scope":"申請資格、獎勵條件及課程清單","evidence":"2026-11-02 Asia/Taipei實讀官方頁：18至35歲、副學士以上、待業或應屆畢業；兩階段條件式獎勵共最高新臺幣50,000元，頁面列25班。費用及各班現況未核。","accessed_at":"2026-11-02"}],"priority_score":16.8,"priority_tier":"S","priority_note":"官方·申請制·費用未知·台灣Yes·時間未知·有資格門檻"},
     {"id":"chalkchalk-free-weekly-ai-student","title":"Chalkchalk Free：每週重置的學生AI學習額度","summary":"Free US$0提供學生學習工作區與每週AI使用額度，供家教對話、讀取文件、製作卡片和練習題共用；每週一00:00 UTC重置、不結轉，用罄後新AI請求暫停。未公布固定訊息數；台灣與免卡未核。","record_type":"opportunity","status":"conditional","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free","education"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"學生工具每週共用AI額度","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02","discovered_at":"2026-11-02","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02","verification_scope":"僅核官方定價及條款列明的免費使用、重置與年齡限制；未註冊或確認台灣帳戶及法律。","usable_duration":"每週一00:00 UTC重置，台灣時間週一08:00；未用額度不結轉。","cancellation":"付費方案自動續訂，取消後保留至已付期間結束再回Free；實際個案未測。","eligibility":{"service_availability":"學生Free方案；試辦服務及容量限制可能變動。","account_eligibility":"條款至少13歲；未滿18歲不得購買週期性付費方案。","billing_country":"Free是否須付款卡及台灣付款未核。","identity_residency":"台灣帳戶可用性及個人資格未核。","terms_restrictions":"AI額度依工作量計算，不是固定訊息數；另有檔案、速率與處理限制。上傳教材須有必要權利。","taiwan_note":"Unknown：未查到明列台灣帳戶支援或排除的官方清單。"},"unknowns":["固定免費額度數字未公開","台灣帳戶與免費方案免卡條件","適用法律及監管未核"],"sources":[{"url":"https://chalkchalk.com/pricing","scope":"免費額度、共用方式、每週重置及付費續訂","evidence":"2026-11-02 Asia/Taipei實讀：Free $0，每週一00:00 UTC重置、不結轉；額度按AI用量而非固定訊息數，用罄後新AI請求暫停。付費方案自動續訂。","accessed_at":"2026-11-02"},{"url":"https://chalkchalk.com/terms","scope":"年齡、教材權利及試辦限制","evidence":"2026-11-02 Asia/Taipei實讀：帳戶年齡至少13歲，週期性付費購買須滿18歲；上傳內容需具必要權利。","accessed_at":"2026-11-02"}],"priority_score":16.3,"priority_tier":"C","priority_note":"官方·條件式·免費·台灣未標記·時間未知"},
     {"id":"taiwan-sme-ai-talent-training-2026","title":"企業專區AI人才培育：課程與雲端空間申請現況待核","summary":"經濟部中小及新創企業署介紹企業AI人才培育輔導，列200多門免費AI課程與10GB免費雲端空間；目前收件、名額、正式資格及是否須先通過輔導審核未核，列觀察而非可立即申請。","record_type":"watchlist","status":"needs_verification","verification":"Official","legal_status":"not_verified","categories":["QUALIFICATION"],"views":["education"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Unknown","regions":["Taiwan"],"usage_type":"企業AI培訓與雲端空間待核","quota_classification":"UNKNOWN","limited_confirmed":null,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-02","discovered_at":"2026-11-02","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-02","verification_scope":"僅核官方公告所列資源；未確認收件、申請條件、個案及法律。","usable_duration":null,"cancellation":null,"eligibility":{"service_availability":"官方介紹對有AI培訓與導入需求的中小企業提供資源；當前是否收件未知。","account_eligibility":"中小企業正式認定及審核要求未核。","billing_country":"列免費課程及空間；其他費用未核。","identity_residency":"台灣企業個案資格未核。","terms_restrictions":"資源是否須先通過輔導審核未核；輔導經費金額未公布。","taiwan_note":"台灣政府企業計畫；申請資格和收件狀態未確認。"},"unknowns":["申請入口、期限、名額及剩餘預算","正式中小企業資格及資源取得條件","適用法律及監管未核"],"sources":[{"url":"https://www.sme.gov.tw/article-tw-2974-14712","scope":"官方公告所列課程、空間及輔導","evidence":"2026-11-02 Asia/Taipei實讀：公告更新2026-06-09，列200多門免費AI課程、10GB免費空間及輔導；頁面未明列目前收件和名額。","accessed_at":"2026-11-02"}],"priority_score":null,"priority_tier":null,"priority_note":"非機會紀錄（政策/待覆核），未評級"},
@@ -8334,8 +8407,8 @@
       "usable_duration": "每週池；一次贈點約30天，依帳戶到期欄",
       "access_risk": "帳戶資格及實際存取未驗；促銷、額度耗盡或試用終止可能失去存取",
       "verified_at": "2026-10-25T13:30:00+08:00",
-      "last_review_attempt_at": "2026-11-04T09:07:43+08:00",
-      "last_review_attempt_note": "官方正文及說明中心讀取403，瀏覽器僅顯示安全驗證；未取得正文，不判定截止，verified_at及既有到期時間保留。來源：https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+      "last_review_attempt_at": "2026-11-04T13:08:00+08:00",
+      "last_review_attempt_note": "官方點數及價格頁403、瀏覽器安全驗證；替代合作方頁僅支持歷史活動，未核核心額度與價格，不推定停辦。",
       "verification_scope": "本輪官方頁受阻，未重核價格、免費搜尋額、點數、促銷或續費；verified_at沿用歷史。",
       "discovered_at": "2026-10-23T10:40:00+08:00",
       "announcement_at": null,
@@ -29500,8 +29573,8 @@
       "usable_duration": null,
       "access_risk": "資格、區域與方案可變；未登入或測試，不能據公開頁保證帳戶可用",
       "verified_at": "2026-10-29T05:08:00+08:00",
-      "last_review_attempt_at": "2026-11-04T05:06:48+08:00",
-      "last_review_attempt_note": "原公告404；官方2026新聞列表未列該公告，未取得可讀正文。僅追查來源，不核定活動現況或刷新verified_at。",
+      "last_review_attempt_at": "2026-11-04T13:08:00+08:00",
+      "last_review_attempt_note": "原公告仍404；官方2026新聞列表未見活動，未取得試用正文，不能判定撤銷或現行受理。",
       "discovered_at": "2026-10-24T16:04:04+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -29522,7 +29595,12 @@
         "現行申請入口、是否仍受理、完整試用條款、截止時區、用量上限、期後價格與取消規則均未取得"
       ],
       "sources": [
-        {"url":"https://www.astamuse.co.jp/news/2026/26261008-report/","scope":"本輪來源追查，非優惠核實","evidence":"原公告404，官方2026列表亦未列該公告；不證明撤銷。","accessed_at":"2026-10-31T15:07:33+08:00"},
+        {
+          "url": "https://www.astamuse.co.jp/news/2026/26261008-report/",
+          "scope": "本輪來源追查，非優惠核實",
+          "evidence": "原公告404，官方2026列表亦未列該公告；不證明撤銷。",
+          "accessed_at": "2026-10-31T15:07:33+08:00"
+        },
         {
           "url": "https://www.astamuse.co.jp/news/2026/26261008-report/",
           "label": "官方試用公告網址，正文404；搜尋索引仍存",
@@ -29564,8 +29642,13 @@
           "evidence": "實讀列表，10/7後接10/15、10/20及10/23，未列10/8試用公告；缺席不足判定結束。",
           "accessed_at": "2026-10-30T00:59:54+08:00",
           "accessed_time_range": "2026-10-30T00:57:45+08:00/2026-10-30T00:59:54+08:00"
+        },
+        {
+          "url": "https://www.astamuse.co.jp/news/2026/26261008-report/",
+          "scope": "本輪來源追查，非優惠核實",
+          "evidence": "原公告404；官方新聞列表未列同一公告，未找到可讀正文。無法據此認定撤銷或現仍受理。",
+          "accessed_time_range": "2026-11-01T18:06:54+08:00/2026-11-01T18:07:31+08:00"
         }
-        ,{"url":"https://www.astamuse.co.jp/news/2026/26261008-report/","scope":"本輪來源追查，非優惠核實","evidence":"原公告404；官方新聞列表未列同一公告，未找到可讀正文。無法據此認定撤銷或現仍受理。","accessed_time_range":"2026-11-01T18:06:54+08:00/2026-11-01T18:07:31+08:00"}
       ],
       "record_type": "watchlist",
       "vpn_research": {
@@ -45383,13 +45466,13 @@
       "limited_confirmed": true,
       "cancellation": "現行SambaCloud條款稱按實際用量向卡片定期扣款，至少每月且可能更頻繁；撤回後續扣款同意須更新帳戶設定並停止使用。費用一般不退、稅另計，個別Order/活動附加條款可另訂；未操作取消。",
       "usable_duration": "活動頁稱US$100為一個月，起算與活動現行有效性未核",
-      "access_risk": "2025舊活動頁可能過時；前100名餘額、購點/付款前提、台灣適用未知。不可宣稱可領。",
-      "verified_at": "2026-11-01T19:07:41+08:00",
+      "access_risk": "2025舊活動頁可能過時；前100名餘額、購點/付款前提、台灣適用未知。不可宣稱可領。 表單可見不代表後端受理；請勿為不確定的額度先綁卡購點。",
+      "verified_at": "2026-11-04T13:08:00+08:00",
       "discovered_at": "2026-10-26T10:50:51+08:00",
       "announcement_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-02T19:07:41+08:00",
-      "verification_scope": "本次僅複核舊活動頁及現行普通方案付款前提；現行名額、活動豁免、台灣與法律未核。",
+      "next_review_at": "2026-11-05T13:08:00+08:00",
+      "verification_scope": "僅核舊活動文案、可見表單與普通服務扣款條款；後端受理、剩餘名額、購點豁免、台灣與法律未核。",
       "eligibility": {
         "service_availability": "舊官方合作頁可讀；新申請是否仍開放未核。",
         "account_eligibility": "須Rundown AI訂戶及前100個Developer Tier新戶，活動表單另填。",
@@ -45404,8 +45487,18 @@
         "台灣帳戶/付款方式及實際促銷核准；個別附加條款"
       ],
       "sources": [
-        {"url":"https://sambanova.ai/build-with-relentless-intelligence-rundown","scope":"本次複核舊活動文案","evidence":"仍列Rundown AI訂戶、首100名Developer Tier、US$100及一個月；素材有2025年日期，不證目前可領。","accessed_time_range":"2026-11-01T19:06:42+08:00/2026-11-01T19:06:58+08:00"},
-        {"url":"https://cloud.sambanova.ai/plans","scope":"本次複核普通方案首請求前提","evidence":"Free列須先加入付款方式並購買credits；未證促銷是否豁免。","accessed_time_range":"2026-11-01T19:06:58+08:00/2026-11-01T19:07:41+08:00"},
+        {
+          "url": "https://sambanova.ai/build-with-relentless-intelligence-rundown",
+          "scope": "本次複核舊活動文案",
+          "evidence": "仍列Rundown AI訂戶、首100名Developer Tier、US$100及一個月；素材有2025年日期，不證目前可領。",
+          "accessed_time_range": "2026-11-01T19:06:42+08:00/2026-11-01T19:06:58+08:00"
+        },
+        {
+          "url": "https://cloud.sambanova.ai/plans",
+          "scope": "本次複核普通方案首請求前提",
+          "evidence": "Free列須先加入付款方式並購買credits；未證促銷是否豁免。",
+          "accessed_time_range": "2026-11-01T19:06:58+08:00/2026-11-01T19:07:41+08:00"
+        },
         {
           "url": "https://sambanova.ai/build-with-relentless-intelligence-rundown",
           "scope": "舊活動名額、點數、期限及訂戶條件，不證明現今可領",
@@ -45427,6 +45520,12 @@
           "scope": "現行用量扣款、取消與轉售限制；非促銷授額保證",
           "evidence": "2026-10-27查閱：Stripe卡片用量費至少每月扣款，撤回同意需更新帳戶及停止使用，費用通常不退、稅另計；個別Order可另定。",
           "accessed_at": "2026-10-27T14:30:38+08:00"
+        },
+        {
+          "url": "https://sambanova.ai/build-with-relentless-intelligence-rundown",
+          "scope": "公開活動文案與前端表單，非後端受理或名額",
+          "evidence": "頁面仍列Rundown訂戶前100名Developer Tier、US$100及一個月；瀏覽器顯示表單，未送出，不證目前可領。",
+          "accessed_at": "2026-11-04T13:08:00+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -48554,17 +48653,21 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-04T11:16:57+08:00",
+  "latest_research_at": "2026-11-04T13:10:34+08:00",
   "last_research_run": {
-    "started_at": "2026-11-04T11:07:34+08:00",
-    "completed_at": "2026-11-04T11:16:57+08:00",
+    "started_at": "2026-11-04T13:05:57+08:00",
+    "completed_at": "2026-11-04T13:10:34+08:00",
     "reviewed_ids": [
-      "kilo-auto-free-hosted-models",
-      "bazaarlink-taiwan-free-model-gateway",
-      "deepgram-flux-tts-bonus"
+      "codeai-hour-of-ai-2026",
+      "sambacloud-rundown-first100-anniversary-credit-watch"
     ],
-    "new_ids": [],
-    "unreviewed_existing_count": 796,
-    "attempted_failed_ids": []
+    "new_ids": [
+      "emergent-free-ten-credits-publishing-watch"
+    ],
+    "unreviewed_existing_count": 797,
+    "attempted_failed_ids": [
+      "astamuse-agent-trial-oct31-index-only",
+      "perplexity-watch"
+    ]
   }
 }
