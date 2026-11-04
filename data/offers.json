@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-04T10:09:14+08:00",
-  "scope": "本輪局部複核2筆既有案例，未新增；797筆既有紀錄未完成本輪複核。僅核列明主張，台灣個案與法律可能未知。",
+  "updated_at": "2026-11-04T11:16:57+08:00",
+  "scope": "本輪局部複核3筆既有案例，未新增；796筆既有紀錄未完成本輪複核。僅核列明主張，台灣個案與法律可能未知。",
   "offers": [
     {
       "id": "posthog-startups-fifty-k-twelve-month-ai-observability",
@@ -11972,26 +11972,32 @@
       "cancellation": "活動條款稱auto-reload可隨時關閉；舊定價頁曾列預設啟用，本次現行頁未重證預設，須確認帳戶設定及已發生費用。",
       "usable_duration": "合格消費至2026-12-31 23:59 Pacific；bonus無到期",
       "access_risk": "須先付費消耗；Growth預付每年US$4,000起，超額按Growth費率加10%每週扣款。舊頁曾列自動加值預設，現行預設未核；台灣付款及實際扣款未實測。",
-      "verified_at": "2026-11-02T13:08:44+08:00",
+      "verified_at": "2026-11-04T11:16:57+08:00",
       "discovered_at": "2026-10-23T16:02:28+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-03T13:08:44+08:00",
+      "next_review_at": "2026-11-05T11:16:57+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開方案，具體地區條件未完整核實",
         "account_eligibility": "PAYG或Growth專案且帳戶狀態良好，Enterprise不適用；僅付費Flux TTS使用可累計，活動/註冊/bonus點數使用不計。",
         "billing_country": "須有有效付款方式並先付費使用；台灣付款方式是否受理未核。",
         "identity_residency": "條款限服務依法供應且促銷未受限制的司法管轄區；未明列台灣。",
-        "terms_restrictions": "bonus每專案最多US$500、不可轉讓；須符合禁止濫用與重複領取限制。VPN不能替代帳戶、身分或地區資格。",
+        "terms_restrictions": "bonus每合格專案最多US$500、限該專案後續API用量，不可轉讓；允許多個具獨立目的的合格專案，禁止為濫領而建立重複專案。原則不得與其他折扣併用，標準註冊點數可保留但其消耗不計回饋。VPN不能替代資格。",
         "taiwan_note": "Unknown；不是可領或禁止結論"
       },
       "unknowns": [
         "台灣帳戶及付款資格、適用法律、實際auto-reload預設未核；非預先免費額度，須先有合格付費消耗"
       ],
-      "verification_scope": "本輪僅核新附官方來源所列主張；其他資格、費用、台灣個案及法律未全面重核。",
-      "sources": [{"url": "https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions", "scope": "本輪局部官方來源複核", "evidence": "至12月31日23:59 PT；有效付費用量每US$1回饋US$1，每project最多US$500，不是無消費贈額。", "accessed_at": "2026-11-02"},
+      "verification_scope": "僅核活動條款期間、付費資格、bonus用途、專案與自動加值限制；台灣帳戶、付款及自動加值預設未實測。",
+      "sources": [
+        {
+          "url": "https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions",
+          "scope": "本輪局部官方來源複核",
+          "evidence": "至12月31日23:59 PT；有效付費用量每US$1回饋US$1，每project最多US$500，不是無消費贈額。",
+          "accessed_at": "2026-11-02"
+        },
         {
           "url": "https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions",
           "label": "官方來源",
@@ -12016,9 +12022,25 @@
           "scope": "2026-10-29局部複核定價與舊自動加值證據",
           "evidence": "現行PAYG及Growth Flux TTS列US$0.0450/千字元；未見舊頁US$10觸發補US$100的預設敘述，不代表已關閉。活動條款確認auto-reload非必要且可關閉。",
           "accessed_at": "2026-10-29T16:08:37+08:00"
+        },
+        {
+          "url": "https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions",
+          "scope": "本輪活動資格、費用及限制",
+          "evidence": "條款仍列付費Flux TTS消耗1:1回饋、每專案上限US$500、Enterprise不適用；有效付款方式必需，自動加值可關閉；不得以重複專案濫領。",
+          "accessed_time_range": "2026-10-31T11:05:53+08:00/2026-10-31T11:07:04+08:00"
+        },
+        {
+          "url": "https://deepgram.com/pricing",
+          "scope": "本輪Flux TTS及Growth費率",
+          "evidence": "PAYG及Growth Flux TTS為US$0.045/千字元；Growth預付每年US$4,000起，額度超支按Growth費率加10%、每週扣款；新戶免費點數消耗不符合回饋條件。",
+          "accessed_time_range": "2026-10-31T11:05:53+08:00/2026-10-31T11:07:04+08:00"
+        },
+        {
+          "url": "https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions",
+          "scope": "促銷期間、合格消耗及專案限制",
+          "evidence": "至12/31 23:59 Pacific，PAYG/Growth付費Flux TTS消耗每美元回饋一美元，每專案上限US$500；bonus用於該專案後續API且不過期。多個真正合格專案可參加，禁止為領額度建立無獨立目的專案；自動加值可關閉。",
+          "accessed_time_range": "2026-11-04T11:08:26+08:00/2026-11-04T11:08:55+08:00"
         }
-        ,{"url":"https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions","scope":"本輪活動資格、費用及限制","evidence":"條款仍列付費Flux TTS消耗1:1回饋、每專案上限US$500、Enterprise不適用；有效付款方式必需，自動加值可關閉；不得以重複專案濫領。","accessed_time_range":"2026-10-31T11:05:53+08:00/2026-10-31T11:07:04+08:00"},
-        {"url":"https://deepgram.com/pricing","scope":"本輪Flux TTS及Growth費率","evidence":"PAYG及Growth Flux TTS為US$0.045/千字元；Growth預付每年US$4,000起，額度超支按Growth費率加10%、每週扣款；新戶免費點數消耗不符合回饋條件。","accessed_time_range":"2026-10-31T11:05:53+08:00/2026-10-31T11:07:04+08:00"}
       ],
       "record_type": "opportunity",
       "vpn_research": {
@@ -38690,7 +38712,126 @@
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified"
     },
-    {"id":"kilo-auto-free-hosted-models","title":"Kilo Gateway：免綁卡免費輪替模型（Nemotron 3.5 Super VL等）","summary":"Kilo 免費託管模型免信用卡及外部供應商金鑰；公開目錄本次列 Nemotron 3.5 Super VL、Dots3-Note Preview、Nemotron 3 Ultra，會動態變動。匿名上限每 IP 每小時200次；NVIDIA端點僅供試用、勿送個資或機密。美國境外服務不保證，台灣資格未知。","categories":["FREE","EASY-EFFORT","VALUE-DEAL"],"views":["free","developer"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":10,"effort_basis":"免綁卡，建立帳號或匿名 Gateway 呼叫只需數分鐘。","taiwan":"Unknown","regions":["Global","United States"],"verification":"Official","usage_type":"Rate-limited free hosted inference (200 req/hr/IP for anonymous)","quota_classification":"NO FIXED CAP PUBLISHED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":null,"usable_duration":null,"access_risk":"免費模型目錄每60秒動態變更；條款聲明服務主要針對美國境內，外部模型提供者有獨立試用限制。","verified_at":"2026-11-03T01:09:28+08:00","discovered_at":"2026-10-25T13:30:00+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"daily","next_review_at":"2026-11-04T01:09:28+08:00","priority":"watch","eligibility":{"service_availability":"本次目錄列3款：Nemotron 3.5 Super VL、Dots3-Note Preview、Nemotron 3 Ultra；清單每60秒更新，非固定承諾；匿名限制200 req/hr/IP。","account_eligibility":"一般使用者或開發者；免費模型不需綁定信用卡或提供外部供應商金鑰。","billing_country":"免費使用不要求帳單地址與付款方式；付費加值與訂閱才需綁卡。","identity_residency":"須年滿18歲或當地法定成年年齡；條款§16(H)聲明不保證美國境外之可用性，台灣未明文保證。","terms_restrictions":"每人限一帳號；NVIDIA 免費端點僅限試用，Auto Free 提示詞可能用於模型改進，禁止上傳機密個資。","taiwan_note":"台灣不在制裁清單中，但條款保留美國境外服務提供之裁量權，台灣可用性標為 Unknown。"},"unknowns":["已登入免費使用者的具體 RPM/RPD 上限","台灣 IP 連線穩定度與延遲","特定模型試用終止日期"],"verification_scope":"僅核免費目錄、匿名上限、NVIDIA試用限制及境外服務條款；登入者限制、台灣個案、法律未核。","sources":[{"url":"https://kilo.ai/landing/free-models","scope":"本輪動態免費模型目錄","evidence":"本次列4款模型，輸入輸出$0、免卡；目錄動態更新，並非永久保證。","accessed_at":"2026-10-30T02:07:00+08:00"},{"url":"https://kilo.ai/landing/free-models","label":"Kilo Free Models Landing","scope":"免綁卡免費模型目錄","evidence":"2026-10-25 實讀：免信用卡使用 Nemotron 3.5 Super VL、Laguna S 2.1 等 5 款輪替免費模型。","accessed_time_range":"2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"},{"url":"https://kilo.ai/docs/gateway/models-and-providers","label":"Kilo Gateway Documentation","scope":"Gateway 限制與匿名配額","evidence":"2026-10-25 實讀：匿名使用者限制 200 req/hr/IP，目錄每 60 秒刷新。","accessed_time_range":"2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"},{"url":"https://kilo.ai/terms","label":"Kilo Terms of Service","scope":"年齡限制、地理範圍與帳號條款","evidence":"2026-10-25 實讀（條款更新於 2026-09-30）：須滿 18 歲；§16(H) 聲明美國境外不保證可用；NVIDIA 端點限試用。","accessed_time_range":"2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"},{"url":"https://kilo.ai/landing/free-models","scope":"動態免費目錄及免卡","evidence":"查閱時列三款免費託管模型，Laguna S 2.1不在當時清單；目錄每60秒更新，不能推定永久移除。","accessed_time_range":"2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"},{"url":"https://kilo.ai/docs/gateway/models-and-providers","scope":"匿名限制與供應商試用","evidence":"匿名每IP每小時200請求；NVIDIA試用端點警告勿提供個資或機密。","accessed_time_range":"2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"}],"record_type":"opportunity","vpn_research":{"status":"not_verified","additional_cost_usd":null,"eligibility_note":"不建議使用 VPN 繞過存取控制，條款禁止繞過防護機制。"},"status":"active","legal_status":"not_verified","priority_score":23.6,"priority_tier":"A","priority_note":"官方·活躍·免費·台灣未標記·≤10分鐘"},
+    {
+      "id": "kilo-auto-free-hosted-models",
+      "title": "Kilo Gateway：免綁卡免費輪替模型（Nemotron 3.5 Super VL等）",
+      "summary": "Kilo 免費託管模型免信用卡及外部供應商金鑰；公開目錄本次列 Nemotron 3.5 Super VL、Dots3-Note Preview、Nemotron 3 Ultra，會動態變動。匿名上限每 IP 每小時200次；NVIDIA端點僅供試用、勿送個資或機密。美國境外服務不保證，台灣資格未知。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "free",
+        "developer"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 10,
+      "effort_basis": "免綁卡，建立帳號或匿名 Gateway 呼叫只需數分鐘。",
+      "taiwan": "Unknown",
+      "regions": [
+        "Global",
+        "United States"
+      ],
+      "verification": "Official",
+      "usage_type": "Rate-limited free hosted inference (200 req/hr/IP for anonymous)",
+      "quota_classification": "NO FIXED CAP PUBLISHED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": null,
+      "usable_duration": null,
+      "access_risk": "免費目錄每60秒動態變更；美國境外服務不保證。Kilo條款含廣泛客戶資料授權，上游另有資料及用途限制；NVIDIA試用端點及生成內容不得用於production。",
+      "verified_at": "2026-11-04T11:16:57+08:00",
+      "discovered_at": "2026-10-25T13:30:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-05T11:16:57+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "本次目錄列3款：Nemotron 3.5 Super VL、Dots3-Note Preview、Nemotron 3 Ultra；清單每60秒更新，非固定承諾；匿名限制200 req/hr/IP。",
+        "account_eligibility": "一般使用者或開發者；免費模型不需綁定信用卡或提供外部供應商金鑰。",
+        "billing_country": "免費使用不要求帳單地址與付款方式；付費加值與訂閱才需綁卡。",
+        "identity_residency": "須年滿18歲或當地法定成年年齡；條款§16(H)聲明不保證美國境外之可用性，台灣未明文保證。",
+        "terms_restrictions": "每人限一帳號；Kilo條款§7(A)就客戶資料授予提供及改善服務與其他產品的永久、不可撤銷、可轉授權及轉讓授權（適用DPA時依DPA）；上游模型另有資料條款。NVIDIA試用端點及生成內容不得用於production，勿送機密或個資。",
+        "taiwan_note": "台灣不在制裁清單中，但條款保留美國境外服務提供之裁量權，台灣可用性標為 Unknown。"
+      },
+      "unknowns": [
+        "已登入免費使用者的具體 RPM/RPD 上限",
+        "台灣 IP 連線穩定度與延遲",
+        "特定模型試用終止日期",
+        "11/2版§7(A)與舊版條文差異、個別帳戶DPA及各模型上游適用鏈未核"
+      ],
+      "verification_scope": "僅核免費目錄、匿名限制、11/2版條款生效過渡及資料授權、NVIDIA試用條款；登入者限制、台灣個案、舊版條文差異與法律未核。",
+      "sources": [
+        {
+          "url": "https://kilo.ai/landing/free-models",
+          "scope": "本輪動態免費模型目錄",
+          "evidence": "本次列4款模型，輸入輸出$0、免卡；目錄動態更新，並非永久保證。",
+          "accessed_at": "2026-10-30T02:07:00+08:00"
+        },
+        {
+          "url": "https://kilo.ai/landing/free-models",
+          "label": "Kilo Free Models Landing",
+          "scope": "免綁卡免費模型目錄",
+          "evidence": "2026-10-25 實讀：免信用卡使用 Nemotron 3.5 Super VL、Laguna S 2.1 等 5 款輪替免費模型。",
+          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+        },
+        {
+          "url": "https://kilo.ai/docs/gateway/models-and-providers",
+          "label": "Kilo Gateway Documentation",
+          "scope": "Gateway 限制與匿名配額",
+          "evidence": "2026-10-25 實讀：匿名使用者限制 200 req/hr/IP，目錄每 60 秒刷新。",
+          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+        },
+        {
+          "url": "https://kilo.ai/terms",
+          "label": "Kilo Terms of Service",
+          "scope": "年齡限制、地理範圍與帳號條款",
+          "evidence": "2026-10-25 實讀（條款更新於 2026-09-30）：須滿 18 歲；§16(H) 聲明美國境外不保證可用；NVIDIA 端點限試用。",
+          "accessed_time_range": "2026-10-25T13:00:00+08:00–2026-10-25T13:30:00+08:00"
+        },
+        {
+          "url": "https://kilo.ai/landing/free-models",
+          "scope": "動態免費目錄及免卡",
+          "evidence": "查閱時列三款免費託管模型，Laguna S 2.1不在當時清單；目錄每60秒更新，不能推定永久移除。",
+          "accessed_time_range": "2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"
+        },
+        {
+          "url": "https://kilo.ai/docs/gateway/models-and-providers",
+          "scope": "匿名限制與供應商試用",
+          "evidence": "匿名每IP每小時200請求；NVIDIA試用端點警告勿提供個資或機密。",
+          "accessed_time_range": "2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"
+        },
+        {
+          "url": "https://kilo.ai/terms",
+          "scope": "新版生效過渡及客戶資料授權",
+          "evidence": "11/2更新，新用戶立即適用；既有用戶依接受、首次使用指定Desktop／Anaconda artifacts或更新30日最早者適用。§7(A)為提供及改善服務與其他產品授予永久、不可撤銷、可轉授權及轉讓授權，適用DPA時依DPA；舊版條文差異未核。",
+          "accessed_time_range": "2026-11-04T11:08:18+08:00/2026-11-04T11:08:46+08:00"
+        },
+        {
+          "url": "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+          "scope": "NVIDIA API試用條款，僅限適用該試用服務的端點",
+          "evidence": "§1.2、1.4試用服務及生成內容不得用於production；§2.6限制機密及個資，§3.3稱可用輸入及生成內容改善產品及模型。",
+          "accessed_at": "2026-11-04T11:16:57+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不建議使用 VPN 繞過存取控制，條款禁止繞過防護機制。"
+      },
+      "status": "active",
+      "legal_status": "not_verified",
+      "priority_score": 23.6,
+      "priority_tier": "A",
+      "priority_note": "官方·活躍·免費·台灣未標記·≤10分鐘"
+    },
     {
       "id": "opencode-accountless-free-models",
       "title": "OpenCode：免帳號內建免費模型（GLM-5.3-Flash / DeepSeek V4.1 Flash 等）",
@@ -39007,7 +39148,178 @@
       "priority_tier": "S",
       "priority_note": "官方·條件式·免費·台灣Yes·時間未知·有資格門檻"
     },
-    {"id":"bazaarlink-taiwan-free-model-gateway","title":"BazaarLink：台灣免卡免費模型層，超額可能轉付費","summary":"台灣AI API閘道提供免卡指定免費模型，名單輪替；免費入口稱無餘額帳戶10 RPM、每日60加權單位，有餘額20 RPM、每日120單位，跨免費模型共用；文件卻稱各模型分開計算，實際扣抵未核。長輸入可能耗多單位；有餘額且啟用付費fallback時可能付費。搜尋頁列按次收費，文件另稱每日免費搜尋，衝突未解。","categories":["FREE","EASY-EFFORT","QUALIFICATION"],"views":["free","developer","regional"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":15,"effort_basis":"官方帳戶/API key設定，未登入或測試；不含整合與開發時間。","taiwan":"Yes","regions":["Taiwan"],"verification":"Official","usage_type":"每日60／120加權單位；跨模型共用或逐模型計算官方來源衝突","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":"免費模型超額時有餘額可能轉付費；需設定X-Free-Fallback: false或關閉付費fallback避免超額收費。","usable_duration":"免費模型清單輪替；未公布固定結束日","access_risk":"免費入口稱跨模型共池，文件稱逐模型計算；搜尋免費額度亦與搜尋價目頁衝突。模型超額且啟用付費fallback時可能付費；預付另有交易費及稅費。","verified_at":"2026-11-03T01:09:28+08:00","discovered_at":"2026-10-25T13:45:00+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"daily","next_review_at":"2026-11-04T01:09:28+08:00","priority":"watch","verification_scope":"核免費入口與文件的配額衝突、免卡、fallback、搜尋價目及文件分歧；未操作帳戶、付款或核法律。","eligibility":{"service_availability":"免費入口本次列6款免費模型，清單輪替；免費額度跨模型共池或逐模型計算的官方說法衝突。","account_eligibility":"需註冊帳戶及API key；須年滿18歲，或13–17歲並取得法定代理人同意。","billing_country":"免費模型路由免信用卡；預付可提高額度，超額可能按標準價付費。文件稱以USD計費、TWD報價，條款稱NTD計費，兩者口徑未釐清；付款方式、交易費及適用稅費以結帳為準，未實測。","identity_residency":"官方首頁/文件定位台灣服務並標示TW；上游每個模型的獨立地區准入仍應依其提供者條款判斷。","terms_restrictions":"免費入口稱無餘額10 RPM及每日60加權單位、有餘額20 RPM及120單位，跨模型共用；文件稱逐模型計算，未驗實際扣抵。UTC午夜重置；付費fallback可關閉，設定 X-Free-Fallback: false 可避免轉付費。免費搜尋說法與搜尋價目頁不同；預付和獎勵額各自18個月有效。","taiwan_note":"Yes（供應商官方文件稱台灣AI API Gateway，首頁標示TW服務區；不代表所有模型均開放，也不驗證個人帳戶/上游供應商資格）。"},"unknowns":["跨免費模型共池與逐模型計算的實際規則","搜尋頁按次收費與文件每日免費搜尋的適用關係","文件USD計費與條款NTD計費之差異、結帳稅費及發票","台灣個案及各上游模型資格、fallback預設"],"sources":[{"url":"https://bazaarlink.ai/","label":"BazaarLink 官方首頁","scope":"台灣服務定位、TW area served及供應商資訊","evidence":"2026-10-25 13:45–13:47:57 Asia/Taipei實讀官方首頁HTML與結構化資料：標示台灣服務區、台灣公司/地址；這只支持供應商在台服務定位，不替代每個上游模型地區資格。"},{"url":"https://bazaarlink.ai/docs.md","label":"BazaarLink 官方文件","scope":"免費模型、auto:free、每日quota及金額計費","evidence":"2026-10-25 13:45–13:47:57 Asia/Taipei實讀：免卡免費模型名單、逐模型額度單位與auto:free路由；免費名單輪替，長context消耗較多單位。"},{"url":"https://bazaarlink.ai/docs#limits","label":"BazaarLink 官方額度文件","scope":"RPM、每日點數、預付倍率及超額付費","evidence":"2026-10-25 13:45–13:47:57 Asia/Taipei實讀：免費層每模型10 RPM、每日60單位，預付可×2；有餘額時超額請求可用付費fallback；HTTP header可設X-Free-Fallback:false。"},{"url":"https://bazaarlink.ai/models","label":"BazaarLink 官方模型目錄","scope":"指定免費模型識別與輪替","evidence":"2026-10-25 13:45–13:47:57 Asia/Taipei實讀：模型頁列出指定免費型號；免費狀態與名單會變，不代表全模型免費。"},{"url":"https://bazaarlink.ai/terms","label":"BazaarLink 服務條款","scope":"帳戶年齡、地區、轉售/上游政策與計費","evidence":"2026-10-25 13:45–13:47:57 Asia/Taipei實讀：條款2026-09-11生效；未成年帳戶須監護人同意，禁止未授權轉售憑證/服務並受出口管制與上游提供者政策約束。"},{"url":"https://bazaarlink.ai/solutions/web-search","label":"BazaarLink 官方網路搜尋方案","scope":"驗證信箱、每日免費搜尋次數、重置與超額收費；與模型額度分開","evidence":"2026-10-26 14:46–14:49 Asia/Taipei實讀：無餘額5次/日，有餘額或訂閱10次/日；進階搜尋耗2次，UTC午夜重置，超額有餘額付費、無餘額拒絕。","accessed_time_range":"2026-10-26T14:46:00+08:00–2026-10-26T14:48:51+08:00"},{"url":"https://bazaarlink.ai/docs.md","scope":"本次局部複核模型限額與付費fallback","evidence":"2026-10-27 16:14 Asia/Taipei實讀：每模型基準10 RPM／每日60單位，有餘額×2，長上下文耗更多，超額可能轉付費；文件以USD顯示。","accessed_time_range":"2026-10-27T16:14:41+08:00"},{"url":"https://bazaarlink.ai/terms","scope":"本次局部複核預付與獎勵點數期限及轉售限制，非免費每日額度期限","evidence":"2026-10-27 16:14 Asia/Taipei實讀§5：預付及獎勵點數各18個月，NTD計費與文件USD口徑未解；§2／4有上游政策和轉售限制。","accessed_time_range":"2026-10-27T16:14:41+08:00"},{"url":"https://bazaarlink.ai/docs.md","scope":"本次局部複核免費模型、額度、付費 fallback 與計費文件","evidence":"免費層每模型基準10 RPM及每日60額度單位，有餘額×2；長上下文消耗更多，超額有餘額會轉付費，可設 X-Free-Fallback: false；文件稱以USD計費、TWD報價。","accessed_at":"2026-10-29T06:06:47+08:00"},{"url":"https://bazaarlink.ai/terms","scope":"本次局部複核年齡、轉售限制及帳單條款","evidence":"§1及§15：18歲以上或13–17歲須法定代理人同意；§4限制轉售及受上游政策約束；§5稱NTD計費，與文件口徑未釐清。","accessed_at":"2026-10-29T06:06:47+08:00"},{"url":"https://bazaarlink.ai/docs.md","scope":"本次複核免費模型基準與付費fallback","evidence":"基準10 RPM及每日60單位、餘額帳戶×2，長上下文消耗更多，逐模型可不同；有餘額超額可能轉付費，X-Free-Fallback: false可停用。","accessed_at":"2026-10-30T12:05:58+08:00"},{"url":"https://bazaarlink.ai/en/faq","scope":"免卡註冊、免費額度動態性及超額處理","evidence":"官方稱無須先加信用卡可建立API key；免費模型與額度動態調整，有餘額超額可能按正常費率計費。","accessed_at":"2026-10-30T12:05:58+08:00"},{"url":"https://bazaarlink.ai/free","scope":"免費模型共池與現行入口","evidence":"無餘額10 RPM／60加權單位每天、有餘額20 RPM／120單位，跨免費模型共用；UTC午夜重置。","accessed_time_range":"2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"},{"url":"https://bazaarlink.ai/docs.md","scope":"文件配額及搜尋說法","evidence":"文件仍稱免費限額按模型分開；另列免費搜尋，與入口及搜尋價目不同。","accessed_time_range":"2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"},{"url":"https://bazaarlink.ai/solutions/web-search","scope":"搜尋計價","evidence":"搜尋頁列按次費用並稱免費模型亦收搜尋費；與文件免費搜尋敘述差異未解。","accessed_time_range":"2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"}],"record_type":"opportunity","vpn_research":{"status":"not_verified","additional_cost_usd":null,"eligibility_note":"不以IP判定帳戶或上游模型資格；不建議轉售憑證或規避上游限制。"},"status":"active","legal_status":"not_verified","priority_score":26.6,"priority_tier":"S","priority_note":"官方·活躍·免費·台灣Yes·≤15分鐘·有資格門檻"},
+    {
+      "id": "bazaarlink-taiwan-free-model-gateway",
+      "title": "BazaarLink：台灣免卡免費模型層，超額可能轉付費",
+      "summary": "台灣AI API閘道提供免卡指定免費模型，名單輪替；免費入口稱無餘額帳戶10 RPM、每日60單位，有餘額20 RPM、每日120單位，跨模型共用，並列全站20 RPM及每帳戶並行2請求；文件仍稱逐模型計算，實際扣抵未核。有餘額且啟用付費fallback可能付費。搜尋頁與文件不同段落的免費搜尋說法衝突。",
+      "categories": [
+        "FREE",
+        "EASY-EFFORT",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer",
+        "regional"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": 15,
+      "effort_basis": "官方帳戶/API key設定，未登入或測試；不含整合與開發時間。",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "verification": "Official",
+      "usage_type": "每日60／120加權單位；跨模型共用或逐模型計算官方來源衝突",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "免費模型超額時有餘額可能轉付費；需設定X-Free-Fallback: false或關閉付費fallback避免超額收費。",
+      "usable_duration": "免費模型清單輪替；未公布固定結束日",
+      "access_risk": "免費入口稱跨模型共池，文件稱逐模型計算；搜尋頁按次收費與文件social段落所稱免費搜尋衝突。超額且啟用付費fallback時可能付費；預付另有交易費及稅費。官方列全站上限與帳戶並行限制，實際扣抵未核。",
+      "verified_at": "2026-11-04T11:16:57+08:00",
+      "discovered_at": "2026-10-25T13:45:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-05T11:16:57+08:00",
+      "priority": "watch",
+      "verification_scope": "核免費入口快照與文件逐模型額度矛盾、付費fallback及搜尋敘述差異；未操作帳戶、付款、實際扣抵或核法律。",
+      "eligibility": {
+        "service_availability": "免費入口本次快照列5款免費模型，清單輪替；免費額度跨模型共池或逐模型計算的官方說法衝突。",
+        "account_eligibility": "需註冊帳戶及API key；須年滿18歲，或13–17歲並取得法定代理人同意。",
+        "billing_country": "免費模型路由免信用卡；預付可提高額度，超額可能按標準價付費。文件稱以USD計費、TWD報價，條款稱NTD計費，兩者口徑未釐清；付款方式、交易費及適用稅費以結帳為準，未實測。",
+        "identity_residency": "官方首頁/文件定位台灣服務並標示TW；上游每個模型的獨立地區准入仍應依其提供者條款判斷。",
+        "terms_restrictions": "免費入口稱無餘額10 RPM及每日60單位、有餘額20 RPM及120單位，跨模型共用；並列全站20 RPM、每帳戶並行2請求及IP防護。文件稱逐模型計算，實際扣抵未核。UTC午夜重置；可停用付費fallback，設定 X-Free-Fallback: false。搜尋頁按次收費，文件social段落仍稱每日免費搜尋；預付和獎勵額各自18個月有效。",
+        "taiwan_note": "Yes（供應商官方文件稱台灣AI API Gateway，首頁標示TW服務區；不代表所有模型均開放，也不驗證個人帳戶/上游供應商資格）。"
+      },
+      "unknowns": [
+        "跨免費模型共池與逐模型計算的實際規則",
+        "搜尋頁按次收費與文件social段落每日免費搜尋的適用關係",
+        "文件USD計費與條款NTD計費之差異、結帳稅費及發票",
+        "台灣個案及各上游模型資格、fallback預設"
+      ],
+      "sources": [
+        {
+          "url": "https://bazaarlink.ai/",
+          "label": "BazaarLink 官方首頁",
+          "scope": "台灣服務定位、TW area served及供應商資訊",
+          "evidence": "2026-10-25 13:45–13:47:57 Asia/Taipei實讀官方首頁HTML與結構化資料：標示台灣服務區、台灣公司/地址；這只支持供應商在台服務定位，不替代每個上游模型地區資格。"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "label": "BazaarLink 官方文件",
+          "scope": "免費模型、auto:free、每日quota及金額計費",
+          "evidence": "2026-10-25 13:45–13:47:57 Asia/Taipei實讀：免卡免費模型名單、逐模型額度單位與auto:free路由；免費名單輪替，長context消耗較多單位。"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs#limits",
+          "label": "BazaarLink 官方額度文件",
+          "scope": "RPM、每日點數、預付倍率及超額付費",
+          "evidence": "2026-10-25 13:45–13:47:57 Asia/Taipei實讀：免費層每模型10 RPM、每日60單位，預付可×2；有餘額時超額請求可用付費fallback；HTTP header可設X-Free-Fallback:false。"
+        },
+        {
+          "url": "https://bazaarlink.ai/models",
+          "label": "BazaarLink 官方模型目錄",
+          "scope": "指定免費模型識別與輪替",
+          "evidence": "2026-10-25 13:45–13:47:57 Asia/Taipei實讀：模型頁列出指定免費型號；免費狀態與名單會變，不代表全模型免費。"
+        },
+        {
+          "url": "https://bazaarlink.ai/terms",
+          "label": "BazaarLink 服務條款",
+          "scope": "帳戶年齡、地區、轉售/上游政策與計費",
+          "evidence": "2026-10-25 13:45–13:47:57 Asia/Taipei實讀：條款2026-09-11生效；未成年帳戶須監護人同意，禁止未授權轉售憑證/服務並受出口管制與上游提供者政策約束。"
+        },
+        {
+          "url": "https://bazaarlink.ai/solutions/web-search",
+          "label": "BazaarLink 官方網路搜尋方案",
+          "scope": "驗證信箱、每日免費搜尋次數、重置與超額收費；與模型額度分開",
+          "evidence": "2026-10-26 14:46–14:49 Asia/Taipei實讀：無餘額5次/日，有餘額或訂閱10次/日；進階搜尋耗2次，UTC午夜重置，超額有餘額付費、無餘額拒絕。",
+          "accessed_time_range": "2026-10-26T14:46:00+08:00–2026-10-26T14:48:51+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "本次局部複核模型限額與付費fallback",
+          "evidence": "2026-10-27 16:14 Asia/Taipei實讀：每模型基準10 RPM／每日60單位，有餘額×2，長上下文耗更多，超額可能轉付費；文件以USD顯示。",
+          "accessed_time_range": "2026-10-27T16:14:41+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/terms",
+          "scope": "本次局部複核預付與獎勵點數期限及轉售限制，非免費每日額度期限",
+          "evidence": "2026-10-27 16:14 Asia/Taipei實讀§5：預付及獎勵點數各18個月，NTD計費與文件USD口徑未解；§2／4有上游政策和轉售限制。",
+          "accessed_time_range": "2026-10-27T16:14:41+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "本次局部複核免費模型、額度、付費 fallback 與計費文件",
+          "evidence": "免費層每模型基準10 RPM及每日60額度單位，有餘額×2；長上下文消耗更多，超額有餘額會轉付費，可設 X-Free-Fallback: false；文件稱以USD計費、TWD報價。",
+          "accessed_at": "2026-10-29T06:06:47+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/terms",
+          "scope": "本次局部複核年齡、轉售限制及帳單條款",
+          "evidence": "§1及§15：18歲以上或13–17歲須法定代理人同意；§4限制轉售及受上游政策約束；§5稱NTD計費，與文件口徑未釐清。",
+          "accessed_at": "2026-10-29T06:06:47+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "本次複核免費模型基準與付費fallback",
+          "evidence": "基準10 RPM及每日60單位、餘額帳戶×2，長上下文消耗更多，逐模型可不同；有餘額超額可能轉付費，X-Free-Fallback: false可停用。",
+          "accessed_at": "2026-10-30T12:05:58+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/en/faq",
+          "scope": "免卡註冊、免費額度動態性及超額處理",
+          "evidence": "官方稱無須先加信用卡可建立API key；免費模型與額度動態調整，有餘額超額可能按正常費率計費。",
+          "accessed_at": "2026-10-30T12:05:58+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/free",
+          "scope": "免費模型共池與現行入口",
+          "evidence": "無餘額10 RPM／60加權單位每天、有餘額20 RPM／120單位，跨免費模型共用；UTC午夜重置。",
+          "accessed_time_range": "2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "文件配額及搜尋說法",
+          "evidence": "文件仍稱免費限額按模型分開；另列免費搜尋，與入口及搜尋價目不同。",
+          "accessed_time_range": "2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/solutions/web-search",
+          "scope": "搜尋計價",
+          "evidence": "搜尋頁列按次費用並稱免費模型亦收搜尋費；與文件免費搜尋敘述差異未解。",
+          "accessed_time_range": "2026-11-03T01:06:47+08:00/2026-11-03T01:08:12+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/free",
+          "scope": "免費目錄快照、共享限額及並行限制",
+          "evidence": "本次列5個啟用模型；帳戶無餘額10 RPM及60單位／日、有餘額20 RPM及120單位／日，跨模型共用；全站20 RPM、每帳戶並行2請求，UTC午夜重置。快照會變動，未實測。",
+          "accessed_time_range": "2026-11-04T11:08:18+08:00/2026-11-04T11:09:20+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "逐模型配額與搜尋文件內衝突",
+          "evidence": "免費模型段落仍稱每日預算逐模型計；social段落稱與online共用每日免費5／10次，與搜尋計價頁衝突。超額可能轉付費，可設X-Free-Fallback: false。",
+          "accessed_at": "2026-11-04T11:16:57+08:00"
+        }
+      ],
+      "record_type": "opportunity",
+      "vpn_research": {
+        "status": "not_verified",
+        "additional_cost_usd": null,
+        "eligibility_note": "不以IP判定帳戶或上游模型資格；不建議轉售憑證或規避上游限制。"
+      },
+      "status": "active",
+      "legal_status": "not_verified",
+      "priority_score": 26.6,
+      "priority_tier": "S",
+      "priority_note": "官方·活躍·免費·台灣Yes·≤15分鐘·有資格門檻"
+    },
     {
       "id": "landingai-ade-explore-credits-watch",
       "title": "LandingAI ADE Explore：1,000點/90天，台灣資格待核",
@@ -48242,16 +48554,17 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-04T10:09:14+08:00",
+  "latest_research_at": "2026-11-04T11:16:57+08:00",
   "last_research_run": {
-    "started_at": "2026-11-04T10:06:06+08:00",
-    "completed_at": "2026-11-04T10:09:14+08:00",
+    "started_at": "2026-11-04T11:07:34+08:00",
+    "completed_at": "2026-11-04T11:16:57+08:00",
     "reviewed_ids": [
-      "plaud-preview-one-time-work-credits",
-      "videogen-model1-selected-project-credit-program"
+      "kilo-auto-free-hosted-models",
+      "bazaarlink-taiwan-free-model-gateway",
+      "deepgram-flux-tts-bonus"
     ],
     "new_ids": [],
-    "unreviewed_existing_count": 797,
+    "unreviewed_existing_count": 796,
     "attempted_failed_ids": []
   }
 }
