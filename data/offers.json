@@ -1,8 +1,79 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-04T13:10:34+08:00",
-  "scope": "本輪局部複核2筆既有案例，新增1筆觀察線索；797筆既有紀錄未完成本輪複核，其中2筆追查失敗。台灣個案與法律可能未知。",
+  "updated_at": "2026-11-04T14:10:12+08:00",
+  "scope": "本輪局部複核1筆既有案例，新增1筆機會；799筆既有紀錄未完成本輪複核，其中3筆追查失敗。台灣個案與法律可能未知。",
   "offers": [
+    {
+      "id": "future-agi-nonprofit-cloud-credits",
+      "title": "Future AGI 非營利方案：月額抵用或高用量折扣",
+      "summary": "合格非營利組織可申請雲端AI評估及觀測方案：官方稱每月US$250抵用，或高用量帳單折扣75%；每月重置、不結轉，資格每年重驗。官方同頁另列Boost價值US$250加US$50用量，與總額敘述及現行按量定價關係不明；台灣組織與超額計費須先確認。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "categories": [
+        "VALUE-DEAL",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "developer",
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "須提交組織資料與非營利證明；申請耗時未知。",
+      "taiwan": "Unknown",
+      "regions": [],
+      "verification": "Official",
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "年度重新驗證非營利資格；取消與超額後是否自動計費未核。",
+      "usable_duration": "抵用按帳單週期每月重置、不結轉；折扣每年重新驗證資格。",
+      "access_risk": "非自動核准；高用量為帳單折扣而非全額免費。方案頁與現行定價對基礎費及抵用範圍有待釐清，外部模型費用和超額硬停未知。",
+      "verified_at": "2026-11-04T14:10:12+08:00",
+      "discovered_at": "2026-11-04T14:10:12+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-04T14:10:12+08:00",
+      "priority": "watch",
+      "eligibility": {
+        "service_availability": "須申請及審核；適用雲端平台。定價頁另列一般免費層，不能推定非營利計畫同樣免卡。",
+        "account_eligibility": "登記非營利、慈善組織或同等資格，主要目的須為公益而非商業營收；排除政府、政治組織與產業協會。",
+        "billing_country": "台灣付款、必要付款驗證、超額收費與稅費未核。",
+        "identity_residency": "須提供非營利證明；官方接受各國同等文件，但未明列台灣文件或保證核准。",
+        "terms_restrictions": "每月抵用不結轉；高用量方案折扣75%並非免費。僅雲端計畫，每年重新驗證。",
+        "taiwan_note": "Unknown：官方接受各國同等文件不代表台灣個案已獲准。"
+      },
+      "unknowns": [
+        "US$250總額與另列US$50用量、現行定價之間的關係",
+        "台灣組織資格、付款驗證與超額硬停",
+        "外部模型及第三方費用是否可抵"
+      ],
+      "verification_scope": "僅核官方非營利方案與一般定價頁列明的利益、資格與矛盾；未申請、付款或核實台灣個案及法律。",
+      "sources": [
+        {
+          "url": "https://futureagi.com/non-profit/",
+          "scope": "非營利利益、資格、抵用重置及年度驗證",
+          "evidence": "摘要稱每月US$250涵蓋Boost基本費和用量；福利表又稱Boost價值US$250及另加US$50用量。高用量帳單折扣75%；接受各國同等非營利文件，政府等排除。",
+          "accessed_at": "2026-11-04T14:10:12+08:00"
+        },
+        {
+          "url": "https://futureagi.com/pricing/",
+          "scope": "一般雲端定價，非非營利方案資格",
+          "evidence": "一般免費層免卡，按量頁列US$0月費加超額用量；與非營利頁Boost基本費敘述的適用關係未釐清。",
+          "accessed_at": "2026-11-04T14:10:12+08:00"
+        }
+      ],
+      "legal_status": "not_verified",
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
     {
       "id": "emergent-free-ten-credits-publishing-watch",
       "title": "Emergent Free：10點額度與發布限制待核",
@@ -9134,8 +9205,8 @@
       "usable_duration": null,
       "access_risk": "資格、審核、限額與政策可能變更",
       "verified_at": "2026-10-25T17:35:00+08:00",
-      "last_review_attempt_at": "2026-11-04T09:07:43+08:00",
-      "last_review_attempt_note": "官方正文及說明中心讀取403，瀏覽器僅顯示安全驗證；未取得正文，不判定截止，verified_at及既有到期時間保留。來源：https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro",
+      "last_review_attempt_at": "2026-11-04T14:08:00+08:00",
+      "last_review_attempt_note": "官方Education及方案比較正文403，替代網址亦轉回403；不判定截止，verified_at及既有到期時間保留。來源：https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro",
       "discovered_at": "2026-10-23T10:42:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -20969,10 +21040,10 @@
       "limited_confirmed": false,
       "usable_duration": "Step 5促銷截止日期/時區未獲官方確認；一般Free按月，新戶250點14天，日活活動結束另行通知",
       "access_risk": "Step 5促銷不能據第三方日期認定有效或過期；一般免費額度與專屬模型限免須分開。",
-      "verified_at": "2026-11-02T08:08:06+08:00",
+      "verified_at": "2026-11-04T14:08:00+08:00",
       "discovered_at": "2026-10-24T03:05:00+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-03T08:08:06+08:00",
+      "next_review_at": "2026-11-05T14:08:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "一般國際版Free公開定價存在；Step 5專屬促銷未核。",
@@ -20987,6 +21058,12 @@
         "台灣活動資格、+886註冊與專屬配額；位於台灣未滿20歲不符合一般服務年齡條件"
       ],
       "sources": [
+        {
+          "url": "https://www.workbuddy.ai/docs/zh/workbuddy/Subscription",
+          "scope": "一般Free與日活規則；不支持Step 5專屬活動",
+          "evidence": "Free每月100點，新戶250點14天；個人Free客戶端有效任務可獲日活30點，通常次日入帳，活動結束另行通知。網頁端不計，禁止多帳戶刷獎。",
+          "accessed_at": "2026-11-04T14:08:00+08:00"
+        },
         {
           "url": "https://www.workbuddy.ai/docs/zh/workbuddy/Subscription",
           "label": "官方訂閱及活動規則",
@@ -39725,19 +39802,17 @@
     },
     {
       "id": "deepinfra-two-minute-papers-twenty-credit",
-      "title": "DeepInfra × Two Minute Papers：官方US$20推論credits活動",
-      "summary": "DeepInfra官方活動頁向Two Minute Papers觀眾提供US$20推論credits，Claim導向活動登入；公開頁未列募資條件。一般定價要求加卡或預付，活動是否豁免未知；未登入核實入帳、效期及台灣資格。",
+      "title": "DeepInfra × Two Minute Papers：US$20歷史活動入口待核",
+      "summary": "官方活動頁曾向Two Minute Papers觀眾提供US$20推論credits；2026-11-04追查時頁面404，現行申領及入帳未核，不等於活動已終止。一般定價頁稱無upfront costs，是否須付款驗證、活動效期及台灣資格未知。",
       "categories": [
-        "FREE",
         "QUALIFICATION"
       ],
       "views": [
-        "free",
         "developer"
       ],
       "setup_cost_usd": null,
       "recurring_cost_usd": null,
-      "setup_cost_basis": "活動宣稱免費US$20點數，但一般定價要求加卡或預付才能使用服務；促銷是否豁免及最低預付未知。",
+      "setup_cost_basis": "歷史活動宣稱US$20點數；現行一般定價稱無upfront costs，活動是否仍可申領及付款驗證要求未知。",
       "benefit_cost_ratio": null,
       "usable_benefit_usd": null,
       "savings_usd": null,
@@ -39762,8 +39837,10 @@
       },
       "usable_duration": "公開活動頁未公布申領截止與credits效期；實際到期依帳戶及活動條件確認。",
       "cancellation": "活動無訂閱費承諾；一般服務按用量，耗盡硬停或自動扣款與auto top-up預設未核，不應假定零扣款風險。",
-      "access_risk": "一般服務要求加卡或預付；活動是否豁免、促銷效期、超額及自動儲值預設未核。入口存在不保證可兌換。",
+      "access_risk": "官方活動頁本輪404；是否仍可申領、付款驗證、促銷效期、超額及自動儲值預設未核。",
       "verified_at": "2026-11-03T03:07:31+08:00",
+      "last_review_attempt_at": "2026-11-04T14:08:00+08:00",
+      "last_review_attempt_note": "官方活動頁404；一般定價及帳戶文件不證明活動仍可申領，未刷新verified_at或延後複核期限。",
       "discovered_at": "2026-10-25T14:45:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -39771,12 +39848,12 @@
       "next_review_at": "2026-11-04T03:07:31+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "DeepInfra官方Two Minute Papers活動頁仍提供US$20及Claim入口；API為OpenAI-compatible。一般目錄有文字、多模態、語音、圖片等，但活動抵用範圍未完整列明。",
-        "account_eligibility": "活動對象為Two Minute Papers觀眾，導向/login?deal=2mpapers。一般可Google、GitHub、email/password或Corporate SSO；是否僅新戶及每人/帳戶次數未說明。",
-        "billing_country": "一般定價頁要求加卡或預付才能使用服務；活動是否豁免、最低預付、台灣付款國別、卡片及稅未知。",
+        "service_availability": "官方活動頁本輪404；歷史US$20與Claim入口不代表現今仍受理。一般API提供模型，但活動抵用範圍未核。",
+        "account_eligibility": "歷史活動面向Two Minute Papers觀眾；現行活動是否開放、是否限新戶及每人次數未核。",
+        "billing_country": "一般定價頁稱無upfront costs；活動付款驗證、最低預付、台灣付款國別、卡片及稅未知。",
         "identity_residency": "現行條款§20(e)要求非全面制裁地區、非受限名單及遵守出口規範，但無Taiwan逐國支援聲明；不能以未點名台灣推定資格。",
         "terms_restrictions": "2026-10-15一般條款禁止競業服務、轉售/再授權/提供第三方存取（除另有明許）、繞過用量與分享憑證；模型及第三方服務有額外條件。一般服務可產生按量費及稅，活動未公布超額與信用卡扣款條款；不將此商業契約限制等同台灣法律結論。",
-        "taiwan_note": "Unknown；公開活動未要求美國等指定國家，但未列支援國、未驗台灣IP/帳戶或付款資格。制裁條款合規與台灣法律合規應分別判斷，未提供法律意見。"
+        "taiwan_note": "Unknown；活動現行狀態、台灣帳戶及付款資格未核。服務條款不等於台灣法律結論。"
       },
       "unknowns": [
         "US$20是否限新戶、觀眾如何驗證、帳戶可否疊加其他贈額",
@@ -39785,7 +39862,7 @@
         "活動帳戶精確限額與超額是否硬停/自動扣款",
         "台灣帳戶/IP、卡片及居住/國籍資格"
       ],
-      "verification_scope": "本次核活動US$20、申領入口、一般定價的加卡或預付要求及一般並發；未登入、核實促銷豁免、台灣資格或法律。",
+      "verification_scope": "verified_at為上次官方活動頁可讀的歷史查核；本輪入口404，未核實現行優惠、台灣資格或法律。",
       "sources": [
         {
           "url": "https://deepinfra.com/papers",
@@ -39846,8 +39923,8 @@
       ],
       "record_type": "opportunity",
       "legal_status": "not_verified",
-      "priority_score": 15.3,
-      "priority_tier": "C",
+      "priority_score": 12.3,
+      "priority_tier": "D",
       "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻"
     },
     {
@@ -41568,8 +41645,8 @@
       "usable_duration": null,
       "access_risk": "歷史免費方案已終止，Tabnine已轉向Tricentis企業端銷售",
       "verified_at": "2026-10-25T18:30:00+08:00",
-      "last_review_attempt_at": "2026-11-04T04:05:45+08:00",
-      "last_review_attempt_note": "原退役公告轉址至Tricentis一般產品頁，未取得退役公告正文。 本輪研究嘗試區間04:05:45–04:08:20 Asia/Taipei；未刷新verified_at或延後期限。",
+      "last_review_attempt_at": "2026-11-04T14:08:00+08:00",
+      "last_review_attempt_note": "原退役公告轉址至Tricentis一般產品頁，未取得退役正文或日期；未刷新verified_at或延後期限。",
       "discovered_at": "2026-10-25T18:00:00+08:00",
       "announcement_at": "2025-03-25",
       "previous_limit": "歷史Basic免費方案提供簡短單行補全",
@@ -48653,21 +48730,21 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-04T13:10:34+08:00",
+  "latest_research_at": "2026-11-04T14:10:12+08:00",
   "last_research_run": {
-    "started_at": "2026-11-04T13:05:57+08:00",
-    "completed_at": "2026-11-04T13:10:34+08:00",
+    "started_at": "2026-11-04T14:05:55+08:00",
+    "completed_at": "2026-11-04T14:10:12+08:00",
     "reviewed_ids": [
-      "codeai-hour-of-ai-2026",
-      "sambacloud-rundown-first100-anniversary-credit-watch"
+      "workbuddy-step5-oct25-unverified"
     ],
     "new_ids": [
-      "emergent-free-ten-credits-publishing-watch"
+      "future-agi-nonprofit-cloud-credits"
     ],
-    "unreviewed_existing_count": 797,
+    "unreviewed_existing_count": 799,
     "attempted_failed_ids": [
-      "astamuse-agent-trial-oct31-index-only",
-      "perplexity-watch"
+      "perplexity-education",
+      "tabnine-basic-free-retired",
+      "deepinfra-two-minute-papers-twenty-credit"
     ]
   }
 }
