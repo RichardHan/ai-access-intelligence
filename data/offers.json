@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-06T04:09:12+08:00",
+  "updated_at": "2026-11-06T05:08:50+08:00",
   "scope": "本輪起始814筆，局部複核2筆、未完成812筆；新增機會、政策及觀察線索各0筆，整筆核心來源追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
   "offers": [
     {
@@ -35801,27 +35801,28 @@
       "valuation_scenario": null,
       "cancellation": "Data Cloud取消需聯絡Support，加卡不等於升級；CoCo註冊頁稱可隨時取消，試用後US$20/月，超額計費及實際取消流程未核。",
       "usable_duration": "兩入口均為30日或額度耗盡，以先到者為準；CoCo US$40推論與US$360其他費用分池",
-      "access_risk": "Data Cloud AI需加卡；CoCo期後訂閱及超額條件須確認，不能假設免費期後自動停止；台灣個案未測。",
-      "verified_at": "2026-11-04T08:11:22+08:00",
+      "access_risk": "Data Cloud AI需加卡；試用頁與文件對external network access、hybrid tables及Openflow的限制說法不同；CoCo期後訂閱及超額條件須確認，不能假設免費期後自動停止；台灣個案未測。",
+      "verified_at": "2026-11-06T05:08:00+08:00",
       "discovered_at": "2026-10-25T03:49:56+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T08:11:22+08:00",
+      "next_review_at": "2026-11-07T05:08:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Snowflake AI Data Cloud 30日自助試用，free usage balance依warehouse compute、serverless/AI功能與儲存共同扣抵；美元額度會隨雲端/地區/edition使用而消耗。",
         "account_eligibility": "文件稱有效email，現行Data Cloud表單標示Work email；CoCo另問公司與職稱，兩者不可混用。",
         "billing_country": "兩個註冊入口Country選單均含Taiwan；Data Cloud初始不需付款，AI啟用需卡；CoCo續訂付款條件依註冊流程核實。",
         "identity_residency": "官方國家選單含Taiwan，但未註冊、未測身分與實際使用。",
-        "terms_restrictions": "Data Cloud需加卡啟用AI，加卡不自動升級；CoCo頁列期後US$20/月及使用限制，超額計費未明，不可套用Data Cloud不升級規則。",
+        "terms_restrictions": "Data Cloud需加卡啟用AI，加卡不自動升級；試用頁稱external network access、hybrid tables及Openflow加付款前每日限10 credits，文件則稱試用帳戶不提供上述功能，適用關係待釐清。CoCo頁列期後US$20/月及使用限制，超額計費未明，不可套用Data Cloud不升級規則。",
         "taiwan_note": "官方兩種註冊表均列Taiwan，僅確認國家選項；帳戶核准、卡片與實際優惠領取未核，法律結論未核。"
       },
       "unknowns": [
         "台灣註冊帳戶/電話/公司身分資格與當地付款支援",
         "同一trial可用於AI的實際上限（加卡前AI停用）",
         "CoCo免費期後US$20訂閱的取消流程、台灣個案付款與實際開通",
-        "CoCo月訂閱涵蓋範圍、超額計費與自助條款用量費如何適用仍待釐清"
+        "CoCo月訂閱涵蓋範圍、超額計費與自助條款用量費如何適用仍待釐清",
+        "Data Cloud試用頁與文件對external network access、hybrid tables及Openflow可用性的差異"
       ],
       "sources": [
         {
@@ -35857,6 +35858,18 @@
           "scope": "核實頁面內容可讀性及Cortex Code credits說法差異",
           "evidence": "2026-10-26 19:50 Asia/Taipei以瀏覽器讀取：CoCo試用US$400中US$40供CLI/Desktop/Web推論、US$360供其他費用；30日或額度耗盡後US$20/月訂閱及其他用量另計，可取消；Country選單含Taiwan。未提交表單。",
           "accessed_time_range": "2026-10-26T19:50:35+08:00"
+        },
+        {
+          "url": "https://www.snowflake.com/en/snowflake-trial/",
+          "scope": "試用頁的功能限制說明",
+          "evidence": "稱external network access、hybrid tables及Openflow在加付款前每日限10 credits；與試用文件稱不可用的適用關係未解。",
+          "accessed_at": "2026-11-06T05:08:00+08:00"
+        },
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+          "scope": "Data Cloud試用功能、AI加卡與取消",
+          "evidence": "文件列external network access、hybrid tables及Openflow試用不可用；自助試用AI預設停用至加卡，加卡不自動升級；取消須聯絡Support。",
+          "accessed_at": "2026-11-06T05:08:00+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -35886,7 +35899,7 @@
       "priority_score": 18.1,
       "priority_tier": "B",
       "priority_note": "官方·條件式·零設定費·台灣未標記·≤30分鐘·有資格門檻",
-      "verification_scope": "本輪僅複核新列來源明載主張；未申請、付款或核實台灣個案、其他舊欄位及法律。"
+      "verification_scope": "本輪核Data Cloud試用頁與文件的功能限制矛盾、AI加卡及取消；未申請、付款或核實台灣個案、CoCo期後細節及法律。"
     },
     {
       "id": "deno-deploy-free-tier",
@@ -41037,7 +41050,7 @@
     {
       "id": "bazaarlink-taiwan-free-model-gateway",
       "title": "BazaarLink：台灣免卡免費模型層，超額可能轉付費",
-      "summary": "台灣AI API閘道提供免卡指定免費模型，名單輪替；免費入口稱無餘額帳戶10 RPM、每日60單位，有餘額20 RPM、每日120單位，跨模型共用，並列全站20 RPM及每帳戶並行2請求；文件仍稱逐模型計算，實際扣抵未核。有餘額且啟用付費fallback可能付費。搜尋頁與文件不同段落的免費搜尋說法衝突。",
+      "summary": "台灣AI API閘道提供免卡指定免費模型，名單輪替；免費入口稱無餘額帳戶10 RPM、每日60單位，有餘額20 RPM、每日120單位，跨模型共用；啟用加權時長輸入耗更多單位，否則每次計一次。舊文件曾稱逐模型計算，現行文件未明確解釋差異；實際扣抵未核。有餘額且啟用付費fallback可能付費；搜尋頁列免費模型亦須付搜尋費，與文件其他段落衝突。",
       "categories": [
         "FREE",
         "EASY-EFFORT",
@@ -41057,7 +41070,7 @@
         "Taiwan"
       ],
       "verification": "Official",
-      "usage_type": "每日60／120加權單位；跨模型共用或逐模型計算官方來源衝突",
+      "usage_type": "每日60／120單位；免費入口稱跨模型共用，啟用加權時長輸入消耗較多",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
@@ -41066,21 +41079,21 @@
       "valuation_scenario": null,
       "cancellation": "免費模型超額時有餘額可能轉付費；需設定X-Free-Fallback: false或關閉付費fallback避免超額收費。",
       "usable_duration": "免費模型清單輪替；未公布固定結束日",
-      "access_risk": "免費入口稱跨模型共池，文件稱逐模型計算；搜尋頁按次收費與文件social段落所稱免費搜尋衝突。超額且啟用付費fallback時可能付費；預付另有交易費及稅費。官方列全站上限與帳戶並行限制，實際扣抵未核。",
-      "verified_at": "2026-11-04T11:16:57+08:00",
+      "access_risk": "免費入口稱跨模型共池，舊文件曾稱逐模型計算，目前實際扣抵未核；搜尋頁按次收費與文件social段落所稱免費搜尋衝突。超額且啟用付費fallback時可能付費；預付另有交易費及稅費。官方列全站上限與帳戶並行限制。",
+      "verified_at": "2026-11-06T05:06:51+08:00",
       "discovered_at": "2026-10-25T13:45:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T11:16:57+08:00",
+      "next_review_at": "2026-11-07T05:06:51+08:00",
       "priority": "watch",
-      "verification_scope": "核免費入口快照與文件逐模型額度矛盾、付費fallback及搜尋敘述差異；未操作帳戶、付款、實際扣抵或核法律。",
+      "verification_scope": "本輪核免費入口額度及加權條件、搜尋頁單價；未操作帳戶、付款或實測扣抵，文件矛盾、台灣個案及法律仍未解。",
       "eligibility": {
-        "service_availability": "免費入口本次快照列5款免費模型，清單輪替；免費額度跨模型共池或逐模型計算的官方說法衝突。",
+        "service_availability": "免費入口本次快照列5款免費模型，清單輪替；入口稱免費額度跨模型共池，舊文件曾稱逐模型計算，實際扣抵未核。",
         "account_eligibility": "需註冊帳戶及API key；須年滿18歲，或13–17歲並取得法定代理人同意。",
         "billing_country": "免費模型路由免信用卡；預付可提高額度，超額可能按標準價付費。文件稱以USD計費、TWD報價，條款稱NTD計費，兩者口徑未釐清；付款方式、交易費及適用稅費以結帳為準，未實測。",
         "identity_residency": "官方首頁/文件定位台灣服務並標示TW；上游每個模型的獨立地區准入仍應依其提供者條款判斷。",
-        "terms_restrictions": "免費入口稱無餘額10 RPM及每日60單位、有餘額20 RPM及120單位，跨模型共用；並列全站20 RPM、每帳戶並行2請求及IP防護。文件稱逐模型計算，實際扣抵未核。UTC午夜重置；可停用付費fallback，設定 X-Free-Fallback: false。搜尋頁按次收費，文件social段落仍稱每日免費搜尋；預付和獎勵額各自18個月有效。",
+        "terms_restrictions": "免費入口稱無餘額10 RPM及每日60單位、有餘額20 RPM及120單位，跨模型共用；啟用加權時較長輸入耗更多單位，否則每次請求計一次。並列全站20 RPM、每帳戶並行2請求及IP防護。舊文件稱逐模型計算，實際扣抵未核。UTC午夜重置；可停用付費fallback，設定 X-Free-Fallback: false。搜尋頁列low、medium、fast每次US$0.008、high US$0.016，免費模型亦收搜尋費；文件social段落仍稱每日免費搜尋，適用關係未解。預付和獎勵額各自18個月有效。",
         "taiwan_note": "Yes（供應商官方文件稱台灣AI API Gateway，首頁標示TW服務區；不代表所有模型均開放，也不驗證個人帳戶/上游供應商資格）。"
       },
       "unknowns": [
@@ -41192,6 +41205,24 @@
           "scope": "逐模型配額與搜尋文件內衝突",
           "evidence": "免費模型段落仍稱每日預算逐模型計；social段落稱與online共用每日免費5／10次，與搜尋計價頁衝突。超額可能轉付費，可設X-Free-Fallback: false。",
           "accessed_at": "2026-11-04T11:16:57+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/free",
+          "scope": "免費入口共享配額及加權條件，非實際帳戶扣抵",
+          "evidence": "列無餘額10 RPM及每日60單位、有餘額20 RPM及120單位，跨免費模型共用；啟用加權限制時長輸入消耗更多每日單位，否則每個請求計一次；UTC午夜重置。",
+          "accessed_at": "2026-11-06T05:06:51+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/solutions/web-search",
+          "scope": "搜尋頁標示的單次價格及免費模型搜尋費",
+          "evidence": "列low、medium、fast每次US$0.008，high US$0.016；免費模型也收搜尋費，搜尋失敗不收搜尋費。與文件social段落的免費搜尋說法之適用關係未解。",
+          "accessed_at": "2026-11-06T05:06:51+08:00"
+        },
+        {
+          "url": "https://bazaarlink.ai/docs.md",
+          "scope": "現行文件免費模型與搜尋段落，非實際扣抵",
+          "evidence": "免費模型段落稱按用戶限每分鐘及每日用量，未明確說逐模型獨立計；social段落仍稱與online共用每日5／10次免費搜尋，與搜尋計價頁的適用關係未解。",
+          "accessed_at": "2026-11-06T05:06:51+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -50518,11 +50549,11 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-06T04:09:12+08:00",
+  "latest_research_at": "2026-11-06T05:08:50+08:00",
   "last_research_run": {
-    "started_at": "2026-11-06T04:05:41+08:00",
-    "completed_at": "2026-11-06T04:09:12+08:00",
-    "reviewed_ids": ["neo4j-startup-aura-twentyk-application-unavailable", "did-mobile-fourteen-day-twelve-credit-trial-scope-watch"],
+    "started_at": "2026-11-06T05:05:41+08:00",
+    "completed_at": "2026-11-06T05:08:50+08:00",
+    "reviewed_ids": ["bazaarlink-taiwan-free-model-gateway", "snowflake-ai-trial-2026"],
     "new_ids": [],
     "unreviewed_existing_count": 812,
     "attempted_failed_ids": []
