@@ -1,8 +1,163 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-05T08:09:24+08:00",
-  "scope": "本輪局部複核6筆既有案例，新增機會、政策及觀察線索各0筆；802筆既有紀錄未完成本輪複核，其中2筆來源追查失敗。台灣個案與法律可能未知。",
+  "updated_at": "2026-11-05T09:10:59+08:00",
+  "scope": "本輪新增2筆Retool教育及非營利機會；起始808筆既有紀錄中成功複核0筆，808筆未完成本輪複核，來源追查失敗1筆。台灣個案與法律未核，AI點數官方來源有差異。；2026-11-05 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
   "offers": [
+    {
+      "id": "retool-nonprofit-monthly-coupon",
+      "title": "Retool 非營利：每月 US$1,625 訂閱券",
+      "summary": "符合資格的非營利工作者以組織信箱申請，每月US$1,625訂閱券用於月繳Team或Business，不是現金或API額度；超額費用待核。AI點數文件與定價頁數量不同，實際額度待確認；Agent另計費，台灣個案及付款未知。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [
+        "Global / country eligibility unverified"
+      ],
+      "verification": "Official",
+      "usage_type": "訂閱優惠及組織共用AI點數，非API現金額度",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "教育與非營利優惠取消、失格後扣款與實際合約條件未核；訂閱前應確認。",
+      "usable_duration": "教育資格失效後依通知退出；非營利折扣期限未核。",
+      "access_risk": "申請需審核；付款驗證、稅費、超出優惠的費用及Agent用量是否涵蓋均未核。",
+      "verified_at": "2026-11-05T09:09:17+08:00",
+      "discovered_at": "2026-11-05T09:09:17+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-06T09:09:17+08:00",
+      "eligibility": {
+        "service_availability": "公開申請頁可讀；須審核，未實際申請。",
+        "account_eligibility": "目前在非營利組織工作並使用非營利信箱；排除政府、教育及營利服務商。",
+        "billing_country": "台灣付款、是否必須綁卡、稅費和超額帳單未核。",
+        "identity_residency": "台灣非營利組織個案資格未確認。",
+        "terms_restrictions": "僅限月繳Team或Business；Enterprise與年約不適用；組織只能參加一個折扣計畫。",
+        "taiwan_note": "Unknown：官方未保證台灣個案核准。"
+      },
+      "unknowns": [
+        "台灣個案資格、付款方式及稅費",
+        "兩份官方AI點數數字不同，實際適用量待釐清",
+        "Agent費用、超額及取消條件",
+        "適用法律或監管限制未核"
+      ],
+      "verification_scope": "僅核官方折扣資格、方案公開AI點數與文件衝突；未核台灣個案、付款、實際結帳與適用法律。",
+      "sources": [
+        {
+          "url": "https://docs.retool.com/support/discount-programs",
+          "scope": "教育與非營利優惠及資格",
+          "evidence": "教育適用目前學生或個人教師、教育信箱；非營利為每月1,625美元訂閱券。均僅限月繳Team或Business，需申請。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        },
+        {
+          "url": "https://docs.retool.com/support/billing-usage/ai-credits",
+          "scope": "組織AI點數及額外購買",
+          "evidence": "Team每月750、Business每月1,500組織點數；每月重置不結轉，用盡後停用，付費Cloud管理員可刷卡購買。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        },
+        {
+          "url": "https://retool.com/pricing",
+          "scope": "公開定價與AI點數差異",
+          "evidence": "定價頁列Team每月1,000、Business每月3,000共用AI點數；與文件數字不同。Agents另行計費。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        }
+      ],
+      "legal_status": "not_verified",
+      "priority_score": 12.6,
+      "priority_tier": "D",
+      "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "retool-education-monthly-discount",
+      "title": "Retool 教育：月繳 Team／Business 訂閱全額折扣",
+      "summary": "在學學生及個人教師以教育信箱申請，核准後月繳Team或Business訂閱100%折扣；不含年約或Enterprise。AI點數文件與定價頁數量不同，實際額度待確認；Agent另計費，台灣個案及付款未知。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "education",
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [
+        "Global / country eligibility unverified"
+      ],
+      "verification": "Official",
+      "usage_type": "訂閱優惠及組織共用AI點數，非API現金額度",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "教育與非營利優惠取消、失格後扣款與實際合約條件未核；訂閱前應確認。",
+      "usable_duration": "教育資格失效後依通知退出；非營利折扣期限未核。",
+      "access_risk": "申請需審核；付款驗證、稅費、超出優惠的費用及Agent用量是否涵蓋均未核。",
+      "verified_at": "2026-11-05T09:09:17+08:00",
+      "discovered_at": "2026-11-05T09:09:17+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-06T09:09:17+08:00",
+      "eligibility": {
+        "service_availability": "公開申請頁可讀；須審核，未實際申請。",
+        "account_eligibility": "在學學生或個人教師，使用教育信箱；不含學校行政人員、畢業生或教育服務商。",
+        "billing_country": "台灣付款、是否必須綁卡、稅費和超額帳單未核。",
+        "identity_residency": "台灣.edu.tw信箱是否接受未確認。",
+        "terms_restrictions": "僅限月繳Team或Business；Enterprise與年約不適用；組織只能參加一個折扣計畫。",
+        "taiwan_note": "Unknown：官方未保證台灣個案核准。"
+      },
+      "unknowns": [
+        "台灣個案資格、付款方式及稅費",
+        "兩份官方AI點數數字不同，實際適用量待釐清",
+        "Agent費用、超額及取消條件",
+        "適用法律或監管限制未核"
+      ],
+      "verification_scope": "僅核官方折扣資格、方案公開AI點數與文件衝突；未核台灣個案、付款、實際結帳與適用法律。",
+      "sources": [
+        {
+          "url": "https://docs.retool.com/support/discount-programs",
+          "scope": "教育與非營利優惠及資格",
+          "evidence": "教育適用目前學生或個人教師、教育信箱；非營利為每月1,625美元訂閱券。均僅限月繳Team或Business，需申請。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        },
+        {
+          "url": "https://docs.retool.com/support/billing-usage/ai-credits",
+          "scope": "組織AI點數及額外購買",
+          "evidence": "Team每月750、Business每月1,500組織點數；每月重置不結轉，用盡後停用，付費Cloud管理員可刷卡購買。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        },
+        {
+          "url": "https://retool.com/pricing",
+          "scope": "公開定價與AI點數差異",
+          "evidence": "定價頁列Team每月1,000、Business每月3,000共用AI點數；與文件數字不同。Agents另行計費。",
+          "accessed_time_range": "2026-11-05T09:05:37+08:00/2026-11-05T09:09:17+08:00"
+        }
+      ],
+      "legal_status": "not_verified",
+      "priority_score": 12.6,
+      "priority_tier": "D",
+      "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
     {"id":"miro-startup-subscription-credit","title":"Miro 新創計畫：訂閱抵用與有限 AI 點數","summary":"合作夥伴支持且符合條件的新創可申請US$1,000訂閱抵用；其他符合條件的新創可個案申請US$500。這是訂閱抵用，不是API額度。Starter每席每月25 AI點、Business每席每月50點，團隊共用、每月重置且不結轉；超過訂閱抵用額由付款卡扣款。台灣資格及實際結帳未核。","record_type":"opportunity","status":"application_based","categories":["QUALIFICATION","VALUE-DEAL"],"views":["value"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"verification":"Official","usage_type":"訂閱抵用及有限AI點數，非API額度","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":"訂閱取消及稅費細節未核；變更方案會失去促銷，額度用盡後卡片開始扣款。","usable_duration":"每家新創限一次，抵用應在六個月內啟用；後續有效期未明。","access_risk":"申請需審核，付款與超出抵用額費用需自付；須同意官方名稱標誌與案例分享要求。","verified_at":"2026-11-05T03:08:36+08:00","discovered_at":"2026-11-05T03:08:36+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"monthly","next_review_at":"2026-12-05T03:08:36+08:00","eligibility":{"service_availability":"公開接受申請並審核，未操作帳號或付款。","account_eligibility":"合作夥伴路徑須獨立經營、少於30人且非服務商；個別申請須有自有網域、Crunchbase可驗證募資且非服務商。不得為現行、過期或試用付費訂閱的管理員或成員。","billing_country":"台灣付款方式及稅費未核；超出抵用額須自付。","identity_residency":"台灣公司、合作夥伴及Crunchbase個案資格未知。","terms_restrictions":"僅合格者直接購買使用，不得轉讓或轉售；須允許使用名稱／標誌並按要求參與案例或推薦。","taiwan_note":"Unknown：官方未證明台灣個案核准。"},"unknowns":["台灣企業資格、付款及實際結帳與稅費","抵用啟用後有效期、訂閱續費及取消條件","適用法律或監管限制未核"],"verification_scope":"僅核官方新創計畫資格、訂閱抵用及AI點數文件；台灣個案、實際付款和法律未核。","sources":[{"url":"https://help.miro.com/hc/en-us/articles/360014912819-Miro-Startup-Program","scope":"新創計畫資格、訂閱抵用與條款","evidence":"合作夥伴新創US$1,000、個別新創US$500；一次、六個月內啟用；超額由卡扣款，變更方案失去促銷，並有宣傳及案例分享條款。","accessed_at":"2026-11-05T03:08:36+08:00"},{"url":"https://help.miro.com/hc/en-us/articles/19756209116178-Miro-AI-credits","scope":"AI點數、共池與重置","evidence":"Starter每席每月25點、Business每席每月50點；團隊共池，按續訂日月重置且不結轉；耗盡後AI操作暫停，管理員可另購。","accessed_at":"2026-11-05T03:08:36+08:00"}],"legal_status":"not_verified","priority_score":13.8,"priority_tier":"D","priority_note":"官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"},
     {"id":"scribe-education-nonprofit-pro-twentyfive-percent","title":"Scribe 教育與非營利：AI文件 Pro 訂閱75折","summary":"登記非營利組織、具有效.edu電郵的學生及教育機構員工可申請Pro訂閱總價25%折扣，個案審核後發結帳碼；非免費、非API額度。Pro Personal標價月繳每席US$35或年繳每席月等值US$25，Team至少5席；稅另計。定價表含AI自動擷取，獨立Autocapture模組是否適用折扣未核。台灣.edu.tw與組織個案資格、實際結帳及折扣續期未知。","record_type":"opportunity","status":"application_based","categories":["QUALIFICATION","VALUE-DEAL"],"views":["education","value"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Unknown","regions":["Global / country eligibility unverified"],"verification":"Official","usage_type":"AI文件訂閱折扣，非API額度","quota_classification":"UNKNOWN","limited_confirmed":false,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":"條款§7.2稱除訂單另有約定，訂閱自動續期；不續期須至少提前30日書面通知，費用一般不退款。實際訂單與取消方式須確認。","usable_duration":"折扣期間及續約是否適用未公布。","access_risk":"須付費且審核不保證通過；稅費另計。條款§4.2對所定義User Content授權含AI訓練，與Customer Agreement資料範圍有區別，敏感流程須先核對適用契約。","verified_at":"2026-11-05T01:08:30+08:00","discovered_at":"2026-11-05T01:08:30+08:00","announcement_at":null,"previous_limit":null,"review_cadence":"monthly","next_review_at":"2026-12-05T01:08:30+08:00","eligibility":{"service_availability":"官方公開折扣申請頁可讀，個案需審核；未操作申請或付款。","account_eligibility":"登記非營利組織、具有效.edu電郵的學生或教育機構員工；非美國組織須主管機關適當證明。","billing_country":"結帳折扣及台灣付款相容性未核；稅另計。","identity_residency":"官方稱全球，台灣.edu.tw、非營利證明及個案資格未確認。","terms_restrictions":"帳戶不得共用或以虛假身分註冊；條款年齡與授權條件適用。不得轉售或規避資格。","taiwan_note":"Unknown：全球申請說明不保證台灣個案核准。"},"unknowns":["台灣.edu.tw是否接受、台灣組織證明與支付方式","折扣期間、續約及既有訂閱適用性","獨立Autocapture模組是否包含或折扣、模型額度","適用法律或監管限制未核"],"verification_scope":"僅核官方折扣、公開定價AI功能及條款列明範圍；未核實際結帳、台灣個案或獨立模組。","sources":[{"url":"https://support.scribehow.com/hc/en-us/articles/8814004248221-Does-Scribe-offer-a-discount-to-nonprofits-students-or-educational-institutions","scope":"折扣及申請資格","evidence":"登記非營利、有效.edu學生與教育機構員工可申請Pro總價25%折扣；國際組織須適當證明，個案審核後發結帳碼。","accessed_time_range":"2026-11-05T01:06:45+08:00/2026-11-05T01:08:30+08:00"},{"url":"https://scribe.com/pricing","scope":"公開Pro價格及AI功能","evidence":"Pro Personal月繳每席35美元、年繳每席月等值25美元；Team至少5席。比較表列AI-powered automatic capture；獨立Autocapture模組是否包含未核。","accessed_time_range":"2026-11-05T01:06:45+08:00/2026-11-05T01:08:30+08:00"},{"url":"https://scribe.com/legal/terms","scope":"自動續訂、稅與User Content授權","evidence":"§7.2除訂單另約定自動續期，至少30日前書面不續約；§7.3稅另計；§4.2就所定義User Content授權包含AI訓練，與Customer Agreement資料有區別。","accessed_time_range":"2026-11-05T01:06:45+08:00/2026-11-05T01:08:30+08:00"}],"legal_status":"not_verified","priority_score":12.6,"priority_tier":"D","priority_note":"官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"},
     {"id":"textcortex-nonprofit-fifteen-percent","title":"TextCortex 非營利：申請結帳折扣碼 15%","summary":"非營利組織可申請產品結帳15%折扣碼；並非免費或保證核准。Premium公開月繳每人US$29.99、年繳每人月等值US$23.99，未含VAT；折扣適用範圍、期間與台灣組織資格未核。每席模型算力錢包為月授權費50%的計算價值，耗盡降回標準模型；管理員可選開另付費Extra Usage。","record_type":"opportunity","status":"application_based","categories":["QUALIFICATION","VALUE-DEAL"],"views":["value"],"setup_cost_usd":null,"recurring_cost_usd":null,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"verification":"Official","usage_type":null,"quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"cancellation":"官方定價FAQ稱取消後Premium功能維持至當期結束；續費、退款與優惠個別條款未核。","usable_duration":"折扣持續時間與是否適用續費未核。","access_risk":"折扣碼需申請；付款、稅金、折扣疊加及Extra Usage另付費須確認，不代表台灣組織必然合格。","verified_at":"2026-11-04T18:10:13+08:00","discovered_at":"2026-11-04T18:10:13+08:00","announcement_at":null,"review_cadence":"monthly","next_review_at":"2026-12-04T18:10:13+08:00","legal_status":"not_verified","verification_scope":"僅核非營利15%折扣公開說明、Premium標價及算力錢包；台灣個案、結帳、折扣效期和法律未核。","eligibility":{"service_availability":"公開非營利方案與AI產品頁可讀，未登入或申請。","account_eligibility":"非營利組織可填表申請折扣碼；個案審核及核准未實測。","billing_country":"台灣帳單、付款、折後總價及稅額未核。","identity_residency":"台灣非營利組織證明是否接受未核。","terms_restrictions":"不得假冒組織或共用帳號；產品定價FAQ不允許帳號共享。完整優惠條款未核。","taiwan_note":"Unknown：官網可讀不代表台灣組織已獲資格。"},"unknowns":["台灣組織資格、所需證明與實際核准","折扣有效期、可用方案、年繳疊加及折後結帳價格","付款、續費、退款、稅金及折扣對模型錢包的影響"],"sources":[{"url":"https://textcortex.com/nonprofit-organizations","scope":"非營利折扣與申請入口","evidence":"官方稱非營利組織可申請15%折扣碼，於結帳使用；未核個案。","accessed_at":"2026-11-04T18:10:13+08:00"},{"url":"https://textcortex.com/pricing","scope":"Premium標價、AI功能與帳號共享","evidence":"Premium月繳每人US$29.99，年繳月等值US$23.99，未含VAT；包含AI模型、知識庫及自訂代理，FAQ禁止帳號共享。","accessed_at":"2026-11-04T18:10:13+08:00"},{"url":"https://help.textcortex.com/hc/en-us/articles/46798075584657-Model-usage-limits-and-Extra-Usage","scope":"模型錢包及額外用量","evidence":"每席預設錢包為月授權費50%的計算價值；耗盡後回到標準模型，Extra Usage由管理員選開並另付模型成本及平台加價。","accessed_at":"2026-11-04T18:10:13+08:00"}],"priority_score":13.8,"priority_tier":"D","priority_note":"官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"},
@@ -42093,8 +42248,8 @@
       "usable_duration": null,
       "access_risk": "歷史免費方案已終止，Tabnine已轉向Tricentis企業端銷售",
       "verified_at": "2026-10-25T18:30:00+08:00",
-      "last_review_attempt_at": "2026-11-05T07:07+08:00",
-      "last_review_attempt_note": "本輪約07:07原公告、官方公告索引及首頁轉址至Tricentis一般頁，未取得退役正文或日期；未刷新verified_at或延後期限。",
+      "last_review_attempt_at": "2026-11-05T09:10:06+08:00",
+      "last_review_attempt_note": "09:05–09:10原公告與定價頁轉往Tricentis一般頁，未取得Basic退役原文；未刷新verified_at或延後期限。",
       "discovered_at": "2026-10-25T18:00:00+08:00",
       "announcement_at": "2025-03-25",
       "previous_limit": "歷史Basic免費方案提供簡短單行補全",
@@ -49192,23 +49347,18 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-05T08:09:24+08:00",
+  "latest_research_at": "2026-11-05T09:10:06+08:00",
   "last_research_run": {
-    "started_at": "2026-11-05T08:05:34+08:00",
-    "completed_at": "2026-11-05T08:09:24+08:00",
-    "reviewed_ids": [
-      "minimax-design-h3-new-user-watch",
-      "realads-once-fifty-no-watermark",
-      "felo-standard-free-new-user-daily-two-hundred-campaign",
-      "digitalocean-secret-ai-startup-100-2026",
-      "coreweave-aria-limited-free",
-      "x-api-xai-spend-credit-rewards"
+    "started_at": "2026-11-05T09:05:37+08:00",
+    "completed_at": "2026-11-05T09:10:06+08:00",
+    "reviewed_ids": [],
+    "new_ids": [
+      "retool-nonprofit-monthly-coupon",
+      "retool-education-monthly-discount"
     ],
-    "new_ids": [],
-    "unreviewed_existing_count": 802,
+    "unreviewed_existing_count": 808,
     "attempted_failed_ids": [
-      "kakao-plus-young-adult-promo-unverified",
-      "deepinfra-two-minute-papers-twenty-credit"
+      "tabnine-basic-free-retired"
     ]
   }
 }
