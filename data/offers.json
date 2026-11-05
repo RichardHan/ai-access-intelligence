@@ -1,8 +1,79 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-05T09:10:59+08:00",
-  "scope": "本輪新增2筆Retool教育及非營利機會；起始808筆既有紀錄中成功複核0筆，808筆未完成本輪複核，來源追查失敗1筆。台灣個案與法律未核，AI點數官方來源有差異。；2026-11-05 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）",
+  "updated_at": "2026-11-05T10:10:20+08:00",
+  "scope": "本輪起始810筆，局部複核Meta黑客松1筆、未完成809筆；新增Notion非營利機會1筆，政策與觀察線索各0。台灣個案、額度條款與法律未全面核實。",
   "offers": [
+    {
+      "id": "notion-nonprofit-business-discount",
+      "title": "Notion 非營利：Business 訂閱五折",
+      "summary": "民間社會組織可申請 Business 方案五折，需提供文件並經審核，不是免費方案。Business 一般每人每月含 Standard 1,500 與 Select 500 AI 點數，實際額度依購買安排而異；台灣個案、付款與折後帳單未核。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [
+        "Global / country eligibility unverified"
+      ],
+      "verification": "Official",
+      "usage_type": "付費訂閱含每人每月AI點數",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "折扣期限、取消與續費條件未核。",
+      "usable_duration": "折扣期間未明；一般AI額度每月重置，不結轉。",
+      "access_risk": "須核准並訂閱Business；台灣組織證明、付款方式、稅費及折後價格未核。超額使用可由管理員啟用另購Notion credits。",
+      "verified_at": "2026-11-05T10:09:00+08:00",
+      "discovered_at": "2026-11-05T10:09:00+08:00",
+      "announcement_at": null,
+      "previous_limit": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-05T10:09:00+08:00",
+      "eligibility": {
+        "service_availability": "官方面向全球民間社會組織提供申請，需審核；未實際申請。",
+        "account_eligibility": "提供組織資料與文件供Notion核實；每組織最多申請三個workspace，僅適用Business。",
+        "billing_country": "台灣付款、綁卡、稅費及折後帳單未核。",
+        "identity_residency": "台灣組織文件是否符合及個案核准均未核。",
+        "terms_restrictions": "折扣不是免費訂閱；Standard與Select分開、不可轉移或合併。部分高耗用模型、workspace資助的Custom Agents及經API執行agent使用另計Notion credits。",
+        "taiwan_note": "Unknown：全球計畫不保證台灣組織個案核准。"
+      },
+      "unknowns": [
+        "台灣組織資格與可接受證明",
+        "付款、稅費、續費與折後實際價格",
+        "折扣期限及個別購買安排的AI額度",
+        "適用法律或監管限制未核"
+      ],
+      "verification_scope": "僅核非營利申請、Business折扣與一般AI額度；未核台灣個案、實際帳單或法律。",
+      "sources": [
+        {
+          "url": "https://www.notion.com/nonprofits",
+          "scope": "非營利申請、審核與Business五折",
+          "evidence": "面向全球民間社會組織，提供Business五折；以文件和公開資料核實，每組織最多三個workspace，審核約3至7個工作日。",
+          "accessed_time_range": "2026-11-05T10:06:43+08:00/2026-11-05T10:09:00+08:00"
+        },
+        {
+          "url": "https://www.notion.com/help/manage-your-ai-credits",
+          "scope": "Business一般AI額度與額外點數",
+          "evidence": "一般每人每月Standard 1,500及Select 500，依方案與購買安排可變；分開、不結轉，超額可用管理員啟用的Notion credits。",
+          "accessed_time_range": "2026-11-05T10:06:43+08:00/2026-11-05T10:09:00+08:00"
+        }
+      ],
+      "legal_status": "not_verified",
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
     {
       "id": "retool-nonprofit-monthly-coupon",
       "title": "Retool 非營利：每月 US$1,625 訂閱券",
@@ -9864,8 +9935,8 @@
     },
     {
       "id": "meta-hackathon-oct2026",
-      "title": "Meta全球AI黑客松：新報名已關閉，入選者額度另有申領期限",
-      "summary": "共同主辦頁列Registration: Closed；作品提交11/4 21:00 ET。waiver列入選者US$150及十日開發窗口；歷史Credit Terms曾記載不同效期及付款條件，本輪PDF受阻，衝突未解。台灣API/billing未核。",
+      "title": "Meta全球AI黑客松：報名及作品截止，額度條款待釐清",
+      "summary": "主辦頁顯示報名關閉、作品11/4 21:00 ET截止，現已過期；歷史Credit Terms記載的入選者額度申領期限亦已過，但本輪未能重核條款，不能推定已入帳額度失效。台灣API/billing未核。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -9894,17 +9965,17 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": null,
-      "usable_duration": "作品提交11/4 21:00 ET；本輪waiver列十日開發窗口，歷史Credit Terms曾稱入帳後不過期及申領至11/4 21:00 Eastern；本輪PDF 403，效期衝突未解。",
-      "access_risk": "新報名已關閉。僅既有入選且API可用國居民可申領；每人每帳戶一次，不得多帳戶或隊員合併。API須有效付款方式、耗盡後標準價扣卡；台灣API與billing未核，舊waiver十日文字與PDF差異待主辦釐清。",
-      "verified_at": "2026-11-04T08:11:22+08:00",
+      "usable_duration": "作品提交11/4 21:00 ET已過；歷史waiver列十日開發窗口，歷史Credit Terms曾稱入帳後不過期及申領至11/4 21:00 Eastern；本輪未重核條款，效期衝突未解。",
+      "access_risk": "新報名及作品提交已截止；歷史條款所載既有入選者額度申領期限亦已過，是否有延期未核。API歷史條款要求有效付款方式、耗盡後標準價扣卡；台灣API與billing未核，已入帳額度效期衝突待主辦釐清。",
+      "verified_at": "2026-11-05T10:06:43+08:00",
       "discovered_at": "2026-10-23T12:04:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T08:11:22+08:00",
+      "next_review_at": "2026-11-06T10:06:43+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "主辦頁列Registration: Closed。歷史Credit Terms曾列既有入選者11/4 21:00 Eastern前申領及有效付款方式；本輪PDF受阻未重核。",
+        "service_availability": "主辦頁列Registration: Closed，作品11/4 21:00 ET截止已過。歷史Credit Terms曾列入選者11/4 21:00 Eastern前申領及有效付款方式；本輪未重核條款或延期。",
         "account_eligibility": "18歲及當地成年、通過評選，排除政府關聯人士及活動頁列舉關係人；申領需入選email、姓名及Account Team ID，帳戶正常。",
         "billing_country": "申請/參賽不需付款方式；API服務需有效付款方式；台灣billing開通未核。",
         "identity_residency": "須居住於API可用國；不在制裁/受限名單不等於已啟用台灣。",
@@ -9917,8 +9988,14 @@
         "waiver 十日效期與條款 PDF 不過期矛盾",
         "台灣 API 與 billing 明確開通證據"
       ],
-      "verification_scope": "本輪僅複核新列來源明載主張；未申請、付款或核實台灣個案、其他舊欄位及法律。",
+      "verification_scope": "本輪僅複核主辦頁報名狀態與作品截止；waiver未載入、Credit Terms未重核，額度申領及效期沿用歷史證據，台灣個案與法律未核。",
       "sources": [
+        {
+          "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+          "scope": "本輪僅核報名狀態與作品截止，不證明額度申領及使用期限",
+          "evidence": "主辦頁標Registration: Closed，作品11/4 21:00 ET截止；依台北時間已過。歷史Credit Terms所載申領截止亦已過，是否延期本輪未核。",
+          "accessed_at": "2026-11-05T10:06:43+08:00"
+        },
         {
           "url": "https://dev.meta.ai/events/global-hackathon",
           "scope": "本輪局部複核；其他欄位保留既有證據",
@@ -10089,8 +10166,8 @@
       },
       "status": "applications_closed",
       "expiry": {
-        "text": "主辦頁2026-10-26確認新報名關閉；Meta活動頁ET台北11:59已過，Waiver字面EST台北12:59，兩者仍矛盾。既有入選者申領至台北11/5 10:00，並非額度已失效。",
-        "timezone": "活動頁ET按當日EDT UTC−4；Waiver字面EST UTC−5；台灣UTC+8"
+        "text": "主辦頁顯示報名關閉、作品11/4 21:00 ET截止已過；歷史Credit Terms曾載入選者申領至11/4 21:00 Eastern（台北11/5 10:00），此期限已過但是否延期本輪未核；不能推定已入帳額度失效。",
+        "timezone": "11月4日美東標準時間UTC−5；台灣UTC+8"
       },
       "legal_status": "not_verified",
       "priority_score": 15.4,
@@ -49347,18 +49424,13 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-05T09:10:06+08:00",
+  "latest_research_at": "2026-11-05T10:10:20+08:00",
   "last_research_run": {
-    "started_at": "2026-11-05T09:05:37+08:00",
-    "completed_at": "2026-11-05T09:10:06+08:00",
-    "reviewed_ids": [],
-    "new_ids": [
-      "retool-nonprofit-monthly-coupon",
-      "retool-education-monthly-discount"
-    ],
-    "unreviewed_existing_count": 808,
-    "attempted_failed_ids": [
-      "tabnine-basic-free-retired"
-    ]
+    "started_at": "2026-11-05T10:05:35+08:00",
+    "completed_at": "2026-11-05T10:10:20+08:00",
+    "reviewed_ids": ["meta-hackathon-oct2026"],
+    "new_ids": ["notion-nonprofit-business-discount"],
+    "unreviewed_existing_count": 809,
+    "attempted_failed_ids": []
   }
 }
