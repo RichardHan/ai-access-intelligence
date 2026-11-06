@@ -1,8 +1,56 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-06T15:11:33+08:00",
-  "scope": "本輪起始817筆，既有案例局部成功複核1筆、未完成816筆；新增機會1筆、政策及觀察線索均0筆，整筆核心來源追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
+  "updated_at": "2026-11-06T16:10:00+08:00",
+  "scope": "本輪起始818筆，局部成功複核既有案例2筆、未完成816筆；新增機會1筆、政策及觀察線索均0筆，整筆核心來源追查失敗1筆。僅核列明主張，台灣個案及法律未全面核實。",
   "offers": [
+    {
+      "id": "requesty-education-nonprofit-enterprise-fee-waiver",
+      "title": "Requesty 教育與非營利：Enterprise 平台費豁免，模型用量另付",
+      "summary": "合格學術機構及非營利組織可申請免 Requesty 平台費及 Enterprise 附加費；AI 供應商模型用量仍按標準價格付費，非免費模型額度。台灣機構與付款條件須個別確認。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": ["VALUE-DEAL", "QUALIFICATION"],
+      "views": ["developer"],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "cost_note": "Requesty 平台費及 Enterprise 附加費豁免，模型供應商用量仍收費；條款稱部分服務需預購不可退點數，自動儲值為選用。實際最低預付、付款及稅費未核。",
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": ["Global"],
+      "usage_type": "Enterprise 平台費豁免，模型按量計價",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "verified_at": "2026-11-06T16:08:19+08:00",
+      "discovered_at": "2026-11-06T16:08:19+08:00",
+      "verification_scope": "僅核官方教育非營利頁及服務條款；未申請、付款，未核台灣個別資格、模型費率及法律。",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-06T16:08:19+08:00",
+      "usable_duration": "官方稱組織持續符合資格時不設固定到期日；方案可變更。",
+      "cancellation": "條款稱可在儀表板或電郵關帳；未用預付點數終止時取消且不退款，自動儲值可於工作區設定停用。",
+      "access_risk": "非免費模型用量；特定免費上游模型可能保留並用輸入輸出訓練，即使 Enterprise 不授權 Requesty 自身訓練亦然。",
+      "eligibility": {
+        "service_availability": "全球合格認可學術機構及註冊非營利組織可洽詢；上游模型各有地區及服務條款。",
+        "account_eligibility": "大學、研究實驗室、教師主持專案及非營利組織須審核；學生組織須教師支持，個別學生應由系所代表申請。",
+        "billing_country": "免平台費及 Enterprise 附加費，模型供應商仍按標準費率收費；台灣付款、稅與預付金額未知。",
+        "identity_residency": "使用者須滿18歲，代表組織須有權締約；台灣認證文件及個案接受度未核。",
+        "terms_restrictions": "須遵守各上游條款，不得以VPN或代理規避受限模型、以多帳號繞過限制或未授權轉售。",
+        "taiwan_note": "Unknown；全球申請範圍不保證台灣機構通過審核或模型可用。"
+      },
+      "unknowns": ["台灣學校及非營利機構審核文件與結果", "台灣付款、稅費與最低預付款", "個別模型價格、地區與資料處理條款", "適用法律及監管"],
+      "sources": [
+        {"url":"https://www.requesty.ai/education","scope":"資格、平台費豁免、模型費與期限","evidence":"合格全球學術及非營利組織可申請；通常5%平台費及Enterprise附加費豁免，供應商費率仍付；持續合格時無固定到期。","accessed_at":"2026-11-06T16:08:19+08:00"},
+        {"url":"https://www.requesty.ai/terms.txt","scope":"年齡、預付、自動儲值、上游限制與資料","evidence":"條款更新2026-08-14；滿18歲、部分服務需預付不可退點數，選用自動儲值可停用；Enterprise不授權Requesty訓練，但指定上游仍可訓練；禁止VPN規避受限模型。","accessed_at":"2026-11-06T16:08:19+08:00"}
+      ],
+      "priority_score": 12.6,
+      "priority_tier": "D",
+      "priority_note": "官方·條件式·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
     {
       "id": "asana-student-starter-free-twelve-months",
       "title": "Asana 學生方案：Starter 免費 12 個月，須綁卡",
@@ -32304,7 +32352,7 @@
     {
       "id": "adobe-firefly-twelve-month-model-promotion",
       "title": "Firefly：個人方案限定模型12月無限促銷",
-      "summary": "個人Firefly Pro/Pro Plus/Premium及指定點數方案，自合格方案開始連續12月於網頁/手機享限定模型與解析度免點數生成；方案層級不同。英文與台灣官方模型表版本不一致：英文列GPT Image 2.5 Sunburst/Flare，台灣表未列；台灣帳戶實際權益未知。升級不延長期限；部分標準功能期滿仍不限量。排除Teams/Enterprise，公平使用及官方變更權仍適用。",
+      "summary": "個人Firefly Pro/Pro Plus/Premium及指定點數付費方案，自合格方案開始連續12月於網頁/手機享限定模型與解析度免點數生成，非免訂閱費。台灣官方表現已列GPT Image 2.5 Sunburst/Flare，依方案及解析度有差異；台灣帳戶實際權益未知。升級不延長期限；排除Teams/Enterprise，公平使用及官方變更權仍適用。",
       "categories": [
         "QUALIFICATION",
         "UNLIMITED-CLAIM"
@@ -32330,13 +32378,13 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "合格方案起12個月；升級不延長原優惠終止日；官方可修改或提前終止",
-      "access_risk": "僅指定模型/解析度、可能限速；英文與台灣表版本不同，台灣帳戶實際模型與促銷資格未核。公開標價不保證結帳或資格。",
-      "verified_at": "2026-11-04T18:08:47+08:00",
+      "access_risk": "僅指定模型/解析度、可能限速；台灣帳戶實際模型與促銷資格未核。公開標價不保證結帳或資格。",
+      "verified_at": "2026-11-06T16:08:00+08:00",
       "discovered_at": "2026-10-24T18:10:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T18:08:47+08:00",
+      "next_review_at": "2026-11-07T16:08:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，不等於台灣帳戶可用",
@@ -32347,11 +32395,12 @@
         "taiwan_note": "尚無充分台灣及個人資格證據，Unknown"
       },
       "unknowns": [
-        "英文表列GPT Image 2.5 Sunburst/Flare但台灣表未列，台灣表另列ChatGPT Image 1；兩頁版本不同，台灣帳戶實際模型未知",
+        "台灣表現已列GPT Image 2.5 Sunburst/Flare，台灣表另列GPT Image 1；台灣帳戶實際模型未知",
         "台灣帳戶及個別促銷資格、取消退款與現行模型表後續可能變動",
         "未登入或申請；用戶個別資格未確認"
       ],
       "sources": [
+        {"url":"https://helpx.adobe.com/tw/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html","scope":"台灣促銷表版本與指定模型","evidence":"台灣頁更新11/5、表標10/13，已列GPT Image 2.5 Sunburst/Flare；方案與解析度適用不同。指定模型免點數非免訂閱費，個別帳戶未核。","accessed_at":"2026-11-06T16:08:00+08:00"},
         {"url":"https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html","scope":"英文促銷期限、模型表及標準功能","evidence":"英文頁更新10/27，模型表標示10/13，列GPT Image 2.5 Sunburst及Flare；合格方案12個月、升級不延長，部分標準功能期滿仍不限量。","accessed_at":"2026-11-04T18:08:47+08:00"},
         {"url":"https://helpx.adobe.com/tw/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html","scope":"台灣促銷條件及模型表版本差異","evidence":"台灣頁更新9/22、模型表標示6/11，未列英文頁的GPT Image 2.5 Sunburst/Flare，另列ChatGPT Image 1；不能據此斷定台灣帳戶實際模型。","accessed_at":"2026-11-04T18:08:47+08:00"},
         {"url":"https://www.adobe.com/tw/products/firefly/plans.html","scope":"台灣個人方案含稅月繳公開標價與點數","evidence":"瀏覽器顯示Pro NT$704/月4,000點、Pro Plus NT$1,680/月10,000點、Premium NT$6,825/月50,000點；非個案結帳核實。","accessed_at":"2026-11-03T07:07:07+08:00"},
@@ -32390,7 +32439,7 @@
       "priority_tier": "C",
       "priority_note": "官方·條件式·費用未知·台灣未標記·≤20分鐘·有資格門檻"
     ,
-      "verification_scope": "本次複核英台促銷條件及模型表版本差異；未核個人帳戶、結帳、取消退款及法律；台灣價格沿用前次查核。",
+      "verification_scope": "本次複核台灣促銷表及其版本；個人帳戶、結帳、取消退款及法律未核；台灣價格沿用前次查核。",
       "recurring_cost_original": "台灣公開含稅月繳：Pro NT$704、Pro Plus NT$1,680、Premium NT$6,825；實際結帳及資格未核。"
     },
     {
@@ -42031,8 +42080,8 @@
   "cancellation": "活動無訂閱費承諾；一般服務按用量，耗盡硬停或自動扣款與auto top-up預設未核，不應假定零扣款風險。",
   "access_risk": "官方活動頁本輪404；是否仍可申領、付款驗證、促銷效期、超額及自動儲值預設未核。",
   "verified_at": "2026-11-03T03:07:31+08:00",
-  "last_review_attempt_at": "2026-11-06T02:10:18+08:00",
-  "last_review_attempt_note": "活動頁404，帶活動參數登入頁未列優惠；一般價格頁可讀，現行促銷仍未核，不代表停辦。",
+  "last_review_attempt_at": "2026-11-06T16:07:00+08:00",
+  "last_review_attempt_note": "活動頁404；活動參數登入頁未列優惠，一般定價不證現行促銷。保留核實時間及期限，不以404判停辦。",
   "discovered_at": "2026-10-25T14:45:00+08:00",
   "announcement_at": null,
   "previous_limit": null,
@@ -44698,8 +44747,9 @@
     },
     {
       "id": "fal-flux3-max-five-daily-sandbox",
-      "title": "fal FLUX 3 Max：綁卡後每24小時5部免費影片，僅Sandbox",
-      "summary": "官方專頁確認登入帳戶可在Sandbox每滾動24小時免費產生5部FLUX 3 Max文字轉影片，720p含音訊、每部5/10/15秒；不累積、無訂閱、非一次性試用。啟用帳戶須綁卡，超量或其他端點另計費；不宣稱免費API通用額度。官方付費折扣截止日另有11/7與12/31衝突，與每日免費池分開。",
+      "status": "conditional",
+      "title": "fal FLUX 3 Max：週末限時每日 3–5 部免費影片",
+      "summary": "官方公告台北時間11/7 01:00至11/10 04:00限時免費：未登入每日3部、登入4部、驗證付款方式5部，額度不相加；首部後24小時補回。每部最多15秒、720p含音訊；API及超額另付費。台灣資格未核，活動尚未開始。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -44709,50 +44759,34 @@
       ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
-      "cost_note": "僅指定Sandbox免費池內為US$0；必須有卡但未見本優惠要求先充值之明文。綁卡預授權金額未知。超出免費池會涉及卡片或credits費用，不保證第6次硬停。模型端點現列720p US$0.0425/秒、1080p US$0.0725/秒至11/7，後為0.17/0.29；landing則稱折扣至12/31，故付費截止有來源衝突。",
+      "cost_note": "活動指定介面及額度內免費；驗證付款方式才有5部。API、超額或活動結束後按秒計費，扣款確認及硬停未知。模型頁列720p US$0.0425/秒折扣至11/7，一般影片頁稱至12/31，付費折扣期限衝突。",
       "effort_minutes_max": null,
       "taiwan": "Unknown",
       "regions": [],
       "verification": "Official",
-      "usage_type": "Sandbox文字轉影片；非通用API試用金",
+      "usage_type": "限時 Playground、Sandbox；登入亦可用 fal Agent，API 另計",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "quota_details": {
-        "generations": 5,
-        "reset_cycle": "rolling_24_hours",
-        "rollover": false,
-        "resolution": "720p",
-        "duration_seconds_options": [
-          5,
-          10,
-          15
-        ],
-        "audio_included": true,
-        "free_endpoint": "blackforestlabs/flux-3-max/text-to-video",
-        "free_api_access_confirmed": false,
-        "initial_general_credit_usd": null,
-        "general_new_account_api_concurrency": 2,
-        "sandbox_specific_concurrency": null
-      },
+      "quota_details": "未登入3部、登入4部、驗證付款方式5部；不相加，首部後24小時補回；最多15秒、720p含音訊。表列文字、圖片及keyframes轉影片，FAQ對keyframes範圍仍有差異。",
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "免費池無訂閱或trial clock；需避免超額及其他付費端點。綁卡不等於無扣款風險；公開頁未完整說明第6次生成的確認畫面。",
-      "usable_duration": "每滾動24小時補發，不累積；本免費池未公布結束日。",
-      "access_risk": "帳戶須驗證卡片；官方明示超免費額度生成涉及卡片收費，第六次是否確認或硬停未驗。生成檔案預設URL公開，應另行保存所需輸出。",
-      "verified_at": "2026-11-04T08:11:22+08:00",
+      "cancellation": "活動頁稱按秒付費無訂閱；超額或結束後需付費，是否先確認或硬停未實測。",
+      "usable_duration": "2026-11-07 01:00 至 2026-11-10 04:00 Asia/Taipei；查閱時尚未開始。",
+      "access_risk": "驗證付款方式增加額度但可能產生付款風險；API不免費，超額及期滿後計費。生成檔案預設URL公開的舊證據未重核。",
+      "verified_at": "2026-11-06T16:08:19+08:00",
       "discovered_at": "2026-10-25T21:22:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T08:11:22+08:00",
+      "next_review_at": "2026-11-07T01:05:00+08:00",
       "priority": "watch",
-      "verification_scope": "本輪僅複核新列來源明載主張；未申請、付款或核實台灣個案、其他舊欄位及法律。",
+      "verification_scope": "本輪僅核官方活動頁及原免費頁轉址後的活動期限、額度、適用介面與費率；未操作生成、付款，台灣、條款及法律未重核。",
       "eligibility": {
-        "service_availability": "官方免費landing與模型頁Try free連結均指向fal Sandbox；免費額度僅FLUX 3 Max text-to-video。",
-        "account_eligibility": "需登入並完成帳戶啟用、有效卡片；18歲或當地成年年齡以上。未找到保證一般新戶自動取得固定美元API試用金的官方證據。",
-        "billing_country": "需要card on file；官方未逐國保證台灣發卡行、帳單地址接受性；預授權金額及是否個別要求購點未知。",
+        "service_availability": "活動頁列Playground與Sandbox；登入後亦可用fal Agent，API照常計費。表列keyframes，FAQ對端點範圍說法不同，待確認。",
+        "account_eligibility": "未登入3部、登入4部、驗證付款方式5部；不同身分額度不相加。既有條款年齡限制未在本輪重核。",
+        "billing_country": "5部須驗證付款方式；台灣卡片、預授權及超額付費確認未知。",
         "identity_residency": "AUP禁止位於全面制裁地區者及被封禁帳戶；未取得明列台灣IP、+886門號或居住資格的官方白名單。",
         "terms_restrictions": "免費landing明示可商用；指定模型頁有Commercial use標記，但仍須合法且不侵害第三人權利，遵守ToS/AUP。不得以多帳號、分享帳號或自動化繞免費池；其他模型授權不能類推。",
         "taiwan_note": "Unknown：未見台灣明文排除，但未核實台灣IP/+886/卡片/居住條件，不能把全球API授權視為台灣優惠保證。"
@@ -44761,16 +44795,16 @@
       "terms_compliance": "conditional_on_account_activation_age_model_license_and_aup",
       "legal_status": "not_verified",
       "unknowns": [
-        "台灣IP與+886門號驗證條件",
-        "台灣卡片及帳單國家接受性",
+        "台灣實際可用性、卡片及帳單國家接受性",
         "卡片預授權金額與釋放時間",
-        "免費池是否適用直接API呼叫；目前僅確認Sandbox",
-        "第6次生成的付費確認與硬停行為",
-        "付費折扣截止：模型頁11/7、免費landing12/31互相矛盾",
-        "一般promotional credits 90天條款是否適用每日Sandbox池未證，不能覆蓋無trial clock宣稱",
-        "端點折扣11/7與landing 12/31期限不一致，免費池終止日未公告"
+        "超額生成的付費確認與硬停行為",
+        "活動表列keyframes但FAQ對首發端點描述不同",
+        "付費折扣截止：模型頁11/7、一般影片頁12/31互相矛盾",
+        "舊免費池確切終止日期及活動開始後實際可用性"
       ],
       "sources": [
+        {"url":"https://fal.ai/flux-3-max","scope":"週末免費活動期限、額度、介面及付費折扣","evidence":"11/6 09:00 PST至11/9 12:00 PST；未登入3、登入4、驗證付款5部，首部後24小時補回且不相加。最多15秒720p；API另計。模型頁折扣至11/7；表列keyframes而FAQ端點描述不同。","accessed_at":"2026-11-06T16:08:19+08:00"},
+        {"url":"https://fal.ai/flux-video-free","scope":"原免費頁轉址與一般付費說明","evidence":"原頁轉址一般影片頁，列登入、充值及按量付費；頁稱資料更新11/3並稱折扣至12/31，與模型頁11/7不同，不能據此推定舊池終止日期。","accessed_at":"2026-11-06T16:08:19+08:00"},
         {
           "url": "https://fal.ai/models/blackforestlabs/flux-3-max/text-to-video/llms.txt",
           "scope": "本輪局部複核；其他欄位保留既有證據",
@@ -51015,13 +51049,13 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-06T15:11:33+08:00",
+  "latest_research_at": "2026-11-06T16:10:00+08:00",
   "last_research_run": {
-    "started_at": "2026-11-06T15:05:44+08:00",
-    "completed_at": "2026-11-06T15:11:33+08:00",
-    "reviewed_ids": ["kilo-auto-free-hosted-models"],
-    "new_ids": ["asana-student-starter-free-twelve-months"],
+    "started_at": "2026-11-06T16:05:44+08:00",
+    "completed_at": "2026-11-06T16:10:00+08:00",
+    "reviewed_ids": ["fal-flux3-max-five-daily-sandbox", "adobe-firefly-twelve-month-model-promotion"],
+    "new_ids": ["requesty-education-nonprofit-enterprise-fee-waiver"],
     "unreviewed_existing_count": 816,
-    "attempted_failed_ids": []
+    "attempted_failed_ids": ["deepinfra-two-minute-papers-twenty-credit"]
   }
 }
