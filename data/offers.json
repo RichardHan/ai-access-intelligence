@@ -1,8 +1,55 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-06T12:10:17+08:00",
-  "scope": "本輪起始816筆，局部複核1筆、未完成815筆；新增機會、政策及觀察線索各0筆，核心來源追查失敗5筆。僅核列明主張，台灣個案及法律未全面核實。",
+  "updated_at": "2026-11-06T13:10:58+08:00",
+  "scope": "本輪起始816筆，既有案例成功複核0筆、未完成816筆；新增機會1筆、政策及觀察線索各0筆，核心來源追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
   "offers": [
+    {
+      "id": "blockrun-free-open-model-gateway",
+      "title": "BlockRun 免費模型 API：免帳號，可能自動改用其他模型",
+      "summary": "官方列9個免費開放模型，免註冊、API key及錢包；免費運算資源共用，指定模型忙碌時可能改由其他免費模型回答，應檢查回應的model欄位。免費上游可能使用提示改善服務，不宜傳送敏感資料。台灣服務資格未核。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": ["FREE"],
+      "views": ["free", "developer"],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": "免費共享模型容量",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "verified_at": "2026-11-06T13:09:37+08:00",
+      "discovered_at": "2026-11-06T13:09:37+08:00",
+      "verification_scope": "僅核官方免費入口及服務條款；未呼叫API、註冊或核實台灣個案及法律。",
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-06T13:09:37+08:00",
+      "usable_duration": "免費容量與模型可能隨時變動；未公布固定期間。",
+      "cancellation": "免費端點無須帳號或訂閱；付費模型另計費，使用前確認報價。",
+      "access_risk": "共享容量可能飽和並回退至其他模型；上游免費方案可能使用提示改善服務。付費服務每次報價及費用另計。",
+      "eligibility": {
+        "service_availability": "免費入口列9個模型；未核實台灣連線與個別上游資格。",
+        "account_eligibility": "免費入口稱無須註冊、API key或錢包；實際使用須遵守平台與上游條款。",
+        "billing_country": "免費模型入口稱免費；付費模型可能以USDC或帳戶餘額計費，台灣付款與稅務未核。",
+        "identity_residency": "條款列制裁地區及對象限制；未明確確認台灣使用者資格。",
+        "terms_restrictions": "須遵守模型供應商條款，不得規避付款或干擾服務；免費容量可能改由其他模型回答。",
+        "taiwan_note": "Unknown；未列排除不等於確認台灣個案資格。"
+      },
+      "unknowns": ["台灣個案及上游模型地區資格", "免費端點固定速率或用量上限", "個別模型實際可用性與資料處理條款", "適用法律及監管"],
+      "sources": [
+        {"url":"https://blockrun.ai/free","scope":"免費入口、共享容量、模型回退及資料風險","evidence":"官方列9個免費模型、免key及錢包；容量飽和可改由其他免費模型回覆，並提示免費上游可能使用提示改善服務。","accessed_at":"2026-11-06T13:09:37+08:00"},
+        {"url":"https://blockrun.ai/terms","scope":"平台與上游條款、限制及付費服務","evidence":"條款列上游規則、受制裁對象限制及付費報價；不保證模型持續提供。2026-11-04為條款更新日期。","accessed_at":"2026-11-06T13:09:37+08:00"}
+      ],
+      "priority_score": 15.1,
+      "priority_tier": "C",
+      "priority_note": "官方·條件式·免費·台灣未標記·時間未知"
+    },
     {"id":"xtensio-free-one-time-ai-credits","title":"Xtensio Free：一次 200 AI 點數","summary":"Free 方案免信用卡，提供一次200 AI點數，供生成及改寫，使用後不補充；免費方案限10份成果，匯出帶浮水印。台灣註冊資格未核。","record_type":"opportunity","status":"active","verification":"Official","legal_status":"not_verified","categories":["FREE"],"views":["free"],"setup_cost_usd":0,"recurring_cost_usd":0,"effort_minutes_max":null,"taiwan":"Unknown","regions":[],"usage_type":"Fixed credits","quota_classification":"HIGH BUT LIMITED","limited_confirmed":true,"usable_benefit_usd":null,"benefit_cost_ratio":null,"savings_usd":null,"valuation_scenario":null,"verified_at":"2026-11-06T10:10:12+08:00","discovered_at":"2026-11-06T10:10:12+08:00","verification_scope":"僅核官方定價與AI點數文件；台灣註冊、個案資格及法律未核。","review_cadence":"monthly","next_review_at":"2026-12-06T10:10:12+08:00","usable_duration":"免費方案無固定期限；200 AI點數一次性，不補充。","cancellation":"免費方案無訂閱費；升級Plus另付費。","access_risk":"AI點數用盡後新AI請求須待有額度；台灣帳戶資格未核，輸出有浮水印。","eligibility":{"service_availability":"官方定價頁列Free免卡及一次200 AI點數；未操作註冊。","account_eligibility":"需帳戶；個案註冊資格未核。","billing_country":"免費方案免信用卡；台灣帳戶適用性未核。","identity_residency":"台灣註冊及使用資格未核。","terms_restrictions":"點數依生成及改寫操作扣除，不同操作成本不同。","taiwan_note":"Unknown：免卡不代表台灣個案必然可註冊。"},"unknowns":["台灣註冊及個案服務資格","具體模型及使用限制","適用法律或監管限制未核"],"sources":[{"url":"https://xtensio.com/pricing/","scope":"免費方案、免卡、額度與輸出限制","evidence":"Free免信用卡、200 AI點數一次性、10份成果及帶浮水印匯出。","accessed_at":"2026-11-06T10:10:12+08:00"},{"url":"https://help.xtensio.com/ai/ai-credits/","scope":"點數使用及重置","evidence":"Free一次200點不補充；生成及改寫消耗點數，用盡後新AI請求需等待有額度。","accessed_at":"2026-11-06T10:10:12+08:00"}],"priority_score":19.0,"priority_tier":"A","priority_note":"官方·活躍·免費·台灣未標記·時間未知"},
     {
       "id": "pitch-free-lifetime-ai-credits",
@@ -50864,13 +50911,13 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-06T12:10:17+08:00",
+  "latest_research_at": "2026-11-06T13:10:58+08:00",
   "last_research_run": {
-    "started_at": "2026-11-06T12:05:43+08:00",
-    "completed_at": "2026-11-06T12:10:17+08:00",
-    "reviewed_ids": ["moda-service-robot-virtual-scene-subsidy-2026"],
-    "new_ids": [],
-    "unreviewed_existing_count": 815,
-    "attempted_failed_ids": ["perplexity-education", "perplexity-watch", "astamuse-agent-trial-oct31-index-only", "tabnine-basic-free-retired", "claude-artifacts-expired-lead"]
+    "started_at": "2026-11-06T13:05:45+08:00",
+    "completed_at": "2026-11-06T13:10:58+08:00",
+    "reviewed_ids": [],
+    "new_ids": ["blockrun-free-open-model-gateway"],
+    "unreviewed_existing_count": 816,
+    "attempted_failed_ids": []
   }
 }
