@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-06T07:08:42+08:00",
-  "scope": "本輪起始814筆，局部複核2筆、未完成812筆；新增機會、政策及觀察線索各0筆，整筆核心來源追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
+  "updated_at": "2026-11-06T08:09:25+08:00",
+  "scope": "本輪起始814筆，局部複核1筆、未完成813筆；新增機會、政策及觀察線索各0筆，整筆核心來源追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
   "offers": [
     {
       "id": "capacities-student-annual-pro-forty-percent",
@@ -4077,7 +4077,7 @@
     {
       "id": "hume-startup-forty-million-twelve-months",
       "title": "Hume 新創計畫：核准後四千萬 voice credits",
-      "summary": "本輪瀏覽器讀到申請條款：少於25名員工的新創經核准可獲一次40,000,000 credits，核准後12個月到期；每credit相當於一個語音生成字元或平台另訂計量，不是通用token。期滿或用盡預設轉Free。收件六個月起算不明，台灣資格、實際受理與對外商用授權未核。",
+      "summary": "先前動態申請條款列少於25名員工的新創核准後一次40,000,000語音credits、12個月到期及期滿回Free；本輪未重新取得該動態條款，現時適用與收件未知。一般條款對自動續費、第三方服務及資料使用有風險；台灣資格及個別Order未核。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -4098,30 +4098,37 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": "條款列用盡或12個月期滿預設回Free，除非主動升級或另有書面約定。",
-      "usable_duration": "核准日起12個月，未用餘額到期失效。",
-      "access_risk": "收件六個月起算不明，實際受理未核；一般條款對第三方商用部署的限制需書面釐清，資料可能用於改善或訓練服務。",
-      "verified_at": "2026-11-04T08:11:22+08:00",
+      "cancellation": "舊新創條款列用盡或12個月期滿預設回Free，現行未重核；一般訂閱條款列須在續期前取消。",
+      "usable_duration": "舊新創條款列核准日起12個月，現行未重核。",
+      "access_risk": "現時額度及收件未核；一般條款列訂閱自動續費、第三方服務限制與客戶資料訓練用途，個別Order可能優先。",
+      "verified_at": "2026-11-06T08:09:25+08:00",
       "discovered_at": "2026-10-29T14:09:53+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-05T08:11:22+08:00",
+      "next_review_at": "2026-11-07T08:09:25+08:00",
       "eligibility": {
         "service_availability": "內嵌條款列活動有效時滾動收件六個月，可延長或提前關閉；起算日及實際收件未核，未提交申請。",
         "account_eligibility": "申請時少於25名員工，每個Recipient一次；過去參與者及其子公司或關係企業不適用。",
         "billing_country": "是否要求付款驗證與台灣付款資格未核。",
         "identity_residency": "台灣公司資格與核准未核。",
-        "terms_restrictions": "限制重複參加。一般條款對內部開發及第三方服務有限制，對外商用部署須釐清；客戶資料可能用於改善或訓練服務。",
+        "terms_restrictions": "舊申請條款限制重複參加，現行未重核。一般條款限內部開發並限制向第三方提供服務，客戶資料可能用於訓練；個別Order衝突時優先。",
         "taiwan_note": "Unknown：未證台灣公司符合計畫資格。"
       },
       "unknowns": [
         "六個月收件期起算日與實際受理",
         "台灣資格及是否需卡",
         "模型與API適用範圍及對外商用部署授權",
+        "現行動態申請條款、40M額度與期滿回Free是否仍適用",
         "適用法律及監管限制"
       ],
       "sources": [
+        {
+          "url": "https://www.hume.ai/terms-of-use",
+          "scope": "一般付款、訂閱、授權及資料條款；不代表新創個別Order",
+          "evidence": "第3節列信用卡可能預授權、訂閱自動續費且須於續期前取消；第4節限內部開發及限制第三方服務，第7.3節授權以客戶資料訓練改善；Order衝突時優先。",
+          "accessed_at": "2026-11-06T08:09:25+08:00"
+        },
         {
           "url": "https://www.hume.ai/startup-program",
           "scope": "本輪局部複核；其他欄位保留既有證據",
@@ -4168,7 +4175,7 @@
       "record_type": "watchlist",
       "status": "campaign_current_availability_unverified",
       "legal_status": "not_verified",
-      "verification_scope": "本輪僅複核新列來源明載主張；未申請、付款或核實台灣個案、其他舊欄位及法律。",
+      "verification_scope": "本輪僅重核一般付款、授權及資料條款；動態新創額度、資格及期滿規則保留舊證據，現行未重核。未申請、付款或核實台灣個案及法律。",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級"
@@ -50730,16 +50737,15 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-06T07:08:42+08:00",
+  "latest_research_at": "2026-11-06T08:09:25+08:00",
   "last_research_run": {
-    "started_at": "2026-11-06T07:05:42+08:00",
-    "completed_at": "2026-11-06T07:08:42+08:00",
+    "started_at": "2026-11-06T08:05:41+08:00",
+    "completed_at": "2026-11-06T08:09:25+08:00",
     "reviewed_ids": [
-      "kiro-startup-pro-plus-2026",
-      "river-inference-25-credit"
+      "hume-startup-forty-million-twelve-months"
     ],
     "new_ids": [],
-    "unreviewed_existing_count": 812,
+    "unreviewed_existing_count": 813,
     "attempted_failed_ids": []
   }
 }
