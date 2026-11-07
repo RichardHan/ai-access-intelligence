@@ -10,6 +10,13 @@ def unique_keys(pairs):
 d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);jsonschema.validate(d,json.loads((p/'schema.json').read_text(),object_pairs_hook=unique_keys))
 json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
+run=d['last_research_run']
+reviewed=run['reviewed_ids'];new=run['new_ids'];attempted=run['attempted_failed_ids']
+assert len(reviewed)==len(set(reviewed)) and len(new)==len(set(new)) and len(attempted)==len(set(attempted)), 'duplicate batch ID'
+assert not (set(reviewed)&set(new) or set(reviewed)&set(attempted) or set(new)&set(attempted)), 'overlapping batch IDs'
+assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
+assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
+assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
