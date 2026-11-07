@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **852 筆**（649 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 04:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **834 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **855 筆**（652 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 05:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **838 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**（Perplexity Pro 與 Education 官方說明頁受 403 / Cloudflare 阻擋）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,48 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 05:05–05:25 本輪：起始852筆；局部複核 `autoclaw-halloween-40m-expiry-conflict-watch`、`stepfun-stepaudio3-music-gen-preview-nov8`、`tencent-tokenhub-free-trial`、`river-inference-25-credit`、`claude-scientists`、`coreweave-aria-limited-free`、`hume-startup-forty-million-twelve-months`、`sambacloud-rundown-first100-anniversary-credit-watch`、`codebuddy-monthly-activity-welcome-separated`、`firecrawl-startups-annual-double-credits`、`heygen-free-three-monthly-noncommercial-videos`、`notta-education-half-price-pro-business`、`rime-starter-fifty-model-pool`、`google-gemini-notebook-standard-free` 共14筆；核心來源整筆追查失敗2筆：`perplexity-watch`、`perplexity-education`（官方說明中心頁面回傳403阻擋，依規則不刷新verified_at，記錄追查失敗時間與原因）；新增機會 `inkeep-cloud-thirty-day-content-sandbox-demo`、`biel-business-fourteen-day-no-card-trial`、`biel-noncommercial-open-source-fivehundred-pages-twok-interactions` 共3筆，政策及線索各0筆；既有未完成838筆。未登入、申請或付款。
+
+[StepFun Audio 3](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)：重要更正：官方定價公告更新，music-preview與gen-preview限時免費預覽正式展延至台北時間2026-11-17 11:59:59，正式版付費上線順延至11/17 12:00:00，消弭原訂11/8截止預期；未公布固定免費總額，台灣身分認證與未儲值權限待核。
+
+[AutoClaw 萬聖節](https://autoclaw.z.ai/blog/news/M11W1/)：活動刊載至今日23:59截止，但同頁11/1與11/8效期矛盾未解；11/9 00:00開跑每帳戶1億Tokens週福利[公告](https://autoclaw.z.ai/blog/news/M11W2/)已就緒。
+
+[Tencent TokenHub](https://www.tencentcloud.com/act/pro/tokenhub)：新戶試用仍刊登每模型1M tokens，但官方文檔1年與促銷頁90天衝突仍存；每模型需US$10帳戶凍結且註冊需US$1預授權驗證；未啟用後付費用罄即停。
+
+[River AI Inference](https://console.river.ai/)：US$25僅屬10/11歷史公告，現行公開註冊與條款無贈額保證，維持活動現況待核；[條款](https://console.river.ai/terms)§4.1保留內容最多2天與[文件](https://docs.river.ai/guides/inference-limits.md)不保留請求之衝突仍存。
+
+[Claude 科學研究](https://support.claude.com/en/articles/16634237-claude-team-plan-for-scientists)：Standard免費／Premium US$15/席/月在線，12個月、1–25席且須PI核驗；免費席位亦須提供付款方式；[條款](https://www.anthropic.com/legal/team-plan-for-scientists-terms)確認台灣在支援區域，但台灣機構審核與台灣卡未測。
+
+[CoreWeave ARIA](https://coreweave.com/forge-pricing/inference-agents)：限時免費承諾在線，未公布固定免費上限與截止日；僅限W&B雲端team project且需Smart features；台灣帳戶與個案合約未核。
+
+[Hume 新創](https://www.hume.ai/startup-program)：核准贈40M voice credits有效12個月及期滿回Free再次從動態條款確認，但6個月收件期起算日未公布；台灣資格與對外商用授權未知。
+
+[SambaCloud × Rundown](https://sambanova.ai/build-with-relentless-intelligence-rundown)：US$100／首100名舊活動頁與表單在線，但2026年名額剩餘與授額現況未獲官方證實；需付款方式，普通方案先購點要求是否豁免未知。
+
+[CodeBuddy](https://www.codebuddy.ai/docs/zh/ide/Account/Subscription)：確認Free 100月點、首次登入250點迎新包（14天有效）與客戶端對話30日點為不同分池；日點通常次日入帳可疊加月額；狀態補正為active；Pro試用FAQ之US$96/月筆誤與定價表US$96/年衝突仍存。
+
+[Firecrawl 新創](https://www.firecrawl.dev/startups)：年繳月額翻倍一年在線（Standard每月10萬變20萬點），須預付年費非免付費；先前募資額度邊界文字差異已消除；台灣核准與贈點結轉未核。
+
+[HeyGen Free](https://www.heygen.com/pricing)：免卡每月最多3部一分鐘影片在線；[定價頁](https://www.heygen.com/pricing)確認帶浮水印；[條款](https://www.heygen.com/terms)嚴禁商用、廣告、客戶工作或變現；18歲以上且限一帳戶；台灣可用性未知。
+
+[Notta 教育](https://support.notta.ai/hc/en-us/articles/17418832708251-How-to-apply-for-Notta-educational-discount)：11/2更新確認教育Pro年繳US$48.99、Business每席US$99.99/年或US$13.99/月；月額重置改以最初購買日計算；[定價頁](https://www.notta.ai/en/pricing)確認已內含每月1,000點Notta Brain點數（更正先前僅記載另購Brain之紀錄）；台灣學校與卡片未測。
+
+[Rime Free](https://www.rime.ai/pricing)：每月US$50跨模型共用池在線，免卡不結轉；[10/29新條款](https://www.rime.ai/terms)§3.2明確禁止Free方案輸入Caller通話音訊與第三人個資，與首頁real calls行銷宣傳產生公開條款衝突；狀態由null更正為conditional。
+
+[Gemini Notebook](https://support.google.com/gemininotebook/answer/16164461?hl=zh-Hant)：標準版免費及[支援名單](https://support.google.com/gemininotebook/answer/16164461?hl=zh-Hant)列有台灣在線；100本筆記本、每本50個來源；運算資源採5小時動態重置與週上限，FAQ保留每日50對話舊口徑。
+
+[Perplexity](https://www.perplexity.ai/)：說明中心點數頁與定價頁受403及Cloudflare驗證阻擋，本次維持未成功核實記錄；保留既有verified_at，記錄本輪追查失敗。
+
+新增 [Inkeep Cloud](https://docs.inkeep.com/cloud/faq)：官方提供通話後30天內容AI沙箱demo，免帳戶、免信用卡測試UI元件與chat service；不含完整平台dashboard、analytics或Slack assistant，pilot另議；台灣可用度未知。
+
+新增 [Biel.ai Business 試用](https://biel.ai/pricing)：官方提供14天免信用卡Business功能試用，含API、MCP及進階模型；未明定試用配額，[條款](https://biel.ai/terms)§8確認標準試用期滿不自動建立付費訂閱；台灣支援未知。
+
+新增 [Biel.ai 開源方案](https://biel.ai/open-source)：官方為非商業、OSI授權開源專案提供審核式免費帳戶，包含最多500索引頁與每月2,000次互動，須保留品牌標示；非一般新戶試用；台灣審核與卡片要求未核。
+
+品質改善：`style.css` 補齊 `.status-conditional` 與 `.status-conditional::before` 樣式規則，修復前端儀表板超過 520 筆條件式方案（包含 `conditional`、`application_based` 與 `legacy_closed_new_path_conditional`）因缺少專屬 CSS 規則而回退無色預設文字之視覺盲區；`tests/filters.cjs` 增補 conditional 狀態類別與 CSS 樣式包含性單元測試斷言，以實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況。
+
 2026-11-08 04:05–04:30 本輪：起始850筆，按實際時區有25筆到期；局部複核 `bazaarlink-taiwan-free-model-gateway`、`vast-startup-spend-match`、`sarvam-campus-tour-credits`、`claude-security-enterprise-two-month-credit`、`speechify-api-free-monthly-500k`、`amazon-ara-multilingual-contextual-ai-fall-2026`、`kiro-startup-pro-plus-2026`、`deepgram-flux-tts-bonus`、`granola-startups`、`openai-nonprofit-standard-discount`、`linear-startup-business-2026`、`meshy-free-monthly-hundred-download-conflict`、`replicate-try-free`、`fireflies-free-auto-join-storage-credit-conflicts`、`laminar-free-gb-hard-cap-signals-conflict`、`adobe-express-k12-free-standard-250` 共16筆；新增機會 `netlify-free-monthly-three-hundred-shared-ai-gateway`、`vespa-cloud-once-three-hundred-no-card-trial` 共2筆，政策及線索各0筆；既有未完成834筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [BazaarLink](https://bazaarlink.ai/free)免費模型層（Qwen3.7 Flash、Glyph Cluster、Beam Free等）免卡在線，無餘額每日60 units（10 RPM），有餘額每日120 units（20 RPM）；僅在API key啟用paid fallback且有足夠餘額時才會轉付費；全帳戶限2並行；[條款](https://bazaarlink.ai/terms)確認中華民國法律適用與苗栗登記。
