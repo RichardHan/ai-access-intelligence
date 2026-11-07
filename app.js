@@ -52,7 +52,14 @@ const STATUS_LABELS = {
   application_based_unverified_terms: '申請條款待核',
   account_specific_unverified: '個別帳戶資格待核',
   grant_terms_unverified: '資助條款待核',
-  resolved_rumor_disproven: '線索已釐清・未獲支持'
+  resolved_rumor_disproven: '線索已釐清・未獲支持',
+  amount_and_eligibility_unverified: '額度與資格待核',
+  current_approval_unverified: '審核現況待核',
+  grant_delivery_unverified: '資助發放待核',
+  legacy_closed_new_path_conditional: '舊途徑關閉・新途徑需條件',
+  quota_and_taiwan_eligibility_unverified: '額度與台灣資格待核',
+  taiwan_not_listed_supported_region: '台灣未列於支援地區',
+  watchlist: '觀察線索待追蹤'
 };
 
 function text(tag, value, className) {
@@ -115,7 +122,7 @@ function statusInfo(offer) {
   let tone = 'uncertain';
   if (CLOSED_STATUSES.has(status)) tone = 'closed';
   else if (status === 'active' || status === 'active_verified') tone = 'active';
-  else if (status === 'conditional' || status === 'application_based') tone = 'conditional';
+  else if (status === 'conditional' || status === 'application_based' || status === 'legacy_closed_new_path_conditional') tone = 'conditional';
   return { label: STATUS_LABELS[status] || '狀態待釐清', tone };
 }
 

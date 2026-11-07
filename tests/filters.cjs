@@ -10,6 +10,14 @@ assert.strictEqual(ctx.statusInfo({status:'expired'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'taiwan_availability_unverified'}).label,'台灣可用度待核');
 assert.strictEqual(ctx.statusInfo({status:'unverified_taiwan_eligibility'}).label,'台灣資格待核');
 assert.strictEqual(ctx.statusInfo({status:'application_based_unverified'}).label,'申請資格待核');
+assert.strictEqual(ctx.statusInfo({status:'amount_and_eligibility_unverified'}).label,'額度與資格待核');
+assert.strictEqual(ctx.statusInfo({status:'current_approval_unverified'}).label,'審核現況待核');
+assert.strictEqual(ctx.statusInfo({status:'grant_delivery_unverified'}).label,'資助發放待核');
+assert.strictEqual(ctx.statusInfo({status:'legacy_closed_new_path_conditional'}).label,'舊途徑關閉・新途徑需條件');
+assert.strictEqual(ctx.statusInfo({status:'legacy_closed_new_path_conditional'}).tone,'conditional');
+assert.strictEqual(ctx.statusInfo({status:'quota_and_taiwan_eligibility_unverified'}).label,'額度與台灣資格待核');
+assert.strictEqual(ctx.statusInfo({status:'taiwan_not_listed_supported_region'}).label,'台灣未列於支援地區');
+assert.strictEqual(ctx.statusInfo({status:'watchlist'}).label,'觀察線索待追蹤');
 
 // The latest attempt is not a successful verification: expose its failure reason.
 class Element {

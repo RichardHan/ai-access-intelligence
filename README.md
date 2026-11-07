@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **848 筆**（645 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 02:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **830 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **850 筆**（647 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 03:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **832 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,48 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 03:05–03:30 本輪：起始848筆，按實際時區有39筆到期；局部複核 `aocai-working-free-ai-courses-2026`、`google-ai-professional-certificate-tw-pro-3mo`、`grammarly-student-annual-half-first-period`、`taiwan-hrd-free-ai-introduction-2026`、`fastino-glideis1-ten-credit-payment-verification`、`articul8-bivia-early-adopter-billion-tokens`、`runable-free-daily-fifteen-hundred-monthly-cap`、`felo-standard-free-new-user-daily-two-hundred-campaign`、`retool-nonprofit-monthly-coupon`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`fireworks-glimmer-sft`、`mem0-hobby-memory-api`、`coderabbit-startup-annual-half-six-months`、`vultr-match-ai-compute`、`zhipu-bigmodel-flash-free-api`、`resend-free-transactional-agent-email` 共16筆；新增機會 `tabstack-mozilla-ten-thousand-trial-credits`、`websearchapi-monthly-two-thousand-search-credits` 共2筆，政策及線索各0筆；既有未完成832筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[經濟部服務業在職AI課程](https://serv.gcis.nat.gov.tw/AOCAI/)公開報名表仍開放，台北11/11班受理至2026-11-09 23:59截止；遴選通過免學費，[報名表](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)明確載明應繳金額NT$0；內文預計100人與表單限制300人之名額口徑差異仍存；出席率須達80%並通過測驗。
+
+[Google AI 專業證書](https://grow.google/intl/zh-TW_tw/ai-professional/)課程與行銷公開在線，[條款](https://one.google.com/offer/terms-and-conditions/google-career-certificates)2026-11-06截止日與台灣頁2027-01-01矛盾仍存；[Coursera說明](https://www.coursera.org/google-certificates/google-ai)釐清課程學員透過Launch App與合作夥伴Saritasa發放唯一兌換碼於one.google.com兌換3個月AI Pro（含2TB），未建立公開通用兌換碼。
+
+[Grammarly 學生方案](https://support.grammarly.com/hc/en-us/articles/39623389691021-Grammarly-promo-offers-on-SheerID)[SheerID表單](https://services.sheerid.com/verify/645b6593ace429765b46f1d5/)即時實測確認支援Taiwan及臺灣大學、臺灣師大、臺灣海大、臺灣科大等校；年約Pro首期第一席五折（上限省US$72），付款接受信用卡或PayPal；每月2,000次AI提示詞非無限制。
+
+[e等公務園+](https://elearn.hrd.gov.tw/info/10042743)全年報名開放至2026-12-31，線上課程登入即可研讀；因本課程未列明特定免費公文文號，費用維持null謹慎呈現；台灣民眾認證時數須身分證號。
+
+[Fastino GLiDE](https://agent.fastino.ai/terms)官方推文確認US$10推廣碼活動，[定價文件](https://docs.fastino.ai/pricing)釐清推論呼叫必須完成付款方式驗證（驗證不扣款）；現時兌碼有效性與額度效期未核。
+
+[Articul8 Bivia](https://www.articul8.ai/bivia)早期使用者活動在線，前1萬名使用者贈送10億（1 Billion）免費tokens（修正先前10B口徑筆誤）；初期註冊表單不需填卡，完整開通流程免卡待核。
+
+[Runable Free](https://runable.com/pricing)維持每日1,500點、每月上限15,000點且次月不結轉；用盡暫停呼叫，免信用卡要求仍待登入後實測。
+
+[Felo Standard](https://felo.ai/en/pricing)首頁確認新用戶限時每日200點活動仍列示，免費方案標明No credit card required；現行FAQ未重述耗盡自動回退普通搜尋之確定性保證。
+
+[Retool 非營利](https://docs.retool.com/support/discount-programs)申請入口維持每月US$1,625訂閱券（涵蓋25席Business Standard），需先建Free組織再申請；[定價頁](https://retool.com/pricing)（1,000/3,000點）與[AI說明文件](https://docs.retool.com/support/billing-usage/ai-credits)（750/1,500點）額度衝突仍存；非營利說明未提及強制綁卡，額外購買AI點數包需綁卡。
+
+[Synthesia Basic](https://www.synthesia.io/pricing)維持US$0/月含10分鐘Studio影片／配音、3次問卷及500共享點數，不可下載；首頁標示No credit card required；Syren新戶1,000點排定至2026-11-09 23:59 BST截止，定價頁一個月期限衝突仍存。
+
+[Fireworks Muse Glimmer](https://fireworks.ai/pricing)定價與[Cookbook](https://docs.fireworks.ai/fine-tuning/training-api/cookbook/muse-glimmer.md)確認LoRA SFT限期免費開放至台北2026-12-01 16:00（美西11/30午夜）前啟動；無公開固定免費token上限，僅適用LoRA SFT，微調後模型部署需隨選GPU計費。
+
+[Mem0 Free](https://docs.mem0.ai/platform/pricing)定價首頁與文件口徑已統一：Free提供自帶金鑰（BYOK）與30天免費平台模型呼叫，官方入門教程證實免綁卡即可建立工作區；商業授權排除條款已釐清。
+
+[CodeRabbit 新創](https://www.coderabbit.ai/startup-program)維持Team年約半年五折優惠，核准後發放折價碼；知識庫隨時取消與[條款](https://www.coderabbit.ai/legal/terms-of-service)§5.1提前45天書面通知差異仍存；未提供台灣審核例外。
+
+[Vultr Match](https://www.vultr.com/coupons/)優惠彙整頁確認新戶US$10–$100預存等額回饋活動仍列示；Match專屬說明頁回傳403阻擋，Cloud GPU是否屬合格產品仍維持待核。
+
+[智譜 BigModel](https://docs.bigmodel.cn/cn/guide/start/pricing)免費API模型在線，[用戶協議](https://docs.bigmodel.cn/cn/agreement/user-agreement)§VII.2重大釐清：明訂免費功能僅限「非商業用途的個人科研、學習」，解決長期以來免費Flash模型商用授權疑慮。
+
+[Resend Free](https://resend.com/pricing)維持每月3,000封郵件（每日100封上限）免信用卡，官方定價確認額外新增每月5點AI點數及10,000次自動化執行（automation runs）；超限不自動扣款。
+
+新增 [Mozilla Tabstack](https://tabstack.ai/pricing)：Mozilla營運之網頁研究與瀏覽器代理API，新戶免信用卡贈送一次性10,000 credits，[條款](https://tabstack.ai/legal/terms)確認合規帳戶存續期間不過期；Markdown擷取10點、JSON 50點、Generate/Automate每action 100點；試用限速10 RPM；台灣帳戶註冊與付款未測。
+
+新增 [WebSearchAPI.ai](https://websearchapi.ai/pricing)：官方提供多來源搜尋與擷取API，Free方案免信用卡每月贈送2,000 search credits；基本搜尋1點、含內容擷取2點、生成答案另加1點；[端點文件](https://websearchapi.ai/docs/search-api)確認支援Bearer key呼叫；免費額滿處理與台灣可用度待核。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 增補 `amount_and_eligibility_unverified`（額度與資格待核）、`current_approval_unverified`（審核現況待核）、`grant_delivery_unverified`（資助發放待核）、`legacy_closed_new_path_conditional`（舊途徑關閉・新途徑需條件）、`quota_and_taiwan_eligibility_unverified`（額度與台灣資格待核）、`taiwan_not_listed_supported_region`（台灣未列於支援地區）及 `watchlist`（觀察線索待追蹤）之繁體中文狀態標籤與樣式斷言，並將過渡型條件方案正確歸入 conditional 樣式，徹底消除前端儀表板於特定待核狀態下回退泛用「狀態待釐清」之盲區；以單元測試實證覆蓋通過。
+
+下輪優先：`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止倒數後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況。
+
 2026-11-08 02:05–02:25 本輪：起始846筆，按實際時區有20筆到期；局部複核 `firepass-closed-policy`、`kimi-api-free-voucher-cn-locked`、`gitlab-education-ai-credit-exclusion`、`murf-startup-incubator-three-month`、`pipedream-connect-development-only`、`stackai-free-monthly-five-hundred-runs`、`aiven-postgresql-free`、`autodesk-flow-studio-education`、`retool-education-monthly-discount`、`satfaq-ai-trial-index`、`genspark-free-and-standard-pools`、`opencode-accountless-free-models`、`plaud-preview-one-time-work-credits`、`videogen-model1-selected-project-credit-program`、`ugreen-ai-nas-hackathon-2026`、`octoparse-ai-free-new-user-five-credit` 共16筆；新增機會 `hal-x-thx-keyless-free-decision-api`、`maximo-platform-new-account-five-credit` 共2筆，政策及線索各0筆；既有未完成830筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [UGREEN AI NAS Hackathon](https://ugreenhackathon.devpost.com/rules)正式規則本輪由瀏覽器成功完整讀取，清除舊有403追查阻擋：規則§3確認Taiwan為合格居住地，限成年個人或最多三人隊伍；11/15 23:45 PT截止；初賽無須影片；最多30個入圍專案各獲11/22至11/28指定一天免費遠端獨占NAS測試環境（00:00–23:59 PT），無須購買或付款；[活動宣傳頁](https://ai.ugreen.com/pages/ugreen-hackathon)日期與影片要求衝突依正式規則為準。
