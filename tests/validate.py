@@ -24,6 +24,7 @@ for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
+ for s in o.get('sources', []): assert s.get('url', '').startswith(('http://', 'https://')), f'invalid source URL in {o["id"]}: {s.get("url")}'
  if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'
  assert o['benefit_cost_ratio'] is None or math.isfinite(o['benefit_cost_ratio'])
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None
@@ -34,6 +35,7 @@ for o in d['offers']:
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
   if o.get('status') in dead:assert o['priority_tier']=='D'
   if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
+  if o.get('priority_tier')=='S':assert o['taiwan']=='Yes' and o.get('status') not in dead, f'invalid S-tier in {o["id"]}'
  else:assert o['priority_tier'] is None and o['priority_score'] is None
 print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions.')
 print('tiers:',{t:sum(1 for o in d['offers'] if o.get('priority_tier')==t) for t in ['S','A','B','C','D']})
