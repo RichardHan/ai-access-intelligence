@@ -11,6 +11,11 @@ d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);j
 history=json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
 assert all(h['record_id'] in ids for h in history), 'unknown policy history record_id'
+for h in history:
+ assert isinstance(h.get('change_type'), str) and h['change_type'].strip(), f'missing or empty change_type in history: {h.get("record_id")}'
+ assert isinstance(h.get('sources'), list), f'history sources not a list in {h.get("record_id")}'
+ for u in h.get('sources', []):
+  assert isinstance(u, str) and u.startswith('https://'), f'non-https history source URL: {u}'
 run=d['last_research_run']
 reviewed=run['reviewed_ids'];new=run['new_ids'];attempted=run['attempted_failed_ids']
 assert len(reviewed)==len(set(reviewed)) and len(new)==len(set(new)) and len(attempted)==len(set(attempted)), 'duplicate batch ID'
@@ -29,7 +34,7 @@ tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','appli
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  for s in o.get('sources', []):
-  assert s.get('url', '').startswith(('http://', 'https://')), f'invalid source URL in {o["id"]}: {s.get("url")}'
+  assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
   assert isinstance(s.get('evidence'), str) and s['evidence'].strip(), f'missing or empty source evidence in {o["id"]}'
  if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **836 筆**（633 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 15:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **822 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **838 筆**（635 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 16:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **824 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,40 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-07 16:05–16:20 本輪：起始836筆，按實際時區有20筆到期；避開前輪剛核及近期反覆失敗案例。局部複核 `deepgram-speak-attendee`、`kilo-auto-free-hosted-models`、`shift-asia-prototype-twenty-companies`、`ndp-one-oct31-free-full-security-diagnosis`、`adobe-firefly-twelve-month-model-promotion`、`rime-stt-nov19-free-window`、`google-ai-professional-certificate-tw-pro-3mo`、`couchbase-activate-starter-kit-current-availability-watch`、`krutrim-sandbox-oct22-past-banner`、`lets-go2-ai-ocr-launch-six-hundred-pages`、`realads-once-fifty-no-watermark`、`satfaq-free-trial-hybrid-ai-two-thousand-points` 共12筆；新增機會 `elfa-api-free-once-thousand-credits`、`parallel-mcp-keyless-free-search-fetch-decisions` 共2筆，政策及線索各0筆；既有未完成824筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[Deepgram Speak](https://deepgram.com/speak-attendee-credit-promotion-terms)建帳截止時間為美西11/6 23:59 PT（台北11/7 15:59），現已過期；現場badge scan與同企業信箱建帳均已截止，狀態更正為 `applications_closed`。合格專案預定11/13前發放一次性US$500額度，無到期日但專案刪除或帳戶關閉即喪失；公開頁不證實際入帳。
+
+[Kilo Gateway](https://kilo.ai/landing/free-models)維持3款零成本模型（Nemotron 3.5 Super VL、Dots3-Note Preview、Nemotron 3 Ultra），免信用卡；匿名使用者限速200次/小時/IP。11/2新條款生效；NVIDIA端點限試用評估禁止生產使用。
+
+[SHIFT ASIA](https://shiftasia.com/ja/ai-driven-development-free-trial/)與[公告](https://shiftasia.com/ja/news/ai駆動開発テスト無料トライアルキャンペーン/)仍宣傳20社限定受付中，實測諮詢表單仍在線；合意範圍原型0元，剩餘名額與台灣法人核准未核。
+
+[ndp one](https://prtimes.jp/main/html/rd/p/000000038.000139644.html)原10/31免費診斷活動期限已過，未見官方延期；[首頁](https://ndp-one.com/)仍宣傳免費PoC版且註冊表在線，但不證免費完整診斷延長，維持活動現況待核。
+
+[Adobe Firefly](https://helpx.adobe.com/tw/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html)實證解析台灣促銷頁DOM模型表格勾選標記：Firefly Pro不含GPT Image 2.5 Sunburst/Flare與Flux 1.1 Pro；低中組態限Pro Plus與Premium，全組態限Premium。[台灣方案頁](https://www.adobe.com/tw/products/firefly/plans.html)列月繳含稅Pro NT$704、Plus NT$1,680、Premium NT$6,825，自動續費；非免費訂閱。
+
+[Rime STT](https://www.rime.ai/pricing)現行FAQ明示STT於所有方案免費至2026-11-19，11/20起Flex每分鐘US$0.002、Scale US$0.0016（時區未列）。Free每月US$50共用不滾存，用盡須升Flex加卡；[條款](https://www.rime.ai/terms)禁止Caller audio與第三方個資。
+
+[Google AI 專業證書](https://one.google.com/offer/terms-and-conditions/google-career-certificates)條款（含直連g1_landing_page=0）均明列2026-11-06截止，時鐘日期已過；[台灣頁](https://grow.google/intl/zh-TW_tw/ai-professional/)仍列2027-01-01。實際兌換入口是否關閉未實測，警示使用者勿單純為此試用而預付US$49課程費。
+
+[Couchbase Capella](https://info.couchbase.com/aws-activate.html)[Starter Kit頁](https://info.couchbase.com/aws-activate.html)與[條款PDF](https://info.couchbase.com/rs/302-GJY-034/images/Couchbase%20Capella%20AWS%20Activate%20%26%20Google%20Cloud%20Startup%20Promotion%20Terms%20and%20Conditions.pdf?version=0)確認AWS Activate與Google Cloud Startup新創資格與商業評估條款；未送件，台灣審核未核。
+
+[Krutrim Sandbox](https://docs.cloud.olakrutrim.com/basics/core-infrastructure/sandbox.md)明確記載按量計費（₹1.56/小時起），無現行₹5,000贈額承諾；首頁免卡不等於免費算力，維持歷史橫幅待核。
+
+[Go2 AI-OCR](https://www.lets-co.com/static/ai/ocr/campaign/index.html)公告OCR預定2026-12-10正式上線（原記載12月中旬）；2026-10-13至2026-12-28簽署新約免首年600頁（等值¥33,000）；仍需年約底座¥264,000含稅，限日本國內。
+
+[RealAds](https://ai.realads.kr/faq)新用戶一次50點免卡宣稱，與[服務條款](https://ai.realads.kr/terms)商用限制及浮水印要求之條款矛盾仍存。
+
+[さっとFAQ](https://www.satfaq.jp/)首頁確認公開試用期30天且初期費用免費（0元）。[11/2公告](https://www.satfaq.jp/news/20261102/)2,000點僅至個別試用截止；未另簽AI方案則試用結束刪除機器人與贈點，非自動扣款。
+
+新增 [Elfa API Free](https://elfa.ai/pricing)：官方提供一次性1,000 credits免費API金鑰，限速60 RPM，可用於AI市場情報摘要與代理資料端點；用盡回傳429需自行升級；[條款](https://elfa.ai/terms)限滿18歲，台灣個案與免卡未核。
+
+新增 [Parallel MCP](https://parallel.ai/blog/decisions-api)：官方提供免帳戶、免金鑰之公開MCP連線，免費提供web_search、web_fetch與新Decisions網頁決策工具（低速限速）；登入OAuth或帶Key則切換至帳戶計費（Decisions API一般US$1/1,000 calls）；[條款](https://parallel.ai/customer-terms)禁止輸出用於模型訓練，個資需簽DPA。
+
+品質改善：`tests/validate.py` 新增 `policy-history.json` 結構與來源驗證（強制每一歷史紀錄之 `change_type` 為非空字串、`sources` 為列表，且所有來源網址必須以 `https://` 開頭），並將既有 offers 來源檢查統一對齊為嚴格 HTTPS；`tests/filters.cjs` 補齊 `applications_closed` 狀態於免費視圖之排除斷言；以空 change_type 與 http 協議之合成案例實證攔截通過。
+
+下輪優先：`deepgram-speak-attendee` 台北11/14查[條款](https://deepgram.com/speak-attendee-credit-promotion-terms)11/13發放承諾日後額度發放與頁面封存動態；`taipei-youth-ai-subscription-subsidy-2026` 台北11/8查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)停收公告與11/10最後送達倒數；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止前查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節獎勵關閉情況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口；`google-ai-professional-certificate-tw-pro-3mo` 每日查[條款](https://one.google.com/offer/terms-and-conditions/google-career-certificates)與[台灣頁](https://grow.google/intl/zh-TW_tw/ai-professional/)截止矛盾及實際兌換狀況。
+
 2026-11-07 15:05–15:20 本輪：起始834筆，按實際時區有30筆到期；避開前輪剛核及近期反覆失敗案例。局部複核 `snowflake-ai-trial-2026`、`coreweave-aria-limited-free`、`x-api-xai-spend-credit-rewards`、`claude-scientists`、`anthropic-guest-investigators`、`minimax-design-h3-new-user-watch`、`digitalocean-secret-ai-startup-100-2026`、`hume-startup-forty-million-twelve-months`、`mango-inference-community`、`gmi-a16z-first25-two-k-spend-five-k-credit`、`fujisoft-workforce-ai-security-poc`、`sambacloud-rundown-first100-anniversary-credit-watch` 共12筆；新增機會 `goodmem-cloud-fourteen-day-no-card-trial` 1筆、政策0筆、觀察線索 `airweave-developer-free-ten-connections-fifty-queries` 1筆；既有未完成822筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [Anthropic生命科學徵案](https://www.anthropic.com/news/open-call-guest-investigators-life-sciences)官方[申請表](https://docs.google.com/forms/d/e/1FAIpQLSd2MC_Wwcqr7niezK5697AsC8oKm3MDbCIU7KrIFcfvZFLJGg/viewform)已確認重導向至 [closedform](https://docs.google.com/forms/d/e/1FAIpQLSd2MC_Wwcqr7niezK5697AsC8oKm3MDbCIU7KrIFcfvZFLJGg/closedform?hl=en) 並載明「is no longer accepting responses」，本輪收件確認已截止；介紹頁仍留有Apply按鈕屬殘留連結，狀態更正為 `applications_closed`。入選為8–12週免費合作且不發放對外API額度。
