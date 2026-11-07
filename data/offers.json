@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-07T09:08:47+08:00",
-  "scope": "本輪起始825筆，局部複核既有案例3筆、未完成822筆；新增機會1筆、政策及觀察線索各0筆，核心來源整筆追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
+  "updated_at": "2026-11-07T10:10:00+08:00",
+  "scope": "本輪起始826筆，局部複核既有案例2筆、未完成824筆；新增機會、政策及觀察線索各0筆，核心來源整筆追查失敗0筆。僅核列明主張，台灣個案及法律未全面核實。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -2854,7 +2854,7 @@
   "setup_cost_usd": 72,
   "recurring_cost_usd": null,
   "recurring_cost_annual_usd": null,
-  "setup_cost_basis": "依官方US$144年價及首期五折推算US$72，非結帳報價；稅另計。",
+  "setup_cost_basis": "依官方US$144年價及首期五折推算US$72，非結帳報價；稅可能另列或已包含，依帳單地址及結帳頁而定。",
   "effort_minutes_max": null,
   "taiwan": "Yes",
   "regions": [
@@ -2867,15 +2867,15 @@
   "benefit_cost_ratio": null,
   "savings_usd": null,
   "valuation_scenario": null,
-  "verified_at": "2026-11-06T02:10:18+08:00",
+  "verified_at": "2026-11-07T10:09:03+08:00",
   "discovered_at": "2026-10-31T05:08:58+08:00",
   "announcement_at": null,
   "review_cadence": "daily",
-  "next_review_at": "2026-11-07T02:10:18+08:00",
+  "next_review_at": "2026-11-08T10:09:03+08:00",
   "usable_duration": "首個年約期第一席；官方稱限時，截止日未公布。",
-  "cancellation": "首期後按當時標準價格自動續訂；帳戶 Subscription 可取消自動續訂，付費功能保留至當期結束；退款原則及台灣實際結帳另須確認。",
-  "access_risk": "學籍與個人須經SheerID核准；追加席位原價，不可疊加或用於應用程式商店購買。",
-  "verification_scope": "本輪局部核官方學生促銷表單、說明與取消方式；未實際付款、核准或核實台灣個案與法律。",
+  "cancellation": "首期後按當時標準價格自動續訂；帳戶 Subscription 可取消自動續訂，付費功能保留至當期結束。官方退款政策稱僅法律要求時退款；帳務錯誤可請客服審查，台灣法律個案未核。",
+  "access_risk": "學籍與個人須經SheerID核准；追加席位原價，不可疊加或用於應用程式商店購買。稅可能另列或已包含，台灣實際結帳未知。",
+  "verification_scope": "本輪局部核官方學生促銷表單、首期及續訂、取消、退款政策與稅務說明；未實際付款、核准或核實台灣個案與法律。",
   "eligibility": {
     "service_availability": "學生首期年約五折，截止日期未公布；Pro每人每月2,000生成式AI prompts。",
     "account_eligibility": "學生須SheerID核驗，可能要求正式文件，審查最長七個工作日；第一席首期適用。",
@@ -2892,6 +2892,24 @@
     "學生折扣文章轉登入；表單與SheerID促銷說明可讀，但實際結帳及個案資格仍須確認。"
   ],
   "sources": [
+    {
+      "url": "https://support.grammarly.com/hc/en-us/articles/33154429182861-Is-tax-included-in-the-subscription-cost",
+      "scope": "稅的呈現方式，不是台灣個案報價",
+      "evidence": "稅依帳單地址可能在結帳另列或包含於訂閱價；個人訂閱不接受免稅申請。",
+      "accessed_at": "2026-11-07T10:09:03+08:00"
+    },
+    {
+      "url": "https://support.grammarly.com/hc/en-us/articles/115000090172-How-do-I-cancel-my-subscription",
+      "scope": "取消自動續訂",
+      "evidence": "取消後付費功能保留至當期結束；未操作帳戶。",
+      "accessed_time_range": "2026-11-07T10:06:45+08:00/2026-11-07T10:09:03+08:00"
+    },
+    {
+      "url": "https://support.grammarly.com/hc/en-us/articles/360049189071-Can-I-get-a-refund",
+      "scope": "一般退款政策，非台灣法律結論",
+      "evidence": "官方稱僅法律要求時退款；個案適用法律未核。",
+      "accessed_time_range": "2026-11-07T10:06:45+08:00/2026-11-07T10:09:03+08:00"
+    },
     {
       "url": "https://support.grammarly.com/hc/en-us/articles/39623389691021-Grammarly-promo-offers-on-SheerID",
       "scope": "本輪局部複核",
@@ -7190,17 +7208,14 @@
     },
     {
       "id": "taiwan-hrd-free-ai-introduction-2026",
-      "title": "e等公務園+：一般民眾免費AI概論課程，年底截止",
-      "summary": "公務人力發展學院AI概論及發展趨勢線上課程，任何人可報名，2026/1/1–12/31上課；教材製作於民國110年，非最新模型實作。免費學習非模型/API額度；認證須達課程專屬75分、閱讀一小時及問卷。",
-      "categories": [
-        "FREE"
-      ],
+      "title": "e等公務園+：一般民眾AI概論課程，年底截止",
+      "summary": "公務人力發展學院AI概論及發展趨勢線上課程，任何人可報名，2026/1/1–12/31上課；教材製作於民國110年，非最新模型實作。課程費用未核，不是模型/API額度；認證須達課程專屬75分、閱讀一小時及問卷。",
+      "categories": [],
       "views": [
-        "free",
         "education"
       ],
-      "setup_cost_usd": 0,
-      "recurring_cost_usd": 0,
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
       "effort_minutes_max": null,
       "taiwan": "Yes",
       "regions": [
@@ -7217,30 +7232,43 @@
       "cancellation": "課程未列付費訂閱或自動續扣；未建立帳戶或操作課程。",
       "usable_duration": "報名及上課：2026-01-01至2026-12-31",
       "access_risk": "教材製作於2021年；Google／FB學習紀錄不可轉移，證明須顯示身分證字號者須以我的e政府帳號重新上課。未實測認證核發。 Apple ID登入已於2026/3/31停止，一般民眾改用我的e政府。",
-      "verified_at": "2026-11-06T01:08:51+08:00",
+      "verified_at": "2026-11-07T10:09:03+08:00",
       "discovered_at": "2026-10-28T12:09:34+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-07T01:08:51+08:00",
+      "next_review_at": "2026-11-08T10:09:03+08:00",
       "priority": "watch",
       "status": "active",
       "legal_status": "not_verified",
       "eligibility": {
         "service_availability": "官方課程頁列2026年全年報名與上課，未登入測試播放。",
         "account_eligibility": "報名身分任何人；一般民眾以我的e政府登入，學習時數留存需身分證號註冊。",
-        "billing_country": "官方免費學習公告；無已核付款步驟。",
+        "billing_country": "課程頁未列費用；數發部2024年免費公告指資訊職能數位學習專區，未證明本課2026年費用。未登入或核實付款流程。",
         "identity_residency": "不要求公務員身分；無身分證者認證與學習時數資格未核。",
-        "terms_restrictions": "按平台真實身分登錄並完成課程專屬測驗與閱讀條件；不可將免費課程解讀為商用AI服務額度。",
+        "terms_restrictions": "按平台真實身分登錄並完成課程專屬測驗與閱讀條件；課程不等於商用AI服務額度。",
         "taiwan_note": "台灣官方平台明列任何人及一般社會大眾；個別帳號與證書未實測，法律結論未核。"
       },
       "unknowns": [
+        "本課2026年費用及付款流程未核；2024年免費公告指另一專區",
         "個別帳號核准及證書核發",
         "無台灣身分證者的時數取得方式",
         "台灣適用法律與監管"
       ],
-      "verification_scope": "本輪局部核課程日期、對象、認證、登入與平台免費公告；未登入或確認個案與法律。",
+      "verification_scope": "本輪局部核課程日期、對象及認證；2024年免費公告只指資訊職能專區，不能證明本課2026年免費。未登入或確認個案與法律。",
       "sources": [
+        {
+          "url": "https://elearn.hrd.gov.tw/info/10042743",
+          "scope": "課程日期、對象與認證；未列課程費用",
+          "evidence": "2026全年報名上課，任何人、一般社會大眾；105分鐘、認證2小時，專屬條件75分、閱讀一小時及問卷，通用說明另列60分。",
+          "accessed_at": "2026-11-07T10:09:03+08:00"
+        },
+        {
+          "url": "https://moda.gov.tw/press/press-releases/13258",
+          "scope": "2024年另一學習專區免費公告，不證本課費用",
+          "evidence": "2024-08-07公告稱一般民眾申請帳號後可免費瀏覽資訊職能數位學習專區；未指明本課2026年費用。",
+          "accessed_at": "2026-11-07T10:09:03+08:00"
+        },
         {
           "url": "https://elearn.hrd.gov.tw/mooc/co_login_dialog.php",
           "scope": "登入及留存學習時數",
@@ -7303,9 +7331,9 @@
         }
       ],
       "record_type": "opportunity",
-      "priority_score": 22.3,
+      "priority_score": 18.3,
       "priority_tier": "S",
-      "priority_note": "官方·活躍·免費·台灣Yes·時間未知"
+      "priority_note": "官方·活躍·費用未知·台灣Yes·時間未知"
     },
     {
       "id": "crawl4ai-cloud-monthly-thousand-no-card",
@@ -52113,19 +52141,16 @@
       "priority_note": "官方·申請制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-07T09:08:47+08:00",
+  "latest_research_at": "2026-11-07T10:10:00+08:00",
   "last_research_run": {
-    "started_at": "2026-11-07T09:05:46+08:00",
-    "completed_at": "2026-11-07T09:08:47+08:00",
+    "started_at": "2026-11-07T10:05:47+08:00",
+    "completed_at": "2026-11-07T10:10:00+08:00",
     "reviewed_ids": [
-      "coderabbit-startup-annual-half-six-months",
-      "fastino-glideis1-ten-credit-payment-verification",
-      "vultr-match-ai-compute"
+      "taiwan-hrd-free-ai-introduction-2026",
+      "grammarly-student-annual-half-first-period"
     ],
-    "new_ids": [
-      "fibery-education-nonprofit-half-price"
-    ],
-    "unreviewed_existing_count": 822,
+    "new_ids": [],
+    "unreviewed_existing_count": 824,
     "attempted_failed_ids": []
   }
 }
