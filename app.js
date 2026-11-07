@@ -46,6 +46,12 @@ const STATUS_LABELS = {
   unverified: '尚待核實', needs_verification: '需要再次核實',
   unverified_numeric_claims: '額度數字待核', unverified_redemption: '領取條件待核',
   campaign_current_availability_unverified: '活動現況待核',
+  taiwan_availability_unverified: '台灣可用度待核',
+  unverified_taiwan_eligibility: '台灣資格待核',
+  application_based_unverified: '申請資格待核',
+  application_based_unverified_terms: '申請條款待核',
+  account_specific_unverified: '個別帳戶資格待核',
+  grant_terms_unverified: '資助條款待核',
   resolved_rumor_disproven: '線索已釐清・未獲支持'
 };
 

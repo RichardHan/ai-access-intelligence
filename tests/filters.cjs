@@ -7,6 +7,9 @@ assert.strictEqual(ctx.statusInfo({status:'closed'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'sunset_announced'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'applications_closed'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'expired'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'taiwan_availability_unverified'}).label,'台灣可用度待核');
+assert.strictEqual(ctx.statusInfo({status:'unverified_taiwan_eligibility'}).label,'台灣資格待核');
+assert.strictEqual(ctx.statusInfo({status:'application_based_unverified'}).label,'申請資格待核');
 
 // The latest attempt is not a successful verification: expose its failure reason.
 class Element {

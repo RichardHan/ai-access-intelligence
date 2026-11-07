@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **846 筆**（643 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 01:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **830 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **848 筆**（645 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 02:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **830 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,48 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 02:05–02:25 本輪：起始846筆，按實際時區有20筆到期；局部複核 `firepass-closed-policy`、`kimi-api-free-voucher-cn-locked`、`gitlab-education-ai-credit-exclusion`、`murf-startup-incubator-three-month`、`pipedream-connect-development-only`、`stackai-free-monthly-five-hundred-runs`、`aiven-postgresql-free`、`autodesk-flow-studio-education`、`retool-education-monthly-discount`、`satfaq-ai-trial-index`、`genspark-free-and-standard-pools`、`opencode-accountless-free-models`、`plaud-preview-one-time-work-credits`、`videogen-model1-selected-project-credit-program`、`ugreen-ai-nas-hackathon-2026`、`octoparse-ai-free-new-user-five-credit` 共16筆；新增機會 `hal-x-thx-keyless-free-decision-api`、`maximo-platform-new-account-five-credit` 共2筆，政策及線索各0筆；既有未完成830筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[UGREEN AI NAS Hackathon](https://ugreenhackathon.devpost.com/rules)正式規則本輪由瀏覽器成功完整讀取，清除舊有403追查阻擋：規則§3確認Taiwan為合格居住地，限成年個人或最多三人隊伍；11/15 23:45 PT截止；初賽無須影片；最多30個入圍專案各獲11/22至11/28指定一天免費遠端獨占NAS測試環境（00:00–23:59 PT），無須購買或付款；[活動宣傳頁](https://ai.ugreen.com/pages/ugreen-hackathon)日期與影片要求衝突依正式規則為準。
+
+[GitLab 教育方案](https://about.gitlab.com/solutions/education/join/)確認提供認證大專/非營利教學機構一年免費Ultimate授權、無限席位與每月50,000 compute minutes；[社群方案文件](https://docs.gitlab.com/subscriptions/community_programs/)確認不自動配發included credits；但[官方手冊](https://handbook.gitlab.com/handbook/marketing/developer-relations/programs/education-program/)福利明列包含AI Chat與IDE Code Suggestions；[額度文件](https://docs.gitlab.com/subscriptions/gitlab_credits/)確認30天評估點數須向Sales申請，且開啟用量計費後於剩餘期與自服續約中不能opt out。
+
+[Retool 教育方案](https://docs.retool.com/support/discount-programs)確認在校學生與個人教師可申請月繳Team/Business訂閱100%折扣，排除年約與Enterprise；[額度文件](https://docs.retool.com/support/billing-usage/ai-credits)（Team 750/Business 1,500點/月）與[定價頁](https://retool.com/pricing)（1,000/3,000點/月）衝突仍存；Agents按小時計費不耗AI點數（公開表列最多20免費小時）；失格後僅承諾通知退出時程。
+
+[さっとFAQ](https://www.satfaq.jp/news/20260918_2/)既有Basic以上付費客戶2,000點AI機器人試用排定至2026-12-31截止，由租戶契約者啟用；活動期間不可加購點數，用盡停用AI；期滿未正式簽署AI方案者刪除機器人與贈點，非自動扣款；[正式AI方案](https://www.satfaq.jp/news/20260918_1/)月費80,000日圓。
+
+[Genspark](https://www.genspark.ai/helpcenter/membership-plans)Free每日100點受未公開終身額度限制，達限後停止每日補點；付費Standard 7日池耗盡自動轉扣點數（非免費層）；9/18前舊訂戶聊天/圖像原無限權益列至2026-12-31截止；[點數指南](https://www.genspark.ai/helpcenter/credits-guide)與會員頁在9/18資格邊界（before vs on or before）之衝突仍未解。
+
+[OpenCode](https://opencode.ai/)免帳號免費模型（GLM-5.3-Flash Free、DeepSeek V4.1 Flash Free等）在線；[模型文件](https://opencode.ai/docs/console/models/)確認免費聊天模型僅限OpenCode客戶端、無固定每日上限、多款標註限時；[條款](https://opencode.ai/legal/terms-of-service)限自身內部使用，免費版若轉收費前會先通知。
+
+[Plaud Preview](https://support.plaud.ai/hc/en-us/articles/63632158871705-Trial-credits-how-many-you-get-when-they-expire-and-renewals-for-v4-0-x-or-later)更新一次性贈額（Starter 600、Pro 2,400、Unlimited 6,000點）排定至2026-12-31截止；贈額自發放起三個月有效且非每月補充；[說明](https://support.plaud.ai/hc/en-us/articles/62338969091353-Top-up-Plaud-Credits-and-what-happens-when-they-run-out)確認贈點耗盡不自動觸發付款，加購須手動確認。
+
+[VideoGen Model 1](https://videogen.io/model-1)早期存取與選案補助仍開放申請，US$100萬為總池非每人可領；學生與創作者可提案，預定年底前分配完畢；補助額度享Pro同等商用權；未公布單案金額與耗盡收費機制。
+
+[Octoparse AI Free](https://www.octoparse.ai/)Windows桌面核心流程永久免費，首頁與[定價頁](https://www.octoparse.ai/pricing)確認新用戶獲一次性US$5 AI平台點數，其後轉為PAYG；[取消FAQ](https://www.octoparse.ai/helpcenter/en/articles/9755747-how-to-cancel-your-current-free-trial-subscription)（提前1天）與[條款](https://www.octoparse.ai/terms-and-conditions)（月訂7天、年訂30天）在付費續訂取消期限之衝突仍存。
+
+[Fireworks Fire Pass](https://docs.fireworks.ai/firepass)官方文件確認維持停止公開新訂閱，既有與促銷持有人可管理；fpk_金鑰僅適用指定編程routes，限個人非生產用途；其他模型按token收費。
+
+[Kimi API](https://www.kimi.com/help/kimi-api/api-free-trial)新戶15元代金券在線，限中國大陸手機號註冊與實名，發放起3個月內有效；自動抵扣API消耗，不可用於Kimi K3；餘額為零API回傳403。
+
+[Murf 新創](https://murf.ai/startup-program)正文維持US$1,500額度／三個月，公司未滿10年且少於100人；[API FAQ](https://murf.ai/api/docs/resources/faq)5,000萬字元與metadata US$5,000之口徑差異仍存；超額按每千字US$0.03計費。
+
+[Pipedream Connect](https://pipedream.com/pricing)免卡US$0開發環境在線，最多支援10個external user IDs，限本人測試；[定價文件](https://pipedream.com/docs/pricing)確認Workflows與String於2027-03-31退役不影響Connect。
+
+[StackAI Free](https://www.stackai.com/pricing)維持每月US$0含500 runs、2個專案與1席；[條款](https://www.stackai.com/terms-of-service)§8.H超額收費條款未列免費硬停保證；外接模型業者帳單獨立。
+
+[Aiven PostgreSQL Free](https://aiven.io/docs/products/postgresql/concepts/pg-free-tier)官方文件確認免信用卡無固定期限，提供單節點1CPU、1GB RAM、1GB磁碟與20連線；建立初期無使用或長期閒置可關閉並可手動重啟。
+
+[Autodesk Flow Studio Education](https://blogs.autodesk.com/media-and-entertainment/2026/09/28/autodesk-flow-studio-pricing-and-subscription-guide/)官方定價指南確認合格18歲以上大學生與教師享每月2,100點且不結轉，一年可續期；教育商用限制需另看完整授權。
+
+新增 [HAL-X THX-02](https://api.hal-x.ai/docs/thx-02/)：官方提供免金鑰（Keyless）免費決策推論API，THX-02限制每客戶IP每分鐘最多60個決策（每個問題算一個決策），超額回傳429及Retry-After而非自動扣款；支援文字分類、代理路由、是非與最多4張圖片決策；免建立帳號或綁卡，台灣可用度與商用授權待核。
+
+新增 [Maximo AI Platform](https://maximoai.co/platform)：官方首頁標示Limited Time Offer，驗證電子郵件即贈US$5免費API試用額度；提供OpenAI相容API（Atlas與Pandora模型）；[資料政策](https://maximoai.co/platform/data-policy)承諾API資料不用於模型訓練，暫存日誌保留30天供計費與除錯；台灣帳戶領取與免卡待核。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 增補 `taiwan_availability_unverified`（台灣可用度待核）、`unverified_taiwan_eligibility`（台灣資格待核）、`application_based_unverified`（申請資格待核）、`application_based_unverified_terms`（申請條款待核）、`account_specific_unverified`（個別帳戶資格待核）及 `grant_terms_unverified`（資助條款待核）之中文狀態標籤與斷言，修復過去前端儀表板在面對細緻資格待核狀態時一律回退為泛用「狀態待釐清」的資訊模糊缺陷；以單元測試實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止倒數後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況；`lawson-restricted-japan` 台北11/10 10:00查[活動頁](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)50點限定之Google AI Pro 3個月免費碼抽選入口。
+
 2026-11-08 01:13–01:30 本輪：起始844筆，按實際時區有3筆到期；局部複核 `qoder-free-mechanisms`、`qoder-lite`、`autoclaw-halloween-40m-expiry-conflict-watch`、`taipei-youth-ai-subscription-subsidy-2026`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`genshi-growth-japan-trial`、`aliyun-yungongkaiwu-model-studio-teachers`、`llamaparse-free-tenk`、`llamaparse-startups-two-k`、`e2b-startups-20k-publicity`、`langsmith-startups-build-scale`、`brave-search-api-free-monthly`、`turso-starter-free-vector`、`stepfun-stepaudio3-music-gen-preview-nov8` 共14筆；新增機會 `aion-labs-free-daily-api-allowance`、`scaleway-generative-apis-free-million-tokens-audio` 共2筆，政策及線索各0筆；既有未完成830筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
 
 [StepFun Audio 3](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)官方定價公告發布重大更新：StepAudio 3限時免費預覽展延至2026-11-17 11:59:59 UTC+8；正式版按量收費順延至11/17 12:00:00 UTC+8生效（Music無音訊$2.40/小時、有音訊$4.80/小時；Gen每百萬計費字元$14；Realtime每小時$7.50）；個人帳戶需完成身分認證。
