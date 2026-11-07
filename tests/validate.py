@@ -18,9 +18,13 @@ assert not (set(reviewed)&set(new) or set(reviewed)&set(attempted) or set(new)&s
 assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
 assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
 assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
+offers_by_id={o['id']:o for o in d['offers']}
+for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
+for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
+ if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'
  assert o['benefit_cost_ratio'] is None or math.isfinite(o['benefit_cost_ratio'])
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None
  if o['usage_type']=='Unlimited':assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED']
