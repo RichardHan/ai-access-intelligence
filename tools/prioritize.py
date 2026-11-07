@@ -12,7 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "offers.json"
 
 DEAD = {"expired", "expired_unverified", "closed", "applications_closed",
-        "closed_to_new_subscriptions", "sunset_announced"}
+        "closed_to_new_subscriptions", "sunset_announced", "resolved_rumor_disproven"}
 ALIVE = {"active", "active_verified"}
 VER = {"Official": 3, "Community reported": 1.5, "Unverified": 0.5}
 QUOTA = {"OFFICIALLY UNLIMITED": 3, "TEMPORARILY UNLIMITED": 2.5,

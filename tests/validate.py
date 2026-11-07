@@ -30,7 +30,7 @@ for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
  assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
-tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
+tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven'}
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  for s in o.get('sources', []):

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **838 筆**（635 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 16:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **824 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **840 筆**（637 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 17:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **13 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **825 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,42 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-07 17:05–17:25 本輪：起始838筆，按實際時區有17筆到期；局部複核 `tabnine-basic-free-retired`、`astamuse-agent-trial-oct31-index-only`、`kakao-plus-young-adult-promo-unverified`、`deepinfra-two-minute-papers-twenty-credit`、`workbuddy-step5-oct25-unverified`、`lawson-restricted-japan`、`deepinfra-deepstart-qualified`、`claude-duet-preview`、`meta-hackathon-oct2026`、`robinhood-luna-token-promotion-december`、`hostkey-grant-stale-2020-deliverable`、`lovable-sweden-2026`、`fal-flux3-max-five-daily-sandbox` 共13筆；新增機會 `serpkite-free-search-api-credits`、`zro-moonmath-free-flash-models` 共2筆，政策及線索各0筆；既有未完成825筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
+
+[Tabnine Basic](https://www.tabnine.com/blog/scaling-enterprise-ai-why-were-sunsetting-tabnine-basic/)官方退役公告永久301重導向至Tricentis AI方案頁，確認退役與整合現狀，維持 `closed`。
+
+[astamuse AI代理試用](https://www.astamuse.co.jp/news/2026/26261008-report/)原索引所稱10/31截止期限已過，官方2026年度新聞彙整無試用公告或延期發布，原公告網址仍404，狀態更正為 `expired`。
+
+[Kakao青年 ChatGPT Plus](https://help.openai.com/en/articles/12677933-chatgpt-for-kakao-overview-and-kakao-tools)OpenAI支援文件確認Kakao促銷排定至2025-12-31截止（時鐘已過）且限韓國門號註冊；青年活動專屬頁回傳404，狀態更正為 `expired`。
+
+[DeepInfra × Two Minute Papers](https://deepinfra.com/papers)專屬推廣頁回傳HTTP 404；/login?deal=2mpapers重導向至一般登入頁且不含贈額承諾，狀態改為 `expired_unverified`，優先級轉為D。
+
+[WorkBuddy Step 5](https://www.workbuddy.ai/docs/workbuddy/Changelog)官方更新日誌至最新5.9.4版均為一般功能改進，無Step 5 Preview或10/25專屬截止活動；[定價頁](https://www.workbuddy.ai/docs/workbuddy/pricing)維持一般個人Free方案，線索已釐清未獲官方支持，更正為 `resolved_rumor_disproven`。
+
+[Lawson AI Pro](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)官方活動頁確認購買與集點応募均已於10月截止，Google Play禮碼領取亦於11/2截止；50點限定之Google AI Pro 3個月免費碼將於2026-11-10 10:00至11-16 23:59 JST開放合格者抽選。
+
+[DeepInfra DeepStart](https://deepinfra.com/deepstart)專頁維持在線並開放申請，限兩年內成立且募資US$250K–$10M新創，提供約500億tokens（DeepSeek V4 Flash價格換算），核准後效期一年。
+
+[Claude Duet](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)官方說明中心昨日更新確認Duet處於研究預覽階段，限美國Pro/Max/Ultra用戶經候選名單加入，不另收費；背景晨報等工作共用方案限額；預覽期贈送1–3次limit resets，效期至2026-12-15。台灣維持No。
+
+[Meta全球AI黑客松](https://cerebralvalley.ai/e/meta-ai-developer-hackathon)Cerebral Valley頁面標示「Registration: Closed (the event has ended)」，作品提交已於11/4 21:00 EST截止，11/4–8為評審期，11/9閉幕式公布得獎名單；狀態更正為 `closed`，優先級轉為D。
+
+[Robinhood Luna](https://robinhood.com/us/en/support/articles/using-gpt-luna/)官方促銷條款確認自2026-09-29至2026-12-31 23:59 ET代付GPT-6 Luna聊天與automations之token成本，需合格Robinhood Agents帳戶（限美國居民/SSN），交易與監管手續費不免。台灣維持No。
+
+[HOSTKEY GPU補助](https://landing.hostkey.com/grant_for_scientific_projects_formhtml)官方申請表仍載明因硬體短缺暫停收件（The free compute program is temporarily suspended due to a shortage of hardware on the market），維持 `applications_closed`。
+
+[Lovable瑞典學籍](https://back-to-school.lovable.app/terms)官方條款確認瑞典大專在學學生至2026-12-31前享Pro免費；2027-01-01起自動轉為50%學生折扣付費方案，有綁卡者自動扣款，未綁卡者不扣款。台灣維持Unknown。
+
+[fal FLUX 3 Max](https://fal.ai/flux-3-max)官方活動頁確認週末免費視窗自美西11/6 09:00至11/9 12:00（台北11/10 04:00），免登入每日3部、登入每日4部、綁卡每日5部（720p 15秒含音訊），24小時滾動重置；期滿按每秒US$0.0425計費。
+
+新增 [SerpKite Free](https://serpkite.com/pricing)：官方提供搜尋與AI代理API，驗證信箱贈1,000點，綁定Google或GitHub加贈1,500點（共2,500點），次月起每月固定贈送1,000點；免信用卡，限速5 req/s，含所有搜尋端點與MCP伺服器；[條款](https://serpkite.com/legal/terms)限滿18歲與單一帳號，台灣帳戶可用但在地發票未測。
+
+新增 [Zro by MoonMath](https://zro.moonmath.ai/pricing)：官方提供開源推論平台Free方案（US$0/月），每日重置GLM-5.3 Flash與DeepSeek V4.1 Flash免費推論用量；OpenAI相容API，零請求保留（zero retention），不使用客戶資料訓練模型；[條款](https://zro.moonmath.ai/terms)嚴禁多帳號套取額度，台灣直連延遲與發票未測。
+
+品質改善：`app.js` 的 `CLOSED_STATUSES`、`tools/prioritize.py` 的 `DEAD` 與 `tests/validate.py` 的 `dead` 統一納入 `resolved_rumor_disproven`（線索已釐清・未獲支持），確保已證偽之傳聞線索嚴格排除於免費專區篩選並正確標記為關閉狀態；於 `tests/filters.cjs` 補齊排除斷言與閉幕樣式驗證，實證攔截通過。
+
+下輪優先：`lawson-restricted-japan` 台北11/10 10:00查[活動頁](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)50點限定之Google AI Pro 3個月免費碼抽選入口；`fal-flux3-max-five-daily-sandbox` 台北11/10 04:00週末免費截止後查[活動頁](https://fal.ai/flux-3-max)回退計費現況；`meta-hackathon-oct2026` 台北11/9查[主辦頁](https://cerebralvalley.ai/e/meta-ai-developer-hackathon)閉幕名單與頁面封存動態；`taipei-youth-ai-subscription-subsidy-2026` 台北11/8查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)停收公告與11/10最後送達倒數；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止前查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節獎勵關閉情況。
+
 2026-11-07 16:05–16:20 本輪：起始836筆，按實際時區有20筆到期；避開前輪剛核及近期反覆失敗案例。局部複核 `deepgram-speak-attendee`、`kilo-auto-free-hosted-models`、`shift-asia-prototype-twenty-companies`、`ndp-one-oct31-free-full-security-diagnosis`、`adobe-firefly-twelve-month-model-promotion`、`rime-stt-nov19-free-window`、`google-ai-professional-certificate-tw-pro-3mo`、`couchbase-activate-starter-kit-current-availability-watch`、`krutrim-sandbox-oct22-past-banner`、`lets-go2-ai-ocr-launch-six-hundred-pages`、`realads-once-fifty-no-watermark`、`satfaq-free-trial-hybrid-ai-two-thousand-points` 共12筆；新增機會 `elfa-api-free-once-thousand-credits`、`parallel-mcp-keyless-free-search-fetch-decisions` 共2筆，政策及線索各0筆；既有未完成824筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [Deepgram Speak](https://deepgram.com/speak-attendee-credit-promotion-terms)建帳截止時間為美西11/6 23:59 PT（台北11/7 15:59），現已過期；現場badge scan與同企業信箱建帳均已截止，狀態更正為 `applications_closed`。合格專案預定11/13前發放一次性US$500額度，無到期日但專案刪除或帳戶關閉即喪失；公開頁不證實際入帳。

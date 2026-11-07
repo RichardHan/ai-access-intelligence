@@ -33,7 +33,7 @@ const ELIGIBILITY_LABELS = {
 };
 const CLOSED_STATUSES = new Set([
   'expired', 'expired_unverified', 'closed', 'applications_closed',
-  'closed_to_new_subscriptions', 'sunset_announced'
+  'closed_to_new_subscriptions', 'sunset_announced', 'resolved_rumor_disproven'
 ]);
 const STATUS_LABELS = {
   active: '方案仍列示', active_verified: '已核實列明主張', conditional: '需符合條件',
