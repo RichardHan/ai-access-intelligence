@@ -32,6 +32,7 @@ for aid in attempted:
  assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven'}
 for o in d['offers']:
+ assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'

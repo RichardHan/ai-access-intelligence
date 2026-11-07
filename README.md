@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **844 筆**（641 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 19:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **11 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **831 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **846 筆**（643 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 01:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **830 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,40 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 01:13–01:30 本輪：起始844筆，按實際時區有3筆到期；局部複核 `qoder-free-mechanisms`、`qoder-lite`、`autoclaw-halloween-40m-expiry-conflict-watch`、`taipei-youth-ai-subscription-subsidy-2026`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`genshi-growth-japan-trial`、`aliyun-yungongkaiwu-model-studio-teachers`、`llamaparse-free-tenk`、`llamaparse-startups-two-k`、`e2b-startups-20k-publicity`、`langsmith-startups-build-scale`、`brave-search-api-free-monthly`、`turso-starter-free-vector`、`stepfun-stepaudio3-music-gen-preview-nov8` 共14筆；新增機會 `aion-labs-free-daily-api-allowance`、`scaleway-generative-apis-free-million-tokens-audio` 共2筆，政策及線索各0筆；既有未完成830筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
+
+[StepFun Audio 3](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)官方定價公告發布重大更新：StepAudio 3限時免費預覽展延至2026-11-17 11:59:59 UTC+8；正式版按量收費順延至11/17 12:00:00 UTC+8生效（Music無音訊$2.40/小時、有音訊$4.80/小時；Gen每百萬計費字元$14；Realtime每小時$7.50）；個人帳戶需完成身分認證。
+
+[Qoder](https://docs.qoder.com/events/flashoffer)官方確認Flash免扣活動已於2026-11-07 00:00 SGT（11/6 16:00 UTC）結束，其後轉為計費（離峰0.04×、平時0.1×，離峰限Pro Trial及付費方案）；[每日100點](https://docs.qoder.com/events/100credits)桌面手領獨立贈額仍刊載，每包30天；[Lite方案](https://qoder.com/pricing)確認每月US$10含1,000基礎點數，首購另贈1,000、續訂另贈500點。
+
+[AutoClaw 萬聖節點數](https://autoclaw.z.ai/blog/news/M11W1/)官方4,000點（40M tokens）活動排定至台北11/8 23:59截止，同頁正文11/8與注意事項11/1到期衝突未解；[新週福利公告](https://autoclaw.z.ai/blog/news/M11W2/)預告11/9–15每帳戶1億Tokens（10,000點）週福利，統一11/15 23:59到期。
+
+[臺北青年AI訂閱補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)重核青年局首頁與最新公告，未見經費用罄停收公告；最後送達期限倒數：須於2026-11-10前書面送達青年局；限18–35歲、設籍臺北6個月以上、認可大專學籍或當年度畢業生，並完成指定AI課程；限8/1–10/31完整月訂閱，一般最高NT$4,000、弱勢NT$8,000。
+
+[Airtop](https://portal.airtop.ai/shutdown)官方公告確認2026-11-13停服，新註冊與升級已關閉，既有帳戶可管理訂閱、降級或取消；[定價首頁](https://airtop.ai/pricing)頂部預告新專案但下方殘留Free 1,000點與10,000迎新點標價表，矛盾仍存。
+
+[GENSHI Voice](https://voice.genshi.ai/terms/)10/25條款確認Growth試用需綁卡，免費至申請次月月底（非僅30天）；期滿未取消自動JPY4,800/月；每月560點（1日重置不結轉），超額拒絕請求。
+
+[阿里雲雲工開物教師](https://help.aliyun.com/zh/model-studio/introduction-to-yungongkaiwu)百煉子活動確認在職高校/科研教師審核後享百煉五折至2027-03-31，原價上限40萬元、最高折讓20萬元（非免費額度）；每日限100位，限教研用途，排除國際站。
+
+[LlamaParse Free](https://developers.llamaindex.ai/llamaparse/general/pricing/)官方定價確認Agentic Plus費率下調為25 credits/page（原45 credits）；Fast 1、Cost-effective 3、Agentic 10、Layout另加3；Free維持每月10,000 credits、各5並行，用盡回傳402；[定價頁](https://www.llamaindex.ai/pricing)新增入門Pay-as-you-go方案（最低預付US$10）；[新創方案](https://www.llamaindex.ai/startups)維持US$2,000額度一年，募資需達US$250K。
+
+[E2B 新創](https://e2b.dev/startups/terms)條款確認US$20,000沙箱額度與Pro層級（100並發/24小時），限成立<3年且募資<US$5M；核准後7日內須公開分享正面評價並至少展示一處E2B徽章，額度自領取起1年有效。
+
+[LangSmith 新創](https://www.langchain.com/startups)確認Build為席位折扣（募資$25K–$10M），Scale為US$10,000額度（最高$50M且合作VC，1年/YC 2年）；Gateway模型用量另以Gateway Credits計費。
+
+[Brave Search API](https://api-dashboard.search.brave.com/documentation/resources/help-feedback)官方FAQ釐清：所有新開通API方案均為預付制（Prepaid Only），既有後付保留；各方案維持每月US$5額度（Search約1,000次）；餘額為零暫停呼叫；卡片預授權$0或$1立即退回；禁止用於模型訓練或永久儲存。
+
+[Turso Starter Free](https://docs.turso.tech/help/usage-and-billing)官方計費與超額文件釐清：Free方案只要超出任一單項配額（5GB儲存、5億次讀取、1,000萬次寫入、3GB同步），即全面阻擋該組織之資料庫操作，不產生自動扣款；付費方案超額可繼續運作按量計費。
+
+新增 [Aion Labs](https://www.aionlabs.ai/pricing/)：官方提供US$0免信用卡Free Tier，可用API與瀏覽器聊天；[速率限制文檔](https://api.aionlabs.ai/docs/rate-limits/)確認免費層上限15 RPM、20,000 TPM及20,000 tokens/day；提供OpenAI相容API及Aion 256K context故事／角色扮演模型；[條款](https://www.aionlabs.ai/terms/2026-10-17/)限滿18歲與單一帳號，免費使用屬courtesy可隨時變更，承諾不以客戶輸入或輸出訓練模型；每日贈送金額及台灣付款未測。
+
+新增 [Scaleway Generative APIs](https://www.scaleway.com/en/pricing/model-as-a-service/)：官方Serverless免費層提供首100萬tokens及60分鐘音訊轉錄，超額按量收費，Dedicated Deployment依GPU時間收費不在此限；[FAQ](https://www.scaleway.com/en/docs/generative-apis/faq.md)確認免費額度優先抵扣最昂貴tokens，但目前無法設定超過預算即自動阻擋之硬性billing threshold；[帳戶文檔](https://www.scaleway.com/en/docs/account/quickstart.md)訂購資源需有效信用卡（€1暫時驗證授權2日內退還，不接受虛擬預付卡）；台灣帳單國與免卡例外未核。
+
+品質改善：`schema.json` 與 `tests/validate.py` 增補 `title`（非空字串）及 `sources` 陣列內部 `scope` 與 `evidence` 之字串類型與非空限制（強制 `type: "string", minLength: 1`），修復先前單獨執行 `jsonschema.validate` 時空標題或空證明責任欄位可被穿透的架構缺陷；以合成案例實證攔截通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止倒數後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況；`lawson-restricted-japan` 台北11/10 10:00查[活動頁](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)50點限定之Google AI Pro 3個月免費碼抽選入口。
+
 2026-11-07 19:05–19:25 本輪：起始842筆，按實際時區有2筆到期（`perplexity-watch`、`perplexity-education`）；局部複核 `claude-teachers-us`、`azure-nonprofit-annual-two-k`、`aliyun-yungongkaiwu-model-studio-students`、`coralbricks-signup-five-trial-credit`、`murf-api-signup-ten-credit`、`eden-ai-signup-ten-professional-credit-watch`、`circleback-student-half-nonprofit-thirty-percent`、`krea-free-daily-hundred-compute`、`auphonic-free-two-hour-jingle`、`speechmatics-startup-selected-cohort`、`inference-net-open-source-grants-watch` 共11筆；新增機會 `chutes-paygo-confidential-inference`、`stepfun-stepaudio3-music-gen-preview-nov8` 共2筆，政策及線索各0筆；既有未完成831筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
 
 [Claude for Teachers](https://www.anthropic.com/news/claude-for-teachers)官方公告與[教師方案頁](https://claude.com/solutions/teachers)確認美國K–12學校/學區教育者2027-06-30前申請享一年免費Teams底層，學區為Enterprise組織；[說明](https://support.claude.com/en/articles/15926041-claude-for-teachers-your-data-and-our-terms)確認個人與學區享相同滾動5小時及每週限制；僅在台灣學校任職不符美國任職門檻，維持No。

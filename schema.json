@@ -31,6 +31,10 @@
             "type": "string",
             "pattern": "^[a-z0-9-]+$"
           },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
           "taiwan": {
             "enum": [
               "Yes",
@@ -104,6 +108,14 @@
                 "url": {
                   "type": "string",
                   "pattern": "^https://"
+                },
+                "scope": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
                 }
               }
             }
