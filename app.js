@@ -189,7 +189,10 @@ function createDetails(offer) {
     daily: '每日', monthly: '每月輪替', weekly: '每週', biweekly: '雙週輪替',
     on_new_signal: '有新線索時', monthly_or_new_signal: '每月或有新線索時', event: '特定活動事件追蹤'
   }[offer.review_cadence] || display(offer.review_cadence);
-  addRow(grid, '下次複核', `${cadence}；${dateLabel(offer.next_review_at, true)}`);
+  const nextText = offer.next_review_at
+    ? `${cadence}；${dateLabel(offer.next_review_at, true)}`
+    : (CLOSED_STATUSES.has(offer.status) ? '已停止定期複核；有新線索時追蹤' : `${cadence}；未安排特定複核日期`);
+  addRow(grid, '下次複核', nextText);
   if (offer.last_review_attempt_at) addRow(grid, '最近來源追查', `${dateLabel(offer.last_review_attempt_at, true)}${offer.last_review_attempt_reason ? `；${offer.last_review_attempt_reason}` : ''}`);
   details.append(grid, text('h4', '來源與支持的主張', 'detail-heading'));
   const sources = text('ol', '', 'source-list');

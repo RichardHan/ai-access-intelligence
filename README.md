@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **857 筆**（655 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 06:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **15 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **840 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **859 筆**（657 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 07:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **13 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **844 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,42 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 07:05–07:25 本輪：起始857筆；局部複核 `datacamp-free-access-week-november-2026`、`autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`aocai-working-free-ai-courses-2026`、`taipei-youth-ai-subscription-subsidy-2026`、`fujisoft-workforce-ai-security-poc`、`deepgram-startup-project-credit`、`anyscale-startup-twenty-k-byoc`、`agenta-hobby-daily-seventy-five-ten-days`、`google-gemini-academy-taiwan-educators-workshop-watch`、`zed-student-hard-ten-monthly`、`confident-ai-free-five-weekly-runs-gbmonth`、`nchc-teaching-free-compute` 共13筆；新增機會 `ragie-developer-free-thousand-pages-retrievals`、`neo4j-auradb-free-tier-200k-nodes` 共2筆，政策及線索各0筆；既有未完成844筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[DataCamp 免費週](https://www.datacamp.com/campaign/free-access-week-november-2026)：免費週活動開放至美東11/8 23:59（台北11/9 12:59）；免信用卡無限存取750+門課程、專案與證照；排除AI tutor、Microsoft Fabric及Google合作課程；期滿未付費自動回退，不產生自動扣款。
+
+[AutoClaw 萬聖節](https://autoclaw.z.ai/blog/news/M11W1/)：活動刊載至今日23:59截止，但同頁11/1與11/8到期矛盾未解；11/4生效之[服務條款](https://autoclaw.z.ai/privacy/md2html/?favicon=autoglm&md=autoclaw_agreement)§VI.2重要限制：免費及未另行協議之使用與生成內容明確限於「非商業之個人科研、學習」用途；§XI列明制裁排除地區（台灣未在排除名單，亦未列肯定支援）。
+
+[AutoClaw 週福利](https://autoclaw.z.ai/blog/news/M11W2/)：11/9 00:00至11/15 23:59（UTC+8）每帳戶登入贈送1億Tokens（價值10,000點）排定開跑；重核釐清官方公告未載明免卡或無帳單國籍限制，移除先前未獲官方支持之免卡保證；超額不自動續約。
+
+[經濟部服務業在職AI課程](https://serv.gcis.nat.gov.tw/AOCAI/)：台北11/11班受理至2026-11-09 23:59截止，[報名表](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)應繳金額確認為NT$0；內文100人與表格上限300人名額口徑差異仍存；出席率須達80%並完成前後測驗。
+
+[臺北青年AI訂閱補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)：最後送達期限倒數：須於2026-11-10前書面送達青年局；修正先前摘要中字符損毀，重核確認一般青年最高補助NT$4,000、低／中低收入戶NT$8,000；所查青年局官網未見經費用罄停收公告。
+
+[富士Soft Workforce AI Security](https://www.fsi.co.jp/company/news/20261019.html)：30日企業AI治理免費PoC（先到前10家）公告在線；[原始HTML申請表](https://sem-inq.fsi.co.jp/public/application/add/7999)確認仍保留「無料PoCを申し込む」選項；剩餘名額與台灣企業個案資格未公開，正式本番導入費用未公布。
+
+[Deepgram 新創](https://deepgram.com/startup-program)：直接申請起始核給US$1,000額度、最高可至US$100,000（非一律保證US$10,000），有效12個月；超額或餘額不足自動觸發PAYG信用卡加值（每次最低US$10），專屬條款已重導至[startup-program-terms-of-service](https://deepgram.com/startup-program/terms-of-service)。
+
+[Anyscale 新創](https://www.anyscale.com/startup)：最高US$20,000平台額度在線，支援BYOC雲端整合；經由官方投資夥伴或直接申請，額度有效期限依個別核定合約為準；台灣企業資格未列明。
+
+[Agenta Hobby](https://agenta.ai/pricing)：新組織贈500點及每月最多10日、每日75點在線；[計費文件](https://agenta.ai/docs/administration/billing/plans-and-credits)釐清Hobby僅適用雲端開發測試，開源Self-hosted版本不受限；超額請求遭拒，不自動扣款。
+
+[台灣 Gemini 學院教育研習](https://growonairtw.withgoogle.com/events/gemini-academy-tw)：重要更正：瀏覽器完整載入確認首頁與FAQ刊登之活動為2025-08-12及2025-10-18兩堂歷史直播研習，修正舊紀錄將靜態頁面錯誤模板誤判為private失敗之結論；當前或新梯次報名現況維持未核實觀察線索。
+
+[Zed 學生方案](https://zed.dev/education)：重要補正：缺失之status補齊為conditional；官方教育方案適用全球認可大專院校（含國際學生），Taiwan標記為Yes但限合格學校本人核驗；每月US$10硬上限、一年免費在線；需有效大專院校信箱或swot證明，不強制GitHub Student Pack或字面.edu後綴。
+
+[Confident AI DeepEval](https://www.confident-ai.com/pricing)：免卡Free方案在線，提供每週5次測試執行、1 GB-month資料追蹤與1席；[條款](https://www.confident-ai.com/terms)確認超額拒絕請求，不產生未經同意之自動收費。
+
+[國網中心教學免費算力](https://iservice.nchc.org.tw/nchc_service/nchc_service_qa.php?target=57)：國內大專教師申請教學免費算力機制在線；因HFS一般學術磁碟儲存費為每日每GB NT$0.035且教學grant是否全額涵蓋未公布，每月費用謹慎補正為null，避免宣稱全額免費；台灣教師專用。
+
+新增 [Ragie Developer](https://www.ragie.ai/pricing)：官方提供Developer免費方案，包含最多1,000次檢索、1,000頁文件處理、10 GB影音串流及10小時影音處理，首個Embedded Connector免費；[條款](https://www.ragie.ai/terms-of-service)禁止自動化與商業盈利用途，免卡與台灣資格未核。
+
+新增 [Neo4j AuraDB Free](https://neo4j.com/pricing/)：官方提供免信用卡AuraDB Free永久圖資料庫方案，限單一instance與單一database，上限20萬節點、40萬關係與1 GB儲存；內含按需備份與最多2GB Graph Analytics；連續72小時無活動自動暫停，暫停超過30天自動刪除；[IP文件](https://neo4j.com/docs/aura/security/ip-addresses/)顯示Free支援多個GCP區域，不支持僅限us-central1；台灣帳戶個案資格未核。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 補齊已截止/過期（`CLOSED_STATUSES`）且未安排下次複核日期之案件，卡片詳情「下次複核」從誤導性預設文字「每月輪替；未核實」修正為精確語意「已停止定期複核；有新線索時追蹤」；對於未安排特定日期的有效方案亦精確標明「未安排特定複核日期」；消除對已終止案例產生反覆失效查核之使用者誤解，以單元測試實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`datacamp-free-access-week-november-2026` 台北11/9 12:59（美東11/8 23:59）截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況。
+
 2026-11-08 06:05–06:25 本輪：起始855筆；局部複核 `granola-students`、`manus-startups-redirect-current-unverified`、`neo4j-startup-aura-twentyk-application-unavailable`、`mango-inference-community`、`digitalocean-secret-ai-startup-100-2026`、`snowflake-ai-trial-2026`、`minimax-design-h3-new-user-watch`、`x-api-xai-spend-credit-rewards`、`daytona-trial-200-compute`、`crusoe-serverless-intro-five`、`lightning-starter-five-plus-card`、`descript-education-nonprofit-hobbyist-discount`、`hedra-free-credit-unverified`、`posthog-ai-observability-free-monthly-hundred-k-events`、`taiwan-moe-moocs-eighteen-free-ai-courses` 共15筆；新增機會 `hanzo-startup-tier-one-vc-up-to-hundred-fifty-k`、`perch-starter-free-monthly-twenty-k-hosted-cli` 共2筆，政策及線索各0筆；既有未完成840筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [教育部磨課師](https://moocs.moe.edu.tw/moocs/#/course/theme/20)：重大修復：平臺憑證異常已排除，平台正常加載；比對確認首波推薦18門AI課程於「未來人才AI能力圖像」主題專區全數開放報名與修讀（選課與開課期間均載為無限期）；涵蓋機器學習、深度學習、AIoT、醫學AI與生成式AI；全體民眾登入後可免費報名，修畢可獲修課證明；由觀察線索升格為S級條件式機會。

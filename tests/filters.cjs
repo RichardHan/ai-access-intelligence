@@ -50,3 +50,9 @@ assert(monthlySignalRow.children[1].textContent.startsWith('每月或有新線�
 const eventDetails=ctx.createDetails({review_cadence:'event',next_review_at:'2026-11-20',eligibility:{},sources:[]});
 const eventRow=eventDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert(eventRow.children[1].textContent.startsWith('特定活動事件追蹤；2026-11-20'),'unexpected cadence text for event');
+const closedDetails=ctx.createDetails({status:'expired',next_review_at:null,eligibility:{},sources:[]});
+const closedRow=closedDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert.strictEqual(closedRow.children[1].textContent,'已停止定期複核；有新線索時追蹤');
+const unscheduledDetails=ctx.createDetails({status:'active',review_cadence:'monthly',next_review_at:null,eligibility:{},sources:[]});
+const unscheduledRow=unscheduledDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert.strictEqual(unscheduledRow.children[1].textContent,'每月輪替；未安排特定複核日期');
