@@ -44,6 +44,7 @@ for o in d['offers']:
  if o['savings_usd'] is not None:assert o['valuation_scenario']
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
+ assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'
  if o['record_type']=='opportunity':
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
   if o.get('status') in dead:assert o['priority_tier']=='D'

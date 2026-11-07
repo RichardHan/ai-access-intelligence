@@ -130,6 +130,25 @@
               "type": "string",
               "minLength": 1
             }
+          },
+          "eligibility": {
+            "type": "object",
+            "required": [
+              "service_availability",
+              "account_eligibility",
+              "billing_country",
+              "identity_residency",
+              "terms_restrictions",
+              "taiwan_note"
+            ],
+            "properties": {
+              "service_availability": { "type": "string", "minLength": 1 },
+              "account_eligibility": { "type": "string", "minLength": 1 },
+              "billing_country": { "type": "string", "minLength": 1 },
+              "identity_residency": { "type": "string", "minLength": 1 },
+              "terms_restrictions": { "type": "string", "minLength": 1 },
+              "taiwan_note": { "type": "string", "minLength": 1 }
+            }
           }
         }
       }

@@ -4,6 +4,9 @@ const sunset=d.offers.find(o=>o.id==='weaviate-engram-free');assert(f(sunset,{})
 assert.strictEqual(ctx.statusInfo({status:'resolved_rumor_disproven'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'closed_to_new_subscriptions'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'closed'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'sunset_announced'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'applications_closed'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'expired'}).tone,'closed');
 
 // The latest attempt is not a successful verification: expose its failure reason.
 class Element {

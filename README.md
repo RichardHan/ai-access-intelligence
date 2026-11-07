@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **842 筆**（639 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 18:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **826 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **844 筆**（641 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 19:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **11 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **831 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,38 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-07 19:05–19:25 本輪：起始842筆，按實際時區有2筆到期（`perplexity-watch`、`perplexity-education`）；局部複核 `claude-teachers-us`、`azure-nonprofit-annual-two-k`、`aliyun-yungongkaiwu-model-studio-students`、`coralbricks-signup-five-trial-credit`、`murf-api-signup-ten-credit`、`eden-ai-signup-ten-professional-credit-watch`、`circleback-student-half-nonprofit-thirty-percent`、`krea-free-daily-hundred-compute`、`auphonic-free-two-hour-jingle`、`speechmatics-startup-selected-cohort`、`inference-net-open-source-grants-watch` 共11筆；新增機會 `chutes-paygo-confidential-inference`、`stepfun-stepaudio3-music-gen-preview-nov8` 共2筆，政策及線索各0筆；既有未完成831筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
+
+[Claude for Teachers](https://www.anthropic.com/news/claude-for-teachers)官方公告與[教師方案頁](https://claude.com/solutions/teachers)確認美國K–12學校/學區教育者2027-06-30前申請享一年免費Teams底層，學區為Enterprise組織；[說明](https://support.claude.com/en/articles/15926041-claude-for-teachers-your-data-and-our-terms)確認個人與學區享相同滾動5小時及每週限制；僅在台灣學校任職不符美國任職門檻，維持No。
+
+[Azure非營利方案](https://www.microsoft.com/en-us/nonprofits/azure)官方產品頁與[FAQ](https://www.microsoft.com/en-us/nonprofits/faq)確認每年提供等值US$2,000 Azure額度，需信用卡，額度耗盡轉Pay-As-You-Go；[國別資格PDF](https://www.microsoft.com/content/dam/microsoft/msc/documents/presentations/nonprofits/pdfs/Microsoft-Nonprofit-Eligibility-Requirements.pdf)明列Taiwan社會團體或公立捐助基金會；[TechSoup說明](https://support.techsoup.org/hc/en-us/articles/12912276234523-Azure-for-Nonprofits)確認Azure不在TechSoup catalog，應向Microsoft非營利入口申請；台灣微軟舊頁US$3,500矛盾仍存。
+
+[阿里雲雲工開物](https://university.aliyun.com/)與[百煉活動文件](https://help.aliyun.com/zh/model-studio/introduction-to-yungongkaiwu)確認中國高校在學學生（明列含台灣高校）實名認證後每12個月可領一張CNY300無門檻抵扣金（領取起一年有效）；百煉子活動至2027-03-31；推理費排除Wan、HappyHorse、Omni；每日限量且超額付費；維持Yes。
+
+[CoralBricks](https://www.coralbricks.ai/docs/getting-started)官方入門文件確認新戶US$5試用點數橫幅在線；[API文件](https://www.coralbricks.ai/docs.md)確認OpenAI相容API按預付扣款，非正餘額回429；[條款](https://www.coralbricks.ai/content/terms.md)明定每人/每戶限一次且禁止多帳號濫領；免卡及台灣實領未核。
+
+[Murf API](https://murf.ai/pricing?product=api)官方API定價展開FAQ確認新戶No credit card required一次US$10跨API試用，用盡升級PAYG，每次TTS請求上限3,000字元；[條款](https://murf.ai/legal/terms-of-service)§10.7將試用限於self-evaluation；[API FAQ](https://murf.ai/api/docs/resources/faq)舊TTS 100,000字元無期限矛盾仍存。
+
+[Eden AI](https://www.edenai.co/post/how-to-generate-an-image-with-ai)10/13官方教學稱註冊送US$10點數；[定價頁](https://www.edenai.co/pricing)未重述該贈額，購點收5.5%平台費；[條款](https://www.edenai.co/terms)§2.1限專業用途，非一般個人福利；[購點文件](https://www.edenai.co/docs/v3/general/buying-credits)列可選auto-refill與402不足額。
+
+[Circleback](https://circleback.ai/pricing)官方定價確認學生50%（學校信箱自動或學籍證明）與非營利30%折扣；本筆為訂閱折扣非API點數；定價另提供永久免費層含API/MCP存取與30天紀錄；[條款](https://circleback.ai/terms)定期續約扣款與取消條件須注意。
+
+[Krea Free](https://www.krea.ai/pricing)官方定價直接明列Free每日100 compute units、US$0/月且No credit card required；[訂閱文件](https://www.krea.ai/docs/user-guide/help-and-support/manage-subscriptions)內50 vs 100單位矛盾仍存；[部落格](https://www.krea.ai/blog/what-is-deepai-free-ai-image-generator-explained-and-alternatives-in-2026)與[條款](https://www.krea.ai/terms)在免費商用授權及生成素材私密性之衝突仍未解，不保證免費商用與保密。
+
+[Auphonic Free](https://auphonic.com/pricing)官方定價確認每月2小時處理音訊、免卡；[首頁FAQ](https://auphonic.com/)確認Free輸出附帶Auphonic jingle標記；單筆最低扣3分鐘，同輸入重跑不重扣；[隱私政策](https://auphonic.com/privacy)確認商業用戶可聯絡官方設定模型訓練opt-out。
+
+[Speechmatics新創](https://www.speechmatics.com/startup-program)官方維持rolling申請，最高US$50,000 credits、每期最多20家，募資<US$10M且非付費Enterprise；概要列即時/批次STT與FAQ列TTS/on-prem範圍矛盾仍存；效期未公布。
+
+[Inference.net Grants](https://inference.net/grants)官方Grants頁確認開源AI專案開發者與研究者最高US$10,000免費算力（compute resources），rolling審查無固定截止；更新狀態為 `conditional`，額度分類修正為 `HIGH BUT LIMITED`；移除非關聯之歷史模型上架描述。
+
+新增 [Chutes](https://chutes.ai/pricing)：官方提供低價TEE按量推論，Qwen3.8-27B-TEE輸入US$0.039/M、快取輸入US$0.0039/M、輸出US$1.25/M；Gemma4-31B-turbo-TEE輸入US$0.12/M、輸出US$0.37/M；官方FAQ明示目前無免費層或試用，需儲值PAYGO；[條款](https://chutes.ai/terms)承諾不以客戶內容訓練模型；台灣付款未測。
+
+新增 [StepFun Audio 3](https://platform.stepfun.ai/docs/en/guides/models/stepaudio-3-music.md)：官方國際站模型文件將stepaudio-3-music-preview與stepaudio-3-gen-preview列為Free (limited time)；[定價公告](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)確認限時免費至2026-11-08 23:59:59 UTC+8，11/9零時起正式版按量計費；個人帳戶需完成身分認證；[條款](https://platform.stepfun.ai/docs/en/agreement/userservice.md)Early Access可用於訓練；台灣帳戶核准與未儲值權限未核。
+
+品質改善：`schema.json` 與 `tests/validate.py` 增補 `eligibility` 欄位完整性校驗（強制所有6項資格條件 `service_availability`, `account_eligibility`, `billing_country`, `identity_residency`, `terms_restrictions`, `taiwan_note` 必須為非空字串），防止資格描述出現空白或缺失；`tests/filters.cjs` 補齊 `sunset_announced`、`applications_closed` 與 `expired` 狀態之 `closed` tone 樣式斷言；以空字串及純空白合成案例實證攔截通過。
+
+下輪優先：`stepfun-stepaudio3-music-gen-preview-nov8` 台北11/8 23:59:59截止前查[模型文件](https://platform.stepfun.ai/docs/en/guides/models/stepaudio-3-music.md)與[定價頁](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)確認限時免費預覽退役與11/9付費上線現況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止前查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節獎勵關閉情況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口；`taipei-youth-ai-subscription-subsidy-2026` 台北11/8查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)停收公告與11/10最後送達倒數。
+
 2026-11-07 18:05–18:25 本輪：起始840筆，按實際時區有2筆到期（`perplexity-watch`、`perplexity-education`）；局部複核 `claude-artifacts-expired-lead`、`datacamp-free-access-week-november-2026`、`tidb-starter-free-mysql-postgres-preview`、`autoclaw-halloween-40m-expiry-conflict-watch`、`aryn-docparse-three-month-tenk-monthly`、`vapi-free-us-number-not-free-calls`、`maxim-developer-free-monthly-tenk-logs`、`hyperbrowser-free-starting-fivek-shared`、`baseten-new-workspace-trial`、`nebius-token-factory-signup-one-dollar`、`scrapfly-signup-thousand-shared-credits`、`cartesia-free-monthly-twentyk`、`qodo-fourteen-day-unlimited-trial`、`ai21-trial-duration-conflict` 共14筆；新增機會 `vercel-sandbox-hobby-free-five-cpu-hours`、`aihubmix-one-dollar-daily-free-model-pool` 共2筆，政策及線索各0筆；既有未完成826筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
 
 [Claude Artifacts](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)官方說明確認Artifacts功能已全面內建於Free/Pro/Max/Ultra/Team/Enterprise，用量計入自身方案配額；原促銷說明頁[404](https://support.claude.com/en/articles/17274727-artifact-usage-promotion)未獲原50%用量折抵促銷重啟證據，維持 `expired_unverified`。
