@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **855 筆**（652 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 05:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **838 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**（Perplexity Pro 與 Education 官方說明頁受 403 / Cloudflare 阻擋）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **857 筆**（655 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 06:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **15 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **840 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,46 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 06:05–06:25 本輪：起始855筆；局部複核 `granola-students`、`manus-startups-redirect-current-unverified`、`neo4j-startup-aura-twentyk-application-unavailable`、`mango-inference-community`、`digitalocean-secret-ai-startup-100-2026`、`snowflake-ai-trial-2026`、`minimax-design-h3-new-user-watch`、`x-api-xai-spend-credit-rewards`、`daytona-trial-200-compute`、`crusoe-serverless-intro-five`、`lightning-starter-five-plus-card`、`descript-education-nonprofit-hobbyist-discount`、`hedra-free-credit-unverified`、`posthog-ai-observability-free-monthly-hundred-k-events`、`taiwan-moe-moocs-eighteen-free-ai-courses` 共15筆；新增機會 `hanzo-startup-tier-one-vc-up-to-hundred-fifty-k`、`perch-starter-free-monthly-twenty-k-hosted-cli` 共2筆，政策及線索各0筆；既有未完成840筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[教育部磨課師](https://moocs.moe.edu.tw/moocs/#/course/theme/20)：重大修復：平臺憑證異常已排除，平台正常加載；比對確認首波推薦18門AI課程於「未來人才AI能力圖像」主題專區全數開放報名與修讀（選課與開課期間均載為無限期）；涵蓋機器學習、深度學習、AIoT、醫學AI與生成式AI；全體民眾登入後可免費報名，修畢可獲修課證明；由觀察線索升格為S級條件式機會。
+
+[PostHog AI Observability](https://posthog.com/ai-observability/pricing)：重大釐清：免卡Free方案超出每月10萬events限額時直接停止接收（硬停），保證不產生意外費用；若綁卡啟用用量計費可自設帳單上限，超出上限之事件直接丟棄且不計費；每月10萬額度與evaluations功能共用。
+
+[Daytona](https://www.daytona.io/pricing)：US$200免卡運算額度在線，按秒計費；[計費文檔](https://www.daytona.io/docs/en/billing.md)明確載明Free credit balance不可用於GPU沙箱；歷史v2分鐘計費文件已404失效；停止或暫停之沙箱持續收取磁碟儲存費。
+
+[Crusoe Serverless](https://docs.crusoecloud.com/serverless-inference/rate-limits)：US$5推論額度（免卡500k TPM / 30 RPM，綁卡2M TPM / 600 RPM）在線；開戶指南強制非預付卡矛盾仍存；免卡不等於免金鑰，呼叫仍需Intelligence API key；通用條款更新至[v1.11](https://legal.crusoe.ai/)（2026-11-05生效）。
+
+[Lightning AI](https://lightning.ai/pricing)：註冊5點+綁卡25點（12個月有效）在線；行銷GPU估計時數下調為約50小時；定價表Free 50GB持久儲存與[計費文檔](https://lightning.ai/docs/platform/overview/faq/billing)總容量200GB僅前10GB免費之衝突仍存。
+
+[Descript 教育/非營利](https://help.descript.com/billing-payments-plans/nfp-edu)：EDU/NFP Hobbyist折扣在線（月繳每席US$12、年繳每席US$8）；每Editor每月600媒體分鐘與400 AI點數，Drive共用且不結轉；每Drive最多3名Editor；申請前須加付款方式。
+
+[Hedra AI](https://www.hedra.com/pricing)：公開定價維持API預付與Studio付費方案，未明文列出影片生成免費額度；[v3計費文檔](https://www.hedra.com/docs/pages/developer/v3/billing.md)確認API錢包為預付美元且與Studio點數分池；維持觀察線索。
+
+[Granola 學生](https://www.granola.ai/students)：美英加在學學生一年Business在線，免信用卡；[Tally申請表](https://tally.so/r/D4KbQ5)實測開放收件中（isClosed=false），必填指定三國學生信箱及學生證上傳，支援推薦5位同校好友；台灣本地大學不符資格。
+
+[Manus 新創](https://manus.im/startups)：公開申請持續暫停，現僅限合作VC推薦六個月Team方案（最多20席，官方宣稱價值US$4,800）；成立未滿五年且融資50萬至5,000萬美元；正文合作方非必要與橫幅衝突未解。
+
+[Neo4j 新創](https://neo4j.com/startup-program/apply/)：最高US$20,000 AuraDB額度；靜態Markdown顯示不可用，但瀏覽器實測Marketo申請表完整加載、Country含Taiwan且Submit按鈕可用；限Pre-seed至Series B。
+
+[Mango Inference](https://www.mangoboost.io/platform/mango-inference)：新戶註冊贈US$10與全模型七折（至Nov 11止，未標年份）在線；[條款](https://inference.mangoboost.io/terms-of-service)排除中港等國，台灣未列入排除名單；社群US$100 matching未獲官方證實。
+
+[DigitalOcean × Secret](https://www.digitalocean.com/legal/promotional-offer-100-in-digitalocean-credits-for-50-ai-startups-on-secret)：限Secret付費會員前50家AI新創贈送US$100 DO額度，有效至2027-01-17；[Secret頁面](https://www.joinsecret.com/digital-ocean)首頁標題宣稱$5,000/年及元數據2028-12-31與官方條款衝突仍存。
+
+[Snowflake AI Trial](https://docs.snowflake.com/en/user-guide/admin-trial-account)：30日US$400試用在線；初始信箱不需卡，啟用AI必須加卡；[CoCo模式](https://signup.snowflake.com/cortex-code)提供前30日$40推論+$360平台額度，兩入口Country均列Taiwan。
+
+[MiniMax Design](https://www.minimax.io/audio)：新戶註冊贈2,000點（發放起3天有效）與3次H3影片生成試用在線；會員頁所連付費條款仍呈現開放平台協議之衝突未解。
+
+[X API 回饋](https://docs.x.com/x-api/getting-started/free-credits.md)：首次存卡購點等額回饋最高US$250在線；xAI回饋需單一週期購買X API額度達US$200/500/1000分別解鎖US$50/150/350 xAI額度，非免費額度。
+
+新增 [Hanzo 新創](https://www.hanzo.ai/startups)：官方新創計畫提供頂級VC（tier-1 VC）投資團隊申請最高US$150,000平台額度，週審制；表單涵蓋推論、代理、RAG、部署等用途；[條款](https://www.hanzo.ai/terms)確認超額按量計費，額度有效期與台灣企業核准未公開。
+
+新增 [Perch Starter](https://www.perchai.app/docs/plans/starter)：官方提供免信用卡個人免費方案，每曆月贈送20,000 PT（最高US$20託管用量），UTC月初重置；適用Web、桌面與CLI，無直接API；[條款](https://www.perchai.app/terms)確認超額不會未經同意扣款；Starter Data Program預設開啟可手動關閉；Qwen 3.8 Max限時開放至美東11/20中午。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 增補複核週期（`review_cadence`）之繁體中文對照字典（`biweekly: '雙週輪替'`、`monthly_or_new_signal: '每月或有新線索時'`、`event: '特定活動事件追蹤'`），修復卡片詳情展開時「下次複核」向讀者直接曝露未格式化之英文或蛇形命名代碼的排版缺陷；以單元測試實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`datacamp-free-access-week-november-2026` 台北11/9 12:59（美東11/8 23:59）截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況。
+
 2026-11-08 05:05–05:25 本輪：起始852筆；局部複核 `autoclaw-halloween-40m-expiry-conflict-watch`、`stepfun-stepaudio3-music-gen-preview-nov8`、`tencent-tokenhub-free-trial`、`river-inference-25-credit`、`claude-scientists`、`coreweave-aria-limited-free`、`hume-startup-forty-million-twelve-months`、`sambacloud-rundown-first100-anniversary-credit-watch`、`codebuddy-monthly-activity-welcome-separated`、`firecrawl-startups-annual-double-credits`、`heygen-free-three-monthly-noncommercial-videos`、`notta-education-half-price-pro-business`、`rime-starter-fifty-model-pool`、`google-gemini-notebook-standard-free` 共14筆；核心來源整筆追查失敗2筆：`perplexity-watch`、`perplexity-education`（官方說明中心頁面回傳403阻擋，依規則不刷新verified_at，記錄追查失敗時間與原因）；新增機會 `inkeep-cloud-thirty-day-content-sandbox-demo`、`biel-business-fourteen-day-no-card-trial`、`biel-noncommercial-open-source-fivehundred-pages-twok-interactions` 共3筆，政策及線索各0筆；既有未完成838筆。未登入、申請或付款。
 
 [StepFun Audio 3](https://platform.stepfun.ai/docs/en/guides/pricing/details.md)：重要更正：官方定價公告更新，music-preview與gen-preview限時免費預覽正式展延至台北時間2026-11-17 11:59:59，正式版付費上線順延至11/17 12:00:00，消弭原訂11/8截止預期；未公布固定免費總額，台灣身分認證與未儲值權限待核。

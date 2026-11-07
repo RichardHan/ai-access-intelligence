@@ -185,7 +185,10 @@ function createDetails(offer) {
   if (offer.legal_and_terms_note) addRow(grid, '法律與條款補充', offer.legal_and_terms_note);
   addRow(grid, '證據缺口', offer.unknowns?.length ? offer.unknowns : '未另列缺口，不代表全面驗證。');
   addRow(grid, '核實時間', offer.verified_at ? `${dateLabel(offer.verified_at, true)} Asia/Taipei` : '未核實');
-  const cadence = { daily: '每日', monthly: '每月輪替', weekly: '每週', on_new_signal: '有新線索時' }[offer.review_cadence] || display(offer.review_cadence);
+  const cadence = {
+    daily: '每日', monthly: '每月輪替', weekly: '每週', biweekly: '雙週輪替',
+    on_new_signal: '有新線索時', monthly_or_new_signal: '每月或有新線索時', event: '特定活動事件追蹤'
+  }[offer.review_cadence] || display(offer.review_cadence);
   addRow(grid, '下次複核', `${cadence}；${dateLabel(offer.next_review_at, true)}`);
   if (offer.last_review_attempt_at) addRow(grid, '最近來源追查', `${dateLabel(offer.last_review_attempt_at, true)}${offer.last_review_attempt_reason ? `；${offer.last_review_attempt_reason}` : ''}`);
   details.append(grid, text('h4', '來源與支持的主張', 'detail-heading'));

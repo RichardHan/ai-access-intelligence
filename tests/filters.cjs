@@ -40,3 +40,13 @@ assert.strictEqual(attempt.children[1].textContent,'2026-11-06；正式規則403
 const noReason=ctx.createDetails({last_review_attempt_at:'2026-11-06',eligibility:{},sources:[]});
 const attemptWithoutReason=noReason.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='最近來源追查');
 assert.strictEqual(attemptWithoutReason.children[1].textContent,'2026-11-06');
+
+const biweeklyDetails=ctx.createDetails({review_cadence:'biweekly',next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const biweeklyRow=biweeklyDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(biweeklyRow.children[1].textContent.startsWith('雙週輪替；2026-11-20'),'unexpected cadence text for biweekly');
+const monthlySignalDetails=ctx.createDetails({review_cadence:'monthly_or_new_signal',next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const monthlySignalRow=monthlySignalDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(monthlySignalRow.children[1].textContent.startsWith('每月或有新線索時；2026-11-20'),'unexpected cadence text for monthly_or_new_signal');
+const eventDetails=ctx.createDetails({review_cadence:'event',next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const eventRow=eventDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(eventRow.children[1].textContent.startsWith('特定活動事件追蹤；2026-11-20'),'unexpected cadence text for event');
