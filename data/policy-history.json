@@ -13151,5 +13151,66 @@
     "change_type": "billing_terms_clarified",
     "note": "稅依帳單地址可能另列或包含在訂閱價，非一律另計；官方退款政策稱僅法律要求時退款，台灣個案未核。",
     "sources": ["https://support.grammarly.com/hc/en-us/articles/33154429182861-Is-tax-included-in-the-subscription-cost", "https://support.grammarly.com/hc/en-us/articles/360049189071-Can-I-get-a-refund"]
+  },
+  {
+    "record_id": "coreweave-forge-free-pricing-transition",
+    "verified_at": "2026-11-07T11:10:00+08:00",
+    "previous_limit": "Free推論預設消費上限US$100/月",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_clarified",
+    "note": "推論用量限制依請求IP地理限制並回傳403，超額回傳429；學術方案列申請制200GB儲存且享限時推論額度，付費推論需預付。",
+    "sources": [
+      "https://coreweave.com/forge-pricing",
+      "https://docs.coreweave.com/products/inference/serverless/usage-limits.md"
+    ]
+  },
+  {
+    "record_id": "vast-startup-spend-match",
+    "verified_at": "2026-11-07T11:10:00+08:00",
+    "previous_limit": "帳單文件與2018版條款的未用預付款退款衝突",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_clarified",
+    "note": "補充頻寬按byte與各狀態持續計費（$/TB），停止實例仍計磁碟費；2018條款不退款與現行帳單未用信用卡點數可退之衝突仍存，已消費點數絕不退款。",
+    "sources": [
+      "https://docs.vast.ai/guides/reference/billing.md",
+      "https://console.vast.ai/terms/",
+      "https://vast.ai/startup"
+    ]
+  },
+  {
+    "record_id": "felo-standard-free-new-user-daily-two-hundred-campaign",
+    "verified_at": "2026-11-07T11:10:00+08:00",
+    "previous_limit": "新戶限時每日200點，活動身分及點數池待核",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_clarified",
+    "note": "新戶限時每日200點當日有效、次日過期不累計；1點數=$0.001，用盡切換至永久免費普通搜尋，進階功能暫停；活動截止未公告。",
+    "sources": [
+      "https://felo.ai/zh-Hant/pricing"
+    ]
+  },
+  {
+    "record_id": "freshservice-agent-studio-promotion-extension",
+    "verified_at": "2026-11-07T11:10:00+08:00",
+    "previous_limit": "Agent Studio促銷正文延至12/31",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "evidence_clarified",
+    "note": "促銷免費用至2026/12/31，限Growth/Pro/Enterprise付費方案，排除MSP模式；期滿定價待公布，台灣稅費未核。",
+    "sources": [
+      "https://support.freshservice.com/support/solutions/articles/50000012644-free-ai-agent-studio-access-for-growth-pro-and-enterprise",
+      "https://support.freshservice.com/support/solutions/articles/50000013885-ai-agent-studio-faqs"
+    ]
+  },
+  {
+    "record_id": "augment-code-trial-thirty-thousand-credits",
+    "verified_at": "2026-11-07T11:10:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "new_baseline",
+    "note": "新戶綁卡提供30,000試用點數池；社群條款允許程式碼訓練模型，多帳號延長試用違規，付費標準方案每月固定US$20。",
+    "sources": [
+      "https://www.augmentcode.com/pricing",
+      "https://www.augmentcode.com/blog/our-new-credit-based-plans-are-now-live",
+      "https://www.augmentcode.com/legal/community-terms-of-service"
+    ]
   }
 ]

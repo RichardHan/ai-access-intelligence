@@ -8,8 +8,9 @@ def unique_keys(pairs):
   result[key]=value
  return result
 d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);jsonschema.validate(d,json.loads((p/'schema.json').read_text(),object_pairs_hook=unique_keys))
-json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
+history=json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
+assert all(h['record_id'] in ids for h in history), 'unknown policy history record_id'
 run=d['last_research_run']
 reviewed=run['reviewed_ids'];new=run['new_ids'];attempted=run['attempted_failed_ids']
 assert len(reviewed)==len(set(reviewed)) and len(new)==len(set(new)) and len(attempted)==len(set(attempted)), 'duplicate batch ID'
