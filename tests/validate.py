@@ -28,7 +28,10 @@ for aid in attempted:
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced'}
 for o in d['offers']:
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
- for s in o.get('sources', []): assert s.get('url', '').startswith(('http://', 'https://')), f'invalid source URL in {o["id"]}: {s.get("url")}'
+ for s in o.get('sources', []):
+  assert s.get('url', '').startswith(('http://', 'https://')), f'invalid source URL in {o["id"]}: {s.get("url")}'
+  assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
+  assert isinstance(s.get('evidence'), str) and s['evidence'].strip(), f'missing or empty source evidence in {o["id"]}'
  if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'
  assert o['benefit_cost_ratio'] is None or math.isfinite(o['benefit_cost_ratio'])
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None

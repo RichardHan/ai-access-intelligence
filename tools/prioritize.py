@@ -86,6 +86,7 @@ def note_of(o, s):
 
 
 def main():
+    now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
     data = json.loads(DATA.read_text())
     counts = {t: 0 for t in TIERS}
     counts["未評級"] = 0
@@ -104,7 +105,6 @@ def main():
     if "latest_research_at" in data:
         data["updated_at"] = data["latest_research_at"]
     else:
-        now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
         data["updated_at"] = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
     if "加入優先度評分與 S–D 分層" not in data.get("scope", ""):
         data["scope"] += "；" + now.strftime("%Y-%m-%d") + " 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）"

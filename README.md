@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **834 筆**（631 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 14:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **10 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **822 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **836 筆**（633 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 15:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **822 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,26 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-07 15:05–15:20 本輪：起始834筆，按實際時區有30筆到期；避開前輪剛核及近期反覆失敗案例。局部複核 `snowflake-ai-trial-2026`、`coreweave-aria-limited-free`、`x-api-xai-spend-credit-rewards`、`claude-scientists`、`anthropic-guest-investigators`、`minimax-design-h3-new-user-watch`、`digitalocean-secret-ai-startup-100-2026`、`hume-startup-forty-million-twelve-months`、`mango-inference-community`、`gmi-a16z-first25-two-k-spend-five-k-credit`、`fujisoft-workforce-ai-security-poc`、`sambacloud-rundown-first100-anniversary-credit-watch` 共12筆；新增機會 `goodmem-cloud-fourteen-day-no-card-trial` 1筆、政策0筆、觀察線索 `airweave-developer-free-ten-connections-fifty-queries` 1筆；既有未完成822筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[Anthropic生命科學徵案](https://www.anthropic.com/news/open-call-guest-investigators-life-sciences)官方[申請表](https://docs.google.com/forms/d/e/1FAIpQLSd2MC_Wwcqr7niezK5697AsC8oKm3MDbCIU7KrIFcfvZFLJGg/viewform)已確認重導向至 [closedform](https://docs.google.com/forms/d/e/1FAIpQLSd2MC_Wwcqr7niezK5697AsC8oKm3MDbCIU7KrIFcfvZFLJGg/closedform?hl=en) 並載明「is no longer accepting responses」，本輪收件確認已截止；介紹頁仍留有Apply按鈕屬殘留連結，狀態更正為 `applications_closed`。入選為8–12週免費合作且不發放對外API額度。
+
+[Snowflake試用](https://www.snowflake.com/en/snowflake-trial/)Data Cloud US$400/30日與[CoCo試用](https://signup.snowflake.com/cortex-code)（US$40推論＋US$360平台）在線；兩註冊頁均可選Taiwan。AI啟用需加卡但不自動升級；CoCo明定有AI與compute用量限制，達限存取可能暫停（非無上限計費），之後US$20/月；功能限制與文檔差異仍存。
+
+[DigitalOcean × Secret](https://www.digitalocean.com/legal/promotional-offer-100-in-digitalocean-credits-for-50-ai-startups-on-secret)首50家US$100額度有效至2027-01-17；Secret年繳US$149或終身US$399。本輪新發現[Secret優惠頁](https://www.joinsecret.com/digital-ocean)承諾未兌領其他優惠且無法取得本優惠時全額退會員費，與[一般條款](https://www.joinsecret.com/terms)§2資格拒絕不退款存在條款衝突。
+
+[Hume新創計畫](https://www.hume.ai/startup-program)瀏覽器成功動態擷取條款：核准贈40,000,000語音點數有效12個月，期滿或耗盡預設自動回退至標準Free方案，非強制自動續訂付費服務；6個月滾動收件期起算日未公布，現時受理未證；[服務條款](https://www.hume.ai/terms-of-use)限內部開發並規範模型訓練資料。
+
+[CoreWeave ARIA定價](https://coreweave.com/forge-pricing/inference-agents)仍列限期免費，[治理文檔](https://docs.coreweave.com/products/aria/governance.md)確認Smart features管理控制限Enterprise與Pro；[Claude科學研究方案](https://claude.com/programs/team-plan-for-scientists)維持Standard US$0與Premium US$15，需有效付款方式，API月額另計且支援Taiwan；[X API贈點文檔](https://docs.x.com/x-api/getting-started/free-credits.md)首購贈US$20、首次自動儲值配對上限US$50且最低US$5，贈額3個月有效；[MiniMax Design](https://design.minimax.io/media-plan/subscribe)確認新戶免費點3天到期；[Mango Inference條款](https://inference.mangoboost.io/terms-of-service)§11.1明定促銷點最長6個月、付費點12個月（日本6個月）；[GMI × a16z](https://www.gmicloud.ai/a16z)消費$2K解鎖$5K，條款禁轉售/穿透；[富士Soft PoC](https://sem-inq.fsi.co.jp/public/application/add/7999)10社30日表單在線；[SambaCloud週年贈額](https://sambanova.ai/build-with-relentless-intelligence-rundown)確認為2025年9月宣傳資產，現行方案需加卡且購點。
+
+新增 [GoodMem Cloud](https://goodmem.ai/cloud)：官方提供全功能託管AI記憶平台免卡試用14天，提供完整API/SDK與實例；[定價](https://goodmem.ai/pricing)列自願升級起價US$15/月，按運算與儲存用量計費；[條款](https://cloud.goodmem.ai/terms)限商務專業用途，期滿未升級實例與資料可能刪除，承諾不以客戶內容訓練或微調模型；台灣帳戶開通未測。
+
+新增觀察線索 [Airweave Developer](https://airweave.ai/)：官方提供免信用卡Developer免費託管方案，含10個連線、每月50次檢索與5萬entities同步；[隱私政策](https://airweave.ai/privacy-policy)明示SaaS全球可存取；[條款](https://airweave.ai/terms-conditions)保留草稿編輯備註，先列watchlist。
+
+品質改善：`tests/validate.py` 新增來源（sources）完整性校驗（強制每個來源之 `scope` 與 `evidence` 均須為非空字串，防止證明責任鏈遺失），以空範圍與純空白合成案例實證攔截通過；並修正 `tools/prioritize.py` 評分重算時 `now` 變數在條件分支中的作用域問題。
+
+下輪優先：`deepgram-speak-attendee` 台北11/7 16:00後查[條款](https://deepgram.com/speak-attendee-credit-promotion-terms)建帳截止後條款更新與發放動態；`taipei-youth-ai-subscription-subsidy-2026` 台北11/8查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)停收公告與11/10最後送達倒數；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止前查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節獎勵關閉情況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口；`google-ai-professional-certificate-tw-pro-3mo` 每日查[條款](https://one.google.com/offer/terms-and-conditions/google-career-certificates)與[台灣頁](https://grow.google/intl/zh-TW_tw/ai-professional/)截止矛盾。
+
 2026-11-07 14:05–14:17 本輪：起始832筆，按實際時區有40筆到期；避開前輪剛核及近期反覆失敗案例。局部複核 `taipei-youth-ai-subscription-subsidy-2026`、`deepgram-speak-attendee`、`deepgram-flux-tts-bonus`、`granola-students`、`amazon-ara-multilingual-contextual-ai-fall-2026`、`neo4j-startup-aura-twentyk-application-unavailable`、`tencent-tokenhub-free-trial`、`kiro-startup-pro-plus-2026`、`river-inference-25-credit`、`manus-startups-redirect-current-unverified` 共10筆；新增機會 `agentset-free-thousand-pages-tenk-monthly-retrievals`、`featherless-chat-twentyfive-unlimited-human-interactive` 共2筆，政策及線索各0筆；既有未完成822筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [臺北青年AI訂閱補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)重核青年局首頁、[最新公告](https://youth.gov.taipei/announcement/latest-announcement)及[FAQ](https://youth.gov.taipei/api/v1/file.download?file_id=09f25b49-851e-4271-a040-0b68f10f6034)，未見經費用罄或提前終止公告；須同時符合18–35歲、設籍臺北6個月以上、認可大專院校在學或當年度畢業生，並完成指定AI課程；限8/1–10/31間起訖之完整月訂閱，且最遲須於11/10前書面送達青年局；補助最高NT$4,000（弱勢NT$8,000）；預算餘額與即時受理未核。
