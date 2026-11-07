@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **840 筆**（637 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 17:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **13 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **825 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **842 筆**（639 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-07 18:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **826 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,44 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-07 18:05–18:25 本輪：起始840筆，按實際時區有2筆到期（`perplexity-watch`、`perplexity-education`）；局部複核 `claude-artifacts-expired-lead`、`datacamp-free-access-week-november-2026`、`tidb-starter-free-mysql-postgres-preview`、`autoclaw-halloween-40m-expiry-conflict-watch`、`aryn-docparse-three-month-tenk-monthly`、`vapi-free-us-number-not-free-calls`、`maxim-developer-free-monthly-tenk-logs`、`hyperbrowser-free-starting-fivek-shared`、`baseten-new-workspace-trial`、`nebius-token-factory-signup-one-dollar`、`scrapfly-signup-thousand-shared-credits`、`cartesia-free-monthly-twentyk`、`qodo-fourteen-day-unlimited-trial`、`ai21-trial-duration-conflict` 共14筆；新增機會 `vercel-sandbox-hobby-free-five-cpu-hours`、`aihubmix-one-dollar-daily-free-model-pool` 共2筆，政策及線索各0筆；既有未完成826筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
+
+[Claude Artifacts](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)官方說明確認Artifacts功能已全面內建於Free/Pro/Max/Ultra/Team/Enterprise，用量計入自身方案配額；原促銷說明頁[404](https://support.claude.com/en/articles/17274727-artifact-usage-promotion)未獲原50%用量折抵促銷重啟證據，維持 `expired_unverified`。
+
+[DataCamp 免費學習週](https://www.datacamp.com/campaign/free-access-week-november-2026)官方活動頁明列2026-11-02 09:00 ET至2026-11-08 23:59 ET（台北11/2 22:00至11/9 12:59）；涵蓋Classic完整課程庫、projects及評量認證；排除AI Tutor、Microsoft Fabric與Google合作內容；個人免信用卡註冊。
+
+[TiDB Starter](https://docs.pingcap.com/tidbcloud/select-cluster-tier/?plan=starter)官方文件確認MySQL模式前5個符合資格instances享5 GiB row、5 GiB columnar與每月5,000萬RU；PostgreSQL公開預覽前10個instances享50 GiB row與每月5億RU；[支出上限指南](https://docs.pingcap.com/tidbcloud/manage-serverless-spend-limit/)確認Scalable上限最低US$0.01；免卡起步，超額節流與拒絕新連線。
+
+[AutoClaw 萬聖節點數](https://autoclaw.z.ai/blog/news/M11W1/)正文列10/31 00:00至11/8 23:59 UTC+8領取4,000點（40M tokens）且11/8到期，同頁注意事項11/1到期衝突未解；11/4–5之100M閃促已結束；[新週福利公告](https://autoclaw.z.ai/blog/news/M11W2/)預告11/9–15每帳號10,000點（100M tokens）週福利，統一11/15 23:59到期。
+
+[Aryn DocParse](https://www.aryn.ai/pricing)官方專屬定價確認免卡試用3個月，每月10,000頁、最多1,000份儲存文件與30天索引留存；PAYG每1,000頁US$2；[服務條款](https://aryn-public.s3.amazonaws.com/aps_website_docs/Aryn+-+Terms+of+Service.pdf)規定免費層Customer Data可用於模型訓練（付費層才可opt out）。
+
+[Vapi 免費號碼](https://docs.vapi.ai/free-telephony)免卡首支免費US門號可建立，贈額US$5；[定價頁](https://vapi.ai/pricing)列hosting每分鐘US$0.05，模型與電信費用另計；免費號碼僅受話不能外撥，非免費通話。
+
+[Maxim Developer](https://www.getmaxim.ai/evals/pricing)Developer方案永久免費，每月最多10,000 logs、3席、1 workspace與3天留存，超額硬停不計費；[條款](https://www.getmaxim.ai/terms-of-service)明定未經書面同意不以客戶資料訓練模型。
+
+[Hyperbrowser](https://www.hyperbrowser.ai/pricing)Free方案起始5,000共享點數，涵蓋四項產品，用盡硬停；[條款](https://www.hyperbrowser.ai/terms)§9自動化裝置廣泛限制與API用途之邊界仍待釐清。
+
+[Baseten 新工作區試用](https://docs.baseten.co/organization/billing)新工作區贈額依註冊路徑而定，無獨立永久免費層；無付款方式額度耗盡停用模型；[條款](https://www.baseten.co/terms-and-conditions/)明訂不以Customer Content、Models或推理日誌訓練模型。
+
+[Nebius Token Factory](https://docs.tokenfactory.nebius.com/other-capabilities/billing-new)現行billing文件已刪除原先Upon first sign-up $1 valid for 30 days段落，新戶贈額現況未證；仍維持強制綁卡與後付自動扣款。
+
+[Scrapfly](https://scrapfly.io/pricing)官方定價確認一次性1,000共用API點數免卡無時間限制，用盡硬停；[Extraction文件](https://scrapfly.io/docs/extraction-api/getting-started)prompt extraction每次5點，template extraction 1 vs 5點官方文件衝突仍存。
+
+[Cartesia Free](https://www.cartesia.ai/pricing)每月20,000語音credits（TTS/STT共用）及US$1 agents額度；官方FAQ明示Voice Agent預付US$1用完通話繼續按費率計費，不能概括為全產品無扣款風險；[條款](https://www.cartesia.ai/legal/terms)允許訓練（可申請opt-out）。
+
+[Qodo](https://www.qodo.ai/pricing/)14天免卡不限試用在線；付費Pro Team已改為US$30含2,000點（US$0.015/點，原2,500點/$0.012）；[General條款](https://www.qodo.ai/terms/)§4.4授權以客戶資料訓練，與定價FAQ不訓練承諾存在衝突。
+
+[AI21](https://www.ai21.com/pricing/)新戶US$10免卡在線，定價頁7天與[用量文件](https://docs.ai21.com/docs/usage-cost)三個月衝突仍存；用盡需提供帳單資料轉月結。
+
+新增 [Vercel Sandbox Hobby](https://vercel.com/docs/security/secure-compute/sandbox/pricing-and-limits)：官方安全運算文件確認Hobby免費提供每月5 Active CPU小時、420 GB-hours記憶體、5,000次建立與20 GB傳輸；超額暫停建立不額外扣費；[條款](https://vercel.com/legal/terms)限個人非商用，外部模型費用自理；台灣帳戶資格未明示。
+
+新增 [AIHubMix](https://aihubmix.com/free)：官方免費目錄列71款模型，新戶免卡10次試用；一次儲值至少US$1解鎖每日共用100次/100萬token；付費模型按量計費，[條款](https://aihubmix.com/terms)商用另有規範；台灣付款未測。
+
+品質改善：`schema.json` 與 `tests/validate.py` 增補 `unknowns` 陣列完整性校驗（強制必須為字串陣列且元素非空），攔截前輪新紀錄中 `unknowns` 誤植為純字串的資料缺陷，並補正既有案例；`tests/filters.cjs` 補齊 `closed` 與 `closed_to_new_subscriptions` 於免費專區篩選排除及 closed 樣式之斷言；以合成案例實證攔截通過。
+
+下輪優先：`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況；`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止前查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節獎勵關閉情況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口；`taipei-youth-ai-subscription-subsidy-2026` 台北11/8查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)停收公告與11/10最後送達倒數；`lawson-restricted-japan` 台北11/10 10:00查[活動頁](https://mldata.lawson.co.jp/lab/campaign/googlemileage2609/)50點限定之Google AI Pro 3個月免費碼抽選入口。
+
 2026-11-07 17:05–17:25 本輪：起始838筆，按實際時區有17筆到期；局部複核 `tabnine-basic-free-retired`、`astamuse-agent-trial-oct31-index-only`、`kakao-plus-young-adult-promo-unverified`、`deepinfra-two-minute-papers-twenty-credit`、`workbuddy-step5-oct25-unverified`、`lawson-restricted-japan`、`deepinfra-deepstart-qualified`、`claude-duet-preview`、`meta-hackathon-oct2026`、`robinhood-luna-token-promotion-december`、`hostkey-grant-stale-2020-deliverable`、`lovable-sweden-2026`、`fal-flux3-max-five-daily-sandbox` 共13筆；新增機會 `serpkite-free-search-api-credits`、`zro-moonmath-free-flash-models` 共2筆，政策及線索各0筆；既有未完成825筆，核心來源整筆追查失敗2筆（`perplexity-watch`、`perplexity-education` 官方說明中心文章回傳403阻擋，維持舊時間戳）。未登入、申請或付款。
 
 [Tabnine Basic](https://www.tabnine.com/blog/scaling-enterprise-ai-why-were-sunsetting-tabnine-basic/)官方退役公告永久301重導向至Tricentis AI方案頁，確認退役與整合現狀，維持 `closed`。

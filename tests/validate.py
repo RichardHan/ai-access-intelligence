@@ -42,6 +42,7 @@ for o in d['offers']:
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None
  if o['usage_type']=='Unlimited':assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED']
  if o['savings_usd'] is not None:assert o['valuation_scenario']
+ assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  if o['record_type']=='opportunity':
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
