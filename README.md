@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **850 筆**（647 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 03:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **832 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **852 筆**（649 項機會、47 項政策、156 筆觀察線索），更新時間 **2026-11-08 04:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **834 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,48 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 04:05–04:30 本輪：起始850筆，按實際時區有25筆到期；局部複核 `bazaarlink-taiwan-free-model-gateway`、`vast-startup-spend-match`、`sarvam-campus-tour-credits`、`claude-security-enterprise-two-month-credit`、`speechify-api-free-monthly-500k`、`amazon-ara-multilingual-contextual-ai-fall-2026`、`kiro-startup-pro-plus-2026`、`deepgram-flux-tts-bonus`、`granola-startups`、`openai-nonprofit-standard-discount`、`linear-startup-business-2026`、`meshy-free-monthly-hundred-download-conflict`、`replicate-try-free`、`fireflies-free-auto-join-storage-credit-conflicts`、`laminar-free-gb-hard-cap-signals-conflict`、`adobe-express-k12-free-standard-250` 共16筆；新增機會 `netlify-free-monthly-three-hundred-shared-ai-gateway`、`vespa-cloud-once-three-hundred-no-card-trial` 共2筆，政策及線索各0筆；既有未完成834筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[BazaarLink](https://bazaarlink.ai/free)免費模型層（Qwen3.7 Flash、Glyph Cluster、Beam Free等）免卡在線，無餘額每日60 units（10 RPM），有餘額每日120 units（20 RPM）；僅在API key啟用paid fallback且有足夠餘額時才會轉付費；全帳戶限2並行；[條款](https://bazaarlink.ai/terms)確認中華民國法律適用與苗栗登記。
+
+[Vast 新創](https://vast.ai/startup)維持審核式付費消費等額匹配，非無消費免費額度；[計費文件](https://docs.vast.ai/guides/reference/billing.md)釐清實例停止（stopped）持續計儲存費，但離線（offline）不收GPU或儲存費；2018舊條款全部不退與現行文件信用卡可退衝突仍存。
+
+[Sarvam 校園巡迴](https://www.sarvam.ai/sarvam-campus)53校卡片DOM即時狀態顯示18校已完成、35校暫定，所有已完成校園報名按鈕均已停用，目前無開放報名場次；[Kanpur活動頁](https://hack2skill.com/event/sarvamcampusiitkanpur)已結束且報名關閉，但場地卡仍標示OPEN之矛盾未解；限指定印度在校生，非台灣一般學生福利。
+
+[Claude Security](https://support.claude.com/en/articles/14661296-use-claude-security)公測launch offer提供Enterprise組織連續兩月最高US$25,000額度至2026-12-31 UTC截止；官方說明中心釐清project owner可遷移既有專案（僅GitHub Enterprise專案不可遷移），遷移後方享促銷額度；底座Enterprise年約至少20席（每席US$20/月起）。
+
+[Speechify API](https://speechify.ai/pricing)維持免卡Free方案，每月單一共用美元餘額等值Simba約500K字元；Simba 3.5限時500K優惠至2026-11-21止（其後降至250K）；[限流文件](https://docs.speechify.ai/build/guides/concepts/api-limits.md)確認帳戶共用3並行、1 RPS（burst 10），每次spoken chars上限2,000/20,000，含markup原始輸入上限20,000/32,000。
+
+[Amazon Research Awards](https://www.amazon.science/research-awards/call-for-proposals/multilingual-and-contextual-ai-evaluation-call-for-proposals-fall-2026)秋季多語與情境AI評估徵案開放至2026-11-11 23:59 Pacific（台北11-12 15:59）；獲選PI平均可獲各不超過US$50,000之無限制資金與AWS促銷額度；限認可大專院校全職教師或NGO研究者，每人每輪限提一案；AWS兌換需有效信用卡。
+
+[Kiro 新創](https://kiro.dev/startups/)至2026-12-31開放滾動申請，合格新創最高享一年Pro+額度（2/10/30席）；須透過AWS IAM Identity Center登入；方案正文排除具有active AWS Activate Credits新創，而FAQ排除joined AWS Activate之衝突仍存；額度耗盡按當時標準Pro+每月自動扣AWS卡；排除China/GCR地區。
+
+[Deepgram Flux TTS](https://deepgram.com/promotions/2026-09/flux-tts-promo-terms-and-conditions)回饋活動至2026-12-31 Pacific止，每US$1已付費消耗回饋US$1 bonus，每合格專案最高US$500；限PAYG與Growth方案且須有效卡，免費與促銷消耗不計回饋；Auto-reload可停且非參加條件；Flux TTS費率為每千輸入字元US$0.045。
+
+[Granola 新創](https://granola.ai/startups)官方FAQ新增明確要求：須由官方500+核准投資人名單中的投資人出資，且明確排除bootstrapped／自籌資金新創；合格新創享一年免費Business（少於30人團隊），期滿按標準Business價格（US$14／人／月）計費；台灣企業個案資格未核。
+
+[OpenAI 非營利](https://help.openai.com/en/articles/9359041-openai-for-nonprofits)Goodstack核驗通過之機構享ChatGPT Business Standard年繳US$8／月、月繳US$10；API無折扣；既有訂戶當期按比例折抵；ChatGPT支援Taiwan，但台灣法人是否通過Goodstack核驗仍未知。
+
+[Linear 新創](https://linear.app/startups)合作夥伴支持、未付費且少於50人新創享最多六個月Business免費；[計費文件](https://linear.app/docs/billing-and-plans)釐清優惠期後系統按標準價格自動續訂，除非管理員提前變更方案或取消；AI credits仍屬選購。
+
+[Meshy Free](https://www.meshy.ai/pricing)定價頁與[最新說明文件](https://help.meshy.ai/en/articles/15696428-what-is-included-on-the-free-plan)口徑已一致，重大矛盾解決：確認Free免卡每月包含100點及10次無貼圖Meshy 6 Lite模型下載，每月1日重置且不結轉；帶貼圖或高級模型下載仍須付費；CC BY 4.0商用須署名。
+
+[Replicate Try for Free](https://replicate.com/collections/try-for-free)指定模型集合註冊後可免卡有限次試跑，未公布固定次數或金額上限；用盡須加帳單並購買額度；[定價頁](https://replicate.com/pricing)依模型按硬體時間或輸入輸出差別計價；商用須逐模型核授權。
+
+[Fireflies Free](https://guide.fireflies.ai/articles/4027724828-learn-about-the-fireflies-free-plan)Auto-join不限原始逐字稿在線（每席400分鐘儲存），但20 AI點每月或一次、摘要扣點與[計費條款](https://guide.fireflies.ai/articles/9606045468-fireflies-billing-terms)不扣點矛盾仍存；純Free用盡不自動扣款，需卡Business試用未取消會自動轉付費。
+
+[Laminar Free](https://laminar.sh/pricing)每帳期提供1GB追蹤資料、7日存取與1席，超額拒收（HTTP 403）不自動計費；定價No Signals與[用量文件](https://laminar.sh/docs/platform/usage-limits.md)所有新workspace贈US$5 Signals之衝突仍未解；不可保證免費Signals。
+
+[Adobe Express K–12](https://www.adobe.com/education/express/)官方指南確認台灣學校列入合格地區，在學與教職員免費享Express Premium；[FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html)確認每月250生成點數、Standard功能權限且不結轉；排除Firefly Video Model；須校方部署與管理員開通。
+
+新增 [Netlify Free](https://www.netlify.com/pricing/)：官方提供credit-based Free方案，每月免信用卡贈送300點共用額度，涵蓋AI Gateway與Agent Runners（每US$1模型消耗扣180點）、Functions及正式部署（每次15點）；[AI Gateway文件](https://docs.netlify.com/build/ai-gateway/overview.md)確認免自備API key，專案正式部署後啟用，速率限制每分鐘90點；額度用罄專案暫停；台灣帳戶註冊未測。
+
+新增 [Vespa Cloud](https://vespa.ai/free-trial/)：官方提供免信用卡一次性US$300 AI搜尋、RAG與推薦試用額度；[配額文件](https://docs.vespa.ai/en/cloud/quota.html.md)確認Trial租戶最大資源配置上限US$2／小時，用罄叢集自動拆除不產生意外收費；[租戶文檔](https://docs.vespa.ai/en/learn/tenant-apps-instances.html.md)確認試用tenant完成後自動到期，保留資料須升級付費；台灣企業與帳單適用性待核。
+
+品質改善：`schema.json` 補齊 `status` 屬性定義（支援非空字串及 null，強制 `minLength: 1`），修復先前 JSON Schema 允許空字串或任意非字串狀態穿透之架構漏洞；`tests/validate.py` 增補批次完成時間不得早於開始時間之時間序斷言（`completed_at >= started_at`）及既有紀錄 `status` 非空校驗；以合成反例實證攔截通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止倒數後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`datacamp-free-access-week-november-2026` 台北11/9 12:59截止後查[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認免費週結束與付費回退現況。
+
 2026-11-08 03:05–03:30 本輪：起始848筆，按實際時區有39筆到期；局部複核 `aocai-working-free-ai-courses-2026`、`google-ai-professional-certificate-tw-pro-3mo`、`grammarly-student-annual-half-first-period`、`taiwan-hrd-free-ai-introduction-2026`、`fastino-glideis1-ten-credit-payment-verification`、`articul8-bivia-early-adopter-billion-tokens`、`runable-free-daily-fifteen-hundred-monthly-cap`、`felo-standard-free-new-user-daily-two-hundred-campaign`、`retool-nonprofit-monthly-coupon`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`fireworks-glimmer-sft`、`mem0-hobby-memory-api`、`coderabbit-startup-annual-half-six-months`、`vultr-match-ai-compute`、`zhipu-bigmodel-flash-free-api`、`resend-free-transactional-agent-email` 共16筆；新增機會 `tabstack-mozilla-ten-thousand-trial-credits`、`websearchapi-monthly-two-thousand-search-credits` 共2筆，政策及線索各0筆；既有未完成832筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [經濟部服務業在職AI課程](https://serv.gcis.nat.gov.tw/AOCAI/)公開報名表仍開放，台北11/11班受理至2026-11-09 23:59截止；遴選通過免學費，[報名表](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)明確載明應繳金額NT$0；內文預計100人與表單限制300人之名額口徑差異仍存；出席率須達80%並通過測驗。

@@ -23,6 +23,7 @@ assert not (set(reviewed)&set(new) or set(reviewed)&set(attempted) or set(new)&s
 assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
 assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
 assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
+assert run['completed_at']>=run['started_at'], 'completed_at precedes started_at'
 offers_by_id={o['id']:o for o in d['offers']}
 for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
 for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
@@ -33,6 +34,7 @@ for aid in attempted:
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven'}
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
+ if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'].strip(), f'empty or invalid status in {o["id"]}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
