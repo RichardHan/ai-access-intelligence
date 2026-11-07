@@ -101,8 +101,11 @@ def main():
             o["priority_tier"] = t
             counts[t] += 1
         o["priority_note"] = note_of(o, o.get("priority_score"))
-    now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
-    data["updated_at"] = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
+    if "latest_research_at" in data:
+        data["updated_at"] = data["latest_research_at"]
+    else:
+        now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
+        data["updated_at"] = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
     if "加入優先度評分與 S–D 分層" not in data.get("scope", ""):
         data["scope"] += "；" + now.strftime("%Y-%m-%d") + " 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）"
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2))
