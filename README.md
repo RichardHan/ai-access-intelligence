@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **873 筆**（669 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **850 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁與替代入口全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **875 筆**（671 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **26 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **843 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁與替代入口全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -47,6 +47,24 @@
 同一筆紀錄若累積了同網址的多筆來源，會讓批次驗證失敗；合併時保留最新 scope／evidence，較早的證據文字以「較早紀錄：」接在原字串後，不刪除。
 
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
+
+同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-08 16:03–16:20 本輪（兩段研究合併成同一批次）：起始 869 筆；局部複核 26 筆、新增 6 筆（5 機會、1 觀察線索）、追查失敗 2 筆、未完成複核 843 筆。第二段（本 agent）複核 `krater-student-fifteen-twenty-discount-conflict-watch`、`vast-startup-spend-match`、`medux-free-trial-3000-credits`、`cognee-free-memory-token-grant-conflict-watch`、`memobase-free-credit-operation-conflict`、`langwatch-developer-free-fiftyk-terms-conflict`、`google-ai-professional-certificate-tw-pro-3mo`，新增：
+
+[新竹市AI領航青年數位工具補助](https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323)：設籍新竹市16–40歲，直接向AI官網購買訂閱可事後核銷，一般50%／上限NT$3,000、特定對象與語言認證90%／上限NT$6,000；**購買期限115/4/2–10/31已過**，只有10月底前已買者可於11/30前送件，11/8頁面顯示剩餘經費NT$340,843（5.9%）、審核約12週；Poe／GoingBus等聚合平台與API、點數、Token、預付儲值一律不補。Taiwan Yes（限設籍新竹市）。
+
+[經濟部中小及新創企業署116年度深科技跨域研發補助](https://www.sme.gov.tw/article-tw-2275-15216)：每案上限NT$900萬且不超過全案總經費50%，須2家以上國內登記中小企業組聯盟、擇一主軸（代理式AI／永續AI／物理AI），補助款≦自籌款≦實收資本額，受理至2026-12-07 17:30、採線上申請與實體審查。Taiwan Yes（限國內登記營利事業，個人不適用）。
+
+[Krater 學生折扣](https://krater.ai/students)：同一頁六處寫15%、僅一處區塊標題殘留「20% off for 1 year」，改以15%為現行口徑（狀態 terms_conflict→conditional），並更正Max點數級距為10,000–100,000。[Medux](https://medux.io/pricing)：FAQ改寫為「New users start with 3,000 free trial credits」、`one-time`字樣已不在頁面，與首段「per month」仍衝突，方案表連續兩輪載入失敗。[Cognee](https://www.cognee.ai/pricing)：定價頁1M與帳務文件10M tokens兩份官方文件今日皆在線且互斥，維持並列。[Memobase](https://memobase.ai/)：首頁500 credits／月、store=10／search=1 credit、每月1日重置，與條款50 operations單位不同，改標官方來源。[LangWatch](https://langwatch.ai/pricing)：定價頁€0 free forever／50k events vs 條款14天試用並存，狀態改conflicting_official_usage_claims。
+
+[Google AI 專業證書三個月AI Pro](https://grow.google/intl/zh-TW_tw/ai-professional/)：台灣頁註腳仍寫2027-01-01，其直接連結的Google One條款（2025-07-31版、含`g1_landing_page=0`變體逐字相同）仍寫「redeemed by November 6, 2026」，該期限今日已過；兩說並列，不逕判可兌換或終止，勿為試用先付US$49/月課程費。
+
+[AutoClaw 萬聖節](https://autoclaw.z.ai/blog/news/M11W1/)到期文字衝突已可判讀：寫「expire on November 1」那句自稱本週獎勵並連向[上週公告M10W4](https://autoclaw.z.ai/blog/news/M10W4/)（10/26–11/1），屬沿用上週文案；本活動確為10/31 00:00–11/8 23:59（UTC+8）、每帳戶4,000 credits一次。
+
+[Perplexity Education](https://www.perplexity.ai/education)：`/education`、`/students`、help-center、`/pricing` 四個官方URL於16:2x全數403，無任何官方正文可支持「官方說法有差異」，狀態由 `conflicting_official_usage_claims` 降為 `unverified`、複核改每週；讀取失敗不證明停辦。
+
+下輪優先（第二段視角，前五項）：`autoclaw-halloween-40m-expiry-conflict-watch` 11/9確認活動下線與到期文字是否更正；`hsinchu-city-ai-youth-digital-tool-subsidy-2026` 追剩餘5.9%經費與是否提前停止收件；`google-ai-professional-certificate-tw-pro-3mo` 以瀏覽器實測兌換是否仍受理，並看條款是否更新為2027版；`moea-sme-deep-tech-cross-domain-rd-grant-116` 下載申請須知PDF補核撥款與核銷規定；`medux-free-trial-3000-credits` 等方案表後端修復後一次解決單價、重置與綁卡三個未知。
 
 2026-11-08 16:03–16:17 本輪：起始869筆；局部複核 `taipei-youth-ai-subscription-subsidy-2026`、`aocai-working-free-ai-courses-2026`、`autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`fal-flux3-max-five-daily-sandbox`、`stepfun-stepaudio3-music-gen-preview-nov8`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`aws-nonprofit-techsoup-budget-tiers`、`relevance-free-availability-conflict`、`gamma-free-credits-taiwan-unverified`、`fathom-free-meeting-summary-taiwan-unverified`、`seldon-pilot-up-to-three-k-ninety-days-terms-gap`、`voyage-free-tokens-batch-excluded`、`voiceflow-free-once-credit-amount-watch`、`lovable-student`、`lovable-student-discount`、`github-copilot-free`、`copilot-free`；新增機會 `google-gemini-for-education-fundamentals-free`、`make-ngo-program-twelve-month-pro-40k-ops`、`wistron-compute-donation-third-cohort-2027h1`，觀察線索 `amd-itri-mi300x-open-compute-2026-watch`；既有未完成850筆，`perplexity-watch` 與 `perplexity-education` 官方頁與文字代理全數403，僅記追查失敗。未登入、未申請、未付款。
 
