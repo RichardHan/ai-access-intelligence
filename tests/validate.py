@@ -39,6 +39,35 @@ assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
 assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
 assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
 assert run['completed_at']>=run['started_at'], 'completed_at precedes started_at'
+# A timestamp is a claim about when a page was actually read or the batch actually finished.
+# Parallel research reported times ahead of the real clock (2026-11-09 批次先寫 completed_at 02:40、
+# 13 筆 verified_at 在 02:08–02:34，而該批次 commit 是 01:46)，發布後網站就顯示還沒發生的
+# 「資料更新」。檢查在建置／push 前執行，所以領先的分鐘數只有在此時才看得到；容差 5 分鐘吸收
+# 寫入者與檢查者之間的正常時鐘差。
+STAMP_RE=__import__('re').compile(r'(\d{4}-\d{2}-\d{2})(?:[T ](\d{2}:\d{2}(?::\d{2})?))?')
+def latest_stamp(value):
+ if not isinstance(value,str): return None
+ found=[]
+ for day,clock in STAMP_RE.findall(value):
+  try: found.append(datetime.datetime.fromisoformat(day+('T'+clock if clock else 'T00:00')))
+  except ValueError: pass
+ return max(found) if found else None
+TZ_TPE=datetime.timezone(datetime.timedelta(hours=8))
+NOW=datetime.datetime.now(TZ_TPE).replace(tzinfo=None)
+TOLERANCE=datetime.timedelta(minutes=5)
+def assert_not_future(value,label):
+ stamp=latest_stamp(value)
+ assert stamp is None or stamp-NOW<=TOLERANCE, f'{label} is in the future ({value}); use the real clock'
+assert_not_future(d['updated_at'],'updated_at')
+assert_not_future(run['completed_at'],'last_research_run.completed_at')
+assert_not_future(run['started_at'],'last_research_run.started_at')
+# expires_at／deadline_at／effective_at are future by design (offer expiry, application deadlines).
+FIELDS=['verified_at','discovered_at','announcement_at','last_review_attempt_at','last_attempted_at']
+for o in d['offers']:
+ for field in FIELDS: assert_not_future(o.get(field),f'{field} in {o["id"]}')
+ for s in o['sources']: assert_not_future(s.get('accessed_at') or s.get('accessed_time_range'),f'accessed_at in {o["id"]}')
+ # A record cannot be verified after the batch that reports it finished.
+ assert not o.get('verified_at') or latest_stamp(o['verified_at'])<=latest_stamp(d['updated_at']), f'verified_at after batch completion in {o["id"]}'
 offers_by_id={o['id']:o for o in d['offers']}
 for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
 for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
