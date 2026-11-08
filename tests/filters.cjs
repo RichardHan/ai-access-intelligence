@@ -56,3 +56,9 @@ assert.strictEqual(closedRow.children[1].textContent,'已停止定期複核；�
 const unscheduledDetails=ctx.createDetails({status:'active',review_cadence:'monthly',next_review_at:null,eligibility:{},sources:[]});
 const unscheduledRow=unscheduledDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert.strictEqual(unscheduledRow.children[1].textContent,'每月輪替；未安排特定複核日期');
+const nullCadenceScheduled=ctx.createDetails({status:'active',review_cadence:null,next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const nullCadenceScheduledRow=nullCadenceScheduled.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(nullCadenceScheduledRow.children[1].textContent.startsWith('定期輪替；2026-11-20'),'unexpected cadence text for null cadence with scheduled date');
+const nullCadenceUnscheduled=ctx.createDetails({status:'active',review_cadence:null,next_review_at:null,eligibility:{},sources:[]});
+const nullCadenceUnscheduledRow=nullCadenceUnscheduled.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert.strictEqual(nullCadenceUnscheduledRow.children[1].textContent,'未指定週期；未安排特定複核日期');

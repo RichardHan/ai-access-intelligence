@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **859 筆**（657 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 07:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **13 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **844 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **860 筆**（658 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 08:40 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **843 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,46 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 08:10–08:40 本輪：起始859筆；局部複核 `gmi-a16z-first25-two-k-spend-five-k-credit`、`langwatch-developer-free-fiftyk-terms-conflict`、`respan-free-hundred-k-logs-terms-conflict`、`anthropic-external-researcher-access-safety`、`github-copilot-student`、`udio-free-music-credits`、`raycast-student-pro-discount`、`roboflow-core-free-tier`、`twai-aiga-startup-investment`、`kling-ai-free-generation-watchlist`、`duck-ai-free-chat`、`adobe-express-nonprofit-annual-250-generative`、`hetzner-inference-experimental-free`、`chatgpt-dots`、`crawl4ai-cloud-monthly-thousand-no-card`、`miro-education-monthly-team-hundred-ai` 共16筆；新增機會 `taiwan-ai-academy-citizen-ai-literacy` 共1筆，政策及線索各0筆；既有未完成843筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[GMI × a16z](https://www.gmicloud.ai/a16z)：頁面仍列前25家a16z投資公司、首月消費US$2,000解鎖US$5,000推論額度（有效90日）及dedicated endpoints八折；剩餘名額與起算日未列；[Console條款](https://www.gmicloud.ai/en/legal/console-terms-of-service)§6.4(b)確認退款時扣除免費額度價值，Exhibit A嚴禁未經許可轉售或向第三方提供GPU；台灣可用度未核。
+
+[LangWatch Developer](https://langwatch.ai/pricing)：Developer €0 forever宣稱在線（每月50k events、2 users、14天可讀、49天儲存、Instant Evals $1預算）；但[服務條款](https://langwatch.ai/legal/terms-conditions)§3.2載明14日試用後停用，且§14.1(6)禁止自動化工具或腳本存取，定價宣稱與條款衝突仍未解決；台灣個案資格未核。
+
+[Respan Free](https://www.respan.ai/pricing)：重大更正：Free方案免信用卡提供100,000 logs、1,000 scores及10 prompts（更正先前5 prompts紀錄）；[2026-10-27新版條款](https://www.respan.ai/legal/terms-of-use)明訂購買之Gateway額度12個月有效；官方10/23比較文稱logs按月計算，但scores重置邊界未標且定價主表未寫；條款§2/§3自動化及商業限制衝突仍未解；台灣可用性未知。
+
+[Anthropic 外部研究者](https://support.claude.com/en/articles/9125743-what-is-the-external-researcher-access-program)：高優先AI安全與對齊研究核准者US$1,000 API額度在線，每月第一個週一審查；[申請表](https://forms.gle/pZYC8f6qYqSKvRWn9)實測完整加載，確認需機構信箱、研究計畫及US-tax身分等；通用促銷額度預設一年有效，個別grant效期以通知為準；Taiwan列於API支援地區。
+
+[GitHub Copilot Student](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students)：GitHub Education學生免費Copilot在線，包含不限次程式碼補全；每月資格重評；官方確認學生方案含AI Credits但具體月額未公開（非付費Pro之1,500點）；排除部分付費專屬模型；台灣大專校院學生可依學校證明申請。
+
+[Udio 免費生成](https://www.udio.com/pricing)：免卡每日10 credits及額外每月100 credits在線；2025-10-29 UMG合作後全平台音訊/視訊/stems下載功能持續停用；[條款](https://www.udio.com/terms-of-service)§5.2明訂免費生成嚴禁商用、廣告或變現；FAQ稱使用者擁有輸出與現行ToS禁止下載之公開矛盾仍存。
+
+[Raycast 學生方案](https://www.raycast.com/faq)：學生Pro五折（標價US$10/月或US$96/年）在線，每月500 AI credits；[Typeform申請表](https://raycastapp.typeform.com/to/hSoIknLJ)實測開放收件中；[計費手冊](https://manual.raycast.com/billing)確認折扣碼單次使用，訂閱自動續費，排除Pro+/Max方案；台灣未列入服務排除地區，但學校核驗與本地付款未核。
+
+[Roboflow Core Free](https://roboflow.com/pricing)：免卡每月10共享credits在線；RF-DETR Nano每千張0.125點（全額推論約8萬張）；重大釐清：免費與預付額度用盡後多項核心功能直接停止（非自動扣款），付費Flex超額計費為分開機制；新工作區訓練授權可手動關閉；台灣可用度未核。
+
+[台智雲 AIGA](https://www.twcloud.ai/aiga-program/)：優先在臺註冊8年內AI新創之投資與算力回購計畫在線；申請連結目前需Google帳戶登入，未確認當期收件時程；六個月加速、算力回購額度綁定，投資/股權/算力額度未公開，不列免費補助。
+
+[Kling AI](https://app.klingai.com/global/membership/membership-plan)：重大更正：會員頁渲染確認Basic $0/月之包含月額與日額欄位均為橫線（無包含贈額）；[點數規則](https://kling.ai/docs/point-policy)釐清登入贈額僅限特定促銷且限訂閱者，$1=66點為購買比例非每日贈送；免費生成不授權商用且帶浮水印；宣傳Kling 4.0/3.0不代表Basic可用；維持觀察線索。
+
+[Duck.ai](https://duckduckgo.com/duckduckgo-help-pages/duckai/chat-models)：重大更新：免費可用模型清單更新為Claude Haiku 5.5（取代4.5 Haiku）、Mistral Small 4、GPT-6 Luna、GPT-5.4 mini、gpt-oss-120b及Gemma 4 31B；免帳號、匿名、每日限額在線；釐清預設不儲存之例外（主動反饋、加密同步與安全/法律保留）；台灣網路實用未核。
+
+[Adobe Express 非營利](https://www.adobe.com/tw/nonprofits.html)：一年免費最多50份Express Premium授權與每月250生成點在線，免卡不結轉；各員工須經GoodStack核驗；實際申請流程導向GoodStack驗證平台；台灣非營利組織適用性與審核通過率未核。
+
+[Hetzner Inference](https://docs.hetzner.com/general/company-and-policy/experiments/inference/)：實驗性免費API在線，提供Qwen3.6/3.8等開源模型；每金鑰速率限制為60秒10請求、400萬輸入及10萬輸出tokens，超限回429；不保證SLA；需已驗證之Hetzner帳戶；台灣新戶開戶審核與綁卡條件未核。
+
+[ChatGPT Dots](https://learn.chatgpt.com/docs/dots)：重大更新：模型清單新增支援GPT-6.1 Terra；納入Edu與Healthcare workspace（排除UAE居住地）；Enterprise管理員預覽開放至11/18，11/18起預設開啟並正式啟用付費計費，委派深度工作另收費；Pro/Business對話不計ChatGPT額度，深度Work/Codex依各自額度；Taiwan在支援清單。
+
+[Crawl4AI Cloud](https://crawl4ai.com/)：Free方案免卡每月1,000 credits、訪客20 credits在線；[API端點](https://api.crawl4ai.com/v1/prices)確認每10秒5次請求（10 RPM）、並行2、最多3把API keys；scrape每次0.5點、search每次1點；免費點數不結轉、用盡回402；伺服器區域限美歐新，台灣可用度未核。
+
+[Miro Education](https://miro.com/education-whiteboard/)：學生10人團隊（2年有效）與教師100人團隊在線，各團隊每月共用100 Miro AI credits（每曆月1日重置）；新增限制：每成員最多5次Flow runs及有限Sidekicks；需認可學校證明且無既有付費團隊；審核最長10工作日；個人申請主文與條款矛盾仍存。
+
+新增 [台灣人工智慧學校公民AI素養課程](https://aiforeveryone.aiacademy.tw/courses)：台灣人工智慧學校提供免費10小時線上AI素養課程，採Google Classroom自主學習，觀看影片並完成測驗可獲完課證書；另可[免費索取](https://docs.google.com/forms/d/e/1FAIpQLSfZgF2QsIj8wRZRKPaDuj8Cn2u_mVTasMvhJoFmNbtslTQ8yg/viewform)使用者與開發者AI素養教材；官方[報名表](https://docs.google.com/forms/d/e/1FAIpQLScENPBi2ndKVNuebORoIIg8NCEvvBcbjAVfI5F_UXkgqDmtnQ/viewform)明列台灣各地區選項，免信用卡；非API或算力額度，教材轉售與商業改作未核；Taiwan標記為Yes。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 修復卡片展開詳情中，若案例之 `review_cadence` 為 null 時，預設標籤因回退至泛用未核實函數而向讀者展示誤導性「未核實；[日期]」或「未核實；未安排特定複核日期」的介面缺陷；精確區分已有排定日期者顯示為「定期輪替；[日期]」，未排定者顯示為「未指定週期；未安排特定複核日期」；以單元測試實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`chatgpt-dots` 台北11/18 Enterprise預覽截止前查[Docs](https://learn.chatgpt.com/docs/dots)確認Workspace預設開啟與正式收費上線現況。
+
 2026-11-08 07:05–07:25 本輪：起始857筆；局部複核 `datacamp-free-access-week-november-2026`、`autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`aocai-working-free-ai-courses-2026`、`taipei-youth-ai-subscription-subsidy-2026`、`fujisoft-workforce-ai-security-poc`、`deepgram-startup-project-credit`、`anyscale-startup-twenty-k-byoc`、`agenta-hobby-daily-seventy-five-ten-days`、`google-gemini-academy-taiwan-educators-workshop-watch`、`zed-student-hard-ten-monthly`、`confident-ai-free-five-weekly-runs-gbmonth`、`nchc-teaching-free-compute` 共13筆；新增機會 `ragie-developer-free-thousand-pages-retrievals`、`neo4j-auradb-free-tier-200k-nodes` 共2筆，政策及線索各0筆；既有未完成844筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [DataCamp 免費週](https://www.datacamp.com/campaign/free-access-week-november-2026)：免費週活動開放至美東11/8 23:59（台北11/9 12:59）；免信用卡無限存取750+門課程、專案與證照；排除AI tutor、Microsoft Fabric及Google合作課程；期滿未付費自動回退，不產生自動扣款。
