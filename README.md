@@ -58,7 +58,7 @@
 
 新增 4 筆機會：[JetBrains Junie Lite](https://junie.jetbrains.com/docs/junie-lite.html)（免費基準模型層、非試用不到期、任何 JetBrains 帳號首次請求自動開通且免綁卡；官方不公布額度，稱正常用量近乎無上限但非無上限，容量見頂即停止且無降級；[服務地區清單](https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-territory/)含 Taiwan，故 Taiwan Yes）；[IteraCompute 免費 Qwen3.8-27B](https://iteracompute.com/free/)（每月3,000萬 tokens、160K TPM、128K context、免卡；限時至 2026-11-24 00:00 PT＝台北11/24 16:00，每月1日 00:00 UTC 重置，超額 429 不自動轉付費；頁面未列地區，Taiwan Unknown）；[KRAFTON Raon-1 mini Preview](https://raon-mini.krafton.ai/en)（限時免費 API、申請制、每人限額與結束日未公布、未來收費另公告，權重 Apache 2.0；Taiwan Unknown）；[Tencent EdgeOne Makers 免費版](https://edgeone.ai/document/211893332490612736)（內建模型50萬 tokens／月、40專案、建置500次／月、Edge Functions 300萬次／月；文件稱商業化後可能調整、目前從寬；未列地區與綁卡要求，Taiwan Unknown）。
 
-品質改善：修正「用量類型」篩選與「無限／暫時不限量」專區的資料來源（詳見維護段），並在 `tests/validate.py` 新增 `views` 與 `quota_classification` 一致性斷言。
+品質改善：修正「用量類型」篩選與「無限／暫時不限量」專區的資料來源（詳見維護段），並在 `tests/validate.py` 新增 `views` 與 `quota_classification` 一致性斷言；兩者可採取行動的專區現在一致排除已截止紀錄，`tests/filters.cjs` 另加「已截止不得進無限專區、但仍可從全庫搜尋」與「index.html 每個額度選項都對應資料」的斷言。本輪只合併本批次 18 筆內部的重複來源（如 antigravity 31→5、rime 18→2）；全庫仍有 385 筆累積 1,226 筆同網址重複來源，是下一輪可分批處理的資料衛生工作，處理方式沿用「最新 scope／evidence＋較早紀錄：」規則，不動其他欄位。
 
 下輪優先（前五項）：`iteracompute-free-qwen-3-8-27b-monthly-30m` 11/24 後確認免費層是否延續或改價（來源：iteracompute.com/free 與 free-tier-terms）；`antigravity-free` 11/18 後確認三個第三方模型是否如期移除、免費欄是否改列（來源：antigravity.google/docs/models）；`rime-stt-nov19-free-window` 11/20 後確認 Free 方案 STT 是否開始計費與並發數值（來源：rime.ai/pricing、rime.ai/terms）；`browserless-free-monthly-thousand-terms-conflict` 補找 ToS 版本日期或歷史快照以判斷 §11 是否曾改寫；`google-students-tw-plus` 以瀏覽器實測 SheerID 台灣學校是否可完成驗證，並盯 12/31 前是否出現兌換異常。Perplexity 兩筆維持 403 記錄，不刷新 `verified_at`。
 
