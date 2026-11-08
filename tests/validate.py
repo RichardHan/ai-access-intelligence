@@ -1,4 +1,4 @@
-import json,pathlib,math
+import json,pathlib,math,datetime
 import jsonschema
 p=pathlib.Path(__file__).resolve().parents[1]
 def unique_keys(pairs):
@@ -55,10 +55,18 @@ for aid in attempted:
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
 valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
+# The cadence string is a promise about re-check frequency and is shown to readers as
+# 「下次複核：每日／每週…」. Scheduling a 30-day review on a `daily` record hides it from the
+# rotation queue while the card still claims daily tracking, so cap the gap per cadence.
+MAX_CADENCE_GAP={'daily':3,'weekly':10,'biweekly':20}
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
+ cadence=o.get('review_cadence')
+ if cadence in MAX_CADENCE_GAP and o.get('verified_at') and o.get('next_review_at'):
+  gap=(datetime.datetime.fromisoformat(o['next_review_at'])-datetime.datetime.fromisoformat(o['verified_at'])).days
+  assert gap<=MAX_CADENCE_GAP[cadence], f'{cadence} cadence but next review {gap} days out (fix the label or the schedule): {o["id"]}'
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'

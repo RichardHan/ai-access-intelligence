@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **889 筆**（685 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 18:19 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **872 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 官方站仍 403，本輪改以官方 Help Center 的 Mintlify 文件主機全文索引讀取，已在來源列明）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **894 筆**（689 項機會、48 項政策、157 筆觀察線索），更新時間 **2026-11-08 19:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **16 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **873 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（DeepSeek 儲值與用量頁回 403，已改用官方價格文件核對可證部分並在該筆列出缺口）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天）。
 
 ## 使用方式
 
@@ -53,6 +53,18 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-08 19:05–19:37 本輪（接續 7460378 之後，獨立 commit）：起始 889 筆；局部複核 16 筆、新增 4 筆機會＋1 筆觀察線索（政策 0、追查失敗 0）、未完成複核 873 筆；結果 894 筆。開始時 `next_review_at` 已到期者 **0 筆**（前一輪當日已刷新），因此佇列改以「最久未核實且仍可行動」輪替（2026-10-29／10-30 批次，7 筆）＋ 當日 08:40 前核過但仍有來源衝突者（7 筆）＋ 兩筆 Taiwan Yes 的舊紀錄，當日已核過且無新訊號者不重複刷新。研究分工：3 個 subagent（最久未核輪替、衝突與證據缺口、新機會去重），主 agent 逐筆重讀關鍵官方來源、以自己讀取的時間寫入 `accessed_at`，並自行查核每個新候選。
+
+實質變動 3 筆。`kimi-free-web-app`：官方會員定價頁首次公布 Free 方案的非對話類上限（Agent 同時任務 1、Projects 2、專案儲存 500MB、排程與 Widget 各 2、Swarm 同時子任務 2，Kimi Code 僅付費），對話訊息數／token 與重置週期仍未公布，狀態改 `taiwan_availability_unverified`、標題改寫。`amp-hobby-free-grant-transition-watch`：舊紀錄「官方已停止新收件並縮減日額」的後半句沒有依據——2026-02-10 公告只說 Amp Free 停止新收件、既有用戶仍每日 US$10，且現行 Hobby 是 $0 自備模型（BYOK）「No Amp token fees or limits」，屬平台不收 token 費而非推論免費；狀態改 `conditional`、標題與摘要重寫。`requesty-startup-thousand-six-month-gateway-waiver` 補「官方稱 48 小時內完成審核並加到組織」。衝突未解但補證據 5 筆：`nscale-signup-five-current-docs-conflict`（現行 quickstart 只寫「Early users may be eligible for free credits」並要求先加值 US$5）、`luma-dream-machine-free-generation-watchlist`（Payments FAQ 另列 Lite／Unlimited 兩檔，主定價頁都沒有，屬第二層命名矛盾）、`medux-free-trial-3000-credits`（頁尾第三處文案證實矛盾是「per month」對「new users start with」）、`deepseek-new-user-grant`（價格文件只證實優先扣贈送餘額，儲值頁 403）、`zai-startups-api-credits-watch`（up to 1B tokens 仍為上限宣稱，無核配級距）。純複核無變動 8 筆：`kaggle-free-notebook-compute`、`modal-starter`、`julius-free-daily-twentyfive-welcome-seventyfive`、`paperpal-free-five-ai-daily-two-hundred-corrections`、`sourcery-oss-free-rolling-diff-budget`、`genially-education-free-500-ai-credits-year`、`wispr-flow-student-three-month-pro-annual-half`、`magicschool-free-educator-generation-limited`（數字與資格敘述全部吻合，僅更新來源查閱時間與核實範圍）。
+
+新增 4 筆機會：[Freebuff Free](https://freebuff.com/plans)（$0、免卡、每日 30 小時額度於當地午夜重置不累積、每個 1 小時 session 訊息不限；Free 只有 DeepSeek V4.1 Flash Slow／10-17 兩款，其餘需 Starter US$8／月起；首頁稱以廣告支撐；地區條款未列）、[IndicStack Free Trial](https://indicstack.ai/pricing)（新戶 ₹2,000、15 天、6 款 Unlimited models、20 RPM／1 併發／1 key；付費 ₹2,499／月起未含 18% GST；購買額度不失效）、[XCrawl](https://www.xcrawl.ai/)（新帳號 1,000 free credits、免卡；文件示例 scrape 1 credit、JSON 抽取 5 credits；無 pricing／terms 頁，效期未知）、[Entire Agent 試用](https://docs.entire.com/billing)（每計費帳戶一次性 US$100、90 天、需驗證卡片不扣款，但官方明示新帳號試用 **temporarily paused**，狀態 `paused`）。觀察線索 1 筆：[火山方舟 11.11](https://www.volcengine.com/activity/ai618)（頁面同時寫「2500 萬 Tokens 免費領取」與「單模型 50 萬 Tokens」，未說明是否為加總，也未列期限、名額與實名條件）。
+
+品質改善：複核週期標籤與排程長期不一致（前一輪結算 35 筆 `daily` 的 `next_review_at` 距 `verified_at` 4–30 天，其中 13 筆 30 天，其餘另有 6 筆 `weekly` 排到 21 天後）。這讓卡片顯示「下次複核：每日；12/08」而佇列實際一個月才輪到，讀者與維護者都會誤判追蹤強度。本輪把 41 筆的 cadence 改成實際排程（4–10 天→weekly、11–20 天→biweekly、≥25 天→monthly），未改 `next_review_at`、不影響當日佇列；並在 `tests/validate.py` 加斷言 `daily ≤3／weekly ≤10／biweekly ≤20` 天，以注入 `octoparse-ai-free-new-user-five-credit` 30 天排程確認會以「daily cadence but next review 30 days out」失敗。另把 `kaggle-free-notebook-compute` 的 6 筆來源（同網址 2 筆）合併為 5 筆，避免本批次驗證失敗。
+
+工具經驗：`www.kimi.com/membership/pricing` 與 `startup.z.ai` 純 curl 只有 JS 外殼，需 Chromium 渲染；`kaggle.com/docs/*` 直取回空殼，但 `*.md` 路徑（如 `https://www.kaggle.com/docs/efficient-gpu-usage.md`）回純文字；`docs.entire.com/billing` 自動改走 `.md`；`julius.ai/docs/*.md` 與 `docs.nscale.com/*.md` 皆可直接讀。`xd://` 的 Python `tab.run(...)` 傳字串只回傳字串本身，頁內求值要用 `tab.evaluate(...)`。資料檔重寫務必維持原本 2 空格縮排，否則整檔 diff（本輪曾誤用 indent=1 產生 154k 行變更，已改回）。
+
+下輪優先（前五項）：`perplexity-watch`／`perplexity-education` 再試 `www.perplexity.ai/pricing` 是否解除 403，並追 3/日 vs 5/日與 unlimited vs 週限兩處矛盾（來源：Help Center 索引、定價頁）；`entire-agents-trial-credit-paused` 追試用何時恢復發放（來源：docs.entire.com/billing 的 Free Trial 提示）；`freebuff-free-coding-agent-daily-hours` 找官方條款與地區名單（第三方稱僅 25 國完整模式，官方頁未載）；`volcengine-ark-1111-token-giveaway-watch` 讀活動規則頁確認 2,500 萬是否為每模型 50 萬的加總，以及台灣帳號能否完成實名（來源：docs.volcengine.com 活動規則、ark 免費額度文件）；`kimi-free-web-app` 追對話訊息額度是否公布並確認 Free 是否含 Kimi Code（來源：kimi.com/membership/pricing、kimi.ai/ai-models/kimi-k2-5）。
 
 2026-11-08 18:05–18:19 本輪（接續 5e7f338 之後，獨立 commit）：起始 884 筆；局部複核 12 筆、新增 5 筆機會（政策 0、觀察線索 0、追查失敗 0）、未完成複核 872 筆；結果 889 筆。開始時 `next_review_at` 已到期者為 **0 筆**（前一輪當日已刷新 236 筆），故佇列改以「最久未核實且仍可行動」輪替（2026-10-25–10-30 批次）＋ 48 小時內到期項 ＋ 新機會為主；當日已於 01:30–17:23 複核過的紀錄不重複刷新。研究分工：3 個 subagent（臨期／付款風險、最久未核與來源衝突、新機會去重），主 agent 逐筆重讀關鍵來源後才寫入，時間戳一律用自己的讀取時間。
 
