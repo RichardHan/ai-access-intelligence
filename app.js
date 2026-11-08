@@ -110,7 +110,8 @@ function matches(o, f = {}) {
   return (!f.q || JSON.stringify(o).toLowerCase().includes(String(f.q).trim().toLowerCase()))
     && (!f.type || o.record_type === f.type)
     && (!f.cost || typeof o.setup_cost_usd === 'number' && o.setup_cost_usd <= Number(f.cost))
-    && (!f.effort || typeof o.effort_minutes_max === 'number' && o.effort_minutes_max < Number(f.effort))
+    // 邊界含等於：選「15 分鐘」必須包含正好需 15 分鐘的紀錄（109 筆），否則最省力的方案會被濾掉。
+    && (!f.effort || typeof o.effort_minutes_max === 'number' && o.effort_minutes_max <= Number(f.effort))
     && (!f.taiwan || o.taiwan === f.taiwan)
     && (!f.region || (o.regions || []).includes(f.region))
     && (!f.usage || o.quota_classification === f.usage)

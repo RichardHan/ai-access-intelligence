@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **884 筆**（680 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 17:23 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **862 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 兩筆沿用前一筆批次的 403 追查紀錄，本輪未重查、未刷新 `verified_at`）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **889 筆**（685 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 18:19 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **872 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 官方站仍 403，本輪改以官方 Help Center 的 Mintlify 文件主機全文索引讀取，已在來源列明）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -44,6 +44,8 @@
 
 同一 URL 再次查核時就地更新該筆來源（scope、evidence、查閱時間），不新增重複條目；`tests/validate.py` 對本輪批次強制「無重複 URL」與「每筆至少一個本次查閱時間」，前端則把同網址的歷次查核收在「較早的 N 筆同網址紀錄」內。
 
+數值型篩選門檻一律「含等於」，標籤也要寫清楚是 ≤。2026-11-08 修掉「設定時間」用嚴格小於比對的錯誤：選 15 分鐘會排除正好需 15 分鐘的 109 筆（全庫 205 筆落在 5／15／30／60 邊界），修正後為 9／138／300／343 筆。`tests/filters.cjs` 原本用 `!f(free,{effort:'15'})` 把錯誤行為釘住，這類「現況即測試」的斷言必須改成規格值，並補一個邊界外的反向案例（16 分鐘不得入 15 分鐘）。
+
 重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
 
 同一筆紀錄若累積了同網址的多筆來源，會讓批次驗證失敗；合併時保留最新 scope／evidence，較早的證據文字以「較早紀錄：」接在原字串後，不刪除。
@@ -51,6 +53,18 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-08 18:05–18:19 本輪（接續 5e7f338 之後，獨立 commit）：起始 884 筆；局部複核 12 筆、新增 5 筆機會（政策 0、觀察線索 0、追查失敗 0）、未完成複核 872 筆；結果 889 筆。開始時 `next_review_at` 已到期者為 **0 筆**（前一輪當日已刷新 236 筆），故佇列改以「最久未核實且仍可行動」輪替（2026-10-25–10-30 批次）＋ 48 小時內到期項 ＋ 新機會為主；當日已於 01:30–17:23 複核過的紀錄不重複刷新。研究分工：3 個 subagent（臨期／付款風險、最久未核與來源衝突、新機會去重），主 agent 逐筆重讀關鍵來源後才寫入，時間戳一律用自己的讀取時間。
+
+實質變動 8 筆。`perplexity-watch`／`perplexity-education` 長期 403 的官方正文，本輪改由官方 Help Center 的 Mintlify 文件主機全文索引 `https://perplexity-help-center.mintlify.app/llms-full.txt`（1.94 MB，內含 canonical `www.perplexity.ai/help-center` 連結）取得：Pro 為 **US$20/月或200/年**、付費 Pro 無固定月點數改為每週 Computer 用量（不結轉）、另有一次性約 4,000 credits（約30天到期）、auto-refill 預設關閉；但免費 Pro Search 上限官方兩說（比較表 3/日 vs 帳戶管理文 five per day），Education Pro 亦兩說（介紹文 unlimited Pro Searches vs 比較表 Weekly limits），兩筆狀態分別改 `conflicting_official_usage_claims`，Education Pro 並補上 **US$10/月（SheerID 驗證）**。`canva-education-k12-teachers-ai`：AI 用量頁改版，舊紀錄「約200次Premium／20次Ultra」已不在頁面，現為「Education 為 Canva Free 的 10 倍」且**每位成員各自額度、不共用不合池**；同頁 Premium/Ultra 可用方案清單仍未列 Education，衝突保留，狀態改 `conflicting_official_usage_claims`。`lindy-free-fifty-dollar-seven-day-trial`：現行最低付費為 **Team US$29.99/月含3,000 credits**（4,000／5,000 credits 為 39.99／49.99），舊紀錄「49.99 起」更正，狀態改 `active`；ToS 2026-11-03 版明列 workspace trial 席位可能轉付費。`temporal-startup-six-k-one-year-active-funded` 與 `elevenlabs-impact-nonprofit-pro` 的台灣資格由 Unknown 改條件式 **Yes**：前者 ToS 禁制地區含中國、香港而未列台灣，後者 Impact 條款 §1(c) 僅排除美國全面制裁地區；同時補記額度耗盡當月開票、促銷額度有到期日、單一組織一帳戶。`synthesia-basic-monthly-ten-min-five-hundred-no-download`：到期句寫「2026-11-09 23:59 BST」，但該日英國已轉 GMT，台北換算為 **11/10 06:59–07:59**，舊紀錄只寫 06:59 屬未標註的換算假設。`autoclaw-halloween-40m-expiry-conflict-watch`：頁面自 11/3 未再編輯，「expire on November 1」與上週 M10W4 的到期句**逐字相同**且連往上週活動頁，判為殘留文案，本檔條款一致為 11/8 23:59，頁面「up to 80M」今日已不可達，狀態改 `conditional`（官方未發布更正，仍未知能否登入領取）。
+
+無狀態變更、僅補細節 4 筆：`google-skills-student-200-credits-taiwan`（申請處理最多兩週、額度用盡可再申請、無申請截止日）、`prowritingaid-education-k12-global`（官方「available globally. However, specific regional rules may apply.」、三學年授權、兩個工作日審核）、`notion-business-trial-standard-select-credits`（Business 現行 US$20/成員/月、期滿續訂與取消步驟）、`krisp-seven-day-no-card-meeting-ai-trial`（7 天免卡、Core US$16/月）。
+
+新增 5 筆機會：[Nous Portal Free](https://portal.nousresearch.com/manage-subscription)（US$0／月、每月 US$0 credits、限用 FREE 模型並為 Standard rate limits；模型頁列 LongCat-2.5:Free、Reflection Beam 1.0、Crouton Alpha、StepFun Step 3.7 Flash、Upstage Solar Mini 4；條款 13 歲以上、Free Trial 免卡但保留驗證權；台灣 Unknown）；[Kiroween 2026](https://kiroween.devpost.com/rules)（AWS／Devpost 黑客松，參賽者可經表單申請一次性 **4,000 Kiro credits**，申請至 12/1 12:00 PT、兌換至 12/4、點數 12/31 23:59 PT 失效，以官方 add-on US$0.04/credit 約值 US$160；排除國家名單未列台灣，故條件式 Taiwan Yes）；[Oumi Free](https://oumi.ai/pricing)（公司信箱 US$50／個人信箱 US$25 credits、3 個月、一次性）；[Simular box](https://box.simular.ai/)（每帳號一台免費雲端 Linux 桌面，box 本體免費、模型呼叫吃帳戶每日 credits，MCP 端點 2026-11-04 變更；每日點數未公布）；[騰訊 Hy4 免費窗](https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/)（官方新聞稿明寫 11/4–15 WorkBuddy 與 CodeBuddy 免費、TokenHub Hy4 5 折至 12/31；額度與台灣註冊未公布）。子代理另建議新增 AutoClaw M11W2，查證後**已在資料庫**（`autoclaw-weekly-perk-november-nine-hundred-million-tokens`），未重複收錄。
+
+品質改善：修正「設定時間」篩選的邊界錯誤。`app.js` 以嚴格小於比對，選「15 分鐘」會排除**正好需 15 分鐘**的 109 筆（全庫 205 筆落在 5／15／30／60 邊界上），修正為含等於並把標籤改為「設定時間 ≤」；`tests/filters.cjs` 原本斷言 `!f(free,{effort:'15'})` 正是把錯誤行為釘住，已改為含等於並補上「16 分鐘不得入 15 分鐘」的反向斷言。瀏覽器實測筆數由 0／29／227／329 變為 **9／138／300／343**（5／15／30／60 分鐘），且 `work-codex-free`（15 分鐘）可由「15 分鐘」篩選查到。另記錄兩項工具經驗：`grow.google` 與部分官網需 `curl --compressed` 才不會拿到 gzip 二進位；`qoder.com/pricing`、`canva.com/help` 純 curl 為 JS 外殼或 403，須用 Chromium 渲染。
+
+下輪優先（前五項）：`perplexity-watch`／`perplexity-education` 追官方是否清理 3/日 vs 5/日、unlimited vs 週限兩處矛盾，並再試 `www.perplexity.ai/pricing` 是否解除 403（來源：Help Center 索引與定價頁）；`kiroween-2026-hackathon-4000-credits` 在 12/1 申請截止前確認 Credit Request Form 是否另有地區欄位、Kiro 帳號從台灣註冊是否受阻（來源：devpost rules、kiro.dev）；`tencent-hy4-workbuddy-codebuddy-free-window-nov4-15` 11/15 後確認免費窗是否結束、是否出現額度或條款頁（來源：tencent.com 新聞稿、TokenHub 文件）；`taipei-youth-ai-subscription-subsidy-2026` 11/10 當日掃最新公告是否臨時停收（來源：青年局服務頁與公告列表）；`synthesia-basic-monthly-ten-min-five-hundred-no-download` 11/10 07:59 後確認 launch credits 段落是否改寫、定價表「valid for 1 month」是否同步（來源：help.synthesia.io Syren credits、synthesia.io/pricing）。待處理資料債（本輪結算值）：35 筆 `review_cadence: daily` 的 `next_review_at` 距 `verified_at` 超過 3 天或未排程（標籤與排程不一致）；26 筆零成本且仍有效的機會紀錄未標 `free` view（含 `claude-watch`、`gemini-watch`），使「免費方案」專區漏掉它們；369 筆累積 1,148 筆同網址來源，需分批依「最新 scope／evidence＋較早紀錄：」規則壓縮。
 
 2026-11-08 17:05–17:23 本輪（接續 bf78918 之後，獨立 commit）：起始 880 筆；局部複核 18 筆、新增 4 筆機會（政策 0、觀察線索 0、追查失敗 0）、未完成複核 862 筆；結果 884 筆。研究分工：3 個 subagent 分別處理時效／到期、衝突與最久未核輪替、新機會去重；主 agent 自行重讀關鍵來源（Cloudflare、Rime、AOCAI、Google 台灣公告、Browserless ToS、Canva AI 說明頁）並以自己讀取的時間寫入 `accessed_at`，未採用未核對的回報時間。
 
