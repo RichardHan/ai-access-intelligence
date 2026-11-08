@@ -164,3 +164,40 @@ for(const o of unlimitedByQuota.filter(x=>!['expired','expired_unverified','clos
   assert(f(o,{view:'unlimited'}),'open unlimited record must appear in the preset: '+o.id);
 }
 console.log('PASS: closed records leave the unlimited preset but remain searchable; open unlimited records still appear.');
+
+// 服務地區篩選曾用 (o.regions||[]).includes(f.region) 做字串完全比對，但 regions 是自由文字：
+// 26 種寫法（TW／Taiwan／Taipei, Taiwan／GLOBAL／Worldwide／United States…）。結果選「Taiwan」
+// 漏掉 6 筆 taiwan=Yes 但存成 "TW" 的紀錄，71 筆有地區值的紀錄在任何選項下都查不到。
+// 以下為規格值：別名必須歸入同一桶，且不得把 Unknown 或空值塞進 Other。
+assert(ctx.regionMatches({regions:['TW']},'Taiwan'),'TW must match the Taiwan region option');
+assert(ctx.regionMatches({regions:['Taipei, Taiwan']},'Taiwan'),'"Taipei, Taiwan" must match the Taiwan option');
+assert(ctx.regionMatches({regions:['Taiwan']},'Taiwan'));
+assert(!ctx.regionMatches({regions:['TW']},'US'),'TW must not match the US option');
+assert(ctx.regionMatches({regions:['United States']},'US'),'"United States" must match the US option');
+assert(ctx.regionMatches({regions:['GLOBAL']},'Global'),'"GLOBAL" must match the Global option');
+assert(ctx.regionMatches({regions:['Worldwide']},'Global'),'"Worldwide" must match the Global option');
+assert(!ctx.regionMatches({regions:['Global']},'Taiwan'));
+assert(ctx.regionMatches({regions:['Japan']},'Other'),'a named non-global/US/Taiwan region must match Other');
+assert(ctx.regionMatches({regions:['Other']},'Other'));
+assert(!ctx.regionMatches({regions:['Unknown']},'Other'),'Unknown region must not be filed under Other');
+assert(!ctx.regionMatches({regions:[]},'Other'),'an empty region list must not match Other');
+assert(!ctx.regionMatches({regions:['Japan']},'Taiwan'),'Japan must not match Taiwan');
+
+// Regression: the data actually contains these variants, and every record that claims a
+// Taiwan region must be reachable from the Taiwan option (previously 6 Taiwan=Yes were lost).
+const twVariant=d.offers.find(o=>(o.regions||[]).some(v=>['TW','Taipei, Taiwan'].includes(v)));
+assert(twVariant,'dataset should still hold a TW/Taipei, Taiwan region variant to guard against');
+for(const o of d.offers){
+  if(!(o.regions||[]).some(v=>['TW','Taiwan','Taipei, Taiwan'].includes(v))) continue;
+  assert(f(o,{region:'Taiwan'}),'record claiming a Taiwan region must appear under the Taiwan option: '+o.id);
+}
+for(const o of d.offers){
+  if(!(o.regions||[]).includes('United States')) continue;
+  assert(f(o,{region:'US'}),'record claiming United States must appear under the US option: '+o.id);
+}
+const regionSelect=/<select name="region">([\s\S]*?)<\/select>/.exec(fs.readFileSync(__dirname+'/../index.html','utf8'));
+assert(regionSelect,'region filter select missing from index.html');
+const regionValues=[...regionSelect[1].matchAll(/<option value="([^"]*)"/g)].map(m=>m[1]).filter(Boolean);
+assert.strictEqual(regionValues.length,4,'region filter option count changed without a matching data check');
+for(const v of regionValues) assert(d.offers.some(o=>ctx.regionMatches(o,v)),'region filter option without any matching record: '+v);
+console.log('PASS: region filter matches aliases (TW/Taipei Taiwan/United States/GLOBAL/Worldwide), keeps Unknown out of Other, and every index.html region option matches data.');

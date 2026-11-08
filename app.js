@@ -106,6 +106,33 @@ function viewMatches(o, view) {
   return (o.views || []).includes(view);
 }
 
+// regions is free text with 26 distinct spellings (TW, Taiwan, Taipei, Taiwan, GLOBAL,
+// Worldwide, United States…). Exact matching against the four select options silently
+// dropped 71 records from every region choice, including 6 Taiwan=Yes records stored as
+// "TW". Bucket each value instead so a region choice returns every record that claims it.
+const REGION_BUCKETS = {
+  global: ['global', 'global / country eligibility unverified', 'worldwide', 'worldwide / individual eligibility unverified'],
+  us: ['us', 'united states', 'united states of america'],
+  taiwan: ['tw', 'taiwan', 'taipei, taiwan'],
+  other: ['other']
+};
+function regionMatches(o, region) {
+  const wanted = String(region).toLowerCase();
+  const bucket = REGION_BUCKETS[wanted];
+  const values = (o.regions || []).map(value => String(value).trim().toLowerCase());
+  if (bucket) {
+    if (values.some(value => bucket.includes(value))) return true;
+    // 'Other' also covers a named region that is not global/US/Taiwan (Japan, EU, India…),
+    // which a reader choosing the fourth option expects; unknown/empty stays out of every bucket.
+    if (wanted === 'other') {
+      const known = new Set(Object.entries(REGION_BUCKETS).filter(([key]) => key !== 'other').flatMap(([, list]) => list));
+      return values.some(value => value && value !== 'unknown' && !known.has(value));
+    }
+    return false;
+  }
+  return values.includes(wanted);
+}
+
 function matches(o, f = {}) {
   return (!f.q || JSON.stringify(o).toLowerCase().includes(String(f.q).trim().toLowerCase()))
     && (!f.type || o.record_type === f.type)
@@ -113,7 +140,7 @@ function matches(o, f = {}) {
     // 邊界含等於：選「15 分鐘」必須包含正好需 15 分鐘的紀錄（109 筆），否則最省力的方案會被濾掉。
     && (!f.effort || typeof o.effort_minutes_max === 'number' && o.effort_minutes_max <= Number(f.effort))
     && (!f.taiwan || o.taiwan === f.taiwan)
-    && (!f.region || (o.regions || []).includes(f.region))
+    && (!f.region || regionMatches(o, f.region))
     && (!f.usage || o.quota_classification === f.usage)
     && (!f.verification || o.verification === f.verification)
     && (!f.view || viewMatches(o, f.view))
