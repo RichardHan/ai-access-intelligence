@@ -12,7 +12,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "offers.json"
 
 DEAD = {"expired", "expired_unverified", "closed", "applications_closed",
-        "closed_to_new_subscriptions", "sunset_announced", "resolved_rumor_disproven"}
+        "closed_to_new_subscriptions", "sunset_announced", "resolved_rumor_disproven",
+        "duplicate_merged"}
 ALIVE = {"active", "active_verified"}
 VER = {"Official": 3, "Community reported": 1.5, "Unverified": 0.5}
 QUOTA = {"OFFICIALLY UNLIMITED": 3, "TEMPORARILY UNLIMITED": 2.5,
@@ -65,7 +66,9 @@ def note_of(o, s):
         return "非機會紀錄（政策/待覆核），未評級"
     ver = {"Official": "官方", "Community reported": "社群回報", "Unverified": "未驗證"}.get(o.get("verification"), "未知證據")
     status = o.get("status")
-    st = "活躍" if status in ALIVE else "已截止" if status in DEAD else "申請制" if status == "application_based" else "條件式"
+    st = ("重複・已併入其他紀錄" if status == "duplicate_merged" else
+          "活躍" if status in ALIVE else "已截止" if status in DEAD else
+          "申請制" if status == "application_based" else "條件式")
     if o.get("setup_cost_usd") == 0 and o.get("recurring_cost_usd") == 0:
         cost = "免費"
     elif o.get("setup_cost_usd") == 0:

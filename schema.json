@@ -141,6 +141,14 @@
               "no_restriction_found",
               "restriction_found"
             ]
+          },
+          "duplicate_of": {
+            "description": "duplicate_merged 專用：指向同一方案的較早紀錄 ID；有值時 status 必須為 duplicate_merged。",
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-z0-9-]+$"
           }
           ,
           "unknowns": {

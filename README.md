@@ -4,11 +4,11 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **869 筆**（665 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 13:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **17 筆**既有案例，新增機會 **3 筆**、政策 **1 筆**、觀察線索 **1 筆**；其餘 **847 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **873 筆**（669 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **850 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁與替代入口全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
-可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、證據與用量篩選。免費專區排除已截止、疑似過期及宣布終止的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
+可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、證據與用量篩選。免費專區排除已截止、疑似過期、宣布終止及重複收錄的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
 
 - [完整研究資料](data/offers.json)
 - [政策歷史](data/policy-history.json)
@@ -42,7 +42,27 @@
 
 同一 URL 再次查核時就地更新該筆來源（scope、evidence、查閱時間），不新增重複條目；`tests/validate.py` 對本輪批次強制「無重複 URL」與「每筆至少一個本次查閱時間」，前端則把同網址的歷次查核收在「較早的 N 筆同網址紀錄」內。
 
+重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
+
+同一筆紀錄若累積了同網址的多筆來源，會讓批次驗證失敗；合併時保留最新 scope／evidence，較早的證據文字以「較早紀錄：」接在原字串後，不刪除。
+
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
+
+2026-11-08 16:03–16:17 本輪：起始869筆；局部複核 `taipei-youth-ai-subscription-subsidy-2026`、`aocai-working-free-ai-courses-2026`、`autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`fal-flux3-max-five-daily-sandbox`、`stepfun-stepaudio3-music-gen-preview-nov8`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`aws-nonprofit-techsoup-budget-tiers`、`relevance-free-availability-conflict`、`gamma-free-credits-taiwan-unverified`、`fathom-free-meeting-summary-taiwan-unverified`、`seldon-pilot-up-to-three-k-ninety-days-terms-gap`、`voyage-free-tokens-batch-excluded`、`voiceflow-free-once-credit-amount-watch`、`lovable-student`、`lovable-student-discount`、`github-copilot-free`、`copilot-free`；新增機會 `google-gemini-for-education-fundamentals-free`、`make-ngo-program-twelve-month-pro-40k-ops`、`wistron-compute-donation-third-cohort-2027h1`，觀察線索 `amd-itri-mi300x-open-compute-2026-watch`；既有未完成850筆，`perplexity-watch` 與 `perplexity-education` 官方頁與文字代理全數403，僅記追查失敗。未登入、未申請、未付款。
+
+[fal FLUX 3 Max](https://fal.ai/flux-3-max)：11/8 00:00 UTC起由75%折扣改為50%（720p $0.085/秒），11/23 00:00 UTC恢復$0.17；模型頁寫促銷至11/22、landing寫11/21、[舊免費頁](https://fal.ai/flux-video) FAQ仍寫12/31，三方不一致；原「每日3／4／5部免費影片」文案已不在任何官方頁，改記為付費折扣、移出免費篩選。
+
+[AWS非營利](https://www.techsouptaiwan.org/node/7472)：台灣科技濃湯三個商品頁正文明列「提供給臺灣合格的非營利組織和公共圖書館」，年度預算分三級給US$1,000／2,000／5,000等值點數（行政費NT$3,155／6,309／15,773），每會計年度一筆、教育機構不適用、須綁卡AWS帳戶；台灣由 Unknown 改判 Yes（限非營利與公共圖書館），並由觀察線索改列機會紀錄（S 級）。
+
+[青年局AI工具補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)：服務頁（9/22更新）與[公告列表](https://youth.gov.taipei/announcement/latest-announcement)第一頁（最新11/5）仍未見用罄或停收公告，11/10為書面送達最後日；8–10月已訂閱者才可核銷。[AOCAI 11/11台北班](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3535)報名至11/09 23:59、0元、上限300人。
+
+[Wistron×Garage+第三屆](https://garageplus.asia/wistronpower)：每案5,000–33,000 H100 GPU小時、使用期2027/02/25–08/23（最長25週），申請至2026/12/13 23:59，新創須具台灣連結之一、學研限台灣大專院校。[Make NGO](https://www.make.com/en/ngo-program)：合格非營利12個月Pro、每月40,000 operations，學校不適用，未列國別清單故台灣維持Unknown。[Gemini for Education](https://edu.google.com/intl/ALL_tw/ai/gemini-for-education/)：機構註冊免費Fundamentals即可用、須管理員開啟，個人不能自辦。
+
+[Synthesia](https://help.synthesia.io/en/articles/17697950-how-do-syren-credits-work)：Basic新用戶同享1,000 Syren launch credits，2026-11-09 23:59 BST（台北11/10 06:59）到期，到期改扣標準credits且不通知；定價表「valid for 1 month」與固定到期日衝突未解。[AutoClaw](https://autoclaw.z.ai/blog/news/M11W1/)萬聖節活動今日23:59結束、到期文字11/1與11/8仍並存；下週[100M活動](https://autoclaw.z.ai/blog/news/M11W2/)11/9 00:00才開始。[Airtop](https://portal.airtop.ai/shutdown)11/13停服、新註冊與升級已關閉，定價頁Free屬殘留。
+
+品質改善：新增 `duplicate_merged` 狀態與 `duplicate_of` 欄位（前端標示、退出免費篩選、評分列D），並以標題完全相同的斷言攔到既有重複；本輪併入4筆重複收錄（`copilot-free`→`github-copilot-free`、`lovable-student-discount`→`lovable-student`、`google-ai-educator-series-free`→`google-ai-educator-series-taiwan`、`together-startup-accelerator`→`together-startup-accelerator-tiers`），同時合併5筆紀錄內同網址的重複來源。
+
+下輪優先：`taipei-youth-ai-subscription-subsidy-2026` 11/10當天早上查[公告列表](https://youth.gov.taipei/announcement/latest-announcement)是否停收；`synthesia-basic-monthly-ten-min-five-hundred-no-download` 11/10 06:59後確認Syren到期與比較表是否改寫；`fal-flux3-max-five-daily-sandbox` 查11/21–11/23折扣結束日三方矛盾是否收斂；`autoclaw-halloween-40m-expiry-conflict-watch` 11/9查活動是否已下線、到期文字是否更正；`aws-nonprofit-techsoup-budget-tiers` 補查「臺灣合格非營利」的法律形式清單與NT$行政費稅務說明。
 
 2026-11-08 12:10–13:20 本輪：起始864筆；局部複核 `datacamp-free-access-week-november-2026`、`gmi-a16z-first25-two-k-spend-five-k-credit`、`fal-flux3-max-five-daily-sandbox`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`kiro-startup-pro-plus-2026`、`retool-nonprofit-monthly-coupon`、`amazon-ara-multilingual-contextual-ai-fall-2026`、`neo4j-startup-aura-twentyk-application-unavailable`、`manus-startups-redirect-current-unverified`、`google-ai-professional-certificate-tw-pro-3mo`、`grammarly-student-annual-half-first-period`、`taiwan-hrd-free-ai-introduction-2026`、`vast-startup-spend-match`、`snowflake-ai-trial-2026`、`mem0-hobby-memory-api`、`speechify-api-free-monthly-500k`；新增機會 `cht-google-ai-plus-first-year-free-2026`、`taiwan-mobile-free-ai-life-course-2026q4`、`heygen-voice-turbo-free-api-until-2026-11-30`，政策 `taipei-industry-incentive-ai-rd-batch2-2026`，觀察線索 `medux-free-trial-3000-credits`。`perplexity-watch`、`perplexity-education` 八個官方 URL 全數 403，記為追查失敗、未刷新核實時間。未登入、申請、付款或兌換。
 

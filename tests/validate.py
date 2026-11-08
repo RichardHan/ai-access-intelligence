@@ -11,6 +11,21 @@ d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);j
 history=json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
 assert all(h['record_id'] in ids for h in history), 'unknown policy history record_id'
+# Two records for one plan render as two cards with independent status/tier, so a duplicate
+# title is a data error: merge into the earlier ID and re-point policy history instead.
+titles={}
+for o in d['offers']:
+ norm=' '.join(o['title'].split())
+ assert norm not in titles, f'duplicate record title under different IDs: {titles[norm]} / {o["id"]} — merge instead of adding a second record'
+ titles[norm]=o['id']
+# Same-source-set pairs are reported for review but not fatal: distinct plans legitimately share one docs page.
+source_sets={}
+for o in d['offers']:
+ if o.get('status')=='duplicate_merged': continue
+ key=tuple(sorted({s['url'] for s in o['sources']}))
+ if key: source_sets.setdefault(key,[]).append(o['id'])
+for key,group in source_sets.items():
+ if len(group)>1: print(f'note: {len(group)} records share an identical source URL set (check for duplicates): {", ".join(group)}')
 for h in history:
  assert isinstance(h.get('change_type'), str) and h['change_type'].strip(), f'missing or empty change_type in history: {h.get("record_id")}'
  assert isinstance(h.get('sources'), list), f'history sources not a list in {h.get("record_id")}'
@@ -37,8 +52,8 @@ for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
  assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
-tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven'}
-valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
+tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
+valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
@@ -57,6 +72,12 @@ for o in d['offers']:
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'
+ if o.get('duplicate_of') is not None:
+  assert o.get('status')=='duplicate_merged', f'duplicate_of without merged status in {o["id"]}'
+  assert o['duplicate_of'] in ids and o['duplicate_of']!=o['id'], f'duplicate_of must point to another existing id in {o["id"]}'
+  target=offers_by_id[o['duplicate_of']];assert target.get('duplicate_of') is None, f'duplicate chain not allowed: {o["id"]}'
+ elif o.get('status')=='duplicate_merged':
+  raise AssertionError(f'duplicate_merged without duplicate_of in {o["id"]}')
  if o['record_type']=='opportunity':
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
   if o.get('status') in dead:assert o['priority_tier']=='D'

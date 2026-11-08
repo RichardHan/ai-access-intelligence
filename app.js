@@ -33,7 +33,8 @@ const ELIGIBILITY_LABELS = {
 };
 const CLOSED_STATUSES = new Set([
   'expired', 'expired_unverified', 'closed', 'applications_closed',
-  'closed_to_new_subscriptions', 'sunset_announced', 'resolved_rumor_disproven'
+  'closed_to_new_subscriptions', 'sunset_announced', 'resolved_rumor_disproven',
+  'duplicate_merged'
 ]);
 const STATUS_LABELS = {
   active: '方案仍列示', active_verified: '已核實列明主張', conditional: '需符合條件',
@@ -59,6 +60,7 @@ const STATUS_LABELS = {
   legacy_closed_new_path_conditional: '舊途徑關閉・新途徑需條件',
   quota_and_taiwan_eligibility_unverified: '額度與台灣資格待核',
   taiwan_not_listed_supported_region: '台灣未列於支援地區',
+  duplicate_merged: '重複紀錄・已併入其他 ID',
   watchlist: '觀察線索待追蹤'
 };
 
@@ -175,6 +177,9 @@ function createDetails(offer) {
   addRow(grid, '完整研究摘要', offer.summary);
   addRow(grid, '本次核實範圍', offer.verification_scope || '僅限各來源列明主張；其他欄位可能沿用較早研究。');
   addRow(grid, '優惠現況', statusInfo(offer).label);
+  if (offer.duplicate_of) {
+    addRow(grid, '重複收錄處理', `與 ${offer.duplicate_of} 為同一方案，已併入該筆並保留本ID供追溯；額度與資格以合併後紀錄為準。`);
+  }
   if (offer.offer_validity) addRow(grid, '優惠有效性', offer.offer_validity);
   if (offer.terms_compliance || offer.tos_status) addRow(grid, '申請與條款判斷', offer.terms_compliance || offer.tos_status);
   for (const [key, value] of Object.entries(offer.eligibility || {})) {

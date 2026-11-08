@@ -2,6 +2,10 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert');const source=fs
 const ended=d.offers.find(o=>o.id==='chatgpt-back-to-school-us');assert(f(ended,{}));assert(!f(ended,{cost:'0',view:'free'}));assert(!f({...ended,status:'expired_unverified'},{cost:'0',view:'free'}));assert(f({...ended,status:'expired_unverified'},{}));assert(!f({...ended,status:'applications_closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'applications_closed'},{}));assert(!f({...ended,status:'resolved_rumor_disproven'},{cost:'0',view:'free'}));assert(f({...ended,status:'resolved_rumor_disproven'},{}));assert(!f({...ended,status:'closed_to_new_subscriptions'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed_to_new_subscriptions'},{}));assert(!f({...ended,status:'closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed'},{}));
 const sunset=d.offers.find(o=>o.id==='weaviate-engram-free');assert(f(sunset,{}));assert(!f(sunset,{cost:'0',view:'free'}));
 assert.strictEqual(ctx.statusInfo({status:'resolved_rumor_disproven'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'duplicate_merged'}).tone,'closed');
+assert.strictEqual(ctx.statusInfo({status:'duplicate_merged'}).label,'重複紀錄・已併入其他 ID');
+assert(!f({...ended,status:'duplicate_merged'},{cost:'0',view:'free'}),'merged duplicate must not appear in free preset');
+assert(f({...ended,status:'duplicate_merged'},{}));
 assert.strictEqual(ctx.statusInfo({status:'closed_to_new_subscriptions'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'closed'}).tone,'closed');
 assert.strictEqual(ctx.statusInfo({status:'sunset_announced'}).tone,'closed');
@@ -22,7 +26,7 @@ assert(css.includes('.status-conditional'),'missing .status-conditional in style
 assert.strictEqual(ctx.statusInfo({status:'quota_and_taiwan_eligibility_unverified'}).label,'額度與台灣資格待核');
 assert.strictEqual(ctx.statusInfo({status:'taiwan_not_listed_supported_region'}).label,'台灣未列於支援地區');
 assert.strictEqual(ctx.statusInfo({status:'watchlist'}).label,'觀察線索待追蹤');
-const validStatuses=['active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'];
+const validStatuses=['active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','duplicate_merged','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'];
 for (const st of validStatuses) {
   assert.notStrictEqual(ctx.statusInfo({status:st}).label, '狀態待釐清', `missing status label in app.js: ${st}`);
 }
@@ -34,6 +38,12 @@ class Element {
   get childElementCount() { return this.children.length; }
 }
 ctx.document={createElement:tag=>new Element(tag)};
+const dup=d.offers.find(o=>o.status==='duplicate_merged');
+assert(dup&&dup.duplicate_of,'dataset has a merged duplicate with duplicate_of');
+const dupDetails=ctx.createDetails(dup);
+const dupRow=dupDetails.children.find(n=>n.tagName==='dl').children.find(r=>r.children[0].textContent==='重複收錄處理');
+assert(dupRow&&dupRow.children[1].textContent.includes(dup.duplicate_of),'merged duplicate details must name the canonical id');
+
 const details=ctx.createDetails({
   last_review_attempt_at:'2026-11-06', last_review_attempt_reason:'正式規則403',
   eligibility:{}, sources:[]
