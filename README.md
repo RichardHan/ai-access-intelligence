@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **861 筆**（659 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 09:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **15 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **845 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **1 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **863 筆**（661 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 10:50 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **17 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **844 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,50 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 10:15–10:50 本輪：起始861筆；局部複核 `cognee-free-memory-token-grant-conflict-watch`、`krater-student-fifteen-twenty-discount-conflict-watch`、`stackone-starter-monthly-thousand-credit-terms-conflict`、`windsurf-student-discount-current-entry-watch`、`replit-student-core-half-price-edu-verification-watch`、`pydantic-ai-gateway-team-growth-once-ten-credit`、`redis-startups-current-entry-redirect-watch`、`taiwan-sme-ai-innovation-guidance`、`zed-delta-shared-fourteen-day-trial`、`upstage-aws-institution-2027`、`google-aicore-developer-preview`、`vercel-startups-flex-commit-2026`、`physical-intelligence-pi-api-beta`、`google-express-new-user-ninety-days`、`openai-researcher-access-thousand-year`、`parallel-monthly-five-card-allowance`、`linkup-professional-monthly-twenty-refill` 共17筆；新增機會 `lumenfall-signup-one-dollar-no-card-media-api`、`zenml-pro-starter-fourteen-day-no-card-business-trial` 共2筆，政策及線索各0筆；既有未完成844筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[Cognee Cloud Free](https://www.cognee.ai/pricing)：首個工作區免卡在線，但額度衝突仍未解：定價頁標示 1M tokens，帳務文件標示 10M tokens，不保證每月重置；超出免費餘額需儲值，額外工作區 US$5/月；台灣可用度未核。
+
+[Krater 學生折扣](https://krater.ai/students)：官方學生頁仍同時刊登 15% 與 20% 折扣，官方衝突未解；一般 Pro 為 US$20/月（1,500點），無免費試用；學生頁宣稱免學籍驗證，但結帳套用折扣與台灣付款未核。
+
+[StackOne Starter](https://www.stackone.com/pricing/)：Starter 免費免卡在線；定價表列每席每月 1,000 credits（失敗呼叫不計費），但正式服務契約列每 Starter 帳戶每月 1,000 Action Calls（失敗呼叫亦計費）且超額每次 US$0.003，計量與超額衝突仍存；台灣帳戶未測。
+
+[Windsurf 學生方案](https://windsurf.com/student-terms-and-conditions)：2025-01-15 舊版學生條款在線，要求認可高等教育學籍與付款資料；現行品牌與定價頁已重導至 Devin，未列出學生優惠價與申請入口；維持未核實觀察線索。
+
+[Replit 學生 Core](https://replit.com/edu/students)：官方學生頁 hero 仍刊登 50% off Core with .edu email；但本輪學生 pricing 區塊未載出，未能重現先前 US$10 標價；一般 Core 為 US$20/月，台灣 .edu.tw 與學生 checkout 待核。
+
+[Pydantic AI Gateway](https://pydantic.dev/articles/ai-gateway-starter-credit)：官方公告新升級 Team/Growth 組織贈一次 US$10 模型額度在線；最低門檻需付費 Team（US$49/月），非 Personal 免費戶贈額，亦非每月補充；台灣付款與資格未核。
+
+[Redis for Startups](https://redis.io/startups/)：2026-04 官方案例仍提及新創計畫提供 generous credit allocation，但現行 /startups/ 仍重導至首頁，未取得公開申請表、額度數字與資格；台灣資格未知。
+
+[中小微企業 AI 創新應用輔導](https://www.sme.gov.tw/article-tw-2877-13891)：重大更新：經查 115 年度正式申請須知，一般輔導申請已於 115 年 4 月 30 日 17:00 截止，既有獲推薦案輔導執行至 11 月 13 日；總覽頁在線不代表受理收件，狀態更正為 applications_closed，停止定期複核。
+
+[Zed Pro 試用](https://zed.dev/pricing)：14 天免卡試用在線，包含 US$5 額度（僅限 GPT-6 Luna）且與 Delta 共池；用盡或期滿自動回退 Free，非每月補充；台灣可用度未核。
+
+[Upstage 機構計畫](https://www.upstage.ai/events/ai-initiative-2026-en)：大專院校、附設醫院及 NPO/NGO 免費申請 Solar Pro 4 與 Document Parse 在線，核准後可用至 2027/3/31；舊教育手冊仍標 2026/3/31 之矛盾未解；台灣機構適用性未知。
+
+[Google AICore 預覽](https://developers.google.com/ml-kit/genai/aicore-dev-preview)：開發者加入測試群組於支援 Android 裝置本機測試 Gemini Nano 在線，免伺服器呼叫費；僅限本機開發評估，禁止商用生產環境；台灣可用度未核。
+
+[Vercel 新創 Flex Commit](https://vercel.com/startups/credits)：合格新創最高 US$30,000 一年 Flex Commit 在線，含 v0 與 AI Gateway；Gateway 受總額及每月 50% 子限額約束，需有效付款方式，超額按標準價計費；台灣資格未核。
+
+[Physical Intelligence Pi API](https://www.pi.website/blog/api-beta)：機器人模型 Pi API 候補名單在線；僅少數企業 early access，公開定價與免費額度未公布；維持觀察線索。
+
+[Google Cloud Express](https://cloud.google.com/resources/cloud-express-faqs)：全新 Google Cloud 用戶以個人 @gmail.com 享最高 90 天免卡試用在線；受個別模型配額限制，非 US$300 試用；啟用 billing 即轉依量付費；商業用途與個資處理限制仍存。
+
+[OpenAI 研究者計畫](https://help.openai.com/en/articles/10139500-researcher-access-program-faq)：最高 US$1,000 API 額度（核發後 1 年有效）在線，每季審查；移除先前舊紀錄之 US$5 卡片保留額肯定敘述；Taiwan 在 API 支援清單，需機構與研究提案審核；Taiwan 標記為 Yes。
+
+[Parallel](https://parallel.ai/pricing)：綁卡合格組織每月發放 US$5 在線，月末失效，一卡限一組織；超額自動按用量扣款，非免卡；台灣帳單接受性未核。
+
+[Linkup](https://docs.linkup.so/pages/documentation/platform/pricing)：工作信箱註冊贈 US$20 在線，合格帳戶每月補回 US$20（非加發）；文件美元與條款歐元標示矛盾未解，免卡與月補資格未核。
+
+新增 [Lumenfall](https://lumenfall.ai/pricing)：官方提供免卡一次 US$1 影像／影片 API 歡迎額度，無平台月費，預付餘額不足回傳 402；免費功能提交之內容授權平台用於訓練與分享；免費額度通常 90 天有效但個別期限未定；台灣可用度未核。
+
+新增 [ZenML Pro Starter](https://www.zenml.io/pricing)：官方為商務／專業用途提供 14 天免卡完整試用，包含 1 個 AI agent、1 個 ML project 及不限席次；期滿繼續使用月費 US$39，BYOK 模型與雲端基礎設施費用由使用者自負；限 18 歲以上商務用戶，台灣資格未核。
+
+品質改善：`tests/validate.py` 增補資料狀態（`status`）白名單斷言（校驗涵蓋 `STATUS_LABELS` 既有 34 項列舉值及 null），修復 `taiwan-sme-ai-innovation-guidance` 等案過期後若寫入非正規狀態字串穿透至前端導致回退無警示「狀態待釐清」且脫離過期過濾器之架構盲區；`tests/filters.cjs` 增補全數合法狀態非 fallback 中文標籤之單元測試斷言，以實證覆蓋通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`aws-nonprofit-techsoup-budget-tiers` 台北11/9重新追查[TechSoup台灣](https://www.techsoup-taiwan.org.tw/)商品目錄與AWS抵用額級距。
+
 2026-11-08 09:05–09:20 本輪：起始860筆；局部複核 `reflection-beam-beta-reset-conflict`、`nscale-signup-five-current-docs-conflict`、`memobase-free-credit-operation-conflict`、`arcade-free-monthly-two-k-tools-auto-upgrade-risk`、`together-150-unresolved`、`sloyd-guest-daily-plus-separated-pools`、`yotta-rudra-terms-amount-pending`、`inngest-free-monthly-fifty-k-executions`、`trigger-dev-free-monthly-five-compute`、`google-workspace-nonprofit-free-ai`、`google-ai-educator-series-taiwan`、`databricks-free-edition-noncommercial`、`microsoft-365-personal-taiwan-student-half-price`、`taiwan-commerce-single-store-ai-half-hundred-k`、`taiwan-moeai-manufacturing-tool-reimbursement-hundred-k` 共15筆；核心來源整筆追查失敗1筆：`aws-nonprofit-techsoup-budget-tiers`（TechSoup台灣商品與AWS資格頁回傳Incapsula驗證防護，未能核實台灣實際抵用金額與資格，依規則不刷新verified_at，記錄追查失敗時間與原因）；新增機會 `glama-free-mcp-inspector` 共1筆，政策及線索各0筆；既有未完成845筆。未登入、申請或付款。
 
 [Reflection Beam Beta](https://reflection.ai/legal/beta-pricing-information)：免費公開beta在線，耗盡後回傳429拒絕請求不自動轉付費；重置衝突未解：法律頁稱按帳戶於美西午夜（Pacific）重置且不結轉，開發文件稱按組織跨專案及API keys共池於00:00 UTC重置；公開頁未列固定日額；商用條款（2026-10-05）允許開發商用應用，但免費／折扣服務內容授權用於訓練及改善模型；台灣可用性未核。

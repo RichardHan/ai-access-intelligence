@@ -22,6 +22,10 @@ assert(css.includes('.status-conditional'),'missing .status-conditional in style
 assert.strictEqual(ctx.statusInfo({status:'quota_and_taiwan_eligibility_unverified'}).label,'額度與台灣資格待核');
 assert.strictEqual(ctx.statusInfo({status:'taiwan_not_listed_supported_region'}).label,'台灣未列於支援地區');
 assert.strictEqual(ctx.statusInfo({status:'watchlist'}).label,'觀察線索待追蹤');
+const validStatuses=['active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'];
+for (const st of validStatuses) {
+  assert.notStrictEqual(ctx.statusInfo({status:st}).label, '狀態待釐清', `missing status label in app.js: ${st}`);
+}
 
 // The latest attempt is not a successful verification: expose its failure reason.
 class Element {

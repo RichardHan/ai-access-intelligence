@@ -32,9 +32,11 @@ for aid in attempted:
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
  assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven'}
+valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
+assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
- if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'].strip(), f'empty or invalid status in {o["id"]}'
+ if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
