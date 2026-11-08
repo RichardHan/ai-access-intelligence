@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **863 筆**（661 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 10:50 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **17 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **844 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **864 筆**（662 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 11:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **845 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,50 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+2026-11-08 11:05–11:25 本輪：起始863筆；局部複核 `autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`aocai-working-free-ai-courses-2026`、`taipei-youth-ai-subscription-subsidy-2026`、`valyu-signup-ten-twenty-twelve-months`、`replit-startup-partner-credits-pro`、`kakaocloud-rocket-launcher-startups`、`grok-retention-community`、`braintrust-starter-monthly-model`、`typhoon-free-research-api-rate-limited`、`fish-audio-s21-pro-free-development-api`、`fish-audio-student-voice-credits`、`whimsical-education-year-pro-once-ten-ai`、`imagi-free-teacher-lovable-twentyfive-thirty-days`、`elevenlabs-impact-professors-pro`、`elevenreader-student-free-year`、`luma-dream-machine-free-generation-watchlist`、`composio-hobby` 共18筆；新增機會 `make-startup-partner-six-month-bootstrap-three-month-credits` 共1筆，政策及線索各0筆；既有未完成845筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
+
+[AutoClaw 萬聖節4,000點](https://autoclaw.z.ai/blog/news/M11W1/)：活動公告仍列至今日（11/8）23:59 UTC+8截止，但同頁另段仍將本週獎勵誤寫為11/1到期，正文矛盾仍在；免費服務依[服務協議](https://autoclaw.z.ai/privacy/md2html/?favicon=autoglm&md=autoclaw_agreement)明確限非商業個人研學；台灣實際可領未核。
+
+[AutoClaw 週福利](https://autoclaw.z.ai/blog/news/M11W2/)：台北11/9 00:00至11/15 23:59每帳戶領1億Tokens（10,000點）公告在線，排定明日開跑；11/8尚未達開始時間；未承諾免卡，第三方API另計；台灣註冊與領取待核。
+
+[經濟部服務業在職AI課程](https://serv.gcis.nat.gov.tw/AOCAI/)：台北11/11班受理報名至2026-11-09 23:59截止，[報名表](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)實測可正常操作、應付NT$0；目前參訓方式僅列「線上參與」，正文招生100人與系統上限300人口徑差異仍存；Taiwan標記為Yes。
+
+[臺北青年AI訂閱補助](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)：最後送達期限倒數中（最遲11/10前書面送達青年局）；合格完整月支出限8/1–10/31；本輪查閱[青年局公告](https://youth.gov.taipei/announcement/latest-announcement)未見本案經費用罄停收公告，先付後審；Taiwan標記為Yes。
+
+[Valyu 免費額度](https://docs.valyu.ai/pricing)：新帳戶一次US$10、公司信箱US$20免卡額度（12個月有效）在線；定價稱無overage且餘額不足回402硬停，但[平台協議](https://platform.valyu.ai/about/platform-service-agreement)§9仍保留自動扣款及停權條款，兩者張力未解；台灣可用度未核。
+
+[Replit 新創](https://replit.com/startups)：最高US$25,000額度在線；卡片標示6個月有效與FAQ核准後12個月矛盾仍存；本輪查得[Pro協議](https://replit.com/pro-agreement)，確認超額使用費可能自動扣款，一般企業條款30日前不續約通知不直接套用所有startup Pro；台灣公司資格待核。
+
+[KakaoCloud 新創](https://www.kakaocloud.com/business/support/rocket-launcher)：分級列Launch₩5M/1年、Boost₩20M/2年、Grow₩35M/2年，但FAQ通則仍稱發行後1年有效，衝突未解；登記付款方式為必要條件，額滿或到期自動扣服務費；官方下載包確認限成立十年內新加入企業；境外法人適用性未明。
+
+[SuperGrok 留存優惠](https://docs.x.ai/grok/faq.md)：官方FAQ、定價與消費者條款均未公布「取消即送三個月免費」之公開留存方案；[套裝條款](https://x.ai/legal/bundled-subscription-terms)§8確認促銷結束後標準價自動續訂，台灣消費者有5日取消權；社群留存說法維持個別帳戶待核。
+
+[Braintrust Starter](https://www.braintrust.dev/pricing)：免卡註冊每月US$10模型額度在線，不結轉；[文件](https://docs.braintrust.dev/admin/ai-providers.md#requirements)確認內建模型限工作信箱或已有付款方式，直接Gateway呼叫需Pro以上；未開on-demand耗盡暫停，加卡開通超額月結。
+
+[Typhoon 免費研究展示 API](https://docs.opentyphoon.ai/en/)：5 RPS／200 RPM研究展示在線；重大補核：[登入頁服務條款](https://opentyphoon.ai/tac)由SCB DataX提供，輸入授權用於模型訓練、嚴禁輸入個人敏感個資，並嚴格禁止將輸出用於訓練AI模型或未經同意之競爭評測；非商用研究展示。
+
+[Fish Audio S2.1 Pro Free](https://docs.fish.audio/developer-guide/models-pricing/models-overview.md)：指定s2.1-pro-free文字轉語音API維持US$0/百萬UTF-8 bytes開發測試在線；Starter級別支援5個併發請求（非5 RPS），無TTFA或DPA保障；與付費s2-pro（US$15/M）分開。
+
+[Fish Audio 學生方案](https://fish.audio/students/)：認可大專院校學生以.edu信箱驗證在線，核准點數限教育非商業專案；公開頁未列點數總量與效期；台灣.edu.tw接受度未測。
+
+[Whimsical 教育](https://whimsical.com/learn/billing/pricing)：教師與學生一年免費Pro在線；每帳戶10點AI額度為一次性不按月重置；[Typeform申請表](https://whimsicalpowers.typeform.com/education)實測僅接受學校信箱，不接受替代證明，審核可達15工作天。
+
+[imagi 教師免費](https://imagilabs.com/pricing)：經驗證教師25 Lovable點數（有效30天）在線，不保證每月補發；定價頁（固定期滿聯絡續約）與[教育條款](https://imagilabs.com/terms-of-service-imagi-edu)（自動續訂需提前30天通知）衝突仍存；台灣教師資格未測。
+
+[ElevenLabs 教授計畫](https://elevenlabs.io/impact-professors)：高等教育機構教授申請12個月Pro access code在線，期滿可重新申請；學生須由教授申請課程Creator代碼；台灣機構個案審核未核。
+
+[ElevenReader 學生一年](https://elevenreader.io/students)：合格大專學生以學校信箱驗證享一年免費在線；期滿按當時標準年費自動續訂，須事先於帳戶取消；台灣學校網域未測。
+
+[Luma Dream Machine 免費生成](https://lumalabs.ai/pricing)：FAQ仍提Free方案可生成Photon與Ray 3.14 draft影片（720p且帶浮水印、限個人用途），但現行主定價僅列Plus/Pro/Ultra，未公開免費月額；維持未核實觀察線索。
+
+[Composio Hobby](https://composio.dev/pricing)：免卡每月100K工具呼叫、50K事件與2,000 RPM硬上限在線；重要更新：2026-11-03起註冊者managed apps適用逐app點數計費規則；Sandbox 1M模型tokens限代執行呼叫；台灣個案資格未核。
+
+新增 [Make 新創](https://f.make.com/startup-program)：官方新創計畫開放申請，合作夥伴旗下新創最高享6個月及480,000點，自籌或投資人未入網者享3個月及240,000點，Country明列Taiwan；點數可用於AI代理與自動化；自備模型金鑰tokens自付；行銷頁與申請表條件差異及促銷期滿轉付費規則仍存，台灣資格標記為Unknown。
+
+品質改善：`app.js` 與 `tests/filters.cjs` 修復依設定費用排序時，多筆紀錄為未知設定費（`setup_cost_usd: null`）時 comparator 運算 `Infinity - Infinity` 回傳 `NaN` 違反嚴格弱排序規範之缺陷，確保 null 比較回傳 0 且數值排序確定性；增補單元測試實證通過。
+
+下輪優先：`autoclaw-halloween-40m-expiry-conflict-watch` 台北11/8 23:59截止後查[活動頁](https://autoclaw.z.ai/blog/news/M11W1/)確認萬聖節獎勵關閉與下線現況；`autoclaw-weekly-perk-november-nine-hundred-million-tokens` 台北11/9 00:00開跑後查[活動頁](https://autoclaw.z.ai/blog/news/M11W2/)1億Tokens領取入口與實際入帳條款；`aocai-working-free-ai-courses-2026` 台北11/9 23:59截止後查[報名頁](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3535)確認台北11/11班報名截止現況與錄取通知；`taipei-youth-ai-subscription-subsidy-2026` 台北11/9–10查[青年局](https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796)最後送達日收件倒數與經費狀況；`aws-nonprofit-techsoup-budget-tiers` 台北11/9重新追查[TechSoup台灣](https://www.techsoup-taiwan.org.tw/)商品目錄與AWS抵用額級距。
+
 2026-11-08 10:15–10:50 本輪：起始861筆；局部複核 `cognee-free-memory-token-grant-conflict-watch`、`krater-student-fifteen-twenty-discount-conflict-watch`、`stackone-starter-monthly-thousand-credit-terms-conflict`、`windsurf-student-discount-current-entry-watch`、`replit-student-core-half-price-edu-verification-watch`、`pydantic-ai-gateway-team-growth-once-ten-credit`、`redis-startups-current-entry-redirect-watch`、`taiwan-sme-ai-innovation-guidance`、`zed-delta-shared-fourteen-day-trial`、`upstage-aws-institution-2027`、`google-aicore-developer-preview`、`vercel-startups-flex-commit-2026`、`physical-intelligence-pi-api-beta`、`google-express-new-user-ninety-days`、`openai-researcher-access-thousand-year`、`parallel-monthly-five-card-allowance`、`linkup-professional-monthly-twenty-refill` 共17筆；新增機會 `lumenfall-signup-one-dollar-no-card-media-api`、`zenml-pro-starter-fourteen-day-no-card-business-trial` 共2筆，政策及線索各0筆；既有未完成844筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [Cognee Cloud Free](https://www.cognee.ai/pricing)：首個工作區免卡在線，但額度衝突仍未解：定價頁標示 1M tokens，帳務文件標示 10M tokens，不保證每月重置；超出免費餘額需儲值，額外工作區 US$5/月；台灣可用度未核。

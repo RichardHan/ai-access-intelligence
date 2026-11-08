@@ -273,7 +273,11 @@ function render(reset = true) {
   const items = dataset.offers.filter(offer => matches(offer, filters) && (!recentOnly || recentIds.has(offer.id)));
   if (filters.sort === 'priority') items.sort(byPriority);
   if (filters.sort === 'fresh') items.sort((a, b) => String(b.verified_at || '').localeCompare(String(a.verified_at || '')));
-  if (filters.sort === 'cost') items.sort((a, b) => (a.setup_cost_usd ?? Infinity) - (b.setup_cost_usd ?? Infinity));
+  if (filters.sort === 'cost') items.sort((a, b) => {
+    const costA = a.setup_cost_usd ?? Infinity;
+    const costB = b.setup_cost_usd ?? Infinity;
+    return costA === costB ? 0 : costA - costB;
+  });
   const visible = items.slice(0, visibleLimit);
   const count = $('#count');
   if (count) count.textContent = `${recentOnly ? '本輪更新 · ' : ''}符合 ${items.length} 筆，已顯示 ${visible.length} 筆 · 全庫 ${dataset.offers.length} 筆`;

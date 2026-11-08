@@ -72,3 +72,21 @@ assert(nullCadenceScheduledRow.children[1].textContent.startsWith('定期輪替�
 const nullCadenceUnscheduled=ctx.createDetails({status:'active',review_cadence:null,next_review_at:null,eligibility:{},sources:[]});
 const nullCadenceUnscheduledRow=nullCadenceUnscheduled.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert.strictEqual(nullCadenceUnscheduledRow.children[1].textContent,'未指定週期；未安排特定複核日期');
+
+const sortItems = [
+  { id: 'unknown-1', setup_cost_usd: null },
+  { id: 'free-1', setup_cost_usd: 0 },
+  { id: 'unknown-2', setup_cost_usd: null },
+  { id: 'paid-1', setup_cost_usd: 5 }
+];
+const costComp = (a, b) => {
+  const costA = a.setup_cost_usd ?? Infinity;
+  const costB = b.setup_cost_usd ?? Infinity;
+  return costA === costB ? 0 : costA - costB;
+};
+assert.strictEqual(costComp({setup_cost_usd: null}, {setup_cost_usd: null}), 0);
+assert(!Number.isNaN(costComp({setup_cost_usd: null}, {setup_cost_usd: null})));
+sortItems.sort(costComp);
+assert.strictEqual(sortItems[0].id, 'free-1');
+assert.strictEqual(sortItems[1].id, 'paid-1');
+assert(sortItems[2].setup_cost_usd === null && sortItems[3].setup_cost_usd === null);
