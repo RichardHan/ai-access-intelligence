@@ -273,3 +273,28 @@ assert(closedRegional,'dataset should hold a closed regional-tagged record to gu
 assert(!f(closedRegional,{view:'regional'}),'closed regional record must leave the regional preset: '+closedRegional.id);
 assert(f(closedRegional,{taiwan:closedRegional.taiwan}),'non-view filters must still reach closed records');
 console.log('PASS: every 機會專區 option excludes closed and merged records; closed records remain reachable without a view filter.');
+
+// 「台灣條件適用」是頁面上第一個捷徑按鈕，但它用的是 taiwan:'Yes' 這個一般篩選，不經 viewMatches，
+// 所以上面那段排除規則涵蓋不到它：2026-11-09 統計 106 筆 taiwan=Yes 中有 10 筆已截止／已關閉／重複合併，
+// 卡片標題自己寫著「已截止」（例如 moda-service-robot-virtual-scene-subsidy-2026、taiwan-ai-rap-pilot）。
+// presetMatches() 讓這個捷徑與其他可行動專區一致；全庫搜尋仍找得到，一般 taiwan 篩選不受影響。
+const closedTW=d.offers.find(o=>closedSet.has(o.status)&&o.taiwan==='Yes');
+assert(closedTW,'dataset should hold a closed taiwan=Yes record to guard against');
+assert(!ctx.presetMatches(closedTW,'taiwan'),'closed taiwan record must leave the 台灣條件適用 preset: '+closedTW.id);
+assert(ctx.presetMatches(closedTW,'all'),'closed taiwan record must stay findable without the preset');
+assert(ctx.presetMatches(closedTW,null),'closed taiwan record must stay findable once the preset is released');
+assert(f(closedTW,{taiwan:'Yes'}),'the plain taiwan filter must still reach closed records');
+const openTW=d.offers.find(o=>!closedSet.has(o.status)&&o.taiwan==='Yes');
+assert(openTW&&ctx.presetMatches(openTW,'taiwan'),'an open taiwan record must stay in the 台灣條件適用 preset');
+const presetTW=d.offers.filter(o=>ctx.presetMatches(o,'taiwan'));
+assert.strictEqual(presetTW.filter(o=>closedSet.has(o.status)).length,0,'closed records leak into the 台灣條件適用 preset');
+const rawTW=d.offers.filter(o=>o.taiwan==='Yes').length;
+assert(presetTW.length<rawTW,'preset must be narrower than the raw taiwan filter: '+presetTW.length+'/'+rawTW);
+assert.strictEqual(presetTW.length,rawTW-d.offers.filter(o=>o.taiwan==='Yes'&&closedSet.has(o.status)).length,'preset must equal open taiwan=Yes records');
+assert(!ctx.presetMatches(paidTrial,'free'),'presetMatches must still honour the preset filters');
+assert(ctx.presetMatches(zeroUntagged,'free'));
+assert(!ctx.presetMatches(paidTrial,'free',{view:'free'}),'an explicit filter set must still be respected');
+const presetButtons=[...fs.readFileSync(__dirname+'/../index.html','utf8').matchAll(/data-preset="([^"]+)"/g)].map(m=>m[1]);
+assert(presetButtons.includes('taiwan'),'index.html must keep the 台灣條件適用 preset button');
+for(const name of presetButtons) assert.strictEqual(typeof ctx.presetMatches(d.offers[0],name),'boolean','presetMatches must accept every index.html preset: '+name);
+console.log('PASS: 台灣條件適用 preset ('+presetTW.length+'/'+rawTW+') excludes closed records and keeps them searchable.');

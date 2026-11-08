@@ -102,6 +102,16 @@ const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED'
 // 「新創與開發者」因此仍列出 39 筆已截止或已併入他筆的紀錄（含 copilot-free 等重複紀錄），
 // 「美國與地區限定」列出 15 筆（該專區共 57 筆）。專區清單必須與 index.html 的 view 選項同步。
 const ACTIONABLE_VIEWS = new Set(['free', 'quota', 'unlimited', 'regional', 'value', 'developer', 'beta']);
+// 「台灣條件適用」是頁面上第一個捷徑按鈕，但它走的是 taiwan:'Yes' 這個一般篩選，不經 viewMatches，
+// 因此上表的排除規則涵蓋不到它：2026-11-09 統計 106 筆 taiwan=Yes 中仍有 10 筆已截止／已關閉／重複合併
+// （例如 moda-service-robot-virtual-scene-subsidy-2026、taiwan-ai-rap-pilot、taiwan-adi-ai-compute-115），
+// 卡片標題自己寫著「已截止」。可行動捷徑一律排除，全庫搜尋仍找得到。
+const OPEN_ONLY_PRESETS = new Set(['taiwan']);
+
+function presetMatches(o, preset, filters) {
+  if (!matches(o, filters ?? presetFilters(preset))) return false;
+  return !(OPEN_ONLY_PRESETS.has(preset) && CLOSED_STATUSES.has(o.status));
+}
 
 // The 用量 filter and the 無限專區 read the schema-enforced quota_classification.
 // usage_type is free-text descriptions (358 distinct values, many in Chinese), so exact
@@ -368,7 +378,8 @@ function render(reset = true) {
   const form = $('#filters');
   const filters = form ? Object.fromEntries(new FormData(form)) : {};
   const recentIds = latestResearchIds();
-  const items = dataset.offers.filter(offer => matches(offer, filters) && (!recentOnly || recentIds.has(offer.id)));
+  const items = dataset.offers.filter(offer => (!recentOnly || recentIds.has(offer.id))
+    && presetMatches(offer, activePreset, filters));
   if (filters.sort === 'priority') items.sort(byPriority);
   if (filters.sort === 'fresh') items.sort((a, b) => String(b.verified_at || '').localeCompare(String(a.verified_at || '')));
   if (filters.sort === 'cost') items.sort((a, b) => {
