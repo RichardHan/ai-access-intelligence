@@ -146,6 +146,28 @@ function sourceLink(source) {
   }
 }
 
+function sourceStamp(source) {
+  const raw = source.accessed_at || source.accessed_time_range || '';
+  const parts = String(raw).split('/');
+  return parts[parts.length - 1] || '';
+}
+
+function groupSources(sources) {
+  const groups = new Map();
+  for (const source of sources || []) {
+    const key = source.url || '';
+    const group = groups.get(key);
+    if (group) group.entries.push(source);
+    else groups.set(key, { entries: [source] });
+  }
+  return [...groups.values()].map(group => {
+    const entries = group.entries
+      .map((source, index) => ({ source, index, stamp: sourceStamp(source) }))
+      .sort((a, b) => (a.stamp === b.stamp ? a.index - b.index : (a.stamp < b.stamp ? 1 : -1)));
+    return { source: entries[0].source, earlier: entries.slice(1).map(entry => entry.source) };
+  });
+}
+
 function createDetails(offer) {
   const details = text('details', '', 'card-details');
   details.append(text('summary', '查看資格、限制與來源'));
@@ -196,13 +218,25 @@ function createDetails(offer) {
   if (offer.last_review_attempt_at) addRow(grid, '最近來源追查', `${dateLabel(offer.last_review_attempt_at, true)}${offer.last_review_attempt_reason ? `；${offer.last_review_attempt_reason}` : ''}`);
   details.append(grid, text('h4', '來源與支持的主張', 'detail-heading'));
   const sources = text('ol', '', 'source-list');
-  for (const source of offer.sources || []) {
+  const grouped = groupSources(offer.sources);
+  for (const entry of grouped) {
+    const source = entry.source;
     const item = text('li', '', 'source-item');
     item.append(sourceLink(source) || text('span', source.label || '來源網址待確認'));
     item.append(text('p', `支持範圍：${display(source.scope)}`));
     item.append(text('p', display(source.evidence)));
     const accessed = source.accessed_at || source.accessed_time_range;
     item.append(text('small', `查閱時間：${accessed || '未另列，請參照證據文字'}`, 'source-date'));
+    if (entry.earlier.length) {
+      const earlier = text('details', '', 'source-earlier');
+      earlier.append(text('summary', `較早的 ${entry.earlier.length} 筆同網址紀錄`));
+      for (const older of entry.earlier) {
+        earlier.append(text('p', `支持範圍：${display(older.scope)}｜${display(older.evidence)}`, 'source-earlier-text'));
+        const olderAccessed = older.accessed_at || older.accessed_time_range;
+        earlier.append(text('small', `查閱時間：${olderAccessed || '未另列'}`, 'source-date'));
+      }
+      item.append(earlier);
+    }
     sources.append(item);
   }
   if (!sources.childElementCount) sources.append(text('li', '尚未列出可查閱來源。'));

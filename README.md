@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **864 筆**（662 項機會、47 項政策、155 筆觀察線索），更新時間 **2026-11-08 11:25 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **845 筆**既有紀錄未完成本輪複核，核心來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **869 筆**（665 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 13:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **17 筆**既有案例，新增機會 **3 筆**、政策 **1 筆**、觀察線索 **1 筆**；其餘 **847 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -39,6 +39,49 @@
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
+
+同一 URL 再次查核時就地更新該筆來源（scope、evidence、查閱時間），不新增重複條目；`tests/validate.py` 對本輪批次強制「無重複 URL」與「每筆至少一個本次查閱時間」，前端則把同網址的歷次查核收在「較早的 N 筆同網址紀錄」內。
+
+2026-11-08 12:10–13:20 本輪：起始864筆；局部複核 `datacamp-free-access-week-november-2026`、`gmi-a16z-first25-two-k-spend-five-k-credit`、`fal-flux3-max-five-daily-sandbox`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`airtop-free-monthly-thousand-signup-bonus-conflict`、`kiro-startup-pro-plus-2026`、`retool-nonprofit-monthly-coupon`、`amazon-ara-multilingual-contextual-ai-fall-2026`、`neo4j-startup-aura-twentyk-application-unavailable`、`manus-startups-redirect-current-unverified`、`google-ai-professional-certificate-tw-pro-3mo`、`grammarly-student-annual-half-first-period`、`taiwan-hrd-free-ai-introduction-2026`、`vast-startup-spend-match`、`snowflake-ai-trial-2026`、`mem0-hobby-memory-api`、`speechify-api-free-monthly-500k`；新增機會 `cht-google-ai-plus-first-year-free-2026`、`taiwan-mobile-free-ai-life-course-2026q4`、`heygen-voice-turbo-free-api-until-2026-11-30`，政策 `taipei-industry-incentive-ai-rd-batch2-2026`，觀察線索 `medux-free-trial-3000-credits`。`perplexity-watch`、`perplexity-education` 八個官方 URL 全數 403，記為追查失敗、未刷新核實時間。未登入、申請、付款或兌換。
+
+[中華電信×Google AI Plus](https://www.cht.com.tw/zh-tw/home/cht/messages/2026/1104-1520)：11/4官方附表列精采5G 799/999搭AI Plus(400GB)首年0元、1399搭AI Plus(2TB)首年0元，購機／贈點／單門號為首月0／89／299元擇一，指定寬頻前6個月0元、第7–12個月264元；單租年約2TB NT$264（原330）、5TB NT$529（原650）。台北11/4至2027-01-31申辦開通送5GB流量，2026-11-30前完成再加Hami Point 100點。須綁5G或寬頻資費，非可獨立領取；綁約年限、首年後AI月費與方案結束日未公告。Taiwan Yes（條件式）。
+
+[台灣大哥大AI智慧生活課程](https://www.taiwanmobile.com/content/event/consumer-ai/index.html)：第四季免費實體課，11/21台北文創與高雄三多、12/19台中文心向上與高雄三多，每場1小時；線上表單報名、頁面明列完全免費且未要求台灣大哥大用戶身分，名額有限額滿為止。頁面場次標籤（第一場／第二場）重複錯置，只有日期與門市可信；活動條款docx未解析。Taiwan Yes。
+
+[HeyGen Voice Turbo Free](https://developers.heygen.com/docs/voices/heygen-voice-speech)：`heygen-voice-1-turbo-free` 免費至2026-11-30且不需credit餘額，限public voice或Voice 1 instant clone、每次1–5,000字元、每member 30 req/min、全體共用容量可能回429；免費請求不會自動轉付費模式。zh-TW等區域語言標籤會回400，須送`zh`。商用授權與台灣資格未列。
+
+[臺北市產業發展獎勵補助](https://www.industry-incentive.taipei/news_detail/497)：115年度第2梯次主題式研發補助（AI創新應用）受理2026-11-02至11-30，每案NT$200萬（計畫總經費須≥NT$400萬）、預計15案，執行期2026-12-01至2027-11-30；限台北市登記滿1年之公司、商業或外國公司在台登記地，單純採購或導入現成AI服務不予補助。截止時刻未載明。
+
+[Medux](https://medux.io/pricing)：定價頁寫「3,000 trial credits per month」，同頁FAQ寫新用戶3,000一次性點數，兩說並存；方案表顯示「Pricing data is unavailable from the backend」未載入，故點數換算、重置與是否需綁卡均未知。Workshop／API／MCP共用同一餘額；條款以PRC法律管轄、爭議送上海楊浦區人民法院。列為觀察線索。
+
+[fal FLUX 3 Max](https://fal.ai/flux-3-max)：原記錄的「每日3／4／5部免費影片」文案在flux-3-max、模型頁與舊免費頁均未再出現；fal.ai/flux-video-free以308轉址至/flux-video，該頁改寫「Generations are pay-per-use」，flux-3-max以720p每秒US$0.0425計費（表列原價0.17、標示優惠至11/7，另頁FAQ寫12/31，衝突仍在）。現存免費字樣只有沙盒「7 free generations today. No account needed.」，未載模型範圍；無法判定取消或僅文案下架，狀態降為needs_verification，不逕判終止。
+
+[Google AI 專業證書三個月AI Pro](https://grow.google/intl/zh-TW_tw/ai-professional/)：台灣頁仍寫課程US$49/月與「優惠將於2027年1月1日到期」，但其連結的Google One條款（含`g1_landing_page=0`變體）今日兩版本均為2026-11-06、Last updated 2025/7/31，先前記錄的2027-01-02版本已不存在。今日正好落在兩期限之間：條款已過、台灣頁未到，兌換是否仍成功未經實測，兩說並存不擇一；勿僅為試用先付課程費。Coursera明示領取financial aid者不適用。
+
+[Airtop](https://portal.airtop.ai/shutdown)：停服頁確認2026-11-13結束服務、不再接受新註冊或升級；本次定價頁已無「新專案」預告橫幅，但仍完整列Free US$0／月、1,000 credits／月、10,000迎新並附可點註冊連結。公告優先，定價頁不得作為可領證明。
+
+[Neo4j 新創](https://neo4j.com/startup-program/apply/)：申請頁「This form is temporarily unavailable」經原始HTML確認位於 `class="form--unavailable-message"` 且 `style="display: none"` 的備援區塊，旁邊是Marketo表單殼；不可再用文字版判定表單關閉，也不能據此宣稱可送件。計畫本身仍列最高US$20,000 Aura credits、Series B或更早、5個工作日內決定。
+
+[Manus 新創](https://manus.im/startups)：頁面確認公開申請暫停、僅VC推薦（六個月Team、最多20席、官方標示US$4,800），狀態改為paused；橫幅「VC Referral Only」與資格段「Preferred but not required」並存，以橫幅較保守。
+
+[Snowflake 試用](https://www.snowflake.com/en/snowflake-trial/)：US$400與Cortex Code US$40免費推論皆為30天；註冊只需email，但AI功能預設停用、須加信用卡才啟用且加卡不等於升級。註冊頁注入 `window.trial.isoCode="TW"`、國別表含Taiwan（+886），台灣在可選國別內；試用頁與文件對external network access等限制仍是10 credits/day vs 完全不可用兩說。
+
+[Kiro 新創](https://kiro.dev/startups/)：官方FAQ已列明確排除國別清單（Argentina、Belarus、Brazil、China/GCR、Cuba、France、Germany、Iran、Italy、Mexico、North Korea、Poland、Russia、Spain、Syria、Crimea、DNR、LNR、UAE），台灣未列其中，先前「GCR未定義」疑慮降低但仍須個案核准；方案正文與FAQ對AWS Activate的排除標準衝突未解。
+
+[Synthesia](https://www.synthesia.io/pricing)：Basic免費配額改列「1 Syren video - limited promo」，比較表仍寫「valid for 1 month／1,000 credits」，與說明頁固定到期2026-11-09 23:59 BST（台北11/10 06:59）衝突並存。Basic仍為US$0／月、500 credits、10分鐘影片、不可下載。
+
+[Vast 新創](https://vast.ai/startup)：現行頁「No upfront giveaways. No free trials.」與2026-02-06舊文「$2,500 in free GPU credits」同站並存，衝突未解；退款衝突（2018條款全部不退 vs 計費文件信用卡未用可退）亦仍存在。
+
+[Mem0](https://mem0.ai/pricing)：Free現行為前30天10,000 adds／1,000 retrievals（模型費Mem0負擔），BYOK後50,000／10,000；10/26前註冊者過渡至2026-11-25，屆時未接金鑰則新增報錯、檢索限1,000/月。Free條款仍授予內容永久、不可撤回、可訓練模型的授權。
+
+[Datacamp 免費週](https://www.datacamp.com/campaign/free-access-week-november-2026)：官方條款確認美東11/2 09:00至11/8 23:59，即台北11/9 12:59共同截止；免購買、Teams帳號不適用、排除AI Tutor／Google合作／Microsoft Fabric／DataLab Premium。
+
+其餘本輪複核無實質變動：[GMI×a16z](https://www.gmicloud.ai/a16z) 補上「200+模型」與工作日24小時入帳、仍無截止日；[Retool非營利](https://docs.retool.com/support/discount-programs) 每月US$1,625券與AI點數750/1,500 vs 1,000/3,000衝突未解；[Amazon ARA](https://www.amazon.science/research-awards/call-for-proposals/multilingual-and-contextual-ai-evaluation-call-for-proposals-fall-2026) 投稿至台北11/12 15:59；[Speechify API](https://speechify.ai/pricing) Free 500K字元、Simba 3.5 於11/21後降至250K；[Grammarly學生五折](https://support.grammarly.com/hc/en-us/articles/39623389691021-Grammarly-promo-offers-on-SheerID) 折扣與續訂條款確認，但SheerID台灣國別清單因JS動態載入本次無法重驗，台灣資格降回「條件式且本次未重驗」；[台灣HRD AI概論](https://elearn.hrd.gov.tw/info/10042743) 再確認頁面無費用欄位、數位發展部2024免費說法僅指另一專區，本課2026費用維持未知。
+
+品質改善：本輪開始時407筆記錄的 `sources` 內有同網址重複條目（全庫3,828筆來源僅2,488個不同URL），前端逐筆列出同一網址的多份證據，同一頁面會出現兩種措辭而無從判斷新舊。`app.js` 新增 `groupSources`：同網址只渲染一列，取查閱時間最新者為主，其餘收進「較早的 N 筆同網址紀錄」可展開區塊並保留原文（不刪資料），styles 補 `.source-earlier`。`tests/validate.py` 對本輪批次新增兩項斷言——不得有重複來源URL、每筆至少一個本次查閱時間——並以注入重複來源與移除查閱時間兩種方式確認會失敗；`tests/filters.cjs` 增測同網址合併、新舊排序與舊證據仍可取得。本輪複核的 17 筆已就地合併（例：`fal` 16→8、`airtop` 33→6、`neo4j` 16→4、`manus` 6→2），其餘 398 筆由前端合併顯示，全庫最多由 38 列降為 8 列（`laya-free-oct2026`）。瀏覽器載入 869 筆、無 console error、390px 視窗無水平溢出。
+
+下輪優先：`fal-flux3-max-five-daily-sandbox` 台北11/10 04:00原訂截止後一日以瀏覽器登入／未登入兩態確認沙盒7次是否含FLUX 3 Max，再決定維持needs_verification或改not available；`google-ai-professional-certificate-tw-pro-3mo` 以瀏覽器實測Coursera→one.google.com兌換是否仍受理（條款11/6 vs 台灣頁2027-01-01）；`cht-google-ai-plus-first-year-free-2026` 讀[googleone.cht.com.tw活動頁](https://www.cht.com.tw/home/campaign/googleone/index.html)補綁約年限與首年後AI月費；`github-copilot-free` 與 `copilot-free` 為同一Copilot Free方案的重複紀錄（來源與摘要幾乎相同），需決定合併方式並保留policy-history指向；`autoclaw-halloween-40m-expiry-conflict-watch` 與 `autoclaw-weekly-perk-november-nine-hundred-million-tokens` 於台北11/8 23:59截止與11/9開跑後確認活動頁狀態。
+
 2026-11-08 11:05–11:25 本輪：起始863筆；局部複核 `autoclaw-halloween-40m-expiry-conflict-watch`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`aocai-working-free-ai-courses-2026`、`taipei-youth-ai-subscription-subsidy-2026`、`valyu-signup-ten-twenty-twelve-months`、`replit-startup-partner-credits-pro`、`kakaocloud-rocket-launcher-startups`、`grok-retention-community`、`braintrust-starter-monthly-model`、`typhoon-free-research-api-rate-limited`、`fish-audio-s21-pro-free-development-api`、`fish-audio-student-voice-credits`、`whimsical-education-year-pro-once-ten-ai`、`imagi-free-teacher-lovable-twentyfive-thirty-days`、`elevenlabs-impact-professors-pro`、`elevenreader-student-free-year`、`luma-dream-machine-free-generation-watchlist`、`composio-hobby` 共18筆；新增機會 `make-startup-partner-six-month-bootstrap-three-month-credits` 共1筆，政策及線索各0筆；既有未完成845筆，核心來源整筆追查失敗0筆。未登入、申請或付款。
 
 [AutoClaw 萬聖節4,000點](https://autoclaw.z.ai/blog/news/M11W1/)：活動公告仍列至今日（11/8）23:59 UTC+8截止，但同頁另段仍將本週獎勵誤寫為11/1到期，正文矛盾仍在；免費服務依[服務協議](https://autoclaw.z.ai/privacy/md2html/?favicon=autoglm&md=autoclaw_agreement)明確限非商業個人研學；台灣實際可領未核。

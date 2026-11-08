@@ -90,3 +90,31 @@ sortItems.sort(costComp);
 assert.strictEqual(sortItems[0].id, 'free-1');
 assert.strictEqual(sortItems[1].id, 'paid-1');
 assert(sortItems[2].setup_cost_usd === null && sortItems[3].setup_cost_usd === null);
+
+// Repeated lookups of the same URL must render once, newest evidence first,
+// with earlier lookups kept behind a disclosure instead of duplicated rows.
+const grouped = ctx.groupSources([
+  { url: 'https://example.com/a', scope: '舊範圍', evidence: '舊證據' },
+  { url: 'https://example.com/a', scope: '新範圍', evidence: '新證據', accessed_time_range: '2026-11-08T10:00:00+08:00/2026-11-08T10:05:00+08:00' },
+  { url: 'https://example.com/b', scope: 'B範圍', evidence: 'B證據' }
+]);
+assert.strictEqual(grouped.length, 2, 'same URL should collapse into one source group');
+assert.strictEqual(grouped[0].source.scope, '新範圍', 'newest accessed entry should be primary');
+assert.strictEqual(grouped[0].earlier.length, 1);
+assert.strictEqual(grouped[0].earlier[0].scope, '舊範圍');
+assert.deepStrictEqual(ctx.groupSources([]).length, 0);
+const repeatedDetails = ctx.createDetails({
+  eligibility: {},
+  sources: [
+    { url: 'https://example.com/a', scope: '舊範圍', evidence: '舊證據' },
+    { url: 'https://example.com/a', scope: '新範圍', evidence: '新證據', accessed_at: '2026-11-08T10:05:00+08:00' }
+  ]
+});
+const repeatedList = repeatedDetails.children.find(node => node.tagName === 'ol');
+assert.strictEqual(repeatedList.children.length, 1, 'duplicate source URLs must not render twice');
+const repeatedItem = repeatedList.children[0];
+assert(repeatedItem.children.some(node => node.tagName === 'p' && node.textContent.includes('新範圍')));
+const earlierBlock = repeatedItem.children.find(node => node.tagName === 'details');
+assert(earlierBlock, 'earlier lookups of the same URL must stay reachable');
+assert(earlierBlock.children[0].textContent.includes('1 筆'));
+assert(earlierBlock.children.some(node => node.textContent.includes('舊證據')));

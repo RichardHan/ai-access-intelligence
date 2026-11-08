@@ -27,6 +27,12 @@ assert run['completed_at']>=run['started_at'], 'completed_at precedes started_at
 offers_by_id={o['id']:o for o in d['offers']}
 for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
 for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
+run_day=run['started_at'][:10]
+for rid in reviewed+new:
+ urls=[s.get('url') for s in offers_by_id[rid]['sources']]
+ assert len(urls)==len(set(urls)), f'duplicate source URL in this batch record (merge instead of append): {rid}'
+ stamps=[(s.get('accessed_at') or s.get('accessed_time_range') or '').split('/')[-1] for s in offers_by_id[rid]['sources']]
+ assert any(stamp[:10]>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
 for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
