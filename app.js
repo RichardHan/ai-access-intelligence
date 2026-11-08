@@ -388,19 +388,26 @@ function render(reset = true) {
   updatePresetButtons();
 }
 
+// 免費方案的判定規則全在 viewMatches('free')：設定費與每月費用皆為 0 一律列入、每月費用
+// 未知者只在明確標記 free 時列入。preset 不能再疊加 cost:'0'——那等於額外要求「設定費必須
+// 已知為 0」，把 108 筆真正免費但設定費未填的紀錄（Cloudflare Workers Free、BeatAPI 零餘額
+// 免費模型、Orkes Playground…）擋在入口外，也和 README 寫的規則不一致。
+function presetFilters(preset) {
+  return {
+    all: {}, taiwan: { taiwan: 'Yes' }, free: { view: 'free' },
+    developer: { view: 'developer' }, recent: { sort: 'fresh' }
+  }[preset] || {};
+}
+
 function applyPreset(preset) {
   clearTimeout(searchTimer);
   const form = $('#filters');
-  clearTimeout(searchTimer);
   applyingPreset = true;
   form?.reset();
   applyingPreset = false;
   activePreset = preset;
   recentOnly = preset === 'recent';
-  const values = {
-    all: {}, taiwan: { taiwan: 'Yes' }, free: { cost: '0', view: 'free' },
-    developer: { view: 'developer' }, recent: { sort: 'fresh' }
-  }[preset] || {};
+  const values = presetFilters(preset);
   for (const [name, value] of Object.entries(values)) {
     const control = form?.elements.namedItem(name);
     if (control) control.value = value;

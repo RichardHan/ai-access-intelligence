@@ -96,6 +96,15 @@ for o in d['offers']:
  if cadence in MAX_CADENCE_GAP and o.get('verified_at') and o.get('next_review_at'):
   gap=(datetime.datetime.fromisoformat(o['next_review_at'])-datetime.datetime.fromisoformat(o['verified_at'])).days
   assert gap<=MAX_CADENCE_GAP[cadence], f'{cadence} cadence but next review {gap} days out (fix the label or the schedule): {o["id"]}'
+ # 讀者只能在截止前動作，所以還有未來截止／到期時點的紀錄，下次複核必須排在該時點之前。
+ # 2026-11-09 發現 StepFun 免費 preview 到 11/17 11:59:59，next_review_at 卻是 11/18 12:00：
+ # 整個免費期沒有任何複核，若官方提前結束或展延，網站要到活動結束後才更新。
+ if o.get('status') not in dead and o.get('next_review_at'):
+  scheduled=latest_stamp(o['next_review_at'])
+  for field in ('deadline_at','expires_at'):
+   closes=latest_stamp(o.get(field))
+   if closes and closes>NOW and scheduled and scheduled>closes:
+    raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {o[field]} in {o["id"]}: schedule the review while the offer is still actionable')
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'

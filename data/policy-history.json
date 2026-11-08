@@ -25720,5 +25720,117 @@
       "https://docs.fastino.ai/troubleshooting/errors.md",
       "https://docs.fastino.ai/pricing.md"
     ]
+  },
+  {
+    "record_id": "openai-api-data-sharing-daily-complimentary-tokens",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-09",
+    "summary": "新增：OpenAI API 資料共享回饋，符合資格的 Launch/Grow 組織每日第一組 1,000,000 tokens、第二組 10,000,000（Build 為 250,000／2,500,000），按模型群組各自計算、00:00 UTC 重置；超量那一筆整筆計費，微調、evals 與 tool use 不計入。需組織擁有者開啟、帳戶餘額須為正（等於先付費入金），ZDR 與 Enterprise 不可開啟。支援國家清單列名 Taiwan，但資格仍由 OpenAI 依組織判定。未登入、未開啟共享。",
+    "sources": [
+      "https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai",
+      "https://developers.openai.com/api/docs/supported-countries"
+    ]
+  },
+  {
+    "record_id": "viktor-free-hundred-credit-workspace",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-09",
+    "summary": "新增：Viktor（Zeta AI）Free 為 US$0/月、免卡，新工作區一次性最高 US$100 starter credits（依註冊管道）、credits 不過期；Free 層無加值、無 rollover、rate limit 為付費入門層 0.5 倍；付費每 10,000 credits US$25。條款明文限 B2B、不供消費者。台灣國別條款未列，Taiwan 維持 Unknown。未註冊。",
+    "sources": [
+      "https://viktor.com/pricing",
+      "https://viktor.com/docs/plans-and-credits/md",
+      "https://viktor.com/legal/general-terms"
+    ]
+  },
+  {
+    "record_id": "maritaca-s5-free-limited-launch",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-09",
+    "summary": "新增：Maritaca S5 於 2026-11-03 上線，同期 S5-free 限時不計 token 費、僅文字、不含 Batch/Flex/內建工具，速率固定 60 RPM、輸入與輸出各 256k TPM；官方稱可隨時結束。付費 S5 為 R$0.50／R$2.50 每百萬 in/out。台灣與是否需綁卡均未核。未呼叫 API。",
+    "sources": [
+      "https://github.com/maritaca-ai/maritalk-api/blob/main/documentation/docs/pt/precos.md",
+      "https://github.com/maritaca-ai/maritalk-api/blob/main/documentation/docs/pt/rate-limits.md",
+      "https://www.maritaca.ai/en/blog/S5/"
+    ]
+  },
+  {
+    "record_id": "zcode-daily-300m-glm53-flash-claim-watch",
+    "change_type": "new_watchlist",
+    "date": "2026-11-09",
+    "summary": "新增觀察線索：@zcode_ai 官方貼文（2026-10-26 16:55:49 GMT）稱每日可在 ZCode 內領 300M GLM-5.3-Flash tokens，11:00 UTC 起領、15:00–01:00 UTC 使用、需切到 Global Building。貼文未寫免費帳號是否適用、未寫結束日；同組織另一個 GLM-5.3-Flash 活動（2026-09-03–10-07）限付費方案且已結束，兩者不同。未安裝客戶端、未領取。",
+    "sources": [
+      "https://x.com/zcode_ai/status/2114762939421139426",
+      "https://docs.z.ai/devpack/notice/event-glm-5.3-flash"
+    ]
+  },
+  {
+    "record_id": "olostep-trial-five-hundred-successful-web-requests",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "summary": "官方 FAQ 明寫免費層「500 successful scrapes per month at no cost」、免卡、含 JS 渲染與住宅 IP，另稱免費層 10 requests per minute；定價頁只寫 free plan 500 requests 未標週期，且 Starter 併發為 20（FAQ 稱 100）。原紀錄「未公告重置或效期，不能列為每月 500 次」已不成立，改為兩頁並列並保留三處矛盾。",
+    "sources": [
+      "https://www.olostep.com/frequently-asked-questions",
+      "https://www.olostep.com/pricing"
+    ]
+  },
+  {
+    "record_id": "sensenova-token-plan-free-public-beta",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "summary": "免費公測額度首次取得官方數字：官方 GitHub org（OpenSenseNova）FAQ 寫「the free quota is 1,500 calls / 5 hours (sliding window)」，超過回 429、額度用盡回 FREE_QUOTA_EXHAUSTED；INSTALL.md 確認國際站 token.sensenova.ai 與中國站 token.sensenova.cn 分離且三個值不可混用。quota_classification 由 UNKNOWN 改 HIGH BUT LIMITED；公測結束日仍未公布。",
+    "sources": [
+      "https://raw.githubusercontent.com/OpenSenseNova/SenseNova-Skills/main/docs/faq.md",
+      "https://raw.githubusercontent.com/OpenSenseNova/SenseNova-Skills/main/INSTALL.md"
+    ]
+  },
+  {
+    "record_id": "ant-ling-ling-3-2-flash-free-two-weeks",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-09",
+    "summary": "免費層矛盾新增第三個資料點：price 頁 FAQ 寫「the quota resets the next day」、FAQ 頁（Last updated November 5, 2026）寫每日 50 萬 token、02:00 前發放不結轉；Billing Service Upgrade Guide 同日更新卻寫每日額度停發、改每月 ¥10 券。四頁同日無法排序，矛盾保留；quota_classification 由 UNKNOWN 改 HIGH BUT LIMITED。",
+    "sources": [
+      "https://developer.ant-ling.com/en/docs/faq/",
+      "https://developer.ant-ling.com/en/docs/getting-started/changelog/billing-upgrade/"
+    ]
+  },
+  {
+    "record_id": "perplexity-watch",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-09",
+    "summary": "Help Center 全文索引 llms-full.txt 今日 404（02:14 尚可讀），改以 per-article .md 讀取：文章 11187416 的自由方案正文已改寫為無數字的「Very limited amount of Pro Searches」，同篇比較表仍寫 3/day，10352998 仍寫 five per day，三處皆無更新日期。www.perplexity.ai/pricing 仍 403。",
+    "sources": [
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you.md",
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/10352998-account-management-and-security.md"
+    ]
+  },
+  {
+    "record_id": "perplexity-education",
+    "change_type": "eligibility_clarification",
+    "date": "2026-11-09",
+    "summary": "以 per-article Markdown 讀到 US$10／SheerID 與「unlimited Pro Searches」原文，同篇比較表 Education Pro 欄寫 Weekly limits；Pro 文與 Pro Search 文皆寫用量 up to your plan's limit，故可支持讀法為「無每日硬上限、受每週 soft limit」，unlimited 原文保留。verification 由 Unverified 改 Official；三篇均無更新日期，年繳仍未載。",
+    "sources": [
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/12590157-what-is-education-pro.md",
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you.md"
+    ]
+  },
+  {
+    "record_id": "minimax-design-h3-new-user-watch",
+    "change_type": "official_source_reverification",
+    "date": "2026-11-09",
+    "summary": "上一輪的 JS 空殼障礙解除：以真實 Chromium 渲染 www.minimax.io/audio，新戶橫幅「3 Free H3 Trials + 2,000 Credits for New Users」仍在；design.minimax.io/media-plan/subscribe 會員 FAQ 可讀「Free credits for new users: Valid for three days」。會員價與 credits（Starter US$8.4/月、10,000；Plus US$60.8、87,000；Pro US$172、270,000）一併補記。每日改週查，台灣資格與領取流程仍未知。",
+    "sources": [
+      "https://www.minimax.io/audio",
+      "https://design.minimax.io/media-plan/subscribe"
+    ]
+  },
+  {
+    "record_id": "fastino-glideis1-ten-credit-payment-verification",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-09",
+    "summary": "除文件全文索引外，官方 changelog（最新 2026-08-10）與官方 blog（Published Nov 6）對 GLIDEIS1／promo code／redeem 亦 0 命中，官方文件站無 billing 或兌換頁；X 貼文（2026-10-22）仍是唯一官方痕跡且從未公布截止日。每日改週查，避免對不會變的頁面反覆回訪。",
+    "sources": [
+      "https://docs.fastino.ai/changelog.md",
+      "https://fastino.ai/blog/training-glide-sota-decision-model"
+    ]
   }
 ]

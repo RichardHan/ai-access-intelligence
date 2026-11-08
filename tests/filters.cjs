@@ -207,3 +207,19 @@ const regionValues=[...regionSelect[1].matchAll(/<option value="([^"]*)"/g)].map
 assert.strictEqual(regionValues.length,4,'region filter option count changed without a matching data check');
 for(const v of regionValues) assert(d.offers.some(o=>ctx.regionMatches(o,v)),'region filter option without any matching record: '+v);
 console.log('PASS: region filter matches aliases (TW/Taipei Taiwan/United States/GLOBAL/Worldwide), keeps Unknown out of Other, and every index.html region option matches data.');
+
+// 免費方案捷徑的篩選條件就是 viewMatches('free')，不可再疊加 cost:'0'：那會額外要求「設定費
+// 必須已知為 0」，把只是沒填設定費的真正免費紀錄（Cloudflare Workers Free、BeatAPI 零餘額）
+// 擋在入口外，與 README 寫的規則不一致。以下為規格值：preset 只帶 view，且未知設定費仍可入。
+// vm 內建立的物件有不同 prototype，用 JSON 比對值而非 deepStrictEqual。
+assert.strictEqual(JSON.stringify(ctx.presetFilters('free')),JSON.stringify({view:'free'}),'free preset must rely on viewMatches alone');
+assert.strictEqual(JSON.stringify(ctx.presetFilters('taiwan')),JSON.stringify({taiwan:'Yes'}));
+assert.strictEqual(JSON.stringify(ctx.presetFilters('unknown-preset')),'{}');
+const unknownSetupFree=d.offers.find(o=>o.id==='cloudflare-workers-free-daily-requests');
+assert(unknownSetupFree&&unknownSetupFree.setup_cost_usd===null&&unknownSetupFree.recurring_cost_usd===0&&(unknownSetupFree.views||[]).includes('free'));
+assert(f(unknownSetupFree,Object.assign({},ctx.presetFilters('free'),{cost:undefined})),'free record with unknown setup cost must appear in the free preset');
+assert(!f(paidTrial,ctx.presetFilters('free')),'paid trial must stay out of the free preset after dropping the cost filter');
+const freeIds=d.offers.filter(o=>f(o,ctx.presetFilters('free'))).map(o=>o.id);
+assert(freeIds.includes('cloudflare-workers-free-daily-requests'),'preset selection must include unknown-setup-cost free records');
+assert(freeIds.length>500,'free preset unexpectedly small: '+freeIds.length);
+console.log('PASS: free preset derives from viewMatches only ('+freeIds.length+' records) and still excludes paid trials.');
