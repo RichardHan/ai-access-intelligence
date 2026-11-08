@@ -50,6 +50,12 @@ assert(monthlySignalRow.children[1].textContent.startsWith('每月或有新線�
 const eventDetails=ctx.createDetails({review_cadence:'event',next_review_at:'2026-11-20',eligibility:{},sources:[]});
 const eventRow=eventDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert(eventRow.children[1].textContent.startsWith('特定活動事件追蹤；2026-11-20'),'unexpected cadence text for event');
+const weeklyDetails=ctx.createDetails({review_cadence:'weekly',next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const weeklyRow=weeklyDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(weeklyRow.children[1].textContent.startsWith('每週；2026-11-20'),'unexpected cadence text for weekly');
+const onSignalDetails=ctx.createDetails({review_cadence:'on_new_signal',next_review_at:'2026-11-20',eligibility:{},sources:[]});
+const onSignalRow=onSignalDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
+assert(onSignalRow.children[1].textContent.startsWith('有新線索時；2026-11-20'),'unexpected cadence text for on_new_signal');
 const closedDetails=ctx.createDetails({status:'expired',next_review_at:null,eligibility:{},sources:[]});
 const closedRow=closedDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert.strictEqual(closedRow.children[1].textContent,'已停止定期複核；有新線索時追蹤');
