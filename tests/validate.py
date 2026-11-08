@@ -65,6 +65,8 @@ for o in d['offers']:
   assert isinstance(s.get('evidence'), str) and s['evidence'].strip(), f'missing or empty source evidence in {o["id"]}'
  if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'
  if o.get('review_cadence') is not None:assert o['review_cadence'] in {'daily','monthly','weekly','biweekly','on_new_signal','monthly_or_new_signal','event'}, f'invalid review_cadence in {o["id"]}: {o.get("review_cadence")}'
+ # A closed offer cannot be acted on daily; daily cadence would re-queue it every round.
+ if o.get('status') in dead and o.get('review_cadence')=='daily':raise AssertionError(f'closed record must not keep daily cadence (use monthly_or_new_signal / on_new_signal / event): {o["id"]}')
  assert o['benefit_cost_ratio'] is None or math.isfinite(o['benefit_cost_ratio'])
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None
  if o['usage_type']=='Unlimited':assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED']

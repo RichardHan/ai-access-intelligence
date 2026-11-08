@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **875 筆**（671 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:17 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **26 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **843 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **2 筆**（Perplexity 官方頁與替代入口全數 403）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **880 筆**（676 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:26 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **863 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 兩筆今日仍 403，追查紀錄沿用前一筆批次，未刷新 `verified_at`）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
@@ -49,6 +49,10 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-08 16:04–16:26 本輪（接續 22b95a9 之後的第二段，獨立 commit）：起始 875 筆；局部複核 12 筆、新增 5 筆機會（政策 0、觀察線索 0）、未完成複核 863 筆；結果 880 筆。複核 `cht-google-ai-plus-first-year-free-2026`（首年後原價 165／330／650 元、主約 12 個月與寬頻 7–12 個月 264 元，官方新聞稿＋方案頁雙讀）、`sarvam-campus-tour-credits`（53 張校卡 completed 18／tentative 35／active 0，18 個報名鈕全 disabled，改判 `applications_closed`）、`articul8-bivia-early-adopter-billion-tokens`（條款「No trial converts to paid access」與 18 歲門檻）、`felo-standard-free-new-user-daily-two-hundred-campaign`、`deepgram-flux-tts-bonus`、`minimax-design-h3-new-user-watch`、`mango-inference-community`（$10 額度＋首 30 天 7 折、11/11 截止）、`cursor-students-policy`（2026-06-25 起停止新申請）、`beam-cloud-developer-paid-not-thirty-free`、`nlp-cloud-trial-card-and-hard-cap`、`upstage-mini4-discount-ended`（改判 `expired`）、`openai-student-collective-2026`（改判 `applications_closed`）。新增：`taiwan-nsp-youth-ai-training-subsidy-2026`（產業新尖兵，15–29 歲本國籍待業青年最高 10 萬元訓練補助、每月 8,000 元學習獎勵金、116 年起內含 8,000 元 AI 工具訂閱補助）、`taiwan-industry-talent-investment-ai-courses-2026`（產業人才投資方案，在職勞工 80%／特定對象 100%、3 年 10 萬元上限）、`ntpc-uko-microsoft-ai-cert-free-2026`（新北 UKO 微軟 AI 證照免費培訓）、`apple-siri-ai-developer-preview-2026`（Siri AI 開發者預覽，免費、繁中「將擴充」）、`ncu-nstc-robotics-talent-training-2026`（國科會智慧機器人高階人才培訓，碩士以上不限國籍、120 小時免費）。同時把 12 筆已截止卻仍掛 `daily` 的紀錄降為 `monthly_or_new_signal`，並在 `tests/validate.py` 加入「已截止紀錄不得維持 daily」的斷言，避免死案每輪重複排隊。未登入、未報名、未付款；Perplexity 兩筆仍因官方頁 403 無法複核。
+
+下輪優先（本段視角，前五項）：`taiwan-nsp-youth-ai-training-subsidy-2026` 核「每月 8,000 元學習獎勵金」是否只在新聞稿、計畫條文有無，並確認 12 月梯次是否仍收件（來源：青年職訓網、台灣就業通）；`ntpc-uko-microsoft-ai-cert-free-2026` 確認 Pearson VUE 首次考試費由誰負擔、AB-730 第 2 梯（11/14）是否仍開放（來源：新北青年局課程頁）；`ncu-nstc-robotics-talent-training-2026` 補找中央大學官方招生頁與面試日程（來源：NCU 產學營運中心、國科會）；`mango-inference-community` 在 11/11 後確認 30% 折扣是否結束、$10 額度是否需卡（來源：platform 頁與 docs）；`sarvam-campus-tour-credits` 追 35 所 tentative 校園是否有任一開放報名，若全年度結束則改 `expired` 並退出複核。Perplexity 兩筆維持記錄 403 嘗試，不刷新 `verified_at`。
 
 2026-11-08 16:03–16:20 本輪（兩段研究合併成同一批次）：起始 869 筆；局部複核 26 筆、新增 6 筆（5 機會、1 觀察線索）、追查失敗 2 筆、未完成複核 843 筆。第二段（本 agent）複核 `krater-student-fifteen-twenty-discount-conflict-watch`、`vast-startup-spend-match`、`medux-free-trial-3000-credits`、`cognee-free-memory-token-grant-conflict-watch`、`memobase-free-credit-operation-conflict`、`langwatch-developer-free-fiftyk-terms-conflict`、`google-ai-professional-certificate-tw-pro-3mo`，新增：
 
