@@ -119,7 +119,14 @@ for o in d['offers']:
  # The frontend derives the 無限 preset from quota_classification; a hand-set 'unlimited' view that
  # contradicts it shows a limited plan in the unlimited bucket.
  if 'unlimited' in (o.get('views') or []):assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED'], f'unlimited view conflicts with quota_classification in {o["id"]}: {o["quota_classification"]}'
+ # 高額度與 Beta 專區改讀 categories（view=quota 曾只標 63 筆而 HIGH-QUOTA 有 127 筆），
+ # 所以人工 views 不得再與 categories 相反，否則又是一個會誤導讀者的第二真相來源。
+ if 'quota' in (o.get('views') or []):assert 'HIGH-QUOTA' in o['categories'], f'quota view without HIGH-QUOTA category in {o["id"]}'
+ if 'beta' in (o.get('views') or []):assert 'BETA-ACCESS' in o['categories'], f'beta view without BETA-ACCESS category in {o["id"]}'
  if o['savings_usd'] is not None:assert o['valuation_scenario']
+ # 卡片正文就是 summary。缺 summary 的紀錄在網站上顯示「研究摘要待補充」，等於把
+ # 已核實的免費額度隱藏起來（2026-11-09 發現 12 筆，含 OpenAI 資料共享與 Viktor Free）。
+ if o['record_type']=='opportunity':assert isinstance(o.get('summary'), str) and o['summary'].strip(), f'missing summary for an opportunity card in {o["id"]}'
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'

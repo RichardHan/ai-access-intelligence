@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **906 筆**（700 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 04:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **882 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
+資料集目前有 **911 筆**（705 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 05:16 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **887 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
 
 ## 使用方式
 
@@ -48,6 +48,8 @@
 
 免費專區曾只讀各筆手動 `views` 標記（schema 不管制），造成兩個方向的誤導：3 筆已知每月費用的試用（Lindy US$29.99、Lemonfox US$5、GoodMem US$15）仍列在「免費方案」，而 40 筆設定費與每月費用皆為 0 的紀錄（含 Gemini API、Claude Free、Firecrawl、台灣人工智慧學校等）因漏標 `free` 而完全不出現。2026-11-09 改由 `viewMatches()` 以成本欄位判定：兩項費用皆 0 一律列入、已知每月費用 >0 排除、每月費用未知者保留人工標記；`tests/filters.cjs` 以三種規格值斷言（零費用未標記必入、US$29.99 試用必出、未知費用且標記 free 仍在）。實測免費專區由 413 筆增至 451 筆（含本輪新增 1 筆）。
 
+「高免費額度」與「Beta 存取」兩個專區過去同樣只讀人工 `views`：2026-11-09 統計 view=quota 僅 63 筆，而 schema 的 HIGH-QUOTA 類別有 127 筆（69 筆沒標）；view=beta 僅 15 筆，BETA-ACCESS 有 50 筆（35 筆沒標）。兩個下拉標籤與類別一一對應，已改由 `viewMatches()` 讀 `categories`；同時把「已截止紀錄退出可行動專區」擴及這兩個專區（HIGH-QUOTA 含 5 筆、BETA-ACCESS 含 4 筆已截止紀錄，先前仍會出現在專區）。實測 quota 63→122、beta 15→46（911 筆下；差額為已截止項）。`tests/filters.cjs` 以規格值斷言「所有 HIGH-QUOTA 未截止紀錄必入 quota 專區、HIGH BUT LIMITED 單獨不得入、人工 view 標記不得單獨生效、已截止仍可從全庫搜尋」，`tests/validate.py` 新增 `quota`／`beta` view 與 categories 的一致性斷言，並移除 4 筆與 categories 相反的人工標記。`regional`／`value` 維持人工標記：REGION-LOCKED 不含台灣限定補助、VALUE-DEAL 與 LOW-COST／免費高值非一對一，語意未定前不改。
+
 數值型篩選門檻一律「含等於」，標籤也要寫清楚是 ≤。2026-11-08 修掉「設定時間」用嚴格小於比對的錯誤：選 15 分鐘會排除正好需 15 分鐘的 109 筆（當時全庫 205 筆落在 5／15／30／60 邊界），修正後 884 筆下為 9／138／300／343 筆（納入本輪新增後為 9／141／303／347）。`tests/filters.cjs` 原本用 `!f(free,{effort:'15'})` 把錯誤行為釘住，這類「現況即測試」的斷言必須改成規格值，並補一個邊界外的反向案例（16 分鐘不得入 15 分鐘）。
 
 重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
@@ -57,6 +59,20 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（2026-11-08 收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。此問題在 2026-11-09 01:05 批次再次發生（`completed_at` 寫成 02:40、13 筆 `verified_at` 寫在 02:08–02:34，而實際 commit 是 01:46），已由 `tests/validate.py` 的「不得寫入未來時間戳」與「`verified_at` 不得晚於批次完成」兩條斷言攔下；寫入時間一律先跑 `TZ=Asia/Taipei date -Iseconds` 對錶。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-09 05:00–05:16 本輪（接續 ac654a5 之後，獨立 commit）：起始 906 筆；局部複核 19 筆、新增機會 5 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 887 筆；結果 911 筆。開始時 `next_review_at` 已到期 0 筆（上一批次 04:20 剛結算），佇列因此為：當日到期與台灣期限 4 筆（DataCamp 台北 12:59、AOCAI 23:59、臺北青年補助 11/10 送達、Grammarly 學生折扣）＋官方矛盾與證據缺口 3 筆（Google AI 憑證的 2027-01-01 vs 2026-11-06、ZCode 貼文 300M/日、Qoder 免費機制）＋最久未核輪替 12 筆（2026-10-29／10-30 批次）；04:1x 才核過的 daily 項（mango、fal、stepfun、ant-ling 等）不重複刷新。分工：3 個 scout subagent（期限與高風險／最久未核輪替／新機會去重），只回 patch 不碰 JSON；主 agent 逐頁重讀要寫入的官方來源（Bruin、Weaviate、MongoDB、Kernel、past.dev、fal、Steel、Recall、Warp、Novita、Anara、Tana、DataCamp、AOCAI、臺北青年局、ZCode 文件、Grammarly、Grow Google、Google One 條款、Qoder，以及 5 個新機會官網），`accessed_at` 一律用自己的讀取時間。
+
+實質變動 4 筆。`zcode-daily-300m-glm53-flash-claim-watch`：官方文件（zcode.z.ai/en/docs/welcome）寫新手優惠只有「5-day free trial」，GLM-5.3 3M/日＋GLM-5-turbo 2M/日，並明寫「not an ongoing daily allowance」，與 2026-10-26 貼文的每日 300M 直接衝突；兩說並列、`limited_confirmed` 改 false，並補上 Z.ai 服務條款排除地區僅 Iran／North Korea／Cuba／Crimea／Donetsk／Zaporizhzhia（未列台灣）。`qoder-free-mechanisms`：新增 Efficient 層免費促銷（2026-09-03 14:00 SGT 起 0.3×→0.0×、不扣點，付費個人與 Teams／Enterprise 適用，Free 在 Pro 試用期且有 Credits 亦適用，結束日未定），與 Qoduck、每日 100 點並列為三種現行機制。`kernel-startup-two-tiers`：`/startups` 的 Scale 資金名單含 lerer hippeau，官方 blog（2026-10-20）只列 yc／a16z speedrun／accel，兩說保留；補「$750 in value」與「每家限一份 grant」。`past-memory-once-starting-credits`：定價頁 2026-11-08 改版新增 Flex US$99/月（400,000 credits/月、30 天結轉、可自動加值）與 Enterprise（自 5,000,000/月），PAYG 主張不變。
+
+欄位補強但結論不變 4 筆：`mongodb-startup-atlas-voyage`（額度可申請延長、promo code 只折抵未來費用、Developer Support 前 30 天免費）、`anara-free-daily-shared-research-usage`（原始 HTML 仍含「No credit card required」，Help Center 逐字補齊共享池與百分比呈現）、`tana-outliner-free-monthly-five-hundred-shared`（同頁 5 vs 12 張圖、3 vs 4 工作區兩處矛盾保留）、`grammarly-student-annual-half-first-period`（SheerID 靜態頁只有 JS 外殼，台灣可選性沿用同日 01:35–01:55 瀏覽器實測，未重現）。其餘 11 筆僅更新核實時間與來源、金額期限資格逐句對上舊紀錄：bruin、weaviate、fal、steel、recall、warp、novita、datacamp、aocai、臺北青年補助、google-cert。台灣期限三筆（DataCamp 12:59、AOCAI 23:59、臺北青年補助 11/10 送達）均無提前結束、額滿或停收公告。
+
+新增 5 筆機會：[Orkas Free](https://orkas.ai/pricing/)（US$0、500 一次性終身 credits、須桌面 App 登入領取、免卡；Model input 60～120 credits/1M tokens）、[Velork Hobby](https://velork.com/pricing)（2,000 起始 credits＋每月 10 張圖／1 小時雲端電腦／30 GB-hours，自帶 key 不扣點；是否每月重發未寫）、[HaveTML 前 500 名](https://havetml.com/pricing)（Pro 12 個月 $0、原價 US$6/月、免卡且無試用轉訂閱，名額滿即止）、[Hugging Face Classrooms](https://huggingface.co/classrooms)（教師建立教室組織，datasets／models／Spaces 免費託管，未列儲存與 GPU 上限）、[Vocal Separator](https://vocalseparator.com/pricing)（免帳號每日 2 次分軌、00:00 UTC 重置、每檔 ≤10 分鐘／100 MB；官方 2/日 與第三方 5/日 矛盾）。5 筆官方頁均未列地區清單或台灣，一律 Unknown。
+
+品質改善：「高免費額度」與「Beta 存取」專區只讀人工 `views`（quota 63 vs HIGH-QUOTA 127；beta 15 vs BETA-ACCESS 50），且已截止紀錄仍會出現。改由 `categories` 判定並把可行動專區的排除規則擴及兩者，實測 quota 63→122、beta 15→46；`tests/filters.cjs` 以規格值斷言（含反向案例：HIGH BUT LIMITED 單獨不得入、人工標記不得單獨生效），`tests/validate.py` 擋 views 與 categories 相反。細節見上段。另以瀏覽器實測發現 12 筆 opportunity 沒有 `summary`，卡片因此顯示「研究摘要待補充」而不是已核實的額度與費用——其中包含上一輪新增的 OpenAI API 資料共享（S 級）、Viktor Free 與 Maritaca S5-free，以及本輪 5 筆新紀錄；已就各筆既有已核欄位補寫摘要（未新增外部主張），並在 `tests/validate.py` 加「opportunity 必須有非空 summary」斷言，以移除 viktor 的摘要驗證會失敗。
+
+工具經驗：**本輪自己寫出未來時間戳**——patch 依估計寫入 05:22／05:23，實際時鐘是 05:16，被 `tests/validate.py` 的「verified_at 不得晚於批次完成」攔下，改回 05:15 才通過；寫入前一律先跑 `TZ=Asia/Taipei date -Iseconds`。Scout 環境沒有 bash（只能用 timeapi.io 對錶），回報時間屬近似值，主 agent 仍須自行重讀。SheerID 與 z.ai 訂閱頁是前端渲染，靜態抓取只有外殼；Anara 的「No credit card required」只在原始 HTML，content-negotiation 的 markdown 摘要看不到，判定前要抓原始 HTML。Warp 的 `?product=factories` 頁在 SSR HTML 內以「20% above API rates」字串出現，純渲染器預設只顯示 Terminal 方案。
+
+下輪優先（前五項）：① `datacamp-free-access-week-november-2026` 今日台北 12:59 後改 `expired` 並移除免費存取敘述，確認有無延長（來源 campaign 頁、status.datacamp.com）；② `google-ai-professional-certificate-tw-pro-3mo` 追 11/6 後兌換是否仍成功、Google One 條款是否終於更新為 2027-01-01（來源 one.google.com 條款、grow.google 台灣頁）；③ `zcode-daily-300m-glm53-flash-claim-watch` 查 Z.ai 是否有公告解釋 300M 與 5 天試用的落差，並確認免費帳號能否領取（來源 zcode.z.ai/docs、x.com/zcode_ai、z.ai 訂閱頁需渲染）；④ `fal-flux3-max-five-daily-sandbox` 在 11/21–11/23 00:00 UTC 前確認折扣結束日（landing 11/21、模型頁與 llms.txt 11/22、/flux-video FAQ 12/31 三方矛盾）與 sandbox 7 次是否含影片；⑤ `ant-ling-ling-3-2-flash-free-two-weeks` 在 11/19 前後確認 2 週免費是否結束、每日 50 萬 token vs 每月 ¥10 券何者生效（來源 price、faq、billing-upgrade）。
 
 2026-11-09 04:05–04:20 本輪（接續 1a1bcb0 之後，獨立 commit）：起始 902 筆；局部複核 20 筆、新增機會 3 筆、觀察線索 1 筆、政策 0、整筆追查失敗 0；未完成複核 882 筆；結果 906 筆。開始時 `next_review_at` 已到期 0 筆（上一批次 03:20 剛結算），佇列因此為：最久未核實且仍可行動的 12 筆（2026-10-29／10-30 批次）＋上一輪明列的五類衝突與證據缺口 7 筆＋StepFun 的排程缺陷 1 筆（免費截止 11/17、複核日卻排在 11/18）；03:0x 才核過的 daily 項不重複刷新。分工：3 個 scout subagent（最久未核輪替／衝突缺口／新機會去重），只回 patch 不碰 JSON；主 agent 逐頁重讀要寫入的官方來源、`accessed_at` 一律用自己的讀取時間，並自行以 Chromium 渲染 MiniMax 兩個頁面（scout 只拿得到 CSR 空殼）。
 

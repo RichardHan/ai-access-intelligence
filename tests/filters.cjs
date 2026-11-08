@@ -223,3 +223,33 @@ const freeIds=d.offers.filter(o=>f(o,ctx.presetFilters('free'))).map(o=>o.id);
 assert(freeIds.includes('cloudflare-workers-free-daily-requests'),'preset selection must include unknown-setup-cost free records');
 assert(freeIds.length>500,'free preset unexpectedly small: '+freeIds.length);
 console.log('PASS: free preset derives from viewMatches only ('+freeIds.length+' records) and still excludes paid trials.');
+
+// 「高免費額度」與「Beta 存取」兩個專區過去只讀人工 views（2026-11-09 統計：view=quota 63 筆，
+// 但 schema 的 HIGH-QUOTA 類別有 127 筆、69 筆沒標；view=beta 15 筆，BETA-ACCESS 有 50 筆、
+// 35 筆沒標）。兩個下拉標籤與類別一一對應，改由 categories 判定；已截止紀錄退出可行動專區，
+// 但仍留在全庫搜尋。以下為規格值，不是現況快照。
+const closedSet=new Set(['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged']);
+const hqAll=d.offers.filter(o=>(o.categories||[]).includes('HIGH-QUOTA'));
+const betaAll=d.offers.filter(o=>(o.categories||[]).includes('BETA-ACCESS'));
+assert(hqAll.length>100,'HIGH-QUOTA category unexpectedly small: '+hqAll.length);
+assert(betaAll.length>30,'BETA-ACCESS category unexpectedly small: '+betaAll.length);
+for(const o of hqAll) assert.strictEqual(f(o,{view:'quota'}),!closedSet.has(o.status),'HIGH-QUOTA record must appear in the quota preset unless it is closed: '+o.id);
+for(const o of betaAll) assert.strictEqual(f(o,{view:'beta'}),!closedSet.has(o.status),'BETA-ACCESS record must appear in the beta preset unless it is closed: '+o.id);
+const quotaPreset=d.offers.filter(o=>f(o,{view:'quota'}));
+assert.strictEqual(quotaPreset.length,hqAll.filter(o=>!closedSet.has(o.status)).length,'quota preset must equal open HIGH-QUOTA records');
+assert(quotaPreset.length>100,'quota preset unexpectedly small: '+quotaPreset.length);
+// 反向案例：有明確限制但不屬 HIGH-QUOTA 的紀錄不得因人工標記或額度分類而進入高額度專區。
+const limitedOnly=d.offers.find(o=>o.quota_classification==='HIGH BUT LIMITED'&&!(o.categories||[]).includes('HIGH-QUOTA'));
+assert(limitedOnly,'dataset should hold a HIGH BUT LIMITED record outside HIGH-QUOTA to guard against');
+assert(!f(limitedOnly,{view:'quota'}),'HIGH BUT LIMITED alone must not mean 高免費額度: '+limitedOnly.id);
+assert(!f({...free,categories:['FREE'],views:['quota']},{view:'quota'}),'a manual quota tag alone must not enter the quota preset');
+assert(!f({...free,categories:['FREE'],views:['beta']},{view:'beta'}),'a manual beta tag alone must not enter the beta preset');
+// 已截止的 BETA-ACCESS／HIGH-QUOTA 紀錄退出專區，但仍須能從全部紀錄找到。
+const closedQuota=hqAll.find(o=>closedSet.has(o.status));
+assert(closedQuota,'dataset should hold a closed HIGH-QUOTA record to guard against');
+assert(!f(closedQuota,{view:'quota'})&&f(closedQuota,{}),'closed quota record must leave the preset but stay searchable: '+closedQuota.id);
+const viewSelect=/<select name="view">([\s\S]*?)<\/select>/.exec(fs.readFileSync(__dirname+'/../index.html','utf8'));
+assert(viewSelect,'view select missing from index.html');
+const viewValues=[...viewSelect[1].matchAll(/<option value="([^"]*)"/g)].map(m=>m[1]).filter(Boolean);
+for(const v of viewValues) assert(d.offers.some(o=>f(o,{view:v})),'opportunity view option without any matching record: '+v);
+console.log('PASS: quota ('+quotaPreset.length+') and beta presets derive from schema categories, exclude closed records, and every index.html view option matches data.');

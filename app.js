@@ -97,6 +97,8 @@ function dateLabel(value, includeTime = false) {
 }
 
 const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED']);
+// 「機會專區」是可採取行動的入口：已截止紀錄退出這些專區，但仍可在全部紀錄搜尋到。
+const ACTIONABLE_VIEWS = new Set(['free', 'unlimited', 'quota', 'beta']);
 
 // The 用量 filter and the 無限專區 read the schema-enforced quota_classification.
 // usage_type is free-text descriptions (358 distinct values, many in Chinese), so exact
@@ -111,6 +113,13 @@ function viewMatches(o, view) {
     if (o.setup_cost_usd === 0 && o.recurring_cost_usd === 0) return true;
     return (o.views || []).includes('free');
   }
+  // 「高免費額度」與「Beta 存取」同樣有大範圍的人工 views 落差：2026-11-09 統計 view=quota 只標了
+  // 63 筆，而 schema 的 HIGH-QUOTA 類別有 127 筆（其中 69 筆沒標）；view=beta 只標 15 筆，
+  // BETA-ACCESS 有 50 筆（35 筆沒標）。兩者與下拉標籤一一對應，改讀 categories，不再看 views。
+  // regional／value 維持人工標記：REGION-LOCKED 只涵蓋對他國讀者的地區封鎖（台灣限定補助不算），
+  // VALUE-DEAL 與 LOW-COST／免費高值也非一對一，語意未定前不改。
+  if (view === 'quota') return (o.categories || []).includes('HIGH-QUOTA');
+  if (view === 'beta') return (o.categories || []).includes('BETA-ACCESS');
   return (o.views || []).includes(view);
 }
 
@@ -152,8 +161,8 @@ function matches(o, f = {}) {
     && (!f.usage || o.quota_classification === f.usage)
     && (!f.verification || o.verification === f.verification)
     && (!f.view || viewMatches(o, f.view))
-    // 免費與額度專區都是可行動的入口：已截止紀錄退出，但仍可在全部紀錄搜尋。
-    && !((f.view === 'free' || f.view === 'unlimited') && CLOSED_STATUSES.has(o.status))
+    // 免費、無限、高額度與 Beta 專區都是可行動的入口：已截止紀錄退出，但仍可在全部紀錄搜尋。
+    && !(ACTIONABLE_VIEWS.has(f.view) && CLOSED_STATUSES.has(o.status))
     && (!f.tier || o.priority_tier === f.tier);
 }
 
