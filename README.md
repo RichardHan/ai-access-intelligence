@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **911 筆**（705 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 05:16 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **887 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
+資料集目前有 **915 筆**（709 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 06:13 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **892 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
 
 ## 使用方式
 
@@ -50,6 +50,8 @@
 
 「高免費額度」與「Beta 存取」兩個專區過去同樣只讀人工 `views`：2026-11-09 統計 view=quota 僅 63 筆，而 schema 的 HIGH-QUOTA 類別有 127 筆（69 筆沒標）；view=beta 僅 15 筆，BETA-ACCESS 有 50 筆（35 筆沒標）。兩個下拉標籤與類別一一對應，已改由 `viewMatches()` 讀 `categories`；同時把「已截止紀錄退出可行動專區」擴及這兩個專區（HIGH-QUOTA 含 5 筆、BETA-ACCESS 含 4 筆已截止紀錄，先前仍會出現在專區）。實測 quota 63→122、beta 15→46（911 筆下；差額為已截止項）。`tests/filters.cjs` 以規格值斷言「所有 HIGH-QUOTA 未截止紀錄必入 quota 專區、HIGH BUT LIMITED 單獨不得入、人工 view 標記不得單獨生效、已截止仍可從全庫搜尋」，`tests/validate.py` 新增 `quota`／`beta` view 與 categories 的一致性斷言，並移除 4 筆與 categories 相反的人工標記。`regional`／`value` 維持人工標記：REGION-LOCKED 不含台灣限定補助、VALUE-DEAL 與 LOW-COST／免費高值非一對一，語意未定前不改。
 
+「機會專區」是可採取行動的入口，但排除規則先前只覆蓋免費／無限／高額度／Beta 四個選項。2026-11-09 統計：「新創與開發者」567 筆中有 39 筆已截止或已併入他筆（含 `copilot-free`、`lovable-student-discount` 等 `duplicate_merged`），「美國與地區限定」57 筆中有 15 筆已截止，「低價高值」55 筆中有 3 筆。`ACTIONABLE_VIEWS` 因此改為列出 index.html 的七個 view 選項，任一專區都不再顯示已截止、已關閉與重複合併紀錄（全庫搜尋仍找得到）；實測 developer 567→528、regional 57→42、value 55→52（915 筆下）。`tests/filters.cjs` 對 index.html 每個選項逐一斷言「已截止／合併紀錄不得出現」，並保留反向案例（未截止的 developer 紀錄仍須入列）。同類原則：新的專區或下拉選項若語意是「可採取行動」，必須同時加進 `ACTIONABLE_VIEWS` 與這組斷言，否則又會出現第二種行為。
+
 數值型篩選門檻一律「含等於」，標籤也要寫清楚是 ≤。2026-11-08 修掉「設定時間」用嚴格小於比對的錯誤：選 15 分鐘會排除正好需 15 分鐘的 109 筆（當時全庫 205 筆落在 5／15／30／60 邊界），修正後 884 筆下為 9／138／300／343 筆（納入本輪新增後為 9／141／303／347）。`tests/filters.cjs` 原本用 `!f(free,{effort:'15'})` 把錯誤行為釘住，這類「現況即測試」的斷言必須改成規格值，並補一個邊界外的反向案例（16 分鐘不得入 15 分鐘）。
 
 重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
@@ -59,6 +61,20 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（2026-11-08 收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。此問題在 2026-11-09 01:05 批次再次發生（`completed_at` 寫成 02:40、13 筆 `verified_at` 寫在 02:08–02:34，而實際 commit 是 01:46），已由 `tests/validate.py` 的「不得寫入未來時間戳」與「`verified_at` 不得晚於批次完成」兩條斷言攔下；寫入時間一律先跑 `TZ=Asia/Taipei date -Iseconds` 對錶。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-09 06:05–06:14 本輪（接續 0ca7312 之後，獨立 commit）：起始 911 筆；局部複核 19 筆、新增機會 4 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 892 筆；結果 915 筆。開始時 `next_review_at` 已到期 0 筆（上一批次 05:16 剛結算），佇列因此為：證據缺口與期限衝突 8 筆（D-ID 行動試用、Respan 商用條款、LangWatch、Kimi、Kling、Medux、新竹市補助、ndp one）＋最久未核輪替 11 筆（2026-10-29／10-30 批次的 YC AI Stack、fal grant、Past.dev、ChatGPT Pro、Google Cloud 研究與教學 credits、GitHub 學生包、PartyRock、Cline、SerpApi、Koyeb）。05:1x 才核過的 daily 項（DataCamp、AOCAI、臺北青年補助、Grammarly、Qoder、ZCode、fal 折扣）不重複刷新。分工：3 個 scout subagent（缺口複核／最久未核輪替／新機會去重），只回報證據與 patch，主 agent 逐頁重讀要寫入的官方頁面後才改 JSON。
+
+實質變動 4 筆。`ndp-one-oct31-free-full-security-diagnosis`：首頁與 `/terms` 已恢復可讀（先前記為 404），PR TIMES 2026-10-23 公告逐字寫活動只到 10/31 且無延期，改記 `expired`、月查；首頁現行的「無料ソースコードセキュリティー診断サービスPoC版」註明僅 PC 尺寸、條款限事業用途，不能當原活動延長。`koyeb-startup-up-to-thirtyk-compute`：2026-02-17 官方公告寫新用戶只能訂閱 Pro 以上且需有效付款方式，故 `recurring_cost_usd` 記 29（Pro US$29/月起、含 US$10 運算額度），並在 summary／access_risk 標明加入 Mistral AI 尚待交割；申請表仍只回外殼，額度與效期未核。`chatgpt-pro200-transition`：官方頁已無「10/29 過渡終點」敘述，移除該說法並補「Pro 200 已重新開放新訂閱」。`langwatch-...-terms-conflict`：修正前輪引用的條款號，衝突優先條款是 §2.9（§2.11 為 14 歲年齡條款），定價頁與 §3.2 的 14 天試用仍互斥。
+
+逐句補強但結論不變 4 筆：`respan-...`（§7 逐字「may not be used in connection with any commercial endeavors except…」、§3(6) 禁自動化，與 API／SDK 實務落差保留）；`kimi-free-web-app`（定價頁 11/9 起靜態只剩外殼，Help Center 現行方案表只列 Go/Plus/Pro/Max/Ultra、無 Free 列，Free 上限改標為「沿用 11-08 瀏覽器渲染、本輪無法重現」）；`hsinchu-city-...`（購買期限 115/10/31 已過、受理至 11/30、剩餘 5.9% 逐字不變，今日新購買者已不符資格）；`medux-free-trial-3000-credits`（「per month」與無週期措辭仍並存，方案表連續第三輪載入失敗）。其餘 11 筆僅重讀原頁確認金額、期限與資格不變（含 GitHub 學生包 3K Actions／180 Codespaces 小時、SerpApi 250/月、GCP 研究 US$1k/US$5k、教學 US$100/50）。
+
+新增 4 筆機會：[FlutterFlow Education](https://www.flutterflow.io/pricing)（大專學生與教師可申請一年免費，未寫涵蓋哪一層、AI 額度無數字；Free 方案 2 專案、1 編輯者、無 AI agents）、[Softr Free](https://www.softr.io/pricing)（每月 5 AI credits，Apps／資料庫／工作流不限數量，限 3 builders、5 app users、5K 紀錄、500 workflow actions/月）、[Hyper3D Rodin Free](https://hyper3d.ai/pricing)（生成先免費預覽、確認後才扣點，legacy 模型可匯出，10 個私人資產，未公布預覽次數上限）、[Rows Free](https://rows.com/pricing)（每月 5 AI Tasks；頁首已標示加入 Superhuman）。
+
+品質改善：「機會專區」七個選項的一致性（見上段），實測 developer 567→528、regional 57→42、value 55→52（915 筆下）。另在 `tests/validate.py` 補「本批次回報的每筆紀錄都必須有合法 status」斷言——本輪新增紀錄第一版確實漏了 `status`，正是這條斷言先擋下 `rows-free-five-ai-tasks`；歷史 37 筆缺 status 的紀錄未動，因為它們的摘要本身就只能給出「待釐清」。
+
+工具經驗：Kimi 會員定價頁、Kling 方案頁、PartyRock FAQ／service-terms 在本輪靜態讀取都只回外殼，改以 Help Center／點數政策／AWS 部落格交叉，未取得的部分不寫成已重核。`read` 的 content-negotiation 對 past.dev、SerpApi 回傳 markdown 正文，省掉一次渲染。Scout 回報的候選中有一筆 id 寫成 `rows-free-five-ai-credits`，實際應為 `rows-free-five-ai-tasks`，主 agent 仍須自行核對 ID 與標題。
+
+下輪優先（前五項）：① `datacamp-free-access-week-november-2026` 台北 12:59 後改 `expired` 並移除免費存取敘述（來源 campaign 頁、status.datacamp.com）；② `google-ai-professional-certificate-tw-pro-3mo` 追 11/6 後兌換是否仍成功、Google One 條款是否更新為 2027-01-01（來源 one.google.com 條款、grow.google 台灣頁）；③ `kimi-free-web-app`、`kling-ai-free-generation-watchlist` 需以瀏覽器渲染重讀定價／方案頁，確認 Free 上限與 Basic 點數欄；④ `fal-flux3-max-five-daily-sandbox` 在 11/23 00:00 UTC 前確認折扣結束日（landing 11/21、模型頁與 llms.txt 11/22、FAQ 12/31）；⑤ `respan-free-hundred-k-logs-terms-conflict`、`langwatch-...` 兩筆條款與定價互斥，除非官方新增 FAQ 說明，否則維持每週一次並只在有新版條款時更新。
 
 2026-11-09 05:00–05:16 本輪（接續 ac654a5 之後，獨立 commit）：起始 906 筆；局部複核 19 筆、新增機會 5 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 887 筆；結果 911 筆。開始時 `next_review_at` 已到期 0 筆（上一批次 04:20 剛結算），佇列因此為：當日到期與台灣期限 4 筆（DataCamp 台北 12:59、AOCAI 23:59、臺北青年補助 11/10 送達、Grammarly 學生折扣）＋官方矛盾與證據缺口 3 筆（Google AI 憑證的 2027-01-01 vs 2026-11-06、ZCode 貼文 300M/日、Qoder 免費機制）＋最久未核輪替 12 筆（2026-10-29／10-30 批次）；04:1x 才核過的 daily 項（mango、fal、stepfun、ant-ling 等）不重複刷新。分工：3 個 scout subagent（期限與高風險／最久未核輪替／新機會去重），只回 patch 不碰 JSON；主 agent 逐頁重讀要寫入的官方來源（Bruin、Weaviate、MongoDB、Kernel、past.dev、fal、Steel、Recall、Warp、Novita、Anara、Tana、DataCamp、AOCAI、臺北青年局、ZCode 文件、Grammarly、Grow Google、Google One 條款、Qoder，以及 5 個新機會官網），`accessed_at` 一律用自己的讀取時間。
 

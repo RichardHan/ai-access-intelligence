@@ -97,8 +97,11 @@ function dateLabel(value, includeTime = false) {
 }
 
 const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED']);
-// 「機會專區」是可採取行動的入口：已截止紀錄退出這些專區，但仍可在全部紀錄搜尋到。
-const ACTIONABLE_VIEWS = new Set(['free', 'unlimited', 'quota', 'beta']);
+// 「機會專區」是可採取行動的入口：已截止、已關閉與重複合併的紀錄退出每個專區選項，
+// 但仍可在全部紀錄搜尋到。2026-11-09 統計：先前只排除免費／無限／高額度／Beta 四個選項，
+// 「新創與開發者」因此仍列出 39 筆已截止或已併入他筆的紀錄（含 copilot-free 等重複紀錄），
+// 「美國與地區限定」列出 15 筆（該專區共 57 筆）。專區清單必須與 index.html 的 view 選項同步。
+const ACTIONABLE_VIEWS = new Set(['free', 'quota', 'unlimited', 'regional', 'value', 'developer', 'beta']);
 
 // The 用量 filter and the 無限專區 read the schema-enforced quota_classification.
 // usage_type is free-text descriptions (358 distinct values, many in Chinese), so exact

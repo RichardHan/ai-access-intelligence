@@ -84,6 +84,11 @@ for aid in attempted:
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
 valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
+# Every record this batch reports must carry a managed status: the UI status pill and the
+# priority score both branch on it, and a missing value silently reads as "狀態待釐清"
+# (2026-11-09: the four new records were written without one before this check).
+for rid in reviewed+new:
+ assert offers_by_id[rid].get('status') in valid_statuses, f'missing or invalid status for a batch record: {rid}'
 # The cadence string is a promise about re-check frequency and is shown to readers as
 # 「下次複核：每日／每週…」. Scheduling a 30-day review on a `daily` record hides it from the
 # rotation queue while the card still claims daily tracking, so cap the gap per cadence.

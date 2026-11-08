@@ -253,3 +253,23 @@ assert(viewSelect,'view select missing from index.html');
 const viewValues=[...viewSelect[1].matchAll(/<option value="([^"]*)"/g)].map(m=>m[1]).filter(Boolean);
 for(const v of viewValues) assert(d.offers.some(o=>f(o,{view:v})),'opportunity view option without any matching record: '+v);
 console.log('PASS: quota ('+quotaPreset.length+') and beta presets derive from schema categories, exclude closed records, and every index.html view option matches data.');
+
+// 「機會專區」下拉的每個選項都是可行動入口：已截止、已關閉與重複合併紀錄必須退出全部選項，
+// 但仍留在全庫搜尋。先前只排除免費／無限／高額度／Beta 四個，2026-11-09 統計「新創與開發者」
+// 仍列 38 筆已截止或已併入他筆的紀錄（含 copilot-free、lovable-student-discount 等重複紀錄），
+// 「美國與地區限定」57 筆中有 15 筆已截止。以下為規格值：對 index.html 每個選項逐一斷言。
+for(const v of viewValues){
+  const leaked=d.offers.filter(o=>closedSet.has(o.status)&&f(o,{view:v}));
+  assert.strictEqual(leaked.length,0,'closed or merged records must leave the 機會專區 option "'+v+'": '+leaked.map(o=>o.id).join(','));
+}
+const mergedDev=d.offers.find(o=>o.status==='duplicate_merged'&&(o.views||[]).includes('developer'));
+assert(mergedDev,'dataset should hold a merged duplicate tagged developer to guard against');
+assert(!f(mergedDev,{view:'developer'}),'merged duplicate must not appear in the developer preset: '+mergedDev.id);
+assert(f(mergedDev,{}),'merged duplicate must stay findable in the full list: '+mergedDev.id);
+const openDev=d.offers.find(o=>!closedSet.has(o.status)&&(o.views||[]).includes('developer'));
+assert(openDev&&f(openDev,{view:'developer'}),'an open developer record must stay in the preset');
+const closedRegional=d.offers.find(o=>closedSet.has(o.status)&&(o.views||[]).includes('regional'));
+assert(closedRegional,'dataset should hold a closed regional-tagged record to guard against');
+assert(!f(closedRegional,{view:'regional'}),'closed regional record must leave the regional preset: '+closedRegional.id);
+assert(f(closedRegional,{taiwan:closedRegional.taiwan}),'non-view filters must still reach closed records');
+console.log('PASS: every 機會專區 option excludes closed and merged records; closed records remain reachable without a view filter.');
