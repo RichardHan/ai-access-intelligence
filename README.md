@@ -4,11 +4,11 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **880 筆**（676 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 16:26 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **863 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 兩筆今日仍 403，追查紀錄沿用前一筆批次，未刷新 `verified_at`）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
+資料集目前有 **884 筆**（680 項機會、48 項政策、156 筆觀察線索），更新時間 **2026-11-08 17:23 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **862 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（Perplexity 兩筆沿用前一筆批次的 403 追查紀錄，本輪未重查、未刷新 `verified_at`）。各案例僅核列明範圍，台灣個案資格須另確認；限時或重大條件衝突每日追蹤，其餘按月輪替。
 
 ## 使用方式
 
-可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、證據與用量篩選。免費專區排除已截止、疑似過期、宣布終止及重複收錄的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
+可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、免費額度分類與證據篩選。免費額度分類（官方宣稱不限量／暫時不限量／未公布固定上限／有明確限制／尚未核實）直接讀 `quota_classification`；「無限／暫時不限量」專區也由同一欄位判定，不看個別紀錄手動標記的 views。免費專區排除已截止、疑似過期、宣布終止及重複收錄的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
 
 - [完整研究資料](data/offers.json)
 - [政策歷史](data/policy-history.json)
@@ -40,6 +40,8 @@
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
 
+篩選與專區只能讀 schema 管制的欄位。`quota_classification` 是五值 enum，`usage_type` 卻是自由文字（2026-11-08 統計：358 種值、262 筆 null）。原本「用量類型」下拉以 `usage_type` 精確比對 3 個英文字串，選 High quota 只回 9 筆（實際 HIGH BUT LIMITED 619 筆）、選 Unlimited 只回 2 筆（實際官方或暫時不限量 7 筆），262 筆完全篩不到；已改為直接比對 `quota_classification`，並讓「無限／暫時不限量」專區由同一欄位判定，不再依賴各筆手動 `views`（先前有一筆 HIGH BUT LIMITED 被標成 unlimited）。`tests/filters.cjs` 驗證 index.html 每個選項都對應實際資料，`tests/validate.py` 擋 `views` 與 `quota_classification` 互相矛盾。
+
 同一 URL 再次查核時就地更新該筆來源（scope、evidence、查閱時間），不新增重複條目；`tests/validate.py` 對本輪批次強制「無重複 URL」與「每筆至少一個本次查閱時間」，前端則把同網址的歷次查核收在「較早的 N 筆同網址紀錄」內。
 
 重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
@@ -49,6 +51,16 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（本輪收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-08 17:05–17:23 本輪（接續 bf78918 之後，獨立 commit）：起始 880 筆；局部複核 18 筆、新增 4 筆機會（政策 0、觀察線索 0、追查失敗 0）、未完成複核 862 筆；結果 884 筆。研究分工：3 個 subagent 分別處理時效／到期、衝突與最久未核輪替、新機會去重；主 agent 自行重讀關鍵來源（Cloudflare、Rime、AOCAI、Google 台灣公告、Browserless ToS、Canva AI 說明頁）並以自己讀取的時間寫入 `accessed_at`，未採用未核對的回報時間。
+
+實質變動 4 筆：`cloudflare-ai-search-monthly-included-november-billing` 計費起日由紀錄所載 11/01 更正為官方 HTML 與 markdown 兩版一致的 **2026-12-01**（額度與超額費率不變，未找到變更公告，故不判定延期或先前誤讀）；`browserless-free-monthly-thousand-terms-conflict` 現行 Terms §11(a)-(k) **無** spider/crawl/scrape 字樣，原「條款禁止抓取」衝突不成立，狀態由 `terms_conflict` 改 `conditional`，只保留 §11(k) 規避其他網站安全功能與產品頁 Bypass bot detectors 的較窄張力；`canva-nonprofit-ai-free` AI 月額改以「Canva Free 的 10 倍」表述（每人獨立不共用），原約 200／20 次的絕對數字已不在官方頁；`rime-stt-nov19-free-window` FAQ 已明寫「through November 19, 2026」，截止年份疑問解決，時區與並發數值仍未公布。澄清 3 筆：`aocai-youth-ai-training-2026`（26 班、11/16 台北班未標截止、240 小時、招生 30 人、錄取免繳課程費）、`aihubmix-one-dollar-daily-free-model-pool`（目錄更新至 11/07、71 款）、`assemblyai-trial`（官方換算 185 小時預錄／333 小時串流、TTS 未列於免費額度）。其餘 8 筆無實質變動僅更新核實範圍與來源時間：`codeai-hour-of-ai-2026`、`antigravity-free`（第三方模型 11/18 移除倒數）、`google-students-tw-plus`（台灣公告 12/31 vs 學生頁「美國大學生」文案衝突仍在）、`beatapi-free-models-zero-balance`、`chutes-paygo-confidential-inference`、`google-colab-free-compute`、`moea-a-plus-early-startup-grant`（受理 2026-07-16 起隨到隨審至 2027-12-31、須三家目標客戶）、`apify-free-monthly-five-hard-stop`、`huggingface-zerogpu-free-daily`、`vercel-gateway-free`、`siliconflow-one-dollar-trial`（條款 2.1「for in Singapore」與 3.4(p) 禁商業用途疑義未解）。
+
+新增 4 筆機會：[JetBrains Junie Lite](https://junie.jetbrains.com/docs/junie-lite.html)（免費基準模型層、非試用不到期、任何 JetBrains 帳號首次請求自動開通且免綁卡；官方不公布額度，稱正常用量近乎無上限但非無上限，容量見頂即停止且無降級；[服務地區清單](https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-territory/)含 Taiwan，故 Taiwan Yes）；[IteraCompute 免費 Qwen3.8-27B](https://iteracompute.com/free/)（每月3,000萬 tokens、160K TPM、128K context、免卡；限時至 2026-11-24 00:00 PT＝台北11/24 16:00，每月1日 00:00 UTC 重置，超額 429 不自動轉付費；頁面未列地區，Taiwan Unknown）；[KRAFTON Raon-1 mini Preview](https://raon-mini.krafton.ai/en)（限時免費 API、申請制、每人限額與結束日未公布、未來收費另公告，權重 Apache 2.0；Taiwan Unknown）；[Tencent EdgeOne Makers 免費版](https://edgeone.ai/document/211893332490612736)（內建模型50萬 tokens／月、40專案、建置500次／月、Edge Functions 300萬次／月；文件稱商業化後可能調整、目前從寬；未列地區與綁卡要求，Taiwan Unknown）。
+
+品質改善：修正「用量類型」篩選與「無限／暫時不限量」專區的資料來源（詳見維護段），並在 `tests/validate.py` 新增 `views` 與 `quota_classification` 一致性斷言。
+
+下輪優先（前五項）：`iteracompute-free-qwen-3-8-27b-monthly-30m` 11/24 後確認免費層是否延續或改價（來源：iteracompute.com/free 與 free-tier-terms）；`antigravity-free` 11/18 後確認三個第三方模型是否如期移除、免費欄是否改列（來源：antigravity.google/docs/models）；`rime-stt-nov19-free-window` 11/20 後確認 Free 方案 STT 是否開始計費與並發數值（來源：rime.ai/pricing、rime.ai/terms）；`browserless-free-monthly-thousand-terms-conflict` 補找 ToS 版本日期或歷史快照以判斷 §11 是否曾改寫；`google-students-tw-plus` 以瀏覽器實測 SheerID 台灣學校是否可完成驗證，並盯 12/31 前是否出現兌換異常。Perplexity 兩筆維持 403 記錄，不刷新 `verified_at`。
 
 2026-11-08 16:04–16:26 本輪（接續 22b95a9 之後的第二段，獨立 commit）：起始 875 筆；局部複核 12 筆、新增 5 筆機會（政策 0、觀察線索 0）、未完成複核 863 筆；結果 880 筆。複核 `cht-google-ai-plus-first-year-free-2026`（首年後原價 165／330／650 元、主約 12 個月與寬頻 7–12 個月 264 元，官方新聞稿＋方案頁雙讀）、`sarvam-campus-tour-credits`（53 張校卡 completed 18／tentative 35／active 0，18 個報名鈕全 disabled，改判 `applications_closed`）、`articul8-bivia-early-adopter-billion-tokens`（條款「No trial converts to paid access」與 18 歲門檻）、`felo-standard-free-new-user-daily-two-hundred-campaign`、`deepgram-flux-tts-bonus`、`minimax-design-h3-new-user-watch`、`mango-inference-community`（$10 額度＋首 30 天 7 折、11/11 截止）、`cursor-students-policy`（2026-06-25 起停止新申請）、`beam-cloud-developer-paid-not-thirty-free`、`nlp-cloud-trial-card-and-hard-cap`、`upstage-mini4-discount-ended`（改判 `expired`）、`openai-student-collective-2026`（改判 `applications_closed`）。新增：`taiwan-nsp-youth-ai-training-subsidy-2026`（產業新尖兵，15–29 歲本國籍待業青年最高 10 萬元訓練補助、每月 8,000 元學習獎勵金、116 年起內含 8,000 元 AI 工具訂閱補助）、`taiwan-industry-talent-investment-ai-courses-2026`（產業人才投資方案，在職勞工 80%／特定對象 100%、3 年 10 萬元上限）、`ntpc-uko-microsoft-ai-cert-free-2026`（新北 UKO 微軟 AI 證照免費培訓）、`apple-siri-ai-developer-preview-2026`（Siri AI 開發者預覽，免費、繁中「將擴充」）、`ncu-nstc-robotics-talent-training-2026`（國科會智慧機器人高階人才培訓，碩士以上不限國籍、120 小時免費）。同時把 12 筆已截止卻仍掛 `daily` 的紀錄降為 `monthly_or_new_signal`，並在 `tests/validate.py` 加入「已截止紀錄不得維持 daily」的斷言，避免死案每輪重複排隊。未登入、未報名、未付款；Perplexity 兩筆仍因官方頁 403 無法複核。
 

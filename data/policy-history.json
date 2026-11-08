@@ -25140,5 +25140,100 @@
     "sources": [
       "https://www.tami.org.tw/_uploadFiles/evt_file_20261103-VqJOy.pdf"
     ]
+  },
+  {
+    "record_id": "cloudflare-ai-search-monthly-included-november-billing",
+    "change_type": "evidence_correction",
+    "verified_at": "2026-11-08T17:14:28+08:00",
+    "previous_limit": "AI Search 2026-11-01 起計費",
+    "current_classification": "官方 limits-pricing HTML 與 markdown 兩版均寫 billing begins on December 1, 2026",
+    "note": "計費起日由紀錄所載 11/01 更正為官方現行文字的 12/01；納入額度（5M ingestion tokens／10 GB-month／1,000 語意＋1,000 全文查詢）與超額費率未變。未找到變更公告，無法判定是延期或先前判讀錯誤。",
+    "sources": [
+      "https://developers.cloudflare.com/ai-search/platform/limits-pricing/"
+    ]
+  },
+  {
+    "record_id": "browserless-free-monthly-thousand-terms-conflict",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-08T17:16:07+08:00",
+    "previous_limit": "status terms_conflict：Terms §11 被記為禁止 spider/crawl/scrape",
+    "current_classification": "status conditional：現行 §11(a)-(k) 無 scrape/crawl/spider 字樣，僅 (k) 規避其他網站安全功能",
+    "note": "重讀現行 ToS 後，原「條款禁止抓取」的衝突不成立；保留 §11(k) 與產品頁 Bypass bot detectors 的較窄解釋張力。ToS 無版本日期，無法判定條款曾被改寫或先前判讀有誤。",
+    "sources": [
+      "https://www.browserless.io/terms-of-service",
+      "https://www.browserless.io/pricing"
+    ]
+  },
+  {
+    "record_id": "canva-nonprofit-ai-free",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-08T17:17:30+08:00",
+    "previous_limit": "AI 月額沿用 2026-10-25 證據的約 200 次 Premium／20 次 Ultra",
+    "current_classification": "Nonprofits 為「Canva Free 的 10 倍」Premium／Ultra 月額，每人獨立不共用；Standard AI 受 fair use",
+    "note": "現行 AI 說明頁已無絕對次數表述，改以相對倍數；絕對可用次數因此回到未知。",
+    "sources": [
+      "https://www.canva.com/help/ai-access/"
+    ]
+  },
+  {
+    "record_id": "rime-stt-nov19-free-window",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-08T17:10:31+08:00",
+    "previous_limit": "定價頁只寫 Free until Nov 19，年份與時區未明",
+    "current_classification": "FAQ 明寫 free on every plan through November 19, 2026，11/20 起 Flex US$0.002、Scale US$0.0016／分鐘",
+    "note": "截止年份已由官方文字確認；時區、期滿後 Free 方案計費方式與並發數值仍未知。狀態由未設定改為 conditional。",
+    "sources": [
+      "https://www.rime.ai/pricing"
+    ]
+  },
+  {
+    "record_id": "aocai-youth-ai-training-2026",
+    "change_type": "clarification",
+    "verified_at": "2026-11-08T17:15:00+08:00",
+    "previous_limit": "頁面列 25 班，費用與各班現況未核",
+    "current_classification": "頁面列 26 班（2026-11-16 至 2027-03-02）；台北班 11/16–2027/01/15、240 小時、招生 30 人、錄取免繳課程費",
+    "note": "新增培訓單位頁佐證免費參訓與甄選流程；11/16 班未標報名已截止，最新消息頁至 11/04 無額滿或停收公告。",
+    "sources": [
+      "https://serv.gcis.nat.gov.tw/AOCAI/courses/youth",
+      "https://usc-sai-youth.github.io/usc-sai-youth/"
+    ]
+  },
+  {
+    "record_id": "jetbrains-junie-lite-free-model-tier",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-08",
+    "summary": "新增 JetBrains Junie Lite 基準：免費基準模型層、非試用不到期、任何 JetBrains 帳號首次請求自動開通且免綁卡；官方不公布額度（稱近乎無上限但非無上限），容量見頂即停止；JetBrains AI 服務地區清單含 Taiwan。",
+    "sources": [
+      "https://junie.jetbrains.com/docs/junie-lite.html",
+      "https://www.jetbrains.com/legal/docs/terms/jetbrains-ai/service-territory/"
+    ]
+  },
+  {
+    "record_id": "iteracompute-free-qwen-3-8-27b-monthly-30m",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-08",
+    "summary": "新增 IteraCompute 免費層：Qwen3.8-27B 每月3,000萬 tokens、160K TPM、128K context、免卡；限時至 2026-11-24 00:00 PT（台北11/24 16:00），每月1日 00:00 UTC 重置，超額 429 不自動轉付費。",
+    "sources": [
+      "https://iteracompute.com/free/",
+      "https://iteracompute.com/free-tier-terms/"
+    ]
+  },
+  {
+    "record_id": "krafton-raon-1-mini-preview-free-api",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-08",
+    "summary": "新增 KRAFTON Raon-1 mini Preview：限時免費 API（申請制，每人 token 與請求上限未公布、結束日未公布、未來收費另公告），權重 Apache 2.0 可下載；頁面未列地區，台灣受理情形未知。",
+    "sources": [
+      "https://raon-mini.krafton.ai/en"
+    ]
+  },
+  {
+    "record_id": "tencent-edgeone-makers-free-edition-quotas",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-08",
+    "summary": "新增 Tencent EdgeOne Makers 免費版：內建模型50萬 tokens／月、40個專案、建置500次／月、Edge Functions 300萬次／月、Agents 與 Sandbox 各10萬 GB-s／月；文件稱商業化後可能調整、目前從寬；未列地區與綁卡要求。",
+    "sources": [
+      "https://edgeone.ai/document/211893332490612736"
+    ]
   }
 ]

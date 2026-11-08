@@ -70,6 +70,9 @@ for o in d['offers']:
  assert o['benefit_cost_ratio'] is None or math.isfinite(o['benefit_cost_ratio'])
  if o['setup_cost_usd']==0 and o['recurring_cost_usd']==0: assert o['benefit_cost_ratio'] is None
  if o['usage_type']=='Unlimited':assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED']
+ # The frontend derives the 無限 preset from quota_classification; a hand-set 'unlimited' view that
+ # contradicts it shows a limited plan in the unlimited bucket.
+ if 'unlimited' in (o.get('views') or []):assert o['quota_classification'] in ['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED'], f'unlimited view conflicts with quota_classification in {o["id"]}: {o["quota_classification"]}'
  if o['savings_usd'] is not None:assert o['valuation_scenario']
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])

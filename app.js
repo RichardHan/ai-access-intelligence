@@ -96,6 +96,16 @@ function dateLabel(value, includeTime = false) {
   }).format(date);
 }
 
+const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED']);
+
+// The 用量 filter and the 無限專區 read the schema-enforced quota_classification.
+// usage_type is free-text descriptions (358 distinct values, many in Chinese), so exact
+// matching against a few English option strings silently dropped most records.
+function viewMatches(o, view) {
+  if (view === 'unlimited') return UNLIMITED_QUOTA.has(o.quota_classification);
+  return (o.views || []).includes(view);
+}
+
 function matches(o, f = {}) {
   return (!f.q || JSON.stringify(o).toLowerCase().includes(String(f.q).trim().toLowerCase()))
     && (!f.type || o.record_type === f.type)
@@ -103,10 +113,11 @@ function matches(o, f = {}) {
     && (!f.effort || typeof o.effort_minutes_max === 'number' && o.effort_minutes_max < Number(f.effort))
     && (!f.taiwan || o.taiwan === f.taiwan)
     && (!f.region || (o.regions || []).includes(f.region))
-    && (!f.usage || o.usage_type === f.usage)
+    && (!f.usage || o.quota_classification === f.usage)
     && (!f.verification || o.verification === f.verification)
-    && (!f.view || (o.views || []).includes(f.view))
-    && !(f.view === 'free' && CLOSED_STATUSES.has(o.status))
+    && (!f.view || viewMatches(o, f.view))
+    // 免費與額度專區都是可行動的入口：已截止紀錄退出，但仍可在全部紀錄搜尋。
+    && !((f.view === 'free' || f.view === 'unlimited') && CLOSED_STATUSES.has(o.status))
     && (!f.tier || o.priority_tier === f.tier);
 }
 

@@ -1,4 +1,4 @@
-const fs=require('fs'),vm=require('vm'),assert=require('assert');const source=fs.readFileSync(__dirname+'/../app.js','utf8').replace('const $=s=>document.querySelector(s);','const $=s=>null;');const ctx={};vm.createContext(ctx);vm.runInContext(source,ctx);const d=JSON.parse(fs.readFileSync(__dirname+'/../data/offers.json'));const f=ctx.matches;for(const o of d.offers) assert(f(o,{}));const unknown=d.offers.find(o=>o.setup_cost_usd===null);assert(!f(unknown,{cost:'0'}));const free=d.offers.find(o=>o.id==='work-codex-free');assert(f(free,{cost:'0',view:'free'}));assert(!f(free,{effort:'15'}));assert(f(free,{effort:'30'}));assert(!f(free,{taiwan:'Yes'}));assert(!f(free,{usage:'Unlimited'}));assert(f(free,{verification:'Official'}));const twai=d.offers.find(o=>o.id==='twai-cloud-free-trial');assert(twai.priority_tier==='S'&&twai.priority_score>0);assert(f(twai,{tier:'S'}));assert(!f(twai,{tier:'A'}));const pol=d.offers.find(o=>o.record_type==='policy');assert(pol.priority_tier===null);assert(!f(pol,{tier:'S'}));assert([pol,twai].sort(ctx.byPriority)[0]===twai);console.log('PASS: filter combinations, unknown costs, strict effort thresholds, eligibility, unlimited separation, priority tier filter and S→D sort.');
+const fs=require('fs'),vm=require('vm'),assert=require('assert');const source=fs.readFileSync(__dirname+'/../app.js','utf8').replace('const $=s=>document.querySelector(s);','const $=s=>null;');const ctx={};vm.createContext(ctx);vm.runInContext(source,ctx);const d=JSON.parse(fs.readFileSync(__dirname+'/../data/offers.json'));const f=ctx.matches;for(const o of d.offers) assert(f(o,{}));const unknown=d.offers.find(o=>o.setup_cost_usd===null);assert(!f(unknown,{cost:'0'}));const free=d.offers.find(o=>o.id==='work-codex-free');assert(f(free,{cost:'0',view:'free'}));assert(!f(free,{effort:'15'}));assert(f(free,{effort:'30'}));assert(!f(free,{taiwan:'Yes'}));assert(!f(free,{usage:'TEMPORARILY UNLIMITED'}));assert(f(free,{verification:'Official'}));const twai=d.offers.find(o=>o.id==='twai-cloud-free-trial');assert(twai.priority_tier==='S'&&twai.priority_score>0);assert(f(twai,{tier:'S'}));assert(!f(twai,{tier:'A'}));const pol=d.offers.find(o=>o.record_type==='policy');assert(pol.priority_tier===null);assert(!f(pol,{tier:'S'}));assert([pol,twai].sort(ctx.byPriority)[0]===twai);console.log('PASS: filter combinations, unknown costs, strict effort thresholds, eligibility, unlimited separation, priority tier filter and S→D sort.');
 const ended=d.offers.find(o=>o.id==='chatgpt-back-to-school-us');assert(f(ended,{}));assert(!f(ended,{cost:'0',view:'free'}));assert(!f({...ended,status:'expired_unverified'},{cost:'0',view:'free'}));assert(f({...ended,status:'expired_unverified'},{}));assert(!f({...ended,status:'applications_closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'applications_closed'},{}));assert(!f({...ended,status:'resolved_rumor_disproven'},{cost:'0',view:'free'}));assert(f({...ended,status:'resolved_rumor_disproven'},{}));assert(!f({...ended,status:'closed_to_new_subscriptions'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed_to_new_subscriptions'},{}));assert(!f({...ended,status:'closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed'},{}));
 const sunset=d.offers.find(o=>o.id==='weaviate-engram-free');assert(f(sunset,{}));assert(!f(sunset,{cost:'0',view:'free'}));
 assert.strictEqual(ctx.statusInfo({status:'resolved_rumor_disproven'}).tone,'closed');
@@ -128,3 +128,37 @@ const earlierBlock = repeatedItem.children.find(node => node.tagName === 'detail
 assert(earlierBlock, 'earlier lookups of the same URL must stay reachable');
 assert(earlierBlock.children[0].textContent.includes('1 筆'));
 assert(earlierBlock.children.some(node => node.textContent.includes('舊證據')));
+
+// 用量/額度篩選改以 schema 管制的 quota_classification 判定；usage_type 是自由文字描述
+// （曾為 358 種字串、262 筆 null，使舊版 3 個英文選項幾乎篩不到資料）。
+const unlimitedByQuota=d.offers.filter(o=>o.quota_classification==='OFFICIALLY UNLIMITED'||o.quota_classification==='TEMPORARILY UNLIMITED');
+assert(unlimitedByQuota.length>=4,'expected records classified as officially or temporarily unlimited');
+const deadStatuses=['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'];
+for(const o of unlimitedByQuota){
+  assert(f(o,{usage:o.quota_classification}),'usage filter must match quota_classification: '+o.id);
+  // 專區只收可行動的紀錄；已截止者由下一段單獨驗證退出專區但仍在全庫。
+  if(!deadStatuses.includes(o.status)) assert(f(o,{view:'unlimited'}),'unlimited preset must derive from quota_classification: '+o.id);
+}
+const freeTextUsage=d.offers.find(o=>o.id==='taiwan-moe-moocs-eighteen-free-ai-courses');
+assert(freeTextUsage&&freeTextUsage.usage_type!=='Unlimited'&&freeTextUsage.quota_classification==='OFFICIALLY UNLIMITED');
+assert(f(freeTextUsage,{usage:'OFFICIALLY UNLIMITED'}),'usage filter must not depend on the free-text usage_type');
+assert(!f(freeTextUsage,{usage:'HIGH BUT LIMITED'}));
+const highLimited=d.offers.find(o=>o.quota_classification==='HIGH BUT LIMITED');
+assert(f(highLimited,{usage:'HIGH BUT LIMITED'}));
+assert(!f(highLimited,{view:'unlimited'}),'HIGH BUT LIMITED record must not appear in the unlimited preset');
+const usageSelect=/<select name="usage">([\s\S]*?)<\/select>/.exec(fs.readFileSync(__dirname+'/../index.html','utf8'));
+assert(usageSelect,'usage filter select missing from index.html');
+const usageValues=[...usageSelect[1].matchAll(/<option value="([^"]*)"/g)].map(m=>m[1]).filter(Boolean);
+assert.strictEqual(usageValues.length,5,'usage filter option count changed without a matching data check');
+for(const v of usageValues) assert(d.offers.some(o=>o.quota_classification===v),'usage filter option without any matching record: '+v);
+console.log('PASS: usage/額度 filter reads quota_classification, unlimited preset derives from it, and every index.html option matches data.');
+// 無限/暫時不限量專區是可採取行動的入口，已截止紀錄不得出現（與免費專區一致），
+// 但仍須能從全部紀錄搜尋到。批次 2026-11-08 以此攔到兩個已截止的暫時不限量案例。
+const closedUnlimited=d.offers.find(o=>['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'].includes(o.status)&&['OFFICIALLY UNLIMITED','TEMPORARILY UNLIMITED'].includes(o.quota_classification));
+assert(closedUnlimited,'dataset should contain a closed unlimited-classified record to guard against');
+assert(!f(closedUnlimited,{view:'unlimited'}),'closed record must not appear in the unlimited preset: '+closedUnlimited.id);
+assert(f(closedUnlimited,{}),'closed record must stay findable in the full list: '+closedUnlimited.id);
+for(const o of unlimitedByQuota.filter(x=>!['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'].includes(x.status))){
+  assert(f(o,{view:'unlimited'}),'open unlimited record must appear in the preset: '+o.id);
+}
+console.log('PASS: closed records leave the unlimited preset but remain searchable; open unlimited records still appear.');
