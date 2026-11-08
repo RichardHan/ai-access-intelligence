@@ -4,11 +4,11 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **901 筆**（696 項機會、49 項政策、156 筆觀察線索），更新時間 **2026-11-09 02:19 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **3 筆**、政策 **1 筆**、觀察線索 **0 筆**；其餘 **878 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**（`www.perplexity.ai/pricing` 仍 403，改以官方 Help Center 全文索引逐句核對；`www.vultr.com/match/` 與 `/coupons/` 對非瀏覽器客戶端 403 Cloudflare challenge，改讀 docs.vultr.com 計費 FAQ 並在該筆記明未取得的新證據；`/promo/try300/` 403、`/promo/try200/` 只回註冊行銷頁）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天）。
+資料集目前有 **902 筆**（697 項機會、49 項政策、156 筆觀察線索），更新時間 **2026-11-09 03:20 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **887 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **1 筆**（`minimax-design-h3-new-user-watch` 的官方頁只回 JS 外殼，未刷新核實時間）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天）。
 
 ## 使用方式
 
-可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、免費額度分類與證據篩選。免費額度分類（官方宣稱不限量／暫時不限量／未公布固定上限／有明確限制／尚未核實）直接讀 `quota_classification`；「無限／暫時不限量」專區也由同一欄位判定，不看個別紀錄手動標記的 views。免費專區排除已截止、疑似過期、宣布終止及重複收錄的紀錄，但設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
+可先選「台灣條件適用、免費方案、開發者、本輪更新」快捷入口，再搜尋產品或資格關鍵字，依紀錄類別、優先層級（S–D）、地區、費用、設定時間、免費額度分類與證據篩選。免費額度分類（官方宣稱不限量／暫時不限量／未公布固定上限／有明確限制／尚未核實）直接讀 `quota_classification`；「無限／暫時不限量」專區也由同一欄位判定，不看個別紀錄手動標記的 views。免費專區排除已截止、疑似過期、宣布終止及重複收錄的紀錄，且由 schema 管制的設定費與每月費用判定：兩者皆為 0 一律列入；每月費用未知者只在明確標記 free 時列入；已知每月費用大於 0 的試用（例如七日試用後 US$29.99／月）不列入。設定費零不代表後續免費；歷史仍可從全部紀錄搜尋。預設按綜合優先度排序，每次顯示 24 筆；S 級仍需符合個人資格。本輪更新僅涵蓋批次紀錄明列的複核與新增案例。點開「資格、限制與來源」查看完整摘要、來源查閱時間、核實範圍與下次複核安排。
 
 - [完整研究資料](data/offers.json)
 - [政策歷史](data/policy-history.json)
@@ -46,6 +46,8 @@
 
 同一 URL 再次查核時就地更新該筆來源（scope、evidence、查閱時間），不新增重複條目；`tests/validate.py` 對本輪批次強制「無重複 URL」與「每筆至少一個本次查閱時間」，前端則把同網址的歷次查核收在「較早的 N 筆同網址紀錄」內。
 
+免費專區曾只讀各筆手動 `views` 標記（schema 不管制），造成兩個方向的誤導：3 筆已知每月費用的試用（Lindy US$29.99、Lemonfox US$5、GoodMem US$15）仍列在「免費方案」，而 40 筆設定費與每月費用皆為 0 的紀錄（含 Gemini API、Claude Free、Firecrawl、台灣人工智慧學校等）因漏標 `free` 而完全不出現。2026-11-09 改由 `viewMatches()` 以成本欄位判定：兩項費用皆 0 一律列入、已知每月費用 >0 排除、每月費用未知者保留人工標記；`tests/filters.cjs` 以三種規格值斷言（零費用未標記必入、US$29.99 試用必出、未知費用且標記 free 仍在）。實測免費專區由 413 筆增至 451 筆（含本輪新增 1 筆）。
+
 數值型篩選門檻一律「含等於」，標籤也要寫清楚是 ≤。2026-11-08 修掉「設定時間」用嚴格小於比對的錯誤：選 15 分鐘會排除正好需 15 分鐘的 109 筆（當時全庫 205 筆落在 5／15／30／60 邊界），修正後 884 筆下為 9／138／300／343 筆（納入本輪新增後為 9／141／303／347）。`tests/filters.cjs` 原本用 `!f(free,{effort:'15'})` 把錯誤行為釘住，這類「現況即測試」的斷言必須改成規格值，並補一個邊界外的反向案例（16 分鐘不得入 15 分鐘）。
 
 重複收錄以資料表達：同一方案的後一筆改為 `status: "duplicate_merged"` 並填 `duplicate_of` 指向較早的 ID，保留原 ID、來源與歷史但退出免費／行動篩選並在卡片標示；`tests/validate.py` 會檢查 `duplicate_of` 必須存在、不得串鏈，且標題完全相同的兩筆視為資料錯誤（本輪即由此攔到 `copilot-free` 與 `github-copilot-free`）。
@@ -55,6 +57,20 @@
 平行研究回報的來源查閱時間可能與實際時鐘不符（2026-11-08 收到比實際時間快約 1.5 小時的時間戳），主 agent 須自行重讀關鍵來源、以自己讀取的時間寫入 `accessed_at`，不得直接沿用未核對的時間。此問題在 2026-11-09 01:05 批次再次發生（`completed_at` 寫成 02:40、13 筆 `verified_at` 寫在 02:08–02:34，而實際 commit 是 01:46），已由 `tests/validate.py` 的「不得寫入未來時間戳」與「`verified_at` 不得晚於批次完成」兩條斷言攔下；寫入時間一律先跑 `TZ=Asia/Taipei date -Iseconds` 對錶。
 
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
+
+2026-11-09 03:05–03:20 本輪（接續 7a67202 之後，獨立 commit）：起始 901 筆；局部複核 14 筆、新增 1 筆機會（Google Vids 每月免費 AI 影片額度）、政策 0、觀察線索 0、整筆追查失敗 1（`minimax-design-h3-new-user-watch` 官方頁只回 JS 外殼）；未完成複核 887 筆；結果 902 筆。開始時 `next_review_at` 已到期 0 筆，但 03:10–07:15 有 10 筆每日追蹤到期，佇列為：該 10 筆＋11/10 前期限 3 筆（DataCamp、AOCAI、臺北青年補助）＋fal／vast 條款衝突各 1；當日凌晨已核且無新訊號者不重複刷新。分工：3 個 scout subagent（期限／衝突／新機會），只回 patch 不碰 JSON；主 agent 逐頁重讀要寫入的官方來源，`accessed_at` 一律用自己的讀取時間。
+
+實質變動 3 筆。`x-api-xai-spend-credit-rewards`：官方 free-credits 文件（10/13 更新）為首次合格卡完成首購後一次性 US$20、首次自動儲值成功等額配對上限 US$50、兩者合計 US$70、贈點 3 個月到期；xAI 回饋是單一帳單週期累積購買的 0／10／15／20% 級距（US$1,000 例回 US$200），不是固定 US$50／150／350。原摘要的 US$250、US$1,000 與固定級距無現行官方依據，已整段改寫並追加政策歷史。`fal-flux3-max-five-daily-sandbox`：模型頁的 `llms.txt`（機器產生計費中繼資料）與模型頁逐字一致，11/22 促銷、11/23 00:00 UTC 恢復原價；landing（15:05 更新）11/21 早一天、`/flux-video` FAQ（11/3 更新）12/31 仍為未解釋孤證，三方矛盾保留。`fastino-glideis1-ten-credit-payment-verification`：官方文件全文索引（359,254 bytes）對 `GLIDEIS1`／`promo code`／`redeem` 皆 0 命中，兌換與效期仍未知，狀態改 `needs_verification`。
+
+無欄位變更、僅確認或補證據 11 筆：`datacamp-free-access-week-november-2026`（仍在期間內，台北今日 12:59 截止；免購買、Teams 排除不變）、`aocai-working-free-ai-courses-2026`（報名至今日 23:59、0 元、系統上限 300 與預計 100 人並存）、`taipei-youth-ai-subscription-subsidy-2026`（11/10 前送達、4,000／8,000 元、無停收公告）、`articul8-bivia-early-adopter-billion-tokens`（前 10,000 名、10 億 tokens、無截止日）、`felo-…-campaign`（僅確認 200 credits/day 與免卡文案；Free /Forever 等維持 11/8 證據）、`runable-…`（1,500／日、15,000／月、不結轉）、`deepgram-flux-tts-bonus`（9/15–12/31 PT、每專案上限 US$500）、`digitalocean-secret-ai-startup-100-2026`（首 50 家、2027-01-17 11:59 PM UTC、90 天）、`mango-inference-community`（US$10 與「through Nov 11」未標年份；全頁無 1T 方案）、`fujisoft-workforce-ai-security-poc`（10/19 起、先着 10 社、無截止日）、`vast-startup-spend-match`（兩份文本仍並存，現行頁明寫不做免費贈額）。
+
+新增 1 筆機會：[Google Vids](https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/)（2026-11-05 Omni 1.2 Flash；支援表列個人 Google 帳戶每月 60 秒 AI video clips＋50 credits，每月 1 日 12:00 AM PT 重置、不結轉；部落格稱每月最多 3 支 15 秒，45 與 60 秒並存；生成說明頁另稱需 Workspace 訂閱，與個人額度表衝突。台灣未列排除，未登入實測）。狀態 `conflicting_official_usage_claims`，兩說都保留、不平均。
+
+品質改善：**免費方案專區只讀人工 `views` 標記**。schema 不管制 views，造成兩個方向誤導——3 筆已知每月費用的試用（Lindy US$29.99、Lemonfox US$5、GoodMem US$15）列在免費方案；40 筆設定費與每月費用皆為 0 的紀錄（含 Gemini API、Claude Free、Firecrawl、台灣人工智慧學校）因漏標而完全不見。修法：`viewMatches('free')` 改由成本欄位判定（兩項皆 0 一律列入、已知每月費用 >0 排除、每月費用未知者保留人工標記）；`tests/filters.cjs` 新增三組規格值斷言。實測免費專區 413→451 筆，`lindy` 已退出、`gemini-watch` 已納入。驗證：`python3 tests/validate.py`（902 筆）、`node --check app.js`、`node tests/filters.cjs`。
+
+工具經驗：Google 支援頁的「個人帳戶」額度表與生成說明頁會互相矛盾（60 秒/月 vs 需 Workspace 訂閱），同一產品線的兩份官方文件不可互相取代；X API 的免費點數與 xAI 回饋分屬兩份文件，舊摘要可能混用不同時期金額，必須以文件內「updated」日期為準。`docs.fastino.ai/llms-full.txt` 是 359 KB 全站文件，適合用檢索證明「官方沒有這個促銷碼」，但不等於促銷不存在。
+
+下輪優先（前五項）：① `minimax-design-h3-new-user-watch` 用真實瀏覽器渲染 `platform.minimax.io/media-plan/subscribe` 與 `www.minimax.io/audio`，確認新戶 2,000 credits／3 次 H3 與適用條款；② `fal-flux3-max-five-daily-sandbox` 在 11/23 00:00 UTC 後確認 12/31 孤證是否消失、sandbox 7 次是否含影片；③ `perplexity-watch`／`perplexity-education` 再試 `www.perplexity.ai/pricing` 與 3/日 vs 5/日、unlimited vs weekly 兩處矛盾；④ `fastino-glideis1-ten-credit-payment-verification` 向官方確認 GLIDEIS1 是否仍可兌、截止與效期；⑤ `mango-inference-community` 於 11/12 後確認「Nov 11」是否為 2026-11-11 及 US$10 效期。
 
 2026-11-09 02:05–02:19 本輪（接續 3c75fa7 之後，獨立 commit）：起始 897 筆；局部複核 19 筆、新增 3 筆機會（Google Cloud TTS 每月免費字元、Azure Speech Free F0、Routeway `:free` 模型）＋1 筆政策（中小微企業轉型升級條例草案的 AI 投資抵減）、觀察線索 0、整筆追查失敗 0；未完成複核 878 筆；結果 901 筆。開始時 `next_review_at` 已到期 0 筆（上一批次 01:05–01:46 剛結算），佇列因此為：當日與 11/10 期限 6 筆、來源衝突與證據缺口 8 筆（前一輪明列的下輪優先項）、其餘當日到期 5 筆；01:5x 才核過且無新訊號者不重複刷新。分工：3 個 scout subagent（期限／衝突／新機會），皆只回 patch 不碰 JSON；主 agent 逐筆以自己的讀取時間寫入 `accessed_at`，並自行重讀每一個要寫入的關鍵來源（Anthropic 公告與規則頁、Perplexity 全文索引、fal 模型頁、Claude Security、Synthesia、Kiro、Granola、Routeway、Google TTS、Azure Speech、行政院草案 PDF、GitHub Pack）。
 

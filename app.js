@@ -103,6 +103,14 @@ const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED'
 // matching against a few English option strings silently dropped most records.
 function viewMatches(o, view) {
   if (view === 'unlimited') return UNLIMITED_QUOTA.has(o.quota_classification);
+  // 免費專區是可採取行動的入口，必須由 schema 管制的費用欄位判定，不能只靠人工 views 標記：
+  // 設定費與每月費用皆為 0 者一律列入；每月費用未知（null）者只在明確標記 free 時列入；
+  // 已知每月費用 > 0 的試用不得列入（曾把 US$29.99/月 的七日試用列為免費方案）。
+  if (view === 'free') {
+    if ((o.recurring_cost_usd || 0) > 0) return false;
+    if (o.setup_cost_usd === 0 && o.recurring_cost_usd === 0) return true;
+    return (o.views || []).includes('free');
+  }
   return (o.views || []).includes(view);
 }
 

@@ -25676,5 +25676,49 @@
       "https://www.ey.gov.tw/Page/9277F759E41CCD91/78254ce1-3da5-47c0-883b-e4a64a874424",
       "https://www.ey.gov.tw/File/F590BBE88FC4E147?A=C"
     ]
+  },
+  {
+    "record_id": "x-api-xai-spend-credit-rewards",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "summary": "官方 free-credits 文件（2026-10-13 起）為：首次合格卡完成首次購點後一次性 US$20、首次自動儲值成功等額配對上限 US$50，兩者合計 US$70，贈點 3 個月到期、先扣贈點；xAI 回饋為單一帳單週期累積購買 X API credits 的 0/10/15/20% 級距（US$1,000 例回 US$200），非固定 US$50/150/350。原摘要的 US$250、US$1,000、固定 US$50/150/350 無現行官方依據，已更正。逐戶推出中。",
+    "sources": [
+      "https://docs.x.com/x-api/getting-started/free-credits.md",
+      "https://docs.x.com/x-api/getting-started/pricing.md"
+    ]
+  },
+  {
+    "record_id": "google-vids-omni-free-sixty-seconds-monthly",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-09",
+    "summary": "Google Vids（Gemini Omni 1.2 Flash）提供個人 Google 帳戶每月免費額度：支援表列 AI video clips 60 秒/月＋50 credits/月，每月 1 日 12:00 AM PT 重置、不結轉、不可共用；官方部落格 2026-11-05 稱每人每月最多 3 支 15 秒免費影片（合 45 秒），與支援表 60 秒並存。生成說明頁另稱需 Workspace 訂閱，與個人帳戶額度表衝突；兩說保留，狀態 conflicting_official_usage_claims。台灣未列排除，但未登入實測。",
+    "sources": [
+      "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/",
+      "https://support.google.com/docs/answer/15609411?hl=en",
+      "https://support.google.com/docs/answer/16143507?hl=en",
+      "https://workspace.google.com/intl/zh-TW/products/vids/"
+    ]
+  },
+  {
+    "record_id": "fal-flux3-max-five-daily-sandbox",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-09",
+    "summary": "fal 模型頁的機器可讀計費中繼資料 llms.txt 與模型頁逐字一致：11/8 00:00 UTC–11/22 50% 折扣，11/23 00:00 UTC 恢復 US$0.17／US$0.29。landing 頁（updated 11/5）仍寫「until November 21」，/flux-video FAQ（updated 11/3）仍寫 12/31；12/31 為未解釋孤證。sandbox「7 free generations」仍未列模型範圍與重置週期。",
+    "sources": [
+      "https://fal.ai/models/blackforestlabs/flux-3-max/text-to-video/llms.txt",
+      "https://fal.ai/flux-3-max",
+      "https://fal.ai/flux-video"
+    ]
+  },
+  {
+    "record_id": "fastino-glideis1-ten-credit-payment-verification",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-09",
+    "summary": "Fastino 官方文件全文索引（llms-full.txt，359,254 bytes）檢索 GLIDEIS1、promo code、redeem 皆 0 命中；促銷碼唯一官方痕跡仍是 2026-10-22 X 貼文。錯誤碼文件明列 403 card_required（推論前需驗證付款方式）與 402 funding_required／out_of_credits。兌換現況、截止與效期仍未知，狀態改 needs_verification。",
+    "sources": [
+      "https://docs.fastino.ai/llms-full.txt",
+      "https://docs.fastino.ai/troubleshooting/errors.md",
+      "https://docs.fastino.ai/pricing.md"
+    ]
   }
 ]
