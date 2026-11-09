@@ -298,3 +298,15 @@ const presetButtons=[...fs.readFileSync(__dirname+'/../index.html','utf8').match
 assert(presetButtons.includes('taiwan'),'index.html must keep the 台灣條件適用 preset button');
 for(const name of presetButtons) assert.strictEqual(typeof ctx.presetMatches(d.offers[0],name),'boolean','presetMatches must accept every index.html preset: '+name);
 console.log('PASS: 台灣條件適用 preset ('+presetTW.length+'/'+rawTW+') excludes closed records and keeps them searchable.');
+
+// 概況卡與快捷鍵同名就要同數：曾用 priority_tier==='S' 算「台灣條件適用」概況（85），
+// 快捷鍵卻回 taiwan=Yes 且未截止的 96 筆（多出 5 筆政策、6 筆觀察線索），同一頁兩個數字。
+const metrics=ctx.overviewMetrics(d.offers);
+const twMetric=metrics.find(m=>m[1]==='台灣條件適用');
+assert(twMetric,'overview must keep a 台灣條件適用 metric');
+assert.strictEqual(twMetric[0],presetTW.length,'overview 台灣條件適用 count must equal the preset count ('+twMetric[0]+' vs '+presetTW.length+')');
+const sTier=d.offers.filter(o=>o.priority_tier==='S').length;
+assert(sTier<presetTW.length,'fixture must hold non-S open taiwan records so the split is exercised');
+assert(twMetric[2].includes('S 級機會 '+sTier+' 筆'),'metric note must expose the S-tier split: '+twMetric[2]);
+assert.strictEqual(metrics.find(m=>m[1]==='福利研究')[0],d.offers.filter(o=>o.record_type==='opportunity').length);
+console.log('PASS: overview metrics agree with the presets they share a label with (台灣條件適用 '+twMetric[0]+', S 級 '+sTier+').');

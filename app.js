@@ -438,6 +438,21 @@ function applyPreset(preset) {
   render();
 }
 
+// 概況卡與快捷按鈕使用同一個名詞就必須是同一個數字。2026-11-09 統計：快捷鍵「台灣條件適用」回
+// 96 筆（taiwan=Yes 且未截止，含 5 筆政策與 6 筆觀察線索），但概況卡同名標籤只算 priority_tier=S
+// 的 85 筆，讀者在同一頁看到兩個「台灣條件適用」卻差 11 筆。改由 presetMatches('taiwan') 計算，
+// 並在說明列拆出 S 級機會數，讓數字對得起來，也不把政策／觀察線索算成可領取的機會。
+function overviewMetrics(offers) {
+  const taiwanCount = offers.filter(offer => presetMatches(offer, 'taiwan')).length;
+  const sTierCount = offers.filter(offer => offer.priority_tier === 'S').length;
+  return [
+    [offers.filter(o => o.record_type === 'opportunity').length, '福利研究', '免費、試用與折扣機會'],
+    [taiwanCount, '台灣條件適用', `含 S 級機會 ${sTierCount} 筆，其餘為政策與觀察線索`],
+    [offers.filter(o => o.record_type === 'policy').length, '政策追蹤', '條款、方案與存取變動'],
+    [offers.filter(o => o.record_type === 'watchlist').length, '觀察線索', '等待更多可靠證據']
+  ];
+}
+
 function renderOverview() {
   const offers = dataset.offers;
   const run = dataset.last_research_run || {};
@@ -454,12 +469,7 @@ function renderOverview() {
     stat.append(text('strong', value), text('span', label));
     return stat;
   }));
-  const metrics = [
-    [offers.filter(o => o.record_type === 'opportunity').length, '福利研究', '免費、試用與折扣機會'],
-    [offers.filter(o => o.priority_tier === 'S').length, '台灣條件適用', 'S 級，仍須符合個人資格'],
-    [offers.filter(o => o.record_type === 'policy').length, '政策追蹤', '條款、方案與存取變動'],
-    [offers.filter(o => o.record_type === 'watchlist').length, '觀察線索', '等待更多可靠證據']
-  ];
+  const metrics = overviewMetrics(offers);
   if ($('#metrics')) $('#metrics').replaceChildren(...metrics.map(([value, label, note]) => {
     const metric = text('div', '', 'metric');
     metric.append(text('strong', value), text('span', label), text('small', note));

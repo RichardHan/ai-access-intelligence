@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **918 筆**（712 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 07:14 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **12 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **903 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
+資料集目前有 **923 筆**（717 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 08:26 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **898 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
 
 ## 使用方式
 
@@ -63,6 +63,22 @@
 同一工作樹可能有兩個維護流程同時執行：本輪 16:03–16:17 的批次由另一個 session 先寫入並 commit（`22b95a9`），第二個流程讀到未 commit 的檔案後，先等它 commit 完成、再以它的狀態為基準追加，避免 json 半寫入與互相覆蓋。做法是：寫入前後比對 `shasum` 與 `git rev-parse HEAD`；資料檔以 tmp + `os.replace` 原子替換；批次欄位只在既有 `last_research_run` 上聯集 ID，不另建新的狀態檔。
 
 「台灣條件適用」是頁面上第一個捷徑按鈕，卻走 `taiwan:'Yes'` 這個一般篩選、不經 `viewMatches()`，所以上一輪把「已截止紀錄退出可行動專區」擴及七個 view 選項時漏掉它：2026-11-09 統計 106 筆 taiwan=Yes 中有 10 筆已截止／已關閉／重複合併（`moda-service-robot-virtual-scene-subsidy-2026`、`taiwan-ai-rap-pilot`、`taiwan-adi-ai-compute-115`、`nchc-university-ai-compute-discount-2026`…），卡片標題自己就寫著「已截止」。現由 `presetMatches()` 讓捷徑排除已截止紀錄，`台灣條件適用` 由 106 筆降為 96 筆，全庫搜尋與 `taiwan` 下拉仍查得到這 10 筆；`tests/filters.cjs` 以資料驅動斷言「捷徑內不得有已截止紀錄」「捷徑筆數必須等於未截止的 taiwan=Yes 筆數」「一般 taiwan 篩選仍能查到已截止案例」，避免只修好當下的資料快照。
+
+2026-11-09 08:05–08:26 本輪（接續 f91b19c 之後，獨立 commit）：起始 918 筆；局部複核 20 筆、新增機會 5 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 898 筆；結果 923 筆。開始時 `next_review_at` 已到期 0 筆（07:14 剛結算），7 日內到期 81 筆，故佇列＝當日與一週內截止 8 筆（DataCamp 台北 12:59、Amazon ARA 11/12 15:59、StepFun 11/17、Rime 11/19、HeyGen 11/30、Tencent 免費窗 11/15、新竹市補助 11/30、Antigravity 11/18 模型移除）＋官方衝突與證據缺口 10 筆（Perplexity Education／免費 Pro Search、Google Vids、Canva Education、Voyage、Sloyd、LangWatch、Respan、Kimi Free、HAL-X、Perplexity 定價頁 403）＋台灣期限與條款 2 筆（臺北青年 AI 補助 11/10、Google AI 憑證條款 11/6 與行銷頁 2027-01-01）。08:0x 才核過的 daily 項（fal、DigitalOcean、Runable、Felo 等）不重複刷新。
+
+時限類 8 筆全部以官方頁重讀，新增 `expires_at`／`deadline_at` 精確值：DataCamp 免費週至美東 11/8 23:59（＝台北 11/9 12:59，實讀當下仍開放、免購買、Teams 排除、Classic 限定）；Amazon ARA 投稿至美西 11/11 23:59（＝台北 11/12 15:59，平均不超過 US$50,000 的 unrestricted gift、不得列行政間接費、void 地區未列台灣）；StepFun 免費至 2026-11-17 11:59:59（UTC+8）、12:00 起新價；Rime STT 免費至 11/19、11/20 起 Flex US$0.002／分；HeyGen Turbo Free 至 11/30；Tencent 11/4–15 免費窗；Antigravity 個人 US$0、Asia 清單逐字含 Taiwan、Claude 4.6／GPT-OSS-120b 註腳 11/18 移除。新竹市補助兩個期限再確認：115/10/31 是**購買日**上限（已過，今日新訂閱不符），115/11/30 是**送件**上限，剩餘經費 NT$340,843（5.9%）與 11/8 同值、無額滿公告。
+
+衝突類 10 筆：用 Wayback 為兩組官方矛盾定年。Perplexity Education 的「unlimited Pro Searches」在 2026-06-01 快照尚不存在、表格列當時已在，故正文為較新措辭、表格列為未同步舊述；Voyage 定價表已換成 voyage-code-4／rerank-3，正文仍寫 code-3／multilingual-2／rerank-2.x，Older models 段逐字「we do not offer free tokens for them」；Sloyd Guest 商用權以授權矩陣＋官方 Answers 為現行（personal-use only），ToS §6 通用句未分方案；Canva Education 的 AI 用量頁改寫為「Free 的 10 倍＋公平使用」，舊的 200／20 次全頁消失，但「Premium and Ultra AI tools are available with」清單仍漏列 Education。未解決並保留兩側原文：Google Vids 60 秒／月 vs 部落格 3×15 秒、LangWatch「€0 free forever」vs 14 天試用、Respan 免費吞吐 vs ToS 自動化／商業禁令、Perplexity 免費 3/day vs five per day、Sloyd 付費商用 3D 列印。Kimi Free 首次以 Chromium 渲染取得 Free $0 欄上限（Agent 1、排程 2、Projects 2、500MB、Swarm 2）；HAL-X 免金鑰 60 決策／分鐘確認，但 hal-x.ai/terms 與 /pricing 皆 404。
+
+台灣面 2 筆：臺北青年 AI 補助 11/10 前書面送達不變、公告首頁 12 筆（共 34 筆）無用罄或停收公告；Google AI 憑證的 3 個月 AI Pro 仍是「台灣頁 2027-01-01 vs Google One 條款 2026-11-06（已過）」兩份官方文件衝突，未實測兌換。
+
+新增 5 筆機會：[華為雲碼道 CodeArts 體驗版](https://www.huaweicloud.com/intl/zh-cn/product/codearts/pricing.html)（US$0、500 萬 tokens／月、50 席位、5,000 檔索引、500MB 知識空間，開通在新加坡 ap-southeast-1；台灣資格未核）、[Nutrient Data Extraction API](https://www.nutrient.io/api/pricing/data-extraction-api/)（每月 5,000 credits、免卡，但免費方案預設允許保留輸入輸出做模型訓練）、[Voicegain](https://www.voicegain.ai/developers)（註冊 US$50、免卡，約 69 小時音檔，效期未公布）、[CAMB.AI Free](https://www.camb.ai/pricing)（一次性 5,000 credits，免費層配音 0 分鐘、浮水印）、[Postman Free](https://www.postman.com/pricing/)（方案卡 100 AI credits 與比較表 50／month 兩說，Context Graph 每月 1,000 次查詢；記 `terms_conflict`）。五筆 Taiwan 皆 Unknown，未註冊或付款。
+
+品質改善：概況卡「台灣條件適用」過去只算 `priority_tier === 'S'`（85），同名快捷鍵卻回 `taiwan=Yes` 且未截止的 96 筆（多出 5 筆政策、6 筆觀察線索），同一頁兩個數字。改由 `overviewMetrics()` 以 `presetMatches('taiwan')` 計算（96），並在說明列拆出「含 S 級機會 85 筆」；`tests/filters.cjs` 新增規格值斷言（概況數必須等於 preset 數、說明列必須出現 S 級拆分），實測桌機無 console error、無水平溢出。
+
+工具經驗：Perplexity 的 `www.perplexity.ai/pricing` 本輪仍 403（Cloudflare），Help Center 的 `llms-full.txt` 404、`llms.txt` 403，只能逐篇 `.md` 讀取（`perplexity-help-center.mintlify.app/.../article.md` 可用）。Canva help 對 curl 403，Chromium 可讀。Tencent 的 WorkBuddy／CodeBuddy 產品站仍是 JS 殼，只有新聞稿能證明免費窗，執行面列入證據缺口。代理回報的 `next_review_at` 不能直接採用：DataCamp 失效於 12:59、代理排 13:05，Tencent `expires_at` 只給日期（當日 00:00），兩者都會被 `tests/validate.py` 的「複核須排在可行動截止前」擋下，已改為 12:55 與 11/14 20:00。
+
+下輪優先（前五項）：① `datacamp-free-access-week-november-2026` 台北 12:59 後改 `expired` 並移除免費存取敘述（campaign 頁、status.datacamp.com）；② `google-ai-professional-certificate-tw-pro-3mo` 追條款是否更新為 2027-01-01，或行銷頁改回 11/6（one.google.com 條款、grow.google 台灣頁）；③ `google-vids-omni-free-sixty-seconds-monthly` 以瀏覽器重讀支援表與部落格，確認 60 秒／月 vs 3×15 秒是否已收斂（support.google.com/docs/answer/15609411、blog.google Omni 1.2）；④ `canva-education-k12-teachers-ai` 追「Premium and Ultra AI tools are available with」清單是否補列 Education（canva.com/help/ai-access）；⑤ `kimi-free-web-app`、`hal-x-thx-keyless-free-decision-api` 需登入或實測（Kimi Free 聊天額度、HAL-X 台灣 IP 可達性與 429 行為），`hal-x.ai/terms` 404 也要再確認是否已有正式條款。
 
 2026-11-09 07:05–07:14 本輪（接續 d6c4a85 之後，獨立 commit）：起始 915 筆；局部複核 12 筆、新增機會 3 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 903 筆；結果 918 筆。開始時 `next_review_at` 已到期 0 筆（06:14 剛結算），佇列因此為：來源衝突與證據缺口 9 筆（亞灣 AI 實證、Perplexity 新創、Ollama Cloud、Anam Free、Friendli、日本橋 AI Lab、Fireworks Build Credits、SciSpace Campus Leads、Krutrim Sandbox）＋時限與排程 3 筆（Rime STT 11/19、StepFun Audio 3 preview 11/17、Amazon ARA 11/11 太平洋時間）；23:xx 前才核過的 daily 項（DataCamp、Google 憑證、臺北補助、neo4j）不重複刷新。分工：3 個 scout subagent（時限／輪替＋衝突／新機會），只回 patch 不碰 JSON；主 agent 逐頁重讀要寫入的官方來源並自行蓋 `accessed_at`，subagent 回報的近似時間全部重寫。
 
