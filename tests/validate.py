@@ -143,6 +143,10 @@ for o in d['offers']:
   raise AssertionError(f'duplicate_merged without duplicate_of in {o["id"]}')
  if o['record_type']=='opportunity':
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
+  # 卡片藥丸與「優先度依據」必須說同一件事。缺少 status 的紀錄在 app.js 顯示「狀態待釐清」，
+  # 但 tools/prioritize.py 的 note_of() 曾把缺值寫成「條件式」（2026-11-09 統計 22 筆機會），
+  # 同一張卡片因此同時主張「狀態不明」與「需符合條件」。
+  assert o.get('status') is not None or '狀態未記錄' in o['priority_note'], f'note implies a status the record does not have in {o["id"]}: {o["priority_note"]}'
   if o.get('status') in dead:assert o['priority_tier']=='D'
   if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
   if o.get('priority_tier')=='S':assert o['taiwan']=='Yes' and o.get('status') not in dead, f'invalid S-tier in {o["id"]}'

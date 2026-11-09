@@ -66,7 +66,11 @@ def note_of(o, s):
         return "非機會紀錄（政策/待覆核），未評級"
     ver = {"Official": "官方", "Community reported": "社群回報", "Unverified": "未驗證"}.get(o.get("verification"), "未知證據")
     status = o.get("status")
+    # 缺 status 不等於「條件式」。2026-11-09 統計 22 筆機會沒有 status 欄位，
+    # 卡片藥丸寫「狀態待釐清」，同一張卡的「優先度依據」卻寫「條件式」——同一份資料兩種結論。
+    # 這裡只改文案，不動計分（缺值仍按 1.5 計，與 README 的評分說明一致）。
     st = ("重複・已併入其他紀錄" if status == "duplicate_merged" else
+          "狀態未記錄" if status is None else
           "活躍" if status in ALIVE else "已截止" if status in DEAD else
           "申請制" if status == "application_based" else "條件式")
     if o.get("setup_cost_usd") == 0 and o.get("recurring_cost_usd") == 0:

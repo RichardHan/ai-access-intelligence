@@ -26656,5 +26656,158 @@
       "https://www.datacamp.com/campaign/free-access-week-november-2026",
       "https://www.datacamp.com/terms-of-use"
     ]
+  },
+  {
+    "record_id": "fal-flux3-max-five-daily-sandbox",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "記錄為「fal 已無 FLUX 3 Max 每日免費影片」",
+    "current_classification": "UNKNOWN",
+    "note": "更正：fal sandbox 仍提供 FLUX 3 Max 免費生成。瀏覽器渲染 fal.ai/sandbox 得「7 free generations today. No account needed.」，breakdown 逐模型列 FLUX 3 Max Text to Video 1、Image to Video 1，並註明同一模型額度由各操作共用（各模型數字合計遠高於 7，官方未說明分配）。舊的 /flux-video-free 仍 308、/flux-3-max-free 仍 404，但 sandbox 是另一條免費入口，不能由那兩個網址推論免費已取消。折扣結束日仍三說並存（11/21、11/22、12/31），維持 terms_conflict。",
+    "sources": [
+      "https://fal.ai/sandbox",
+      "https://fal.ai/models/blackforestlabs/flux-3-max/text-to-video",
+      "https://fal.ai/flux-3-max"
+    ]
+  },
+  {
+    "record_id": "neo4j-startup-aura-twentyk-application-unavailable",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "記錄為「申請頁文字版出現 This form is temporarily unavailable，不能宣稱可送件」",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "更正：以瀏覽器渲染申請頁，`.form--unavailable-message` 的 computed style 為 display:none（純備援文字），同一頁主文件有 38 個表單欄位、Country 下拉 223 個選項（含 Taiwan）與可見且可按的 Submit。先前把文字版殘留字串當成「表單不可用」是錯的；仍不能宣稱送件後一定收件（未提交）。",
+    "sources": [
+      "https://neo4j.com/startup-program/apply/",
+      "https://neo4j.com/startup-program/"
+    ]
+  },
+  {
+    "record_id": "base44-startup-partner-bootstrapped-separated",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "合作方 Annual Pro 加最高 US$1,000 點、點數啟用後 6 個月",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "方案頁本文現在只列兩個免費年約：合作方 Pro（worth $960，subject to eligibility）、獨立創辦人 Builder（worth $480，subject to approval）。US$1,000 credits 只出現在 meta description 與頁面結構化資料，任何官方頁都查不到 6 個月點數效期。改記 terms_conflict，不把 1,000 點當成可領額度。",
+    "sources": [
+      "https://base44.com/solutions/startups",
+      "https://base44.com/about-us/legal/terms-of-service"
+    ]
+  },
+  {
+    "record_id": "render-startup-body-missing",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "Build 級金額「$2,500 或 $5,000 矛盾」、每家公司限領一次",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "釐清：$2,500 為「startups from a partner」、$5,000 為「startups from select partners」，不是同一格兩說；Scale 的 $10K／$25K 依募資是否達 US$1M 區分；AI 級 US$100K 需至少 US$2.5M 頂級 VC 投資；所有額度自核准起 1 年。原「每家公司限領一次」在 /startups 未載明，改記為 docs/credits 的促銷兌換限制。",
+    "sources": [
+      "https://render.com/startups",
+      "https://render.com/docs/credits"
+    ]
+  },
+  {
+    "record_id": "google-cloud-startups",
+    "change_type": "eligibility_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "status 未記錄；來源含 /startup/benefits",
+    "current_classification": "UNKNOWN",
+    "note": "補 status=application_based（申請＋5–7 天回覆＋Google 明寫 sole discretion）。資格條文為「位於 Google Cloud GA 且可自助購買的地區」，台灣有 asia-east1（彰化）GA 區域可滿足字面，但官方未點名台灣，taiwan 維持 Unknown。原 /startup/benefits 已 301 轉回 /startup，來源合併為一筆。",
+    "sources": [
+      "https://cloud.google.com/startup",
+      "https://cloud.google.com/terms/startup-program-tos"
+    ]
+  },
+  {
+    "record_id": "qdrant-startup-twenty-percent",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "status 未記錄；來源路徑 /startups/",
+    "current_classification": "UNKNOWN",
+    "note": "官方頁面現為 qdrant.tech/qdrant-for-startups/，舊路徑 /startups/ 回 404（無搬遷公告，僅 slug 變更）。補 status=application_based（表單＋7–10 工作天審核）。20%／12 個月、限 Stripe 直接帳單、需加卡、不得走 marketplace、資格與 2 個月再申請等待均逐字對上。",
+    "sources": [
+      "https://qdrant.tech/qdrant-for-startups/"
+    ]
+  },
+  {
+    "record_id": "taipei-industry-incentive-ai-rd-batch2-2026",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": "僅記徵件期間、金額與名額",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "補申請須知限制：補助不得超過計畫總經費 50%（因此總經費至少 NT$400 萬）、研發計畫不得同時獲其他政府單位補助、須提供至少 1 名大專院校在學學生有薪實習、同一申請人一年內以申請 2 次為限。另取得 2026-11-05 說明會公告（11/12 14:00）確認徵件仍開放、無延長或額滿公告；截止時刻仍未載明。",
+    "sources": [
+      "https://www.industry-incentive.taipei/news_detail/497",
+      "https://www.industry-incentive.taipei/news_detail/501"
+    ]
+  },
+  {
+    "record_id": "aws-cloud-credit-for-research",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "AWS 研究用促銷額度：學生申請最高 US$5,000，教職員與研究人員「not capped」，額度為 AWS Promotional Credit（可抵合格 AWS 服務，EC2 僅限 on-demand 與 spot）。資格為認可研究機構的全職教職員、研究人員或研究生／博士生，須用機構核發信箱（.edu、.org 或同等）並先開好 AWS 帳號；不受理「實驗室一般營運經費」的申請，須是有限期間、可公開的科學即服務應用、PoC 基準測試或工作坊。官方稱滾動審查、典型 90–120 天，無法加速。全球可申請，唯一明文排除「greater China region」，未點名台灣。",
+    "sources": [
+      "https://aws.amazon.com/government-education/research-and-technical-computing/cloud-credit-for-research/",
+      "https://aws.amazon.com/government-education/research-and-technical-computing/cloud-credit-for-research/faqs/"
+    ]
+  },
+  {
+    "record_id": "aws-education-equity-initiative",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "AWS 社會影響計畫，符合資格的組織可申請最高 US$10,000 的 AWS social impact credits，用於為弱勢社群建置數位學習方案；官方稱整體承諾 US$1 億的 AWS 技術。適用對象是 edtech、新創、非營利、政府與企業 CSR 團隊（含營利型社會企業），明確排除個人與「學生或教師自用」的學習用途；官方稱通常只支持同一組織一次，審查為滾動制、3 週內回覆，獲獎後須每年兩次填寫簡短社會影響問卷。credits 效期與是否可抵 Bedrock 未公布。",
+    "sources": [
+      "https://aws.amazon.com/about-aws/our-impact/education-equity-initiative/"
+    ]
+  },
+  {
+    "record_id": "revops-ai-for-startups",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "通過審核的新創可獲 US$25,000 RevOps.ai 平台 credits，用於其 AI agents（inbound 轉換、pipeline 重啟、留存），免信用卡即可開始，官方稱 48 小時內完成資格確認。資格為 Pre-Seed 至 Series A、總募資低於 US$10M、成立未滿 5 年、員工少於 50 人，且必須有核准的 VC／加速器／育成夥伴關係。credits 自啟用起 6 個月有效、未用不結轉，期滿轉標準定價；bootstrap 團隊另有 US$5 起押金的 PAYG 方案。",
+    "sources": [
+      "https://revops.ai/startups"
+    ]
+  },
+  {
+    "record_id": "legionedge-startup-program",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "LegionEdge 新創方案提供最高 US$25k 的自家產品 credits（Nokuva、Tavoc、Foltrac），期間 12 個月，另含架構諮詢場次與 founder 社群；官方明寫不取股權、不綁獨家。資格為 Pre-seed 至 Series A、募資低於 US$5M、團隊少於 20 人、AI 是產品核心而非附加功能、未曾參加本方案，個人創辦人可申請；人工審核通常一週內回覆，期滿轉標準定價並提供 founder 折扣。金額為「up to」，官方未列分級明細；GPU 參考價為 H200 141GB US$4.79/GPU小時。",
+    "sources": [
+      "https://legionedge.ai/programs/startup"
+    ]
+  },
+  {
+    "record_id": "aistudios-free",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:22:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Deepbrain AI 的 AI Studios 免費方案 US$0/月：每月最多 3 支 AI 影片、單支上限 1 分鐘、1 個 video avatar、720p 匯出、每月 3 次 AI 配音、16 個一次性生成 credits，並限用部分生成模型；影片與配音額度於帳單日重置，生成 credits 標為一次性且未公布效期。下一級 Personal US$24/月為無限影片、單支 30 分鐘、3 個 avatars 與 1080p。服務條款只列出口管制與禁止轉售等一般限制，未提台灣或地區封鎖，但也未說明免費方案的商用與浮水印規則。",
+    "sources": [
+      "https://www.aistudios.com/pricing",
+      "https://www.aistudios.com/terms-of-use"
+    ]
   }
 ]
