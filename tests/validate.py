@@ -110,6 +110,14 @@ for o in d['offers']:
    closes=latest_stamp(o.get(field))
    if closes and closes>NOW and scheduled and scheduled>closes:
     raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {o[field]} in {o["id"]}: schedule the review while the offer is still actionable')
+ # 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
+ # 2026-11-09 就是這樣：報名表已回「活動已結束」、活動頁改列 11/08 23:59，但紀錄沒有
+ # deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
+ # 只要期限寫進機器可讀欄位，這裡就擋得住；散文日期仍要靠人工，README 維護章節寫明要回填。
+ for field in ('deadline_at','expires_at'):
+  closes=latest_stamp(o.get(field))
+  if o.get('status') not in dead and closes and closes<NOW:
+   raise AssertionError(f'{field} {o[field]} has passed but status is {o.get("status")!r} in {o["id"]}: mark the offer closed or record the new end date')
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
