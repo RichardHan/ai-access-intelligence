@@ -80,6 +80,18 @@ offers_by_id={o['id']:o for o in d['offers']}
 for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
 for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
 run_day=run['started_at'][:10]
+# 存取時間是自由文字（ISO、ISO 區間、甚至「2026-10-25（Asia/Taipei）」這種帶註記的寫法）。
+# 舊版用 `raw.split('/')[-1][:10]` 取日期，遇到帶註記的值會取到「Taipei）」這種片段，
+# 與 run_day 做字串比較時因為首字元 'T' 大於 '2' 而恆為真：2026-11-10 實測 adobe-firefly-assistant
+# 的舊來源「2026-10-25（Asia/Taipei）」被算成「本批次查核」，於是同一 URL 當天出現兩筆就
+# 誤報重複；反過來，一筆只有舊自由文字日期的紀錄也能通過下面的「本批次至少一個查閱時間」。
+# 一律抽出字串裡最後一個 YYYY-MM-DD 再比較。
+import re as _re
+DATE_ONLY=_re.compile(r'\d{4}-\d{2}-\d{2}')
+def accessed_day(source):
+ raw=str(source.get('accessed_at') or source.get('accessed_time_range') or '')
+ found=DATE_ONLY.findall(raw)
+ return found[-1] if found else ''
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
  # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複
@@ -92,10 +104,10 @@ for rid in reviewed+new:
  for s in offers_by_id[rid]['sources']:
   by_url.setdefault(s.get('url'),[]).append(s)
  for url,group in by_url.items():
-  same_day=[s for s in group if ((s.get('accessed_at') or s.get('accessed_time_range') or '').split('/')[-1])[:10]>=run_day]
+  same_day=[s for s in group if accessed_day(s)>=run_day]
   assert len(same_day)<=1, f'source URL checked twice in this batch (update the existing entry instead of appending): {rid} {url}'
- stamps=[(s.get('accessed_at') or s.get('accessed_time_range') or '').split('/')[-1] for s in offers_by_id[rid]['sources']]
- assert any(stamp[:10]>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
+ stamps=[accessed_day(s) for s in offers_by_id[rid]['sources']]
+ assert any(stamp>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
 for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
@@ -110,6 +122,18 @@ for o in d['offers']:
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
 valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
+# 追查失敗只留在 last_review_attempt_at、排程卻沿用原本的每月日期，等於把「這次讀不到」變成
+# 「一個月後再說」。2026-11-10 統計 20 筆有追查紀錄，其中 2 筆的最新證據是失敗（attempt 晚於
+# verified_at）而下次複核仍在 22–29 天後：taiwan-sme-ai-talent-training-2026（PDF 字型使文字
+# 擷取失效、29 天）與 stitch-free-daily-credit-ui-design-beta（頁面只回前端外殼、22 天）。
+# 失敗不是複核，不能因此把複核推遲一整個週期；仍可行動的紀錄要在 14 天內換路線重試。
+# on_new_signal 依定義沒有固定日期，維持例外。
+MAX_RETRY_AFTER_FAILURE=datetime.timedelta(days=14)
+for o in d['offers']:
+ attempt=latest_stamp(o.get('last_review_attempt_at')); verified=latest_stamp(o.get('verified_at')); nxt=latest_stamp(o.get('next_review_at'))
+ if attempt is None or o.get('status') in dead or o.get('review_cadence')=='on_new_signal': continue
+ if verified is not None and verified>=attempt: continue
+ assert nxt is not None and nxt-attempt<=MAX_RETRY_AFTER_FAILURE, f'latest evidence is a failed attempt ({o["last_review_attempt_at"]}) but next review is {o["next_review_at"]}: retry within 14 days instead of a full cycle in {o["id"]}'
 # Every record this batch reports must carry a managed status: the UI status pill and the
 # priority score both branch on it, and a missing value silently reads as "狀態待釐清"
 # (2026-11-09: the four new records were written without one before this check).

@@ -27530,5 +27530,178 @@
     "date": "2026-11-10",
     "verified_at": "2026-11-10T03:24:54+08:00",
     "previous_limit": null
+  },
+  {
+    "record_id": "taipei-youth-ai-subscription-subsidy-2026",
+    "change_type": "eligibility_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "期限當日重讀並以本機 OCR 讀完服務頁附檔「公告.pdf」（發文 115/7/29、北市青職字第1153007061號），確認為原計畫公告、無停收或展延；補齊第三項資格路徑：曾修習 AI 相關課程「或參與本局青年以戰代訓銜接職場計畫」並取得學分／及格成績／結業證明；並記下官方明文「本計畫申請文件應以書面方式提出」（無線上送件，須當日送達）。status 維持 conditional，11/11 起未展延應改 applications_closed。",
+    "sources": [
+      "https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796",
+      "https://youth.gov.taipei/api/v1/file.download?file_id=fe930fd5-194a-46f4-91e9-663a909c00a3"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "cleanapis-free-500k-tokens-month",
+    "change_type": "terms_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "限流衝突擴大：除 Free 方案卡 60 vs 比較表 80，比較表 Requests/min 對 Basic 120／Pro 120／Scale 120／Unlimited 150 也與方案卡（300／600／1,200／3,000）全面不符；Tokens/min 僅在比較表。退款拆成兩層：定價頁「7-day money-back guarantee on all paid plans」vs 退款政策頁「first-time paid subscription plans…does not apply to renewals」，預付餘額才是 14 天內可退（扣金流手續費）。",
+    "sources": [
+      "https://cleanapis.com/pricing",
+      "https://cleanapis.com/refund"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "postman-free-ai-credits-context-graph",
+    "change_type": "terms_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "官方 docs 補上機制：AI credits 依帳單日每月發放、不累積；只有付費帳號可加購（Free 的 AI overages 欄為「—」，額度用完 Agent Mode 暫停到下次重置）；自帶 API key 的 Agent Mode 請求不消耗 Postman AI credits。方案卡 100 與比較表 50 的衝突未解，docs 不裁決；quota_classification 由 UNKNOWN 改 HIGH BUT LIMITED。",
+    "sources": [
+      "https://www.postman.com/pricing/",
+      "https://learning.postman.com/docs/billing/agent-mode-usage"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "voyage-free-tokens-batch-excluded",
+    "change_type": "conflict_resolved",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Batch 與免費額度的衝突結案：定價頁逐字「Free token credits do not apply to Batch API usage…do not deduct from your free token balance」，Batch 文件無相反說法；模型免費額度的正文（code-3／multilingual-2／rerank-2.x）與表格（code-4／rerank-3）衝突仍在，頁面 updatedAt 仍 2026-09-29。voyageai.com/pricing 現回 404，權威頁只剩 docs。",
+    "sources": [
+      "https://docs.voyageai.com/docs/pricing"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": "batch_free_tokens_apply: false（與免費額度衝突未裁決）"
+  },
+  {
+    "record_id": "amd-developer-credits",
+    "change_type": "conflict_resolved",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "30／90 天歧異由同一頁兩段條款解釋：AMD Developer Cloud US$100 自「透過兌換連結建立或登入帳號」起 30 天到期；Fireworks US$50 的 promo code 須於發放後 90 天內兌換、兌換後在 Fireworks 帳戶內用至耗盡。US/Canada 限制逐字只適用每月硬體抽獎，未及於雲端額度；官方未列雲額度國別限制，台灣維持 Unknown。",
+    "sources": [
+      "https://developer.amd.com/resources/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": "Cloud 30 天與 Fireworks 90 天適用範圍衝突"
+  },
+  {
+    "record_id": "adobe-firefly-assistant-free-beta-regions",
+    "change_type": "evidence_correction",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "現行 FAQ（Last updated Oct 28, 2026）逐字只寫「Subset of free Adobe accounts without paid subscription plans.」，全頁已無任何國家／地區清單；2026-04-27 官方部落格的「globally」是針對 Creative Cloud Pro／付費 Firefly 方案，不能反推免費帳戶。台灣維持 Unknown（無清單可查），免費每日次數仍未公布、GMT 午夜重置。",
+    "sources": [
+      "https://helpx.adobe.com/firefly/web/firefly-ai-assistant/ai-assistant-faq.html"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "codex-compensation-account-specific-lead",
+    "change_type": "status_assigned",
+    "current_classification": "UNKNOWN",
+    "note": "補上受管 status=unverified：官方 Reset 政策逐字「We do not provide credits, refunds, or other compensation for these free benefits.」「Support does not provide manual or courtesy promotional resets…」，且該政策只適用免費促銷 reset、付費 reset 另處理；本輪仍未找到任何官方個案補償入口，個案維持社群自述。",
+    "sources": [
+      "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "upstage-once-ten-credit",
+    "change_type": "status_assigned",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "補上 status=active_verified：入門指南 2026-11-10 仍逐字「Sign up to receive $10 in free credit」，付費路徑為 pay-as-you-go 每月扣已登記付款方式或預付 credits；US$10 效期、是否需卡與每人一次規則仍未載。",
+    "sources": [
+      "https://console.upstage.ai/docs/getting-started"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "weaviate-startup-undisclosed-discount",
+    "change_type": "status_assigned",
+    "current_classification": "UNKNOWN",
+    "note": "補上 status=application_based：兌換頁仍只寫「at a discounted rate」與四步人工核定流程，折扣比例、贈額與期限仍未公布，不能列為免費方案。",
+    "sources": [
+      "https://weaviate.io/startup-deal"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "akashml-free-credit-unconfirmed",
+    "change_type": "status_assigned",
+    "current_classification": "UNKNOWN",
+    "note": "補上 status=unverified：官方文件確認 trial credits 須在 onboarding 驗證付款方式後發放、會到期，購買的 credits 不到期；金額與到期天數仍未公布，第三方 US$100 未獲官方證實。",
+    "sources": [
+      "https://akashml.com/docs/getting-started/introduction"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "taica-cross-university-ai-credit-programs",
+    "change_type": "new_opportunity",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "教育部 TAICA 跨校 AI 學分學程新收錄：55 所盟校、五類學程（含 115-1 新增資訊安全技術）、每學程 15 學分、學程間抵免上限 6 學分、學程證書須至少 8 學分聯盟認定課程；盟校學生以原校選課系統加選，無聯盟層級費用（各校學分費未核）。115-1 多數考試落在 2026-12-09 至 12-23，證書受理 12/15 起。",
+    "sources": [
+      "https://taicatw.net/",
+      "https://www.aca.ntu.edu.tw/w/aca/CDService_24082913533894186"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "cpc-moeai-elite-free-ai-course-115",
+    "change_type": "new_opportunity",
+    "current_classification": "UNKNOWN",
+    "note": "中國生產力中心「製造業AI數位轉型」課新收錄：屬 115 年度經濟部產發署產業競爭力 AI 輔導團在職菁英培訓，官方逐字「輔導廠商學員免費」「符合者課程課程費用0元」；限輔導團輔導企業在職員工，須輔導案號申請書與在職證明，出席 80%＋評量 70 分＋問卷與電訪才發證書；11/10、11/24、2027/01 梯次確定開班。",
+    "sources": [
+      "https://edu.cpc.org.tw/class/content/1650"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "moda-adi-forum-2026-free",
+    "change_type": "new_opportunity",
+    "current_classification": "UNKNOWN",
+    "note": "數位產業署 2026 ADI FORUM 新收錄：11/12 09:30–16:25 台北世貿一館 2 樓，官方逐字「費用：全程免費」「實體及線上直播」「三大場次，共13個議程主題」，線上表單報名；實體名額與直播連結取得方式未載，活動隔日應結案。",
+    "sources": [
+      "https://moda.gov.tw/ADI/news/events/772"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "taiwan-sovereign-ai-training-corpus-taic",
+    "change_type": "new_watchlist",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "數發部臺灣主權 AI 訓練語料庫列觀察線索：2026-04-10 新聞稿稱逾 3,000 筆資料集、12 億詞元並歡迎模型訓練者申請；但 2026-11-10 實讀首頁「最新資料集」與 Token 數字皆為前端載入空白，申請門檻、授權條款、商用範圍與下載／API 形式皆未公布，故不列為可領取機會。",
+    "sources": [
+      "https://moda.gov.tw/press/press-releases/19430",
+      "https://taic.moda.gov.tw/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T04:26:01+08:00",
+    "previous_limit": null
   }
 ]
