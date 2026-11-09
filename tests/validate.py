@@ -89,6 +89,13 @@ for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
  assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
+# 追查失敗只留時間、沒留原因，等於把「那天為什麼讀不到」丟掉：下一輪無法判斷要換哪條路線，
+# 讀者在卡片上只看到一個沒有說明的時間。上面的檢查只涵蓋本批次，因此 2026-11-09 仍累積了
+# 4 筆歷史缺漏（qoder-lite、seoul-aihub-khdp-closed-september、kakao-plus-young-adult-promo-unverified、
+# nchc-university-ai-compute-discount-2026）。原因真的不詳時要寫明「未留下原因」，不能留空。
+for o in d['offers']:
+ if o.get('last_review_attempt_at'):
+  assert isinstance(o.get('last_review_attempt_reason'), str) and o['last_review_attempt_reason'].strip(), f'last_review_attempt_at without a recorded reason in {o["id"]}'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
 valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
