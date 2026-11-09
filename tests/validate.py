@@ -55,6 +55,14 @@ def latest_stamp(value):
 TZ_TPE=datetime.timezone(datetime.timedelta(hours=8))
 NOW=datetime.datetime.now(TZ_TPE).replace(tzinfo=None)
 TOLERANCE=datetime.timedelta(minutes=5)
+CLOCK_RE=__import__('re').compile(r'\d{1,2}:\d{2}')
+def close_stamp(value):
+ '''最後仍可動作的時點。只寫日期的期限代表「當天仍可動作」，因此取當日 23:59:59；
+ 若照 latest_stamp 讀成當日 00:00，最後一天還整天可申請的紀錄會被誤判為「期限已過」而要求關閉
+ （2026-11-09 的台北青年 AI 補助與新竹市補助都是只寫日期的期限）。'''
+ stamp=latest_stamp(value)
+ if stamp is None or not isinstance(value,str): return stamp
+ return stamp if CLOCK_RE.search(value) else stamp.replace(hour=23,minute=59,second=59)
 def assert_not_future(value,label):
  stamp=latest_stamp(value)
  assert stamp is None or stamp-NOW<=TOLERANCE, f'{label} is in the future ({value}); use the real clock'
@@ -107,7 +115,7 @@ for o in d['offers']:
  if o.get('status') not in dead and o.get('next_review_at'):
   scheduled=latest_stamp(o['next_review_at'])
   for field in ('deadline_at','expires_at'):
-   closes=latest_stamp(o.get(field))
+   closes=close_stamp(o.get(field))
    if closes and closes>NOW and scheduled and scheduled>closes:
     raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {o[field]} in {o["id"]}: schedule the review while the offer is still actionable')
  # 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
@@ -115,9 +123,18 @@ for o in d['offers']:
  # deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
  # 只要期限寫進機器可讀欄位，這裡就擋得住；散文日期仍要靠人工，README 維護章節寫明要回填。
  for field in ('deadline_at','expires_at'):
-  closes=latest_stamp(o.get(field))
+  closes=close_stamp(o.get(field))
   if o.get('status') not in dead and closes and closes<NOW:
    raise AssertionError(f'{field} {o[field]} has passed but status is {o.get("status")!r} in {o["id"]}: mark the offer closed or record the new end date')
+ # 推定時刻不得寫進機器可讀欄位。卡片對帶時刻的值一律渲染成「（台北時間）」加分鐘，
+ # 讀者看到的是官方給的截止時鐘；台北青年 AI 補助原始條文只寫「最遲應於11月10日前提出申請」
+ # 「以送達本局之日為準」，23:59 是當日邊界推定，寫成 timestamp 後卡片就變成
+ # 「申請截止 2026/11/10 23:59（台北時間）」，可能讓讀者以為當日 23:59 前寄達即可。
+ # 只寫日期時前端會標「（來源未列時刻）」，這種精度才是來源真的有的。
+ for field in ('deadline_at','expires_at'):
+  value=o.get(field)
+  if isinstance(value,str) and CLOCK_RE.search(value):
+   assert not any('推定' in u and ('欄位' in u or field in u) for u in o['unknowns']), f'{field} carries an inferred clock time: {o["id"]} (store the date only, keep the inference in unknowns)'
  for s in o.get('sources', []):
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
