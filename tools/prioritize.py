@@ -7,9 +7,29 @@
 import datetime
 import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "offers.json"
+APP = ROOT / "app.js"
+
+
+def status_labels():
+    """卡片狀態藥丸的中文標籤，直接讀 app.js 的 STATUS_LABELS。
+
+    「優先度依據」與狀態藥丸是同一張卡上的兩句話，必須說同一件事。先前這裡把
+    terms_conflict（藥丸寫「官方條款有差異」）、paused（「暫停開放」）、
+    limited_availability（「有限度開放」）一律寫成「條件式」，21 筆機會因此同一張卡
+    出現兩種結論（2026-11-09 統計）。改讀前端同一份對照表，避免兩邊各自維護而漂移。
+    """
+    source = APP.read_text()
+    block = re.search(r"const STATUS_LABELS = \{(.*?)\n\};", source, re.S)
+    if not block:
+        raise SystemExit("app.js 找不到 STATUS_LABELS，優先度文案無法對齊前端")
+    return dict(re.findall(r"(\w+):\s*'([^']*)'", block.group(1)))
+
+
+STATUS_LABELS = status_labels()
 
 DEAD = {"expired", "expired_unverified", "closed", "applications_closed",
         "closed_to_new_subscriptions", "sunset_announced", "resolved_rumor_disproven",
@@ -64,15 +84,16 @@ def tier_of(o, s):
 def note_of(o, s):
     if o["record_type"] != "opportunity":
         return "非機會紀錄（政策/待覆核），未評級"
-    ver = {"Official": "官方", "Community reported": "社群回報", "Unverified": "未驗證"}.get(o.get("verification"), "未知證據")
+    # 「官方」既是證據等級也是多數狀態標籤的開頭（官方條款有差異、官方說法有差異），
+    # 兩個相鄰欄位都寫「官方」會讀成同一個意思，因此證據等級一律寫「官方來源」。
+    ver = {"Official": "官方來源", "Community reported": "社群回報", "Unverified": "未驗證"}.get(o.get("verification"), "未知證據")
     status = o.get("status")
     # 缺 status 不等於「條件式」。2026-11-09 統計 22 筆機會沒有 status 欄位，
     # 卡片藥丸寫「狀態待釐清」，同一張卡的「優先度依據」卻寫「條件式」——同一份資料兩種結論。
     # 這裡只改文案，不動計分（缺值仍按 1.5 計，與 README 的評分說明一致）。
-    st = ("重複・已併入其他紀錄" if status == "duplicate_merged" else
-          "狀態未記錄" if status is None else
-          "活躍" if status in ALIVE else "已截止" if status in DEAD else
-          "申請制" if status == "application_based" else "條件式")
+    # 同樣的道理適用於所有非 conditional 的狀態：標籤一律取自 app.js 的 STATUS_LABELS，
+    # 卡片藥丸與優先度依據才不會互相矛盾。
+    st = "狀態未記錄" if status is None else STATUS_LABELS.get(status, "狀態待釐清")
     if o.get("setup_cost_usd") == 0 and o.get("recurring_cost_usd") == 0:
         cost = "免費"
     elif o.get("setup_cost_usd") == 0:

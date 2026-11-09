@@ -162,6 +162,16 @@ for o in d['offers']:
   # 但 tools/prioritize.py 的 note_of() 曾把缺值寫成「條件式」（2026-11-09 統計 22 筆機會），
   # 同一張卡片因此同時主張「狀態不明」與「需符合條件」。
   assert o.get('status') is not None or '狀態未記錄' in o['priority_note'], f'note implies a status the record does not have in {o["id"]}: {o["priority_note"]}'
+  # 同一個錯誤在非 conditional 的狀態上也存在：terms_conflict（藥丸「官方條款有差異」）、
+  # paused（「暫停開放」）、limited_availability（「有限度開放」）等 21 筆機會的優先度依據
+  # 一律寫「條件式」。優先度依據的狀態欄位現在直接取 app.js 的 STATUS_LABELS，這裡擋回歸：
+  # 只有 conditional 家族可以寫「需符合條件」，其他狀態不得再冒稱條件式。
+  note_state = o['priority_note'].split('·')[1]
+  conditional_family = {'conditional', 'legacy_closed_new_path_conditional'}
+  if o.get('status') in conditional_family:
+   assert note_state == '需符合條件' or note_state == '舊途徑關閉・新途徑需條件', f'conditional record note disagrees with its status in {o["id"]}: {o["priority_note"]}'
+  else:
+   assert note_state not in ('需符合條件', '條件式'), f'note claims a conditional status the record does not have in {o["id"]}: {o["priority_note"]}'
   if o.get('status') in dead:assert o['priority_tier']=='D'
   if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
   if o.get('priority_tier')=='S':assert o['taiwan']=='Yes' and o.get('status') not in dead, f'invalid S-tier in {o["id"]}'

@@ -27009,5 +27009,94 @@
       "https://www.zoom.com/en/products/ai-assistant/",
       "https://www.zoom.com/en/blog/what-is-zoommate/"
     ]
+  },
+  {
+    "record_id": "azure-startups",
+    "verified_at": "2026-11-09T16:12:00+08:00",
+    "previous_limit": "無碼 US$200／90 天＋商業驗證後 US$4,800／180 天（舊 FAQ 曾列 US$2,000，2026-11-02 起未重現）",
+    "current_classification": "HIGH BUT LIMITED · US$200 → US$5,000 → US$25,000／US$50,000／US$150,000 里程碑；Investor Network 上限 US$150,000",
+    "change_type": "milestone_structure_confirmed",
+    "note": "官方 FAQ（頁尾 2026-10-30）與 application 頁寫 US$200／90 天後追加 US$4,800，里程碑頁（2026-11-03）把同一級寫成 US$5,000，並列出 25K／50K／150K 的 workload 條件（5／7／10 個 workload，連續 60 天各維持 US$1 以上用量）。US$200＋US$4,800＝US$5,000，先前的金額衝突因此收斂、不必再並列兩說。另補終身免費 Azure 額度上限 US$350,000、須全新個人 MSA、註冊國別未列即不適用。台灣資格仍 Unknown。",
+    "sources": [
+      "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/mfs-faqs",
+      "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/application",
+      "https://learn.microsoft.com/en-us/startups/standard-benefits/unlock-more-benefits"
+    ]
+  },
+  {
+    "record_id": "directcloud-freeai-september-expansion",
+    "verified_at": "2026-11-09T16:14:00+08:00",
+    "previous_limit": "每月 10,000 credits、50 資料夾、5GB；MCP 免費開放狀態頁面說法不一致",
+    "current_classification": "HIGH BUT LIMITED · 10,000 credits／月（每月 1 日重置）",
+    "change_type": "mcp_availability_and_quota_confirmed",
+    "note": "官方 FAQ 明寫 MCP 伺服器在含 Free 的所有 DirectCloud AI 方案可用（每人每日 50 次操作），先前的 rollout 不確定解除；同時確認 10,000 credits／月每月 1 日重置不累積、平均每次 Q&A 約 70 credits（約 142 次／月）、每位使用者每日 50 次 AI 操作、50 資料夾／5GB／5,000 字。Free 僅隨 DirectCloud 付費底座方案提供（部分方案除外），底座月費仍未公布。",
+    "sources": [
+      "https://directcloud.jp/directcloud_ai"
+    ]
+  },
+  {
+    "record_id": "photoroom-sandbox-production-separated",
+    "verified_at": "2026-11-09T16:16:00+08:00",
+    "previous_limit": "每月 1,000 次 Image Editing 沙盒＋新戶 10 次 Remove Background；兩 API 沙盒池是否獨立未明",
+    "current_classification": "HIGH BUT LIMITED",
+    "change_type": "sandbox_pool_clarification",
+    "note": "Basic 與 Plus 兩份 sandbox 文件同文寫「1,000 free calls by month to the Image Editing API」，指向同一個 Image Editing 池；另有新帳號一次性 10 次 Remove Background production 呼叫（無浮水印）。兩者是不同機制的免費入口，不能相加成 2,000 或兩個月池，標題不再寫「分池」。",
+    "sources": [
+      "https://www.photoroom.com/api/pricing",
+      "https://docs.photoroom.com/image-editing-api-plus-plan/sandbox-mode.md",
+      "https://docs.photoroom.com/remove-background-api-basic-plan/sandbox-mode.md"
+    ]
+  },
+  {
+    "record_id": "azure-translator-f0-two-million-chars-monthly",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T16:37:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Azure Translator F0：每月 200 萬字元（標準翻譯與自訂翻譯訓練字元合計），每小時 200 萬字元須平均消耗、每請求 5 萬字元、並行不限；文件與影像翻譯為 S1 以上。定價頁 Region 清單含 Taiwan North、幣別含 TWD，且 Translator 為非區域性資源，故記台灣 Yes；F0 是否需綁卡未載。",
+    "sources": [
+      "https://azure.microsoft.com/en-us/pricing/details/translator/",
+      "https://learn.microsoft.com/en-us/azure/ai-services/translator/service-limits"
+    ]
+  },
+  {
+    "record_id": "google-deep-review-two-free-weekly",
+    "change_type": "new_watchlist",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T16:38:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Google Deep Review（2026-10-14 公開）：每人每週 2 次免費文件審閱、全球開放、支援 PDF 與純文字、上傳文件不用於訓練且保留一年；超量須自備 Gemini API key。台灣未點名，記 Unknown。",
+    "sources": [
+      "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+    ]
+  },
+  {
+    "record_id": "taide-model-weights-free-commercial-license",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T16:39:00+08:00",
+    "previous_limit": null,
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "國研院 TAIDE 權重授權：非專屬、全球、不可轉讓、不可再授權、無償，可修改散布並對衍生模型收費；限制為禁軍事／非法用途、須標示修改、散布附條款、僅得自授權網站取用、上游 Llama 3／Gemma 條款同時適用；準據法中華民國。無免費推論服務，算力自付。台灣 Yes。",
+    "sources": [
+      "https://taide.stpi.niar.org.tw/public/download-model",
+      "https://taide.tw/"
+    ]
+  },
+  {
+    "record_id": "vercel-token-pass-thirty-for-eighty-credit",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T16:40:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Vercel Token Pass（2026-10-15 Early Access）：Pro 團隊 US$30／月換 US$80 AI Gateway 額度，僅限 Kimi K3／GLM 5.3／DeepSeek V4.1 Flash，額度不結轉、用完請求即失敗不自動超額；Enterprise 不可訂閱、名額有限。非免費方案（Pro US$20 起）。台灣未點名。",
+    "sources": [
+      "https://vercel.com/docs/ai-gateway/token-pass",
+      "https://vercel.com/changelog/introducing-token-pass",
+      "https://vercel.com/pricing.md"
+    ]
   }
 ]
