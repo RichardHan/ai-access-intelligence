@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **926 筆**（720 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 09:21 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **14 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **909 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
+資料集目前有 **929 筆**（723 項機會、49 項政策、157 筆觀察線索），更新時間 **2026-11-09 10:27 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **15 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **911 筆**既有紀錄未完成本輪複核，來源整筆追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後）。
 
 ## 使用方式
 
@@ -41,6 +41,7 @@
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
 
 服務地區篩選曾在 `regions` 這種自由文字欄位上做字串完全比對（`(o.regions||[]).includes(f.region)`）。資料有 26 種寫法（TW／Taipei, Taiwan／United States／GLOBAL／Worldwide…），選「Taiwan」因此漏掉 6 筆 `taiwan=Yes` 但存成 `TW` 的紀錄，71 筆有地區值的紀錄在任何選項下都查不到。現改由 `regionMatches()` 分桶比對（Other 收其他具名地區、排除 Unknown 與空值）；`tests/filters.cjs` 對別名與「宣稱台灣地區者必須出現在 Taiwan 選項」做規格值斷言。同類原則：任何自由文字欄位都不能用列舉選項做完全比對。
+同一欄位還有第二層漏洞：`regions` 常留空或只寫 Global，台灣資格其實記在 schema 管制的 `taiwan`。2026-11-09 統計 108 筆 `taiwan=Yes` 有 33 筆不進「Taiwan」選項（20 筆 `regions` 空、13 筆只寫 Global／Worldwide，含 AWS Free Tier、Azure 免費帳戶、Amazon Polly、Google AI 開發者額度），與資料自身「台灣可用」的主張矛盾。`regionMatches()` 因此在 Taiwan 桶也接受 `taiwan=Yes`，選 Taiwan 由 83 筆增至 116 筆；`tests/filters.cjs` 以資料驅動斷言「每個 `taiwan=Yes` 必入 Taiwan 選項、`taiwan=No` 不得入、`taiwan=Yes` 不得漏進 US 選項」。通則：同一事實存在兩個欄位時，篩選必須讀有 schema 管制的那一個，並在程式註解留下不一致的筆數。
 
 篩選與專區只能讀 schema 管制的欄位。`quota_classification` 是五值 enum，`usage_type` 卻是自由文字（2026-11-08 統計：358 種值、262 筆 null）。原本「用量類型」下拉以 `usage_type` 精確比對 3 個英文字串，選 High quota 只回 9 筆（實際 HIGH BUT LIMITED 619 筆）、選 Unlimited 只回 2 筆（實際官方或暫時不限量 7 筆），262 筆完全篩不到；已改為直接比對 `quota_classification`，並讓「無限／暫時不限量」專區由同一欄位判定，不再依賴各筆手動 `views`（先前有一筆 HIGH BUT LIMITED 被標成 unlimited）。`tests/filters.cjs` 驗證 index.html 每個選項都對應實際資料，`tests/validate.py` 擋 `views` 與 `quota_classification` 互相矛盾。
 
@@ -65,6 +66,18 @@
 「台灣條件適用」是頁面上第一個捷徑按鈕，卻走 `taiwan:'Yes'` 這個一般篩選、不經 `viewMatches()`，所以上一輪把「已截止紀錄退出可行動專區」擴及七個 view 選項時漏掉它：2026-11-09 統計 106 筆 taiwan=Yes 中有 10 筆已截止／已關閉／重複合併（`moda-service-robot-virtual-scene-subsidy-2026`、`taiwan-ai-rap-pilot`、`taiwan-adi-ai-compute-115`、`nchc-university-ai-compute-discount-2026`…），卡片標題自己就寫著「已截止」。現由 `presetMatches()` 讓捷徑排除已截止紀錄，`台灣條件適用` 由 106 筆降為 96 筆，全庫搜尋與 `taiwan` 下拉仍查得到這 10 筆；`tests/filters.cjs` 以資料驅動斷言「捷徑內不得有已截止紀錄」「捷徑筆數必須等於未截止的 taiwan=Yes 筆數」「一般 taiwan 篩選仍能查到已截止案例」，避免只修好當下的資料快照。
 
 精確截止時間只存在於三個欄位：`deadline_at`（申請截止）、`expires_at`（方案或免費期結束）、`expiry`（舊式物件，含 `date`／`text`／`timezone`）。2026-11-09 統計全庫分別只有 5／5／7 筆填了這些欄位，但卡片先前只渲染自由文字的「有效期間」，於是 Amazon ARA 的台北 11/12 15:59、DataCamp 的當日 12:59 這類真正要趕的時間點只藏在段落文字裡。已新增「截止與期限」列：帶時刻者換算成台北時間並標「（台北時間）」，只有日期者標「（來源未列時刻）」，`expiry.text` 原文照列、不改成推測日期。`tests/filters.cjs` 以資料驅動斷言「有這三個欄位就必須出現該列、沒有就不得出現」，並固定四筆規格值（Amazon ARA、DataCamp、Rime STT、Claude 教師）。新紀錄優先寫 `deadline_at`／`expires_at` 的 ISO 時間；來源只給日期時不要自行補時刻。
+
+2026-11-09 10:05–10:36 本輪（接續 73ba1a1 之後，獨立 commit）：起始 926 筆；`next_review_at` 已到期 0 筆（09:21 剛結算），3 日內到期 20 筆中 18 筆是當日 03:20／08:20 才核過的 daily 項，故不重複刷新；佇列改為最久未核輪替 8 筆（2026-10-30 寫入、monthly 未到期但為全庫最舊，且多為 A／S 級）＋官方衝突與證據缺口 6 筆＋Bright Data Free 1 筆。局部複核 15 筆、新增機會 3 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 911 筆；結果 929 筆。3 個 scout 平行研究（輪替／衝突／新機會），主 agent 重讀所有會改變結論的官方頁後才寫入；DataCamp 免費週在 10:14 重讀活動頁，仍是原截止時刻（台北 11/9 12:59）、無延長公告，因 08:20 才完整複核過，本輪不刷新其 verified_at。
+
+衝突收斂 4 筆。`hackclub-ai-teen-free-api-budget-conflict`：服務 Rules 寫 US$3/日（00:00 UTC 重置、402、需寄信才能提高），readme 站內 /services 同樣寫 $3 daily limit 並解釋日限由來，只有首頁散文寫 $4 → 以 $3 為有效規則、$4 視為未同步舊述（不宣稱官方公告變更）。`openrouter-startup-referral-three-five-conflict`：公開頁 up to US$3,000（2026-06-17 存檔為無 up to 的 $3K）是標準推薦額度，條款 §3 的 US$5,000 是明示依 referral source／verification／capacity 的裁量上限，兩者不同層級，$5,000 的適用條件仍無官方文字。`chroma-cloud-new-user-five-credit-terms-gap`：US$5 綁 Starter，Team 另為 $100 credits 且明示不 rollover；§11 的 30 日屬「免費／試用／beta 存取期間」，與 credit 效期分屬不同客體（推論，條款未指名 Starter），領額是否須綁卡仍未核。`tripo-api-free-credits-index-mismatch`：API 四份官方文件皆為 pay-before-you-go、無新戶免費 credits，Help Center 明示 API credits 須另購且 Studio 月配額不能呼叫 API；索引的 300/2 週與 2,000 在任何官方頁都對不上，最接近者為 Studio（web app）Free 200 credits/月，維持觀察名單並改 status=unverified。
+
+Perplexity 兩筆改以官方 Help Center 的 Mintlify 鏡像取得正文（canonical `www.perplexity.ai` 與 `/pricing` 仍 403），並更正前版推論：`10352998` 於 2026-07-16 更新後仍寫 five Pro Searches/day，而 3/day 表格在 2026-06-10 存檔已存在，無法用更新日期排序，兩說屬同期並存；Education Pro 的 US$10／月只出現在方案總覽 11187416（教育專文僅寫 at a discount），正文 unlimited 與同頁表格 Weekly limits 仍未同步。`speaknotes-sixty-live-not-sandbox-unlimited` 條款改版為 2026-11-05（取消至期末、未用不退、內容不用於訓練），預付包增為 1,000/$10、5,000/$40、25,000/$150，扣點表新增 YouTube 摘要 1/分鐘，免費額度不變。`speechmatics-starting-hundred-not-recurring` 不再寫成條款矛盾：ToS §5.1 的月免費時數以 Portal 公布為準，Portal 已具體化為一次性 US$100。`brightdata-ai-mcp-monthly-fivek-shared` 補 status=conditional，並記錄官方受限司法管轄清單（註冊、登入、公司、帳單）未列台灣，Proxy 另有一次性 US$2（7 天）與加付款方式 US$5（30 天），不在月池。其餘 6 筆輪替（Soniox、AgentMail Free、Supermemory、Azure for Students、AI Horde、Pollinations Classic）逐頁重讀後額度與條款未變，僅補 per-source 查閱時間與 verification_scope。
+
+新增 3 筆機會：[Mux](https://www.mux.com/pricing)（每月 10 萬 delivery 分鐘＋10 萬 Robots units 免費、免卡、PAYG 另有 US$20 月 credit；Robots 1,000 units=US$0.01，故免費 AI units 僅值 US$1，條款允許在 AI Addendum 條件下訓練模型）、[Honeycomb Free](https://www.honeycomb.io/pricing)（每月 20M events／100M metrics 點，含 Canvas AI Copilot、MCP、Agent Timeline，官方稱 free forever；需卡與超量行為未取得）、[Mixpanel for Startups](https://mixpanel.com/startups)（首年 1B events 全功能免費，官方稱價值 US$145,000；成立 <5 年、募資 ≤US$8M、90 天內須開始送資料）。三者台灣資格官方均未表列，維持 Unknown。排除 Amplitude（與 Mixpanel 同構、擇一）、Intercom Fin Startup Pack（聚合既有 16 筆計畫）、Salesforce Launchpad（無金額期限）、Notion Education（AI 僅試用）。
+
+品質改善（1 項）：服務地區選「Taiwan」漏掉 33 筆 `taiwan=Yes`（詳見上方維護註記），`regionMatches()` 改為在 Taiwan 桶接受 `taiwan=Yes`，實測 83→116 筆，並以資料驅動斷言鎖住「taiwan=Yes 必入、taiwan=No 不得入、不得漏進 US」。瀏覽器檢查：929 筆載入、本輪更新 18 筆（15+3）、台灣條件適用 98、免費專區 584、再顯示 24 筆、排序 S→D／最近核實可用、Amazon ARA 截止列顯示「2026/11/12 15:59（台北時間）」、桌面與 390px 寬皆無水平溢出、console 無錯誤。
+
+下輪優先：① `datacamp-free-access-week-november-2026` 以[活動頁](https://www.datacamp.com/campaign/free-access-week-november-2026)確認 11/9 12:59 後是否結束並改 expired，同時查是否推出新一期；② `perplexity-education`／`perplexity-watch` 的 3/day vs five/day 與 unlimited vs weekly limits 改查 11 語系鏡像或官方部落格；③ `honeycomb-free-canvas-ai-copilot` 查 ToS 與註冊流程補「需卡／超量行為」（docs 免費層頁 404）；④ `amazon-ara-multilingual-contextual-ai-fall-2026` 截止後確認是否延期或下一輪徵案；⑤ `tripo-api-free-credits-index-mismatch` 若仍無官方新訊號，改 on_new_signal 避免每月重查。
 
 2026-11-09 09:05–09:21 本輪（接續 b2164ae 之後，獨立 commit）：起始 923 筆；局部複核 14 筆、新增機會 3 筆、政策 0、觀察線索 0、整筆追查失敗 0；未完成複核 909 筆；結果 926 筆。開始時 `next_review_at` 已到期 0 筆（08:26 剛結算），3 日內到期 21 筆但其中 18 筆是當日 03:20／08:20 才核過的 daily 項，故不重複刷新；佇列改為：最久未核輪替 6 筆（2026-10-29／10-30 寫入、monthly 未到期但為全庫最舊）+ 官方衝突與證據缺口 7 筆 + Databricks 合計上限 1 筆。分工：3 個 scout（輪替、衝突、新機會），主 agent 自行重讀所有列明主張的官方頁後才寫入。
 

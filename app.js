@@ -151,6 +151,11 @@ function regionMatches(o, region) {
   const bucket = REGION_BUCKETS[wanted];
   const values = (o.regions || []).map(value => String(value).trim().toLowerCase());
   if (bucket) {
+    // 選「服務地區＝Taiwan」的讀者問的是「我在台灣能不能用」，而 taiwan 才是 schema 管制的
+    // 資格判斷欄位。2026-11-09 統計 108 筆 taiwan=Yes 有 33 筆不進 Taiwan 選項：其中 20 筆
+    // regions 留空、13 筆只寫 Global／Worldwide（含 AWS Free Tier、Azure 免費帳戶、Amazon Polly、
+    // Google AI 開發者額度）。與資料自身「台灣可用」的主張矛盾，故 Taiwan 桶也接受 taiwan=Yes。
+    if (wanted === 'taiwan' && o.taiwan === 'Yes') return true;
     if (values.some(value => bucket.includes(value))) return true;
     // 'Other' also covers a named region that is not global/US/Taiwan (Japan, EU, India…),
     // which a reader choosing the fourth option expects; unknown/empty stays out of every bucket.

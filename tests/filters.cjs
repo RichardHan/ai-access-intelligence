@@ -219,6 +219,14 @@ assert(ctx.regionMatches({regions:['Other']},'Other'));
 assert(!ctx.regionMatches({regions:['Unknown']},'Other'),'Unknown region must not be filed under Other');
 assert(!ctx.regionMatches({regions:[]},'Other'),'an empty region list must not match Other');
 assert(!ctx.regionMatches({regions:['Japan']},'Taiwan'),'Japan must not match Taiwan');
+// taiwan 是 schema 管制的資格欄位；regions 常留空或只寫 Global。Taiwan 選項必須同時接受
+// taiwan=Yes，否則 33 筆自稱台灣可用的紀錄（AWS Free Tier、Azure 免費帳戶、Amazon Polly…）
+// 在讀者選「Taiwan」時消失。以下為規格值，兩邊都要有反向案例。
+assert(ctx.regionMatches({regions:[],taiwan:'Yes'},'Taiwan'),'taiwan=Yes with empty regions must match the Taiwan option');
+assert(ctx.regionMatches({regions:['Global'],taiwan:'Yes'},'Taiwan'),'taiwan=Yes with Global regions must match the Taiwan option');
+assert(!ctx.regionMatches({regions:[],taiwan:'Unknown'},'Taiwan'),'unknown Taiwan eligibility must not match the Taiwan option');
+assert(!ctx.regionMatches({regions:['Global'],taiwan:'No'},'Taiwan'),'taiwan=No must not match the Taiwan option');
+assert(!ctx.regionMatches({regions:[],taiwan:'Yes'},'US'),'taiwan=Yes must not leak into the US option');
 
 // Regression: the data actually contains these variants, and every record that claims a
 // Taiwan region must be reachable from the Taiwan option (previously 6 Taiwan=Yes were lost).
@@ -227,6 +235,12 @@ assert(twVariant,'dataset should still hold a TW/Taipei, Taiwan region variant t
 for(const o of d.offers){
   if(!(o.regions||[]).some(v=>['TW','Taiwan','Taipei, Taiwan'].includes(v))) continue;
   assert(f(o,{region:'Taiwan'}),'record claiming a Taiwan region must appear under the Taiwan option: '+o.id);
+}
+// 資料驅動的反向檢查：任何標記 taiwan=Yes 的紀錄都必須出現在 Taiwan 選項下，且 taiwan=No 的
+// 紀錄不得被 Taiwan 選項收進來（先前 33 筆 taiwan=Yes 選 Taiwan 時查不到）。
+for(const o of d.offers){
+  if(o.taiwan==='Yes') assert(f(o,{region:'Taiwan'}),'taiwan=Yes record must appear under the Taiwan option: '+o.id);
+  if(o.taiwan==='No') assert(!f(o,{region:'Taiwan'}),'taiwan=No record must not appear under the Taiwan option: '+o.id);
 }
 for(const o of d.offers){
   if(!(o.regions||[]).includes('United States')) continue;
