@@ -27830,5 +27830,95 @@
     ],
     "date": "2026-11-10",
     "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "taiwan-sme-ai-talent-training-2026",
+    "change_type": "deadline_disclosed_and_closed",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "官方申請須知（2026-04-07 發布）明載收件「至115年7月31日（星期五）下午5時止…逾時不予受理」，並公布輔導款上限：單一企業每案 NT$15 萬（含稅）、聯合型每案 NT$30 萬（含稅），單一企業須最近 6 個月內任 1 個月勞保投保人數 ≥10 人。原紀錄稱「頁面與平台皆未公布收件截止日、名額與剩餘預算」，會讓讀者誤以為仍可送件；本輪改 status=applications_closed、deadline_at=2026-07-31T17:00:00+08:00，並改註冊費 cadence 為 monthly_or_new_signal。經費額滿將提前終止，名額總數仍未公布。",
+    "sources": [
+      "https://www.sme.gov.tw/volunteer/article-vol-2696-20434",
+      "https://www.sme.gov.tw/article-tw-2974-14712"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:26:00+08:00"
+  },
+  {
+    "record_id": "kimi-free-web-app",
+    "change_type": "official_source_reverification",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "找到官方服務條款正文（原紀錄稱「未找到任何官方地區或台灣資格條文」）：「These Terms of Service apply to users located within the mainland of the People's Republic of China. Users located outside the mainland… should visit kimi.ai and review the applicable terms of service.」（Effective Date 2026-11-12）。該條文界定服務準據，未列支援國家清單、也未提台灣，故 taiwan 仍為 Unknown；Free 方案訊息與 token 額度仍未公布。",
+    "sources": [
+      "https://www.kimi.com/user/agreement/modelUse?version=v2"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:27:00+08:00"
+  },
+  {
+    "record_id": "fal-flux3-max-five-daily-sandbox",
+    "change_type": "evidence_scope_correction",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "sandbox 免費生成次數不是固定公告值：2026-11-10 06:31 實讀 /sandbox 原始 HTML 為「6 free generations today. No account needed.」（11-09 同頁為 7），官方 sandbox 文件只寫「Sandbox occasionally offers free credits for specific models」。原紀錄的「5 次」（id／標題）與quota_details 的「7 次」都不是官方公告值，quota_classification 由 HIGH BUT LIMITED 改 UNKNOWN。折扣結束日三方仍不一致：模型 llms.txt 為 11/8–11/22 五折、11/23 恢復原價；/flux-3-max 寫 11/21；/flux-video FAQ 寫 12/31。舊免費頁 /flux-video-free 已 308、/flux-3-max-free 為 404。",
+    "sources": [
+      "https://fal.ai/sandbox",
+      "https://fal.ai/models/blackforestlabs/flux-3-max/text-to-video/llms.txt",
+      "https://fal.ai/flux-3-max"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:31:00+08:00"
+  },
+  {
+    "record_id": "bolt-free-monthly-million-daily-threehundredk",
+    "change_type": "eligibility_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "官方 pricing 頁對 Free 逐字寫「Free forever, no card required」，解決原紀錄 unknowns 的「免綁卡條件」；setup_cost_usd 由 null 改 0（不是因為免費，而是官方明示免付款工具）。台灣帳戶、年齡與身分條件仍 Unknown。",
+    "sources": [
+      "https://bolt.new/pricing",
+      "https://support.bolt.new/account/tokens"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:31:00+08:00"
+  },
+  {
+    "record_id": "river-inference-25-credit",
+    "change_type": "terms_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "註冊贈額出現第一個機器可讀的負面訊號：console 靜態 HTML 的 bootstrap 載明「\"signup_bonus_enabled\":false」，且 river.ai 首頁與 /pricing 已完全不再提 US$25。US$25 只能視為 2026-10-11 的歷史公告；因旗標只證明功能目前關閉、不等於永久終止，status 維持 campaign_current_availability_unverified，未改判結束。",
+    "sources": [
+      "https://console.river.ai/terms",
+      "https://console.river.ai/api/public/pricing"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:31:00+08:00"
+  },
+  {
+    "record_id": "taione-ai-open-source-fellowship",
+    "change_type": "eligibility_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "本輪實際開啟 2026 年 9 月版報名簡章（19 頁 PDF），回答原本列為 unknown 的「截止日與名額」：簡章全文未訂報名截止日、也未公布名額，採隨到隨審的社群參與制。另釐清兩階段資格——社群共學員只需填報名表（簡章未設國籍或年齡門檻），「具中華民國國籍且年齡 30 歲以下（含）」是 Track Lead 提名 Fellow 的條件。培育週期三個月、單一 Track 最長二年；累計 6 個月 Bonus 可申請發表補助（亞洲最高 NT$5 萬、歐美最高 NT$8 萬）。",
+    "sources": [
+      "https://drive.google.com/file/d/1JYP9tU7mFIYhoExSJpWOYGdQpdoR7GXk/view"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:30:00+08:00"
+  },
+  {
+    "record_id": "base44-startup-partner-bootstrapped-separated",
+    "change_type": "terms_clarification",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "衝突定位更精確：方案頁本文與 FAQ 只列兩個免費年約（Pro US$960／Builder US$480），沒有 credits 品項與效期；「up to $1,000 in credits」只出現在 meta description。因此「US$1,000 一次領、6 個月有效」在任何官方頁都無依據。一般條款另載續約前 3 週可扣款、AI Credits 按月發放不結轉。",
+    "sources": [
+      "https://base44.com/solutions/startups",
+      "https://base44.com/about-us/legal/terms-of-service"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T06:31:00+08:00"
   }
 ]
