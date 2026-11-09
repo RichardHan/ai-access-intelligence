@@ -26281,5 +26281,82 @@
     "sources": [
       "https://www.postman.com/pricing/"
     ]
+  },
+  {
+    "record_id": "letta-free-deepseek-end-unverified",
+    "change_type": "status_change",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": "Free 方案含輪替免費模型與有限 LLM requests（舊紀錄，來源僅外部測試線索）",
+    "current_classification": "UNKNOWN",
+    "summary": "官方定價頁改寫：Free US$0 明列「no included model usage」，只能 BYOK／外部 coding plan 或自購 Letta-hosted credits；Pro US$20/月含 US$20 credits、20 agents。輪替免費模型與 DeepSeek 免費使用已不在頁面，官方未公告終止日，狀態由 conditional 改 expired。",
+    "sources": [
+      "https://docs.letta.com/pricing"
+    ]
+  },
+  {
+    "record_id": "openlayer-basic-trial-twentyk-inference-logs",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": "Basic 每月 20,000 inference logs（試用）",
+    "current_classification": "HIGH BUT LIMITED",
+    "summary": "兩份官方文件並列：定價頁寫 Basic「Trial, ready to start for everyone」與 20,000 requests/月（每次 trace 計 1），條款 §1.2 則寫評估服務試用預設 60 天到期、限內部評估不得生產使用。期滿後處理未公布，故不描述為永久每月 20,000。",
+    "sources": [
+      "https://www.openlayer.com/pricing.md",
+      "https://www.openlayer.com/terms-of-service.md"
+    ]
+  },
+  {
+    "record_id": "taiwan-sme-ai-talent-training-2026",
+    "change_type": "eligibility_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": "企業AI培訓與雲端空間待核（taiwan Unknown）",
+    "current_classification": "UNKNOWN",
+    "summary": "確認主辦為經濟部中小及新創企業署、正式名稱與內容（200+ 門免費 AI 主題課程、10GB 雲端空間、輔導經費），並找到需註冊帳號的企業申請平台 cisa.tw/smelearning；taiwan 由 Unknown 改 Yes（計畫屬台灣、對象為台灣中小企業），但收件截止日、名額與個別中小企業認定仍未公布。",
+    "sources": [
+      "https://www.sme.gov.tw/article-tw-2974-14712",
+      "https://www.cisa.tw/smelearning/"
+    ]
+  },
+  {
+    "record_id": "amazon-polly-free-tier-monthly-characters",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "summary": "Amazon Polly 免費層：Standard 每月 500 萬字元（頁面未標期限）、Neural 每月 100 萬字元限前 12 個月，Long-Form 50 萬、Generative 10 萬字元同為前 12 個月；逾額 Standard US$4／1M、Neural US$16／1M 等按量計費。台灣不在 AWS Free Tier 排除清單（僅排除中國 ZHY／BJS 與 GovCloud）。",
+    "sources": [
+      "https://aws.amazon.com/polly/pricing/",
+      "https://aws.amazon.com/free/free-tier-faqs/"
+    ]
+  },
+  {
+    "record_id": "token-harbor-free-rolling-7day-allowance",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": null,
+    "current_classification": "UNKNOWN",
+    "summary": "Token Harbor Free US$0、免卡、無註冊贈額；免費路由（DeepSeek V4.1 Flash、MiMo V2.6 Flash、TH-Rudder）採 list-price 價值制額度，每人 7×24 小時滾動重置，金額未公布；免費帳戶限 60 請求/分、1,800/小時、單請求 4MB。開啟免費路由即同意員工可讀對話、上游可依其條款訓練。地區以排除清單表述，台灣未列但未正面確認。",
+    "sources": [
+      "https://tokenharbor.ai/pricing",
+      "https://tokenharbor.ai/faq"
+    ]
+  },
+  {
+    "record_id": "cleanapis-free-500k-tokens-month",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T09:13:23+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "summary": "Clean APIs Free：0.5M tokens／月（prompt＋completion）、免卡、33 款模型全開；同頁限流 60（方案卡）與 80（比較表）請求/分不一致。條款自承為 API gateway、不託管模型、模型名稱可能與上游不同，營運主體未揭露，轉售授權無法驗證；文件完全未提國家，台灣資格 Unknown。",
+    "sources": [
+      "https://cleanapis.com/pricing",
+      "https://cleanapis.com/terms"
+    ]
   }
 ]

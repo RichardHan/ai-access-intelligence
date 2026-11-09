@@ -91,6 +91,37 @@ const nullCadenceUnscheduled=ctx.createDetails({status:'active',review_cadence:n
 const nullCadenceUnscheduledRow=nullCadenceUnscheduled.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert.strictEqual(nullCadenceUnscheduledRow.children[1].textContent,'未指定週期；未安排特定複核日期');
 
+// 精確截止時間存在 expires_at／deadline_at／expiry，但卡片先前只渲染自由文字的「有效期間」，
+// 讀者要趕的台北 11/12 15:59、今日 12:59 只藏在段落裡。以下為規格值：有這三個欄位就必須出現
+// 「截止與期限」列，且帶時刻者標明台北時間、只有日期者標明來源未列時刻；沒有欄位就不得出現。
+function deadlineRow(offer) {
+  const details = ctx.createDetails({ eligibility: {}, sources: [], ...offer });
+  return details.children.find(node => node.tagName === 'dl').children.find(row => row.children[0].textContent === '截止與期限');
+}
+function withoutPinnedDates(offer) {
+  const copy = { ...offer };
+  for (const field of ['deadline_at', 'expires_at', 'expiry']) delete copy[field];
+  return copy;
+}
+for (const offer of d.offers) {
+  const hasDates = ['deadline_at', 'expires_at', 'expiry'].some(field => offer[field]);
+  const row = deadlineRow(offer);
+  if (hasDates) assert(row, `missing 截止與期限 row for ${offer.id}`);
+  else assert(!row, `unexpected 截止與期限 row for ${offer.id}`);
+}
+const ara = deadlineRow(d.offers.find(o => o.id === 'amazon-ara-multilingual-contextual-ai-fall-2026'));
+assert.strictEqual(ara.children[1].textContent, '申請截止 2026/11/12 15:59（台北時間）');
+const datacamp = deadlineRow(d.offers.find(o => o.id === 'datacamp-free-access-week-november-2026'));
+assert(datacamp.children[1].textContent.startsWith('方案或免費期結束 '), 'expires_at must render under 方案或免費期結束');
+assert(datacamp.children[1].textContent.includes('台北時間'), 'expires_at with a clock time must be labelled as Taipei time');
+const rime = deadlineRow(d.offers.find(o => o.id === 'rime-stt-nov19-free-window'));
+assert.strictEqual(rime.children[1].textContent, '方案或免費期結束 2026-11-19（來源未列時刻）');
+const teachers = deadlineRow(d.offers.find(o => o.id === 'claude-teachers-us'));
+assert.strictEqual(teachers.children[1].textContent, '期限 2027-06-30（來源未列時刻）');
+const bothFields = deadlineRow({ deadline_at: '2026-12-01', expires_at: '2026-12-01T23:59:00+09:00' });
+assert.strictEqual(bothFields.children[1].textContent, '申請截止 2026-12-01（來源未列時刻）；方案或免費期結束 2026/12/01 22:59（台北時間）');
+assert(!deadlineRow(withoutPinnedDates({ expires_at: '2026-11-19' })), 'an offer without pinned dates must not show the row');
+
 const sortItems = [
   { id: 'unknown-1', setup_cost_usd: null },
   { id: 'free-1', setup_cost_usd: 0 },

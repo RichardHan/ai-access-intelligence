@@ -239,6 +239,28 @@ function groupSources(sources) {
   });
 }
 
+// 精確截止時間只存在於 expires_at／deadline_at／expiry 三個欄位（2026-11-09 統計 17 筆），
+// 「有效期間」則是自由文字（例：「促銷免費至 2026-11-19（FAQ 已明列年份；頁面未公布精確時區）」），
+// 卡片先前只渲染後者，於是 Amazon ARA 的台北 11/12 15:59、DataCamp 的今日 12:59 這類
+// 讀者真正要趕的時間點只藏在段落文字裡。逐欄位列出，並標明是台北時間或來源未列時刻。
+function deadlineInfo(offer) {
+  const stamp = value => {
+    const raw = String(value);
+    return /T\d{2}:\d{2}/.test(raw) ? `${dateLabel(raw, true)}（台北時間）` : `${raw}（來源未列時刻）`;
+  };
+  const parts = [];
+  if (offer.deadline_at) parts.push(`申請截止 ${stamp(offer.deadline_at)}`);
+  if (offer.expires_at) parts.push(`方案或免費期結束 ${stamp(offer.expires_at)}`);
+  const expiry = offer.expiry;
+  if (typeof expiry === 'string' && expiry.trim()) parts.push(`期限 ${expiry}`);
+  else if (expiry && typeof expiry === 'object') {
+    if (expiry.date) parts.push(`期限 ${stamp(expiry.date)}`);
+    if (expiry.text) parts.push(display(expiry.text));
+    if (expiry.timezone) parts.push(`時區 ${expiry.timezone}`);
+  }
+  return parts.length ? parts.join('；') : null;
+}
+
 function createDetails(offer) {
   const details = text('details', '', 'card-details');
   details.append(text('summary', '查看資格、限制與來源'));
@@ -263,6 +285,8 @@ function createDetails(offer) {
   if (offer.quota_classification_note) addRow(grid, '用量說明', offer.quota_classification_note);
   if (offer.quota_details || offer.quota) addRow(grid, '額度細節', offer.quota_details || offer.quota);
   addRow(grid, '有效期間', offer.usable_duration);
+  const deadline = deadlineInfo(offer);
+  if (deadline) addRow(grid, '截止與期限', deadline);
   addRow(grid, '取消與續費', offer.cancellation);
   addRow(grid, '存取風險', offer.access_risk);
   if (offer.plan_variants) {
