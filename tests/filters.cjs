@@ -313,11 +313,29 @@ assert(!f(mergedDev,{view:'developer'}),'merged duplicate must not appear in the
 assert(f(mergedDev,{}),'merged duplicate must stay findable in the full list: '+mergedDev.id);
 const openDev=d.offers.find(o=>!closedSet.has(o.status)&&(o.views||[]).includes('developer'));
 assert(openDev&&f(openDev,{view:'developer'}),'an open developer record must stay in the preset');
-const closedRegional=d.offers.find(o=>closedSet.has(o.status)&&(o.views||[]).includes('regional'));
-assert(closedRegional,'dataset should hold a closed regional-tagged record to guard against');
+const closedRegional=d.offers.find(o=>closedSet.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&o.taiwan!=='Yes');
+assert(closedRegional,'dataset should hold a closed region-locked record to guard against');
 assert(!f(closedRegional,{view:'regional'}),'closed regional record must leave the regional preset: '+closedRegional.id);
 assert(f(closedRegional,{taiwan:closedRegional.taiwan}),'non-view filters must still reach closed records');
 console.log('PASS: every 機會專區 option excludes closed and merged records; closed records remain reachable without a view filter.');
+
+// 「美國與地區限定」問的是「哪些方案依官方規則不含台灣」，不能由人工 views 回答。2026-11-10 統計：
+// view=regional 的 57 筆中有 27 筆 taiwan=Yes（台北青年 AI 補助、新竹市補助、緯創算力捐贈、Google
+// 學生方案、台智雲 TWAI、Oracle 免費層…），選這個專區等於拿到「台灣條件適用」的鏡像，卡片排序又把
+// S 級（台灣可用）排最前面；反向也漏掉 10 筆真正受限、只是沒被標記的方案（sarashina 日本限定 beta、
+// kimi／aliyun 中國限定、fal 歐洲／亞洲額度、vapi 美號碼方案、chatgpt/claude 教師美國限定）。
+// 改讀 schema 的 REGION-LOCKED 類別並排除台灣已符合資格者。以下為規格值，不是現況快照。
+const regionLocked=d.offers.filter(o=>(o.categories||[]).includes('REGION-LOCKED'));
+assert(regionLocked.length>40,'REGION-LOCKED category unexpectedly small: '+regionLocked.length);
+for(const o of regionLocked) assert.strictEqual(f(o,{view:'regional'}),o.taiwan!=='Yes'&&!closedSet.has(o.status),'REGION-LOCKED record must appear in 美國與地區限定 unless Taiwan qualifies or it is closed: '+o.id);
+const twRegionalTagged=d.offers.find(o=>o.taiwan==='Yes'&&(o.views||[]).includes('regional'));
+assert(twRegionalTagged,'dataset should hold a Taiwan-qualifying record tagged regional to guard against');
+assert(!f(twRegionalTagged,{view:'regional'}),'a Taiwan-qualifying record must not appear in 美國與地區限定: '+twRegionalTagged.id);
+assert(f(twRegionalTagged,{}),'it must stay findable without the view filter: '+twRegionalTagged.id);
+const regionGain=d.offers.find(o=>o.taiwan!=='Yes'&&!closedSet.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&!(o.views||[]).includes('regional'));
+assert(regionGain,'dataset should hold an open region-locked record without the manual regional tag to guard against');
+assert(f(regionGain,{view:'regional'}),'a region-locked record must not depend on a manual tag: '+regionGain.id);
+console.log('PASS: regional preset = REGION-LOCKED and Taiwan not eligible ('+d.offers.filter(o=>f(o,{view:'regional'})).length+' open records).');
 
 // 「台灣條件適用」是頁面上第一個捷徑按鈕，但它用的是 taiwan:'Yes' 這個一般篩選，不經 viewMatches，
 // 所以上面那段排除規則涵蓋不到它：2026-11-09 統計 106 筆 taiwan=Yes 中有 10 筆已截止／已關閉／重複合併，

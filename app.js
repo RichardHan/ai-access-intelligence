@@ -129,10 +129,16 @@ function viewMatches(o, view) {
   // 「高免費額度」與「Beta 存取」同樣有大範圍的人工 views 落差：2026-11-09 統計 view=quota 只標了
   // 63 筆，而 schema 的 HIGH-QUOTA 類別有 127 筆（其中 69 筆沒標）；view=beta 只標 15 筆，
   // BETA-ACCESS 有 50 筆（35 筆沒標）。兩者與下拉標籤一一對應，改讀 categories，不再看 views。
-  // regional／value 維持人工標記：REGION-LOCKED 只涵蓋對他國讀者的地區封鎖（台灣限定補助不算），
-  // VALUE-DEAL 與 LOW-COST／免費高值也非一對一，語意未定前不改。
+  // 「美國與地區限定」問的是「哪些方案依官方規則不含台灣」，同樣不能用人工 views 回答：2026-11-10
+  // 統計 view=regional 的 57 筆裡有 27 筆 taiwan=Yes（台北青年 AI 補助、新竹市補助、緯創算力捐贈、
+  // Google 學生方案、台智雲 TWAI…），選這個專區的讀者拿到的是與「台灣條件適用」重疊的清單，卡片
+  // 排序又把 S 級（台灣可用）排在最前面；反向也漏掉 10 筆真正受限、沒被人工標記的方案（日本限定
+  // beta、中國限定 voucher、歐洲／亞洲額度、美號碼專用方案）。改讀 schema 的 REGION-LOCKED 類別，
+  // 並排除台灣已符合資格者——台灣已可用的方案由「台灣條件適用」與其他專區涵蓋，不重複列在這裡。
+  // value 仍維持人工標記：VALUE-DEAL 與 LOW-COST／免費高值不是一對一，語意未定前不改。
   if (view === 'quota') return (o.categories || []).includes('HIGH-QUOTA');
   if (view === 'beta') return (o.categories || []).includes('BETA-ACCESS');
+  if (view === 'regional') return (o.categories || []).includes('REGION-LOCKED') && o.taiwan !== 'Yes';
   return (o.views || []).includes(view);
 }
 

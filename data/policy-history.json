@@ -27703,5 +27703,132 @@
     "date": "2026-11-10",
     "verified_at": "2026-11-10T04:26:01+08:00",
     "previous_limit": null
+  },
+  {
+    "record_id": "digitalocean-startups-core-gpu-policy",
+    "change_type": "status_change_official_announcement",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "campaign_current_availability_unverified（尚未取得官方暫停公告）",
+    "note": "官方 Startups 頁 FAQ 逐字：「Applications for our current cohort are temporarily paused as we prepare to launch an updated program experience in early 2027.」新申請暫停、現有成員權益維持、新方案排 2027 年初，狀態由「活動現況待核」改為 paused。同頁另確認 Core credits 自 2026-05-13 起排除 GPU Droplets／H100 GPU Kubernetes／Bare Metal GPU／Dedicated Inference／第三方託管模型／Paperspace／Cloudways，GPU credit 為另行審核的獨立福利；一般每帳戶每月上限 US$10,000、超額自付、不得轉讓、不給展延。2025-12-02 舊部落格仍寫「Up to $100,000 in compute credits」與「free GPU resources immediately」，與現行 FAQ 衝突，保留差異並以現行 FAQ 與 2026-05-11 條款為準。",
+    "sources": [
+      "https://www.digitalocean.com/startups",
+      "https://www.digitalocean.com/blog/hatch-accelerate-your-ai-ml-startup"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "scholarcy-free-summarizer-quota-conflict-watch",
+    "change_type": "official_conflict_new_statement",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "兩個官方說法（pricing 頁 10 summaries／同頁 FAQ 每日 1 篇）",
+    "note": "出現第三個官方說法：article-summarizer 工具頁寫「Limit of 3 summaries per day」「Summarize 3 articles a day」，而定價頁方案卡仍寫「Limit of 10 summaries」、同頁 FAQ 仍寫每日 1 篇並連到同一工具頁。三頁皆官方且皆無更新日期可判先後，10 次的週期（總量／每月／每次訂閱）也未寫，狀態改 conflicting_official_usage_claims；不擇一。",
+    "sources": [
+      "https://www.scholarcy.com/pricing",
+      "https://www.scholarcy.com/article-summarizer"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "nebius-europe-compute-grants-watch",
+    "change_type": "eligibility_clarification",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "taiwan=Unknown，僅知為 Europe 專案線索",
+    "note": "重讀 grants 頁與 /builders 頁：招募範圍逐字「independent developers, open-source builders, researchers, and small teams across Europe」，並標「$10M to back Europe's open and independent AI builders」。官方未給國別清單或金額，但台灣不在所列 Europe 範圍，taiwan 由 Unknown 改為 No（屬地區資格判斷，非法律結論）；狀態改 application_based。",
+    "sources": [
+      "https://dev.nebius.com/builders-compute-grants",
+      "https://dev.nebius.com/builders"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "pika-free-zero-monthly-credit-packs-watch",
+    "change_type": "usage_confirmed",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "每月 0 點（待核是否有新戶一次贈額）",
+    "note": "定價頁比較表明寫「Monthly credits｜0 · credit packs only」，方案卡「Try all models with credit packs」、$0；點數包 1,500/$25 起，僅限 pika.art 的 Create 與 MCP。頁面標示的「Free Pika H3 Flex generations every day」只屬 Creator 與 Fancy 付費方案，Free 不含商業授權。官方未找到新戶贈額或免費試用字樣，狀態改 active_verified；quota_classification 維持 UNKNOWN（沒有可計量的免費額度，不是 0 也不是無限）。",
+    "sources": [
+      "https://pika.art/pricing"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "arize-startup-six-month-ax-pro-taiwan-watch",
+    "change_type": "eligibility_clarification",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "needs_verification",
+    "note": "官方頁確認「6 months of Free AX Pro」仍存在，資格為「First-time Arize customers building an AI-native product who are Series A or earlier, or have raised less than $15M」，既有客戶不得申請；流程為免費 AX 帳號→填表→合格者取得 Pro promo code，官方稱 24 小時內回覆。頁面未列國別限制、亦未列台灣，taiwan 維持 Unknown，狀態改 application_based（申請審核制）。",
+    "sources": [
+      "https://arize.com/arize-for-startups/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "nchc-university-ai-compute-discount-2026",
+    "change_type": "failed_lookup_resolved",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "2026-10-31 追查失敗（PDF 逾時、公告與 Sales Kit 502），僅存舊證據",
+    "note": "2026-11-10 05:26 重讀申請書 PDF 成功：收件截止仍為 115/10/31（未見延期），費率 Nano 4 H200 NT$30/GPU 小時（原 60）、Forerunner 1 NT$0.1/核心小時（原 0.2），自實際開通起一年、餘額可展延一次最長一年，每單位 NT$300 萬、每校每年最多 5 單位，禁商業產品／虛擬貨幣／武器／網攻用途。狀態維持 applications_closed，並補上機器可讀的 deadline_at=2026-10-31。與舊說明 PDF 的 2026/7–2027/6 固定期間衝突仍未解。",
+    "sources": [
+      "https://www.nchc.org.tw/UploadImage/ActiveItem/639209109834443951.pdf"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "innopad-taipei-startup-ai-workshop-20261104-watch",
+    "change_type": "event_closed",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "monthly（每月重查一場已結束的單次活動）",
+    "note": "11/4 14:00–16:00 工作坊已結束；11/10 05:24 重讀官方頁仍列同一場次與 4F D03，站上最新消息已換為 11/05 產業獎勵補助公告，未見後續場次、延期或會後資料。依「已明確結束且無新申請途徑」原則改為 on_new_signal、next_review_at=null，退出每月輪替；費用仍未列，不能標示免費。",
+    "sources": [
+      "https://innopad.taipei/news/01a16711-9c28-7305-adaf-3a49dd28660c"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "taoyuan-ai-productivity-online-courses-115",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "桃園市政府就業職訓服務處新收錄：官方線上報名頁逐字「市府補助全程免費，每堂預計招收600名」，報名日期 115-08-28~115-11-17、線上 Teams 課程、執行單位巨匠電腦，頁面更新日 115-11-07；培訓對象「於桃園市轄內設籍、居住、工作者或替代役為優先」。非桃園者不保證錄取，各場次剩餘名額未公布。",
+    "sources": [
+      "https://oes.tycg.gov.tw/Active_Content.aspx?n=8476&ss=E89EBBB36FFEDC76",
+      "https://www.tiiai.org.tw/training/detail/45"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "freeinference-harvard-research-api",
+    "change_type": "new_opportunity",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "previous_limit": null,
+    "note": "哈佛 SEAS MadSys Lab 的 FreeInference 新收錄：官網「An OpenAI-compatible API … free for the research community」「No credit card required」「Generous quota for research and prototyping」，免費模型文件列 glm-5.3-flash／deepseek-v4-flash／minimax-m3（皆 1M context）、qwen3.6-35b 與 bge-m3。官方未公布額度數字；提示與回覆可能被記錄並以去識別化形式公開，禁止機密資料。台灣未列亦未排除，taiwan=Unknown。",
+    "sources": [
+      "https://freeinference.org/",
+      "https://doc.freeinference.org/models",
+      "https://freeinference.org/signup"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
+  },
+  {
+    "record_id": "regolo-ai-thirty-day-free-trial",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "Regolo（Seeweb）新收錄：定價頁「START YOUR 30-DAY FREE TRIAL」「No credit card required, no commitment」「1M tokens per day」「Stricter rate limits — Fair usage throttling applies」，可用全部 Core 模型；FAQ 稱期滿轉 Pay-as-you-go 且不自動扣款。每日 1M 為名目值，模型另有 0.5×–5× 乘數（glm5.2 為 5×）。條款把 Freemium 定義為新訂閱者一次性 30 天。台灣未列亦未排除，taiwan=Unknown。",
+    "sources": [
+      "https://regolo.ai/pricing/",
+      "https://regolo.ai/faq/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T05:45:00+08:00"
   }
 ]
