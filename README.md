@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **982 筆**（773 項機會、49 項政策、160 筆觀察線索），更新時間 **2026-11-10 06:38 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **959 筆**既有紀錄未完成本輪複核，整筆來源追查失敗 **2 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止狀態亦會擋下，三個期限欄位 `deadline_at`／`expires_at`／`expiry.date` 都納入）。
+資料集目前有 **986 筆**（777 項機會、49 項政策、160 筆觀察線索），更新時間 **2026-11-10 07:28 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **15 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **967 筆**既有紀錄未完成本輪複核，整筆來源追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
 
 ## 使用方式
 
@@ -33,10 +33,11 @@
 - 台灣可用度：Yes ＋3／No −3；省力：≤15 分鐘 ＋2／≤45 分鐘 ＋1。
 - 分層：S＝台灣資格標記 Yes；A＝≥19 分；B＝17–19 分；C＝14–17 分；D＝低於 14 分或已過期/截止。政策與待覆核紀錄不評級，優先度排序時列於最後。
 - 資料變更後重算：`python3 tools/prioritize.py`。
+- 每輪挑選複核對象：`python3 tools/queue.py`（`--limit`、`--json`、`--cooldown-hours`、`--self-test`）。順序是逾期 → 7 日內到期 → 輪替補位；輪替先比 `next_review_at` 再比 `verified_at`，所以佇列不會推薦一個排程在 20 天後的紀錄，卻跳過排程就在本週的紀錄。
 
 ## 維護
 
-保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例依最久未核順序按月輪替。
+保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例按月輪替——實際排入順序交給 `tools/queue.py`（先看排程、再看最久未核），不要每輪重寫一份臨時腳本。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
 
@@ -75,6 +76,37 @@
 來源失效與 SPA：`amazon-q-developer-free-signup-conflict` 是本輪最重要的更正——AWS 定價頁仍逐字寫「perpetual Free Tier」，個人入門文件也仍教 Builder ID 註冊，但 AWS 2026-04-30 的結束支援公告明列 2026-05-15 起封鎖新帳號與新訂閱、2027-04-30 結束 IDE 外掛與付費訂閱，而 Docs 的 `what-is` 頁已掛結束支援 banner：同一文件集三種說法。定價頁存在不是活動有效的證據；狀態必須以公告為準，官方頁衝突要留在摘要。公告只允許「active Q Developer Pro」加新使用者，Kiro 訂閱者僅被保證續用，純免費 Builder ID 使用者不在保留名單——把三者都寫成「可加席位」會讓既有付費者誤判。`baseten-startups-inference-training` 是一次反向教訓：行銷頁 `/startup-program` 以瀏覽器渲染回 404 並自 sitemap 移除，但申請頁 `/talk-to-us/startup-program` 仍在線並逐字寫「Up to $25,000 for Dedicated Deployments or Training and up to $2,500 for Model APIs」，條款頁也可讀；先前只憑行銷頁 404 就寫成「金額已無法確認」是錯的，現在改記 `application_based_unverified_terms`（金額可核、資格門檻只剩 2026-10-21 快照）。404 不等於終止，但也不等於仍可申請；SPA 站要分別檢查行銷頁與表單頁。`jetbrains-student-pack-ai` 與 `jetbrains-ai-free` 則是靜態抽取的陷阱：`read` 直接把 `help/ai-assistant/licensing-and-subscriptions` 轉成 markdown 時漏掉分頁表格，看起來像「3 AI credits 已被移除」；但以瀏覽器渲染同一頁（含 `/2026.2/` 路徑），授權表明確寫「AI Free ｜ Free ｜ 3 AI credits per 30-days」，FAQ 另寫額度與訂閱價格相符（1 credit 約 US$1）且每 30 天自首次使用重置。真正未解的是「是否每 30 天重置」——`help/ai/ai-service-license`（凍結於 2025-06-18）寫 one-time non-renewable，同頁 FAQ 又提 30 天重置，兩說並列。教訓：官方頁「找不到某段文字」不足以證明文字不存在，表格、分頁與 JS 內嵌內容要用瀏覽器渲染再判；引用時附頁面版本或頁尾日期。AI Pro 試用期滿會轉 AI Free（`jetbrains-ai-subscription`，2026-04-22），但「不自動扣款」不是官方原文，只寫 trial remains free。同類：`https://code.minimax.io/docs/code/account/usage` 與 `https://www.photoroom.com/api/pricing` 這類頁面會用 JS 內嵌資料，直接抓 HTML 再抽字串比整頁渲染快，但金額仍要回到頁面確認。
 
 關鍵字搜尋一度等於失效：`matches()` 原本是 `JSON.stringify(offer).includes(q)`，於是把 **JSON 鍵名**也變成可搜尋字串——2026-11-10 在 967 筆資料上實測，「sources」「status」「evidence」「scope」「null」「https」各命中 967 筆（整個資料庫），而只寫在來源 `evidence`／`scope` 的詞也被算成命中：日本限定的 `lawson-restricted-japan` 因為證據文字提到「免費」而進入「免費」搜尋結果，但卡片上沒有任何免費主張。現改由 `searchText()` 只串接紀錄自己主張、而且卡片與詳情真的看得到的欄位（標題、摘要、分類、地區、資格文字、缺口、費用說明、額度、期限欄位等），不比對來源、排程、優先度與其他內部欄位。實測「免費」802→746 筆、「api」442→391 筆、鍵名詞各降到 0.1–1.1%。`tests/filters.cjs` 以規格值斷言：鍵名與來源證據不得命中（合成物件）、排程時間戳不得命中、命中數必須落在「紀錄本身」與「含 sources 全紀錄」兩個界線之間，且必須存在「證據寫了、卡片沒寫」的反向案例。通則：全文搜尋要指定欄位，不能直接序列化整個物件——鍵名、內部欄位與證據文字都會變成假命中。
+
+2026-11-10 07:05–07:28 本輪（接續 cf40cdd 之後）：起始 982 筆；`next_review_at` 嚴格已到期 0 筆，7 日內到期的 6 筆全部在 12 小時冷卻內（今天凌晨 01:09–06:36 已核），因此佇列由「本輪佇列工具重排的輪替順序」＋「台灣期限與資格」＋「官方衝突與目錄變動」組成，全天已核 133 筆不重讀。局部複核 15 筆：台灣期限與資格 5 筆（桃園生成式AI線上視訊班、MODA ADI Forum、Claude 訂閱附贈 API 額度、教育部磨課師、Cool English）＋最久未核輪替 8 筆（2026-10-31 那批：OpenAI Agents API、Core Today、Cloudflare Workers AI、OpenRouter 免費層、Runpod 新創、Gladia Startup Studio、Tavily 新創、Claude 訂閱 API 額度）＋費用與條款 2 筆（BazaarLink、monday 非營利）。新增機會 4 筆、政策 0、觀察線索 0；整筆追查失敗 0；未完成複核 967 筆。
+
+會改變讀者決定的更正：
+
+- `runpod-startup`：**方案結構整組改寫**。現行頁改成三層——Starter（募資低於 US$1M）US$1,000、新增的 Venture（獲驗證 VC 投資且募資低於 US$5M，官方點名 a16z、Neo、South Park Commons）US$5,000、Growth Track 由「先承諾 US$50,000、贈 US$25,000、12 個月合約」改為「承諾 US$25K 加贈 US$10K／US$50K 加贈 US$25K」，現行頁已不再提 12 個月合約。官方 FAQ 另逐字新增「Existing customers aren't eligible for the free Starter or Venture credits」——舊紀錄寫「VC 支持優先而非絕對必須」，會讓既有客戶誤以為自己也能申請。credits 一律核發後 1 年到期。狀態由 `conditional` 改 `application_based`（人工審核、不需 Runpod 帳號即可投件）。
+- `claude-subscriber-api-credits`：**台灣由 Unknown 改 Yes**。Anthropic 的 Supported Regions Policy（頁面標示 Effective **Nov 12, 2026**）逐字列「Taiwan」，且該政策的適用範圍明寫涵蓋 apps、API 與開發者平台。另補兩個會影響判斷的條件：官方支援文章逐字「No payment method needed. You don't need to add a card on Claude Platform to claim or use the credit.」（贈額本身不需在 Console 加卡，但前提是已訂閱 Max／Ultra／Team），以及官方主動澄清「Is this the same as the Agent SDK credits announced in June? No. That credit isn't available.」——把 6 月那筆拿來推算可領額度會高估。
+- `bazaarlink-taiwan-free-model-gateway`：**「跨模型共池 vs 逐模型計算」衝突由官方文件裁決**。`docs.md` 2026-11-10 逐字「Your daily budget = the daily request budget above × your account tier multiplier, shared across all free models (one counter for all of them)」，並首次公布加權扣點分級（≤4K=1、4K–12K=12、12K–25K=24、25K–50K=40、50K–70K=60、70K–85K=90、>85K=120，只按輸入 token 分級）。免費模型由 5 款減為 4 款（Beam Free 已下架）。付費風險也更精確：超額後**預設**在餘額足夠時轉付費路由，要改回 429 必須送 `X-Free-Fallback: false` 或關閉付費 fallback。
+- `taiwan-moe-moocs-eighteen-free-ai-courses`：原紀錄寫「原推薦 18 門課程全部在列，選課期間與開課期間均標示為『無限期』」。本輪以課程清單 API（`api/v1/courses?feature=20`，`pagination.total=20`）逐門核對：19 門確為無限期，但「[資通安全]生成式AI對數位素養的挑戰」是 2026-04-16～2027-04-16，故「均為無限期」不成立並已改寫。這是把「看起來都一樣」的列表当成單一事實的典型錯誤；逐門欄位才是證據。
+- `gladia-startup-studio`：**「12 個月單一池」與「約每月 1,200 小時」的關係已由條款裁決**——2.2 寫「allocated as a single pool for the duration of the Programme Period」，2.3 的 1,200 小時是「standard configuration 下的近似容量」，方案頁也寫「No monthly caps」。原紀錄列為待釐清的 unknown 可以關閉。
+- `openrouter-free-threshold`：免費目錄已輪替。以 `api/v1/models` 實查（464 個模型中）僅 **13 個 `:free` 端點**，紀錄原本列出的 `baseten/mammoth-1:free`、`baseten/elephant-1:free` 已不在清單；定價頁仍寫「25+ free models」，形成行銷數字與實查目錄的新落差，已記為 unknown。
+- `taoyuan-ai-productivity-online-courses-115`：官方兩頁截止日不一致——課程頁「報名日期：115-08-28~115-11-17」、線上報名列表「公告日期：115-08-28~115-11-20」，官方未說明差異，保守以 11/17 計；另 11/12 與 11/17 場次的 Teams 連結尚未上架（頁面只有 1105 場次）。
+- `openai-agents-api-public-beta-no-harness-fee`：補上 container 計價粒度「1 GB $0.03, 4 GB $0.12, 16 GB $0.48, 64 GB $1.92 per 20-minute session per container」與「billed by the minute, with a 5-minute minimum per session」。仍無免費額度，`quota_classification` 維持 UNKNOWN。
+- `moda-adi-forum-2026-free`：補足原本列為未知的報名規則——線上場次同樣必須報名，且不可同時報名實體與線上場次、不可同時報名下午 A 與 B 場；上午場實體備餐盒、僅下午場實體午餐自理。11/12 如期，無取消或改期公告。
+- 其餘複核無實質變動（皆本輪重讀官方頁原文）：`amazon-ara-multilingual-contextual-ai-fall-2026`（索引頁 raw HTML 仍「Fall 2026: Open Now」＋「extended to November 11」，台北 11/12 15:59 不變；本輪未再改動時間戳，因 03:24 才核過）、`hsinchu-city-ai-youth-digital-tool-subsidy-2026`（剩餘經費仍 NT$253,197／4.4%，自 11/09 17:26 起 13.7 小時未變；02:19 才核過，不重複刷新）、`cloudflare-workers-ai-free`（每日 10,000 Neurons、00:00 UTC 重置、超額 Free 回錯誤）、`core-today-free-300`（每月 300 credits、免卡、不結轉；額度單位是點數不是 US$300）、`coolenglish-taiwan-free-ai-english-learning`（大專區 114 年 6 月上線、十大專區、雅思批改與口說模擬；平台 11/04 仍有新公告）、`monday-nonprofit-pro-ten-seats-ai-discount`（10 席 Pro、超出席次 70% off、AI credits 33% off；支援文章 updated 2026-09-17）、`google-flow-fifty-daily-credit-subscription-conflict-watch`（無訂閱每日 50 點、18 歲以上、尖峰約 14:00–17:00 UTC 可能無法生成影片）、`nchc-teaching-free-compute`（國內大專教師、台灣杉三號／創進一號、課程結束後一個月；新進研究人員仍「暫停申請」）。
+
+新機會（主 agent 逐字重讀官方頁後才寫入）：
+
+- `inferbase-free-five-thousand-requests`：LLM 閘道的**長期**免費層（官方逐字「A free plan, not a trial, and no card is required」），每月 5,000 次請求（任何模型、任何金鑰），受管推理每日 100 次、每日 US$0.50 用量、每分鐘 10 次，單次 8,192 輸入／1,024 輸出，只用輸出價 ≤US$2/1M 的模型；超出在呼叫模型前以 402 擋下。
+- `ovhcloud-ai-endpoints-anonymous-free-api`：**匿名層**——不需帳號或 API 金鑰即可呼叫 OVHcloud AI Endpoints，每 IP、每模型每分鐘 2 次（超額 429）；帶金鑰的 Public Cloud 專案為每專案每模型每分鐘 400 次。官方只公布速率、沒有每日總量。
+- `sentry-for-good-sponsored-nonprofit-oss`：非營利／開源贊助帳號含每月 5M errors 等額度與 **5 席 Seer active contributor seats**；但非營利路徑逐字要求 501(c)(3)，台灣登記的非營利組織無此身分，開源與教學路徑才可能適用——卡片已把這個門檻寫在前面。
+- `openrouter-dots3-note-preview-free-until-dec31`：Dots3-Note Preview 以 `:free` 提供、512K context，模型頁標「Going away December 31, 2026」，是**有明確結束日**的免費模型，`expires_at=2026-12-31`。
+- 未納入：`context.dev` 免費層（每月 1,000 credits）**已存在**（`context-free-monthly-thousand-shared`）；委派研究回報「grep 0 筆」是假陰性——`grep -i 'context-dev|context.dev'` 在 BSD grep 把 `|` 當字面值，必須用 `grep -E` 或分開查。這是本輪最重要的去重教訓：**去重指令本身會騙人**，主 agent 要用 ID 清單再確認一次。另排除 aifree.dev 列的 Alysis Code／SmarToken／NovAI 等（官方網域 DNS 或連線失敗，無官方頁可逐字驗證），以及 OpenTyphoon（已收錄、docs 站只回外殼）。
+
+品質改善（1 組：`tools/queue.py` 的輪替排序）。問題：輪替桶只按 `verified_at` 由舊到新排，完全不看 `next_review_at`，於是**佇列會跟卡片上「下次複核」的日期互相矛盾**。2026-11-10 實測：預設 20 筆全部是排程在 11/30 的 monthly 紀錄，而同一時間另有 20 筆可行動、非冷卻中的紀錄自己的 `next_review_at` 就在 11/14——兩份清單交集 **0 筆**。意思是研究者依證據設定的 daily／weekly／event 日期（例如「11/13 取消截止後再查」、「選後 11/14 到期」）永遠排在所有更舊的 monthly 之後，等於排程只是裝飾。改法：`rotation_key()` 先比 `next_review_at`、再比 `verified_at`、最後用 ID 固定；`--self-test` 新增兩筆合成紀錄斷言「較新核過但排程較近的 weekly 必須排在更舊卻排到 20 天後的 monthly 前面」。修正後同一份資料的佇列首位由 `evidently-ai-startups-expert-discount`（排程 11/30）變成 `did-mobile-fourteen-day-twelve-credit-trial-scope-watch`（排程 11/14）。這不是重新定義輪替的價值（最久未核仍是決勝條件），而是讓佇列不再無視它自己顯示給讀者的日期。
+
+驗證：`python3 tests/validate.py`（986 筆 PASS，含本輪批次斷言）、`node --check app.js`、`node tests/filters.cjs`（台灣條件適用 117／S 級 104 與總覽一致）、`python3 tools/queue.py --self-test`、`git diff --check`。瀏覽器另核對資料載入、本輪更新篩選、關鍵字與台灣資格快捷、排序與載入更多，以及本輪改動卡片（Runpod、Claude 訂閱額度、BazaarLink、磨課師）的費用、狀態與來源呈現。
+
+結構經驗：本輪三個 `task` subagent 都有 shell，但只有 `task` 能寫檔；三份交付都以最終訊息回結構化 JSON，主 agent 再逐筆重讀會改變讀者決定的頁面（Runpod、Gladia 條款、Claude 支援文章與 Anthropic 支援地區、OpenRouter pricing 與 models API、BazaarLink docs、磨課師 API、桃園課程頁與報名列表、MODA 報名表、monday Zendesk API、Cloudflare／Core／OpenAI 定價）。兩個新工具值得記下來：**monday 支援文章**用 `support.monday.com/api/v2/help_center/en-us/articles/<id>.json` 可繞過 403，並取得 `updated_at`；**磨課師**是 Angular SPA，`api/v1/courses?feature=20` 直接回 20 門課的 `sign_period`／`period`，比渲染頁面可靠。另外委派研究的 `accessed_at` 仍偏快（最早一筆寫 07:08、實際主 agent 對錶是 07:05 之後才開始），寫入一律用主 agent 自己讀到的時間。
+
+下輪優先（前五項）：① `taipei-youth-ai-subscription-subsidy-2026`：11/10 期限當日仍受理（04:20 核過），22:00 的每日排程一過期限就**必須**改 `applications_closed`、cadence 由 daily 改 `monthly_or_new_signal`（`tests/validate.py` 兩條斷言會擋），來源 `https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796` 與公告首頁；② `amazon-ara-multilingual-contextual-ai-fall-2026`：台北 11/12 15:59 過後改 `applications_closed`，並確認是否公布下一輪徵案（索引頁需讀 raw HTML）；③ `runpod-startup` 與 `claude-subscriber-api-credits`：新改为 Taiwan 條件式的兩筆要追台灣個案——Runpod 的台灣公司審核與付款、Claude 的 Team 席位與 Console 角色實務，來源 `https://www.runpod.io/startup-program`、`https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-ultra-and-team-plans`；④ `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：剩餘經費 4.4% 已 13.7 小時未變，追是否停止扣減或即將額滿（`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323` 無更新時間欄位，只能比對數值）；⑤ `openrouter-free-threshold`：查「25+ free models」與實查 13 個 `:free` 的落差是行銷文案還是目錄分批上架（`https://openrouter.ai/pricing`、`https://openrouter.ai/api/v1/models`）。
 
 2026-11-10 06:05–06:38 本輪（接續 b7b8b2f 之後）：起始 979 筆；`next_review_at` 嚴格已到期 0 筆，7 日內到期 6 筆（且全在今天凌晨五輪內核過），因此佇列由「7 日內到期但今天沒核過」＋「官方衝突」＋「最久未核（10/31 那批）」＋「上輪交接的五項」重排，全天已核 117 筆不再重讀。局部複核 20 筆：期限與台灣資格 7 筆（新北 UKO、台灣大哥大 Q4 課程、Mango Inference、fal FLUX 3 Max、River Inference、IteraCompute、Microsoft Foundry harness）＋官方衝突 3 筆（Base44、Make、Kimi）＋最久未核輪替 7 筆（Lamatic、Upstash、Bolt、n8n Cloud、Groq、Weaviate、Sentry、Modal 學術）＋兩筆追查（TAIONE 簡章、SME 計畫）。新增機會 2 筆、政策 0 筆、觀察線索 1 筆；既有未完成 959 筆；整筆追查失敗 2 筆（Coze、Stitch，皆 SPA 空殼，只記嘗試與原因、不刷新 `verified_at`，並把重試收在 14 天內）。未登入、未申請、未付款。
 

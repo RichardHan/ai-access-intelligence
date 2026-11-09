@@ -3,8 +3,13 @@
 為什麼需要這支工具：每輪的挑選規則都寫在當輪的臨時腳本裡，結果 2026-11-10 一天五輪之間
 `taipei-youth-ai-subscription-subsidy-2026` 與 `amazon-ara-multilingual-contextual-ai-fall-2026`
 各被複核 3 次（實際間隔 1–2 小時），同一時間卻有 621 筆可行動紀錄超過 24 小時沒被碰過、
-嚴格逾期 0 筆。把規則固定成「逾期 > 即將到期 > 最久未核，且 12 小時內已核者不再排入」，
+嚴格逾期 0 筆。把規則固定成「逾期 > 即將到期 > 輪替補位，且 12 小時內已核者不再排入」，
 下一輪就不必重新發明排序，也不會把預算花在一小時前才讀過的頁面。
+
+輪替補位的排序在 2026-11-10 修正：原本只按 `verified_at` 由舊到新，完全不看 `next_review_at`，
+於是預設 20 筆全是排程在 11/30 的 monthly 紀錄，而同時有 20 筆可行動、非冷卻中的紀錄自己的
+複核日就在 11/14——兩份清單交集 0 筆，等於把卡片上「下次複核」的日期當裝飾。現在先比
+`next_review_at`（排程較近者先），再用 `verified_at`（較久未核者先）決勝。
 
 用法：
   python3 tools/queue.py                 # 顯示基準數字與佇列（預設 20 筆）
@@ -78,6 +83,18 @@ def close_points(record):
     return points
 
 
+def rotation_key(row):
+    """輪替順序：先排程（next_review_at），再用最久未核決勝，最後用 ID 固定。
+
+    2026-11-10 實測：只按 verified_at 排序時，預設 20 筆全部是排程在 11/30 的 monthly 紀錄，
+    而同時有 20 筆可行動、非冷卻中的紀錄自己的 next_review_at 就在 11/14——兩份清單交集 0 筆。
+    卡片上的「下次複核」是研究者依證據設定的日期（daily／weekly／事件日），佇列若完全不看它，
+    就等於把排程當裝飾：每週該看的紀錄要等所有更舊的每月紀錄排完才會被讀到。
+    """
+    due = parse_stamp(row[1].get("next_review_at")) or datetime.datetime.max
+    return (due, parse_stamp(row[1].get("verified_at")) or datetime.datetime.min, row[1]["id"])
+
+
 def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WINDOW_DAYS,
                 cooldown_hours=DEFAULT_COOLDOWN_HOURS):
     """回傳 (baseline, queue)。queue 為 [(bucket, record_id, reason, due, oldest_close)]。"""
@@ -112,9 +129,8 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
 
     overdue.sort(key=lambda row: row[2])
     closing.sort(key=lambda row: row[3][2])
-    # 最久未核優先；相同時間再比下次複核，最後以 ID 固定順序（可重現）。
-    rotation.sort(key=lambda row: (parse_stamp(row[1].get("verified_at")) or datetime.datetime.min,
-                                   row[2] or datetime.datetime.max, row[1]["id"]))
+    # 先看排程再看新舊：next_review_at 是研究者依證據設定的複核日期，不該被「最久未核」蓋掉。
+    rotation.sort(key=rotation_key)
 
     queue = []
     for bucket, record, due, soonest in (overdue + closing + rotation)[:limit]:
@@ -123,7 +139,7 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
         elif bucket == "closing":
             reason = f"{soonest[0]} {soonest[1]} 將在 {window_days} 天內到期"
         else:
-            reason = "最久未核的可行動紀錄"
+            reason = f"排程 {str(due)[:16]} 最近的可行動紀錄（未到期，輪替補位）"
         oldest_close = soonest[1] if soonest else None
         queue.append((bucket, record["id"], reason, record.get("next_review_at"), oldest_close,
                       record.get("verified_at")))
@@ -166,17 +182,22 @@ def self_test():
         # 沒有 next_review_at 的 on_new_signal 仍可因截止點排入。
         {"id": "signal-closing", "status": "conditional", "next_review_at": None, "verified_at": iso(days=-2),
          "expiry": {"date": (now + datetime.timedelta(days=2)).strftime("%Y-%m-%d")}},
+        # 輪替必須先看排程再看新舊：較新核過但排程較近的 weekly，要排在更舊卻排到 20 天後的 monthly 前面。
+        {"id": "rotation-weekly-sooner", "status": "conditional", "next_review_at": iso(days=4), "verified_at": iso(days=-1)},
+        {"id": "rotation-monthly-older", "status": "conditional", "next_review_at": iso(days=20), "verified_at": iso(days=-10)},
     ]
     baseline, queue = build_queue(records, now=now, limit=20)
     ids = [row[1] for row in queue]
     assert "overdue-fresh" in ids, "逾期的紀錄必須排入"
     assert "closing-cooled" not in ids, "冷卻中的非緊急紀錄不得重排"
     assert "closing-urgent" in ids, "24 小時內到期者不受冷卻限制"
-    assert "rotation-old" in ids, "最久未核者必須排入"
+    assert "rotation-old" in ids, "未到期的可行動紀錄必須進輪替補位"
     assert "closed-overdue" not in ids, "已截止紀錄不得進佇列"
     assert "signal-closing" in ids, "on_new_signal 有截止點時仍要排入"
+    assert ids.index("rotation-weekly-sooner") < ids.index("rotation-monthly-older"), \
+        "輪替要先比 next_review_at：排程較近者優先，不能只看 verified_at"
     assert baseline["overdue"] == 1 and baseline["closing"] == 2, f"bucket 計數不符: {baseline}"
-    print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, closed excluded).")
+    print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, closed excluded, rotation ordered by next_review_at).")
 
 
 def main():

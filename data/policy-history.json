@@ -27920,5 +27920,119 @@
     ],
     "date": "2026-11-10",
     "verified_at": "2026-11-10T06:31:00+08:00"
+  },
+  {
+    "record_id": "bazaarlink-taiwan-free-model-gateway",
+    "change_type": "conflict_resolved",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "「跨免費模型共池 vs 逐模型計算」衝突由官方 docs 統一：2026-11-10 重讀「shared across all free models (one counter for all of them)」，並首次公布加權扣點分級（≤4K=1 至 >85K=120）。免費模型由 5 款減為 4 款（Beam Free 已下架）。超額後預設在餘額足夠時轉付費路由，要 429 須送 X-Free-Fallback: false。",
+    "sources": [
+      "https://bazaarlink.ai/docs.md",
+      "https://bazaarlink.ai/free"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:15:00+08:00"
+  },
+  {
+    "record_id": "taiwan-moe-moocs-eighteen-free-ai-courses",
+    "change_type": "correction",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "原紀錄寫「原推薦 18 門課程全部在列，選課期間與開課期間均標示為無限期」；2026-11-10 以課程清單 API 逐門核對，20 門中 19 門為無限期，1 門（[資通安全]生成式AI對數位素養的挑戰）為 2026-04-16～2027-04-16，故「均為無限期」不成立並已改寫。",
+    "sources": [
+      "https://moocs.moe.edu.tw/api/v1/courses?size=40&offset=0&orderby=begin_date&sort=desc&majored=false&feature=20"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:17:00+08:00"
+  },
+  {
+    "record_id": "runpod-startup",
+    "change_type": "program_structure_change",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "方案改為三層並改寫金額：Starter（募資 <US$1M）US$1,000、新增 Venture（驗證 VC、募資 <US$5M）US$5,000、Growth Track 由「承諾 US$50,000 贈 US$25,000＋12 個月合約」改為承諾 US$25K 加贈 US$10K／US$50K 加贈 US$25K，現行頁未再提 12 個月合約。官方 FAQ 新增「Existing customers aren't eligible for the free Starter or Venture credits」，credits 一律核發後 1 年到期。",
+    "sources": [
+      "https://www.runpod.io/startup-program"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:17:00+08:00"
+  },
+  {
+    "record_id": "gladia-startup-studio",
+    "change_type": "conflict_resolved",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "「12 個月單一額度池」與「約每月 1,200 小時」的關係由條款裁決：2.2 為單一 pool，2.3 的 1,200 小時是「standard configuration 下的近似容量」，不是每月重新發放；方案頁亦寫 No monthly caps。",
+    "sources": [
+      "https://www.gladia.io/start-up-studio-terms",
+      "https://www.gladia.io/start-up-studio"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:17:00+08:00"
+  },
+  {
+    "record_id": "claude-subscriber-api-credits",
+    "change_type": "taiwan_eligibility",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "台灣由 Unknown 改 Yes：Anthropic Supported Regions Policy（生效 2026-11-12）逐字列 Taiwan 且涵蓋 API 與開發者平台。另新增兩個會影響讀者的條件——領取與使用贈額「No payment method needed」（不必在 Claude Platform 加卡），以及官方澄清與 2026 年 6 月宣布的 Agent SDK credits 不是同一筆（「That credit isn't available.」）。",
+    "sources": [
+      "https://www.anthropic.com/supported-countries",
+      "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-ultra-and-team-plans"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:17:00+08:00"
+  },
+  {
+    "record_id": "openrouter-free-threshold",
+    "change_type": "catalog_rotation",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "免費模型目錄已輪替：2026-11-10 以 api/v1/models 實查僅 13 個 `:free` 端點，紀錄原本列出的 baseten/mammoth-1:free 與 baseten/elephant-1:free 已不在清單；定價頁仍寫「25+ free models」，形成行銷數字與實查目錄的新落差。",
+    "sources": [
+      "https://openrouter.ai/api/v1/models",
+      "https://openrouter.ai/pricing.md"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:18:00+08:00"
+  },
+  {
+    "record_id": "moda-adi-forum-2026-free",
+    "change_type": "eligibility_clarification",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "補足原本列為未知的報名規則：線上場次同樣必須報名，且不可同時報名實體與線上場次、不可同時報名下午 A 與 B 場；上午場實體備餐盒、僅下午場實體午餐自理。活動 11/12 如期，無取消或改期公告。",
+    "sources": [
+      "https://mic.iii.org.tw/ADI_26/Apy.aspx",
+      "https://moda.gov.tw/ADI/news/events/772"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:19:00+08:00"
+  },
+  {
+    "record_id": "taoyuan-ai-productivity-online-courses-115",
+    "change_type": "official_inconsistency",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "官方兩頁截止日不一致：課程頁寫「報名日期：115-08-28~115-11-17」，線上報名列表寫「公告日期：115-08-28~115-11-20」，官方未說明差異；保守以 11/17 計。另 11/12 與 11/17 場次的會議連結尚未上架（頁面僅有 1105 場次）。",
+    "sources": [
+      "https://oes.tycg.gov.tw/Active_Content.aspx?n=8476&ss=E89EBBB36FFEDC76",
+      "https://oes.tycg.gov.tw/ActiveList.aspx?n=8476&sms=12505"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:19:00+08:00"
+  },
+  {
+    "record_id": "openai-agents-api-public-beta-no-harness-fee",
+    "change_type": "pricing_detail",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "補上 container 計價粒度：每 container 每 20 分鐘 session 計價（1GB $0.03／4GB $0.12／16GB $0.48／64GB $1.92），且「billed by the minute, with a 5-minute minimum per session」。仍無免費額度，quota_classification 維持 UNKNOWN。",
+    "sources": [
+      "https://developers.openai.com/api/docs/pricing.md"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T07:19:00+08:00"
   }
 ]
