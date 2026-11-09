@@ -368,7 +368,7 @@ function createCard(offer) {
   const tags = text('div', '', 'card-tags');
   // 已截止、已關閉與重複合併的卡片不得再以「免費機會」「高額度」這類可領取標籤開場：
   // 2026-11-09 Amazon Q Developer 於 2026-05-15 停止新註冊後，卡片仍以「免費機會」標籤排在標題下，
-  // 讀者要讀完整段摘要才會發現不能申請（當時全庫 75 筆已截止／已關閉／重複合併紀錄中，72 筆帶分類標籤）。
+  // 讀者要讀完整段摘要才會發現不能申請（當時全庫 76 筆已截止／已關閉／重複合併紀錄中，47 筆帶「免費機會」「高額度」「Beta 存取」等可領取標籤）。
   // 資料欄位不改：categories 仍是歷史事實，只在卡片上改成單一歷史標籤並列原分類。
   if (CLOSED_STATUSES.has(offer.status)) {
     const original = (offer.categories || []).map(category => CATEGORY_LABELS[category] || category).join('、');
