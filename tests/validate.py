@@ -108,6 +108,18 @@ for rid in reviewed+new:
 # 「下次複核：每日／每週…」. Scheduling a 30-day review on a `daily` record hides it from the
 # rotation queue while the card still claims daily tracking, so cap the gap per cadence.
 MAX_CADENCE_GAP={'daily':3,'weekly':10,'biweekly':20}
+# 精確期限只存在三個欄位（README「截止與期限」段就是這樣寫的：deadline_at、expires_at、expiry），
+# 但下面兩條規則先前只讀前兩個。2026-11-10 統計有 7 筆用 expiry.date 記錄期限，其中
+# chatgpt-teachers-us（2028-06）與 claude-teachers-us（2027-06-30）仍是可行動狀態：一旦
+# expiry.date 過去而狀態沒改，卡片會照樣宣稱可領取／報名，兩條規則都攔不到。expiry.date
+# 只解析完整日期；像 2028-06 這種只到月份的寫法不解析（不猜月末日），expiry.text 是散文也不解析。
+def close_points(record):
+ points = [('deadline_at', record.get('deadline_at'), close_stamp(record.get('deadline_at'))),
+           ('expires_at', record.get('expires_at'), close_stamp(record.get('expires_at')))]
+ expiry = record.get('expiry')
+ if isinstance(expiry, dict) and isinstance(expiry.get('date'), str):
+  points.append(('expiry.date', expiry['date'], close_stamp(expiry['date'])))
+ return [point for point in points if point[2] is not None]
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'
@@ -121,18 +133,16 @@ for o in d['offers']:
  # 整個免費期沒有任何複核，若官方提前結束或展延，網站要到活動結束後才更新。
  if o.get('status') not in dead and o.get('next_review_at'):
   scheduled=latest_stamp(o['next_review_at'])
-  for field in ('deadline_at','expires_at'):
-   closes=close_stamp(o.get(field))
-   if closes and closes>NOW and scheduled and scheduled>closes:
-    raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {o[field]} in {o["id"]}: schedule the review while the offer is still actionable')
+  for field,raw,closes in close_points(o):
+   if closes>NOW and scheduled and scheduled>closes:
+    raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {raw} in {o["id"]}: schedule the review while the offer is still actionable')
  # 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
  # 2026-11-09 就是這樣：報名表已回「活動已結束」、活動頁改列 11/08 23:59，但紀錄沒有
  # deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
  # 只要期限寫進機器可讀欄位，這裡就擋得住；散文日期仍要靠人工，README 維護章節寫明要回填。
- for field in ('deadline_at','expires_at'):
-  closes=close_stamp(o.get(field))
-  if o.get('status') not in dead and closes and closes<NOW:
-   raise AssertionError(f'{field} {o[field]} has passed but status is {o.get("status")!r} in {o["id"]}: mark the offer closed or record the new end date')
+ for field,raw,closes in close_points(o):
+  if o.get('status') not in dead and closes<NOW:
+   raise AssertionError(f'{field} {raw} has passed but status is {o.get("status")!r} in {o["id"]}: mark the offer closed or record the new end date')
  # 推定時刻不得寫進機器可讀欄位。卡片對帶時刻的值一律渲染成「（台北時間）」加分鐘，
  # 讀者看到的是官方給的截止時鐘；台北青年 AI 補助原始條文只寫「最遲應於11月10日前提出申請」
  # 「以送達本局之日為準」，23:59 是當日邊界推定，寫成 timestamp 後卡片就變成
