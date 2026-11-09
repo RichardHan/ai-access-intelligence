@@ -129,6 +129,8 @@ img, svg { max-width: 100%; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-bottom: 18px; min-height: 18px; }
 .tag { color: #7c806b; font-size: 9px; font-weight: 550; line-height: 1.6; letter-spacing: .02em; }
 .tag::before { content: ""; display: inline-block; width: 3px; height: 3px; margin-right: 5px; margin-bottom: 2px; background: #a6ae98; }
+.tag-closed { color: #9a674f; }
+.tag-closed::before { background: #b08c75; }
 .card-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; padding: 16px 0; margin: auto 0 0; border-top: 1px solid #e9eae2; border-bottom: 1px solid #e9eae2; }
 .fact { min-width: 0; }
 .fact dt { color: #7c867b; font-size: 10px; margin-bottom: 4px; font-weight: 400; }

@@ -26513,5 +26513,148 @@
       "https://docs.brightdata.com/general/privacy/restricted-jurisdictions",
       "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier"
     ]
+  },
+  {
+    "record_id": "amazon-q-developer-free-signup-conflict",
+    "change_type": "official_announcement_supersedes_record",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T12:20:00+08:00",
+    "previous_limit": "active（主張新用戶仍可註冊）",
+    "current_classification": "UNKNOWN",
+    "note": "AWS 2026-04-30 公告：2026-05-15 起封鎖 Free Tier 新帳號（IDE Builder ID）與新訂閱（Console），IDE 外掛與付費訂閱 2027-04-30 結束支援，外掛仍上架但掛棄用通知指向 Kiro；既有 Q Developer Pro 可續用並可加新使用者，Kiro 訂閱只被保證續用、公告未寫可加席位，純免費 Builder ID 使用者未被列入保留名單。定價頁仍寫 perpetual Free Tier、入門文件仍教 Builder ID 註冊，但 Docs what-is 頁已掛結束支援 banner。原紀錄「新用戶可免卡註冊、舊終止說法不成立」已更正為 closed_to_new_subscriptions。",
+    "sources": [
+      "https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/",
+      "https://aws.amazon.com/q/developer/pricing/",
+      "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"
+    ]
+  },
+  {
+    "record_id": "pinecone-starter-free",
+    "change_type": "quota_change",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": "embedding 5,000,000 tokens/月/模型",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Starter 每模型 embedding 額度自 2026-11-04 至 12-31 暫為 10,000,000 tokens/月（Builder 20,000,000），2027-01-01 回復表列 5,000,000；Builder 改為 US$20/月固定費且超量硬停。文件列 pinecone-rerank-v0 500 次/月、定價頁仍標不可用，兩份官方頁不一致。",
+    "sources": [
+      "https://docs.pinecone.io/reference/api/database-limits/rate-limits",
+      "https://www.pinecone.io/pricing/"
+    ]
+  },
+  {
+    "record_id": "jetbrains-student-pack-ai",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T12:35:00+08:00",
+    "previous_limit": "AI Free 每 30 天 3 credits",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "AI Free 額度查核更正：本批次一度記為「3 credits 已從 licensing 頁移除」，但以瀏覽器渲染 licensing-and-subscriptions（預設與 /2026.2/ 路徑）確認授權表仍有「AI Free ｜ Free ｜ 3 AI credits per 30-days」（同表另有 AI Pro、AI Ultimate 的價格與額度）；靜態 HTML→文字轉換會漏掉這個分頁表格，不能據此判定數字消失。FAQ 另寫 quota 為每月以 AI credits 計的資源、額度與訂閱價格相符（1 credit 約 US$1）。真正未解的是「是否每 30 天重置」：licensing 頁寫每 30 天自首次使用重置，ai-service-license（2025-06-18）寫 one-time non-renewable 且自身 FAQ 又提 30 天重置，兩說並列，狀態 terms_conflict。試用期滿轉 AI Free 的語句在 jetbrains-ai-subscription（2026-04-22），官方沒有「不自動扣款」字樣。",
+    "sources": [
+      "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "https://www.jetbrains.com/help/ai/ai-service-license.html",
+      "https://www.jetbrains.com/help/ai-assistant/jetbrains-ai-subscription.html"
+    ]
+  },
+  {
+    "record_id": "baseten-startups-inference-training",
+    "change_type": "marketing_page_removed_application_page_live",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T12:17:00+08:00",
+    "previous_limit": "計畫頁 /startup-program 可讀，載明 US$25,000／US$2,500 與 Seed–Series A 資格",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "行銷頁 /startup-program 2026-11-09 回 404 並自 sitemap 移除；但申請頁 /talk-to-us/startup-program 仍在線並寫「Up to $25,000 for Dedicated Deployments or Training and up to $2,500 for Model APIs」，金額仍可確認。Seed 至 Series A、成立未滿 5 年、未曾獲 credits 三項只剩 2026-10-21 快照有文字，現行頁僅以表單欄位間接詢問。未見官方終止公告；狀態記 application_based_unverified_terms。（先前把 SPA 外殼誤判為整頁不可讀，已改以瀏覽器渲染複核。）",
+    "sources": [
+      "https://www.baseten.co/talk-to-us/startup-program/",
+      "https://www.baseten.co/startup-program-legal-disclaimers/",
+      "https://web.archive.org/web/20261021173114/https://www.baseten.co/startup-program/"
+    ]
+  },
+  {
+    "record_id": "akamai-cloud-rise-startup-credits",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Akamai Cloud Rise：首年 US$500–120,000 credits、三年計畫（第 2–3 年折扣）、成立未滿 7 年、新客限定、需公司網域與信用卡、審核 1–2 週。本輪以 2026-10-09 官方頁 Wayback 快照讀取（live 403）。",
+    "sources": [
+      "https://www.akamai.com/cloud/start-ups/rise",
+      "https://web.archive.org/web/20261009101854id_/https://www.akamai.com/cloud/start-ups/rise"
+    ]
+  },
+  {
+    "record_id": "greenaibox-startup-gpu-credits",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "GREENAIBOX 新創：pre-seed／seed 最高 US$25,000、Series A 最高 US$100,000 GPU credits，12 個月有效；成立未滿 5 年、募資 <US$25M、AI-first；無最低消費與無股權。",
+    "sources": [
+      "https://www.greenaibox.com/solutions/startups"
+    ]
+  },
+  {
+    "record_id": "fin-startup-pack-free-year-ai-credits",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Fin／Intercom Startup Pack：Fin AI Agent 首年 100% 免費、次年 50%、第三年 25%，US$6,500 Fin AI credits，未滿 50 人；夥伴 bundle 宣稱 US$500,000+ 需個別審核。",
+    "sources": [
+      "https://fin.ai/startup-pack"
+    ]
+  },
+  {
+    "record_id": "minimax-code-daily-checkin-points",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "MiniMax Code 簽到：每日 400 點、第 4／7 天各 1,000 點、整週 4,000 點，點數自入帳起 30 天有效；官方未公布點數換算率與台灣可用性。",
+    "sources": [
+      "https://code.minimax.io/docs/code/account/usage",
+      "https://www.minimax.io/terms-of-service-v2.html"
+    ]
+  },
+  {
+    "record_id": "runable-for-startups-five-thousand-credits",
+    "change_type": "new_opportunity",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T11:38:32+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Runable for Startups：核准後 US$5,000 credits、當週入帳、人工審核；資格門檻、效期與是否需付費工作區未公布，與免費日額度（1,500/日、15,000/月上限）分開。",
+    "sources": [
+      "https://runable.com/programs/for-startups"
+    ]
+  },
+  {
+    "record_id": "jetbrains-ai-free",
+    "change_type": "evidence_correction",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T12:35:00+08:00",
+    "previous_limit": "AI Free 每 30 天 3 credits（本批次一度誤記為已移除）",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "AI Free 額度查核更正：本批次一度記為「3 credits 已從 licensing 頁移除」，但以瀏覽器渲染 licensing-and-subscriptions（預設與 /2026.2/ 路徑）確認授權表仍有「AI Free ｜ Free ｜ 3 AI credits per 30-days」，同表另有 AI Pro、AI Ultimate 的價格與額度；靜態 HTML→文字轉換會漏掉這個分頁表格，不能據此判定數字消失。FAQ 另寫 quota 為每月以 AI credits 計的資源、額度與訂閱價格相符（1 credit 約 US$1）並自首次使用起每 30 天重置。真正未解的是「是否每 30 天重置」：ai-service-license（2025-06-18）寫 one-time non-renewable 且自身 FAQ 又提 30 天重置，兩說並列，狀態 terms_conflict；配額分類維持 HIGH BUT LIMITED。",
+    "sources": [
+      "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "https://www.jetbrains.com/help/ai/ai-service-license.html"
+    ]
+  },
+  {
+    "record_id": "datacamp-free-access-week-november-2026",
+    "change_type": "campaign_ended",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T13:01:00+08:00",
+    "previous_limit": "Free Week 至美東 2026-11-08 23:59（台北 2026-11-09 12:59），Classic 課程庫與認證免費",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "免費週依條款於台北 12:59 結束；13:00 重讀 campaign 頁仍在線、仍寫「until November 8」並保留註冊表單，但沒有延長或新一期公告。條款明寫期間結束後不再提供 Premium Features，故狀態改 expired、複核改 monthly_or_new_signal（12/09）。頁面存在不是延長證據。",
+    "sources": [
+      "https://www.datacamp.com/campaign/free-access-week-november-2026",
+      "https://www.datacamp.com/terms-of-use"
+    ]
   }
 ]

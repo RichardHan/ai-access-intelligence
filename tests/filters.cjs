@@ -355,3 +355,26 @@ assert(sTier<presetTW.length,'fixture must hold non-S open taiwan records so the
 assert(twMetric[2].includes('S 級機會 '+sTier+' 筆'),'metric note must expose the S-tier split: '+twMetric[2]);
 assert.strictEqual(metrics.find(m=>m[1]==='福利研究')[0],d.offers.filter(o=>o.record_type==='opportunity').length);
 console.log('PASS: overview metrics agree with the presets they share a label with (台灣條件適用 '+twMetric[0]+', S 級 '+sTier+').');
+
+// 已截止的卡片仍把「免費機會」「高額度」放在標題下，讀者要讀完整段摘要才知道不能申請
+// （2026-11-09：Amazon Q Developer 於 2026-05-15 停止新註冊後仍以「免費機會」開場；
+// 全庫 75 筆已截止／已關閉／重複合併紀錄中 72 筆帶分類標籤）。已截止卡片改為單一歷史標籤並列原分類；
+// categories 資料不改，避免用前端掩蓋歷史事實。以下為規格值斷言。
+Element.prototype.setAttribute=function(key,value){this[key]=value;};
+const closedCard=ctx.createCard(d.offers.find(o=>o.id==='chatgpt-back-to-school-us'));
+const closedTags=closedCard.children.find(n=>n.className==='card-tags');
+assert.strictEqual(closedTags.children.length,1,'closed card must show exactly one tag');
+assert(closedTags.children[0].className.includes('tag-closed'),'closed tag must carry the closed style');
+assert(closedTags.children[0].textContent.includes('優惠已到期'),'closed tag must name the status');
+assert(closedTags.children[0].textContent.includes('原分類'),'closed tag must keep the historical categories');
+assert(!closedTags.children[0].textContent.startsWith('免費機會'),'closed card must not open with a claimable tag');
+const openCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
+const openTags=openCard.children.find(n=>n.className==='card-tags');
+assert.strictEqual(openTags.children.length,1,'open card keeps its category tags');
+assert.strictEqual(openTags.children[0].textContent,'免費機會','open card must keep the positive category tag');
+assert(!openTags.children[0].className.includes('tag-closed'),'open card must not be styled as closed');
+const qCard=ctx.createCard(d.offers.find(o=>o.id==='amazon-q-developer-free-signup-conflict'));
+const qTags=qCard.children.find(n=>n.className==='card-tags');
+assert.strictEqual(qTags.children.length,1,'closed-to-new-subscriptions card must show one historical tag');
+assert(qTags.children[0].textContent.includes('已停止新訂閱'),'closed-to-new-subscriptions card must name the status');
+console.log('PASS: closed cards show a single historical tag instead of claimable category chips.');
