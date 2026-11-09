@@ -199,6 +199,10 @@ function statusInfo(offer) {
   if (CLOSED_STATUSES.has(status)) tone = 'closed';
   else if (status === 'active' || status === 'active_verified') tone = 'active';
   else if (status === 'conditional' || status === 'application_based' || status === 'legacy_closed_new_path_conditional') tone = 'conditional';
+  // 沒有 status 的舊紀錄：藥丸寫「狀態待釐清」，同一張卡的「優先度依據」卻寫「狀態未記錄」
+  // （tools/prioritize.py 的 note_of()），同一份資料兩種說法；「待釐清」還暗示已排入追查，
+  // 但這些紀錄不一定有排程。缺值一律寫「狀態未記錄」，未知的字串值才留「狀態待釐清」。
+  if (!status) return { label: '狀態未記錄', tone: 'uncertain' };
   return { label: STATUS_LABELS[status] || '狀態待釐清', tone };
 }
 

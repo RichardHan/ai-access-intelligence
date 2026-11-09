@@ -397,3 +397,13 @@ assert(lindyNote.textContent.includes('US$29.99')&&lindyNote.textContent.include
 const zeroCostCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
 assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明')),'zero-fee cards must not show a monthly-fee explanation');
 console.log('PASS: FREE-tagged records with a known monthly fee explain the fee on the card face.');
+// 缺 status 的紀錄：藥丸與「優先度依據」必須說同一件事（prioritize 寫「狀態未記錄」）。
+// 舊版 fallback 是「狀態待釐清」，同一張卡因此同時主張「待釐清」與「狀態未記錄」，
+// 且「待釐清」暗示已排入追查，但缺 status 的紀錄未必有排程（2026-11-09 仍有 13 筆）。
+assert.strictEqual(ctx.statusInfo({}).label, '狀態未記錄');
+assert.strictEqual(ctx.statusInfo({status:null}).label, '狀態未記錄');
+assert.strictEqual(ctx.statusInfo({}).tone, 'uncertain');
+assert.strictEqual(ctx.statusInfo({status:'unknown_future_value'}).label, '狀態待釐清');
+const statusless=d.offers.filter(o=>!o.status&&o.record_type==='opportunity');
+for(const o of statusless) assert.strictEqual(ctx.statusInfo(o).label,'狀態未記錄',`statusless opportunity must not claim a pending review: ${o.id}`);
+console.log(`PASS: missing status renders 「狀態未記錄」 (${statusless.length} opportunities), unknown string still 「狀態待釐清」.`);

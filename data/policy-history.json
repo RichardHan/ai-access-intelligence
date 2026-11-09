@@ -27220,5 +27220,46 @@
       "https://fal.ai/docs/documentation/model-apis/sandbox.md",
       "https://fal.ai/sandbox"
     ]
+  },
+  {
+    "record_id": "zai-free-flash-api-models",
+    "change_type": "eligibility_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T18:19:11+08:00",
+    "previous_limit": null,
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "台灣由 Unknown 改判 Yes：2026-04-14 版 ToU 的禁用地區負面表列只有伊朗、北韓、古巴、克里米亞、頓內茨克、扎波羅熱，未列台灣；這是官方條款層級的依據，不是「網站在台灣打得開」。同時確認免費模型只有 GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash（四欄全 Free、無截止日），名稱含 Flash 的 GLM-5.3-Flash／FlashX、GLM-4.7-FlashX、GLM-4.6V-FlashX 都要付費；官方未公布任何 TPM／RPM 或每日上限，FAQ 只指向登入後 console。status 由 conditional 改為 active_verified。",
+    "sources": [
+      "https://docs.z.ai/guides/overview/pricing",
+      "https://docs.z.ai/legal-agreement/terms-of-use",
+      "https://docs.z.ai/help/faq"
+    ]
+  },
+  {
+    "record_id": "byteplus-modelark-free-inference-500k",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T18:21:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "新基準：BytePlus ModelArk 對新用戶提供每模型 500k tokens 免費推論額度，依模型分開計算、主帳號共用；只抵線上推論 token，不含插件、知識庫、Batch inference 與 context cache 儲存；須自行切到 Free Tokens Only 模式才會在接近額度時暫停而非直接計費。台灣在官方 International Availability（2026-04-21）清單內，但排除 Restricted Models，且實際可用性「shall be determined at the point of purchase」。",
+    "sources": [
+      "https://docs.byteplus.com/en/docs/modelark/free-inference-quota",
+      "https://docs.byteplus.com/en/docs/modelark/availability"
+    ]
+  },
+  {
+    "record_id": "lg-exaone-25-api-free-noncommercial",
+    "change_type": "terms_clarification",
+    "date": "2026-11-09",
+    "verified_at": "2026-11-09T18:21:00+08:00",
+    "previous_limit": null,
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "新紀錄即帶官方自我矛盾：LG AI Research 2026-11-09 新聞稿寫 developers、startups、enterprises 可用 K-EXAONE 2.5 API 做「service development」，但同日生效的平台 ToS §2.1 只授權 non-commercial，並明文禁止把 API 整合進自家產品或讓第三方呼叫。兩說並列、狀態記 conflicting_official_usage_claims，商用授權待 LG 書面確認。另記 API key 30 天失效、90 天未登入休眠、輸入輸出預設可用於訓練、19 歲以上。",
+    "sources": [
+      "https://www.lgresearch.ai/news/view?seq=755",
+      "https://docs.exaone.ai/en/terms/terms-of-service",
+      "https://docs.exaone.ai/en/docs/changelog"
+    ]
   }
 ]
