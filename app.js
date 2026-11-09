@@ -168,8 +168,37 @@ function regionMatches(o, region) {
   return values.includes(wanted);
 }
 
+// 關鍵字搜尋只比對「紀錄自己主張的內容」，不比對 JSON 鍵名、來源 scope／evidence、排程與內部欄位。
+// 舊版是 JSON.stringify(offer).includes(q)，於是鍵名本身變成可搜尋字串：2026-11-10 的 967 筆資料中，
+// 「sources」「status」「evidence」「scope」「null」「https」各命中 967 筆（等於整個資料庫），輸入框等於失效。
+// 只出現在來源證據裡的詞也被算成命中：日本限定的 lawson-restricted-japan 因為證據文字寫到「免費」，
+// 會出現在「免費」搜尋結果，但卡片上沒有任何免費主張。下列欄位是卡片與詳情真正顯示的內容。
+const SEARCH_FIELDS = [
+  'id', 'title', 'summary', 'categories', 'regions', 'eligibility', 'unknowns',
+  'setup_cost_basis', 'cost_note', 'recurring_cost_original', 'quota_details', 'quota',
+  'quota_classification_note', 'usable_duration', 'cancellation', 'access_risk',
+  'plan_variants', 'regional_variants', 'offer_validity', 'terms_compliance', 'tos_status',
+  'legal_and_terms_note', 'deadline_at', 'expires_at', 'expiry', 'duplicate_of'
+];
+
+function searchText(offer) {
+  const parts = [];
+  for (const field of SEARCH_FIELDS) {
+    const value = offer[field];
+    if (value === null || value === undefined || value === '') continue;
+    if (Array.isArray(value)) {
+      parts.push(value.map(item => (item && typeof item === 'object' ? Object.values(item).join(' ') : item)).join(' '));
+    } else if (typeof value === 'object') {
+      parts.push(Object.values(value).join(' '));
+    } else {
+      parts.push(String(value));
+    }
+  }
+  return parts.join(' ').toLowerCase();
+}
+
 function matches(o, f = {}) {
-  return (!f.q || JSON.stringify(o).toLowerCase().includes(String(f.q).trim().toLowerCase()))
+  return (!f.q || searchText(o).includes(String(f.q).trim().toLowerCase()))
     && (!f.type || o.record_type === f.type)
     && (!f.cost || typeof o.setup_cost_usd === 'number' && o.setup_cost_usd <= Number(f.cost))
     // 邊界含等於：選「15 分鐘」必須包含正好需 15 分鐘的紀錄（109 筆），否則最省力的方案會被濾掉。

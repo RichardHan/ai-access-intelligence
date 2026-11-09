@@ -27261,5 +27261,143 @@
       "https://docs.exaone.ai/en/terms/terms-of-service",
       "https://docs.exaone.ai/en/docs/changelog"
     ]
+  },
+  {
+    "change_type": "eligibility_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:14:30+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "台灣判定由 Unknown 改為 Yes：官方程式頁逐字寫「Anyone currently enrolled in higher education — undergraduate, master's or PhD — anywhere in the world」，且明示不需 .edu 信箱，屬正面全球資格陳述；個案仍須人工審核，部分學校郵域註冊時被封鎖、需來信開通（未實測）。額度為一次性 US$200 平台點數、入帳後 12 個月有效、免卡免訂閱。",
+    "sources": [
+      "https://wiro.ai/students"
+    ],
+    "record_id": "wiro-student-200-credit"
+  },
+  {
+    "change_type": "status_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:08:50+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "首次寫入受管狀態 limited_availability（原本缺 status）：官方說明中心逐字「Muse is available for free with a usage limit」、「Muse and Muse subscriptions are in limited testing and aren't available in all locations yet」，並要求位於有提供服務的國家；免費數字額度仍未公布。付費 Power US$20／月（500M tokens／週）、Maximum US$100／月（3B tokens／週），按月自動續費。台灣是否在支援範圍未知。",
+    "sources": [
+      "https://www.meta.com/help/subscriptions/1021145227643680/",
+      "https://www.meta.com/help/superintelligence/1303670544995562/"
+    ],
+    "record_id": "meta-muse-free"
+  },
+  {
+    "change_type": "status_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:11:20+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "首次寫入受管狀態 active（原本缺 status）：Muse Wonder 在 Model API（PAYG、僅 Standard mode，US$4 輸入／US$20 輸出每 1M tokens）與 Muse Code 全方案供應，Wonder Full 只在 Muse Code 的 Power／Maximum；模型仍為 preview，且 Wonder／Wonder Full 目前在南韓不可用。無免費層。",
+    "sources": [
+      "https://dev.meta.ai/docs/muse-wonder",
+      "https://dev.meta.ai/docs/muse-code/subscriptions"
+    ],
+    "record_id": "meta-muse-wonder"
+  },
+  {
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:12:30+08:00",
+    "previous_limit": null,
+    "current_classification": "UNKNOWN",
+    "note": "以官方文件全集索引 dev.meta.ai/llms.txt 做存在性檢查：guides、protocols、API reference、cookbook、Muse Code 與 open-weight models 皆無 referral／推薦／促銷／免費 credits 條目；定價頁只列 PAYG 與 Muse Code 訂閱。社群宣稱的「推薦送 1B tokens」仍無官方依據，但沒有官方否定證據，故不改判 resolved_rumor_disproven，狀態記 watchlist、維持每月或有新線索時追查。",
+    "sources": [
+      "https://dev.meta.ai/llms.txt",
+      "https://dev.meta.ai/docs/pricing"
+    ],
+    "record_id": "muse-referral-tokens-unverified"
+  },
+  {
+    "change_type": "terms_clarification",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:09:05+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "首次以官方 i18n payload 逐字記下免費層上限：Standard 免卡、高速搜尋不限次，但專業搜尋每日 5 次、檔案分析每日 3 次；新戶限時每日 200 點、每日發放、不結轉、官方只寫「during the campaign」「stop when it ends」，未給截止日與時區。",
+    "sources": [
+      "https://felo.ai/en/pricing"
+    ],
+    "record_id": "felo-standard-free-new-user-daily-two-hundred-campaign"
+  },
+  {
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:20:00+08:00",
+    "previous_limit": null,
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "新基準：ChatGPT 免費方案官方繁中頁稱完全免費、無時間限制，但只寫「設有用量限制」，未公布額度；2026-09-23 官方公告把 ChatGPT Ads 擴及含台灣的七個亞洲市場，廣告只出現在 Free 與 Go 方案，Plus／Pro／Enterprise 無廣告。免費額度數字與廣告密度仍是缺口。",
+    "sources": [
+      "https://chatgpt.com/zh-Hant/plans/free/",
+      "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/"
+    ],
+    "record_id": "chatgpt-free-plan-tw-ads"
+  },
+  {
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:16:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "新基準：勞動部產業人才投資方案對在職勞工補助 80%，特定對象 100%，每人 3 年內上限 NT$10 萬（以開訓日計算）；須開訓日仍在職且具就保／勞保等身分，並具本國籍或指定居留身分。在職訓練網政策性專區列有 AI 實務班別；各班費用、名額與梯次由分署逐班公告，本次未逐班核對。",
+    "sources": [
+      "https://ws.wda.gov.tw/Download.ashx?n=55Si5qWt5Lq65omN5oqV6LOH5pa55qGI5Y%2BD6KiT5a245ZOh6aCI55%2BlLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzExL3JlbGZpbGUvOTMzOC8xOTAxNTYvODk1NWRlODEtOWViOS00OTdmLWI5MGYtNzU5NjBjOTMwMjU4LnBkZg%3D%3D",
+      "https://ojt.wda.gov.tw/"
+    ],
+    "record_id": "wda-ipt-ai-course-tuition-subsidy"
+  },
+  {
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:20:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "新基準：Bytez Free US$0／月，US$1 credits 每 4 週刷新、發放後 4 週過期且不可退款；免費層限 7B 以下開源模型、1 並行請求，closed models 按供應商價加 2% 平台費。PAYG 為 US$3／月贈 US$5。官方未列可註冊國家，台灣未核。",
+    "sources": [
+      "https://docs.bytez.com/model-api/docs/billing"
+    ],
+    "record_id": "bytez-free-plan-one-dollar-four-weeks"
+  },
+  {
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:20:00+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "新基準：Liquid AI 每個新組織在 Liquid Console 獲 US$2 免費 API 額度（官方未寫效期），同一模型經 OpenRouter／Vercel 各自結帳；權重授權年營收未滿 US$10M 可免費含商用，研究／教育／非營利不限營收免費。台灣註冊與營收認定未核。",
+    "sources": [
+      "https://www.liquid.ai/pricing"
+    ],
+    "record_id": "liquid-ai-new-org-two-dollar-credit"
+  },
+  {
+    "change_type": "new_watchlist",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T01:52:00+08:00",
+    "previous_limit": null,
+    "current_classification": "UNKNOWN",
+    "note": "新觀察線索：Sakana API Platform 企業早期存取 2026-10-28 開放申請，官方明寫價格與使用條件於個別通知時說明，公告未承諾免費額度；申請以 Google 表單收件、逐案聯繫。待解：是否附試用額度、價格結構、台灣公司可申請性。",
+    "sources": [
+      "https://sakana.ai/api-platform-earlyaccess/"
+    ],
+    "record_id": "sakana-api-platform-early-access-2026"
+  },
+  {
+    "record_id": "ideogram-free-credits-weekly-slow",
+    "change_type": "status_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T02:12:45+08:00",
+    "previous_limit": null,
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "首次寫入受管狀態 active（原本缺 status）：官方 Plans and Credits（頁標 Last verified: October 15, 2026）仍寫 Free US$0、「30 a week」、每週重置、用盡須等下週或購買點數；只有 Google／Apple／Microsoft 登入帳號發免費額度，email＋password 帳戶不發；Free 生成全部公開。主 pricing 頁本輪 403（Cloudflare），「amount may vary」措辭未能重讀。",
+    "sources": [
+      "https://docs.ideogram.ai/using-ideogram/faq/available-plans",
+      "https://ideogram.ai/pricing"
+    ]
   }
 ]

@@ -407,3 +407,36 @@ assert.strictEqual(ctx.statusInfo({status:'unknown_future_value'}).label, '狀�
 const statusless=d.offers.filter(o=>!o.status&&o.record_type==='opportunity');
 for(const o of statusless) assert.strictEqual(ctx.statusInfo(o).label,'狀態未記錄',`statusless opportunity must not claim a pending review: ${o.id}`);
 console.log(`PASS: missing status renders 「狀態未記錄」 (${statusless.length} opportunities), unknown string still 「狀態待釐清」.`);
+
+// 關鍵字搜尋不得比對 JSON 鍵名或來源證據。舊版 `JSON.stringify(o).includes(q)` 讓鍵名本身可被搜尋：
+// 「sources」「status」「evidence」「scope」「null」「https」在 2026-11-10 的 967 筆資料上各命中 967 筆，
+// 搜尋框等於失效；只寫在來源 evidence 的詞也被當成命中（日本限定的 lawson-restricted-japan 因證據文字
+// 出現「免費」而進入「免費」搜尋）。以下為規格值斷言，不是現況快照。
+assert(!f({id:'a',title:'範例',summary:'內容',status:'active',sources:[{url:'https://e',scope:'s',evidence:'台灣'}]},{q:'台灣'}),'source evidence must not be searchable');
+assert(!f({id:'a',title:'範例',summary:'內容',status:'active',sources:[]},{q:'status'}),'JSON key names must not be searchable');
+assert(!f({id:'a',title:'範例',summary:'內容',sources:[]},{q:'sources'}),'JSON key names must not be searchable');
+assert(!f({id:'a',title:'範例',summary:'內容',verified_at:'2026-11-10T02:00:00+08:00',sources:[]},{q:'2026-11-10'}),'schedule timestamps must not be searchable');
+assert(f({id:'a',title:'台灣方案',summary:'',sources:[]},{q:'台灣'}),'card title must be searchable');
+assert(f({id:'a',title:'方案',summary:'學生免費',sources:[]},{q:'學生'}),'card summary must be searchable');
+assert(f({id:'a',title:'方案',summary:'',eligibility:{taiwan_note:'條件式'},sources:[]},{q:'條件式'}),'eligibility text must be searchable');
+// 部分命中是正常的：卡片文字本來就可能寫「scope」「status」或一條網址。要擋的是「鍵名本身」造成的
+// 全庫命中——舊版這六個詞各回 967/967。規格值：任一鍵名詞命中率必須低於 2%。
+for(const term of ['sources','evidence','scope','status','null','https']){
+  const hits=d.offers.filter(o=>f(o,{q:term})).length;
+  assert(hits<d.offers.length*0.02,`key-name term "${term}" still matches ${hits}/${d.offers.length} records`);
+}
+const lawson=d.offers.find(o=>o.id==='lawson-restricted-japan');
+assert(lawson,'expected lawson record');
+assert(!f(lawson,{q:'免費'}),'a record whose card claims nothing about 免費 must not match 免費 only because its evidence quotes it');
+const freeHits=d.offers.filter(o=>f(o,{q:'免費'})).length;
+// 反向對照：證據裡寫「免費」但卡片不主張免費的紀錄必須存在，否則上面那條 lawson 斷言只是空過。
+const freeEvidenceOnly=d.offers.filter(o=>!f(o,{q:'免費'})&&JSON.stringify(o.sources).includes('免費')).length;
+assert(freeEvidenceOnly>=10,'expected records whose evidence mentions 免費 while their card does not, got '+freeEvidenceOnly);
+// 命中數必須落在「紀錄本身（去掉 sources）提到該詞」與「含 sources 的全紀錄」之間：前者是上限，
+// 後者證明關鍵字不再把來源證據算進來（差額就是只靠 evidence 才命中的紀錄）。
+const withoutSources=o=>{const {sources,...rest}=o;return JSON.stringify(rest);};
+const freeWithoutSources=d.offers.filter(o=>withoutSources(o).includes('免費')).length;
+const freeWithSources=d.offers.filter(o=>JSON.stringify(o).includes('免費')).length;
+assert(freeHits<=freeWithoutSources,`search hits (${freeHits}) must not exceed records whose own fields mention the term (${freeWithoutSources})`);
+assert(freeHits<freeWithSources,`search must exclude source evidence: ${freeHits} hits vs ${freeWithSources} records that mention it anywhere`);
+console.log('PASS: keyword search reads claim fields only — no JSON key names, no source evidence, no timestamps ('+freeHits+' 免費 hits).');
