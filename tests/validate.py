@@ -82,7 +82,18 @@ for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]
 run_day=run['started_at'][:10]
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
- assert len(urls)==len(set(urls)), f'duplicate source URL in this batch record (merge instead of append): {rid}'
+ # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複
+ # URL：2026-11-10 統計 266 筆（其中 216 筆仍可行動）因歷次查核累積了同網址多筆來源，
+ # 一旦被排進 reviewed_ids 就永遠驗證失敗，只能靠有損的合併才能再複核——佇列因此默默繞過
+ # 四分之一個資料庫（lawson 12 筆同網址、daytona 14 筆、cyleague／sambanova 各 11–12 筆）。
+ # 前端 groupSources() 本來就把同網址收進「較早的 N 筆同網址紀錄」，多筆同網址是既有設計；
+ # 因此改為只限制「本批次當天同一 URL 最多一筆」，仍然攔得住重複追加的錯誤，又不會鎖住舊紀錄。
+ by_url={}
+ for s in offers_by_id[rid]['sources']:
+  by_url.setdefault(s.get('url'),[]).append(s)
+ for url,group in by_url.items():
+  same_day=[s for s in group if ((s.get('accessed_at') or s.get('accessed_time_range') or '').split('/')[-1])[:10]>=run_day]
+  assert len(same_day)<=1, f'source URL checked twice in this batch (update the existing entry instead of appending): {rid} {url}'
  stamps=[(s.get('accessed_at') or s.get('accessed_time_range') or '').split('/')[-1] for s in offers_by_id[rid]['sources']]
  assert any(stamp[:10]>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
 for aid in attempted:
@@ -125,6 +136,13 @@ for o in d['offers']:
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  cadence=o.get('review_cadence')
+ # 排程欄位是複核佇列的唯一輸入：每輪開始時以 next_review_at 排序挑案例，因此一筆紀錄缺了
+ # next_review_at 就永遠不會被排到，缺了 review_cadence 卡片就只寫「定期輪替」而不說頻率。
+ # 2026-11-10 統計 12 筆有缺口（6 筆無 next_review_at、6 筆無 review_cadence），其中 2 筆是
+ # monthly／monthly_or_new_signal 卻沒日期。on_new_signal 依定義沒有固定日期，是唯一例外。
+ if cadence is None: raise AssertionError(f'missing review_cadence (the card then renders 定期輪替 without a frequency): {o["id"]}')
+ if o.get('next_review_at') is None and cadence!='on_new_signal':
+  raise AssertionError(f'missing next_review_at for {cadence} cadence — the record can never enter the review queue: {o["id"]}')
  if cadence in MAX_CADENCE_GAP and o.get('verified_at') and o.get('next_review_at'):
   gap=(datetime.datetime.fromisoformat(o['next_review_at'])-datetime.datetime.fromisoformat(o['verified_at'])).days
   assert gap<=MAX_CADENCE_GAP[cadence], f'{cadence} cadence but next review {gap} days out (fix the label or the schedule): {o["id"]}'

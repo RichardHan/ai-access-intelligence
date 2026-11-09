@@ -27399,5 +27399,136 @@
       "https://docs.ideogram.ai/using-ideogram/faq/available-plans",
       "https://ideogram.ai/pricing"
     ]
+  },
+  {
+    "record_id": "quillbot-student-discount-current-terms-watch",
+    "change_type": "eligibility_clarification",
+    "current_classification": "UNKNOWN",
+    "note": "學生折扣由「查不到」改為「官方明示 25%，核驗走第三方」。quillbot.com/premium/unidays 逐字「up to an additional 25% off Quillbot Premium subscriptions!」，FAQ 說明 25% 疊在年繳既有折扣上（年繳省 58%，再折後合計 66%），Premium 標價 US$8.33／月（年繳）；status 由 needs_verification 改 conditional。台灣學籍能否通過 UNiDAYS 核驗仍未知，taiwan 維持 Unknown。同一公司 Help Center 仍只寫不定期特賣與折扣碼，對「有沒有學生折扣」兩處敘述不一致。",
+    "sources": [
+      "https://quillbot.com/premium/unidays",
+      "https://help.quillbot.com/hc/en-us/articles/5131118539159-Does-Quillbot-offer-discounts-How-do-I-get-them"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "lg-exaone-25-api-free-noncommercial",
+    "change_type": "terms_clarification",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "免費狀態取得平台 FAQ 逐字佐證（「All APIs on EXAONE API Platform are currently available free of charge.」），但商用衝突仍無法裁決：FAQ 八題無任何商用授權條目、韓文版 ToS（優先語言）§2.1 亦只給非商業利用，而母公司 Showroom 條款頁自台灣回「Access Restricted／This service is not accessible from your current location」。子網域封鎖不證明 docs／api 不可用，故 taiwan 維持 Unknown。另記錄 FAQ 與 ToS §2.3 對「是否用於訓練」敘述不一致。",
+    "sources": [
+      "https://docs.exaone.ai/en/terms/faq",
+      "https://showroom.exaone.ai/en/terms",
+      "https://docs.exaone.ai/ko/terms/terms-of-service"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "daytona-startup-amount-conflict",
+    "change_type": "evidence_scope_correction",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "找到第三份官方來源（2025-06-06 CEO 部落格）：入選 US$10K、可解鎖至 US$50K、夥伴 Fast Track US$25K＋再加 US$50K。官方定價頁與部落格皆為 10K 起／最高 50K，$100K 只剩新創專頁一處，衝突範圍縮小但未解；夥伴 Fast Track 若可疊加則名目上超過 50K，官方未解釋。Notion 正式條款本次純 JS 渲染讀不到正文，條款是否改版仍未知。",
+    "sources": [
+      "https://www.daytona.io/startups",
+      "https://www.daytona.io/pricing",
+      "https://www.daytona.io/dotfiles/supercharging-ai-startups-with-up-to-50k-in-credits"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "rime-stt-nov19-free-window",
+    "change_type": "official_source_reverification",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "官方 2026-10-20 公告把免費窗年份釘成 2026：「Rime STT is free for 30 days (until November 19th)」，10/20 起算 30 天即 11/19，與定價頁「Free until Nov 19」及既有 expires_at 相符。時區與 11/20 起算時點仍未公布；定價頁「No card required」與條款 §7.4「keep a valid payment method on file」的衝突未解。",
+    "sources": [
+      "https://www.rime.ai/resources/rime-announces-stt",
+      "https://www.rime.ai/pricing"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
+    "change_type": "evidence_scope_correction",
+    "current_classification": "UNKNOWN",
+    "note": "同一活動的英文與中文官方稿強度不同：英文「WorkBuddy and CodeBuddy will be available for free」、中文「为用户提供一定额度的免费使用」（有額度上限、無數字）。兩稿都沒有額度數字與時區，quota_classification 維持 UNKNOWN；產品頁仍無 11/4–15 字樣。",
+    "sources": [
+      "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+      "https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "infomaniak-ai-services-one-million-free-credits",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "瑞士 Infomaniak AI Services 新收錄：定價頁 CTA「Get started with 1M free credits」、FAQ「One million free credits allow you to test the service without commitment for one month」，額度後按 CHF 每百萬 token／每分鐘計費。開通前必須登錄有效付款卡，故「免費額度」≠「免付款驗證」。1 credit 單位官方兩處寫法不同，不換算成保證 100 萬 token；台灣可註冊性未列。",
+    "sources": [
+      "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "gonka-broker-monthly-one-million-free-tokens",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "每月至少 1M tokens 免費、每月 1 日重發、未用完不累積、免信用卡；需一次性手機簡訊驗證且拒收 VoIP／市話，一個門號一份。條款保留隨時停發權；台灣 +886 門號可否收碼未證。",
+    "sources": [
+      "https://gonkabroker.com/free-llm-api/",
+      "https://docs.gonkabroker.com/guides/billing-and-deposits/"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "public-ai-inference-utility-two-dollar-starter-credit",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "非營利 Metagov 的 Public AI Inference Utility：每新帳戶 US$2 一次性起始額度、Free 層 100 requests/minute、錢包扣抵，託管 Apertus／SEA-LION／Olmo 等公共模型；須 18 歲以上，官方未列可用國別。",
+    "sources": [
+      "https://platform.publicai.co/docs",
+      "https://platform.publicai.co/plans"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "sea-lion-ai-singapore-free-poc-api",
+    "change_type": "new_opportunity",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "AI Singapore SEA-LION 免費 POC API：Google 登入建 Trial API Key（每人一把）、10 requests/minute、官方明示不得提額且非生產用途；開源權重可商用。時區、token 配額與金鑰效期未公布。",
+    "sources": [
+      "https://docs.sea-lion.ai/overview/readme/faq"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
+  },
+  {
+    "record_id": "yepapi-five-dollar-signup-credit-watch",
+    "change_type": "new_watchlist",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "註冊送 US$5、免卡、無訂閱、餘額不失效為官網與 docs 宣稱，但服務條款、$5 是否可重複領取、台灣付款資格本輪未核，官網與文件的模型數（289 vs 139＋151）也不一致，故只列觀察線索。",
+    "sources": [
+      "https://www.yepapi.com/",
+      "https://docs.yepapi.com/llms.txt"
+    ],
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T03:24:54+08:00",
+    "previous_limit": null
   }
 ]
