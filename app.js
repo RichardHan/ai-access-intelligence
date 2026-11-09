@@ -391,6 +391,13 @@ function createCard(offer) {
   }
   card.append(facts);
   if (offer.setup_cost_basis) card.append(text('p', `費用依據：${display(offer.setup_cost_basis)}`, 'cost-basis'));
+  // 卡片標籤與費用欄位會互相矛盾：8 筆 categories 含 FREE 的紀錄帶著已知月費（US$5–399），
+  // 卡片同時顯示「免費機會」與「每月費用 US$29.99」，而其中 5 筆連一句說明都沒有，
+  // 讀者只能自己猜那個月費是期滿續用價、替代付費方案，還是免費期就要付。這類紀錄一律
+  // 在卡片正面列出 cost_note（`tests/validate.py` 對非已截止者強制要求），完整說明仍留在詳情。
+  if ((offer.recurring_cost_usd || 0) > 0 && offer.cost_note) {
+    card.append(text('p', `每月費用說明：${display(offer.cost_note)}`, 'cost-basis'));
+  }
   const foot = text('div', '', 'card-foot');
   foot.append(text('span', status.label, `status-pill status-${status.tone}`));
   foot.append(text('span', `核實 ${dateLabel(offer.verified_at)}`, 'verified-date'));

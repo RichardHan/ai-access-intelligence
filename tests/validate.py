@@ -140,6 +140,13 @@ for o in d['offers']:
  # 卡片正文就是 summary。缺 summary 的紀錄在網站上顯示「研究摘要待補充」，等於把
  # 已核實的免費額度隱藏起來（2026-11-09 發現 12 筆，含 OpenAI 資料共享與 Viktor Free）。
  if o['record_type']=='opportunity':assert isinstance(o.get('summary'), str) and o['summary'].strip(), f'missing summary for an opportunity card in {o["id"]}'
+ # 「免費機會」標籤與同一張卡的「每月費用」並列時，讀者看到的是兩個互相矛盾的數字。2026-11-09 統計
+ # 8 筆 categories 含 FREE 的紀錄帶著已知月費（US$5–399，例：Lindy Team US$29.99、AgentMail 期滿
+ # US$200、Supermemory Scale US$399），其中 5 筆連一句說明都沒有。費用欄位是歷史事實、不改，
+ # 但非已截止的這類紀錄必須用 cost_note 說明那個月費是什麼（期滿續用價／替代付費方案／試用後
+ # 自願升級），卡片正面才會出現「每月費用說明」。setup_cost_basis 只講設定費，不算說明。
+ if o.get('status') not in dead and 'FREE' in (o.get('categories') or []) and (o.get('recurring_cost_usd') or 0)>0:
+  assert isinstance(o.get('cost_note'), str) and o['cost_note'].strip(), f'FREE tag with a known monthly fee needs a cost_note explaining the fee: {o["id"]}'
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'

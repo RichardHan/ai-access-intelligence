@@ -378,3 +378,22 @@ const qTags=qCard.children.find(n=>n.className==='card-tags');
 assert.strictEqual(qTags.children.length,1,'closed-to-new-subscriptions card must show one historical tag');
 assert(qTags.children[0].textContent.includes('已停止新訂閱'),'closed-to-new-subscriptions card must name the status');
 console.log('PASS: closed cards show a single historical tag instead of claimable category chips.');
+
+// 「免費機會」標籤與同一張卡的「每月費用 US$29.99」並列時，讀者只能猜那個月費是什麼。
+// 非已截止、categories 含 FREE 且 recurring_cost_usd > 0 的紀錄必須帶 cost_note，
+// 並在卡片正面以「每月費用說明」呈現（validate.py 同步強制資料側）。以下為規格值斷言。
+const paidFreeCards=d.offers.filter(o=>!deadStatuses.includes(o.status)&&(o.categories||[]).includes('FREE')&&(o.recurring_cost_usd||0)>0);
+assert(paidFreeCards.length>=5,'expected records tagged FREE that carry a known monthly fee');
+for(const o of paidFreeCards){
+  assert(typeof o.cost_note==='string'&&o.cost_note.trim(),'FREE tag with a known monthly fee needs a cost_note: '+o.id);
+  const card=ctx.createCard(o);
+  const note=card.children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明'));
+  assert(note,'card must explain the monthly fee next to the FREE tag: '+o.id);
+  assert(note.textContent.includes(String(o.recurring_cost_usd)),'fee explanation must name the amount: '+o.id);
+}
+const lindyCard=ctx.createCard(d.offers.find(o=>o.id==='lindy-free-fifty-dollar-seven-day-trial'));
+const lindyNote=lindyCard.children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明'));
+assert(lindyNote.textContent.includes('US$29.99')&&lindyNote.textContent.includes('不是'),'Lindy must state the fee is not the free trial cost');
+const zeroCostCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
+assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明')),'zero-fee cards must not show a monthly-fee explanation');
+console.log('PASS: FREE-tagged records with a known monthly fee explain the fee on the card face.');
