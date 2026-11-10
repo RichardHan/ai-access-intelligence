@@ -261,10 +261,19 @@ function sourceLink(source) {
   }
 }
 
+// 查閱時間是自由文字（ISO、ISO 區間、甚至「2026-10-25（Asia/Taipei）」這種帶註記的寫法）。
+// 舊版用 `split('/')` 取最後一段，遇到註記就會拿到「Taipei）」這種垃圾字串，排序時被當成
+// 最舊的一筆：2026-11-10 統計 10 組同網址來源因此把最新證據藏在「較早的 N 筆同網址紀錄」裡
+// （adobe-firefly-assistant-free-beta-regions 的 11/10 04:24 被 10/25 的註記版蓋住、
+// bubble-agent2、kakao-plus-young-adult、supership、v0-free-policy、together-prepaid-policy、
+// mistral-free-api-policy、freshservice 同型）。`tests/validate.py` 上一輪已用同樣的規則
+// （抽出字串裡最後一個 YYYY-MM-DD）修掉批次檢查，前端卻還留著舊寫法。
+// 只取最後一個日期或時間戳當排序鍵，原文仍照原樣顯示給讀者。
+const SOURCE_STAMP = /\d{4}-\d{2}-\d{2}(?:[T ]\d{2}:\d{2}(?::\d{2})?)?/g;
 function sourceStamp(source) {
-  const raw = source.accessed_at || source.accessed_time_range || '';
-  const parts = String(raw).split('/');
-  return parts[parts.length - 1] || '';
+  const raw = String(source.accessed_at || source.accessed_time_range || '');
+  const found = raw.match(SOURCE_STAMP);
+  return found ? found[found.length - 1] : raw;
 }
 
 function groupSources(sources) {

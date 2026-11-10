@@ -172,6 +172,32 @@ assert.strictEqual(grouped[0].source.scope, '新範圍', 'newest accessed entry 
 assert.strictEqual(grouped[0].earlier.length, 1);
 assert.strictEqual(grouped[0].earlier[0].scope, '舊範圍');
 assert.deepStrictEqual(ctx.groupSources([]).length, 0);
+// 查閱時間是自由文字時不能靠 split('/') 取尾段：帶註記的「2026-10-25（Asia/Taipei）」會變成
+// 「Taipei）」，排序時被當成最舊，最新證據就被收進「較早的 N 筆同網址紀錄」。2026-11-10 統計
+// 10 組同網址來源因此藏住較新的證據（adobe-firefly-assistant 的 11/10 04:24、bubble-agent2 的
+// 11/01、kakao-plus-young-adult 的 10/30、v0-free-policy、together-prepaid-policy 等）。
+assert.strictEqual(ctx.sourceStamp({ accessed_at: '2026-10-25（Asia/Taipei）' }), '2026-10-25');
+assert.strictEqual(ctx.sourceStamp({ accessed_at: '2026-10-26 Asia/Taipei；頁面於18:37:26+08:00前讀取完成' }), '2026-10-26');
+assert.strictEqual(ctx.sourceStamp({ accessed_time_range: '2026-11-08T10:00:00+08:00/2026-11-08T10:05:00+08:00' }), '2026-11-08T10:05:00');
+assert.strictEqual(ctx.sourceStamp({}), '');
+const annotated = ctx.groupSources([
+  { url: 'https://example.com/x', scope: '舊註記', evidence: '舊證據', accessed_at: '2026-10-25（Asia/Taipei）' },
+  { url: 'https://example.com/x', scope: '新ISO', evidence: '新證據', accessed_at: '2026-11-10T04:24:00+08:00' }
+]);
+assert.strictEqual(annotated[0].source.scope, '新ISO', 'an annotated free-text stamp must not hide newer evidence');
+assert.strictEqual(annotated[0].earlier[0].scope, '舊註記');
+// 資料驅動：任何同網址群組的主要來源都必須是最新的查閱時間（沒有時間者略過，無從排序）。
+for (const offer of d.offers) {
+  for (const group of ctx.groupSources(offer.sources || [])) {
+    const primary = ctx.sourceStamp(group.source);
+    if (!primary) continue;
+    for (const older of group.earlier) {
+      const stamp = ctx.sourceStamp(older);
+      if (!stamp) continue;
+      assert(stamp <= primary, `source order hides newer evidence in ${offer.id}: ${primary} shown, ${stamp} collapsed`);
+    }
+  }
+}
 const repeatedDetails = ctx.createDetails({
   eligibility: {},
   sources: [
