@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,014 筆**（803 項機會、49 項政策、162 筆觀察線索），更新時間 **2026-11-10 17:40 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **1 筆**；另將 1 筆重複收錄合併（`wda-ipt-ai-course-tuition-subsidy` → `taiwan-industry-talent-investment-ai-courses-2026`）。其餘 **992 筆**既有紀錄未完成本輪複核。本輪沒有整筆追查失敗，但有 2 筆各有一個關鍵頁面取用失敗（Emergent 服務條款、Vocol 免費點數政策），已在該筆的核實範圍與缺口寫明，未刷新那部分的證據。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程。
+資料集目前有 **1,016 筆**（805 項機會、49 項政策、162 筆觀察線索），更新時間 **2026-11-10 18:29 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **10 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；另有 **3 筆**整筆追查失敗（已記錄嘗試時間與原因，未刷新核實時間）。其餘 **1,004 筆**既有紀錄未完成本輪複核。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前仍應自行重查官方頁。
 
 ## 使用方式
 
@@ -2173,3 +2173,31 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 `verification_scope` 缺值時卡片標籤寫「核實範圍未記錄」，不再印「本次核實範圍」加通用句——那個組合會讓「只核了其中一項」與「整筆都核過」長得一樣。批次紀錄一律要寫這個欄位（`tests/validate.py` 會擋），舊紀錄在輪到複核時順手補，不回填。
 
 `tools/linkcheck.py` 的 dead 清單是待驗清單，不是證據。2026-11-10 全掃把 `neo4j.com/docs/aura/security/ip-addresses/` 與 `…/create-account/` 報成 404，但同一輪 `--record neo4j-auradb-free-tier-200k-nodes` 回 ok 7、curl 帶瀏覽器 UA 也是 200、24 路併發重測全 200。判定來源失效前先單筆重掃；404 只證明那個網址當下打不開。
+
+2026-11-10 18:07–18:29 本輪（接續 fcf1831 之後）：起始 **1,014 筆**；`tools/queue.py` 基準為嚴格逾期 0、7 日內到期 9（其中 7 筆在 12 小時冷卻內，不重讀）、`retry` 桶 4 筆、24 小時未核 646 筆。複核 10 筆（rork、New Relic 學生、tavily、exa、sarvam、tinyfish、thunder、SoftBank×Perplexity、Perplexity 免費層、臺北青年 AI 補助），3 筆整筆追查失敗（e2e 新創、astamuse、DeepInfra），新增 2 筆機會。上一則 17:40 才結束，其 18 筆不重讀。
+
+會改變讀者決定的更正：
+
+- `taipei-youth-ai-subscription-subsidy-2026`：**狀態改 `applications_closed`**。期限日 18:28 重讀，專頁版本仍是 2026-09-22，「最遲應於11月10日前提出申請」「申請日以送達本局之日為準，已逾申請期間者，本局應予駁回」逐字未變，公告首頁仍 35 筆、最新 2026-11-09，沒有停收／用罄／展延字樣。判定的依據不是公告，而是同一頁的聯絡資訊：「【本局辦公時間】週一至週五 上午09:00~12:30；下午01:30~05:00（彈性上班：上午08:00~09:00；下午05:00~06:00）」——計畫以送達日認定、逾期駁回，18:00 之後已不可能在期限內送達。並行研究員主張「沒有停收公告就不該改狀態」，這裡不採用：缺席公告只能說明站上沒更新，不能讓卡片在期限日之後繼續宣稱可申請（`tests/validate.py` 的「期限已過卻仍非已截止」明天就會擋下這一筆）。`review_cadence` 改 `monthly_or_new_signal`，下次複核 11/11 上午，看是否另行公告延長或預告 116 年度。
+- `rork-free-design-region-dependent-monthly`：**計費架構變更**。官方 2026-10-30 起把 Cloud Credits 併入單一 credits 池（「$1 of usage is 5 credits」），現行文件已無「啟用 Rork AI Cloud 一次 US$1」，加值區間改為一次 US$5.50（+25 點）至 US$220（+1,000 點）且僅付費方案可用；舊來源 `/billing/build-credits-vs-cloud-credits` 現在 308 轉址到 `/billing/credits`。**轉址後仍回 200，所以 `tools/linkcheck.py` 不會把它列為 dead**——連結活著、內容已換一份，這是「連結檢查不等於證據檢查」的實例。舊證據文字以「2026-11-10：…上列敘述僅為歷史」保留在原條目，不刪。
+- `new-relic-students-observability`：`taiwan` **Unknown→Yes（條件式）**。官方學生頁指定 GitHub Education 為驗證夥伴，且 GitHub Education 的資格條文只寫在學、在學證明與 13 歲門檻，沒有國別限制；`taiwan_note` 寫明這是文件鏈推定、不是個案核准，官方也未曾點名台灣。額度（每月 500 GB、3 名使用者）與「可隨時要求重驗、未通過降回 Free」不變。
+- `perplexity-watch`：新增可引用的官方價格基準——**Education Pro US$10／月、需 SheerID 學生或教職員驗證**；比較表另列 Free 的 Comet Assistant 與 Advanced AI Models 為 `No`。免費 Pro Search 上限的兩說（比較表 `3/day` ↔ 帳戶管理文 `five Pro Searches per day`）同日重讀仍並存，維持 `conflicting_official_usage_claims`；`www.perplexity.ai/pricing` 連續第五輪取不到，Pro 的 US$20／月仍無官方原文，`recurring_cost_usd` 維持 null 並在 `cost_note` 寫清楚。
+- 6 筆重讀後主張不變（tavily 1,000 credits／月、exa 每月 US$10＋onboarding US$10、sarvam ₹100 永久、tinyfish US$35 與合格網域清單無 `.edu.tw`、thunder 限美國大學 US$20、SoftBank 6 個月 0 円後 2,950 円／月），只刷新 `verified_at`、來源查閱時間與 `verification_scope`。
+
+方法教訓（寫進資料，不只寫在這裡）：`softbank.jp` 那頁的原始碼裡有一段「【障害発生】「Perplexity Pro for SoftBank」の申し込みができない状況について」，但整段被 `<!-- … -->` 包住、**不會顯示**。純文字擷取（把標籤剝掉）會看到它，於是把一個沒有對外發布的障害公告寫成「目前無法申辦」。讀到「頁面上有這句話」與「這句話是頁面發布的內容」是兩件事；本輪在該筆的 `verification_scope` 留了這個反例，並未把它當現況證據。
+
+新增 2 筆機會（皆逐字取自官方頁、去重掃過全庫 id／title／summary）：
+- `microsoft-copilot-consumer-free-published-limits-none`：消費端 Microsoft Copilot 免費版，US$0、無到期日、免付款方式。官方 FAQ 只寫「subject to available capacity and limits」，達上限須升級或稍後再試，**未公布聊天／圖像／Deep Research／Agent 次數**，故 `quota_classification` 記 NO FIXED CAP PUBLISHED 而非任何數字。台灣 Yes 的依據是 zh-tw 支援頁「Microsoft Copilot 可在全球 170 多個市場使用。有一些例外情況是像中國 (不包括香港特別行政區) 和禁運市場」，台灣不在例外、介面與提示支援「中文 (繁體)」；同頁「Features, availability, and usage limits vary by plan and region.」已寫進 `terms_restrictions`，避免把他國額度當台灣額度。與 GitHub Copilot、Copilot Pro US$10／月、M365 Copilot 企業租戶三者分開。
+- `diffit-basic-free-teacher-unpublished-limits`：教師教材改寫工具 Basic，US$0、官方寫免費版「remains available」不是限期試用，但只標「A great option, with limits」不給次數，且免費版只能取用**近 90 天**建立的內容。`taiwan` 記 **Unknown**：官方沒有任何地區文字，既未點名也未排除台灣——同類的 brisk、magicschool 也是 Unknown，不用「沒寫限制」推成 Yes；`taiwan_note` 說明實務上應可使用、售價與稅費未公布。
+- 未納入：Brave Leo（支援國家頁兩次被導向登入頁，台灣資格無法逐字確認，僅列待追）、SageMaker Studio Lab（官方明寫不再開放新客戶）、Snyk Free（Evo AI 不含免費層）、Qwen Code（需訂閱或自帶 key）、Freepik／Magnific（定價頁已無 Free 欄）、台大弱勢生 AI 補助（僅媒體報導，無校方公告）。
+
+品質改善（本輪唯一一項，`tests/validate.py`）：README 首段的**四個數字全部手寫**——資料量與三類分項、本輪複核筆數、新增機會／政策／觀察線索、其餘未複核筆數——而網站 overview 是從 `offers.json` 算出來的。漏改一次，GitHub 首頁與網站就會各自宣稱不同的資料量，且沒有任何檢查會發現（我對照前五個 commit 都還沒漂移，但那只是因為每輪都有人手動改）。新增的斷言把這四組數字對回 `len(offers)`、`record_type` 計數、`last_research_run.reviewed_ids`／`new_ids` 的型別分佈與 `unreviewed_existing_count`，並要求句子格式維持可讀，改了格式會直接報錯而不是默默跳過。驗證方式是把 README 暫時改成 1,015／804 後跑 `python3 tests/validate.py`，得到 `AssertionError: README dataset size disagrees with data: README 1015 (804/49/162) vs data 1016 (805/49/162)`；還原後 PASS。
+
+驗證與發布：`python3 tests/validate.py`（1,016 筆 PASS，含新的 README 斷言）、`node --check app.js`、`node tests/filters.cjs`（17 組全 PASS：免費專區 657、quota 149、台灣條件適用 135／150、S 級 122、關鍵字 790 筆「免費」命中）、`python3 tools/queue.py --self-test`、`python3 tools/linkcheck.py --self-test`、`git diff --check`。瀏覽器實測見下方發布紀錄。
+
+下輪優先（完整五項）：
+①`aocai-working-free-ai-courses-2026`：11/16 台北梯次報名至 **2026-11-11 12:30**（11/11 台北班已於 11/08 23:59 截止）。11/11 中午後確認報名表是否關閉、11/26 梯次是否額滿，再決定維持 `conditional` 或轉 `applications_closed`；來源 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3544`、`https://serv.gcis.nat.gov.tw/AOCAI/`。
+②`mango-inference-community`：官方三處文案都寫「30% off … until Nov 11」但**未標年份**，11/12 起要確認是否回到表列原價、以及 US$10 註冊贈額的到期日（頁面只寫 will expire after the stated validity period）；來源 `https://www.mangoboost.io/platform/mango-inference`、`https://inference.mangoboost.io/terms-of-service`。
+③`e2e-explorer-free-versus-usage-discounts`：第三度只看到 `/startup-program` 308 → `/contact-sales`、sitemap 無此路徑、`/startups` 404，且無任何停辦公告。下輪不要再重讀同一條路徑：改查印度站與 `countries-served` 的變更紀錄、或經 sales 表單頁的 inline 文件；若仍無官方頁，考慮把「5K/50K/100K 僅為歷史記載、不得引用」寫進標題並把 `next_review_at` 拉到 12 月。
+④`perplexity-watch`：Pro 的 US$20／月與 Comet 學生頁（`perplexity.ai/grow/comet/students`）連續多輪 403；下輪改走 browser relay 或 2026 年 Wayback 快照，取不到就以 Education Pro US$10／月為主敘述、把 Pro 價格留在缺口，不要填數字。另 3/day 與 five/day 的衝突需要產品公告才能收斂，不要再重讀同兩篇。
+⑤尚未帶 `verification_scope` 的官方可行動紀錄（本輪前統計 85 筆）：不要批次回填，輪替排到時逐筆重讀官方頁再補，優先處理 `taiwan=Yes` 與 S／A 級者；`tests/validate.py` 只對本批次強制此欄位。

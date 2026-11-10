@@ -260,5 +260,29 @@ for o in d['offers']:
   if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
   if o.get('priority_tier')=='S':assert o['taiwan']=='Yes' and o.get('status') not in dead, f'invalid S-tier in {o["id"]}'
  else:assert o['priority_tier'] is None and o['priority_score'] is None
-print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions.')
+# README 首段是讀者在 GitHub 上第一眼看到的宣稱：資料量、三類分項、本輪複核與新增筆數、尚未複核筆數。
+# 這些數字全部手寫，資料一改就要人工同步；漏改一次，首頁就會宣稱錯的資料量或批次進度，而網站本身
+# （由 offers.json 算出來的 overview）仍然是對的——兩個入口互相矛盾。2026-11-10 對照前五個 commit
+# 尚未漂移，但那只是因為每輪都有人手動改。下面的檢查只把「README 寫的」對回「資料算的」，
+# 不改寫 README；新增摘要文字時不必調整格式，但動到這四個數字就要一起改。
+import re as _re
+_readme=(p/'README.md').read_text()
+def _readme_count(pattern,label):
+ m=_re.search(pattern,_readme)
+ assert m, f'README headline is missing the {label} sentence; keep the documented format so this check can read it'
+ return [int(x.replace(',','')) for x in m.groups()]
+_h_total,_h_opp,_h_pol,_h_watch=_readme_count(r'有 \*\*([\d,]+) 筆\*\*（([\d,]+) 項機會、([\d,]+) 項政策、([\d,]+) 筆觀察線索）','dataset size')
+_kinds={k:sum(1 for o in d['offers'] if o.get('record_type')==k) for k in ('opportunity','policy','watchlist')}
+assert (_h_total,_h_opp,_h_pol,_h_watch)==(len(ids),_kinds['opportunity'],_kinds['policy'],_kinds['watchlist']), \
+ f'README dataset size disagrees with data: README {_h_total} ({_h_opp}/{_h_pol}/{_h_watch}) vs data {len(ids)} ({_kinds["opportunity"]}/{_kinds["policy"]}/{_kinds["watchlist"]})'
+_h_reviewed,= _readme_count(r'本輪成功局部複核 \*\*([\d,]+) 筆\*\*','reviewed count')
+assert _h_reviewed==len(reviewed), f'README reviewed count {_h_reviewed} != last_research_run.reviewed_ids ({len(reviewed)})'
+_m=_re.search(r'新增機會 \*\*([\d,]+) 筆\*\*、政策 \*\*([\d,]+) 筆\*\*、觀察線索 \*\*([\d,]+) 筆\*\*',_readme)
+assert _m, 'README headline is missing the 新增機會／政策／觀察線索 sentence'
+_h_new=tuple(int(x.replace(',','')) for x in _m.groups())
+_nk=tuple(sum(1 for i in new if offers_by_id[i].get('record_type')==k) for k in ('opportunity','policy','watchlist'))
+assert _h_new==_nk and sum(_h_new)==len(new), f'README new-record counts {_h_new} disagree with new_ids record types {_nk} ({len(new)} IDs)'
+_h_unreviewed,= _readme_count(r'其餘 \*\*([\d,]+) 筆\*\*既有紀錄未完成本輪複核','unreviewed count')
+assert _h_unreviewed==run['unreviewed_existing_count'], f'README unreviewed count {_h_unreviewed} != last_research_run.unreviewed_existing_count ({run["unreviewed_existing_count"]})'
+print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions, README headline counts.')
 print('tiers:',{t:sum(1 for o in d['offers'] if o.get('priority_tier')==t) for t in ['S','A','B','C','D']})
