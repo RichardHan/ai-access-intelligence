@@ -2423,7 +2423,9 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. **兩個 agent 的引用我逐筆重讀**：Playground、Wordtune、MeetGeek、Hex、Dify、Craft、LTX、Kapwing、TensorPix、Vizard、Base44、酷 AI 兩份 PDF、中華電信、AWS、Microsoft Learn、OpenAI 活動頁都自己再打一次；`blog.adobe.com` 與 Akamai 403 的頁面（微軟英文部落格）不作為來源。
 4. **時間戳**：本輪初稿把讀取時間寫成未來 5–11 分鐘（實際 05:12–05:30，卻寫 05:23–05:38），validator 的未來時間戳斷言擋下。寫入前先跑 `TZ=Asia/Taipei date -Iseconds`，不要用「大約過了幾分鐘」推估。
 
-**本輪檢查**：`python3 tests/validate.py`（PASS，1,034 筆、S/A/B/C/D＝130/186/126/273/106）、`node --check app.js`、`node tests/filters.cjs`、`git diff --check`（見下方瀏覽器檢查）。
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,034 筆、S/A/B/C/D＝130/186/126/273/106）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`git diff --check`。
+瀏覽器（本機 8931、headless Chromium）：資料載入 1,034 筆、概況卡 821／144／50／163 與資料一致、首頁 scope 為本輪文字；「本輪更新」19 筆（16 複核＋3 新增，Adobe 只因追查失敗不列入）；台灣條件適用 144、免費方案 673；關鍵字 AWS Pioneer／A1 於 2028／Playground Free／Wordtune學術各 1 筆；「截止日由近到遠」前五筆為 11/11 12:30（今天）、11/12 15:59、11/12、11/13、11/15 23:59；載入更多 24→48；Playground 卡片顯示設定費 US$0／每月費用 US$0／需符合條件，MeetGeek 顯示「用量分類未核」、Codex 顯示「不符合所列資格」，Adobe 卡片同時出現「核實 2026/11/11」與「追查未成功 2026/11/11」；iPhone 寬度（390px）無水平溢出、console error 0。
+發布：commit `436e712` 已推上 `origin/main`，對應的 `pages-build-deployment`（run 42906237236）success；公開站已核對 1,034 筆、本輪 scope 與三筆新紀錄（AWS Pioneer、Microsoft 365 教育版 A1 退役、Codex 學生額度）皆可搜尋並正確顯示。
 
 **下輪優先（完整五項）**
 
