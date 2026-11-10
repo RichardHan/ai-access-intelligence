@@ -2323,3 +2323,56 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ 31 筆「scope 日期早於 verified_at」的可行動機會（`cartesia-free-monthly-twentyk`、`agenta-hobby-daily-seventy-five-ten-days`、`confident-ai-free-five-weekly-runs-gbmonth`、`cloudflare-workers-ai-free` 等）：輪替排到時重讀後一併改寫 scope，不要批次回填。
 
 **常態待辦（不佔上面五項名額）**：仍未帶 `verification_scope` 的官方紀錄 87 筆（可行動 74、`taiwan=Yes` 3 筆）——輪替排到時逐筆重讀後補。全庫 `application_based` 與「資格文字提到審核卻是 conditional」的 106 筆語意漂移，也只修有逐字證據者。
+
+
+## 2026-11-11 04:05–04:45（Asia/Taipei）第 N+2 輪：18 筆複核（台灣高風險 6＋本地線索 2＋最久未核 10）、3 筆新增
+
+**範圍與計數**：N=1,028、R=18（A 組台灣高風險／到期敏感 6、主 agent 自核台灣本地線索 2、B 組最久未核輪替 10）、A=3（opportunity 3／policy 0／watchlist 0）、U=1,010、attempted=0。資料集 1,031 筆。佇列基準：`next_review_at` 嚴格逾期 0 筆、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、`retry` 桶 0 筆、12 小時內已核 129 筆——上一輪（03:10–03:38）才剛複核 16 筆，因此本輪刻意不重讀那 16 筆，改取「台灣高風險」與 2026-10-31／11-01 建檔的最久未核批次。時間戳一律對錶（本輪寫入的 `verified_at` 為 04:33，批次完成 04:45）。
+
+**主要複核結果**
+
+1. **產業新尖兵（`taiwan-nsp-youth-ai-training-subsidy-2026`）**：上一輪交接的「2026-11 公告稱免費提供 AI 工具」核實完成。公告真實存在，但**直接以 `DocDetail.aspx?docid=42418` 會 302 回首頁**，需帶 `uk=2093`（`https://job.taiwanjobs.gov.tw/Internet/Index/DocDetail.aspx?uk=2093&docid=42418`）。逐字「自116年起，參加本計畫指定課程者，訓練費將內含最高8,000元的AI工具訂閱補助」——是訓練費內含，**未提高 10 萬元上限、未改變 1 萬元自付額**；標題的「免費提供 AI 工具」易被讀成另行發放。另確認新尖兵網站 115/11/30 停用並移轉青年職訓網，12 月梯次報名至 115/12/11 跨越停用日。
+2. **Meeting Ink（`meeting-ink-transformation-partners`）由 Unknown 改台灣 Yes**：原紀錄的 summary／unknowns 是通用佔位字（「請依方案及帳戶條件確認。」），`taiwan` 卻沒有任何依據。官方申請頁逐字「不論您是政府單位、輔導法人、產業顧問，或在企業內推動轉型，都能申請 Meeting Ink 免費客製化體驗」「本計畫限額開放，依申請順序審核」「Meeting Ink 由迪威智能的台灣團隊開發」，且未要求付費或綁卡、無居住地條款；改 Yes 並在 `taiwan_note` 寫明依據與「未明文排除境外、也未承諾境外支援」。名額與體驗時數仍未公布。
+3. **Microsoft 365 台灣學生價首次有數字**：學生頁 hero 卡的 `<dynamic-price>` 元件顯示 **NT$150.00/月**，同站個人版標準價 NT$309/月或 NT$3,090/年（標題寫節省 50%，實際約 51.5%）。含 Copilot 與 1TB、每月同額續訂、每年重驗、失格轉當時月全價。`recurring_cost_usd` 仍留 null（台幣不換算美元），數字放 `cost_note`。
+4. **單店導入補助的標題會誤導，已改**：原標題「先用滿 3 個月」讀起來像申請資格；申請須知 41 頁 PDF 逐字是「實際使用智慧轉型方案滿3個月後，由店家向執行單位申請補助款」——**3 個月是請款條件**，資格只要求營業狀況不得為歇業或停業。標題改為「自購用滿3個月後核銷」，受理期間（115/4/20–116/10/20 或經費罄）與 50%／NT$10 萬不變。
+5. **Google 學生 AI Plus 矛盾未解**：台灣在 AI Plus 支援國家、說明中心排除名單現為「香港、澳門、突尼西亞和美國」（先前的阿爾巴尼亞、玻利維亞、加拿大已不在列），但台灣學生頁 FAQ 仍寫「18 歲以上符合資格的美國大學生」。兩說並列，未收斂。
+6. **B 組 10 筆的佔位字換成逐字證據**：Greptile 免費方案**不含 CLI review**（「The free plan doesn't include them.」，原 unknown 已解）；Langbase Free 超額為 No overage、回 403 USAGE_EXCEEDED（原紀錄已接近正確，補 credits／pipes／memory 與 headers）；Aikido 補 container image／domain／cloud account／250k protected requests；Coze 工作流補節點 1,000、單次執行 1,000 次、timeout 10 分鐘；IBM SkillsBuild 額度分類由 UNKNOWN 改 `NO FIXED CAP PUBLISHED`（官方 100% free、未公布上限，`limited_confirmed=false`）。
+
+**新增（3 筆，皆 opportunity）**
+
+- `adobe-startups-free-year-firefly-acrobat-semrush`：Adobe for Startups（2026-11-02 公布），合格新創（成立 5 年內、募資未滿 US$15M）獲 12 個月免費 Firefly Pro Plus＋Acrobat Studio（含 Express Premium）＋Semrush。官方明示有國別限制卻未列清單 → 台灣 Unknown。**計畫頁 business.adobe.com/solutions/startups.html 四次抓取皆逾時**（read、curl、AEM 鏡像 401、Wayback 404），只能以官方部落格英日文取證。
+- `keenable-ai-startups-five-k-six-months`：US$5,000 credits／6 個月（約 125 萬次搜尋），資格為 Accel／Conviction 投資組合、募資未滿 US$50M 的 AI 團隊或合作夥伴，審核制。同帳戶另有**每月 100,000 次免費請求、免綁卡**、超量 US$4／1,000 次，牌價約值 US$400／月。無國別條款，台灣 Unknown。
+- `taipei-kuai-ai-school-grant-batch2-115`：臺北市「酷 AI 學習系統」重點推動學校第 2 批，期限 **2026-11-13**，一般組最高 NT$7 萬、進階組 NT$12 萬，限臺北市公立高中職以下學校（排除國立學校與市立幼兒園）。**學校層級補助，個人不可申請**，卡片與摘要第一句已寫明。同一份計畫書內部衝突：表 2 寫一般組 9 萬元、經費補助基準與 11/03 轉知寫 7 萬元，兩說並列。
+
+**未納入（本輪判斷）**：Microsoft × NVIDIA Frontier Launchpad（限英國與愛爾蘭）、Nirvana Labs（10 月舊案且 credits 兩個月到期）、Nous Research LongCat 免費一週（11/13 到期、額度未公布）、MangoBoost（當日到期）、商研院 AI 客服課等（開課即截止且與既有課程紀錄重疊）、TechSoup What's New（無 AI 免費額度）、教育部 AI 人才方舟（政策綱要、無可申請額度）、Maritaca S5（巴西葡語市場）、Sail Research（須綁卡、單月 US$5）。另實讀 `aipower.dginfra.gov.tw` 確認 115 年數產署算力收件已於 115-10-30 截止、11 月無新梯次（既有 `taiwan-adi-ai-compute-115` 不再重複建檔）。
+
+**來源衝突與缺口（保留，不擇一）**
+
+- **Sourcetable**：定價頁 Pro「$29 / user / month」（2,000 credits），同站 docs 定價頁 Pro「$39/user/month」——兩份官方頁不一致，已寫成 conflict。
+- **Coze 兩個紀錄曾一度相反**：A 組以瀏覽器渲染定價頁，台灣 IP 下三個付費方案都顯示「Payment not supported」；B 組查文件頁（billing／credits／token／ToS）則無國別字樣，並寫「舊句已無法重現」。兩者是不同頁面，我把 workflow 那筆的 `billing_country` 改寫成「文件頁無國別字樣；定價頁另顯示付款不支援」，避免同一資料庫出現互斥結論。
+- **Reka Vision**：docs 的 Vision pricing 寫免費層 3 小時（含索引、搜尋、Q&A），一般 FAQ 仍寫「Do I need to pre-pay? Yes.」，未明說免費層免儲值。
+- **酷 AI**：計畫書表 2 與經費基準金額不一致（見上）；教育局官網原始公告頁未取得，來源為北一女中轉知頁與松山高中站上的計畫書 PDF。
+
+**流程改善：本輪評估後不改程式（記錄理由與兩個被否決的方向）**
+
+- 候選一「來源清單去重」：全庫 293 筆有同網址多筆來源，但 `app.js` 的 `groupSources()` 本來就把同網址收成「較早的 N 筆同網址紀錄」，是既有設計不是缺陷，否決。
+- 候選二「新增 quota_classification enum 檢查」：看似本輪兩個研究 agent 都給出 `UNVERIFIED`／`LIMITED` 這種越界值、而現有檢查只間接碰到它。實際測試注入 `UNVERIFIED` 後發現 `tests/validate.py:10` 已用 `jsonschema.validate` 對 `schema.json` 逐筆驗證，會直接擋下——多加一條是同義重複，已還原（不留無法觸發的檢查）。
+- 量化後仍不動的兩類：`status=conditional` 且 `FREE`＋`HIGH BUT LIMITED` 的紀錄有 **330 筆**，其中 **208 筆**的資格文字完全沒有審核／學籍／身分門檻字樣（例：`octoparse-ai-free-new-user-five-credit`、`langsearch-free-daily-token-search-api`）。B 組 agent 一度把 9 筆改成 `active` 並說「本庫慣例」，但「有額度上限」算不算「需符合條件」沒有既定規則，且 `priority_note` 與藥丸必須同步，本輪**保留原狀態**、不批次重分類；下一輪若要動，先訂規則再改。`verification_scope` 仍缺 **85 筆**（可行動 72），維持「輪替排到時重讀再補」。
+
+**平行研究的操作問題（本輪實際遇到）**
+
+1. **交付時限**：B 組跑 35 分鐘才結束，中途停在「choosing status convention」十餘分鐘；我在 04:36 直接讀它寫在 `/tmp/rb/B_out.json` 的暫存檔完成整合，之後它的正式交付內容與該檔一致。下一輪的 subagent 指派要要求「先把結果寫成檔案、再回訊息」，並在任務裡直接給允許的枚舉字串（本輪已補，但 B 收到時已接近完成）。
+2. **模型對同一事實給相反結論**：A 說定價頁顯示台灣付款不支援（有渲染證據）、B 說「無法重現」。兩個 agent 一致不代表事實已核實，反之亦然——以頁面層級區分（定價頁 vs 文件頁）才解得開。
+3. **URL 品質**：C 交回一個被截斷的中文 slug（`fg.tp.edu.tw/news/臺北市政府教育局修訂「…以`），我改用 percent-encoded 完整路徑重抓 200 才寫入；subagent 交回的 URL 一律要主 agent 自己再打一次。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,031 筆、S/A/B/C/D＝130/186/125/273/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`git diff --check`。瀏覽器（本機 8931、headless Chromium）：資料載入 1,031 筆、概況卡 819／144／49／163 與資料一致、「本輪更新」21 筆（18 複核＋3 新增）、關鍵字（Adobe for Startups／Keenable／酷 AI／Meeting Ink／Sourcetable）各 1 筆、台灣資格 144、免費 671、「截止日由近到遠」前三筆為 11/11 12:30、11/12 15:59、11/12 且酷 AI 以 11/13 排第 4、載入更多 24→48、iPhone 寬度（390px）無水平溢出、console error 0；新紀錄卡片顯示設定費／每月費用、狀態「申請審核制」、核實範圍、來源（同網址已合併為一筆）與下次複核。
+
+**下輪優先（5 項）**
+
+① `aocai-working-free-ai-courses-2026`：11/11 12:30 之後確認 11/16 梯次是否關閉；若關閉，把 `deadline_at` 換成 12/01 台北班（本輪 04:20 實讀仍「尚有票券」、2026-12-01–12-21、政府補助全額免費、限批發業客服人才與服務業在職人士）或改填 null，並重核 11/17、11/26 梯次。來源：`https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`。
+② `taipei-kuai-ai-school-grant-batch2-115`（11/13 截止、daily）：11/13 後改 `applications_closed`；並找教育局官網原始公告確認一般組是 7 萬還是 9 萬（表 2 與經費基準衝突）以及第 3 批是否續辦。來源：`doe.gov.taipei`、計畫書 PDF。
+③ `adobe-startups-free-year-firefly-acrobat-semrush`（12-11）：計畫頁若恢復，補申請表單、國別下拉選單與是否需綁付款方式；並查是否有 `Adobe for Startups` 條款頁可核國別清單。來源：`https://business.adobe.com/solutions/startups.html`。
+④ `keenable-ai-startups-five-k-six-months`（12-11）：確認每月 100,000 次免費請求是否為 11 月新增（部落格日期 vs 定價頁 published）、審核時間，以及是否有國別條款頁。來源：`https://keenable.ai/pricing`、`https://keenable.ai/blog/ai-startups-program`。
+⑤ `google-ai-professional-certificate-tw-pro-3mo`（weekly，11/18）與 `deepl-api-developer` 的 403：前者的 Google One 條款是否再改版、是否出現新的 Wayback 抓取；後者的 API-key 文章是否解除封鎖（解除則改回直接引用並更新 CAT 工具衝突）。來源：`https://one.google.com/offer/terms-and-conditions/google-career-certificates`、`https://support.deepl.com/hc/en-us/articles/360020695820-API-key-for-DeepL-API`。
+
+**常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 85 筆（可行動 72）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的 208 筆狀態語意漂移（先訂規則）；2026-10-31／11-01 批次仍有未核紀錄，`next_review_at` 多在 11-30，排到再讀。
