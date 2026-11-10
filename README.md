@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,019 筆**（807 項機會、49 項政策、163 筆觀察線索），更新時間 **2026-11-10 19:31 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **996 筆**既有紀錄未完成本輪複核。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前仍應自行重查官方頁。
+資料集目前有 **1,021 筆**（809 項機會、49 項政策、163 筆觀察線索），更新時間 **2026-11-11 01:49 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **999 筆**既有紀錄未完成本輪複核。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前仍應自行重查官方頁。
 
 ## 使用方式
 
@@ -2238,3 +2238,36 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 三種「看不到」要分清楚，判讀方式各不相同。①**CSS 隱藏的備援句**：Neo4j 申請頁的「This form is temporarily unavailable. Please try again later.」是 `display:none` 的備援文字，純文字擷取（含 content negotiation 的 markdown 版）只會留下它，看起來像表單停用，實際上 38 個欄位與 Submit 都可用——判準是查 computed style 與可見性，不要只讀 innerText。②**真的沒有快照**：宣告「Wayback 沒有這頁」前先打 `web.archive.org/cdx/search/cdx?url=…&matchType=prefix`；E2E Networks 就是這樣被誤記了三輪「無任何快照」，實際有三筆 200 快照保存了完整的方案表與資格。③**CSR 文件站**：`docs.byteplus.com` 這類文件站的正文不在 SSR payload 裡，`llms.txt`、數字 slug、doccenter API 都拿不到，換無頭瀏覽器渲染一次就有逐字正文。三者的共同點是「文字版空白」但原因不同，處理方式也不同。
 
 新增紀錄時，`views` 只是人工標記，真正決定專區歸屬的是 schema 欄位：`categories`（FREE／HIGH-QUOTA／BETA-ACCESS 等）、`quota_classification`、`taiwan` 與兩個費用欄位。2026-11-10 新增的三筆都照這個規則寫（Google Maps Demo Key 的 `views` 含 `developer` 只是輔助標籤，能否進「免費」專區由 `setup_cost_usd`／`recurring_cost_usd` 皆為 0 決定），`tools/prioritize.py` 重算後 S 級由 122 增至 125，全部來自本輪把台灣資格補成 Yes 或新增台灣方案，不是評分公式變動。
+
+2026-11-11 01:20–01:50 本輪（接續 7d73f13 之後）：起始 **1,019 筆**；`tools/queue.py` 基準為嚴格逾期 0 筆、7 日內到期 9 筆（其中 8 筆在 12 小時冷卻內）、`retry` 桶 0 筆（1 筆冷卻中）、24 小時未核 647 筆、12 小時內已核 101 筆。輪替與分工：即將到期／限時 8 筆、台灣資格與核實範圍缺口 8 筆（`taiwan=Yes` 且 S 級、官方來源卻缺 `verification_scope`）、主 agent 自查 4 筆，共 **R=20**；新增機會 **2 筆**、政策 0、觀察線索 0；整筆追查失敗 **0 筆**，未完成 **U=999 筆**（結果 1,021 筆）。`tools/linkcheck.py` 全掃 2,821 個去重來源 URL：ok 2,739、dead 7、blocked 67、unreachable 8；7 個 dead 中，`qoder.com/community-boost`／`docs.qoder.com/events/communityboost`／astamuse／deepinfra／salad／`www.nscale.com/pricing` 都是既有已註記的失效頁，新出現在清單上的是 `perplexity-help-center.mintlify.app/llms-full.txt`（`perplexity-watch`、`perplexity-education` 兩筆引用）。未登入、未申請、未付款。
+
+會改變讀者決定的更正：
+
+- `aliyun-yungongkaiwu-model-studio-students`：**抵扣排除清單整段改寫**。舊紀錄寫「百煉推理排除 Wan、HappyHorse、Omni」，與現行官方 FAQ 的命名對不上；現行逐字為「2026年7月14日之后领取的云工开物 300 元抵扣金，不支持抵扣以下后付费费用」，排除三方直供模型（云市场三方）、百炼大模型 Happy 系列、万相模型、向量排序模型、垂类模型、百聆语音与千问语音，之前領取的券不受此限。活動結束日兩份官方頁並存且不一致（百煉活動頁「2025年11月11日--2027年03月31日」↔ 雲工開物規則頁「即日起开始，结束时间以活动官网通知为准」），保留兩說。台灣高校在列與「每人每12个月可领取一张」不變。
+- `google-gemini-notebook-standard-free`：**舊的每日對話上限不能再引用**。方案頁中英版與用量限制頁都已查不到「每日 50 對話／3 語音」，只剩「配額每 5 小時會重設一次，直到達到每週用量上限」且數值未公布；舊紀錄把兩套口徑並列，讀者會以為 50 次仍是現行保證。另英文方案頁把來源拆成兩列（非記事 50/本、記事 Notes 500/本），中文頁只寫 50/本，已在 `service_availability` 註明兩版差異。
+- `moea-a-plus-early-startup-grant`：**移除查不到的版本號**。頁面連結的 docx 與 PDF 附件封面都是「115 年 06 月」版，兩者都沒有 11507-2 字樣；原本的「已更新為11507-2版（2026-10-19）」無法由官方文件佐證，改記為 115 年 06 月版並把 11507-2 列為缺口。金額上限、50% 比例、成立未滿 3 年與受理至 2027-12-31 不變。
+- `anthropic-external-researcher-access-safety`：**申請門檻寫錯了方向**。表單該題逐字是「Are you located within the United States? (This question is for our tax & accounting purposes)」，選項只有 Yes／No，是問是否位於美國（稅務會計用途），不是要求美國稅務身分；台灣申請人答 No 不構成排除。原本的寫法會讓符合資格的研究者直接放棄。
+- `google-maps-demo-key-ai-studio-free-daily`：補上**接上計費後的免費量**（原本是缺口）：Maps Platform 定價頁逐字 Essentials「10K free calls per SKU monthly」、Pro 5,000、Enterprise 1,000，新客戶另有 US$300 試用額度，並說明 2025-03-01 起以「每月免費呼叫數」取代原本的 US$200 月抵扣。Demo Key 文件頁仍只寫 usage limits subject to change，「100 calls/day, per API」仍只有官方部落格一個來源。
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：**餘額停止下降**。11/9 08:09 為 NT$340,843（5.9%）、11/9 17:26 與 11/10 02:19 為 NT$253,197（4.4%），11/11 01:47 第三次讀值仍是 NT$253,197，自 11/9 傍晚起未再變動；受理至 11/30 或經費用罄。另記下年費制「購買後 2 個月內送件」與「受理至 11/30」的關係：10/31 購買者的 2 個月期限會超過受理截止，實務上仍以 11/30 為上限。
+- `aocai-working-free-ai-courses-2026`：11/16 梯次報名表仍可填、應付費用 0、報名至 **2026-11-11 12:30**；12/01 台北班仍「尚有票券」且全額免費，但明寫「名額將優先錄取未上過本主題課程的新學員」。已在 `unknowns` 寫明 **`deadline_at` 只代表最近一梯次**：11/16 班關閉後應改以 12/01 班為準，不可把整筆標成已截止（政策歷史同步追加 `deadline_scope_clarification`）。
+- `qoder-community-1024`：**不再重讀同一條路徑**。docs `llms.txt`（200、21,995 bytes）的 Events 分類 11 筆仍無 communityboost，且同清單對已結束活動是保留並加「[Ended]」（例如 bogo），本活動是整篇移除；`qoder.com/community-boost` 在 Wayback 沒有任何 200 快照，只有 docs 頁 2026-10-29 一筆。狀態維持 `expired`，下一輪不必再掃這兩頁。
+- `tw-labor-pretraining-ai-smart-application-tnnu-03`：報名人數 25 → **27**（名額 34，11/16 16:00 截止），其餘費用（5,760／27,040）、188 小時、11-18 甄試不變。`taoyuan-ai-productivity-online-courses-115`：頁尾更新日 115-11-07 → 115-11-10，但兩處截止日仍分別 11/17 與 11/20，衝突保留；11/12 與 11/17 場次的 Teams 連結仍未上架。
+- 其餘 9 筆（Amazon Research Awards、2026 ADI FORUM、AutoClaw 週福利、騰訊 Hy4 免費窗、UGREEN 黑客松、StepFun Audio 3、Azure 非營利、Colab、Canva 非營利、Kaiva Bridge）逐字重讀後主張不變，只刷新 `verified_at`、來源查閱時間並補 `verification_scope`。其中 Amazon 兩頁一致（徵案頁「October 1 - November 11, 2026 (11:59PM Pacific Time)」、索引頁「Fall 2026: Open Now」＋「extended to November 11」）；騰訊四個產品頁仍對 11/4–15 免費窗 0 命中，英文稿寫 available for free、中文稿寫「一定额度的免费使用」，兩者強度不同，不擇一。
+
+新增 2 筆機會（皆逐字取自官方頁，並先對全庫 id／title／summary 去重）：
+- `kimi-file-extraction-storage-api-temporarily-free`：Moonshot Kimi 開放平台定價文件逐字「File-related APIs (file content extraction and file storage) are temporarily free: uploading and extracting a document alone incurs no file API charges.」，但同一平台〈Recharge and Rate Limiting〉要求「a minimum recharge of $1 is required to start using the API」，累計 US$5 再贈 US$5 券，速率分級也依累計儲值。`setup_cost_usd` 記 1（不是 0），`quota_classification` 記 TEMPORARILY UNLIMITED；`taiwan` Unknown（國際站文件未列國別）。與 `kimi-free-web-app`（消費端網頁免費層）及 `kimi-api-free-voucher-cn-locked`（中國站 15 元券）是不同產品與方案。
+- `moe-ilink-aiea-winter-2026-teacher-workshops`：教育部資科司 iLink 計畫的 AIEA 認證，2026 冬季場 11/20、11/21、12/04、12/05 於逢甲大學文創館 3 樓各上下午場，頁面標「報名中」；參與對象逐字「全國各級大專院校的教師、助理、學生及社會大眾」。**全頁與報名表都沒有費用字樣**（「費用」「收費」各 0 命中），因此兩個費用欄位維持 null、狀態記 `needs_verification`、`categories` 不含 FREE——不讓未公布的費用被讀成免費。名額上限 40、iLink 團隊優先。
+- 未納入：Vectoree（沿上輪判斷，一次性 US$5 對讀者決策價值仍薄）、116 年度中小微企業 AI 創新應用輔導計畫（中企署 2026-10-21 政府採購預告，案號 B31162601、預估採購金額 15.85 億元、履約期 116/1/1–116/12/20）——那是**同一計畫的次年度委辦採購**，不是企業可申請的新方案，應在 115 年度那筆 `taiwan-sme-ai-innovation-guidance` 上更新，不另建 ID；本輪未動該筆，留給下一輪。
+
+品質改善（本輪唯一一項，`tools/prioritize.py` + `tests/validate.py`）：**`scope` 不能再被評分工具追加一次性遷移註記**。README 明寫「資料變更後重算：`python3 tools/prioritize.py`」，而舊版 `main()` 在 `scope` 不含「加入優先度評分與 S–D 分層」時會追加「YYYY-MM-DD 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）」——`scope` 每輪都會被改寫（每輪都要寫新的複核筆數），所以**每一輪跑完工具都會把當天日期貼回首頁那一句**，讀者看到的是「本輪新增了 2026-10-24 就上線的評分機制」。2026-11-11 在複本上實測重現：跑一次就得到「…各筆僅核列明範圍。；2026-11-11 加入優先度評分與 S–D 分層…」。已刪掉該段（工具只算分與同步 `updated_at`），並在 `tests/validate.py` 加一條斷言擋住這串字回到 `scope`。驗證：①複本跑 `tools/prioritize.py` 後 `scope` 與執行前逐字相同、`updated_at` 仍等於 `latest_research_at`；②把該句塞回 `scope` 後 `python3 tests/validate.py` 立即報 `top-level scope carries the one-time scoring migration note`。
+
+方法教訓（寫進資料與流程）：**「查不到」與「改版」要分開講**。本輪三筆的錯誤都屬同一型：阿里雲的排除清單是官方換了命名（舊字串還在，但不是現行條文）、經濟部 A+ 的 11507-2 版號是前人寫下但現行附件查無（應移除而不是保留）、Gemini Notebook 的每日 50 對話是被新的運算量制取代（不是同時存在）。判準是「現行頁面是否還逐字支持這句話」；支持不到就改成缺口或刪除，不要讓舊字串靠著「以前查過」留在摘要裡。另一型是**同一份文件回答兩個問題**：Anthropic 表單的「Are you located within the United States?」被讀成「需要美國稅務身分」，會直接把台灣申請人篩掉——表單題目的括號說明常常才是那個問題的真正用途。
+
+驗證與發布：`python3 tests/validate.py`（1,021 筆 PASS，含本輪新增的 scope 斷言與 README 首段數字）、`node --check app.js`、`node tests/filters.cjs`（17 組全 PASS：免費專區 661、quota 150、台灣條件適用 140／155、S 級 126、關鍵字「免費」797 筆命中）、`git diff --check`。瀏覽器實測（本機 8123、headless Chromium）：全庫 1,021 筆載入、overview 與快捷鍵一致（台灣條件適用 140、S 級 126）、「本輪更新」22 筆＝20 筆複核＋2 筆新增、截止日排序把 11/11 12:30 與 11/12 的案件排在最前並顯示剩餘天數、搜尋「iLink AIEA」與「Kimi」各命中 1／10 筆且卡片顯示費用未核實與台灣資格、console 0 error、390px 視窗 `scrollWidth` = `clientWidth` = 390（無水平溢出）。
+
+下輪優先（完整五項）：
+①`aocai-working-free-ai-courses-2026`：11/11 12:30 後確認 11/16 梯次報名表是否關閉；若關閉，改以 12/01 台北班為準（`deadline_at` 換成該班、無公布截止則填 null，**不可把整筆標成已截止**），並確認 11/17、11/26 梯次是否額滿；來源 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3544`、`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`。
+②`mango-inference-community`：官方三處仍寫「30% off … until Nov 11」且未標年份，11/12 起確認是否回到表列原價、US$10 註冊贈額的到期日（頁面只寫 will expire after the stated validity period）；來源 `https://www.mangoboost.io/platform/mango-inference`、`https://inference.mangoboost.io/pricing`。
+③尚未帶 `verification_scope` 的官方紀錄仍有 **87 筆**（可行動 74、其中 `taiwan=Yes` 3 筆）：不要批次回填，輪替排到時逐筆重讀官方頁再補；本輪已補 8 筆。
+④死連結維修：`https://perplexity-help-center.mintlify.app/llms-full.txt`（`perplexity-watch`、`perplexity-education`）先找替代官方頁（help center 另一路徑或 Wayback），再處理 `www.nscale.com/pricing`、astamuse、deepinfra、salad；qoder 兩頁已確認不必再掃。找不到就寫進 `access_risk`，不改狀態。
+⑤`smelearning-strongest-ai-king-line-points-2026`：11/11 重讀確認兩套官方文案仍並存（活動辦法頁 250 點 LINE POINTS、全站彈窗 5 張咖啡券，且彈窗的「活動詳情」指向 `news.php?node=840` 而該頁正文沒有活動辦法），需要官方一句話才能收斂；另 `google-ai-professional-certificate-tw-pro-3mo` 的 offer 條款 11/6 後仍未更新（11/13 排程已到），只需看條款頁是否改版、不要重讀行銷頁。

@@ -298,5 +298,12 @@ assert _scope_reviewed==len(reviewed), f'top-level scope says it reviewed {_scop
 assert run['started_at'][:10] in _scope, f'top-level scope does not mention this batch date {run["started_at"][:10]} — the homepage is showing an older round'
 _m=_re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
 if _m: assert int(_m.group(1).replace(',',''))<=len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
+# scope 只描述「這一輪做了什麼」。`tools/prioritize.py` 舊版會在每次執行時把
+# 「YYYY-MM-DD 加入優先度評分與 S–D 分層」追加到 scope 尾端（條件是字串不含該句，而 scope 每輪
+# 都會被改寫，所以等於每輪都追加），首頁於是宣稱本輪新增了 2026-10-24 就上線的評分機制。
+# 2026-11-11 在複本上跑一次該工具即重現。工具已不再寫 scope，這裡再擋一次，避免同樣的
+# 「一次性遷移註記」被重新貼回讀者看的那句話。
+for _stale in ('加入優先度評分與 S–D 分層',):
+ assert _stale not in _scope, f'top-level scope carries the one-time scoring migration note ({_stale}) — scope must describe only this batch'
 print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions, README headline counts, homepage scope counts.')
 print('tiers:',{t:sum(1 for o in d['offers'] if o.get('priority_tier')==t) for t in ['S','A','B','C','D']})

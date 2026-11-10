@@ -134,8 +134,14 @@ def main():
         data["updated_at"] = data["latest_research_at"]
     else:
         data["updated_at"] = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
-    if "加入優先度評分與 S–D 分層" not in data.get("scope", ""):
-        data["scope"] += "；" + now.strftime("%Y-%m-%d") + " 加入優先度評分與 S–D 分層（既有欄位衍生計算，無新增外部查核）"
+    # 這一支只算分，不改敘述。舊版會在 scope（首頁「本次研究範圍」的唯一來源）後面追加
+    # 「YYYY-MM-DD 加入優先度評分與 S–D 分層」，理由是 2026-10-24 首次導入評分時要留紀錄。
+    # 那段文字是**一次性遷移註記**，卻寫成「若字串不含此句就追加」：README 明寫每輪資料變更後
+    # 要跑 `python3 tools/prioritize.py`，於是每一輪只要 scope 被改寫（一定會改，因為 scope
+    # 每輪都要寫新的複核筆數），下一次跑就會把當天的日期再貼一次「加入優先度評分」到首頁，
+    # 讀者看到的是「本輪新增了評分機制」這種從未發生的事。2026-11-11 在複本上實測：
+    # 跑一次 prioritize.py 就得到「…各筆僅核列明範圍。；2026-11-11 加入優先度評分與 S–D 分層
+    # （既有欄位衍生計算，無新增外部查核）」。評分說明屬於 README，不屬於當輪 scope。
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2))
     print("優先度已寫入：", " ".join(f"{t}={counts[t]}" for t in (*TIERS, "未評級")))
 
