@@ -270,10 +270,22 @@ function sourceLink(source) {
 // （抽出字串裡最後一個 YYYY-MM-DD）修掉批次檢查，前端卻還留著舊寫法。
 // 只取最後一個日期或時間戳當排序鍵，原文仍照原樣顯示給讀者。
 const SOURCE_STAMP = /\d{4}-\d{2}-\d{2}(?:[T ]\d{2}:\d{2}(?::\d{2})?)?/g;
+// 有些舊來源沒有 accessed_at／accessed_time_range，查閱時間只寫在證據文字開頭
+// （例：「2026-11-01 05:06–05:07 Asia/Taipei實讀：…」）。這種來源原本排序鍵是空字串，
+// 於是永遠排在「最舊」，把同網址較新的那筆壓進「較早的 N 筆」。
+// 2026-11-10 統計 8 組同網址來源（5 筆紀錄：code-for-everyone、taiwan-ai-rap、kimi、gitlab、murf）
+// 中文證據寫的日期比畫面上顯示的主來源還新。只採用「開頭就是日期＋30 字內出現實讀動詞」的
+// 明確寫法，避免把「2026-10-23日本時間上線」這類公告日期誤當查閱時間。
+const SOURCE_READ_STAMP = /^\s*(\d{4}-\d{2}-\d{2})(?:[ ,，]*(?:[0-9]{1,2}[:：][0-9]{2}(?:[:：][0-9]{2})?)?)?[^\n]{0,30}?(?:實讀|重讀|查閱|讀取|複核|瀏覽|檢視)/;
+function sourceReadStamp(source) {
+  const match = String(source.evidence || '').match(SOURCE_READ_STAMP);
+  return match ? match[1] : '';
+}
 function sourceStamp(source) {
   const raw = String(source.accessed_at || source.accessed_time_range || '');
   const found = raw.match(SOURCE_STAMP);
-  return found ? found[found.length - 1] : raw;
+  if (found) return found[found.length - 1];
+  return sourceReadStamp(source);
 }
 
 function groupSources(sources) {
@@ -441,14 +453,16 @@ function createDetails(offer) {
     item.append(text('p', `支持範圍：${display(source.scope)}`));
     item.append(text('p', display(source.evidence)));
     const accessed = source.accessed_at || source.accessed_time_range;
-    item.append(text('small', `查閱時間：${accessed || '未另列，請參照證據文字'}`, 'source-date'));
+    const recovered = accessed ? '' : sourceReadStamp(source);
+    item.append(text('small', `查閱時間：${accessed || (recovered ? `${recovered}（來源未另列，取自證據文字）` : '未另列，請參照證據文字')}`, 'source-date'));
     if (entry.earlier.length) {
       const earlier = text('details', '', 'source-earlier');
       earlier.append(text('summary', `較早的 ${entry.earlier.length} 筆同網址紀錄`));
       for (const older of entry.earlier) {
         earlier.append(text('p', `支持範圍：${display(older.scope)}｜${display(older.evidence)}`, 'source-earlier-text'));
         const olderAccessed = older.accessed_at || older.accessed_time_range;
-        earlier.append(text('small', `查閱時間：${olderAccessed || '未另列'}`, 'source-date'));
+        const olderRecovered = olderAccessed ? '' : sourceReadStamp(older);
+        earlier.append(text('small', `查閱時間：${olderAccessed || (olderRecovered ? `${olderRecovered}（取自證據文字）` : '未另列')}`, 'source-date'));
       }
       item.append(earlier);
     }

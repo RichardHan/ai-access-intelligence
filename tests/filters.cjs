@@ -186,6 +186,23 @@ const annotated = ctx.groupSources([
 ]);
 assert.strictEqual(annotated[0].source.scope, '新ISO', 'an annotated free-text stamp must not hide newer evidence');
 assert.strictEqual(annotated[0].earlier[0].scope, '舊註記');
+// 沒有 accessed_at／accessed_time_range 的舊來源，查閱時間只寫在證據文字開頭。它們原本排序鍵是
+// 空字串，永遠排最舊，把同網址較新的一筆壓進「較早的 N 筆」。2026-11-10 統計 8 組（5 筆紀錄：
+// code-for-everyone-ai-school-2026、taiwan-ai-rap-pilot、kimi-api-free-voucher-cn-locked、
+// gitlab-education-ai-credit-exclusion、murf-startup-incubator-three-month）畫面上的主來源
+// 日期比被收起來的那筆還舊。只認「開頭日期＋30 字內有實讀動詞」的明確寫法。
+assert.strictEqual(ctx.sourceStamp({ evidence: '2026-11-01 05:06–05:07 Asia/Taipei實讀：私立學校可申請。' }), '2026-11-01');
+assert.strictEqual(ctx.sourceStamp({ evidence: '2026-10-26 23:08 Asia/Taipei實讀：條款原文。' }), '2026-10-26');
+assert.strictEqual(ctx.sourceStamp({ evidence: '2026-10-23日本時間上線，為北美以外首個開放地區。' }), '', 'a launch date is not a read time');
+assert.strictEqual(ctx.sourceStamp({ evidence: '2026-10-25 17:19–17:25 Asia/Taipei；同時段官方搜尋結果列 Education Pro' }), '', 'a bare timestamp without a read verb is not a read time');
+assert.strictEqual(ctx.sourceStamp({ evidence: '“professors and faculty members at accredited instituti' }), '');
+assert.strictEqual(ctx.sourceStamp({ accessed_at: '2026-10-25', evidence: '2026-11-01 實讀：x' }), '2026-10-25', 'an explicit accessed_at always wins');
+const recovered = ctx.groupSources([
+  { url: 'https://example.com/y', scope: '舊實讀', evidence: '2026-10-26 01:46 Asia/Taipei 實讀：舊。' },
+  { url: 'https://example.com/y', scope: '新實讀', evidence: '2026-11-01 05:06 Asia/Taipei實讀：新。' }
+]);
+assert.strictEqual(recovered[0].source.scope, '新實讀', 'an evidence-only read date must order the group');
+assert.strictEqual(recovered[0].earlier[0].scope, '舊實讀');
 // 資料驅動：任何同網址群組的主要來源都必須是最新的查閱時間（沒有時間者略過，無從排序）。
 for (const offer of d.offers) {
   for (const group of ctx.groupSources(offer.sources || [])) {

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,006 筆**（796 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 13:30 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **984 筆**既有紀錄未完成本輪複核。本輪沒有整筆讀取失敗的案例：前幾輪被判「只回 JS 外殼」的 Coze 與 Google Stitch 改以無頭瀏覽器渲染後取得官方原文（每日額度、UTC 重置與台灣付款限制）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
+資料集目前有 **1,007 筆**（797 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 15:44 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **18 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **988 筆**既有紀錄未完成本輪複核。本輪有 3 筆整筆追查失敗（astamuse 官方三路皆無痕跡、DeepInfra 僅存 2025 年存檔、Vultr Match 促銷頁連三輪 403），只記錄嘗試時間與原因，未刷新核實時間。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程。
 
 ## 使用方式
 
@@ -90,6 +90,26 @@
 只回前端外殼的頁面要渲染，不要一直換文字路線。2026-11-10 有兩筆紀錄連續三輪被判「追查失敗」：`www.coze.com/premium` 的靜態 HTML 只有 1.4–70KB 外殼（方案表、每日 10 credits 全在前端），`stitch.withgoogle.com` 更把內容放在 `app-companion` iframe 裡（ng-version 外殼只有 1.4KB）。換了 llms.txt、billing 文件、Wayback 快照都沒用，改用無頭瀏覽器（`browser` 的 tab + `frame()`）渲染後，一個下午就讀到官方逐字：「Free 0 USD / month 10 credits/day 5 collaborators 3 collaborative Bots or Workflows」「Payment service currently unavailable in Russia and Taiwan」「Yes, Stitch is currently provided free of charge. It operates on a daily credit limit… Credits reset at midnight UTC.」。判準是「同一 URL 的文字版連續兩輪都拿不到任何方案或額度字樣」——那時要換的是取用方式，不是網址。`tools/linkcheck.py` 會把這種頁面算成 `ok`（HTTP 200、內容空），所以連結健康不等於讀得到；兩份紀錄的 `last_review_attempt_at` 保留為歷史，較新的成功核實會讓卡片的「追查未成功」標記自動消失。
 
 追查失敗要自己成一個桶，不能等輪替剛好排到。`tools/queue.py` 自 2026-11-10 起把「`last_review_attempt_at` 晚於 `verified_at`」的可行動紀錄放進 `retry` 桶，排在逾期與即將到期之後、一般輪替之前，理由寫在 `failed_lookup()`：這些紀錄的最新證據就是「讀不到」，而它們的 `next_review_at` 往往還在 10 天後（當天 stitch 11/20、coze 11/23，兩筆都是當天早上才失敗）。冷卻改以「最後一次真的打開官方頁」計算（`max(verified_at, last_review_attempt_at)`），否則 2 小時前才失敗的紀錄會立刻從輪替回到佇列。實測 23:00 的模擬佇列：`articul8-bivia-early-adopter-billion-tokens` 在舊版前 50 名之外，新版以 `[retry]` 排在第 3；`--self-test` 新增五條規格值斷言（失敗要進 retry、12 小時內不重排、較新的成功蓋過舊失敗、已截止不排、retry 先於輪替）。
+
+2026-11-10 15:05–15:45 本輪（接續 a26f861 之後）：起始 **1,006 筆**；`next_review_at` 嚴格已到期 0 筆、7 日內到期 9 筆（全部已在當日 13:18–13:19 或凌晨核過，12 小時冷卻內）、24 小時未核 619 筆、`tools/linkcheck.py` 全掃 2,706 個 URL 得 dead 7／blocked 74／unreachable 9。上一則 13:30 才結束，其 20 筆不重讀。佇列＝dead 來源修復 6 筆＋付款風險／暫時不限量 8 筆＋`tools/queue.py` 輪替序 4 筆＋台灣算力時程 1 筆＋AICU 條款 1 筆，另複核既有 Pokee 紀錄。局部複核 **R=18 筆**，新增機會 **1 筆**、政策 0、觀察線索 0，整筆追查失敗 **3 筆**（只記 `last_review_attempt_at` 與原因，未刷新 `verified_at`）；未完成複核 **988 筆**。未登入、未申請、未付款。
+
+會改變讀者決定的更正：
+
+- `amd-itri-mi300x-open-compute-2026-watch`：**2026 年六梯次收件已全部截止**，不再是可申請的免費算力。時程歷來只存在於 AITA 頁面的圖檔，前幾輪一律記成「無法確認」。本輪以 OCR 讀出時程表六列（收件截止／審查／公告／使用期間／成果分享），再用同頁附件的申請書 docx 逐字核對六批次使用期間（第一批 01/21–03/06 … 第六批 11/11–12/18），圖與文字版的使用期間逐列相符，才以最後收件日 10/28 寫入 `deadline_at`、狀態改 `expired`、退出可行動清單，排程改 `monthly_or_new_signal`。台灣讀者原本會以為 11 月還有梯次可送件。
+- `fal-flux3-max-five-daily-sandbox`：原 `/flux-3-max-free` 已 404 且自 sitemap 移除（1,651 筆中 `-free` 只剩兩個），Wayback 對該路徑 0 筆捕獲；免費次數的現行官方頁是 `/sandbox`，今日本站原始 HTML 逐字為「6 free generations today. No account needed.」（11-09 同一位置是 7），官方文件只寫「Sandbox occasionally offers free credits」、**沒有每日重置定義**——先前寫成「每日 7 次」是把動態輸出當公告值。
+- `claude-artifacts-expired-lead`：促銷原文已由支援站下架（llms.txt 0 命中），改以官方說明文 2026-10-16 的 Wayback 存檔核實：Pro／Max／Team 10/01 起、Free 10/07 起、**10/15 23:59 PT 對所有方案結束**、Enterprise 不適用、可提前終止。狀態由 `expired_unverified` 升為 `expired`＋官方來源。
+- `nanonets-50-credits-no-card`：`recurring_cost_usd` 由 100 改 **0**。官方定價頁把 Starter 列為「Free — $50 in credits to start」，US$100／月是額度用完後的**選用**升級、免綁卡即無自動扣款，credits 由團隊共用且官方稱永不過期。舊值讓這筆被前端免費專區直接排除（該專區排除 `recurring_cost_usd>0`），等於把一個真免費方案藏起來。`taiwan` 仍維持 Unknown：條款未點名台灣只代表「未見限制」，不等於已確認可註冊。
+- `token-harbor-free-rolling-7day-allowance`：`taiwan` Unknown → **Yes**，依據是官方 FAQ 的正面表述「available outside these restricted regions: … Hong Kong … Macau …」，台灣不在排除清單、免費層免卡無額外國別資格；`quota_classification` UNKNOWN → 「未公布固定上限」。另補兩項條件：免費模型沒有額外每分鐘上限，TH-Rudder 在 Rudder.chat 的限時活動文字對話官方稱不限量。
+- `adobe-firefly-twelve-month-model-promotion`：`taiwan` Unknown → **Yes（需付費訂閱合格方案）**，並在標題與摘要寫明 **Firefly Standard NT$357 不在促銷名單**、最低門檻是 Pro NT$704。這筆是付費方案的附帶優惠，`TEMPORARILY UNLIMITED` 會讓它進首頁「無限專區」而該專區不看費用，本輪只用標題補救。
+- `aicu-evaluation-ap`：條款 v2026-10b 新增核到會影響使用的限制——**免費點數產生的輸出得由官方按自訂比例加入 AICU 短句或標記**（例：語音末尾一句話），只有已購買 AP 的輸出不含；違規計費上限為前 12 個月實付兩倍。首頁與 FAQ 同日皆回 HTTP 522，AP 換算率與 FAQ 衝突本輪未能重核，`verification_scope` 已寫明只核條款本體。
+
+新增 1 筆：`wandb-academic`（Weights & Biases 學術方案，學生／教師／學術研究者永久免費，含 200GB 儲存；官方兩頁逐字取得，但學術身分驗證方式取不到——`docs.wandb.ai` 的學術 FAQ 需 access code）。去重後丟棄另外 4 個候選：`pokee-developer-early-access-2000-credits` 已存在（本輪改以定價頁補上免費層 500 點／月與 18 歲門檻）、`elevenlabs-startup-grant` 已存在、OrcaRouter 的 Hacker 層是零加成但**仍需自付 token 費用**的閘道、其 promo 卡片為 JS 動態且取不到任何金額、Alibaba Token Plan 個人版非免費且僅新加坡區。
+
+品質改善（本輪唯一一項，已隨本輪 commit）：`app.js` 的 `sourceStamp()` 只用 `accessed_at`／`accessed_time_range` 當排序鍵，但有一批舊來源沒這兩個欄位、查閱時間只寫在中文證據開頭（例「2026-11-01 05:06–05:07 Asia/Taipei實讀：…」）。它們的排序鍵是空字串，於是在同網址群組中永遠排最後，把同一網址較新的那筆壓進卡片的「較早的 N 筆同網址紀錄」——讀者看到的主要來源比被收起來的還舊。新增 `sourceReadStamp()` 只認「開頭就是日期、且 30 字內出現實讀動詞」的明確寫法（避免把「2026-10-23日本時間上線」這種公告日期誤當查閱時間），詳情標「來源未另列，取自證據文字」。量測：全庫 467 組同網址來源中有 8 組的主要來源因此改變，涉及 5 筆紀錄（`code-for-everyone-ai-school-2026`、`taiwan-ai-rap-pilot`、`kimi-api-free-voucher-cn-locked`、`gitlab-education-ai-credit-exclusion`、`murf-startup-incubator-three-month`）。`tests/filters.cjs` 補 7 條規格值斷言（含「公告日期不是查閱時間」「明確 accessed_at 優先」與一組排序結果）。
+
+研究流程的可重用結論：**只存在於圖檔的時程不能一直記成「無法確認」**。可行順序是 ①先找同頁附件的文字版（docx／PDF／EDM），②對圖檔 OCR 只取數字欄位，③用附件文字交叉驗證 OCR 的欄位語意，④欄位語意仍不確定就只寫能交叉驗證的部分。本輪 AITA 是 ①＋②＋③ 都成立才敢改狀態；只有 OCR 一項時應停在「推定」並留在 unknowns。另一條：**「官方頁沒點名台灣」不是台灣可用**——Nanonets／Maritaca 的條款都只寫年齡與制裁條款，本輪維持 Unknown，只有 Token Harbor 那種「正面表述 available outside 這份清單」才敢改 Yes。
+
+下輪優先（完整五項）：①`vultr-match-ai-compute` 促銷頁連三輪 403（curl 與無頭瀏覽器同被 Cloudflare 攔），條款只能靠 2026-06 Wayback，下輪改查 `discover.vultr.com/offers`、docs 促銷條款與最新 200 快照；若仍 403 就把「條款不可公開驗證」寫進 `access_risk` 並停週更。②`perplexity-watch`／`perplexity-education`：Pro US$20 仍無官方原文（本輪已把月費欄留空）、免費 Pro Search 3/day 與 5/day 並存、年繳退款窗 48h 與 72h 並存，下輪以瀏覽器過 Cloudflare 抓 `/pricing` 一次，再不行就在站上固定標「未核實」。③`astamuse-agent-trial-oct31-index-only`：官方 REST／2026 列表／Wayback 三路皆無痕跡，已下修 `expired_unverified`，下輪改查日本轉載與官方社群帳號，仍無則考慮整筆標為第三方索引傳聞。④`deepinfra-two-minute-papers-twenty-credit`：只有 2025-04-30 存檔，2026 年 0 筆捕獲，下輪查 Two Minute Papers 影片說明與 DeepInfra blog，否則把活動定年為 2025 並降頻。⑤`aicu-evaluation-ap`：`ch.aicu.ai` 首頁／FAQ 仍 522，下輪重試並確認 1 USD=10,000 vs 15,000 AP、AP 90 日 vs 180 日的衝突是否已由官方修正。
 
 2026-11-10 13:05–13:30 本輪（接續 f8e555d 之後）：起始 1,004 筆；`next_review_at` 嚴格已到期 0 筆、7 日內到期 8 筆（6 筆在 12 小時冷卻內）、24 小時未核 599 筆。上一則 12:33 才結束，其 13 筆不重讀。佇列＝台灣硬期限 12 筆＋`tools/queue.py` 的輪替序（2026-10-31 那批）＋前幾輪追查失敗的兩筆。局部複核 **20 筆**：硬期限 12 筆（臺北青年 AI 補助期限日、服務業 AI 課程 11/16 班、Amazon ARA、ADI FORUM、新竹市補助餘額、桃園課程、UGREEN、StepFun、騰訊 Hy4、AutoClaw、Rime STT、Mozilla 育成）＋最久未核輪替 6 筆（Lamatic、Cloudflare 新創、Tavily、Devin、Superwhisper、Nebius）＋追查失敗改以瀏覽器渲染核實 2 筆（Coze、Google Stitch）。新增機會 **2 筆**、政策 0、觀察線索 0；整筆追查失敗 **0 筆**。另讀 2 筆無實質變更（NVIDIA 開源教材、Foundry Local，兩頁今日重讀逐字未變），為維持每輪 20 筆上限未計入複核數、排程不動。未登入、未申請、未付款。
 
