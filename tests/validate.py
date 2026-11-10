@@ -79,6 +79,15 @@ for o in d['offers']:
 offers_by_id={o['id']:o for o in d['offers']}
 for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
 for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
+# 反向的漂移：批次期間被刷新 `verified_at`、卻沒有列進本批次的紀錄。上面兩條只檢查「列進來的
+# 時間夠新」，沒有任何一條檢查「沒列進來的不准變新」；把一筆沒重讀的紀錄 `verified_at` 改成今天，
+# README 的複核筆數、首頁 scope 與 `last_research_run` 全部照舊通過，卡片卻宣稱今天核過。
+# 2026-11-11 本輪改 12 筆時實測：只改時間不動 `reviewed_ids`，前面的檢查全綠。
+# 只看批次窗口內（>= started_at）的時間，因為同一天可能有好幾個批次，當天早班的紀錄不屬於本輪。
+_batch_claim=set(reviewed)|set(new)|set(attempted)
+for o in d['offers']:
+ if o.get('verified_at') and latest_stamp(o['verified_at'])>=latest_stamp(run['started_at']) and o['id'] not in _batch_claim:
+  raise AssertionError(f'{o["id"]} has verified_at {o["verified_at"]} inside this batch window but is not in reviewed_ids/new_ids/attempted_failed_ids: report it or keep the older verified_at')
 run_day=run['started_at'][:10]
 # 存取時間是自由文字（ISO、ISO 區間、甚至「2026-10-25（Asia/Taipei）」這種帶註記的寫法）。
 # 舊版用 `raw.split('/')[-1][:10]` 取日期，遇到帶註記的值會取到「Taipei）」這種片段，

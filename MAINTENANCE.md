@@ -2376,3 +2376,61 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `google-ai-professional-certificate-tw-pro-3mo`（weekly，11/18）與 `deepl-api-developer` 的 403：前者的 Google One 條款是否再改版、是否出現新的 Wayback 抓取；後者的 API-key 文章是否解除封鎖（解除則改回直接引用並更新 CAT 工具衝突）。來源：`https://one.google.com/offer/terms-and-conditions/google-career-certificates`、`https://support.deepl.com/hc/en-us/articles/360020695820-API-key-for-DeepL-API`。
 
 **常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 85 筆（可行動 72）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的 208 筆狀態語意漂移（先訂規則）；2026-10-31／11-01 批次仍有未核紀錄，`next_review_at` 多在 11-30，排到再讀。
+
+## 2026-11-11 05:05–05:33（Asia/Taipei）第 N+3 輪：16 筆複核（最久未核 10＋主 agent 4＋台灣待解 2）、3 筆新增、1 筆追查失敗
+
+**範圍與計數**：N=1,031、R=16（B 組最久未核輪替 10、主 agent 4、C 組台灣待解 2）、A=3（opportunity 2／policy 1／watchlist 0）、U=1,015、attempted=1（Adobe for Startups，未計入 R）。資料集 1,034 筆。佇列基準：`next_review_at` 嚴格逾期 0 筆、7 日內到期 10 筆（9 筆仍在 12 小時冷卻內）、`retry` 桶 0 筆、12 小時內已核 135 筆——上一輪（04:05–04:45）才剛結束，因此不重讀那 18 筆，改取 2026-10-31 建檔的最久未核批次與台灣待解問題。時間戳一律對錶：初稿把 `verified_at` 寫成 05:34，實際時鐘才 05:23，被 `tests/validate.py` 的未來時間戳斷言擋下後全部改寫（同型錯誤第二次發生，見下方失敗經驗）。
+
+**實質變更（會改變讀者判斷）**
+
+1. **Playground Free 額度變動**：定價頁已由 `playground.com/pricing` 301 轉到 `playgroundai.com/design/pricing`。Free 現列 **6 monthly credits**（每月更新）與 **v3 每 3 小時 5 張**（v3 不消耗 credits），每日 2 次下載。舊紀錄寫「每月 3 點」與「概述 10 張、表格 5 張衝突」；兩者都已過時，衝突消失。`setup_cost_usd` 由 null 補為 0（頁面明寫 $0）。
+2. **Wordtune 學術折扣資格擴大**：官方計費政策、折扣政策與 plans FAQ **三處**都把**非營利／NGO 員工**與學生、教育工作者並列享 30%，證明為 .edu／學術信箱或在學／在職／非營利任職證明。計費政策另寫「For international users, Wordtune does not offer region-specific pricing」（台灣 Unknown 的依據），所有用戶 yearly Unlimited 續約另有 15%。並列衝突：折扣政策頁寫不可與 annual billing savings 疊加，plans 頁 FAQ 寫 annual／monthly 皆可。
+3. **臺北酷 AI 補助的 7 萬／9 萬衝突已解**：以 pdftotext 逐頁比對三份 PDF——10/29 修訂版（北市教資字第1153109192號函修訂）表 2 已改為「新臺幣 7 萬元」，與同份經費基準一致；9 萬元只存在於僅載 1153078958 號函核定的舊版。教育局 115/7/16 公文正本同樣寫一般組 7 萬、進階組 12 萬。計畫書申請章只有第 1 批（9/11）與第 2 批（11/13），**無第 3 批**。上一輪把舊版筆誤當成「官方兩說並列」，本輪撤回並改寫摘要與 `unknowns`；教育局官網原始公告頁仍未取得（公文公告列表與站內搜尋皆無此案）。
+4. **MeetGeek 用量分類改記未核**：三頁措辭未變（教育／非營利終身 30%、新創年繳 up to 30%），但這是折扣方案、官方沒公布任何額度，`quota_classification` HIGH BUT LIMITED → **UNKNOWN**，避免卡片暗示存在額度。Pro 顯示 US$13.30 並掛「30% OFF」，折前折後未說明。
+5. **Hex 補上付費路徑**：教育 Professional 免訂閱費（官方未說期限或綁卡），但 auto top-up 啟用後餘額低於 25 credits 會自動購買 50-credit 包並收 **US$25**；一般 Professional US$36/editor/月、30 credits/月，Community 5 credits/月。原本的 `usable_duration` 是佔位字「請依方案及帳戶條件確認。」，已換成逐字證據。
+6. **Base44 補上每日上限**：官方文件寫註冊時建立的個人工作區每天最多 5 個 message credits、每月 25 個，其他 Free 工作區不給免費訊息點數；當日用完暫停至隔日重置（依工作區擁有者當地時區），未用完的點數在重置時失效。
+7. **服務業 AI 免費課程的期限語意**：11/16 梯次在 05:30 仍受理（報名至當日 12:30），後續梯次都還在：11/17 商研院班、11/26 工研院班（**頁面寫報名截止 2026/11/19**）、12/01 BizBoost 班（尚有票券、全額免費）。`deadline_at` 是最近一梯次的報名截止，不是整個計畫的結束日；`unknowns` 已寫明換梯次時要改以次一班為準。
+8. **Adobe for Startups 追查失敗（attempted，未刷新 `verified_at`）**：計畫頁 `business.adobe.com/solutions/startups.html` 在本機網路 0 bytes 逾時／HTTP2 INTERNAL_ERROR（同網域根目錄回 200），`www.adobe.com` 各語系 startups 頁 Akamai 403，Wayback CDX 無快照。`next_review_at` 由 12/11 縮到 **11/18**（`tests/validate.py` 的「失敗後 14 天內重試」規則），失敗原因寫進 `last_review_attempt_reason`。
+
+**新增（3 筆）**
+
+- `aws-pioneer-credits-thousand-90-days`（opportunity，B 級）：AWS Pioneer 對「new to AWS 或尚未部署實質工作負載」的企業給 **US$1,000**、核准後直接入帳、**90 天到期**；不含 Marketplace、Support 與 RI／SP 預付；官方把 Free Tier（產品功能）與 Pioneer（第一次上雲的資金補助）分開定位。開帳號仍須有效信用卡。台灣 **Unknown**：頁面與促銷額度條款都沒有國別條款，申請表國別選項要登入才看得到。來源 `https://aws.amazon.com/pioneer-credits/`、`https://aws.amazon.com/awscredits/`。
+- `microsoft-365-education-a1-retirement`（policy）：2026-11-05 微軟改組 M365 教育版——新增學生限定、無額外費用的 **MA0**（含桌面／網頁 Office、Minecraft Education、Entra ID Free、Learning Zone，**不含 Exchange／SharePoint／Teams**），須機構具備 MA2 以上教職員全額付費授權、且學生以 Windows 裝置學習；**Office 365 A1 於 2027-05-01 停售、2028-01-01 退役**，Student Use Benefit 與免費 Exchange Online for Alumni 同日退場，全部綁機構「2028-01-01 之後的第一次續約」。台灣 **Yes（條件式）**：微軟台灣繁中教育頁 FAQ 仍寫合格機構信箱可免費取得 A1；個人無法自行申請，須透過學校。來源 `learn.microsoft.com` 產品組合頁＋台灣教育頁。
+- `openai-codex-students-us-canada`（opportunity，D 級）：美加學位授予大學在學學生 **US$100＝2,500 Codex credits**，SheerID 驗證、一人一次、12 個月失效、**非 API 額度**；條款逐字要求「就讀美加大學且申請時居住美加」。台灣 **No**——收錄目的是讓讀者不必白跑。
+
+**未納入（本輪判斷）**：Gemini Notebook 免費教科書（2026-10-29；內容目錄而非額度，且未證台灣可見）、ZenMux × Tencent Hy4（僅官方 X 貼文，站內無活動頁）、AWS Semarak AI Malaysia（馬國國家計畫，台灣不可申請）、Claude Corps（官方明寫非美國組織暫不可申請）、Alibaba Model Studio 10/29 移除新戶額度（屬既有 `aliyun-model-studio-new-user-quota` 的條件變動，該筆已記錄，不另建檔）、Vercel Ling／MiniMax（已截止）、Cursor 學生（6/25 已停新申請）、Devin SWE-2 Flash（僅付費用戶）、Claude Frontier Academy（提名制）。
+
+**來源衝突與缺口（保留，不擇一）**
+
+- **Wordtune**：折扣政策頁「cannot be combined with … annual billing savings」vs plans 頁 FAQ「both our annual and monthly plans」。
+- **MeetGeek**：US$13.30 是折前或折後，官方未寫（19×0.7=13.3 只是推算）。
+- **臺北酷 AI**：教育局官網原始公告頁取不到，證據是公文 PDF 與學校轉知；第 2 批實際受理與剩餘名額未核。
+- **中華電信**：1399 資費搭 2TB 首年 0 元只在新聞稿附表，活動頁首年優惠卡只列 799–999 資費（來源層級不同，已寫進 `unknowns`）。
+- **服務業 AI 課程**：11/16 梯次 12:30 之後是否即時關閉無法在 05:30 判定；各梯剩餘名額未核。
+- **Dify 教育**：畢業後效期兩頁措辭不同（沿用既有缺口）。
+
+**流程改善：`tests/validate.py` 新增「批次窗口內的時間戳不得憑空變新」**
+
+- 觀察到的問題：原本只檢查「列進 `reviewed_ids`／`new_ids` 的紀錄，`verified_at` 必須夠新」，沒有任何一條檢查「沒列進來的不准變新」。本輪改 12 筆時實測：把一筆沒重讀的紀錄 `verified_at` 改成今天、`reviewed_ids` 不動，README 的複核筆數、首頁 scope 與批次欄位全部照綠，卡片卻宣稱今天核過。
+- 預期結果：任何在批次窗口（`>= last_research_run.started_at`）內被刷新查核時間的紀錄，都必須出現在 `reviewed_ids`、`new_ids` 或 `attempted_failed_ids`，否則建置失敗；同一天早班批次的紀錄不受影響（只看窗口，不看整個日曆日）。
+- 驗證方式：在 `/tmp` 複本注入一筆未列批次的 `verified_at`（`octoparse-ai-free-new-user-five-credit` → 05:20），validator 如預期報 `... inside this batch window but is not in reviewed_ids/new_ids/attempted_failed_ids`；移除注入後 PASS。
+- 本輪評估後不改的：曾想把「VALUE-DEAL 且無數字」的折扣紀錄自動標記為用量分類可疑，實測全庫只有 2 筆（`signld-…`、`fibery-…`），樣本太小且規則會誤判，放棄。
+
+**平行研究的操作問題（本輪實際遇到）**
+
+1. **兩個 subagent 都跑了 15–16 分鐘**，中途長時間停在同一 stage（45%／35%）。我在 12 分鐘時直接發訊息要求「先把已完成的寫成檔案再回訊息」，兩筆都在 3 分鐘內交付。下一輪的任務說明應該一開始就要求「先寫檔、再回訊息」，並給定交付時限。
+2. **subagent 給的 `quota_classification` 用了 schema 外的值**（`SINGLE GRANT`、`NO-COST LICENSE`、`FREE CONTENT`）與 `categories` 用了 `EDUCATION`／`POLICY`；整合時全部改回 schema 允許的值。`tests/validate.py` 的 jsonschema 檢查會擋，但仍要在交付格式裡直接列出允許值。
+3. **兩個 agent 的引用我逐筆重讀**：Playground、Wordtune、MeetGeek、Hex、Dify、Craft、LTX、Kapwing、TensorPix、Vizard、Base44、酷 AI 兩份 PDF、中華電信、AWS、Microsoft Learn、OpenAI 活動頁都自己再打一次；`blog.adobe.com` 與 Akamai 403 的頁面（微軟英文部落格）不作為來源。
+4. **時間戳**：本輪初稿把讀取時間寫成未來 5–11 分鐘（實際 05:12–05:30，卻寫 05:23–05:38），validator 的未來時間戳斷言擋下。寫入前先跑 `TZ=Asia/Taipei date -Iseconds`，不要用「大約過了幾分鐘」推估。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,034 筆、S/A/B/C/D＝130/186/126/273/106）、`node --check app.js`、`node tests/filters.cjs`、`git diff --check`（見下方瀏覽器檢查）。
+
+**下輪優先（完整五項）**
+
+① `aocai-working-free-ai-courses-2026`：**11/11 12:30 之後第一件事**是重讀 ievents id=3544——若已關閉，把 `deadline_at` 改成 11/26 班（報名截止 11/19）或 12/01 班（尚未公布截止）並改寫摘要第一句；順便核 11/17 商研院班是否額滿。來源：`https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://college.itri.org.tw/Lesson/LessonData/7571A149-3346-4FAE-B5AF-DCADB2DBDAC3`、`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`。
+② `taipei-kuai-ai-school-grant-batch2-115`（11/13 截止、daily）：11/13 後若無延期公告改 `applications_closed`、`review_cadence` 改 `monthly_or_new_signal`；並再試一次教育局官網原始公告（`doe.gov.taipei` 公文公告列表）。來源：`https://www.fg.tp.edu.tw/news/…`、計畫書 PDF。
+③ `adobe-startups-free-year-firefly-acrobat-semrush`（next 11/18）：換網路或請人代抓 `business.adobe.com/solutions/startups.html`，目標是「申請表是否要求付款方式」「有無國別下拉」；若仍失敗，找 Adobe for Startups 的條款頁或 partner 頁。來源：`https://business.adobe.com/solutions/startups.html`、`https://blog.adobe.com/en/publish/2026/11/02/introducing-adobe-for-startups`。
+④ `aws-pioneer-credits-thousand-90-days`（12-11）：確認申請頁國別選項是否含台灣（需 AWS 登入，可由有帳號者代查）、是否與 AWS Activate 額度互斥、有無官方公告日。來源：`https://aws.amazon.com/pioneer-credits/`、`https://aws.amazon.com/activate/`。
+⑤ `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式；另核微軟台灣各校 A1 合約到期日（決定實際受影響時間）。來源：`https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`、`https://www.microsoft.com/zh-tw/education/products/office`。
+
+**常態待辦（不佔上面五項名額）**：仍缺 `verification_scope` 的官方紀錄 85 筆（可行動 72）、`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）、2026-10-31／11-01 批次仍有未核紀錄（`next_review_at` 多在 11-30），排到再讀。
