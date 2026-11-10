@@ -185,7 +185,8 @@ const SEARCH_FIELDS = [
   'setup_cost_basis', 'cost_note', 'recurring_cost_original', 'quota_details', 'quota',
   'quota_classification_note', 'usable_duration', 'cancellation', 'access_risk',
   'plan_variants', 'regional_variants', 'offer_validity', 'terms_compliance', 'tos_status',
-  'legal_and_terms_note', 'deadline_at', 'expires_at', 'expiry', 'duplicate_of'
+  'legal_and_terms_note', 'deadline_at', 'expires_at', 'expiry', 'duplicate_of',
+  'announcement_at'
 ];
 
 function searchText(offer) {
@@ -439,6 +440,12 @@ function createDetails(offer) {
       : '未核實；服務條款資格不等於法律意見。');
   if (offer.legal_and_terms_note) addRow(grid, '法律與條款補充', offer.legal_and_terms_note);
   addRow(grid, '證據缺口', offer.unknowns?.length ? offer.unknowns : '未另列缺口，不代表全面驗證。');
+  // 「核實時間」是我們最後一次讀官方頁的時間，不是官方公布這個方案的時間。卡片先前只印前者，
+  // 於是「2024-04-24 公布、今天重讀仍寫同樣數字」的紀錄看起來跟本月新方案一樣新
+  // （2026-11-11 統計：125 筆記錄 announcement_at，76 筆的公告日比最後核實日早 30 天以上，
+  // 最久 930 天，例：salad-ssap-migration-credit-watch 公告 2024-04-24、核實 2026-11-10）。
+  // 有值就照原文列（含時刻的 ISO 字串不換算，避免把只有年月的值推成某一天）；無值不補猜測。
+  if (offer.announcement_at) addRow(grid, '官方公告日期', offer.announcement_at);
   addRow(grid, '核實時間', offer.verified_at ? `${dateLabel(offer.verified_at, true)} Asia/Taipei` : '未核實');
   const cadence = {
     daily: '每日', monthly: '每月輪替', weekly: '每週', biweekly: '雙週輪替',

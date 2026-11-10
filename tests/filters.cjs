@@ -582,3 +582,23 @@ const shown = scopeRow(withScope);
 assert.strictEqual(shown.children[0].textContent, '本次核實範圍');
 assert.strictEqual(shown.children[1].textContent, withScope.verification_scope.trim(), 'the recorded scope must be shown verbatim');
 console.log('PASS: 核實範圍 row states whether the scope was recorded instead of printing a generic claim.');
+
+// 「核實時間」不是「公告時間」。卡片的核實日是我們最後一次讀官方頁的時間，公告日才是方案公布的
+// 時間；先前只印前者，於是 2024-04-24 公布、今天重讀仍寫同樣內容的紀錄（salad-ssap 等）看起來
+// 跟本月新方案一樣新。2026-11-11 統計：125 筆有 announcement_at，其中 76 筆的公告日比最後核實日
+// 早 30 天以上。規格值：有欄位就必須出現「官方公告日期」並照原文顯示，沒有就不得出現該列。
+const announcementRow = record => ctx.createDetails(record).children
+  .find(node => node.tagName === 'dl').children
+  .find(row => row.children[0].textContent === '官方公告日期');
+const announced = d.offers.filter(o => o.announcement_at);
+assert(announced.length >= 50, `expected records that record an announcement date, got ${announced.length}`);
+const staleAnnouncement = announced.find(o => o.id === 'salad-ssap-migration-credit-watch');
+assert(staleAnnouncement && staleAnnouncement.announcement_at.startsWith('2024-'), 'expected a record whose announcement predates its verification by more than a year');
+for (const offer of d.offers) {
+  const row = announcementRow(offer);
+  if (offer.announcement_at) assert(row, `missing 官方公告日期 row for ${offer.id}`);
+  else assert(!row, `unexpected 官方公告日期 row for ${offer.id}`);
+}
+assert.strictEqual(announcementRow(staleAnnouncement).children[1].textContent, staleAnnouncement.announcement_at, 'the announcement date must be shown verbatim, not reformatted');
+assert(!announcementRow(d.offers.find(o => !o.announcement_at)), 'a record without announcement_at must not claim an announcement date');
+console.log(`PASS: 官方公告日期 is shown for the ${announced.length} records that record it and never invented for the rest.`);

@@ -2436,3 +2436,63 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式；另核微軟台灣各校 A1 合約到期日（決定實際受影響時間）。來源：`https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`、`https://www.microsoft.com/zh-tw/education/products/office`。
 
 **常態待辦（不佔上面五項名額）**：仍缺 `verification_scope` 的官方紀錄 85 筆（可行動 72）、`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）、2026-10-31／11-01 批次仍有未核紀錄（`next_review_at` 多在 11-30），排到再讀。
+
+## 2026-11-11 06:05–06:28（Asia/Taipei）第 N+4 輪：17 筆複核（7 筆到期／即將關閉＋10 筆最久未核）、2 筆新增、0 筆追查失敗
+
+**範圍與計數**：N=1,034、R=17（A 組 7 筆 11/11–11/17 到期或即將關閉、B 組 10 筆 2026-10-31／11-01 最久未核輪替）、A=2（opportunity 2／policy 0／watchlist 0）、U=1,017、attempted=0。資料集 1,036 筆。佇列基準：`next_review_at` 嚴格逾期 0 筆、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、`retry` 桶 0 筆、24 小時未核 650 筆。上一輪（05:05–05:33）才結束 32 分鐘，其 16 筆不重讀；本輪因此取「快要不能動作」與「最久沒人看」兩端，不重查沒有新訊號的中間層。
+
+**實質變更（會改變讀者判斷）**
+
+1. **Notion 新創補上兩條未曾記載的資格**：官方新創頁 FAQ 逐字「You must be a non-paying Notion customer with a valid work email (**no Gmail, Outlook, etc**), **have not received any previous Notion promotions**, and have fewer than 100 employees.」舊紀錄只寫人數與未付費。同頁另公布價值上限「Business Plan costs $20 per member paid annually. The startup offer is equivalent to a **maximum of $12,000 for 100 employees**」。另記下 1 個月方案的四類原因（未滿 10 人、SMB／服務業、資料驗證不足、網站不完整／只有個人社群／單人申請）。1,500 Standard＋500 Select／人／月、分池不結轉不變。
+2. **ADI FORUM 報名表比舊紀錄嚴**：必填欄位除姓名、電子信箱、聯絡電話，還包含**公司名稱、部門、職稱、用餐（葷／素／自理）、驗證碼與個資同意**；同一人不可同時報名實體與線上場次，也不可同時報名下午 A、B 場。活動本身（11/12 09:30–16:25、世貿一館 2 樓、全程免費、實體＋線上直播）與頁面「無國籍／設籍條件」不變。
+3. 其餘 15 筆逐字重讀後主張不變，但都補上本輪 sources、`verification_scope` 與排程：Amazon Research Awards 仍「extended to November 11」（`modified 2026-10-28`，無二次展延，台北 11/12 15:59）；AutoClaw 仍 11/9–11/15 23:59 UTC+8、每帳戶一次；StepFun 仍免費至 11/17 11:59:59（官方把中午前寫成「11:59:59 AM」，照抄不改寫）；Rime STT 仍 Free until Nov 19；桃園 AI 課程仍「報名日期 115-08-28~115-11-17」，但同一市府網域的報名列表寫到 **115-11-20**，兩說並存；騰訊 Hy4 英文稿「available for free」與中文稿「提供一定额度的免费使用」仍衝突，且 codebuddy.ai 訂閱文件／`/pricing`（9KB 外殼）都查不到此窗口。
+
+**來源衝突（保留，不擇一）**
+
+- **騰訊 Hy4**：英文稿像全免費、中文稿明示有額度上限且不給數字；產品端（codebuddy.ai 訂閱文件、workbuddy.cn）無此免費窗。
+- **桃園 AI 課程**：課程頁截止 11/17 vs 報名列表公告至 11/20（保守取 11/17）。
+- **Langtail**：Free 方案 CTA 是「Contact us」 vs 同頁 FAQ「start using Langtail immediately」；額度單位「2 prompts or assistants」vs「2 projects」。付款方式 §7.9 是否豁免 Free 仍無解。
+- **Retool**：AI credits 定價頁 Team 1,000／Business 3,000 vs 計費文件 750／1,500，本輪第二次確認仍並存。
+- **CodeRabbit**：FAQ 寫 free 14-day「Team」trial，plans 文件寫 14-day「Advanced」trial。
+- **Smallest.ai**：新創頁對全球開放、給 US$10,000 credits，但條款 §6(b)（不得為商業利益出售／分享輸出）與 **§7(j)**（不得為任何商業目的使用服務）原則上排除商業用途，是否有 Order Form 豁免仍無書面說明；本輪取得更硬的官方原文「open to startups globally, with no geographic restrictions on participation」，`taiwan` 維持 Yes 但保留「不保證核准、不保證商用」的警語。
+
+**新增 2 筆（皆逐字取自官方頁，主 agent 自行重讀）**
+
+- `ntpc-ai-agent-workshops-estudy-all-taiwan-free-2026`（S 級）：新北市教育局 2026-10-22 公告把 5 場 AI 實戰工作坊影音與講義上架新北市數位學習影音網，官方逐字「全臺免費開放」「不用花萬元報名費、免綁約、零門檻」。無報名、無名額、無截止日，**不提供任何模型額度**（summary 與 access_risk 都寫明），`quota_classification` 記 NO FIXED CAP PUBLISHED。
+- `cgu-air-ai-platform-campus-quota-2026`（S 級、條件式）：長庚大學 CGU AI 平台「師生可透過本平台取得 AI 使用額度，無須額外付費」，API Key 可接 Codex／opencode，另有校內地端模型。首頁重要公告 dialog（`data-notice-id=service-update-20261103`）逐字「因資安考量，我們已關閉 API 服務，以及生圖、語音轉文字的外部模型服務」，有金鑰者仍可用 Codex、新金鑰仍可領。額度數字未公開（UNKNOWN），平台自述「非長庚大學正式的基礎服務」。**這則公告是 modal，`read` 的原生擷取看不到**，要讀 raw HTML 的 `<dialog>` 或渲染後畫面。
+- **未納入：`microsoft-for-startups-azure-credits-150k`**。子代理交付的候選與既有 `azure-startups`（2026-11-09 核實）是同一計畫，且既有紀錄更完整（無推薦碼 US$200 → 商業驗證 US$5,000 → 依用量升 25K／50K／150K；推薦碼路徑起始 US$1,000）。候選只讀 application 頁，因此把 15 萬誤綁在推薦碼路徑，屬單頁取證的過度收斂，不另建 ID。
+
+**證據缺口**
+
+- ADI FORUM：實體席次是否額滿、線上直播連結如何取得、11/12 當日是否如期（06:16 前無取消公告）。
+- Notion 新創：台灣公司是否受理（無國別文字）、1/3/6 月期滿後續費與是否自動轉付費。
+- CGU：額度數字與重置週期（需登入 dashboard）、外部模型 API 是否恢復、是否有正式使用條款。
+- 新北工作坊：estudy 是否需登入才能播放（未播放）、影音下架日、講義授權。
+- 服務業 AI 課程：`aocai-working-free-ai-courses-2026` 的 11/16 梯次 06:23 仍在報名期間（截止 12:30），**12:30 之後是否即時關閉本輪無法判定**；`next_review_at` 維持 12:00，下一個批次必須先處理。
+
+**品質改善（本輪唯一一項）：卡片新增「官方公告日期」，把公告時間與核實時間分開**
+
+- 觀察到的問題：詳情只有「核實時間」（我們最後一次讀頁的時間），沒有官方公布的時間。2026-11-11 統計 125 筆記錄了 `announcement_at`，其中 **76 筆的公告日比最後核實日早 30 天以上**（最久 930 天：`salad-ssap-migration-credit-watch` 公告 2024-04-24、核實 2026-11-10），卡片上看起來與本月新方案一樣新。
+- 預期結果：有 `announcement_at` 的紀錄在「核實時間」上方多一列「官方公告日期」，照原文列（含時刻的 ISO 不換算，避免把只有年月的值推成某一天）；沒有這個欄位就不出現，不補推測。同時把 `announcement_at` 加進 `SEARCH_FIELDS`，維持「可搜尋的字一定看得到」。
+- 驗證方式：`tests/filters.cjs` 以資料驅動斷言「有欄位就必須有這一列且逐字相同、沒有就不得出現」，並以 `salad-ssap` 當規格值。反向實測：把 `app.js` 那一行拿掉後測試以 `missing 官方公告日期 row for autoclaw-halloween-40m-expiry-conflict-watch` 失敗；回復後全綠（127 筆）。
+
+**本輪遇到的流程問題（下一輪要避開）**
+
+1. **合併來源時只留同一 URL 的最後一筆，會把同一天較早讀到的證據吃掉**。B 組對 `langtail.com/pricing` 交了兩筆不同 scope（價格／CTA 與 FAQ 展開），我的 `merge_sources` 以「同 URL 取最後一筆」就地更新，價格與 CTA 那段暫且消失；`tests/validate.py` 只檢查「同一天同 URL 最多一筆」，不會發現內容被覆蓋。修法：同一 URL 的多筆新證據先合併成一個條目（scope 用「；」、evidence 用「｜」串接），舊日期條目另存為歷史。已在 17 筆上重跑一次修復（恢復 38 筆歷史條目、合併 18 組同日同 URL）。
+2. **子代理的 `accessed_at` 常常是全批同一個時間**（本輪 A、B 都是結束前一刻的時鐘）。這不等於造假，但會讓「哪一筆較新」的排序失去解析度；下一輪在任務說明直接要求「每個 URL 讀完就記一次時間」。
+3. **瀏覽器快取會讓新的前端看起來沒生效**：改完 `app.js` 後頁面仍用舊檔，誤判「新功能沒出現」。驗證前先 `page.setCacheEnabled(false)` 再 reload。
+4. **modal 類公告（`<dialog>`）原生擷取看不到**：CGU 的服務異動只在首頁彈窗，`read` 完全沒有這段文字，要讀 raw HTML 或渲染後畫面。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,036 筆、S/A/B/C/D＝132/186/126/273/106）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`git diff --check`。
+瀏覽器（本機 8944、headless Chromium、停用快取）：資料載入 1,036 筆、概況卡 823／146／50／163 與資料一致、首頁 scope 為本輪文字、「本輪更新」19 筆（17 複核＋2 新增）、台灣條件適用 146（一般篩選 162）、免費 675、新創與開發者 593、設定時間 ≤15 分鐘 224、S 級 132；關鍵字「新北市教育局」「長庚大學」「ADI FORUM」各 1 筆、「Notion」7 筆；「截止日由近到遠」前三筆為 11/11 12:30（今天）、11/12 15:59、11/12；載入更多 24→48；新紀錄卡片顯示設定費 US$0／每月費用 US$0／需符合條件／台灣條件式適用，詳情含「官方公告日期 2026-11-03」與合併後的來源支持範圍；iPhone 寬度（390px）無水平溢出、console error 0。
+發布：commit 與 Pages 狀態見本則末尾（推送後補寫）。
+
+**下輪優先（完整五項）**
+
+① `aocai-working-free-ai-courses-2026`（`deadline_at` 2026-11-11T12:30、daily、next 12:00）：**12:30 之後第一件事**是重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`。若 11/16 梯次已關，把 `deadline_at` 換成 11/26 班（頁面寫報名截止 2026/11/19）或 12/01 班（BizBoost，`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`），並改寫摘要第一句；`deadline_at` 超過當日而狀態仍是 `conditional` 會被 `tests/validate.py` 擋下。
+② `taipei-kuai-ai-school-grant-batch2-115`（deadline 2026-11-13、daily、next 11/12 09:00）：11/13 之後若無延期公告改 `applications_closed`、`review_cadence` 改 `monthly_or_new_signal`；並再試一次教育局官網原始公告（`doe.gov.taipei` 公文公告列表與站內搜尋）。
+③ `adobe-startups-free-year-firefly-acrobat-semrush`（next 11/18、已連續兩次追查失敗）：換網路或請人代抓 `https://business.adobe.com/solutions/startups.html`，目標是「申請表是否要求付款方式」「有無國別下拉」；找不到就改找 Adobe for Startups 的條款頁或 partner 頁。
+④ `aws-pioneer-credits-thousand-90-days`（next 12/11）：確認申請頁國別選項是否含台灣（需 AWS 登入，可由有帳號者代查）、是否與 AWS Activate 額度互斥、有無官方公告日；來源 `https://aws.amazon.com/pioneer-credits/`、`https://aws.amazon.com/activate/`。
+⑤ `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式，並核微軟台灣各校 A1 合約到期日；來源 `https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`、`https://www.microsoft.com/zh-tw/education/products/office`。
+
+**常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 85 筆（可行動約 75 筆，排到時重讀再補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪全掃 2,880 個 URL（dead 7、unreachable 11、blocked 75），7 筆 dead 全部已在各自紀錄留下證據缺口（qoder-community-1024、nscale、deepinfra、salad-ssap、astamuse、perplexity ×2），下輪挑 2 筆找替代官方頁即可，不必重掃。
