@@ -28192,5 +28192,144 @@
       "https://auth0.com/startups",
       "https://auth0.com/pricing"
     ]
+  },
+  {
+    "record_id": "nebius-token-factory-signup-one-dollar",
+    "change_type": "official_text_removed",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:18:00+08:00",
+    "current_classification": "UNKNOWN",
+    "previous_limit": "新戶 US$1 trial credit，有效 30 天（2026-09-16 存檔原文）",
+    "note": "官方現行 billing 文件（billing-new）已無「Upon first sign-up, you receive $1 in trial credit, valid for 30 days.」；docs 全量 llms-full.txt（1,118,181 bytes／32,998 行）搜尋 trial 為 0 命中，只剩 promo code 通則。2026-09-16 Wayback 快照仍有該句，證明是之後移除，但官方未發布取消公告，因此狀態由 conditional 改 needs_verification，金額與效期改列 unknown，不再陳述 US$1 為現況。billing 仍為 onboarding 必要條件且需 bank card（逐字未變）。原引用路徑 /other-capabilities/billing 已 404，改指 billing-new。",
+    "sources": [
+      "https://docs.tokenfactory.nebius.com/other-capabilities/billing-new",
+      "https://docs.tokenfactory.nebius.com/llms-full.txt",
+      "https://web.archive.org/web/20260916102440/https://docs.tokenfactory.nebius.com/other-capabilities/billing-new"
+    ]
+  },
+  {
+    "record_id": "honeycomb-free-canvas-ai-copilot",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:13:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "來源遷移：舊免費層文件頁 docs.honeycomb.io/get-started/honeycomb-free 連續兩輪 404、已不在 docs sitemap；改由 docs.honeycomb.io/configure/teams/pricing-plan（Free 方案存在）、get-started/create-account（註冊步驟未列付款資料）與 get-started/honeycomb/2026-pro-plan-changes（2026-07-01 起 Pro 改價、grace period 至 2026-12-31）支持。20M events／100M metrics points 仍逐字寫在 pricing 頁，未變。",
+    "sources": [
+      "https://www.honeycomb.io/pricing",
+      "https://docs.honeycomb.io/configure/teams/pricing-plan",
+      "https://docs.honeycomb.io/get-started/create-account"
+    ]
+  },
+  {
+    "record_id": "ai-compass-platform-waiver",
+    "change_type": "source_relocated",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:21:00+08:00",
+    "current_classification": "UNKNOWN",
+    "previous_limit": null,
+    "note": "活動頁 https://www.ai-compass.biz/campaign/education 已 404，官方公告改在 https://www.ai-compass.biz/news/17（2026/10/15）：系統利用料月額 0 円（通常 33,000 円）、每帳號另收 880 円／月、申込至 10/29 18 時。條件與原紀錄一致，期限已過，狀態維持 expired。",
+    "sources": [
+      "https://www.ai-compass.biz/news/17",
+      "https://www.ai-compass.biz/"
+    ]
+  },
+  {
+    "record_id": "perplexity-education",
+    "change_type": "terms_clarification",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:16:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "新增官方條件：billing FAQ（10353002）逐字「a valid payment method is required to activate and maintain your access」「A valid credit or debit card is required for all promotional and trial redemptions.」，補上教育促銷的付款前提；US$10／月與 unlimited vs weekly limits 的衝突未變，來源索引由失效的 llms-full.txt 改為 _llms/other/en.txt。",
+    "sources": [
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/10353002-billing-faq-for-pro-plan-subscribers.md",
+      "https://perplexity-help-center.mintlify.app/help-center/_llms/other/en.txt"
+    ]
+  },
+  {
+    "record_id": "e2e-explorer-free-versus-usage-discounts",
+    "change_type": "evidence_scope_correction",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-09T15:38:19+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "移除不具來源效力的 Next.js 建置產物網址（/_next/static/chunks/…，已 404）；本輪追查 /startup-program 仍 308 → /contact-sales（純業務表單，無 Explorer／credit 字樣），/startups、/startup 404，sitemap 200 筆無該頁。狀態維持 needs_verification，未刷新 verified_at。",
+    "sources": [
+      "https://www.e2enetworks.com/contact-sales"
+    ]
+  },
+  {
+    "record_id": "azure-document-intelligence-f0-500-pages",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:26:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "新增基準：官方定價頁 Free（F0）列 Document type=All「0 - 500 pages free per month」，服務限制頁載 F0「analyze response 只處理前 2 頁」、Analyze 交易 1 TPS 且不可調；訓練自訂模型不收費（訓練上限 500 頁）。讀取模型語言表列繁體中文 zh-Hant。官方區域產品表把 Azure AI Search、Azure Speech 等列在 Taiwan North，但未列本服務，實務上可能需建於 Japan East／Southeast As",
+    "sources": [
+      "https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/",
+      "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/service-limits",
+      "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/language-support/ocr",
+      "https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table"
+    ]
+  },
+  {
+    "record_id": "azure-ai-search-free-tier-50mb-three-indexes",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:26:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "新增基準：每個 Azure 訂閱可建 1 個免費搜尋服務：儲存 50 MB、3 個索引／索引子／資料來源、來源檔 16 MB；共享硬體、不可 scale-up、無固定分割與複本、長期閒置可能被刪除、不適用 SLA。官方區域產品表把 Azure AI Search 在 Taiwan North 標為 GA；定價頁另列語意排序器每月前 1,000 次、agentic retrieval 每月前 5,000 萬 tokens 免費。",
+    "sources": [
+      "https://learn.microsoft.com/en-us/azure/search/search-limits-quotas-capacity",
+      "https://azure.microsoft.com/en-us/pricing/details/search/",
+      "https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table"
+    ]
+  },
+  {
+    "record_id": "amazon-textract-free-tier-three-months",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:26:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "新增基準：AWS 免費層對新客戶提供 3 個月的 Textract 額度：Detect Document Text 每月 1,000 頁；Analyze Document 簽章 1,000 頁、Forms／Tables／Layout 100 頁、Queries 各 100 頁；Expense／ID 100 頁；Custom Queries 不適用免費層。文件稱支援 40 多種語言含簡繁中文。AWS Free Tier FAQ 稱多數新客戶註冊不需付款方式，排除區只有中國 ZHY／BJS 與 GovCloud，台灣不在其中；但",
+    "sources": [
+      "https://aws.amazon.com/textract/pricing/",
+      "https://docs.aws.amazon.com/textract/latest/dg/limits-document.html",
+      "https://docs.aws.amazon.com/general/latest/gr/textract.html",
+      "https://aws.amazon.com/free/free-tier-faqs/"
+    ]
+  },
+  {
+    "record_id": "amazon-transcribe-free-tier-60-minutes-twelve-months",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:26:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": null,
+    "note": "新增基準：Amazon Transcribe 免費層每月 60 分鐘、為期 12 個月，從建立第一個轉錄請求起算；用量跨所有區域合計、未用額度不累積；自動內容遮蔽與自訂語言模型不適用免費層。官方語言表列 Chinese, Traditional（zh-TW）支援 batch 與 streaming。AWS Free Tier FAQ 稱多數新客戶不需付款方式，排除區只有中國 ZHY／BJS 與 GovCloud；但轉錄端點表沒有台北區域，需用東京／新加坡等區。",
+    "sources": [
+      "https://aws.amazon.com/transcribe/pricing/",
+      "https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html",
+      "https://docs.aws.amazon.com/general/latest/gr/transcribe.html",
+      "https://aws.amazon.com/free/free-tier-faqs/"
+    ]
+  },
+  {
+    "record_id": "mediatek-breeze-taigi-asr-apache-open-weights",
+    "change_type": "new_opportunity_baseline",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T10:26:00+08:00",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "previous_limit": null,
+    "note": "新增基準：聯發科技研究院與陽明交大 SARC 開源釋出 Breeze ASR 25／26，Hugging Face 模型卡標明 Apache 2.0：ASR 25 針對台灣華語與中英夾雜；ASR 26（BreezeASR-Taigi）以約 1 萬小時合成台語語料微調，輸出華文字，模型卡公布平均 CER 30.13%，並列教育部台語輸入法 30.70%、Gemini 3 Flash 32.52%。沒有官方託管 API，用量上限等於你自己的算力；模型卡載單檔 CER 從 14.49% 到 52.78%，變動很大。",
+    "sources": [
+      "https://huggingface.co/MediaTek-Research/Breeze-ASR-26",
+      "https://huggingface.co/MediaTek-Research/Breeze-ASR-25",
+      "https://github.com/mtkresearch/Breeze-ASR-25"
+    ]
   }
 ]

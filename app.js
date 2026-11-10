@@ -450,6 +450,20 @@ function createDetails(offer) {
   return details;
 }
 
+// 最新一次追查失敗不等於已核實：`last_review_attempt_at` 晚於 `verified_at` 表示這筆最後一次
+// 打開官方頁是「查不到」，卡片卻只印出較舊的核實日期，讀者點進來源才發現 404。
+// 2026-11-10 統計 8 筆屬此類（deepinfra、e2e、qoder、astamuse、claude-artifacts、articul8、coze、stitch），
+// 其中 qoder／astamuse 的來源全部失效。失敗原因仍留在詳情的「最近來源追查」列，卡片正面只標記狀態。
+function latestAttemptFailed(offer) {
+  const attemptRaw = offer.last_review_attempt_at;
+  if (!attemptRaw) return null;
+  const attempt = Date.parse(attemptRaw);
+  if (Number.isNaN(attempt)) return null;
+  const verified = offer.verified_at ? Date.parse(offer.verified_at) : NaN;
+  if (!Number.isNaN(verified) && verified >= attempt) return null;
+  return { at: attemptRaw, reason: offer.last_review_attempt_reason || '' };
+}
+
 function createCard(offer) {
   const status = statusInfo(offer);
   const card = text('article', '', `card card--${status.tone}`);
@@ -509,6 +523,12 @@ function createCard(offer) {
   }
   foot.append(text('span', status.label, `status-pill status-${status.tone}`));
   foot.append(text('span', `核實 ${dateLabel(offer.verified_at)}`, 'verified-date'));
+  const failedAttempt = latestAttemptFailed(offer);
+  if (failedAttempt) {
+    const marker = text('span', `追查未成功 ${dateLabel(failedAttempt.at)}`, 'attempt-pill');
+    if (failedAttempt.reason) marker.title = failedAttempt.reason;
+    foot.append(marker);
+  }
   card.append(foot, createDetails(offer));
   return card;
 }

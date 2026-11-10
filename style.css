@@ -151,6 +151,8 @@ img, svg { max-width: 100%; }
 .verified-date { color: #64725d; font-size: 10px; font-variant-numeric: tabular-nums; }
 /* 卡片正面的截止點：期限是這份資料最需要被看見的欄位，但不能變成第二個「可領取」標籤。 */
 .deadline-pill { color: var(--amber); font-size: 10px; font-variant-numeric: tabular-nums; }
+/* 最新一次追查失敗時卡片正面的標記：核實日期是舊的，讀者要知道來源最近一次讀不到。 */
+.attempt-pill { color: #9a5232; font-size: 10px; font-variant-numeric: tabular-nums; }
 .deadline-soon { color: #9a5232; font-weight: 650; }
 .card-details { border-top: 1px solid #e9eae2; padding-top: 12px; font-size: 12px; line-height: 1.8; }
 .card-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green); font-size: 11px; font-weight: 600; list-style: none; }

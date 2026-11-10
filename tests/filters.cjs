@@ -64,6 +64,25 @@ const noReason=ctx.createDetails({last_review_attempt_at:'2026-11-06',eligibilit
 const attemptWithoutReason=noReason.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='最近來源追查');
 assert.strictEqual(attemptWithoutReason.children[1].textContent,'2026-11-06');
 
+// 最新一次追查「失敗」不是已核實：卡片正面必須標記，否則讀者只看到較舊的核實日期，
+// 點進來源才發現 404（2026-11-10 全庫 8 筆屬此類，含來源全部失效的 qoder 與 astamuse）。
+assert(css.includes('.attempt-pill'),'missing .attempt-pill in style.css');
+const newerFail=ctx.latestAttemptFailed({last_review_attempt_at:'2026-11-10T10:20:00+08:00',verified_at:'2026-11-02T18:10:00+08:00',last_review_attempt_reason:'官方頁仍 404'});
+assert(newerFail&&newerFail.at==='2026-11-10T10:20:00+08:00','a newer failed attempt must be flagged');
+assert.strictEqual(newerFail.reason,'官方頁仍 404');
+assert.strictEqual(ctx.latestAttemptFailed({last_review_attempt_at:'2026-10-01T00:00:00+08:00',verified_at:'2026-11-02T18:10:00+08:00'}),null,'an older failed attempt must not shadow the newer successful verification');
+assert.strictEqual(ctx.latestAttemptFailed({verified_at:'2026-11-02T18:10:00+08:00'}),null,'no attempt recorded means no marker');
+assert(ctx.latestAttemptFailed({last_review_attempt_at:'2026-11-10T10:20:00+08:00'}),'an attempt with no verification at all must be flagged');
+// 資料驅動：每一筆「最新證據是失敗」的紀錄都要被標記，其他紀錄不得被標記。
+const staleAttempts=d.offers.filter(o=>o.last_review_attempt_at&&(!o.verified_at||Date.parse(o.last_review_attempt_at)>Date.parse(o.verified_at)));
+assert(staleAttempts.length>0,'dataset should still contain records whose latest evidence is a failed attempt');
+for(const o of d.offers){
+  const flagged=!!ctx.latestAttemptFailed(o);
+  const expected=!!(o.last_review_attempt_at&&(!o.verified_at||Date.parse(o.last_review_attempt_at)>Date.parse(o.verified_at)));
+  assert.strictEqual(flagged,expected,`attempt marker disagrees with data in ${o.id}`);
+}
+console.log(`PASS: latest failed lookup is marked on the card face (${staleAttempts.length} records) and never overrides a newer verification.`);
+
 const biweeklyDetails=ctx.createDetails({review_cadence:'biweekly',next_review_at:'2026-11-20',eligibility:{},sources:[]});
 const biweeklyRow=biweeklyDetails.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='下次複核');
 assert(biweeklyRow.children[1].textContent.startsWith('雙週輪替；2026-11-20'),'unexpected cadence text for biweekly');
