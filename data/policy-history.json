@@ -28907,5 +28907,134 @@
       "https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544",
       "https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad"
     ]
+  },
+  {
+    "record_id": "google-ai-professional-certificate-tw-pro-3mo",
+    "change_type": "official_source_reversal",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "行銷頁與存檔條款皆寫 2027-01-01；認為是行銷頁未同步",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "2026-11-11 實讀：Google One offer 條款現行版寫「must be redeemed by November 6, 2026」，而同一網址 2026-08-24／09-15／09-27／10-27 的 Wayback 存檔逐字為「January 1, 2027」，Last updated 仍為 2025-07-31。變動發生在 10/27 之後且無公告，屬條款頁改寫（或分區變體），不是單純行銷頁過時；現行條款下兌換窗口已於 11/06 結束，維持 terms_conflict。",
+    "sources": [
+      "https://one.google.com/offer/terms-and-conditions/google-career-certificates",
+      "https://web.archive.org/web/20261027194633/https://one.google.com/offer/terms-and-conditions/google-career-certificates"
+    ]
+  },
+  {
+    "record_id": "ishou-university-campus-m365-copilot-firefly",
+    "change_type": "conflicting_official_sources",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "AI 學習頁稱全校授權 Copilot／Firefly；資訊處產品清單未列 Copilot",
+    "current_classification": "UNKNOWN",
+    "note": "新增第三處矛盾：AI 學習頁寫「Adobe CC 全校可用」，但資訊處頁把 Adobe CC 列在「校園授權教學軟體／教職員專區」，下載資格限本校教職員工，學生只被導向自由上機空間（軟體清單含 Adobe CC）。資訊處頁全頁 0 次 Copilot、0 次 Firefly。",
+    "sources": [
+      "https://www.isu.edu.tw/page/mQVguHhVcYD6",
+      "https://olis.isu.edu.tw/page/%E8%B3%87%E8%A8%8A%E8%BB%9F%E9%AB%94-eeknS6lknBJI"
+    ]
+  },
+  {
+    "record_id": "lg-exaone-25-api-free-noncommercial",
+    "change_type": "quota_and_terms_clarification",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "限速未公布實際配額；訓練授權只知可 opt-out",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "rate-limits 文件載明可自願勾選「Service Improvement Analytics」以提高每日 API 上限（不勾選仍可用）；實際 RPM／RPD 數值仍未公布。另新增第三處不一致：ToS §2.3 稱可用輸入與輸出訓練模型，FAQ 稱蒐集資訊僅用於改善服務、診斷錯誤與用量分析。",
+    "sources": [
+      "https://docs.exaone.ai/en/docs/rate-limits",
+      "https://docs.exaone.ai/en/terms/terms-of-service"
+    ]
+  },
+  {
+    "record_id": "browserbase-free-developer",
+    "change_type": "eligibility_clarification",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "舊紀錄刻意不寫免卡：定價文字未載明",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "官方 docs（Plans & pricing）明示 Free「Start free, no credit card needed」，且 Free 的超額欄為 N/A、官方另寫「Free: No invoices.」；配額為每月 allocation。因此 Free 可標為免卡、無超額計費，額度用盡即止。",
+    "sources": [
+      "https://docs.browserbase.com/account/plans",
+      "https://www.browserbase.com/pricing"
+    ]
+  },
+  {
+    "record_id": "nebius-builder",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "landing 曾列 LangSmith US$100，Toloka 出現 100 vs 50 兩說",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "2026-11-11 重讀 landing 與 FAQ：已無 LangSmith 卡片，兩處皆列 $50 Toloka；但條款 C.1 只承諾 US$25 Token Factory 與 US$25 Tavily，Toloka 屬「夥伴優惠，視資格與個別夥伴條款」。舊的 LangSmith 衝突移除，改記此新衝突。",
+    "sources": [
+      "https://dev.nebius.com/builders",
+      "https://nebius.com/builders-terms-and-conditions"
+    ]
+  },
+  {
+    "record_id": "qdrant-cloud-free-tier",
+    "change_type": "conflicting_official_sources",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "閒置 1 週暫停、4 週未復原刪除（單一說法）",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "兩份官方文件對免費叢集刪除時點不一致：create-cluster 寫「suspended after 1 week, deleted after 4 weeks of inactivity」，cloud-pricing-payments 寫「suspended after one week without use … deleted three weeks after the suspension notice」；支援級別同樣兩說（pricing 表 Community／best effort vs 文件 Standard support）。",
+    "sources": [
+      "https://qdrant.tech/documentation/cloud/create-cluster/index.md",
+      "https://qdrant.tech/documentation/cloud-pricing-payments/index.md"
+    ]
+  },
+  {
+    "record_id": "iteracompute-free-qwen-3-8-27b-monthly-30m",
+    "change_type": "quota_and_model_scope_correction",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "Qwen3.8-27B 單一模型、每月 3,000 萬 tokens、160,000 TPM",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "免費額度改由單一 model ID「Auto」提供（2026-11-10 上線，version auto-20261110-qwen-pool-1），官方改口「no RPM, TPM or daily token cap」，160K TPM 不再適用；每帳戶同時僅 1 個在途請求、輸出上限 8,192 tokens、每月 1 日 00:00 UTC 重置。官方兩頁仍不一致：免費頁寫 Free 128K context 且池含 DeepSeek V4.1，Auto 模型頁寫 256K context、現行池為兩個 Qwen3.8-27B 部署。",
+    "sources": [
+      "https://iteracompute.com/free/",
+      "https://iteracompute.com/models/auto/",
+      "https://iteracompute.com/free-tier-terms/"
+    ]
+  },
+  {
+    "record_id": "livekit-cloud-build-free-tier",
+    "change_type": "new_opportunity",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "未收錄",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "LiveKit Cloud Build：US$0／月、免卡，每月 1,000 代理分鐘、US$2.50 推論額度、1 個美國號碼、5,000 WebRTC 分鐘；免費層為硬上限、每月 1 日重置、免費專案共用額度。",
+    "sources": [
+      "https://livekit.com/pricing.md"
+    ]
+  },
+  {
+    "record_id": "google-antigravity-scientists-highest-tier-six-months",
+    "change_type": "new_opportunity",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "未收錄",
+    "current_classification": "UNKNOWN",
+    "note": "Google 2026-10-13 公告：1 萬名科學家可免費使用 Antigravity 最高用量等級 6 個月，滾動上線且受資格、容量與遴選限制；申請表開放中，名額與地區標準未公布。",
+    "sources": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+    ]
+  },
+  {
+    "record_id": "linkup-startup-program-five-thousand-credits",
+    "change_type": "new_opportunity",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "未收錄",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Linkup 新創方案：一次性最高 US$5,000（約 100 萬次以上搜尋），只需 Linkup 帳號與說明用途，審核制、合格者一週內聯繫，可視情況追加。",
+    "sources": [
+      "https://www.linkup.so/startups"
+    ]
+  },
+  {
+    "record_id": "neon-open-source-program-cash-and-credits",
+    "change_type": "new_opportunity",
+    "verified_at": "2026-11-11T02:32:36+08:00",
+    "previous_limit": "未收錄",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "Neon 開源維護者方案：每年至少 US$200,000 現金池、透過 GitHub Sponsors 每月支付 6 個月一期且不自動續約；可另選最高 US$5,000 Neon＋US$5,000 AI Gateway 額度。",
+    "sources": [
+      "https://neon.com/programs/open-source"
+    ]
   }
 ]
