@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **991 筆**（781 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 08:31 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **1 筆**；其餘 **967 筆**既有紀錄未完成本輪複核，整筆來源追查失敗 **0 筆**。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
+資料集目前有 **994 筆**（784 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 09:37 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **972 筆**既有紀錄未完成本輪複核，整筆來源追查失敗 **1 筆**（Google Stitch）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
 
 ## 使用方式
 
@@ -38,6 +38,8 @@
 ## 維護
 
 保留穩定 ID、來源、各筆查閱時間與政策歷史。新增研究先去重並保留既有編輯；資料發布不代表已全面覆核。限時/即將到期案例每日追蹤，其餘案例按月輪替——實際排入順序交給 `tools/queue.py`（先看排程、再看最久未核），不要每輪重寫一份臨時腳本。
+
+來源連結會默默失效，而只有被排到複核的紀錄才會被讀。每輪可選跑 `python3 tools/linkcheck.py`：它去重所有來源 URL、HEAD 後再用 GET 確認，只把 404／410 列為 dead（403、逾時與 5xx 只算 blocked／unreachable），輸出的 dead 清單就是下一輪的證據維修佇列；`--record ID` 只掃一筆、`--self-test` 驗分類規則。2026-11-10 首次全掃 2,712 個 URL：dead 13、unreachable 8、blocked 68，13 筆紀錄引用到 404，其中 `elfa-api-free-once-thousand-credits` 的官方文件頁改版後整個 404。404 只證明網址失效，不能單獨判定活動終止——找到替代官方頁就地更新來源並把舊路徑寫進 evidence；查不到就記成證據缺口，不要改狀態。這支工具刻意不接入 `tests/validate.py`：驗證要離線可重現，網路狀態不是資料錯誤。
 
 定價頁文字擷取可能遺失勾叉、刪除線或互動選項；斷定方案包含或排除功能前須看原始頁面呈現或標記，不把圖示旁文字一律視為包含。
 
@@ -80,6 +82,34 @@
 可採取的期限與「看得到的期限」是兩件事。2026-11-10 統計：911 筆可行動紀錄中只有 24 筆帶有未來的機器可讀截止點（`deadline_at`／`expires_at`／`expiry.date`），其中 22 筆落在 60 天內，但它們在預設的 S→D 優先度排序裡散落各頁——Amazon ARA 的台北 11/12 15:59 排在第 609 張，第一頁 24 張只涵蓋其中 4 筆——而日期只出現在收合的「資格、限制與來源」詳情列。也就是說「把期限查清楚」這句主張，在最需要它的地方看不到。改法：卡片底部新增最近的截止點與剩餘天數（只列日期者視為當日 23:59 台北時間、與 `tools/queue.py` 的 `parse_stamp` 一致；日期已過者不顯示；超過 60 天不擠上卡片（`chatgpt-teachers-us` 的 2028-06 就是一例），仍留在詳情列；當天截止寫「今天」，7 天內轉警示色），排序新增「截止日由近到遠」（有截止點者一律排在前面並依時間升冪，沒有者沿用優先度，避免打亂 900 多筆無日期紀錄的順序）。已截止／已終止／重複合併的紀錄不得再主張「剩 N 天」——`jules-free-fifteen-tasks-entrypoint-watch` 就是狀態已是 `sunset_announced` 卻仍帶未來 `expires_at` 的例子。`tests/filters.cjs` 以規格值斷言：只列日期＝當日 23:59、當天為 0 天而非 1 天、已過不顯示、已截止不顯示、超過 60 天不顯示、無日期者不得排在前面、升冪、以及「有截止點的紀錄全部排在前段」。通則：機器可讀欄位若只給研究者看，等於沒有給讀者看；任何「期限」都要同時出現在卡片正面與排序選項裡。
 
 研究紀錄本身也有長度上限。上一則（07:05）的紀錄在「下輪優先」③ 之後被截斷，④⑤ 與部分來源網址遺失（該行行尾就是「…」再接下一則），接手的流程因此少了兩項交接。本輪起把「下輪優先（完整五項）」當成必填欄位並放在敘述最後，寧可壓縮前面的更正描述，也不要讓交接清單被截斷；發現前一則不完整時，在當輪把它補回，不改寫舊文。
+
+2026-11-10 09:05–09:37 本輪（接續 2476b39 之後）：起始 991 筆；`next_review_at` 嚴格已到期 0 筆（08:31 剛結算），佇列由 `tools/queue.py` 的輪替序（11/07 那批）＋台灣期限與官方衝突＋模型目錄變動組成，12 小時冷卻內的 152 筆不重讀。局部複核 19 筆：最久未核輪替 9 筆（GMI SCALE、Couchbase Activate、Elfa、Kilo Gateway、Go2 AI-OCR、Parallel MCP、RealAds、さっとFAQ、SHIFT ASIA）＋到期與高風險 6 筆（臺北青年 AI 補助期限日、Google Vids、HAL-X THX-02、TRAE、國發基金加強投資 AI 新創、經濟部服務業 AI 專班）＋模型目錄與額度 4 筆（Claude Free、Gemini API 免費層、Swarms 新創、Airweave）。新增機會 3 筆、政策 0 筆、觀察線索 0 筆；整筆追查失敗 1 筆（Google Stitch，5 條路線都只回 JS 空殼）；未完成複核 972 筆。未登入、未申請、未付款。
+
+會改變讀者決定的更正：
+
+- `gemini-watch`：**免費層目錄被低估**。定價頁 Free Tier 欄現有 17 個「Free of charge」模型段落（3.8／3.6 Flash、3.5 Flash-Lite、Flash TTS、Live 系列、2.5 Pro／Flash、Embedding 等），而 Pro 級（3.1 Pro Preview、4 Argon）與 Nano Banana 影像系列一律「Not available」。原紀錄只點名 3 個 Flash 模型，讀者會以為免費層只有三個模型，也可能誤判 Pro 級有機會免費；摘要已改寫並把「Pro 級不含」寫進缺口。各模型 RPD 官方已不在靜態頁公布，仍列未知。
+- `elfa-api-free-once-thousand-credits`：**引用的官方文件頁已 404**。`docs.elfa.ai/api-reference/introduction` 實測回「Page Not Found」，一次性 1,000 點、60 RPM、用盡回 429 的條文已搬到 `/get-started/pricing.md`；來源改指向現行頁並移除失效網址。另發現定價頁已不列 Free 方案（只剩 PAYG／Grow／Enterprise），商用授權只在 Enterprise 為 Included。
+- `gmi-scale-cohort-three-spring-2027-credits-watch`：**US$125k 圖卡不是 SCALE 自己核發的額度**，而是 Program Partners 區的 NVIDIA Inception Program（「$125k in MaaS and Compute credits」）；是否需另行加入 Inception、能否與 SCALE 額度重複計算，頁面仍未寫明。第三期仍「Cohort 03 applications open」、2027 春季、截止日 TBA、額度條款開課前才確認。
+- `google-vids-omni-free-sixty-seconds-monthly`：**衝突多一層**。生成說明頁另有「Most users can generate up to 50 videos per month」（支數），與支援表 60 秒／月、部落格 3 支 15 秒／月並存；另補到原本沒記的地區限制「EEA、UK、瑞士、Illinois、Texas 不能用上傳影片再編輯」（台灣未列）。
+- `realads-once-fifty-no-watermark`：免費 50 點仍在且免卡，但「免費輸出無浮水印、可商用」仍只存在於 FAQ，付費條款第 8 條要求免費作品保留浮水印且僅限非商用；條款頁首還停在「버전 1.2／개정 예정 2026. 10. 28. (v1.3)」，哪一版實際生效無法判定。
+- `hal-x-thx-keyless-free-decision-api`：**條款仍無公開文本**。`hal-x.ai` 現 302 到 `mergen.az`（自述 Mergen AI LLC），`mergen.az/terms` 仍 404；免金鑰 60 decisions/min 與 Limits 表（無每日總量）逐字未變。
+- `taipei-youth-ai-subscription-subsidy-2026`：期限日 09:11 仍受理，公告首頁仍「共 3 頁 35 筆」、無停收／用罄公告；期限只寫日期且以「送達本局之日」認定，今晚 23:59 之後的下一輪必須改 `applications_closed`（`next_review_at` 已排在今天 22:00）。
+- 其餘 12 筆無實質變動（皆本輪重讀官方頁）：`couchbase-activate-…`（頁面仍有 2021 佔位文字、無名額）、`kilo-auto-free-hosted-models`（免費目錄 3 款、匿名 200 次／小時／IP）、`lets-go2-…`（活動至 12/28、12/10 上線）、`parallel-mcp-…`（免金鑰範圍不變、未公布限速數值）、`satfaq-…`（活動至 2027-03-31）、`shift-asia-…`（20 家受付中、無日期截止）、`trae-free-ide`（以瀏覽器完整渲染後仍無 Taiwan）、`investai-…`（1:1／2:1、單次 1 億、累計 1.5 億）、`aocai-enterprise-…`（116-07-31 受理、每班 75 萬）、`claude-watch`（Free 仍只列 Sonnet／Haiku 家族名、不含 Claude Code 與 API 額度、台灣仍在名單）、`swarms-…`（三級額度、12 個月、無截止日）、`airweave-…`（10 連線／50 查詢／50K entities，條款仍自稱 drafts）。
+
+新機會（主 agent 逐字重讀官方頁後才寫入）：
+
+- `amplitude-startup-scholarship-year-one-free-growth`：員工人數 <20、募資 <US$1,000 萬的團隊**首年 Growth 全功能免費**（每月 1 億 events 或 200K 追蹤使用者，含 session replay、MCP、agents），官方自述價值 US$60,000、免信用卡；第二年 40% off 年繳 Plus，或降回永久免費的 2M events／月並保留資料，官方寫「No penalty」。US$60,000 是官方自述估值，Growth 在定價頁是 custom 報價，不當可折現金額。
+- `pagerduty-startups-six-months-ai-actions`：未曾用過 PagerDuty 且處於 Seed／A／B 的新創 **6 個月 US$0**，含 20 seats、20,000 events、1,000 AI Actions，官方寫「Not a discount. Not a demo. No credit card required」；期滿處理與「20,000 events／1,000 AI Actions 對應哪個公開方案」未公布，Starter 年費 US$2,800 只作量級參考。
+- `auth0-startups-b2b-professional-free-year`：有創投支持、募資 <US$500 萬、ARR <US$100 萬、成立未滿兩年的團隊**一年 B2B Professional 免費＋100k MAU**（含 Enterprise MFA、Organizations、Token Vault、Inbound SCIM），排除既有付費 Auth0／Okta 客戶與曾參加者。定價頁價格是 JS 動態渲染，本次未取得逐字金額，因此不列等值。
+- 未納入：Google Ad Grants（每月 US$1 萬搜尋廣告、台灣明列社團法人／財團法人）金額可觀但**不是 AI 存取額度**，與本資料集範圍不符；Oxyy（官方 `/startups` 404，首頁只有「有起始餘額」而無金額）；AMD、Grok for Startups、Modal、GitHub for Startups、Together、Cartesia、Algolia、Retool、Neon、Scaleway、Mem0、LlamaParse 等聚合名單皆已在庫。
+
+品質改善（1 組：把「證據連不上」變成可掃描的清單）。本輪在 elfa 撞到一個沒有工具會發現的錯誤：官方文件頁改版 404，卡片卻仍標「官方來源支持」。因此新增 `tools/linkcheck.py`（只讀、無新依賴）：去重 2,712 個來源 URL，HEAD 之後一律再用 GET 確認，分成 dead（404／410）／unreachable（逾時、DNS、TLS）／blocked（400／401／403／405／429／5xx，只統計不逐列）。**關鍵規格：只憑 HEAD 判死會誤報**——`support.google.com/docs/answer/*` 對 HEAD 回 404、對 GET 回 200，`www.codebuddy.cn/pricing` 同樣；所以 `probe()` 只有 HEAD 成功才提早結束，其餘一律再試 GET，`--self-test` 用注入的 fetcher 固定三種情況（HEAD 404＋GET 200＝ok、兩者皆 404＝dead、HEAD 403＋GET 200＝ok）。第一版就是漏了這條，首次全掃產生 45 筆假 dead，人工抽查後才發現。實測本輪資料：ok 2,623／dead 13／unreachable 8／blocked 68，13 筆紀錄引用到 404。本輪直接修掉 3 筆（elfa 換到現行文件頁、novita 的舊條款網址併進 `/legal/terms-of-service`、honeycomb 的免費層文件頁移除並改寫缺口），其餘列入下輪優先。工具**不**接入 `tests/validate.py`：驗證必須離線可重現，網路狀態不是資料錯誤。
+
+驗證：`python3 tests/validate.py`（994 筆 PASS，含本輪批次斷言）、`node --check app.js`、`node tests/filters.cjs`（台灣條件適用 119、S 級 106、免費專區 635、quota 144 與資料一致）、`python3 tools/queue.py --self-test`、`python3 tools/linkcheck.py --self-test`、`git diff --check`。瀏覽器另核對資料載入、本輪更新篩選（22 筆）、關鍵字與台灣資格快捷、排序與載入更多，以及本輪改動卡片（Gemini、Elfa、Google Vids、Amplitude）的費用、狀態與來源呈現。
+
+結構經驗：三件可重用的事。①**subagent 只回結構化 JSON，不寫共享 JSON**：本輪 3 個 subagent 全部只回 patch 內容，主 agent 逐筆重讀會改變讀者決定的頁面（elfa 的 404、GMI 的 $125k、Vids 的 50 支／月、Amplitude／PagerDuty／Auth0）。②**HEAD 不是 GET**：Google 支援頁與部分中國站台對 HEAD 回 404，任何連結檢查都必須用 GET 複驗，否則會把還開得起來的官方文件判成失效。③**模型目錄會輪替**：像 `gemini-watch` 這種寫死模型名的紀錄，每輪要重新逐段核對 Free Tier 欄，不能只確認「這幾個名字還在」。
+
+下輪優先（完整五項）：① `honeycomb-free-canvas-ai-copilot`（active）與 `fal-flux3-max-five-daily-sandbox`（terms_conflict）：`docs.honeycomb.io/get-started/honeycomb-free`、`fal.ai/flux-3-max-free` 皆 404，要找現行官方頁，或改以 pricing／model 頁支持同一主張；② 其餘 dead 清單（先跑 `python3 tools/linkcheck.py` 取最新）：`perplexity-watch`／`perplexity-education`（`perplexity-help-center.mintlify.app/llms-full.txt`）、`qoder-community-1024`、`deepinfra-two-minute-papers-twenty-credit`、`nebius-token-factory-signup-one-dollar`、`astamuse-agent-trial-oct31-index-only`、`ai-compass-platform-waiver`、`claude-artifacts-expired-lead`、`e2e-explorer-free-versus-usage-discounts`；③ `google-vids-omni-free-sixty-seconds-monthly`：四說並存（60 秒／月、3 支 15 秒、50 支／月、Workspace 訂閱要求），下輪試 Workspace 定價頁或 Gemini 方案頁找優先序；④ `moe-library-aihub-seat-trial-free-paid-ai` 與 `watchlist-moe-adaptive-learning-ai-tutor`：全國層級仍只有媒體引述，要找終身教育司／國圖／國資圖官方頁；⑤ `taipei-youth-ai-subscription-subsidy-2026` 今晚 22:00 複核：期限一過就必須改 `applications_closed`、cadence 由 daily 改 `monthly_or_new_signal`（`tests/validate.py` 兩條斷言會擋），並確認是否補發停收／額滿公告。另 `stitch-free-daily-credit-ui-design-beta`（追查失敗，next 11/20）要用可執行 JS 的瀏覽器重試。
 
 2026-11-10 08:05–08:31 本輪（接續 0b2eb41 之後）：起始 986 筆；`next_review_at` 嚴格已到期 0 筆，7 日內到期 6 筆全在 12 小時冷卻內（凌晨到 07:19 已核），因此佇列由「3 天內到期且未冷卻」＋「官方衝突」＋「最久未核輪替（10/31 那批）與來源缺口」組成，全天已核 157 筆不重讀。局部複核 19 筆：到期與高風險 9 筆（Google AI 證書試用、新竹市AI領航補助、ZCode 300M 線索、Krutrim、D-ID、Featherless、Respan、LangWatch、Perplexity）＋最久未核與來源缺口 10 筆（Evidently、fal Builder、Sarashina、Sapling、TextRazor、Workato、Corti、Qoder Lite、Ideogram、Salad SSAP）。新增機會 4 筆、政策 0 筆、觀察線索 1 筆；整筆追查失敗 0 筆；未完成複核 967 筆。未登入、未申請、未付款。
 
@@ -1937,7 +1967,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 前輪交接（歷史）：`perplexity-education`、`astamuse-agent-trial-oct31-index-only`、`picsart-wan3-promotion-fair-use`、`claude-artifacts-expired-lead`、`tabnine-basic-free-retired`；AISquared 非營利及學生方案當時尚待確認。最新優先清單與研究結果見上方本輪紀錄。
 
-每輪先跑 `python3 tools/queue.py` 取得佇列，不要再手寫排序：它固定「逾期 > 視窗內到期 > 最久未核」的優先序，並套用 12 小時冷卻（24 小時內到期者不受限），已截止／已關閉／已合併紀錄永不排入；基準數字會同時印出「視窗內到期 N 筆」與「實際排入 M 筆」，避免把冷卻誤讀成沒有到期項。`--self-test` 以合成資料斷言規則本身。接著比對前次 reviewed/new IDs，成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。
+每輪先跑 `python3 tools/queue.py` 取得佇列，不要再手寫排序：它固定「逾期 > 視窗內到期 > 最久未核」的優先序，並套用 12 小時冷卻（24 小時內到期者不受限），已截止／已關閉／已合併紀錄永不排入；基準數字會同時印出「視窗內到期 N 筆」與「實際排入 M 筆」，避免把冷卻誤讀成沒有到期項。`--self-test` 以合成資料斷言規則本身。接著比對前次 reviewed/new IDs，成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。來源維修另用 `python3 tools/linkcheck.py`（只列 404／410 為 dead，403 與逾時不算）取得 dead 清單，把「引用到失效官方頁」的紀錄排進下一輪。
 
 本專案為無後端靜態網站，可由 GitHub Pages 的 main 根目錄發布。
-驗證：python tests/validate.py；node --check app.js；node tests/filters.cjs；python3 tools/queue.py --self-test。
+驗證：python tests/validate.py；node --check app.js；node tests/filters.cjs；python3 tools/queue.py --self-test；python3 tools/linkcheck.py --self-test（要修來源時再跑不帶參數的全掃）。
