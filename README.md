@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,016 筆**（805 項機會、49 項政策、162 筆觀察線索），更新時間 **2026-11-10 18:33 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **10 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；另有 **3 筆**整筆追查失敗（已記錄嘗試時間與原因，未刷新核實時間）。其餘 **1,004 筆**既有紀錄未完成本輪複核。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前仍應自行重查官方頁。
+資料集目前有 **1,019 筆**（807 項機會、49 項政策、163 筆觀察線索），更新時間 **2026-11-10 19:31 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **20 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **996 筆**既有紀錄未完成本輪複核。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前仍應自行重查官方頁。
 
 ## 使用方式
 
@@ -2203,3 +2203,38 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③`e2e-explorer-free-versus-usage-discounts`：第三度只看到 `/startup-program` 308 → `/contact-sales`、sitemap 無此路徑、`/startups` 404，且無任何停辦公告。下輪不要再重讀同一條路徑：改查印度站與 `countries-served` 的變更紀錄、或經 sales 表單頁的 inline 文件；若仍無官方頁，考慮把「5K/50K/100K 僅為歷史記載、不得引用」寫進標題並把 `next_review_at` 拉到 12 月。
 ④`perplexity-watch`：Pro 的 US$20／月與 Comet 學生頁（`perplexity.ai/grow/comet/students`）連續多輪 403；下輪改走 browser relay 或 2026 年 Wayback 快照，取不到就以 Education Pro US$10／月為主敘述、把 Pro 價格留在缺口，不要填數字。另 3/day 與 five/day 的衝突需要產品公告才能收斂，不要再重讀同兩篇。
 ⑤尚未帶 `verification_scope` 的官方可行動紀錄（本輪前統計 85 筆）：不要批次回填，輪替排到時逐筆重讀官方頁再補，優先處理 `taiwan=Yes` 與 S／A 級者；`tests/validate.py` 只對本批次強制此欄位。
+
+2026-11-10 19:05–19:31 本輪（接續 1d3de6d 之後）：起始 **1,016 筆**；`tools/queue.py` 基準為嚴格逾期 0 筆、7 日內到期 8 筆（其中 7 筆在 12 小時冷卻內，且當天 13:14–16:36 已核）、`retry` 桶 2 筆（當日 18:29 才失敗，冷卻中）、24 小時未核 653 筆、12 小時內已核 183 筆。輪替依佇列順序取 2026-11-16 排程的 8 筆，另補 6 筆來源衝突／金額缺口與 6 筆到期與高風險案例，共 **R=20**：輪替 8（Hour of AI、Recraft、Z.ai、BytePlus、Claude for OSS、CodeRabbit、Synthesia、GMI×a16z）＋衝突 6（E2E Networks、Baseten、Nscale、Tripo、Claude 科學家方案、台灣 Gemini 學院）＋高風險 6（Anthropic AI for Science、Claude Security、Vultr 促銷碼、MiniMax Design、Openlayer、Neo4j 新創）。新增機會 **2 筆**、政策 0、觀察線索 **1 筆**，整筆追查失敗 **0 筆**，未完成 **U=996 筆**（結果 1,019 筆）。`tools/linkcheck.py` 全掃 2,811 個去重來源 URL：ok 2,723、dead 5、blocked 69、unreachable 14；5 個 dead 全是既有已註記失效的頁面（`qoder-community-1024` 兩頁、astamuse、deepinfra、salad），沒有新失效來源。未登入、未申請、未付款。
+
+會改變讀者決定的更正：
+
+- `e2e-explorer-free-versus-usage-discounts`：**舊紀錄有錯**——它寫「Wayback 對該路徑無任何快照」，實際 CDX 有 2025-12-14、2026-04-13、2026-10-16 三筆 200 快照，2026-10-16 那筆完整保存三級方案：Explorer「$5K (₹5 Lakh) in free-to-use AI Cloud credits」、Builder「Up to $50K (₹50 Lakh) in usage-based AI Cloud discounts」、Scaler「Up to $100K (₹1 Crore)…」，資格分別為早期（10 人以下、5 年內）、募資 US$2M+、US$5M+，三級都寫「Established, legally incorporated company — in any country」且頁面寫「Open to AI startups worldwide」。現行 `/startup-program` 仍 308 → `/contact-sales`，`.md` 404、llms.txt 無此路徑，線上表列確已移除但無停辦公告，狀態維持 `needs_verification`。標題同步改為「官方頁已下架，三級額度與資格只存在 2026-10-16 快照」，不再宣稱金額無法複核。
+- `claude-scientists`：`taiwan` **Unknown→Yes（條件式）**。方案頁逐字「Scientists at academic and nonprofit research institutions around the world」，促銷條款 §2 只以「be located in a region where the Plan is available」為條件，Anthropic Supported Regions 清單明列 Taiwan（該頁標示 2026-11-12 生效）。這是文件鏈推定，仍須 PI 核驗與個案核准。同時補上「1–25 席、更多席位需來信」、年繳 US$180／席、API credits 按席位 US$20（Standard）／US$100（Premium）合池上限 US$500、以及「Prices shown don't include applicable tax」。
+- `nscale-signup-five-current-docs-conflict`：**註冊方式已改**——quickstart 從「Currently, you can only sign up using Google (SSO)」改為 Google／GitHub／email 加密碼，且「Each email address can only have one Nscale account」；`www.nscale.com/pricing` 現為 404（含尾斜線），官方 sitemap 也沒有定價頁，費率只剩 docs 與 console。US$5 贈額的兩份官方說法仍未收斂，維持 `unverified`。
+- `tripo-api-free-credits-index-mismatch`：API 端再次確認「pay-before-you-go」、1 credit＝US$0.01、自 US$1 起購，無新戶贈額。Studio 端補三項限制：Free 方案 Image Generation「No free quota」、3D 匯出只到 H2.5、輸出「With attribution」且「IP belongs to Tripo」（非商業）；方案列已無 Starter（Free／Professional US$13 年繳／Max／Team）。索引的「2,000 免費 credits」較可能對應購買頁「$100 → 10,000 + 2,000 credits」的付費加贈。
+- `synthesia-basic-monthly-ten-min-five-hundred-no-download`：Syren 首發 1,000 credits 的到期時刻 2026-11-09 23:59 BST 已過，但定價頁 Basic 卡仍掛「1 Syren video - limited promo」、說明文仍以現在式寫到期日——兩頁都沒更新。可確定那批首發點已到期、之後 Syren 改扣方案內 500 credits；「新註冊是否仍發 1,000 點」官方沒有答案，記為頁面過期而非方案取消。
+- `neo4j-startup-aura-twentyk-application-unavailable`：條款補兩項會影響資格的條件——營業地須在「Neo4j Cloud Offering 提供地」（§2.1），額度只能抵 AuraDB Professional 或 Business Critical 兩層且額度用完不另行通知（§4.1.1）；§2.3 保留以公司所在國家／地區為由拒絕的裁量權。申請頁以無頭瀏覽器重驗仍可填（38 個欄位、Submit 可見、Country 223 選項含 Taiwan）。
+- `vultr-new-customer-credit-codes-watch`：促銷頁現多掛一組 VULTRMATCH，且它是唯一公開完整條件的——存款對存上限 US$100、**12 個月到期**、扣抵 **50/50**、重複帳號不符資格、「limited time」未載日期；三組 free-credit 代碼（US$200／250／300）的落地頁仍只回註冊行銷頁，個別效期與適用產品清單仍缺。卡片補 `cost_note` 說明這些都是促銷額度、MATCH 需先自付存款。
+- `byteplus-modelark-free-inference-500k`：研究代理的純文字路線全部失敗（llms.txt、Wayback、數字 slug、兩組 doccenter API），主 agent 改用無頭瀏覽器渲染後取回逐字正文：500k、分模型計算、主帳號與子帳號共用、Free Tokens Only「After approaching the free quota, the service will be suspended」、額度耗盡「the call will fail… manually activate」。來源範圍已改註明「瀏覽器渲染」。
+- 其餘 12 筆（Hour of AI、Recraft、Z.ai、Claude for OSS、CodeRabbit、GMI×a16z、Anthropic AI for Science、Claude Security、MiniMax Design、Openlayer、Baseten、Gemini 學院）逐字重讀後主張不變，只刷新 `verified_at`、來源查閱時間並補 `verification_scope`；其中 Anthropic AI for Science 另補「錄取後 5 個工作日內回覆、文件 14 天內簽回」的時限，MiniMax 補「top-up credits 一年有效、不可退費不可轉讓」與年繳促銷只有倒數沒有結束日。
+
+`google-gemini-academy-taiwan-educators-workshop-watch` 是本輪第二個讀者層級修正：公開頁只有 2025-08-12 與 2025-10-18 兩場（皆已結束），且報名入口需先登入；`grow.google` 台灣頁的「立即報名」仍指向同一頁，全站無 2026 梯次。摘要與 `access_risk` 已改成「目前沒有可循的官方路徑取得證明或教材」，複核節奏改 `biweekly`（下次 11-24）追新梯次；登入後是否有新場次仍未核，因此不做停辦判定。
+
+新增 2 筆機會＋1 筆觀察線索（皆逐字取自官方頁、去重掃過全庫 id／title／summary）：
+- `google-maps-demo-key-ai-studio-free-daily`：Google 2026-11-09 在 AI Studio 開通 Maps Platform，免綁卡免計費，部落格寫沙盒額度「100 calls/day, per API」、每 24 小時重置、達上限暫停至隔日且不產生費用。**文件頁只寫「subject to the usage limits, which are subject to change」，沒有數字**，所以 100 次只有部落格一個官方來源，已列缺口。限制：必須個人 Google 帳戶（Workspace 不合格）、僅供原型、正式上線要接 Cloud 計費；禁止地區清單（China／Crimea／Cuba／Donetsk／Iran／Luhansk／North Korea／Syria／Vietnam）未列台灣。
+- `smelearning-ai-zone-224-free-ai-courses`：經濟部中小及新創企業署「中小企業網路大學校」AI 主題專區列 224 門課（基礎知識 41、工具方法 55、實務應用 128）＋3 個主題包（20／17／14 門）＋AI 工具分享 103 個＋亮點案例 19 案，課程標「免費」，另有完訓證書公告。與已截止的 115 年度企業專區輔導不同：這是持續開放的公開課程目錄，不需企業身分。`www.smelearning.sme.gov.tw` 沒有 DNS 記錄，改用不帶 `www` 的主機名讀取，已在來源 scope 註明。
+- `smelearning-strongest-ai-king-line-points-2026`（watchlist）：同一個「最強AI王」活動在官網有兩套獎品文字——公告頁（2026-03-06）寫「LINE POINTS 50點」「電子LINE POINTS 200點」合計 250 點、各限量 500 名；站內彈窗與完成提示卻寫「最多可獲得 5張電子咖啡即享券」（8 小時給 1 張、15 小時＋證書再給 4 張），而彈窗的「活動詳情」連到的是另一篇無關文章。兩份都來自官方站台，不擇一陳述，狀態記 `terms_conflict`。
+- 未納入：AMD 中國 Radeon Token Factory（`developer.amd.com.cn` 只回 SPA 外殼，數字僅見第三方目錄）、116 年度中小微 AI 輔導計畫 3.17 億元預算（僅採購預告、無受理窗口，列入下輪追蹤）、Oracle Academy Cloud（三條路線皆 403）、中華電信與台北市／新竹市補助（既有紀錄已載）。
+
+品質改善（本輪唯一一項，`tests/validate.py`）：**首頁「本次研究範圍」的 `scope` 字串沒有任何檢查**。它是網站 overview 那一段的唯一來源，卻與 `last_research_run` 分開手寫；2026-11-10 18:30 發布後打開公開站才發現資料、README 與批次欄位都更新了，`scope` 仍是 17:06 那一輪的文字（「局部複核 18 筆…新增 3 筆機會」），首頁因此對讀者宣稱錯誤的本輪進度。新增三條斷言：`scope` 必須是字串、必須出現「複核 N 筆」且 N 等於 `reviewed_ids` 長度、必須出現本批次開始日期，另有「宣稱的新增筆數不得大於 `new_ids`」。以 9201475 那一版資料反向驗證：`scope` 寫 18、`reviewed_ids` 只有 10，新斷言會擋下，舊版則全綠。只規範數字與日期，不規定句型。
+
+下一輪優先（完整五項）：
+①`aocai-working-free-ai-courses-2026`：11/16 台北梯次報名至 **2026-11-11 12:30**，11/11 中午後確認報名表是否關閉、11/26 梯次是否額滿，再決定維持 `conditional` 或轉 `applications_closed`；來源 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3544`、`https://serv.gcis.nat.gov.tw/AOCAI/`。
+②`mango-inference-community`：官方三處都寫「30% off … until Nov 11」但未標年份，11/12 起確認是否回到表列原價、US$10 註冊贈額的到期日；來源 `https://www.mangoboost.io/platform/mango-inference`、`https://inference.mangoboost.io/terms-of-service`。
+③`qoder-community-1024`：`tools/linkcheck.py` 全掃與本輪複查都把 `https://qoder.com/community-boost` 與 `https://docs.qoder.com/events/communityboost` 判為 404（兩頁是本筆主要來源）。下輪改查 `docs.qoder.com/llms.txt` 的 events 索引變更與 2026 Wayback 快照，找到替代官方頁就就地更新來源，找不到就把「原始頁已下架、只存快照」寫進 `access_risk`；狀態已是 `expired`，不要改回可行動。
+④`google-maps-demo-key-ai-studio-free-daily`：這是本輪新增且我們自己標了缺口的紀錄——「100 calls/day, per API」只有部落格一個來源，文件頁寫「subject to change」。下輪讀 Maps Platform 定價頁與各 API 的用量上限文件，確認每日額度是否逐 API 一致、Grounding Lite 是否同額，以及接上計費後的每月免費額度金額；來源 `https://developers.google.com/maps/demo-key`、`https://cloud.google.com/maps-platform/pricing`。
+⑤`smelearning-strongest-ai-king-line-points-2026`：同一站台兩套獎品文案（250 點 LINE POINTS ↔ 5 張電子咖啡券）需要官方一句話才能收斂；下輪查 `https://smelearning.sme.gov.tw/news.php?node=840`（彈窗宣稱的活動詳情，實際上是別篇公告）與站內最新消息是否有更新版，並確認兩階段各 500 名是否額滿。另：尚未帶 `verification_scope` 的官方紀錄仍有 95 筆（可行動 82 筆、其中台灣 Yes 11 筆），不要批次回填，輪替排到時逐筆重讀官方頁再補。
+
+三種「看不到」要分清楚，判讀方式各不相同。①**CSS 隱藏的備援句**：Neo4j 申請頁的「This form is temporarily unavailable. Please try again later.」是 `display:none` 的備援文字，純文字擷取（含 content negotiation 的 markdown 版）只會留下它，看起來像表單停用，實際上 38 個欄位與 Submit 都可用——判準是查 computed style 與可見性，不要只讀 innerText。②**真的沒有快照**：宣告「Wayback 沒有這頁」前先打 `web.archive.org/cdx/search/cdx?url=…&matchType=prefix`；E2E Networks 就是這樣被誤記了三輪「無任何快照」，實際有三筆 200 快照保存了完整的方案表與資格。③**CSR 文件站**：`docs.byteplus.com` 這類文件站的正文不在 SSR payload 裡，`llms.txt`、數字 slug、doccenter API 都拿不到，換無頭瀏覽器渲染一次就有逐字正文。三者的共同點是「文字版空白」但原因不同，處理方式也不同。
+
+新增紀錄時，`views` 只是人工標記，真正決定專區歸屬的是 schema 欄位：`categories`（FREE／HIGH-QUOTA／BETA-ACCESS 等）、`quota_classification`、`taiwan` 與兩個費用欄位。2026-11-10 新增的三筆都照這個規則寫（Google Maps Demo Key 的 `views` 含 `developer` 只是輔助標籤，能否進「免費」專區由 `setup_cost_usd`／`recurring_cost_usd` 皆為 0 決定），`tools/prioritize.py` 重算後 S 級由 122 增至 125，全部來自本輪把台灣資格補成 Yes 或新增台灣方案，不是評分公式變動。

@@ -284,5 +284,19 @@ _nk=tuple(sum(1 for i in new if offers_by_id[i].get('record_type')==k) for k in 
 assert _h_new==_nk and sum(_h_new)==len(new), f'README new-record counts {_h_new} disagree with new_ids record types {_nk} ({len(new)} IDs)'
 _h_unreviewed,= _readme_count(r'其餘 \*\*([\d,]+) 筆\*\*既有紀錄未完成本輪複核','unreviewed count')
 assert _h_unreviewed==run['unreviewed_existing_count'], f'README unreviewed count {_h_unreviewed} != last_research_run.unreviewed_existing_count ({run["unreviewed_existing_count"]})'
-print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions, README headline counts.')
+# 頂層 scope 是首頁「本次研究範圍」那一段的唯一來源，和 README 首段一樣是手寫敘述，但它沒有任何檢查：
+# 2026-11-10 18:30 發布後才發現資料、README 與批次欄位都更新了，scope 仍是 17:06 那一輪的文字
+# （寫著「局部複核 18 筆…新增 3 筆機會」），首頁因此對讀者宣稱錯誤的本輪進度，而且測試全綠。
+# 這裡只要求 scope 必須帶本批次的開始日期與「複核 N 筆」的 N 等於 reviewed_ids；數字改了文字沒改就擋下，
+# 不規定句子的其餘寫法。日期比對抓不到同日兩輪的漂移，筆數才是真正的防線。
+_scope=d['scope']
+assert isinstance(_scope,str) and _scope.strip(), 'top-level scope (the homepage research-range sentence) is empty'
+_m=_re.search(r'複核\s*\*{0,2}([\d,]+)\s*筆',_scope)
+assert _m, 'top-level scope must state how many existing records this batch reviewed (e.g.「局部複核 12 筆」) so the homepage cannot show a stale count'
+_scope_reviewed=int(_m.group(1).replace(',',''))
+assert _scope_reviewed==len(reviewed), f'top-level scope says it reviewed {_scope_reviewed} records but last_research_run.reviewed_ids has {len(reviewed)} — update the homepage sentence with the batch'
+assert run['started_at'][:10] in _scope, f'top-level scope does not mention this batch date {run["started_at"][:10]} — the homepage is showing an older round'
+_m=_re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
+if _m: assert int(_m.group(1).replace(',',''))<=len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
+print(f'PASS: {len(ids)} records; unique IDs, schema, zero-cost ratios, provenance, eligibility, unlimited, priority-tier assertions, README headline counts, homepage scope counts.')
 print('tiers:',{t:sum(1 for o in d['offers'] if o.get('priority_tier')==t) for t in ['S','A','B','C','D']})
