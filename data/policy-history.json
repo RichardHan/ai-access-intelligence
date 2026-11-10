@@ -29424,5 +29424,75 @@
     "sources": [
       "https://air.cgu.edu.tw/"
     ]
+  },
+  {
+    "record_id": "hyperbolic-inference-deposit-policy",
+    "change_type": "evidence_correction",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "個人 Free 帳戶不可使用推論，須一次儲值 US$5 升級 Pro",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "更正：官方 inference/overview 逐字「Personal accounts on the Free Tier can use inference after you verify a phone number. Verifying also adds a $1 credit」，一次 US$5 儲值是升級 Pro 的替代路徑，不是使用推論的前提；errors 頁的 403 碼已改為 inference_requires_verified_phone（舊版為 inference_requires_pro）。setup_cost_usd 由 5 改 0。",
+    "sources": [
+      "https://www.hyperbolic.ai/docs/inference/overview",
+      "https://www.hyperbolic.ai/docs/inference/errors",
+      "https://www.hyperbolic.ai/docs/general/billing-payments"
+    ]
+  },
+  {
+    "record_id": "pieces-seven-day-card-required-trial-price-watch",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "價格待核",
+    "current_classification": "UNKNOWN",
+    "note": "Pieces 沒有永久免費方案：官方 FAQ 逐字「Is Pieces free to use? No」；7 天試用任何方案都要先綁卡，試用後 Pro US$18.99／人／月、Enterprise US$22.99（US$69.99／季），另有 14 天退款保證。recurring_cost_usd 由 null 記為 18.99。",
+    "sources": [
+      "https://pieces.app/pricing"
+    ]
+  },
+  {
+    "record_id": "spaitial-free-monthly-eight-hundred-api-scope-watch",
+    "change_type": "evidence_correction",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "兩份官方文件對 Free 是否含 Echo-2 API 說法衝突",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "衝突已排除：credits-billing 與 daily-generation-limits 兩頁現皆逐字「Every plan, including Free, includes API access to Echo-2 Standard, Echo HQ and Echo 3」；Free 每月 800 credits（1 credit＝US$0.01）、web/App/API 共用、不結轉。狀態 conditional→active。",
+    "sources": [
+      "https://docs.spaitial.ai/api/credits-billing",
+      "https://docs.spaitial.ai/limits/daily-generation-limits"
+    ]
+  },
+  {
+    "record_id": "mistral-education-unresolved",
+    "change_type": "terms_clarification",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "卡片靜態價 US$14.99 與 FAQ 學生價 US$5.99 並存，未解",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "以無頭瀏覽器渲染並勾選學生切換（#education）後，Pro 卡片價格由 US$14.99 變為 US$5.99，兩處說法因此一致；卡片註記最長 12 個月、限未用過 Vibe／Le Chat 的已驗證高教學生。同卡另列「$25.5 /mo」「$15 /mo」兩行 API credits，頁面未寫學生價對應哪一行，已列缺口。",
+    "sources": [
+      "https://mistral.ai/pricing/"
+    ]
+  },
+  {
+    "record_id": "kiroween-2026-hackathon-4000-credits",
+    "change_type": "eligibility_clarification",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "填 Credit Request Form 即申請 4,000 credits",
+    "current_classification": "HIGH BUT LIMITED",
+    "note": "2026-11-11 官方 Updates 新增條件：領取 credits 需通過身分驗證（identity verification check）以防詐欺，並註明申請仍在審核中；同則僅新增印尼為合格地區，排除名單未列台灣。期限（12/1 12:00 PT 申請、12/4 兌換、12/31 失效）不變。",
+    "sources": [
+      "https://kiroween.devpost.com/updates/47479-build-with-kiro-live-on-november-11",
+      "https://kiroween.devpost.com/rules"
+    ]
+  },
+  {
+    "record_id": "cht-gemini-shorts-contest-2026",
+    "change_type": "new_opportunity",
+    "verified_at": "2026-11-11T07:24:00+08:00",
+    "previous_limit": "未收錄",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "note": "中華電信 Gemini 超行 YouTube Shorts 創作大賽：徵件至 2026-11-30 18:00，限 18 歲以上具中華民國國籍者，作品須用至少一種 Google AI 工具並保留提示詞；旗艦大獎總值 NT$82,149，另有最佳觀看獎與 4 週共 100 名抽獎。屬獎品競賽，不提供模型額度。",
+    "sources": [
+      "https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html"
+    ]
   }
 ]

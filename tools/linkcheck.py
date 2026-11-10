@@ -47,6 +47,8 @@ import concurrent.futures  # noqa: E402  (必須在 sys.path 修正之後)
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "offers.json"
 DEAD_CODES = {404, 410}
+# 404 的延遲重試間隔（秒）。0 代表不重試，測試用。
+RETRY_DELAY = 2.0
 BLOCKED_CODES = {400, 401, 403, 405, 406, 409, 429, 500, 502, 503, 504, 520, 521, 522, 523, 530}
 HEADERS = {
     # 不少站台對沒有 UA 的請求直接回 403；用一般瀏覽器 UA 降低假陽性。
@@ -88,12 +90,16 @@ def http_status(url, method, timeout=10):
         return type(error).__name__
 
 
-def probe(url, timeout=10, fetcher=None):
+def probe(url, timeout=10, fetcher=None, retry_delay=RETRY_DELAY, sleep=time.sleep):
     """HEAD 之後再用 GET 確認，回傳 (status, method)。
 
     一定要有 GET 才算數：2026-11-10 實測 support.google.com/docs/answer/16143507 對 HEAD
     回 404、對 GET 回 200，codebuddy.cn 亦同。只憑 HEAD 就判 dead 會把還開得起來的官方
     文件列成失效——這正是這支工具最不該犯的錯。因此 HEAD 成功才提早結束，其餘一律再試 GET。
+
+    404／410 再等一下重試一次：2026-11-10 24 路併發全掃把 neo4j 兩頁報成 404，同一 URL
+    單筆重掃與 curl 都 200；併發或 CDN 邊緣節點會給出與實際狀態不符的 404。dead 清單是
+    下一輪的證據維修佇列，寧可多花一次延遲，也不要讓研究者去修一個沒壞的來源。
     """
     fetcher = fetcher or http_status
     status, method = None, None
@@ -101,6 +107,9 @@ def probe(url, timeout=10, fetcher=None):
         status, method = fetcher(url, candidate, timeout), candidate
         if isinstance(status, int) and status < 400:
             return status, method
+    if status in DEAD_CODES and retry_delay > 0:
+        sleep(retry_delay)
+        return fetcher(url, "GET", timeout), "GET-retry"
     return status, method
 
 
@@ -159,7 +168,26 @@ def self_test():
     def both_404(url, method, timeout=10):
         return 404
 
-    assert probe("https://a.example/gone", fetcher=both_404) == (404, "GET"), "HEAD 與 GET 都 404 才算 dead"
+    assert probe("https://a.example/gone", fetcher=both_404, retry_delay=0.01,
+                 sleep=lambda _: None) == (404, "GET-retry"), "HEAD、GET 與重試都 404 才算 dead"
+    assert classify(probe("https://a.example/gone", fetcher=both_404, retry_delay=0.01,
+                          sleep=lambda _: None)[0]) == "dead"
+
+    # 併發下的假 404：2026-11-10 全掃把 neo4j 兩頁報成 404，單筆重掃與 curl 都 200。
+    # 第一次 HEAD＋GET 都 404、延遲重試那一次 200 時，不得列進 dead 佇列。
+    calls = {"n": 0}
+
+    def flaky_404(url, method, timeout=10):
+        calls["n"] += 1
+        return 404 if calls["n"] <= 2 else 200
+
+    status, method = probe("https://a.example/flaky", fetcher=flaky_404, retry_delay=0.01,
+                           sleep=lambda _: None)
+    assert (status, method) == (200, "GET-retry"), "延遲重試成功者不得判為 dead"
+    assert classify(status) == "ok"
+    calls["n"] = 0
+    assert probe("https://a.example/flaky", fetcher=both_404, retry_delay=0.01,
+                 sleep=lambda _: None) == (404, "GET-retry"), "重試後仍 404 才是 dead"
 
     def head_403_get_200(url, method, timeout=10):
         return 403 if method == "HEAD" else 200

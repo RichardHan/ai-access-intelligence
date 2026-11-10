@@ -2496,3 +2496,54 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式，並核微軟台灣各校 A1 合約到期日；來源 `https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`、`https://www.microsoft.com/zh-tw/education/products/office`。
 
 **常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 85 筆（可行動約 75 筆，排到時重讀再補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪全掃 2,880 個 URL（dead 7、unreachable 11、blocked 75），7 筆 dead 全部已在各自紀錄留下證據缺口（qoder-community-1024、nscale、deepinfra、salad-ssap、astamuse、perplexity ×2），下輪挑 2 筆找替代官方頁即可，不必重掃。
+
+## 2026-11-11 07:05–07:35（Asia/Taipei）第 N+5 輪：20 筆複核（7 筆即將到期＋10 筆最久未核＋3 筆條款／價格重核）、1 筆新增、0 筆追查失敗
+
+**範圍與計數**：N=1,036、R=20（A 組 7 筆 11/12–12/2 到期或即將關閉、B 組 10 筆 2026-10-31／11-01 最久未核輪替、主 agent 3 筆條款與價格重核）、A=1（opportunity 1／policy 0／watchlist 0）、U=1,016、attempted=0。資料集 1,037 筆。佇列基準（07:05）：`next_review_at` 嚴格逾期 0 筆、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、`retry` 桶 0 筆（1 筆冷卻中）、24 小時未核 658 筆。上一輪（06:05–06:28）才結束 37 分鐘，其 17 筆不重讀；本輪改取「快到期」與「最久沒人看」兩端，加上手上有明確衝突未解的三筆。未登入、未申請、未付款。
+
+**實質變更（會改變讀者判斷）**
+
+1. **Hyperbolic 卡片原本把免費路徑寫成付費**：舊標題「個人需至少 5 美元儲值」不完整。官方 `inference/overview` 逐字「Personal accounts on the Free Tier can use inference after you verify a phone number. Verifying also adds a $1 credit.」，`inference/errors` 的錯誤碼已由 `inference_requires_pro` 改為 `inference_requires_verified_phone`，一次 US$5 儲值只是升級 Pro 的替代路徑。`setup_cost_usd` 5→0、標題與摘要重寫；這是本輪最直接影響「能不能免費用」的更正。
+2. **Pieces 根本沒有免費方案**：官方 FAQ 逐字「Is Pieces free to use? No」，7 天試用任何方案都要先綁卡，試用後 Pro US$18.99／人／月、Enterprise US$22.99（US$69.99／季），另有 14 天退款保證。舊紀錄只寫「價格待核」，`recurring_cost_usd` 現在記 18.99。
+3. **SpAItial 的免費 API 衝突已消失**：`credits-billing` 與 `daily-generation-limits` 兩頁現皆逐字「Every plan, including Free, includes API access to Echo-2 Standard, Echo HQ and Echo 3」，不再並列兩說；狀態 conditional→active，補上 1 credit＝US$0.01、Echo-2 每次 160 點等換算。
+4. **Kiroween 多一道身分驗證**：官方 11/11 更新（`/updates/47479`）逐字「to receive credits we require an identity verification check to prevent fraud」，並註明申請仍在審核；期限（12/1 12:00 PT 申請、12/4 兌換、12/31 失效）與台灣資格不變，另新增印尼為合格地區。
+5. **Mistral 學生價的來源衝突已解**：先前「卡片靜態值 US$14.99 vs FAQ US$5.99」看起來是官方兩說，實際是同一張 Pro 卡片的學生切換（`#education`）——渲染後勾選，價格元素由 US$14.99 變 US$5.99，取消勾選回 US$14.99。同卡另有「$25.5 /mo」與「$15 /mo」兩行 API credits，頁面未寫學生價對應哪一行，列為缺口而不挑一個寫。`mistral-vibe-free` 的 Education 方案敘述同步改成「預設 US$14.99、切換後 US$5.99」。
+6. **智譜 BigModel 免費模型仍在，但只在收合表裡**：定價頁正文的「最新模型／文本模型」表已看不到 GLM-4.7-Flash，必須展開「更多文本模型」才讀到「GLM-4.7-Flash 200K 免费 免费」與 GLM-4-Flash-250414、GLM-Z1-Flash。純文字擷取會誤判「免費清單消失」；`GLM-4.7-FlashX` 等仍是付費。
+7. 其餘 12 筆逐字重讀後主張不變：勞動部臺南大學職前班（11/16 16:00 截止、名額 34、已報 27）、UGREEN 黑客松（台北 11/16 15:45、Asia-Pacific 名單含 Taiwan）、Mozilla Human-Scale AI（11/20 23:59 PST＝台北 11/21 15:59、US$300k＋最高 US$200k、7 席中 3 席為預選 anchor、FAQ 明寫不延期）、IteraCompute（至台北 11/24 16:00）、臺北產業獎勵補助（徵件至 11/30）、商業署多店 AI 升級（第 3 梯至 115/11/30 17:00）、Runpod Creator、Railway、Microsoft Foundry、Runway、Vmake、Verda（1,000–2,000 字或 5–10 分鐘影片、1–2 工作天審核、額度不過期）、Moondream。
+
+**新增 1 筆（主 agent 逐字讀官方頁）**
+
+- `cht-gemini-shorts-contest-2026`（opportunity，S 級）：中華電信「Gemini 超行 精采玩大的！」YouTube Shorts 創作大賽，徵件 2026-11-04 12:00–**11-30 18:00**，限**報名時滿 18 歲且具中華民國國籍**；作品須 9:16、1080×1920、3 分鐘內 MP4，加入指定圖樣與 Hashtag「#Gemini超行精采玩大的」，先不公開上傳、審核通過後改公開；須用至少一種 Google AI 工具並保留提示詞。獎項：旗艦大獎 1 名（總值 NT$82,149）、最佳觀看獎 5 名（12/14 14:00 觀看數截止）、4 週共 100 名抽獎；中獎逾 NT$20,001 先扣 10% 機會中獎稅。**這是獎品競賽，不提供模型額度**，summary 與 access_risk 都寫明。
+
+**未納入（本輪判斷）**
+
+- `Vectoree`（CLI 綁專案送 US$5）：2026-11-10 17:06 那輪已以「一次性 US$5、價值過薄」排除，本輪重新看到同一線索，維持不建檔——重複評估要留下否決理由，否則下一輪又會撿回來。
+- Grok for Startups：子代理當成新候選，但 `grok-watch` 已是同一方案（20/80 分段、六個月、每公司一次、Cursor 範圍衝突都已記錄），屬去重失誤；不另建 ID，今日重讀 `x.ai/startups` 與 2026-10-27 版條款後內容一致，未刷新其 `verified_at`（沒有新事實就不假裝複核）。
+- Anthropic×GSA 40%（僅美國政府機關）、Kimi K3.1 Pro 開源權重（2.8T 無法自架、無免費 API）、ChatGPT Go 免費（印度促銷已結束）、數發部 115 年 AI 算力（已有紀錄且 10/30 截止）、Copilot 雲端 sandbox（付費限定）、Nebius／Nscale／Onomeo／AI21／Ollama Cloud 取消免費（負向變動，交既有紀錄例行複核）。
+
+**證據缺口**
+
+- Mistral：學生價對應哪一行 API credits（同卡並列 US$25.5／US$15）、credits 是否每月重置、教師是否適用（Help 寫教師可申請、卡片條件寫 verified students）、台灣學校網域驗證與結帳稅額。
+- 智譜：免費模型的 RPM／並發上限頁面未列；用戶協議非商業限制沿用 2026-11-08 讀值。
+- Kiroween：身分驗證的具體方式（文件／自拍／第三方）與審核時間。
+- CHT 競賽：報名表實際欄位與審核時效、指定圖樣下載位置、免費 Gemini 層是否符合查驗標準。
+- 臺北酷 AI 與中華電信 1399 搭 2TB 的既有來源層級差異不變（本輪未處理）。
+
+**品質改善（本輪唯一一項）：`tools/linkcheck.py` 對 404／410 加一次延遲重試**
+
+- 觀察到的問題：2026-11-10 24 路併發全掃把 neo4j 兩個文件頁報成 404，同一 URL 單筆重掃與 curl 都 200；dead 清單是下一輪的證據維修佇列，假陽性會讓人去「修」沒壞的來源。舊版 HEAD＋GET 都 404 就直接判 dead。
+- 預期結果：只有「HEAD、GET 與延遲 2 秒後的重試」都 404／410 才進 dead；重試成功者標 `GET-retry` 並歸 ok，其餘分類（403、逾時、5xx）完全不變。
+- 驗證方式：`python3 tools/linkcheck.py --self-test` 新增三條規格值斷言（前兩次 404、重試 200 → 不得為 dead；三次都 404 → dead；`retry_delay=0` 關閉重試時行為不變）；實跑 `--record hyperbolic-inference-deposit-policy`（6/6 ok）與 `--record qoder-community-1024`（仍 2 筆 dead、方法顯示 GET-retry），確認真 dead 不會被誤放行。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,037 筆、S/A/B/C/D＝133/186/126/274/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/queue.py --self-test`、`python3 tools/linkcheck.py --self-test`、`git diff --check`。
+瀏覽器（本機 8931、headless Chromium）：資料載入 1,037 筆、概況卡 824／147／50／163；首頁 scope 為本輪文字；「本輪更新」21 筆（20 複核＋1 新增）；台灣條件適用 147、免費方案 677；關鍵字 Hyperbolic／Pieces／Mistral 教育／Kiroween／Shorts 各只有對應紀錄；Pieces 卡片顯示「每月費用 US$18.99」與費用說明、Hyperbolic 顯示設定費／月費 US$0、Kiroween 顯示「申請截止 2026/12/02 04:00 · 剩 21 天」、CHT 競賽顯示「申請截止 2026/11/30 18:00 · 剩 19 天」；「截止日由近到遠」前六筆為 11/11 12:30（今天）→11/12 15:59→11/12→11/13→11/15 23:59→11/15；390px 寬無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `aocai-working-free-ai-courses-2026`（`deadline_at` 2026-11-11T12:30、daily、next 12:00）：**12:30 之後第一件事**是重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544` 與報名表 `JoinPNew.aspx?t=0&id=3544`。若 11/16 班已關，改把 `deadline_at` 指向 11/26 班（頁面寫報名截止 2026/11/19）或 12/01 BizBoost 班（`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`），並改寫摘要第一句；`deadline_at` 已過卻仍非已截止會被 `tests/validate.py` 擋。
+② `taipei-kuai-ai-school-grant-batch2-115`（11/13 截止、daily、next 11/12 09:00）：11/13 後若無延期公告改 `applications_closed`、`review_cadence` 改 `monthly_or_new_signal`；並再試教育局官網原始公告（`doe.gov.taipei` 公文公告列表與站內搜尋）。
+③ `adobe-startups-free-year-firefly-acrobat-semrush`（next 11/18、連續三次追查失敗）：換網路或請人代抓 `https://business.adobe.com/solutions/startups.html`，目標是「申請表是否要求付款方式」「有無國別下拉」；仍失敗就改找 Adobe for Startups 條款頁或 partner 頁，別再重試同一條路。
+④ `mistral-education-unresolved`（next 12/11）：釐清學生價對應哪一行 API credits（US$25.5 或 US$15）與 credits 重置規則，來源 `https://mistral.ai/pricing/`、`https://help.mistral.ai/en/articles/698530-i-m-a-student-or-a-teacher-am-i-eligible-for-a-discount`；同時確認教師是否適用 Education 卡片的 12 個月條款。
+⑤ `aws-pioneer-credits-thousand-90-days`（next 12/11）與 `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：前者確認申請頁國別選項是否含台灣、是否與 AWS Activate 互斥；後者 2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式。來源 `https://aws.amazon.com/pioneer-credits/`、`https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`。
+
+**常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 70 筆可行動官方紀錄（排到時重讀再補）；23 筆可行動紀錄有已知費用卻沒有 `cost_note` 說明那是試用後價、必要預付或折扣前價（本輪 Pieces 即屬此類，已補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪只單筆驗證未全掃，下輪若要全掃直接用它，dead 清單先單筆重掃再當證據。
