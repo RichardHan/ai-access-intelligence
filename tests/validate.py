@@ -139,6 +139,14 @@ for o in d['offers']:
 # (2026-11-09: the four new records were written without one before this check).
 for rid in reviewed+new:
  assert offers_by_id[rid].get('status') in valid_statuses, f'missing or invalid status for a batch record: {rid}'
+# 卡片的「本次核實範圍」那一列直接讀 verification_scope，缺值時退回一句通用話術
+# （app.js：addRow('本次核實範圍', offer.verification_scope || '僅限各來源列明主張；其他欄位可能沿用較早研究。')）。
+# 2026-11-10 統計 100 筆已標「官方」的紀錄沒有這個欄位，其中 1 筆正是當天 15:05 批次複核的
+# duck-ai-free-chat：同一批 18 筆都寫了「這次核了什麼、沒核什麼」，只有它讓讀者看到通用字，
+# 於是「整筆都核過」與「只核了其中一項」在卡片上長得一模一樣。批次複核的紀錄必須寫出範圍。
+for rid in reviewed+new:
+ scope=offers_by_id[rid].get('verification_scope')
+ assert isinstance(scope,str) and scope.strip(), f'missing verification_scope for a batch record (the card then shows a generic scope sentence): {rid}'
 # The cadence string is a promise about re-check frequency and is shown to readers as
 # 「下次複核：每日／每週…」. Scheduling a 30-day review on a `daily` record hides it from the
 # rotation queue while the card still claims daily tracking, so cap the gap per cadence.
