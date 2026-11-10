@@ -2547,3 +2547,5 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `aws-pioneer-credits-thousand-90-days`（next 12/11）與 `microsoft-365-education-a1-retirement`（monthly_or_new_signal）：前者確認申請頁國別選項是否含台灣、是否與 AWS Activate 互斥；後者 2026-12-01 MA2 全面上市後查 MA2 學生版定價與 MA0 在台灣的配發方式。來源 `https://aws.amazon.com/pioneer-credits/`、`https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-education-portfolio`。
 
 **常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 70 筆可行動官方紀錄（排到時重讀再補）；23 筆可行動紀錄有已知費用卻沒有 `cost_note` 說明那是試用後價、必要預付或折扣前價（本輪 Pieces 即屬此類，已補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪只單筆驗證未全掃，下輪若要全掃直接用它，dead 清單先單筆重掃再當證據。
+
+**發布**：commit `31c323f` 已推上 `origin/main`（`2f61ad9..31c323f`），對應的 `pages-build-deployment`（run 42924165984）success；公開站 <https://richardhan.github.io/ai-access-intelligence/> 已核對 1,037 筆、概況卡 824／147／50／163、「本輪更新」21 筆、首頁 scope 為本輪文字（07:05–07:24），Hyperbolic 卡片顯示設定費／月費 US$0 與「核實 2026/11/11」，CHT 競賽卡片顯示「申請截止 2026/11/30 18:00 · 剩 19 天」，console error 0。以上為推送後在公開站實際載入的結果，非只憑 Actions 成功推論。
