@@ -34,7 +34,7 @@ assert(css.includes('.status-conditional'),'missing .status-conditional in style
 assert.strictEqual(ctx.statusInfo({status:'quota_and_taiwan_eligibility_unverified'}).label,'額度與台灣資格待核');
 assert.strictEqual(ctx.statusInfo({status:'taiwan_not_listed_supported_region'}).label,'台灣未列於支援地區');
 assert.strictEqual(ctx.statusInfo({status:'watchlist'}).label,'觀察線索待追蹤');
-const validStatuses=['active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','duplicate_merged','amount_and_eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'];
+const validStatuses=['active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','duplicate_merged','amount_and_eligibility_unverified','eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'];
 for (const st of validStatuses) {
   assert.notStrictEqual(ctx.statusInfo({status:st}).label, '狀態待釐清', `missing status label in app.js: ${st}`);
 }
@@ -564,3 +564,21 @@ const freeWithSources=d.offers.filter(o=>JSON.stringify(o).includes('免費')).l
 assert(freeHits<=freeWithoutSources,`search hits (${freeHits}) must not exceed records whose own fields mention the term (${freeWithoutSources})`);
 assert(freeHits<freeWithSources,`search must exclude source evidence: ${freeHits} hits vs ${freeWithSources} records that mention it anywhere`);
 console.log('PASS: keyword search reads claim fields only — no JSON key names, no source evidence, no timestamps ('+freeHits+' 免費 hits).');
+
+// 「本次核實範圍」是一個主張，不是一個欄位名稱。2026-11-10 統計 99 筆已標「官方」的紀錄沒有
+// verification_scope，卡片卻一律印「本次核實範圍：僅限各來源列明主張…」——讀者看到的是「這輪核過、
+// 只是範圍有限」，實際上這筆根本沒記錄核過什麼，於是「只核了其中一項」與「整筆都核過」長得一樣。
+// 規格值：缺值時標籤必須明說未記錄，有值時必須逐字顯示。
+const scopeRow = record => ctx.createDetails(record).children
+  .find(node => node.tagName === 'dl').children
+  .find(row => ['本次核實範圍', '核實範圍未記錄'].includes(row.children[0].textContent));
+const noScope = d.offers.find(o => o.verification === 'Official' && !(o.verification_scope || '').trim());
+assert(noScope, 'expected an official record without verification_scope to exercise the fallback');
+const fallback = scopeRow(noScope);
+assert.strictEqual(fallback.children[0].textContent, '核實範圍未記錄', 'a record without verification_scope must not label the row 本次核實範圍');
+assert(fallback.children[1].textContent.includes('未記錄核實範圍'), 'the fallback must say the scope was not recorded');
+const withScope = d.offers.find(o => (o.verification_scope || '').trim());
+const shown = scopeRow(withScope);
+assert.strictEqual(shown.children[0].textContent, '本次核實範圍');
+assert.strictEqual(shown.children[1].textContent, withScope.verification_scope.trim(), 'the recorded scope must be shown verbatim');
+console.log('PASS: 核實範圍 row states whether the scope was recorded instead of printing a generic claim.');

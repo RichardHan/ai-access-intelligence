@@ -55,6 +55,7 @@ const STATUS_LABELS = {
   grant_terms_unverified: '資助條款待核',
   resolved_rumor_disproven: '線索已釐清・未獲支持',
   amount_and_eligibility_unverified: '額度與資格待核',
+  eligibility_unverified: '資格待核',
   current_approval_unverified: '審核現況待核',
   grant_delivery_unverified: '資助發放待核',
   legacy_closed_new_path_conditional: '舊途徑關閉・新途徑需條件',
@@ -395,7 +396,12 @@ function createDetails(offer) {
   details.append(text('summary', '查看資格、限制與來源'));
   const grid = text('dl', '', 'detail-grid');
   addRow(grid, '完整研究摘要', offer.summary);
-  addRow(grid, '本次核實範圍', offer.verification_scope || '僅限各來源列明主張；其他欄位可能沿用較早研究。');
+  // 「本次核實範圍」是一個主張：它說這筆紀錄在最近一次查核時確認了什麼。欄位缺值時沿用通用句
+  // 會讓「只核了其中一項」與「整筆都核過」在卡片上長得一樣，而通用句又長得像已宣告範圍。
+  // 缺值就改標籤，明說這一筆沒有記錄範圍（2026-11-10 全庫 99 筆已標官方但缺此欄位）。
+  const scope = typeof offer.verification_scope === 'string' ? offer.verification_scope.trim() : '';
+  addRow(grid, scope ? '本次核實範圍' : '核實範圍未記錄',
+    scope || '此筆未記錄核實範圍：只有各來源列明的主張有證據，其餘欄位可能沿用較早研究。');
   addRow(grid, '優惠現況', statusInfo(offer).label);
   if (offer.duplicate_of) {
     addRow(grid, '重複收錄處理', `與 ${offer.duplicate_of} 為同一方案，已併入該筆並保留本ID供追溯；額度與資格以合併後紀錄為準。`);
