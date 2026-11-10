@@ -44,6 +44,7 @@ class Element {
   constructor(tag) { this.tagName=tag; this.children=[]; this.textContent=''; }
   append(...children) { this.children.push(...children); }
   get childElementCount() { return this.children.length; }
+  setAttribute(key,value) { this[key]=value; }
 }
 ctx.document={createElement:tag=>new Element(tag)};
 const dup=d.offers.find(o=>o.status==='duplicate_merged');
@@ -197,6 +198,50 @@ const closedUnlimited=d.offers.find(o=>['expired','expired_unverified','closed',
 assert(closedUnlimited,'dataset should contain a closed unlimited-classified record to guard against');
 assert(!f(closedUnlimited,{view:'unlimited'}),'closed record must not appear in the unlimited preset: '+closedUnlimited.id);
 assert(f(closedUnlimited,{}),'closed record must stay findable in the full list: '+closedUnlimited.id);
+
+// 機器可讀的截止日先前只出現在收合的詳情列：2026-11-10 統計，906 筆可行動紀錄中有 22 筆帶未來截止點，
+// 但依預設 S→D 排序時有 18 筆不在第一頁（Amazon ARA 台北 11/12 15:59 排在第 609 張），也沒有任何排序
+// 能把它們找出來。以下為規格值：只列日期者視為當日 23:59 台北時間、已過的日期不算即將截止、
+// 已截止紀錄不得主張剩餘天數、超過 60 天不擠上卡片、排序時有截止點者一律排在沒有的人前面。
+const CLOSE_NOW=Date.parse('2026-11-10T08:30:00+08:00');
+const realNow=ctx.nowMs;
+ctx.nowMs=()=>CLOSE_NOW;
+assert.strictEqual(ctx.closeInstant('2026-11-12'),Date.parse('2026-11-12T23:59:59+08:00'),'date-only deadlines count as the whole Taipei day');
+assert.strictEqual(ctx.closeInstant('2026-11-12T15:59:00+08:00'),Date.parse('2026-11-12T15:59:00+08:00'));
+assert.strictEqual(ctx.closeInstant(null),null);
+assert.strictEqual(ctx.daysUntil(Date.parse('2026-11-10T23:59:59+08:00'),CLOSE_NOW),0,'a same-day deadline is 0 days, not 1');
+assert.strictEqual(ctx.daysUntil(Date.parse('2026-11-12T15:59:00+08:00'),CLOSE_NOW),2);
+const syntheticClose={id:'synthetic',status:'active',deadline_at:'2026-11-12T15:59:00+08:00',expires_at:'2026-11-11T09:00:00+08:00'};
+assert.strictEqual(ctx.closeBadge(syntheticClose,CLOSE_NOW).label,'方案結束','badge must show the nearest close point');
+assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadline_at:'2026-11-01'},CLOSE_NOW),null,'a past date is not an upcoming deadline');
+assert.strictEqual(ctx.closeBadge({...syntheticClose,status:'applications_closed'},CLOSE_NOW),null,'closed records must not claim remaining days');
+assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadline_at:'2027-06-30'},CLOSE_NOW),null,'dates beyond 60 days stay in the details row only');
+assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadline_at:'2026-11-10'},CLOSE_NOW).days,0);
+const araCard=ctx.createCard(d.offers.find(o=>o.id==='amazon-ara-multilingual-contextual-ai-fall-2026'));
+const araFoot=araCard.children.find(n=>n.className==='card-foot');
+const araPill=araFoot.children.find(n=>n.className&&n.className.includes('deadline-pill'));
+assert(araPill,'card face must show the upcoming deadline');
+assert.strictEqual(araPill.textContent,'申請截止 2026/11/12 15:59 · 剩 2 天');
+assert(araPill.className.includes('deadline-soon'),'a deadline within a week needs the urgent tone');
+const plainFoot=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free')).children.find(n=>n.className==='card-foot');
+assert(!plainFoot.children.some(n=>n.className&&n.className.includes('deadline-pill')),'cards without a machine-readable deadline must not show one');
+const closeOrdered=[...d.offers].sort(ctx.byDeadline);
+const closeDated=closeOrdered.filter(o=>ctx.soonestClose(o,CLOSE_NOW));
+assert(closeDated.length>10,'expected records with an upcoming close point');
+assert(closeOrdered.slice(0,closeDated.length).every(o=>ctx.soonestClose(o,CLOSE_NOW)),'records with an upcoming close point must precede the rest');
+const closeAts=closeOrdered.slice(0,closeDated.length).map(o=>ctx.soonestClose(o,CLOSE_NOW).at);
+assert(closeAts.every((at,i)=>i===0||at>=closeAts[i-1]),'deadline sort must be ascending');
+assert(ctx.compareDeadline({id:'later',deadline_at:'2026-11-20'},{id:'sooner',deadline_at:'2026-11-12'},CLOSE_NOW)>0);
+assert(ctx.compareDeadline({id:'undated'},{id:'dated',deadline_at:'2026-11-12'},CLOSE_NOW)>0,'undated records must sort after dated ones');
+const undatedPair=closeOrdered.slice(closeDated.length,closeDated.length+2);
+assert.strictEqual(ctx.compareDeadline(undatedPair[0],undatedPair[1],CLOSE_NOW),ctx.byPriority(undatedPair[0],undatedPair[1]),'undated records keep the priority order');
+ctx.nowMs=realNow;
+assert(!d.offers.some(o=>deadStatuses.includes(o.status)&&ctx.closeBadge(o,CLOSE_NOW)),'closed records must never show a deadline pill');
+const sortSelect=/<select name="sort">([\s\S]*?)<\/select>/.exec(fs.readFileSync(__dirname+'/../index.html','utf8'));
+assert(sortSelect,'sort select missing from index.html');
+assert(/<option value="deadline">/.test(sortSelect[1]),'sort select must expose the deadline order');
+assert(css.includes('.deadline-pill'),'missing .deadline-pill in style.css');
+console.log('PASS: overdue/near deadlines are visible on the card face and sortable, and closed records claim no remaining days.');
 for(const o of unlimitedByQuota.filter(x=>!['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'].includes(x.status))){
   assert(f(o,{view:'unlimited'}),'open unlimited record must appear in the preset: '+o.id);
 }
@@ -378,7 +423,6 @@ console.log('PASS: overview metrics agree with the presets they share a label wi
 // （2026-11-09：Amazon Q Developer 於 2026-05-15 停止新註冊後仍以「免費機會」開場；
 // 全庫 75 筆已截止／已關閉／重複合併紀錄中 72 筆帶分類標籤）。已截止卡片改為單一歷史標籤並列原分類；
 // categories 資料不改，避免用前端掩蓋歷史事實。以下為規格值斷言。
-Element.prototype.setAttribute=function(key,value){this[key]=value;};
 const closedCard=ctx.createCard(d.offers.find(o=>o.id==='chatgpt-back-to-school-us'));
 const closedTags=closedCard.children.find(n=>n.className==='card-tags');
 assert.strictEqual(closedTags.children.length,1,'closed card must show exactly one tag');

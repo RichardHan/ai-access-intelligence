@@ -305,6 +305,70 @@ function deadlineInfo(offer) {
   return parts.length ? parts.join('；') : null;
 }
 
+// 機器可讀的截止點只有 deadline_at／expires_at／expiry.date。2026-11-10 統計：906 筆可行動紀錄中
+// 只有 22 筆帶有未來的截止點，但它們在預設的 S→D 優先度排序裡散落各頁（Amazon ARA 台北 11/12 15:59
+// 排在第 609 張，第一頁的 24 張只涵蓋其中 4 筆），而日期又只出現在收合的詳情區。也就是說「期限查清楚」
+// 的主張在最需要它的地方看不到。改為：卡片正面顯示近期截止點，並提供「截止日由近到遠」排序。
+// 只列日期者視為當日仍可行動（同日 23:59 台北時間），與 tools/queue.py 的 parse_stamp 一致。
+const CLOSE_FIELDS = [['deadline_at', '申請截止'], ['expires_at', '方案結束']];
+// 卡片正面只放 60 天內會發生的截止點：更遠的日期（例：expiry.date 只有年月，換算成 2028-06-01）
+// 卻顯示「剩 569 天」既不緊急也不是讀者當下的決策依據，完整日期仍留在詳情的「截止與期限」列。
+const CLOSE_BADGE_DAYS = 60;
+const TAIPEI_DAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' });
+function nowMs() {
+  return Date.now();
+}
+function closeInstant(value) {
+  const raw = String(value ?? '').trim();
+  if (!raw) return null;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return Date.parse(`${raw}T23:59:59+08:00`);
+  const at = Date.parse(raw);
+  return Number.isNaN(at) ? null : at;
+}
+// 以台北日曆日相減，避免「今天 23:59 截止」被算成剩 1 天、或跨時區算成昨天。
+function daysUntil(at, now) {
+  return Math.round((Date.parse(TAIPEI_DAY.format(new Date(at))) - Date.parse(TAIPEI_DAY.format(new Date(now)))) / 86400000);
+}
+function closePoints(offer) {
+  const points = [];
+  for (const [field, label] of CLOSE_FIELDS) {
+    const at = closeInstant(offer[field]);
+    if (at !== null) points.push({ label, at, value: offer[field] });
+  }
+  const expiry = offer.expiry;
+  if (expiry && typeof expiry === 'object' && expiry.date) {
+    const at = closeInstant(expiry.date);
+    if (at !== null) points.push({ label: '期限', at, value: expiry.date });
+  }
+  return points.sort((a, b) => a.at - b.at);
+}
+// 已截止／已終止／重複合併的紀錄不再主張「剩 N 天」：它們的日期是歷史，卡片正面已由歷史標籤說明。
+function soonestClose(offer, now = nowMs()) {
+  if (CLOSED_STATUSES.has(offer.status)) return null;
+  return closePoints(offer).find(point => point.at > now) ?? null;
+}
+function closeBadge(offer, now = nowMs()) {
+  const point = soonestClose(offer, now);
+  if (!point) return null;
+  const days = daysUntil(point.at, now);
+  if (days > CLOSE_BADGE_DAYS) return null;
+  const raw = String(point.value);
+  const text = /T\d{2}:\d{2}/.test(raw) ? dateLabel(raw, true) : raw;
+  return { label: point.label, text, days };
+}
+// 沒有截止日者不得被排到有截止日者前面；兩者都沒有時沿用優先度排序，維持原本的可讀順序。
+function compareDeadline(a, b, now = nowMs()) {
+  const left = soonestClose(a, now);
+  const right = soonestClose(b, now);
+  if (!left && !right) return byPriority(a, b);
+  if (!left) return 1;
+  if (!right) return -1;
+  return left.at - right.at || byPriority(a, b);
+}
+function byDeadline(a, b) {
+  return compareDeadline(a, b, nowMs());
+}
+
 function createDetails(offer) {
   const details = text('details', '', 'card-details');
   details.append(text('summary', '查看資格、限制與來源'));
@@ -438,6 +502,11 @@ function createCard(offer) {
     card.append(text('p', `每月費用說明：${display(offer.cost_note)}`, 'cost-basis'));
   }
   const foot = text('div', '', 'card-foot');
+  const closing = closeBadge(offer);
+  if (closing) {
+    const soon = closing.days <= 7;
+    foot.append(text('span', `${closing.label} ${closing.text}${closing.days === 0 ? ' · 今天' : ` · 剩 ${closing.days} 天`}`, `deadline-pill${soon ? ' deadline-soon' : ''}`));
+  }
   foot.append(text('span', status.label, `status-pill status-${status.tone}`));
   foot.append(text('span', `核實 ${dateLabel(offer.verified_at)}`, 'verified-date'));
   card.append(foot, createDetails(offer));
@@ -466,6 +535,7 @@ function render(reset = true) {
     && presetMatches(offer, activePreset, filters));
   if (filters.sort === 'priority') items.sort(byPriority);
   if (filters.sort === 'fresh') items.sort((a, b) => String(b.verified_at || '').localeCompare(String(a.verified_at || '')));
+  if (filters.sort === 'deadline') items.sort(byDeadline);
   if (filters.sort === 'cost') items.sort((a, b) => {
     const costA = a.setup_cost_usd ?? Infinity;
     const costB = b.setup_cost_usd ?? Infinity;
