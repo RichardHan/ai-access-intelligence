@@ -28331,5 +28331,57 @@
       "https://huggingface.co/MediaTek-Research/Breeze-ASR-25",
       "https://github.com/mtkresearch/Breeze-ASR-25"
     ]
+  },
+  {
+    "record_id": "nousresearch-portal-free-models",
+    "change_type": "free_lineup_change",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T11:25:30+08:00",
+    "current_classification": "NO FIXED CAP PUBLISHED",
+    "previous_limit": "Free Models 區 5 款（含 Crouton Alpha）",
+    "note": "免費模型陣容由 5 款減為 4 款：Free Models 區現列 LongCat-2.5:Free、Reflection Beam 1.0 501B A23B、StepFun Step 3.7 Flash、Upstage Solar Mini 4；整頁搜尋 Crouton 0 命中，官方沒有下架公告，因此只記錄目錄現況，不宣稱 Crouton Alpha 永久終止。Free 方案仍 US$0、限免費模型、Standard rate limits、每月 US$0 credits。",
+    "sources": [
+      "https://portal.nousresearch.com/models"
+    ]
+  },
+  {
+    "record_id": "crawl4ai-cloud-monthly-thousand-no-card",
+    "change_type": "pricing_unit_and_quota_conflict",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T11:25:30+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": "scrape 每次 0.5 credit；每月 1,000 credits",
+    "note": "計價單位改寫：首頁逐字「A plain page is 0.1 credit, a real browser page 0.5, a hard site 2. Failed calls are free.」，即時費率端點 base.scrape=0.10、search/serp/answer=1.00，原紀錄的「scrape 每次 0.5 點」已不成立（0.5 是真實瀏覽器頁）。另出現內部矛盾：/v1/prices 的 limits.free.allowance_per_month=2500 與 credit.monthly=1000、首頁「1,000 free credits every month」並存，官方未說明差異，保留為未解衝突。",
+    "sources": [
+      "https://crawl4ai.com/",
+      "https://api.crawl4ai.com/v1/prices",
+      "https://crawl4ai.com/llms.txt"
+    ]
+  },
+  {
+    "record_id": "perch-starter-free-monthly-twenty-k-hosted-cli",
+    "change_type": "evidence_correction",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T11:25:00+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": "每曆月 20,000 PT",
+    "note": "移除無來源支持的「UTC 月初重置」：docs/plans/starter 只寫「Starter usage refreshes each month.」，terms 只寫「reset on a calendar-month basis」，兩處與 pricing 皆無 UTC 字樣。額度（20,000 PT／月）、免卡、Web／桌面／CLI 共用一帳戶不變；Qwen 3.8 Max 限時至 2026-11-20 亦未變。",
+    "sources": [
+      "https://www.perchai.app/docs/plans/starter",
+      "https://www.perchai.app/terms"
+    ]
+  },
+  {
+    "record_id": "e2e-explorer-free-versus-usage-discounts",
+    "change_type": "official_page_unavailable",
+    "date": "2026-11-10",
+    "verified_at": "2026-11-10T11:33:20+08:00",
+    "current_classification": "HIGH BUT LIMITED",
+    "previous_limit": "Explorer US$5K／Builder 50K／Scaler 100K（歷史記載）",
+    "note": "再查仍無官方頁：/startup-program 308 → /contact-sales（只有 Talk to Sales 表單）、sitemap 200 筆 loc 無 startup-program、Wayback 對該路徑無任何快照。沒有停辦公告，因此不判定終止；額度數字只能視為歷史記載。",
+    "sources": [
+      "https://www.e2enetworks.com/startup-program",
+      "https://www.e2enetworks.com/contact-sales"
+    ]
   }
 ]

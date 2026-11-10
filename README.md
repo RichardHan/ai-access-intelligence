@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **999 筆**（789 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 10:41 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **5 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **975 筆**既有紀錄未完成本輪複核，其中 **5 筆**是整筆來源追查失敗（DeepInfra 2MPapers、E2E Networks、Qoder、astamuse、Claude Artifacts 促銷）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
+資料集目前有 **1,003 筆**（793 項機會、49 項政策、161 筆觀察線索），更新時間 **2026-11-10 11:29 Asia/Taipei**（不代表全庫複核）。本輪成功局部複核 **19 筆**既有案例，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**；其餘 **980 筆**既有紀錄未完成本輪複核，其中 **1 筆**是整筆來源追查失敗（E2E Networks 新創頁）。各案例僅核列明範圍，台灣個案資格須另確認；限時案例在截止前至少每週檢查一次、3 日內到期者每日追蹤，其餘按月輪替，且「下次複核」標籤必須等於實際排程（`tests/validate.py` 管制 daily ≤3 天、weekly ≤10 天、biweekly ≤20 天，且複核日不得排在仍可行動的截止日之後；期限已過卻仍非已截止、或已截止仍保留 daily 等情況都會被擋）。完整流程見[維護](#維護)。
 
 ## 使用方式
 
@@ -84,6 +84,32 @@
 卡片正面的「核實 <日期>」是最後一次**成功**核對的時間，不是最後一次嘗試。2026-11-10 統計 8 筆紀錄的最新證據其實是失敗的追查（其中 5 筆來源整組失效），卡片外觀卻與剛核實的完全相同，讀者點進來源才發現 404，失敗原因還藏在收合的詳情裡。`latestAttemptFailed()` 因此在 `last_review_attempt_at` 晚於 `verified_at`（或根本沒有 `verified_at`）時，於卡片底部加「追查未成功 <日期>」，原因留在詳情的「最近來源追查」列與該標記的 `title`，樣式為 `.attempt-pill`；較早的失敗不得蓋掉較新的成功核實。`tests/filters.cjs` 除了四種排序情況的規格值，還逐筆斷言「標記結果必須等於資料判定」，所以新增一筆失敗追查卻忘了標記、或把舊失敗誤標成現況都會被擋。通則：讀者需要知道「最後一次查的結果」，不能只給「最後一次成功查的時間」。
 
 研究紀錄本身也有長度上限。上一則（07:05）的紀錄在「下輪優先」③ 之後被截斷，④⑤ 與部分來源網址遺失（該行行尾就是「…」再接下一則），接手的流程因此少了兩項交接。本輪起把「下輪優先（完整五項）」當成必填欄位並放在敘述最後，寧可壓縮前面的更正描述，也不要讓交接清單被截斷；發現前一則不完整時，在當輪把它補回，不改寫舊文。
+
+2026-11-10 11:05–11:29 本輪（接續 dd9b47a 之後）：起始 999 筆；`next_review_at` 嚴格已到期 0 筆、7 日內到期 6 筆、24 小時未核 609 筆。佇列由「官方衝突與未核實」＋`tools/queue.py` 的輪替序（11/08 那批）＋`tools/linkcheck.py` 的 dead 清單組成，12 小時內已核的 184 筆不重讀。局部複核 19 筆：官方衝突與未核實 7 筆（Seldon、Memobase、StackOne、Cognee、DeepSeek 新戶贈額、Z.ai Startups、Fastino GLIDEIS1）＋最久未核輪替 12 筆（AIHubMix、Perch、Nous Portal、ChatGPT Dots、Crawl4AI、Hetzner Inference、GitHub Copilot 學生、Udio、Kiro Startups、Retool 非營利、Snowflake 試用、台灣人力發展學院 AI 概論）；新增機會 4 筆（AWS Rekognition／Comprehend／Translate、Google Cloud Vision）；1 筆整筆追查失敗（E2E Networks，第 3 次確認無替代頁）。未登入、未申請、未付款。
+
+會改變讀者決定的更正：
+
+- `crawl4ai-cloud-monthly-thousand-no-card`：**每頁成本算錯，且官方自己兩個數字不一致**。首頁逐字「A plain page is 0.1 credit, a real browser page 0.5, a hard site 2. Failed calls are free.」，即時費率端點 `base.scrape=0.10`、`search/serp/answer=1.00`；原紀錄寫「scrape 每次 0.5 點」會把可抓頁數低估 5 倍（1,000 credits 實際約 1 萬張一般頁，與首頁「up to 10,000 pages」相符）。另 `/v1/prices` 的 `limits.free.allowance_per_month=2500` 與 `credit.monthly=1000`、首頁「1,000 free credits every month」並存，官方未說明差異，保留為未解衝突而不是任選一邊。
+- `nousresearch-portal-free-models`：**免費模型由 5 款減為 4 款**。Free Models 區現列 LongCat-2.5:Free、Reflection Beam 1.0 501B A23B、StepFun Step 3.7 Flash、Upstage Solar Mini 4；整頁搜尋 Crouton 0 命中（全站 342 款）。沒有下架公告，因此只改目錄現況與標題（「五款」→「四款」），不宣稱 Crouton Alpha 永久終止。
+- `perch-starter-free-monthly-twenty-k-hosted-cli`：**「UTC 月初重置」是沒有來源的推論**。docs/plans/starter 只寫「Starter usage refreshes each month.」、terms 只寫「reset on a calendar-month basis」，三份官方頁（含 pricing）全無 UTC 字樣，摘要已改寫並把時區放回缺口。額度 20,000 PT／月、免卡、Web／桌面／CLI 共用不變。
+- `e2e-explorer-free-versus-usage-discounts`：**第三條路線也確認無替代頁**。/startup-program 仍 308 → /contact-sales（只有「Talk to Sales」），sitemap 200 筆 loc 無 startup-program，**Wayback 對該路徑無任何快照**（前兩輪未查）。仍無停辦公告，維持 `needs_verification`，只寫 `last_review_attempt_at` 與原因，不刷新 `verified_at`。
+- 其餘 15 筆無實質變動（皆本輪重讀官方頁原文）：`seldon-…`（25 家名額、90 天、US$3,000「earned」、被接受後才需卡；首頁 FAQ 稱 Audit／discovery 退役 vs 試行頁步驟 02 Live Audit，兩頁同日可讀、衝突未裁決）、`memobase-…`（首頁 500 credits／月 vs 條款 50 operations／月）、`stackone-…`（定價 1,000 credits／席 vs 契約 1,000 Action Calls、Projects 1 vs 2、失敗呼叫計費與否相反）、`cognee-…`（1M vs 10M tokens）、`deepseek-new-user-grant`（價格頁只有扣款順序，無 5M／¥10／30 天）、`zai-…`（bundle 仍「up to 1B tokens」＋Apply/Review/Onboard）、`fastino-…`（10/22 官方貼文仍含 GLIDEIS1、docs 仍要求 verified payment method）、`aihubmix-…`（71 款、10 次免卡試用、儲值後 100/日）、`chatgpt-dots`（GPT-6.1 Terra、Pro 18 歲以上排除 EEA/UK/CH、11/18 起預設開啟）、`hetzner-…`（實驗期免費、兩款 Qwen、60 秒 10 次）、`github-copilot-student`（學生無限補全、AI credits 無數值、每月重評）、`udio-…`（每日 10＋每月 100、每日三首 130 秒）、`kiro-…`（4/7–12/31、18 歲、排除國別未列台灣）、`retool-nonprofit-…`（US$1,625／月、25 席、排除年約）、`snowflake-ai-trial-2026`（US$400／US$40、email 即可、AI 功能須加卡）、`taiwan-hrd-…`（2026 全年、任何人、105 分鐘、75 分＋閱讀 1 小時）。
+
+新機會（主 agent 逐字重讀官方頁後才寫入）：
+
+- `aws-rekognition-free-tier-1000-images-monthly`：影像分析每月 1,000 張（官方寫 Group 1 與 Group 2 各 1,000）、1,000 個人臉向量＋1,000 使用者向量、影片 60 分鐘、Custom Labels 2 小時訓練＋1 小時推論，皆自帳戶建立起 12 個月；Image Properties 無免費額度。**DetectText 官方語言不含中文**，繁中 OCR 要改用 Textract／Cloud Vision；端點表無台北。
+- `amazon-comprehend-free-tier-50k-units-twelve-months`：每 API 每月 5 萬單位（1 單位＝100 字元、單次最低 3 單位），**新舊客戶皆適用**、自首次請求起 12 個月。繁中 zh-TW 只涵蓋實體、關鍵片語、情感與語言偵測；目標情感僅英文、語法分析不含中文、PII 僅英西、Topic Modeling 不支援中文，Custom Comprehend 無免費額度。
+- `amazon-translate-free-tier-2-million-chars-twelve-months`：Standard 與 Batch Document 各 200 萬字元／月×12 個月、跨區合計不累積；**即時文件翻譯完全沒有免費額度**、ACT 每月 50 萬字元僅 2 個月；zh-TW 支援、同語言互譯不計費。
+- `google-cloud-vision-free-tier-1000-units-monthly`：Free Tier 表列每月 1,000 單位，定價頁則寫每特徵前 1,000 單位（1 單位＝1 個特徵套用 1 張影像、PDF 每頁算一張），兩處官方頁不一致已列缺口；需啟用 Cloud Billing、額度不累積、無結束日但可提前 30 天變更；zh-Hant OCR 支援、Global 端點、台灣帳單 TWD。
+- 未納入：Azure AI Vision F0（定價頁標「N/A in selected region」，區域可得性存疑，且 Read 已由 `azure-document-intelligence-f0-500-pages` 覆蓋）；其餘聚合名單候選皆已在庫。
+
+品質改善（1 組：`tools/queue.py` 把「只有日期的截止日」讀成當天 00:00）。問題可重現：`datetime.fromisoformat('2026-11-10')` 會成功回傳當日 00:00，於是 `parse_stamp(..., end_of_day=True)` 的「當天仍可動作」分支永遠走不到——`close_points()` 用 `> now` 過濾後，**期限就是今天的紀錄在期限當天反而掉出 closing 桶**，也沒有 24 小時緊急豁免。實測：`taipei-youth-ai-subscription-subsidy-2026`（`deadline_at: 2026-11-10`、status `conditional`）在 11:20 完全不在佇列，修正後立即以 `[closing]` 排到第一位（closing 桶 0 → 1 筆）。同一修正也讓「只有日期」的截止點改以當日 23:59:59 計算：ADI FORUM 的 11/12、騰訊 Hy4 的 11/15 從 00:00 移到當日結束，桃園課程的 11/17 因此離開嚴格的 7 天視窗（原本被算成 11/17 00:00），所以基準的「7 天內到期」筆數仍是 6，但組成因修正而變——這正是「筆數沒變不等於規則沒錯」。全庫有 13 筆可行動紀錄只用日期記錄截止點（含新竹補助 11/30、OpenRouter Dots3 12/31）。修法：只有字串含 `HH:MM` 才走 ISO 快路徑，其餘一律走日期分支並套用 `end_of_day`。`--self-test` 新增三條規格值斷言（日期期限＝當日 23:59:59、排程日期維持 00:00、帶時刻的期限不得被改成 23:59）與兩筆合成紀錄（期限今天必須落在 closing 桶、期限昨天不得再由 closing 桶排入）。
+
+驗證：`python3 tests/validate.py`（1,003 筆 PASS，含本輪批次斷言）、`node --check app.js`、`node tests/filters.cjs`（免費專區 644、quota 150、台灣條件適用 128／S 級 115 與概況卡一致）、`python3 tools/queue.py --self-test`、`python3 tools/linkcheck.py`（2,738 個 URL：dead 8、unreachable 9、blocked 72）、`git diff --check`。瀏覽器另核對：資料載入、本輪更新 23 筆、四筆新紀錄的關鍵字與台灣／免費篩選、卡片費用與來源呈現、桌面與手機版無水平溢出、console 無錯誤。
+
+結構經驗：三件可重用的事。①**「官方兩個數字」要留下矛盾，不要選一個**：Crawl4AI 的 1,000 vs 2,500、Vision 的「每月 1,000 單位」vs「每特徵 1,000 單位」、Memobase 的 credits vs operations，都是同一站同日可讀的兩種計量，正確寫法是並列＋列缺口。②**自己寫的推論會變成讀者的數字**：Perch 的「UTC 月初重置」連續三輪被當成事實，實際三份官方頁都沒有 UTC；凡是摘要出現官方沒有的時區、時鐘或換算，都要能在來源找到逐字。③**日期欄位的兩種語意**：排程用 `00:00`、期限用 `23:59:59`，同一個解析函式若靠「先試 ISO」實作，就會把後者靜默吞掉——這一類 bug 不會讓任何測試變紅，只會讓某一天的佇列少一筆。
+
+下輪優先（完整五項）：① `taipei-youth-ai-subscription-subsidy-2026`：期限 11/10 已過，下一輪**必須**改 `applications_closed`、cadence 由 daily 改 `monthly_or_new_signal`（`tests/validate.py` 兩條斷言會擋），來源 `https://youth.gov.taipei/services/05eb79e5-46b5-41e5-b1fd-0519d782b04a/0ecc1836-dd0d-4085-a34f-003609f00796` 與公告首頁；② `amazon-ara-multilingual-contextual-ai-fall-2026`：台北 11/12 15:59 過後改 `applications_closed`，並以 raw HTML 確認是否公布 Spring 2027 徵案（`https://www.amazon.science/research-awards/call-for-proposals`）；③ `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：11/30 截止、購買期限已過，每日追剩餘經費（11/10 仍 NT$253,197／4.4%），額滿即改 `applications_closed`，來源為新竹市青年中心服務頁；④ `seldon-pilot-up-to-three-k-ninety-days-terms-gap` 與 `stackone-starter-monthly-thousand-credit-terms-conflict`：兩筆的官方衝突（Live Audit 退役 vs 試行步驟；credits vs Action Calls）已連續多輪未裁決，下一輪改查 changelog／FAQ／客服文件，仍無裁決就考慮降為 watchlist 並在摘要第一句寫明「兩份官方文件互斥」；⑤ `tools/linkcheck.py` 的 dead 清單（先跑一次取最新）：`perplexity-watch`／`perplexity-education`（`llms-full.txt`）、`qoder-community-1024`（兩個 events 路徑）、`astamuse-agent-trial-oct31-index-only`、`deepinfra-two-minute-papers-twenty-credit`、`fal-flux3-max-five-daily-sandbox`、`salad-ssap-migration-credit-watch`——這 7 筆已多輪確認無替代頁，應改為在 evidence 明寫「404 為否定證據」並降低複核頻率，而不是每輪重查。
 
 2026-11-10 10:06–10:41 本輪（接續 970fd5e 之後）：起始 994 筆；`next_review_at` 嚴格已到期 0 筆、7 日內到期 6 筆全在 12 小時冷卻內、24 小時未核 599 筆，因此佇列照 `tools/queue.py` 的輪替序（11/08 那批）＋台灣期限與官方衝突＋`tools/linkcheck.py` 的 dead 清單組成，12 小時內已核的 173 筆不重讀。局部複核 19 筆：到期與高風險 8 筆（數位產業署 ADI FORUM、Amazon ARA、騰訊 Hy4 免費窗、AutoClaw M11W2、UGREEN 黑客松、桃園 AI 產能課程、StepFun StepAudio 3、Rime STT）＋最久未核輪替 4 筆（Aion Labs、Scaleway Generative APIs、OpenCode 免費模型、Maximo）＋來源修復 7 筆（Honeycomb、fal FLUX 3 Max、Perplexity ×2、Nebius Token Factory、Salad SSAP、AIコンパス）。新增機會 5 筆、政策 0 筆、觀察線索 0 筆；整筆來源追查失敗 5 筆（DeepInfra 2MPapers、E2E Networks、Qoder、astamuse、Claude Artifacts 促銷，皆已記錄替代路線與否定證據、未刷新 `verified_at`）；未完成複核 975 筆。未登入、未申請、未付款。
 
@@ -1999,6 +2025,8 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 前輪交接（歷史）：`perplexity-education`、`astamuse-agent-trial-oct31-index-only`、`picsart-wan3-promotion-fair-use`、`claude-artifacts-expired-lead`、`tabnine-basic-free-retired`；AISquared 非營利及學生方案當時尚待確認。最新優先清單與研究結果見上方本輪紀錄。
 
 每輪先跑 `python3 tools/queue.py` 取得佇列，不要再手寫排序：它固定「逾期 > 視窗內到期 > 最久未核」的優先序，並套用 12 小時冷卻（24 小時內到期者不受限），已截止／已關閉／已合併紀錄永不排入；基準數字會同時印出「視窗內到期 N 筆」與「實際排入 M 筆」，避免把冷卻誤讀成沒有到期項。`--self-test` 以合成資料斷言規則本身。接著比對前次 reviewed/new IDs，成功讀取才更新 verified_at 和具體來源查閱時間，失敗記錄嘗試而不延後一個月。僅有新條件、來源矛盾或新基準才追加政策歷史；核對完成後重算評分並執行下列測試、瀏覽器及 Pages 公開版本確認。來源維修另用 `python3 tools/linkcheck.py`（只列 404／410 為 dead，403 與逾時不算）取得 dead 清單，把「引用到失效官方頁」的紀錄排進下一輪。
+
+`tools/queue.py` 的 `parse_stamp()` 只把「含 `HH:MM`」的字串當時間戳，其餘一律走日期分支並套用 `end_of_day`。原因是 `datetime.fromisoformat("2026-11-10")` 會**成功**回傳當日 00:00，若先試 ISO 再退回日期解析，`end_of_day=True` 就永遠不會生效：`deadline_at: 2026-11-10` 的紀錄在期限當天會被算成「已過」，因而掉出 closing 桶、也拿不到 24 小時緊急豁免（2026-11-10 實測臺北青年 AI 補助正是如此，修正後同一天才以 `[closing]` 排到第一位）。排程與期限是兩種語意：`next_review_at` 當天即算到期（00:00），截止日則代表「當天仍可動作」（23:59:59），與 `tests/validate.py` 的 `close_stamp()` 一致；`--self-test` 以規格值固定這三件事。
 
 本專案為無後端靜態網站，可由 GitHub Pages 的 main 根目錄發布。
 驗證：python tests/validate.py；node --check app.js；node tests/filters.cjs；python3 tools/queue.py --self-test；python3 tools/linkcheck.py --self-test（要修來源時再跑不帶參數的全掃）。

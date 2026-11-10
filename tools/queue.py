@@ -52,13 +52,19 @@ def parse_stamp(value, end_of_day=False):
     if not isinstance(value, str) or not value.strip():
         return None
     raw = value.strip()
-    try:
-        stamp = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
-        if stamp.tzinfo is not None:
-            stamp = stamp.astimezone(TZ_TPE).replace(tzinfo=None)
-        return stamp
-    except ValueError:
-        pass
+    # 只有日期的值必須先走下面的日期分支。`datetime.fromisoformat('2026-11-10')` 會「成功」並回傳
+    # 當日 00:00，於是 `end_of_day` 形同無效：2026-11-10 實測 `deadline_at: 2026-11-10`（台北青年
+    # AI 補助，期限就是當天）被算成當天 00:00 結束，`close_points()` 把「已過」的時點濾掉後，這筆
+    # 紀錄在期限當天反而掉出 closing 桶，也沒有 24 小時緊急豁免，只能靠 next_review_at 碰巧排到。
+    # 帶時刻（含 `2026-11-10（Asia/Taipei）` 這種只有日期加註記）才走 ISO 快路徑。
+    if re.search(r"\d{1,2}:\d{2}", raw):
+        try:
+            stamp = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if stamp.tzinfo is not None:
+                stamp = stamp.astimezone(TZ_TPE).replace(tzinfo=None)
+            return stamp
+        except ValueError:
+            pass
     found = DATE_ONLY.findall(raw)
     if not found:
         return None
@@ -185,19 +191,37 @@ def self_test():
         # 輪替必須先看排程再看新舊：較新核過但排程較近的 weekly，要排在更舊卻排到 20 天後的 monthly 前面。
         {"id": "rotation-weekly-sooner", "status": "conditional", "next_review_at": iso(days=4), "verified_at": iso(days=-1)},
         {"id": "rotation-monthly-older", "status": "conditional", "next_review_at": iso(days=20), "verified_at": iso(days=-10)},
+        # 只寫日期的期限代表「當天仍可動作」：期限日當天（now 是當日 06:00）必須算到期，不能被
+        # 讀成當日 00:00 已結束。2026-11-10 的 `taipei-youth-ai-subscription-subsidy-2026`
+        # 就是這個情況，舊版因此在期限當天掉出 closing 桶。
+        {"id": "closing-today-dateonly", "status": "conditional", "next_review_at": iso(days=2), "verified_at": iso(hours=-2),
+         "deadline_at": now.strftime("%Y-%m-%d")},
+        # 反向：昨天的日期期限已過，不得再算到期（仍有未來排程，所以只會落到輪替）。
+        {"id": "closing-yesterday-dateonly", "status": "conditional", "next_review_at": iso(days=2), "verified_at": iso(days=-2),
+         "deadline_at": (now - datetime.timedelta(days=1)).strftime("%Y-%m-%d")},
     ]
+    assert parse_stamp("2026-11-10", end_of_day=True) == datetime.datetime(2026, 11, 10, 23, 59, 59), \
+        "只有日期的期限要算到當日 23:59:59（與 tests/validate.py 的 close_stamp 一致）"
+    assert parse_stamp("2026-11-10") == datetime.datetime(2026, 11, 10), \
+        "排程用的日期維持當日 00:00（next_review_at 當天就算已到期）"
+    assert parse_stamp("2026-11-10T15:59:00+08:00", end_of_day=True) == datetime.datetime(2026, 11, 10, 15, 59), \
+        "帶時刻的期限不得被改成當日 23:59"
     baseline, queue = build_queue(records, now=now, limit=20)
     ids = [row[1] for row in queue]
     assert "overdue-fresh" in ids, "逾期的紀錄必須排入"
     assert "closing-cooled" not in ids, "冷卻中的非緊急紀錄不得重排"
     assert "closing-urgent" in ids, "24 小時內到期者不受冷卻限制"
+    buckets = {row[1]: row[0] for row in queue}
+    assert "closing-today-dateonly" in ids, "期限只寫日期的紀錄，在期限當天仍必須排入"
+    assert buckets["closing-today-dateonly"] == "closing", "期限當天要落在 closing 桶（不能只靠輪替）"
+    assert buckets["closing-yesterday-dateonly"] != "closing", "期限日期已過者不得再由 closing 桶排入"
     assert "rotation-old" in ids, "未到期的可行動紀錄必須進輪替補位"
     assert "closed-overdue" not in ids, "已截止紀錄不得進佇列"
     assert "signal-closing" in ids, "on_new_signal 有截止點時仍要排入"
     assert ids.index("rotation-weekly-sooner") < ids.index("rotation-monthly-older"), \
         "輪替要先比 next_review_at：排程較近者優先，不能只看 verified_at"
-    assert baseline["overdue"] == 1 and baseline["closing"] == 2, f"bucket 計數不符: {baseline}"
-    print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, closed excluded, rotation ordered by next_review_at).")
+    assert baseline["overdue"] == 1 and baseline["closing"] == 3, f"bucket 計數不符: {baseline}"
+    print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, date-only deadlines last all day, closed excluded, rotation ordered by next_review_at).")
 
 
 def main():
