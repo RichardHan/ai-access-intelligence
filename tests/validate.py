@@ -108,6 +108,18 @@ for rid in reviewed+new:
   assert len(same_day)<=1, f'source URL checked twice in this batch (update the existing entry instead of appending): {rid} {url}'
  stamps=[accessed_day(s) for s in offers_by_id[rid]['sources']]
  assert any(stamp>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
+ # 卡片把 `verified_at`（核實 <日期>）與 `verification_scope`（核實範圍）並排顯示，讀者自然
+ # 假設兩句講同一次查核。但 verified_at 會因為某個來源當天被重讀而更新，scope 那句話不一定
+ # 跟著改寫：2026-11-11 統計 31 筆可行動機會的 scope 只剩比 verified_at 更早的日期
+ # （cloudflare-workers-ai-free 核實 2026-11-10、範圍卻寫「2026-10-31 僅複核…」；
+ # agentmail-startup-three-months 核實 11-09、範圍寫「2026-10-30 局部複核…」；
+ # openai-agents-api-public-beta-no-harness-fee 核實 11-10、範圍寫「2026-10-31 17:08–17:11」），
+ # 卡片於是同時宣稱兩個查核日。規則只套在本批次：複核或新增的紀錄，`verification_scope` 必須
+ # 寫明本批次日期，讓「這次到底核了什麼」有時間戳可追。歷史 31 筆不在這裡批次回填——那是替
+ # 沒重讀的紀錄補一句沒查證過的話；它們留在輪替佇列，排到時重讀再改寫。
+ _scope_text=offers_by_id[rid].get('verification_scope')
+ assert isinstance(_scope_text,str) and _scope_text.strip(), f'missing verification_scope for a batch record: {rid}'
+ assert run_day in _scope_text, f'verification_scope does not state this batch date ({run_day}) — the card would show 核實 {run_day} next to a scope from an older read: {rid}'
 for aid in attempted:
  assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'

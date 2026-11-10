@@ -2289,3 +2289,37 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `iteracompute-free-qwen-3-8-27b-monthly-30m`（11/18，促銷 11/24 結束）：確認促銷是否延期、結束後免費層是否消失，以及免費頁 128K vs 模型頁 256K、模型池是否含 DeepSeek V4.1 兩說是否收斂。
 
 **常態待辦（不佔上面五項名額）**：仍未帶 `verification_scope` 的官方紀錄 87 筆（可行動 74、`taiwan=Yes` 3 筆）——不要批次回填，輪替排到時逐筆重讀後補。
+
+## 2026-11-11 03:10–03:38（Asia/Taipei）第 N+1 輪：16 筆輪替複核、3 筆新增、狀態語意與 scope 日期的驗證規則
+
+**範圍與計數**：N=1,025、R=16（A 組額度型 8、B 組資格／審核型 8）、A=3（opportunity 3／policy 0／watchlist 0）、U=1,009、attempted=0。資料集 1,028 筆。佇列基準：`next_review_at` 嚴格逾期 0 筆、7 日內到期 9 筆且全部在 12 小時冷卻內（`aocai-working-free-ai-courses-2026` 等 10 筆在 02:xx 才核過）、`retry` 桶 0 筆。輪替對象因此取「最久未核」的 2026-10-31／11-01 批次（138 筆，`next_review_at` 多為 11-30／12-01，還沒到期），只挑 16 筆、不重讀上一輪（02:05–02:32）的 19 筆。
+
+**複核結果**：16 筆的列明主張全部仍成立（無一降級或關閉），但三類實質變更需要落地：
+
+1. **Cartesia 通話費率已改價**：pricing 頁把 Voice Agents 的通話費從 `$0.06/min` 劃掉改為 `$0.03/min`（逐字「~~Previously $0.06 per minute $0.06~~ $0.03 per minute」），並明寫 Pro／Startup／Scale 的 overage **預設關閉**、開啟後「charged at the same rates as your plan's included voice agent usage」。舊紀錄的 `access_risk` 寫 US$0.06／分，會讓讀者高估超額成本，已改寫。
+2. **6 筆審核制新創方案被標成「需符合條件」**：Cartesia、GitHub for Startups、NVIDIA Inception、Photoroom、Together 加速器、Gradium 的官方頁都逐字寫審核（「We review applications on a rolling basis」「within 2-3 business days」「after we review your application」「respond back with an update」「selection-based」），但 `status: conditional` 讓卡片藥丸寫「需符合條件」、優先度依據也寫「需符合條件」，讀者會以為符合門檻即可領取。這 6 筆改 `application_based`（藥丸「申請審核制」），並各留一筆 policy-history `status_reclassification`。全庫同類漂移仍存在（`application_based` 112 筆 vs `conditional` 且資格文字提到審核 106 筆），本輪只修有逐字證據的 6 筆。
+3. **Gradium 期後成本原本沒有數字**：pricing 頁顯示 M 方案現為 US$312／月含 9M credits／月、月額不結轉；`cancellation` 與 `cost_note` 補上此基準，並保留「grant 期末是否自動轉付費未明列」的缺口。
+
+**來源狀況**：`support.deepl.com/…/360020695820-API-key-for-DeepL-API` 現在回 403（Cloudflare），只能以 2026-10-28 Wayback 取證，已寫進 evidence 與 unknowns；DeepL 的 CAT 工具衝突（key 文件寫「including CAT tools」、授權 §3.2.5 只給付費 API）本輪仍未收斂。Bria 的方案命名漂移（Legal Lobby 寫「free and Starter plans」、定價頁賣 Free／Pay-as-you-go／Enterprise）記為 unknown。Firecrawl 學生頁 FAQ 由前端渲染，本輪只讀到問題標題、讀不到答案。NVIDIA 申請入口 `programs.nvidia.com/phoenix/application` 憑證錯誤（unable to verify the first certificate），行銷頁 Apply 仍指向它，因此不判定計畫終止。
+
+**新增（3 筆，皆 opportunity）**
+
+- `zoom-ai-launchpad-startup-grants`：Zoom 2026-11-10 上線的 AI Launchpad，三級距 US$5,000／50,000／150,000 的 AI Services credits（1 credit＝US$1）、效期 12 個月、免股權、核准後 48 小時入額。**台灣 Yes 有正面依據**：計畫頁 FAQ 逐字「We welcome applications from eligible startups worldwide」，條款 §2 的排除清單只有白俄羅斯、古巴、伊朗、北韓、俄羅斯與烏克蘭被占領區。風險寫在卡片：§4 要求維持有效付款方式、額度用完後按 AI Services 費率按月後付，credits 只能抵 Build Platform 內的 AI Services（§7）、期滿失效不可折現。未收斂：級距名稱三處不一致（新聞稿 Launch／Scale／Propel、頁面比較表 Seed／Growth／Scale、條款 Tier 1／2／3）；頁面模板殘留「Coming soon」與同頁「Applications are open」矛盾。來源：`zoom.ai/ai-launchpad`（含頁內 Grant Terms §1–§11）、`news.zoom.com/zoom-ai-launchpad/`。
+- `kong-for-startups-konnect-plus-hundred-k`：最高 US$100,000 Konnect Plus credits、12 個月，官方稱多數早期新創實拿 US$25K–100K，期後 Konnect Plus 牌價五折 24 個月；資格 pre-seed 至 Series A、總募資 <US$10M。台灣 Unknown：頁面與 FAQ **完全沒有**國別、居住地或註冊地條件，且「Read the Terms」只連回同頁 FAQ，沒有獨立條款可核。來源：`konghq.com/solutions/startup-program`。
+- `telnyx-startups-twenty-k-voice-ai`：US$20,000 語音 AI credits、6 個月不結轉、48 小時審核，只抵 STT／TTS／LLM／embeddings／儲存。台灣 Unknown：計畫頁無國別條款；Telnyx 費率表雖有台灣本地號碼與 SMS 報價，但那是電信產品，不能據此推論本計畫的 AI credits 資格——這正是「服務可用 ≠ 優惠資格」的例子。來源：`telnyx.com/startups-program`。
+
+**未納入（本輪判斷）**：Dahl Inference「首 1 億 tokens 免費」——官方 pricing 自承 US$0.02／1M，等於約 US$2，且連續 7 天無請求即失效，標題的 token 數會把它讀成 US$100 級額度；LLMTR Qwen3.8-Max 免費（只有聚合站、無官方頁、兩天後到期）；商研院 CDRI 11/17 客服班（僅媒體報導，且屬已收錄的 AOCAI 體系）。另查核並**排除**一條會誤導的線索：AOCAI 專區橫幅「申請至116年7月31日」指的是 `aocai-enterprise-ai-training-subsidy-2026`（企業專班，紀錄已寫受理至 2027-07-31、狀態 application_based），與 `taiwan-sme-ai-talent-training-2026`（中小企業網路大學校，115/7/31 已截止）是不同計畫，該筆 `applications_closed` 沒有錯，不需修改。
+
+**流程改善：`verification_scope` 必須寫明本批次日期（只套本批次）**。觀察到的問題：卡片把「核實 <日期>」與「核實範圍」並排，讀者假設兩句是同一次查核；但 `verified_at` 會因某個來源當天被重讀而更新，scope 那句話不一定跟著改寫。2026-11-11 統計：540 筆 scope 帶日期的紀錄中，44 筆的最新日期早於 `verified_at`，其中 31 筆是可行動機會（`cloudflare-workers-ai-free` 核實 11-10、範圍寫「2026-10-31 僅複核…」；`agentmail-startup-three-months` 核實 11-09、範圍寫「2026-10-30 局部複核…」；`amazon-ara-multilingual-contextual-ai-fall-2026` 核實 11-11、範圍只留頁面的 `modified_time 2026-10-28`）。預期改善：同一張卡不再同時宣稱兩個查核日，下一輪也無法用一句舊 scope 冒充複核。做法：`tests/validate.py` 新增「本批次 reviewed／new 紀錄的 `verification_scope` 必須含本批次日期」，不批次回填那 31 筆（那等於替沒重讀的紀錄補一句沒查證過的話，留在輪替佇列排到再改寫）。驗證：本輪 19 筆全數通過；在 `/tmp` 複本把 Zoom 那筆的「2026-11-11」改成「較早一次」後如預期失敗。本輪自己也踩過同型錯誤——初稿把 scope 時間窗寫成 03:33–03:45（實際時鐘才 03:33），被 `validate.py` 的未來時間戳斷言擋下後全部重寫，這條新規則正是同一個問題的下一個防線。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,028 筆、S/A/B/C/D＝128/185/125/273/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`git diff --check`。瀏覽器檢查（本機 8931、headless Chromium）：資料載入 1,028 筆、批次統計 16／3／1009、概況卡 816／142／49／163 與資料一致、首頁 scope 為本輪文字；關鍵字（Zoom／Kong／Telnyx／Cartesia／Gradium）、台灣資格（142 快捷／157 下拉）、免費 668、開發者 590、「截止日由近到遠」前三筆為 11/11 12:30、11/12 15:59、11/12、載入更多 24→48 全部正常；新紀錄卡片顯示設定費、每月費用、費用補充、狀態「申請審核制」、核實範圍與官方來源；iPhone 13 寬度無水平溢出、console 0 error。
+
+**下輪優先（完整五項，放在敘述最後）**
+
+① `aocai-working-free-ai-courses-2026`：11/11 12:30 之後確認 11/16 梯次是否關閉；若關閉改以 12/01 台北班為準（`deadline_at` 換成該班或填 null），並重核 11/17、11/26 梯次與 11/27 臺中班。來源：`https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`https://niea-bizboost.tw` 12/01 頁。
+② 台灣就業通 2026-11 公告稱 116 年產業新尖兵課程「將免費提供 AI 工具」——查是否改變 `taiwan-nsp-youth-ai-training-subsidy-2026` 的工具、額度或自付額條件。來源：`https://job.taiwanjobs.gov.tw/Internet/index/DocDetail.aspx?docid=42418`，另核 `https://www.wda.gov.tw` 相關公告。
+③ `zoom-ai-launchpad-startup-grants`（12-11）：追級距名稱（Launch／Scale／Propel vs Seed／Growth／Scale）是否收斂、「Coming soon」標籤是否移除，以及投件表單是否要求付款方式。來源：`https://zoom.ai/ai-launchpad`、`https://news.zoom.com/zoom-ai-launchpad/`。
+④ `deepl-api-developer` 的 API-key 文章 403 是否解除（若解除改回直接引用、並更新 CAT 工具衝突），以及 Bria 條款頁方案名稱是否與定價頁對齊。來源：`https://support.deepl.com/hc/en-us/articles/360020695820-API-key-for-DeepL-API`、`https://www.deepl.com/en/pro-license`、`https://bria.ai/legal-lobby`。
+⑤ 31 筆「scope 日期早於 verified_at」的可行動機會（`cartesia-free-monthly-twentyk`、`agenta-hobby-daily-seventy-five-ten-days`、`confident-ai-free-five-weekly-runs-gbmonth`、`cloudflare-workers-ai-free` 等）：輪替排到時重讀後一併改寫 scope，不要批次回填。
+
+**常態待辦（不佔上面五項名額）**：仍未帶 `verification_scope` 的官方紀錄 87 筆（可行動 74、`taiwan=Yes` 3 筆）——輪替排到時逐筆重讀後補。全庫 `application_based` 與「資格文字提到審核卻是 conditional」的 106 筆語意漂移，也只修有逐字證據者。
