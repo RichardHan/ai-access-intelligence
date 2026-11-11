@@ -2609,3 +2609,5 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `aocai-working-free-ai-courses-2026`（**12:30 之後第一件事**，daily）：11/16 班報名截止 2026-11-11 12:30，過後須重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3535` 與報名表；若已關閉，把 `deadline_at` 改指 11/26 班（報名至 11/19）或 12/01 BizBoost 班，`deadline_at` 已過卻非已截止會被 validate 擋。
 
 **常態待辦（不佔上面五項）**：6 筆 dead 來源待換路徑（見上）；`verification_scope` 仍缺的可行動官方紀錄（排到時重讀再補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；三個同類「官方沉默」案例（Nebius $1、River US$25、PromptLayer overage）不宜每輪重複追，建議下輪起改 monthly 並只在有公告時提前。
+
+**發布**：commit `77aeac6` 已推上 `origin/main`（`2e95f19..77aeac6`），對應的 `pages-build-deployment`（run 42932311919）success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測：1,041 筆、概況卡 826／147／50／165、首頁 scope 為本輪文字（08:05–08:33）、「本輪更新」23 筆；Qoduck 卡片標題含「至 2026-11-11 10:00」、Mango 卡顯示「設定費 未列金額」＋「費用依據：…」、Boson 卡顯示 US$0／US$0、Go2 AI-OCR 卡顯示「申請截止 2026-12-28 · 剩 47 天」，console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。
