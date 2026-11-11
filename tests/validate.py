@@ -184,6 +184,21 @@ def close_points(record):
  if isinstance(expiry, dict) and isinstance(expiry.get('date'), str):
   points.append(('expiry.date', expiry['date'], close_stamp(expiry['date'])))
  return [point for point in points if point[2] is not None]
+# 標題上的期限也要有機器可讀版本。`createCard()` 的截止膠囊、「截止與期限」列與「截止日由近到遠」
+# 排序全部只讀 deadline_at／expires_at／expiry.date；標題卻是讀者第一眼看到的字。2026-11-11 統計
+# 全庫有 1 筆可行動紀錄在標題寫了帶日期的截止語句、三個欄位卻全空：cyleague-cyber-navi-trial
+# 標題「CyLeague：法人30天試用、40件目安，11/30申請截止」，卡片因此沒有膠囊、排序時被當成「沒有
+# 截止日」排到最後，讀者只能從標題自己算還剩幾天。下面那兩條期限規則只讀欄位，看不到它。
+# 只認「申請窗口關閉」的明確字樣（截止／報名至／受理至／申請至）：像 fal-flux3 的「折扣至 11/22–23」、
+# qoder 的「每日額度至 10:00」、mem0 的「舊戶過渡至 11/25」都是方案內的子期限，回填成整筆的
+# deadline_at 會讓卡片宣稱錯誤的截止日，所以「至」不列入本規則。
+_DEADLINE_WORD=__import__('re').compile(r'截止|報名至|受理至|申請至')
+_TITLE_DATE=__import__('re').compile(r'(20\d\d)-(\d{1,2})-(\d{1,2})|(?<!\d)(\d{1,2})/(\d{1,2})(?!\d)')
+for o in d['offers']:
+ if o.get('status') in dead or not _DEADLINE_WORD.search(o.get('title') or ''): continue
+ if not any(1<=int(m.group(2) or m.group(4))<=12 and 1<=int(m.group(3) or m.group(5))<=31
+            for m in _TITLE_DATE.finditer(o.get('title') or '')): continue
+ assert close_points(o), f'title states a dated deadline but deadline_at/expires_at/expiry are empty — the card shows no countdown or deadline row and sorts as if it had no deadline: {o["id"]}'
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'

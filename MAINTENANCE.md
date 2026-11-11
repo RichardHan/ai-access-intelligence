@@ -2673,3 +2673,54 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項）**：`deepinfra-two-minute-papers-twenty-credit` 與 `astamuse-agent-trial-oct31-index-only` 已連續失敗且官方端全無，下輪起比照「官方沉默」改低頻（`on_new_signal`／現有排程不再提前）；免費專區仍有 173 筆「費用欄位 null、沒有 cost_note」，卡片只有「未列金額」；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪未全掃，下輪若要修 404 清單先單筆重掃再當證據。
 
 **發布**：commit `7aaba0d` 已推上 `origin/main`（`811f405..7aaba0d`），對應的 `pages-build-deployment`（7aaba0d）success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測：資料 1,043 筆、概況卡 828／149／50／165、批次列 14／2／1,027、首頁 scope 為本輪文字（09:05–09:36）、資料更新 2026/11/11 09:36；`data/offers.json` 直接下載亦為 1,043 筆且 `last_research_run.reviewed_ids` 14 筆、`new_ids` 2 筆；關鍵字「Jutor」與「好拍檔」各回對應新紀錄（狀態「方案仍列示」「活動現況待核」、核實 2026/11/11）；「首個專案」卡顯示「費用說明：須綁付款方式…」；「截止日由近到遠」首筆為 AOCAI「申請截止 2026/11/11 12:30 · 今天」；console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。本則後段（發布狀態補寫）與資料無關，屬同一批次的文件更新。
+
+## 2026-11-11 10:15–11:05（Asia/Taipei）｜R=12、A=3（3 機會）、U=1,031、attempted=3
+
+**基準與範圍**：本輪開始 N=1,043（828 機會／50 政策／165 觀察線索）；`python3 tools/queue.py` 顯示嚴格逾期 0 筆、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、追查失敗待換路線 0 筆（1 筆冷卻中）；8 筆官方來源 404（linkcheck 全掃 2,7xx 個 URL：dead 7 個、blocked 77、unreachable 6）。上一輪 09:36 才結束，其 14 筆一律不重讀。三個子代理分工：A 台灣 S 級與即將到期 6 筆、B 來源衝突與連續追查失敗 6 筆、C 新機會研究與去重；主 agent 另複核 1 筆（CyLeague）並負責整合、驗證與發布。**R=12、A=3、attempted=3、U=1,031**（結果 1,046 筆）。未登入、未申請、未付款、未操作 VPN。
+
+**會改變讀者決定的更正**
+
+- `startup-terrace-ai-poc`／`asia-new-bay-ai-poc-watch`：**同一方案重複收錄**。同一個 2026 梯次 4/24 23:59 截止、同一「符合中小企業認定標準且 107/4/25 後成立、非陸資、非外國營利事業在臺分公司」資格、同一最高 US$10,000 雲端點數上限、同一進駐 1 年義務，只是一個記在計畫頁、一個記在徵件公告。已把較晚建立的 `startup-terrace-ai-poc` 標為 `duplicate_merged` 並 `duplicate_of` 指向 10-29 建立的 `asia-new-bay-ai-poc-watch`，逐字證據（徵件公告 s=15273、入選名單 s=15426、中小企業認定標準、園區費用頁）併入存活者。同時修正兩個重要主張：存活者原本 `taiwan: Yes` 但官方頁只能靠 Wayback 讀，本輪計畫頁正文已可讀（更新 115-11-10）；`quota_classification` 由 UNKNOWN 改 HIGH BUT LIMITED（US$10,000 為上限、非保證核發），並補上園區空間費用（Co Working Seat 3,600 元／月／位、獨立辦公室 64 折、未稅）。**通則：判斷重複要比資格門檻／金額上限／期間／排他規則四項，不是比標題**（`tests/validate.py` 只擋「標題完全相同」）。
+- `cpc-moeai-elite-free-ai-course-115`：**只剩一梯可報名**。商城四個梯次頁顯示第一梯（報名至 2026/8/7）、第二梯（11/5）、第三梯（11/9）皆「報名結束」，只有第四梯 TD8612（2027-01-14～01-28、報名至 **2027-01-13**、台北承德）仍有「我要報名」。課程頁 1650 卻把四梯全標「確定開班」——同一機構兩份頁面衝突，以商城頁的報名狀態與報名時間為準並保留兩說。另更正兩處會誤導的細節：第二梯上課地點是「桃園市成功路二段七號四樓」不是台北承德；「課程開班人數 10 人」是開班門檻、不是名額上限。`deadline_at` 由 null 補為 2027-01-13。
+- `taiwan-moeai-manufacturing-tool-reimbursement-hundred-k`：`deadline_at` 由 null 補為 **2027-09-30**（1150723 版申請須知 docx 逐字「受理期間 自公告日起至116年9月30日止」），先前只寫在 `usable_duration` 的散文裡。同時逐字確認每案上限 10 萬元（未稅）、超過部分自付、15 工作日檢核與撥款、憑證須標註計畫字樣、不得重複核銷；站上仍無額滿／停止受理公告。
+- `taiwan-industry-talent-investment-ai-courses-2026`：核心數值不變（80%／100%、3 年 10 萬、缺課 1/5 不予補助、本國籍或特定居留身分），補進三個會影響行動的欄位：`usable_duration` 加上「115 下半年開訓 2026-07-25～2026-12、最晚 2027-02-28 結訓；116 上半年 2027-01-12 起報名、最遲 2027-06-30 開訓」；`cost_note` 加上「訓練單位不得以任何名目另收費用」「開訓前退訓最多收 5%、未開訓逾 1/3 退 50%」；`quota_details` 註明各班名額（例 36／42／45 人）不是方案總額。
+- `cyleague-cyber-navi-trial`：官方頁逐字「2026年10月1日〜11月30日 お申し込み分限定」，但 `deadline_at` 一直是空的——卡片因此沒有截止膠囊、「截止日由近到遠」把它當成沒有截止日的紀錄排在最後，而標題自己寫著「11/30申請截止」。已補 `deadline_at: 2026-11-30`（來源只給日期，未補時刻）。申請頁 `ai.cyleague.jp/signup/trial` 重試仍 403，台灣法人與日本法人番号要求維持未核。
+- `nscale-signup-five-current-docs-conflict`：**「US$2 credit」的出處找到了**——`https://www.nscale.com/services/ai-services` 的 FAQ 逐字「can be started by any developer with $2 credit」，屬 fine-tuning 段落，與 docs 的「add a minimum of \$5 of credit」是不同命題；但現行 prepaid 一次至少買 US$5，US$2 起用在自有加值下無法達成，兩說保留不裁決。`/pricing` 連續第 3 日 404、sitemap 199 筆無 pricing 頁，現行單價以 docs models 頁為權威。
+- `voyage-free-tokens-batch-excluded`：**定價頁沒有搬家**。`www.voyageai.com/pricing` 仍 404（`/plans`、`/costs`、`/robots.txt`、`/sitemap.xml` 都回同一張 404 頁），官方唯一定價頁是 `docs.voyageai.com/docs/pricing`（200、`article:modified_time` 仍 2026-09-29）。補上批次排除的逐字句「Free token credits do not apply to Batch API usage…」。
+- `oracle-ai-services-free-tier`：行銷頁仍稱多數 AI 服務有免費層、Always Free 資源頁仍 0 命中 Speech／Language／Vision；新證據是價目表「First 5,000 Transactions」「First 5 Transcription Hours」列的價格 cell 是空的 `<div data-partnumber=… data-minrange="0"></div>`（金額由 JS 注入），所以「有免費層」與「額度是多少」在本站無法用靜態 HTML 核到；region 清單仍無台灣。
+- `google-skills-student-200-credits-taiwan`／`google-ai-educator-series-taiwan`／`taiwan-ai-academy-citizen-ai-literacy`：逐字重讀後主張不變（200 點一年效期、Taiwan 同時列於表單與支援頁清單；教師系列免費、10–15／30–45 分鐘、完成測驗發徽章；AIA 免費 10 小時、五大對象、報名表仍收件且列台灣本島與外島選項），只補 `verification_scope` 與來源查閱時間。AIA 兩頁的支持單位寫法不同（課程頁 Google.org／ADB、about 頁 AVPN／Meta），列為缺口、不判定終止。
+
+**新增 3 筆機會（皆逐字取自官方頁，`tools/prioritize.py` 已重算）**
+
+- `microsoft-learn-student-ambassadors-monthly-azure-150`（S 級）：Microsoft Student Ambassadors 官方 Student Hub 頁逐字「Unlock program benefits, including Microsoft 365, Visual Studio Enterprise, $150 USD monthly Azure credits」「Get started - no application required!」「Open to students across all degree fields and levels…」。與 `azure-students`（US$100／年，需學籍驗證）是不同方案、不同額度。缺口：「monthly」是否重置、額度用完後是否轉隨用隨付、註冊表單是否列得出台灣學校，官方都沒寫。
+- `microsoft-365-nonprofit-business-basic-300-free-copilot-chat`（S 級）：非營利方案頁「free up to 300 users」＋「Copilot Chat … included in your Microsoft 365 subscription at no extra charge」；國別資格 PDF 逐列 Taiwan：認可型態為 social associations（社團法人）或 public-endowed foundations（財團法人）。這條對台灣 NPO 有實際價值，且資料庫先前只有 Azure 非營利與 Google Workspace 非營利。限制寫清楚：grant 席次僅限正職員工與無薪執行幹部、志工只能用折扣版、席次「vary by availability of country of usage」故台灣不保證 300。
+- `fun-ai-camp-2027-nthu-taica`（S 級，LOW-COST 非 FREE）：清大資工×TAICA 等校合辦，2027-01-25～01-28 長庚大學；報名費 NT$4,500，完成線上自學並全程參加退 NT$3,000（實質 NT$1,500）；報名截止 **115/12/18 23:59、額滿提前停止受理**（清大 115-11-04 函）。`setup_cost_usd` 依 `tw-labor-pretraining` 的先例保留 null（費用以新臺幣計），金額寫在 `cost_note`。
+- 未納入：Microsoft for Startups（已是 `azure-startups`）、桃園 115 年青年數位工具培育（任務指定避開）、臺中市勞工大學（115 年度已截止）、文化部地方創生 AI 課程（兩場已辦畢且限曾獲補助團隊）、Google Opal（官方寫 2026-11-17 結束 Labs）、AWS AI/ML Scholarship（官方頁 404）、Perplexity Comet（403 無逐字證據）、百度千帆／訊飛星火（需中國實名與手機號）。
+
+**attempted 3 筆（不刷新 `verified_at`）**：`adobe-startups-free-year-firefly-acrobat-semrush`（計畫頁 TLS 後 HTTP 逾時；Wayback 0 快照；www／max.adobe.com 回 Akamai 403。改用 Semrush 官方公告 2026-11-09 交叉確認方案與同一申請頁，但表單付款方式與國別下拉仍不可讀）、`deepinfra-two-minute-papers-twenty-credit`（第六度：`/papers` 404、Wayback CDX 只有 2025 三筆、官方 blog 對 `$20` 0 命中）、`astamuse-agent-trial-oct31-index-only`（第七度：原公告 404、CDX 0 捕獲、WP REST `after=2026-10-24` 回 `[]`）。後兩筆依「官方已沉默」改 `review_cadence: on_new_signal` 並清空 `next_review_at`：再排每月只會重複同一個 404／`[]`，而卡片上「有新線索時；未安排特定複核日期」比一個永遠讀不到的日期誠實。
+
+**品質改善（本輪唯一一項）：標題寫了期限，欄位就必須有對應的截止點**
+
+- 觀察到的問題：`createCard()` 的截止膠囊、「截止與期限」列與「截止日由近到遠」排序全部只讀 `deadline_at`／`expires_at`／`expiry.date`，而標題是讀者第一眼看到的字。2026-11-11 全庫掃描「可行動、標題同時有截止動詞（截止／報名至／受理至／申請至）與日期、三個欄位卻全空」只有 1 筆：`cyleague-cyber-navi-trial`（標題寫「11/30申請截止」，卡片沒有膠囊、排序被當成沒有截止日）。`tests/validate.py` 既有的兩條期限規則（排程須早於截止、期限已過須改狀態）都只讀欄位，看不到它。
+- 預期結果：這類紀錄不能再靠標題宣稱期限而讓卡片／排序／篩選看不到；補上欄位後 CyLeague 卡片出現「申請截止 2026-11-30 · 剩 19 天」。
+- 如何驗證：`tests/validate.py` 新增一條全庫斷言（新的 module-level 檢查，不在逐筆迴圈內），並用「把 `cyleague` 的 `deadline_at` 拿掉」做反向實測——驗證立即以 AssertionError 指名該 ID，回復後全綠。**刻意不把「至 <日期>」列入規則**：`fal-flux3`（折扣至 11/22–23）、`qoder`（每日額度至 10:00）、`mem0`（舊戶過渡至 11/25）都是方案內子期限，回填成整筆的 `deadline_at` 會讓卡片宣稱錯誤的截止日（同型 5 筆，見上方 2026-11-11 09:36 紀錄）。
+
+**本輪遇到的流程問題（下輪要避開）**
+
+1. **子代理可能無限擴張**：三個子代理合計跑了 33–36 分鐘、B 與 C 在 20 分鐘時仍停在 45%／25%。發 `agent://` 訊息要求「3 分鐘內交回、未查完的欄位直接列缺口」才收斂。下次在任務書就先寫「每個線索最多兩條替代路線、超過就列缺口」與明確時間盒。
+2. **子代理回報的逐字證據仍要自己抽驗**：B 的「價目表 100 個空 price span」我用同一份 HTML 只數到 4 個（正則不同），因此紀錄只寫「價格 cell 為空、金額由 JS 注入」不寫數量。凡數字型斷言，主 agent 用自己的方法重數一次，或改成不含數量的句子。
+3. **`json.dumps(indent=1)` 會把 8MB 資料檔整份重寫**：本輪第一次寫入用 indent=1，`git diff --stat` 立刻變成 18 萬行變動。`data/offers.json` 與 `data/policy-history.json` 都是 indent=2（`tools/prioritize.py` 的寫法），寫入前先確認縮排，否則 `git diff` 看不出真正的內容變更。
+4. **新增紀錄漏欄位會在下游才爆**：新紀錄若漏 `record_type`，`tools/prioritize.py` 會以 KeyError 中斷（不是 validate），錯誤訊息還停在不相關的行號。新增紀錄時先用既有同類紀錄的 key 清單比對一次。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,046 筆，S/A/B/C/D＝138/187/127/274/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/prioritize.py`（重算後 S 135→138）、`git diff --check`。
+瀏覽器（本機 8951、headless Chromium、停用快取）：資料載入 1,046 筆；概況卡 831／152／50／165；批次列 12／3／1,031；首頁 scope 為本輪文字（10:15–10:56）、資料更新 2026/11/11 10:56；捷徑「台灣條件適用」152 筆、「免費方案」682 筆、「本輪更新」15 筆（12 複核＋3 新增）；「截止日由近到遠」首筆為 AOCAI「申請截止 2026/11/11 12:30 · 今天」，其後 11/12 15:59、11/12、11/13；CyLeague 卡顯示「申請截止 2026-11-30 · 剩 19 天」；亞灣重複紀錄顯示「重複紀錄・已併入其他 ID・原分類：資格審核」且合併後紀錄為「新申請已截止」；Fun AI Camp 卡顯示「申請截止 2026/12/18 23:59 · 剩 37 天」；微軟非營利與 Ambassadors 兩張新卡以「300 席」「Ambassadors」搜尋各回正確紀錄；390px 寬 scrollWidth=390 無水平溢出、console error 0。
+
+**下輪優先（最多五項）**
+
+① `aocai-working-free-ai-courses-2026`（`next_review_at` 12:20、`deadline_at` 今天 12:30）：12:30 之後第一件事是重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544` 與報名表，確認 11/16 班關閉後把 `deadline_at` 改指 11/26 班（報名至 11/19）或 12/01 BizBoost 班，並改寫摘要第一句——`deadline_at` 已過而狀態仍 `conditional` 會被 validate 擋。
+② `mango-inference-community`（next 11-12 09:00）：11/12 起七折是否回原價（platform 與 pricing 兩頁），US$10 贈額是否須先綁付款方式。
+③ `perplexity-watch`（11-18）／`perplexity-education`（11-25）：3/day 與 five per day 是否收斂；`llms-full.txt` 已 404 3 日；`www.perplexity.ai/pricing` 403 是否解除（決定 Pro US$20 能不能寫）。
+④ `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（next 11-14）：11/30 截止但購買期限 10/31 已過、剩餘經費 4.4%；要確認餘額是否歸零或出現「經費用罄」公告，若已用罄改 `applications_closed`；來源 `https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
+⑤ `microsoft-365-nonprofit-business-basic-300-free-copilot-chat`（12-11）與 `microsoft-learn-student-ambassadors-monthly-azure-150`（12-11）：查官方是否補上「席次依國別調整」的實際數字、Ambassadors 的 monthly 重置細則與台灣學校是否在表單內；另 `fun-ai-camp-2027-nthu-taica` 11/25 要確認是否額滿（額滿即提前截止）。
+
+**常態待辦（不佔上面五項）**：`tools/linkcheck.py` 本輪全掃仍有 7 個 dead（qoder community-boost 兩頁、voyage 行銷 pricing、astamuse 公告、deepinfra /papers、nscale /pricing、salad ssap），全部是已註記的失效頁，沒有新失效來源；下次要修前先單筆重掃（併發下的 404 不能當證據）。免費專區仍有約 170 筆「費用欄位 null、沒有 cost_note」只印「未列金額」；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）。
