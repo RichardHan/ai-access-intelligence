@@ -2674,6 +2674,8 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 **發布**：commit `7aaba0d` 已推上 `origin/main`（`811f405..7aaba0d`），對應的 `pages-build-deployment`（7aaba0d）success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測：資料 1,043 筆、概況卡 828／149／50／165、批次列 14／2／1,027、首頁 scope 為本輪文字（09:05–09:36）、資料更新 2026/11/11 09:36；`data/offers.json` 直接下載亦為 1,043 筆且 `last_research_run.reviewed_ids` 14 筆、`new_ids` 2 筆；關鍵字「Jutor」與「好拍檔」各回對應新紀錄（狀態「方案仍列示」「活動現況待核」、核實 2026/11/11）；「首個專案」卡顯示「費用說明：須綁付款方式…」；「截止日由近到遠」首筆為 AOCAI「申請截止 2026/11/11 12:30 · 今天」；console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。本則後段（發布狀態補寫）與資料無關，屬同一批次的文件更新。
 
+　【12:39 覆核】對應的 `pages build and deployment` run 42959921145（headSha `d78a15f`）已 completed／conclusion=success。在公開站再次確認（含停用快取的 `?t=` 重載）：`data/offers.json` 的 fetch 回 200，頁面資料 1,050 筆、批次列為 12／1／1,037、資料更新 12:33——這是**接續的 12:04 那一輪（`45b106f`）**在同一小時內發布的結果，本輪（`d78a15f`）的內容是其基礎且仍全部在線：關鍵字「Kiro Free」3 筆（含本輪新增的免費層）、「方舟」3 筆、「專業證書」1 筆（本輪的觀察線索）、AOCAI 卡片「申請截止 2026-11-19 · 剩 8 天」，console error 0。因此本輪的發布狀態應記為：**已推送（`d78a15f`）→ 部署成功（run 42959921145）→ 公開內容已核對**，但公開站目前顯示的批次計數屬於後一輪，不是本輪的 17／3／1,029。接續那一輪另外用官方 FAQ 補正了本輪 Kiro 紀錄的三個「未知」（免費層為 perpetual、每計費月重置、未用完不結轉），已在 `45b106f` 修正。
+
 ## 2026-11-11 10:15–11:05（Asia/Taipei）｜R=12、A=3（3 機會）、U=1,031、attempted=3
 
 **基準與範圍**：本輪開始 N=1,043（828 機會／50 政策／165 觀察線索）；`python3 tools/queue.py` 顯示嚴格逾期 0 筆、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、追查失敗待換路線 0 筆（1 筆冷卻中）；8 筆官方來源 404（linkcheck 全掃 2,7xx 個 URL：dead 7 個、blocked 77、unreachable 6）。上一輪 09:36 才結束，其 14 筆一律不重讀。三個子代理分工：A 台灣 S 級與即將到期 6 筆、B 來源衝突與連續追查失敗 6 筆、C 新機會研究與去重；主 agent 另複核 1 筆（CyLeague）並負責整合、驗證與發布。**R=12、A=3、attempted=3、U=1,031**（結果 1,046 筆）。未登入、未申請、未付款、未操作 VPN。
@@ -2855,4 +2857,4 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 **常態待辦（不佔上面五項）**：`tools/linkcheck.py` 本輪未全掃（併發下的 404 不能當證據；上次全掃的 7 個 dead 都是已註記的失效頁）；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移仍未處理（先訂規則再改）；免費專區約 170 筆「費用欄位 null、沒有 cost_note」只印「未列金額」，本輪只補了 Mango 一筆。
 
-**發布**：__PUBLISH__
+**發布**：commit `45b106f` 已推上 `origin/main`（`d78a15f..45b106f`），對應的 `pages build and deployment`（run 42960298492）status=completed／conclusion=success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測（?v=45b106f 破快取）：資料 1,050 筆、「本輪更新」13 筆、「免費方案」686 筆、「台灣條件適用」154 筆、「開發者」595 筆；資料更新 2026/11/11 12:33 Asia/Taipei；關鍵字「IBM Bob」回新紀錄（A 級）、「服務業AI」卡的截止膠囊為「申請截止 2026-11-19 · 剩 8 天」且展開後含 12/02（3585）與 12/14（3588）兩個梯次與地點矛盾；直接抓 `data/offers.json` 亦為 1,050 筆、`reviewed_ids` 12 筆、`new_ids` 1 筆、`unreviewed_existing_count` 1,037、`updated_at` 12:33:41；console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。
