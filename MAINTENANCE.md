@@ -2858,3 +2858,49 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項）**：`tools/linkcheck.py` 本輪未全掃（併發下的 404 不能當證據；上次全掃的 7 個 dead 都是已註記的失效頁）；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移仍未處理（先訂規則再改）；免費專區約 170 筆「費用欄位 null、沒有 cost_note」只印「未列金額」，本輪只補了 Mango 一筆。
 
 **發布**：commit `45b106f` 已推上 `origin/main`（`d78a15f..45b106f`），對應的 `pages build and deployment`（run 42960298492）status=completed／conclusion=success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測（?v=45b106f 破快取）：資料 1,050 筆、「本輪更新」13 筆、「免費方案」686 筆、「台灣條件適用」154 筆、「開發者」595 筆；資料更新 2026/11/11 12:33 Asia/Taipei；關鍵字「IBM Bob」回新紀錄（A 級）、「服務業AI」卡的截止膠囊為「申請截止 2026-11-19 · 剩 8 天」且展開後含 12/02（3585）與 12/14（3588）兩個梯次與地點矛盾；直接抓 `data/offers.json` 亦為 1,050 筆、`reviewed_ids` 12 筆、`new_ids` 1 筆、`unreviewed_existing_count` 1,037、`updated_at` 12:33:41；console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。
+
+## 2026-11-11 13:05–13:35（Asia/Taipei）｜R=18、A=1（1 機會）、U=1,032、attempted=0
+
+**基準**：開場工作樹乾淨、`HEAD=0acbc8a`、`main == origin/main`；`python3 tools/round_lock.py status` 顯示無人持有（12:04 那輪已於 12:35 commit/push 結束）。資料 1,050 筆（834 機會／50 政策／166 觀察線索）；嚴格逾期 0 筆、7 天內到期 9 筆（9 筆都在 12 小時冷卻內）、retry 桶 0 筆、最久未核 = 2026-11-01 共 10 筆。
+
+**範圍與理由**：①最久未核輪替 10 筆（2026-11-01，含 Vinci、TurboScribe、Reclaim×2、Buzz、ChatPDF、Jan、Cerebras×2、Mathpix）——這一層是月度排程裡最舊的一批；②高風險 8 筆：Qoder／Tencent 兩個仍在跑的限時窗，加上 2026-11-02 六筆帶明確配額或同頁條款衝突的紀錄（Activepieces、Traceloop、Codespaces、Devin、Poe、Firecrawl）；③新機會研究（32 個頁面／目錄線索）。三個子代理平行執行，主 agent 負責整合、複核台灣 Yes 的新紀錄與發布。
+
+**兩個同時段的教訓（本輪開場就踩到）**：我依 `next_review_at` 手挑了 8 筆「7 天內到期」名單，派出去 5 分鐘後才發現其中 6 筆在 11:16–11:22 已被上一輪核實——`tools/queue.py` 的 12 小時冷卻本來就會濾掉它們，但沒有介面能對「手動名單」問同一句話。當場改派成 2 筆（Qoder／Tencent）＋6 筆 11/02 配額紀錄，並把這個缺口做成 `--explain`（見下方品質改善）。
+
+**實質更正**
+
+- `qoder-free-mechanisms`：**Qoduck 免費窗今日 10:00（UTC+8）結束**。官方 `docs.qoder.com/events/qoduck-free` 逐字「Promotion period: From November 7, 2026 to November 11, 2026 at 10:00 (UTC+8).」「Qoduck will be removed when the promotion ends.」——原標題仍把它寫成現行機制，讀者中午之後照著找會找不到模型。已改標題與摘要，並補一筆政策歷史。仍可用：每日 100 Credits（桌面 App 手領、30 天效期、結束日 TBA）、Efficient 0.0×（付費者；免費者僅 Pro 試用期）、離峰 14:00–00:00 UTC 的 60%／80% 折扣（台北 22:00–08:00）。Qwen3.8-Flash 免扣的兩頁矛盾（flashoffer 寫 11/07 00:00 結束 vs 100credits 頁仍寫 extended、結束日待公告）今日仍並存，不裁決。
+- `turboscribe-free-daily-three-thirty-minute-files`：昨日 11:19–11:20 的 Cloudflare 403 **已排除**（今天以 Chromium 讀到定價頁、首頁與條款）：3 份／日、每份 30 分鐘、一次 1 份、優先度較低、免卡全部逐字不變；已清掉 `last_review_attempt_at` 並把 `next_review_at` 從 11/18 換回 12/01。這是「403 不等於方案結束」的又一個例子。
+- `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：中英文新聞稿 dateModified 仍 2026-11-06，免費窗 11/4–11/15 未延期也未提前結束；**沒有時區與時鐘點、額度也沒有數字**（英文 available for free／中文「一定额度」）。產品端 Free 是 100 credits／月＋每日 30 credits 活躍獎勵（結束日另公告），7 天 Pro 試用要綁卡並開自動續訂——兩者不能混成同一個免費窗。
+- 最久未核那 10 筆**沒有一個數字需要更正**（Vinci US$1,000／最高 US$10,000、TurboScribe 3×30 分鐘、Reclaim Lite 5 agents、Reclaim 教育五折 12 個月、ChatPDF 2 份／日、Mathpix 10 pages＋10 images、Cerebras 大使 US$100 全部重讀後逐字相符）。新增的是邊界條件：ChatPDF 前端另有未公布數值的每日上傳／對話／訊息上限；Buzz 官網 Classic 清單仍列 macOS (Intel) 而 README 寫 v1.4.5 後需 Apple Silicon；Reclaim 試用天數 help center 寫 30 天、網站 CTA 寫 14 天。
+- 六筆 11/02 配額紀錄**主張不變**，但三個官方矛盾今天仍並存：Activepieces「1,000 a month」vs「Credit reset Daily／Waits for tomorrow」、Traceloop 卡面「Up to 5 Seats」vs 同頁 FAQ「There is no seat limit」、Poe 每日點數無數字（另確認官方訂閱國家表列 Taiwan，但那只管訂閱、不代表免費層在台開通）。
+- `taiwan-industry-talent-investment-ai-courses-2026`：兩份 wda 附件（nws／ws.wda.gov.tw 的 Download.ashx）在 13:38 實測**連主機根路徑都回 404**，而存活的新聞頁 s=19233 上五個附件連結全部指向同一個 nws 主機。只把它寫進 `unknowns`（404 不代表方案終止），本輪未改任何主張、未動 `verified_at`。
+
+**新增 1 筆機會**
+
+- `ntpc-gemini-education-city-pro-accounts-115`（S 級，台灣 Yes）：新北市教育局採購 Google Workspace 教育網域的 Gemini Education 授權，專案網站逐字「全市學校共配發了9425組帳號，會依照學校規模有不同的額度」、市立明德高中公告寫採購「配置1萬組 Pro 帳號」；Pro 授權 115/04/01 全面啟用、可用至 116/03/31，經費由教育局支應、使用者零付費，帳號在 gsuite.ntpc.edu.tw 教育網域且官方稱資料不作 AI 訓練。限新北市學校教職員經校內資訊組申請（行政人員優先、超額比序；明德高中另要求 A1／A2、A3、B5-1 研習），並須每週登入 1 次、每學期 1 場 AI 研習、引用生成內容標註 AI 比例，未達標可收回。主 agent 於 13:24 自行直取兩頁逐字複核（`expires_at` 只寫日期 2027-03-31，因為官方只給 116/03/31、沒有時鐘時間，不寫 23:59 以免卡片宣稱官方精度）。
+
+**未納入（保留否決理由）**：子代理檢視約 32 個線索，只有 1 筆達門檻。Grok for Startups、GitHub for Startups、Upstage×AWS、AMD Developer 都已有紀錄（x.ai 條款仍是紀錄已記的 2026-10-27 版，無需更新）；OpenAI Daybreak 個人存取要付費方案、Frontline Defenders 只寫「starting with the United States」；Anthropic Claude for Startups 官方已寫無名額；Mistral Education US$14.99 是付費折扣；Verdent 無免費層；Chromebook Plus 送 12 個月 AI Pro 的條款停在 2024-12-31 且台灣不在國別清單；桃園 AI 好幫手 10/11 已截止、臺北青年補助 11/10 已過、教育部示範學校 5/27 已關閉；Paperspace／DigitalOcean Gradient Free GPU 有「FREE GPU $0」但機型、小時上限與是否綁卡全未公布，列觀察線索而非紀錄；NTU 低收戶 AI 訂閱補助只有新聞、官網查無公告頁；Hailuo AI 定價頁兩次都只有 JS 外殼。
+
+**品質改善（本輪唯一一項）：`python3 tools/queue.py --explain ID…`**
+
+- 觀察到的問題：本輪開場用手挑的清單裡有 6 筆在 1.5 小時前才被另一個回合核實（11:16–11:22），而 12:04 那輪也與 11:15 那輪排到同一個 `aocai`。`build_queue()` 的 12 小時冷卻一直是對的，錯的是「手動名單沒有任何介面可以問同一句話」——上一輪因此只能靠 `round_lock` 事後發現衝突，這一輪則是靠我事後翻 `verified_at` 才發現白派了 6 筆。
+- 預期結果：列清單前一行就能看到「冷卻中，不排入：2.2 小時前才打開官方頁」，把查核預算留給真的沒人碰過的紀錄。
+- 做法：把單筆判定抽成 `classify(record, now, cooldown, window)`，`build_queue()` 與新的 `explain()` 共用同一份規則（不再有第二套實作），CLI 加 `--explain ID [ID…]`（`--json` 亦可）。沒有改任何桶的順序或門檻。
+- 驗證：`python3 tools/queue.py --self-test` 新增四條斷言（冷卻中的 ID 必須回報「冷卻中」並附小時數、輪替 ID 必須回報「會排入 [rotation]」、已截止 ID 回報不進佇列、未知 ID 另外列出）→ PASS；實跑 `--explain` 五個 ID（含本輪剛核的 TurboScribe／Qoder／新紀錄）均正確顯示冷卻中，`--limit 12` 的佇列與基準數字與改動前一致（1,051 筆、可行動 967、7 天內到期 9、retry 0）。
+
+**來源掃描（full linkcheck，13:07 起跑、145 秒）**：2,863 個 URL 可開、9 個 dead（404）、13 個 unreachable、65 個 blocked。9 個 dead 逐筆檢視後都落在「該頁失效已寫進來源 evidence／標題」的紀錄（voyage 的行銷站 pricing、nscale 定價頁、qoder community-boost、salad、astamuse、deepinfra papers、ideogram docs .md、wda 附件），本輪不新增維修項；wda 那筆已如上述寫進缺口。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,051 筆，S/A/B/C/D＝140/188/127/275/105）、`node --check app.js`、`node tests/filters.cjs`（全綠，含 0 筆缺 status）、`python3 tools/prioritize.py`、`python3 tools/queue.py --self-test`、`git diff --check`。資料層稽核：與 HEAD 相比只有 19 筆變動（18 筆複核＋1 筆新增），無刪除、無 ID 變更。
+
+瀏覽器（本機 8981、headless Chromium，改資料後重跑）：全庫 1,051 筆；捷徑「本輪更新」19、「免費方案」687、「台灣條件適用」155、「開發者」595；首頁顯示「18 本輪局部複核／1 新增／1032 尚未複核／資料更新 2026/11/11 13:24」；關鍵字「新北市 Gemini Education」回新紀錄（S 級、台灣條件適用），詳情列正確顯示效期「2027-03-31（來源未列時刻）」、核實範圍 2026-11-11 13:24 與 4 項缺口；「Qoduck」卡標題已改為「已於 2026-11-11 10:00 結束」；TurboScribe 卡不再出現「追查未成功」且核實日為 2026/11/11；「截止日由近到遠」排序前三為 Amazon ARA 11/12 15:59（剩 1 天）、ADI FORUM 11/12、酷 AI 11/13；載入更多 24→48；390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `mango-inference-community`（next 11/12 09:00）：11/12 起 platform 與 pricing 兩頁是否回原價、「through Nov 11」是否已消失；順帶確認 `inference.mangoboost.io/pricing` 是否仍只回「Loading pricing…」外殼（本輪 13:1x 實測仍是外殼）。來源 `https://www.mangoboost.io/platform/mango-inference`、`https://inference.mangoboost.io/pricing`。
+② `qoder-free-mechanisms`（next 11/12 12:00、cadence daily）：確認 Qoduck 是否真的自模型選單消失、`events/100credits` 的 Flash 舊敘述是否被更新（若仍衝突就維持並列），以及每日 100 Credits 是否仍可手領。來源 `https://docs.qoder.com/events/qoduck-free`、`.../100credits`、`.../flashoffer`。
+③ `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`（next 11/13、窗到 11/15）：11/16 之後確認免費窗是否如期結束、有沒有延期公告，以及中國站體驗版 500 積分是否同步轉付費。來源 `https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+④ `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（next 11/14、受理至 11/30）：13:07 再讀仍是「剩餘補助經費 $253,197（4.4%）」（自 11/9 17:26 起未再下降）；11/30 前若仍不動，把 `next_review_at` 拉到月底並在 `unknowns` 註明讀值停滯，同時確認有無「經費罄／停止受理」公告。來源 `https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
+⑤ `aocai-working-free-ai-courses-2026`（next 11/18、`deadline_at` 11/19）：11/19 後把 `deadline_at` 接給 12/02 班（報名至 11/27 12:30）或 12/14 班（12/11 17:00），並確認 11/16 班是否關閉、11/26 班是否額滿、3588 的地點矛盾是否修正。來源 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`...?id=3585`、`...?id=3588`。
+
+**常態待辦（不佔上面五項）**：`ntpc-gemini-education-city-pro-accounts-115`（next 12/11：各校剩餘名額、私立學校 115.03.09 函文、116 年度是否續辦）；`taiwan-industry-talent-investment-ai-courses-2026` 的 wda 附件主機仍 404，要找仍可開啟的官方鏡像或改用 s=19409 的新聞頁版本；79 筆紀錄的 `verified_at` 比所有來源查閱時間新（多為 11/07–11/08 批次，來源缺 `accessed_at`），下輪起排到時一併補；`tools/linkcheck.py` 的 9 個 dead 仍屬「已註記的失效頁」，暫不列維修。

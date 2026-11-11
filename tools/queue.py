@@ -16,6 +16,9 @@
   python3 tools/queue.py --limit 40      # 加大佇列
   python3 tools/queue.py --json          # 輸出機器可讀結果
   python3 tools/queue.py --self-test     # 以合成資料驗證規則本身
+  python3 tools/queue.py --explain ID [ID…]
+                                         # 手動挑清單前先問：這些 ID 這一輪會不會被排入、
+                                         # 不排入是因為冷卻、已截止，還是排程未到
 
 只有 `status` 不在 CLOSED 內的紀錄才進佇列：已截止、已關閉與已合併的紀錄保留歷史，
 但讀者已不能行動，重讀它們只是刷新時間。`on_new_signal` 沒有固定日期，只以截止點排入。
@@ -116,6 +119,80 @@ def failed_lookup(record):
     return None if verified is not None and verified >= attempt else attempt
 
 
+def classify(record, now, cooldown, window):
+    """單筆紀錄在這一輪會落到哪個桶——queue 與 --explain 共用同一份規則。
+
+    為什麼要抽出來：2026-11-11 13:05 這輪，主 agent 依 `next_review_at` 自己挑了一份
+    「7 天內到期」的 8 筆名單派給子代理，其中 6 筆其實同一小時前（11:16–11:22）才被另一個
+    回合核實過：`build_queue()` 會因 12 小時冷卻把它們濾掉，但沒有任何介面能對「手動清單」
+    問同一句話，於是把稀缺的查核時間花在重讀同一批官方頁上。`--explain` 就是那個介面。
+    """
+    if record.get("status") in CLOSED:
+        return {"bucket": None, "closed": True, "due": None, "soonest": None,
+                "verified": None, "failed": None, "fresh": False, "urgent": False,
+                "in_window": False}
+    due = parse_stamp(record.get("next_review_at"))
+    verified = parse_stamp(record.get("verified_at"))
+    closes = [point for point in close_points(record) if point[2] > now]
+    soonest = min(closes, key=lambda point: point[2]) if closes else None
+    failed = failed_lookup(record)
+    # 冷卻要看「最後一次真的打開官方頁」的時間：失敗的追查也是打開過一次，
+    # 若只比 verified_at，2 小時前才失敗的紀錄會立刻從輪替回到佇列。
+    touched = max([stamp for stamp in (verified, failed) if stamp is not None], default=None)
+    fresh = touched is not None and now - touched < cooldown
+    urgent = soonest is not None and soonest[2] - now <= datetime.timedelta(hours=URGENT_HOURS)
+    in_window = soonest is not None and soonest[2] - now <= window
+    bucket = None
+    if due is not None and due < now:
+        bucket = "overdue"
+    elif in_window:
+        # 冷卻中的非緊急紀錄不重排；24 小時內到期者不受冷卻限制。
+        bucket = None if (fresh and not urgent) else "closing"
+    elif failed is not None and not fresh:
+        bucket = "retry"
+    elif not fresh:
+        bucket = "rotation"
+    return {"bucket": bucket, "closed": False, "due": due, "soonest": soonest,
+            "verified": verified, "failed": failed, "fresh": fresh,
+            "urgent": urgent, "in_window": in_window}
+
+
+def explain(records, ids, now=None, window_days=DEFAULT_WINDOW_DAYS,
+            cooldown_hours=DEFAULT_COOLDOWN_HOURS):
+    """回報手動挑選的 ID 這一輪會不會被排入、以及不排入的原因。"""
+    now = now or datetime.datetime.now(TZ_TPE).replace(tzinfo=None)
+    cooldown = datetime.timedelta(hours=cooldown_hours)
+    window = datetime.timedelta(days=window_days)
+    by_id = {record.get("id"): record for record in records}
+    rows, unknown = [], []
+    for record_id in ids:
+        record = by_id.get(record_id)
+        if record is None:
+            unknown.append(record_id)
+            continue
+        info = classify(record, now, cooldown, window)
+        touched = max([stamp for stamp in (info["verified"], info["failed"]) if stamp is not None],
+                      default=None)
+        if info["closed"]:
+            verdict = "已截止／已合併，不進佇列（保留歷史）"
+        elif info["bucket"]:
+            verdict = f"會排入 [{info['bucket']}]"
+        elif info["fresh"]:
+            hours = (now - touched).total_seconds() / 3600 if touched else None
+            verdict = ("冷卻中，不排入：" + (f"{hours:.1f} 小時前才打開官方頁" if hours is not None
+                                            else "剛查核過"))
+        else:
+            verdict = "未排入（排程未到且無截止點）"
+        rows.append({"id": record_id, "status": record.get("status"), "bucket": info["bucket"],
+                     "next_review_at": record.get("next_review_at"),
+                     "verified_at": record.get("verified_at"),
+                     "last_review_attempt_at": record.get("last_review_attempt_at"),
+                     "closes_at": info["soonest"][1] if info["soonest"] else None,
+                     "cooldown_hours": round((now - touched).total_seconds() / 3600, 1) if touched else None,
+                     "verdict": verdict})
+    return rows, unknown
+
+
 def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WINDOW_DAYS,
                 cooldown_hours=DEFAULT_COOLDOWN_HOURS):
     """回傳 (baseline, queue)。queue 為 [(bucket, record_id, reason, due, oldest_close)]。"""
@@ -130,33 +207,24 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
     cooled_retry = 0
 
     for record in actionable:
-        due = parse_stamp(record.get("next_review_at"))
-        verified = parse_stamp(record.get("verified_at"))
-        closes = [point for point in close_points(record) if point[2] > now]
-        soonest = min(closes, key=lambda point: point[2]) if closes else None
-        failed = failed_lookup(record)
-        # 冷卻要看「最後一次真的打開官方頁」的時間：失敗的追查也是打開過一次，
-        # 若只比 verified_at，2 小時前才失敗的紀錄會立刻從輪替回到佇列。
-        touched = max([stamp for stamp in (verified, failed) if stamp is not None], default=None)
-        fresh = touched is not None and now - touched < cooldown
-        urgent = soonest is not None and soonest[2] - now <= datetime.timedelta(hours=URGENT_HOURS)
-        retry_ready = failed is not None and not fresh
-        if failed is not None and fresh:
+        info = classify(record, now, cooldown, window)
+        if info["failed"] is not None and info["fresh"]:
             cooled_retry += 1
-
-        if soonest is not None and soonest[2] - now <= window:
-            closing_window.append(("closing", record, due, soonest))
-        if due is not None and due < now:
-            overdue.append(("overdue", record, due, soonest))
-        elif soonest is not None and soonest[2] - now <= window:
-            if fresh and not urgent:
+        if info["in_window"]:
+            closing_window.append(("closing", record, info["due"], info["soonest"]))
+        if info["bucket"] is None:
+            # 落在這裡只剩「冷卻中」與「排程未到且無截止點」兩種；視窗內者要計入冷卻數。
+            if info["in_window"] and info["fresh"] and not info["urgent"]:
                 cooled_in_window += 1
-            else:
-                closing.append(("closing", record, due, soonest))
-        elif retry_ready:
-            retry.append(("retry", record, failed, soonest))
-        elif not fresh:
-            rotation.append(("rotation", record, due, soonest))
+            continue
+        if info["bucket"] == "overdue":
+            overdue.append(("overdue", record, info["due"], info["soonest"]))
+        elif info["bucket"] == "closing":
+            closing.append(("closing", record, info["due"], info["soonest"]))
+        elif info["bucket"] == "retry":
+            retry.append(("retry", record, info["failed"], info["soonest"]))
+        else:
+            rotation.append(("rotation", record, info["due"], info["soonest"]))
 
     overdue.sort(key=lambda row: row[2])
     closing.sort(key=lambda row: row[3][2])
@@ -273,6 +341,20 @@ def self_test():
     assert ids.index("retry-failed") < ids.index("rotation-old"), "retry 桶要先於一般輪替"
     assert baseline["overdue"] == 1 and baseline["closing"] == 3, f"bucket 計數不符: {baseline}"
     assert baseline["retry"] == 1 and baseline["retry_cooled"] == 1, f"retry 計數不符: {baseline}"
+    # `--explain` 必須與 build_queue 說同一件事：手動挑的 ID 若在一小時前才核過，
+    # 佇列會因冷卻濾掉它，explain 也要說「冷卻中」而不是「會排入」。
+    rows, unknown = explain(records, ["closing-cooled", "rotation-old", "closed-overdue", "no-such-id"],
+                            now=now, cooldown_hours=12)
+    verdicts = {row["id"]: row["verdict"] for row in rows}
+    assert "closing-cooled" in verdicts, "冷卻中的紀錄也要出現在 explain 的回報裡（說明為何不排入）"
+    assert verdicts["closing-cooled"].startswith("冷卻中"), f"explain 要說明冷卻: {verdicts}"
+    assert verdicts["rotation-old"].startswith("會排入"), f"explain 要說會排入: {verdicts}"
+    assert verdicts["closed-overdue"].startswith("已截止"), f"explain 要說已截止: {verdicts}"
+    assert unknown == ["no-such-id"], f"未知 ID 要另外列出: {unknown}"
+    rotation_row = next(row for row in rows if row["id"] == "rotation-old")
+    assert rotation_row["bucket"] == "rotation", "explain 的 bucket 要與 build_queue 一致"
+    cooled_row = next(row for row in rows if row["id"] == "closing-cooled")
+    assert cooled_row["cooldown_hours"] == 2.0, f"explain 要回報距上次查核小時數: {cooled_row}"
     # 兩份清單不得互相漏接：retry 的紀錄若同時符合 closing（期限先到），只能出現在 closing 一次。
     assert len(ids) == len(set(ids)), "同一個 ID 不得在佇列出現兩次"
     print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, date-only deadlines last all day, failed lookups retried before rotation, closed excluded, rotation ordered by next_review_at).")
@@ -284,6 +366,8 @@ def main():
     parser.add_argument("--window-days", type=int, default=DEFAULT_WINDOW_DAYS)
     parser.add_argument("--cooldown-hours", type=int, default=DEFAULT_COOLDOWN_HOURS)
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--explain", nargs="+", metavar="ID",
+                        help="只回報這些 ID 這一輪會不會被排入、以及不排入的原因")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
 
@@ -292,6 +376,19 @@ def main():
         return
 
     data = json.loads(DATA.read_text())
+    if args.explain:
+        rows, unknown = explain(data["offers"], args.explain,
+                                window_days=args.window_days,
+                                cooldown_hours=args.cooldown_hours)
+        if args.json:
+            print(json.dumps({"explain": rows, "unknown": unknown}, ensure_ascii=False, indent=2))
+            return
+        for row in rows:
+            print(f"  {row['id']} | {row['verdict']} | 核實 {str(row['verified_at'])[:16]} "
+                  f"| 下次 {str(row['next_review_at'])[:16]} | 期限 {row['closes_at']}")
+        for missing in unknown:
+            print(f"  {missing} | 資料庫沒有這個 ID")
+        return
     baseline, queue = build_queue(data["offers"], limit=args.limit,
                                   window_days=args.window_days,
                                   cooldown_hours=args.cooldown_hours)
