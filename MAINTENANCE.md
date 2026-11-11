@@ -2549,3 +2549,63 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項名額）**：`verification_scope` 仍缺 70 筆可行動官方紀錄（排到時重讀再補）；23 筆可行動紀錄有已知費用卻沒有 `cost_note` 說明那是試用後價、必要預付或折扣前價（本輪 Pieces 即屬此類，已補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪只單筆驗證未全掃，下輪若要全掃直接用它，dead 清單先單筆重掃再當證據。
 
 **發布**：commit `31c323f` 已推上 `origin/main`（`2f61ad9..31c323f`），對應的 `pages-build-deployment`（run 42924165984）success；公開站 <https://richardhan.github.io/ai-access-intelligence/> 已核對 1,037 筆、概況卡 824／147／50／163、「本輪更新」21 筆、首頁 scope 為本輪文字（07:05–07:24），Hyperbolic 卡片顯示設定費／月費 US$0 與「核實 2026/11/11」，CHT 競賽卡片顯示「申請截止 2026/11/30 18:00 · 剩 19 天」，console error 0。以上為推送後在公開站實際載入的結果，非只憑 Actions 成功推論。
+
+---
+
+## 2026-11-11 08:05–08:33｜R=19、A=4（2 機會＋2 觀察線索）、U=1,018、attempted=0
+
+**基準與範圍**：本輪開始時 N=1,037（824 機會／50 政策／163 觀察線索）。`python3 tools/queue.py` 顯示**嚴格逾期 0 筆**、7 天內到期 10 筆（其中 9 筆在 12 小時冷卻內，全部是當天 05:26–07:16 剛核過的台北課程與活動）、追查失敗待換路線 0 筆（1 筆冷卻中），24 小時未核 661 筆。因為沒有真正逾期的案例，本輪改依 `queue.py` 自身的順序取「排程最近」的輪替位，並把**官方來源衝突**（任務第二優先）整組排進來——衝突紀錄的價值不在到期，而在讀者可能照著矛盾資訊行動。前四輪（05:34、06:31、07:24）已核過的 129 筆一律不重查。
+
+**A 組 7 筆：來源衝突與未核主張（全部未改 status、未寫 policy_history，因為官方沒有新更正）**
+
+1. `voyage-free-tokens-batch-excluded`：同一份 pricing 頁仍是三方相反——正文寫 `voyage-code-3` 200M、`voyage-multilingual-2` 50M、`rerank-2.5` 系列各 200M；「Number of free tokens」表只列 voyage-4 系列／context-4／code-4 與 rerank-3 系列；Older models 段逐字「we do not offer free tokens for them」。FAQ（updatedAt 2026-10-30）仍只有泛稱 200M。`modified_time` 與 11-10 相同（2026-09-29），`www.voyageai.com/pricing` 實測仍 404（已列為來源）。以表格＋Older models 段為現行讀法並在摘要寫明理由，衝突原樣保留。
+2. `sloyd-guest-daily-plus-separated-pools`：Answers（自標 2026-10-21）兩處都是「one AI 3D generation per day」，比較表三列各標「1 daily」但沒有相加說明——**分列不等於 3 次**，改以每日 1 次規劃；3D 列印授權仍兩說（Answers 稱 Plus／Pro 可免權利金販售，ToS 2026-02-16 §6 只准個人用）。
+3. `promptlayer-free-observability-2500-requests`：比較表 Free「Overage Rate —」與 FAQ「charged by transaction」並存。本輪加查官方文件全文（`llms-full.txt` 1,115,807 bytes）：`overage` 與 `2,500` 皆 0 命中，Plan limits 章只規範 Skill Collections——**負面證據**確認文件解不了這條，`next_review_at` 提前到 11-18。
+4. `novai-...`：付款方式三頁不一致（transparency 頁寫 Card＋USDT 且「$1 on card」；terms 與 model-marketplace 只列 USDT、card「coming soon」；最低加值 $1 vs $5）。`aiapi-pro.com/pricing` 現 308 → `/model-marketplace.html`，已就地改指。
+5. `fal-flux3-max-five-daily-sandbox`：**折扣結束日定案**——fal 自己的 `/pricing.md` 指定 `models/<endpoint>/llms.txt` 為價格權威，該檔逐字「From November 8 … through November 22, 2026 … Regular rates … resume on November 23, 2026 at 00:00 UTC」（台北 11/23 07:59），landing 頁自標 11-10 更新仍寫 11/21 屬未同步文案。sandbox 免費次數仍是伺服器動態輸出（11-09 為 7、11-10 與 11-11 為 6），官方文件只有「occasionally offers free credits」，無每日重置定義。
+6. `nebius-token-factory-signup-one-dollar`：`billing-new` 仍寫強制綁卡，全頁與 `llms-full.txt`（1,117,472 bytes）`trial` 0 命中——$1 試用既未回復也未公告取消，維持「官方沉默」而不是「已取消」。
+7. `river-inference-25-credit`：console 靜態 HTML 的 bootstrap 仍 `"signup_bonus_enabled":false`；`console.river.ai/terms` 回 200 但只是 13,221 bytes 的 SPA 外殼，合約正文仍讀不到。
+
+**B 組 8 筆：輪替＋台灣資格**
+
+- `mango-inference-community`：platform 頁仍列「$10 in free credits」「30% off … through Nov 11」（未標年份），社群「$100 儲值配對」明列 10/31 截止已結束。排程改 daily，11/12 複核折扣是否回原價。
+- `kilo-auto-free-hosted-models`、`couchbase-activate-starter-kit-…`、`parallel-mcp-keyless-…`、`satfaq-…`、`shift-asia-prototype-twenty-companies`：主張不變，補上「缺哪一句才算台灣可用」的敘述。**台灣一律維持 Unknown**——這幾筆的官方頁與條款都沒有服務國家清單，也沒有明文接受台灣；「未列排除名單」不能推論可用。
+- `lets-go2-ai-ocr-launch-six-hundred-pages`：補 `deadline_at` 2026-12-28（活動頁「2026年10月13日〜12月28日」、600 枚首年免費、2026-12-10 才發售）與 `REGION-LOCKED`；服務詳細頁逐字「本サービスの提供地域、および、お客様の権利は日本国内でのみ有効です」，`taiwan: No` 確認仍正確。
+- `realads-once-fifty-no-watermark`：條款附則已列「버전 1.3 (시행일 2026. 10. 28.)」→ §7.6 成本連動扣點自 10/28 生效，但頁首仍標 v1.2，頁面自身不一致（寫進 policy-history）。首頁 FAQ「無浮水印、可商用」與 §8.3「免費輸出須留浮水印且僅非商業」的衝突未解。
+
+**主 agent 4 筆：每日追蹤與交叉連結**
+
+- `qoder-free-mechanisms`（**本輪唯一影響決策的更正**）：官方 `qoduck-free` 頁已把促銷期間寫成「From November 7, 2026 to November 11, 2026 at 10:00 (UTC+8)」，即**台北今天 10:00 結束**；11-10 17:09 的讀值仍是「end date is yet to be determined」，標題與摘要原本寫「結束日未定」。同時補上「每日額度為 limited number of free uses、付費者多於免費用戶、用完可 0.5× 續用」，並把 `unknowns` 的「結束日期」改成只剩「次數未公布」。
+- `felo-…`、`runable-…`：重讀後主張不變（felo 整份 i18n payload 仍無任何日期字串可作截止依據；runable 月上限仍只存在 FAQ）。
+- `deepinfra-deepstart-qualified`：補交叉連結——同站 NVIDIA Inception 會員另有 10B Nemotron tokens（獨立紀錄），官方寫「One application covers both」，但**成立年限不同**（DeepStart 2 年內、Inception 5 年內）。
+
+**新增 4 筆（主 agent 逐字重讀官方頁後才納入）**
+
+- `boson-ai-free-trial-credit-ten`（機會）：新帳號 US$10 試用額度，官方逐字「No payment method is required」，但**不會自動入帳**——須在 API Keys 或 billing overview 手動領取，未領取前呼叫回 429 `insufficient_quota`（Realtime 為 error 4429），領取後 12 個月到期，適用全部 Boson API。台灣可否註冊未核。
+- `deepinfra-nvidia-inception-ten-billion-nemotron`（機會）：10,000,000,000 Nemotron tokens＝官方換算 US$1,000（Nemotron 3 Ultra cached-input US$0.10/1M），「Valid for 12 months from approval」，資格為現行 Inception 會員、成立 5 年內、募資 US$250K–10M、「One grant per company」（blog 逐字）；官方寫「Available in most countries — some regions are excluded by export regulations」，**台灣是否被排除未公布**。
+- `boson-higgs-realtime-duplex-api-waitlist`、`intel-ai-pc-cloud-remote-instance`（觀察線索）：前者 API 只開候補；後者官方指南**沒寫費用**，因此不能當免費額度，只記「公司或大學信箱、48 小時審核、instance 不保證可用、Use case 要選 AI PC USA」。
+
+**未納入（保留否決理由）**：數發部 115 年 AI 算力（`taiwan-adi-ai-compute-115` 已是同一方案、已截止）、Microsoft for Startups Foundry 贊助範圍（`azure-startups` 的條款補充，非新方案）、SageMaker Studio Lab（官方已寫不再接受新客戶）、Intel Liftoff（新申請已關閉）、Saturn Cloud「150 免費 GPU 小時」（官方頁只寫 free account，第三方說法無官方支持）、中華電信×Google 單辦方案（屬 `cht-google-ai-plus-first-year-free-2026` 的條件變動）、Hailuo AI 每日點數（首頁是前端應用，取不到額度條文）。
+
+**證據缺口**：Voyage 正文／表格／Older models 三方矛盾（官方 `modified_time` 仍 2026-09-29）；Sloyd 商用 3D 列印授權兩說；PromptLayer Free 超額是否收費；NovAI 信用卡是否可用與最低加值 $1/$5；fal sandbox 免費次數的重置規則；Nebius $1 試用是否存在；River 合約正文（SPA 外殼）；上述日／韓服務的台灣個案資格；Qoder Qoduck 每日次數；Boson 與 DeepInfra 的台灣帳戶個案。
+
+**品質改善（本輪唯一一項）：費用欄位 null 不再印成「未核實」**
+
+- 觀察到的問題：`money()` 對 null 一律回「未核實」，但費用欄位是 schema 管制的**美元數字**，null 代表「沒有記下美元金額」，不代表沒查。2026-11-11 統計 26 筆 `setup_cost_usd` 為 null 卻有 `setup_cost_basis`、72 筆 `recurring_cost_usd` 為 null 卻有 `cost_note`；`mango-inference-community` 的卡片同時寫「設定費 未核實」與「費用依據：活動頁列註冊US$10額度…」，同一張卡兩種說法，把已查過的費用說成沒查。
+- 預期結果：null →「未列金額」；數字照舊 `US$`；零費用仍是 `US$0`（零設定費不等於整體免費，另有說明列）。
+- 驗證方式：`tests/filters.cjs` 新增規格值斷言——`mango-inference-community` 的「設定費」必須等於「未列金額」且卡片不得出現「未核實」，`lindy-…` 仍是「US$29.99」、`gemini-api-free` 仍是「US$0」。實機瀏覽器核對該卡已顯示「設定費 未列金額」＋「費用依據：…」。
+
+**連結全掃（本輪有跑，結果交下一輪）**：`python3 tools/linkcheck.py --workers 10` 掃 2,896 個唯一 URL／1,037 筆紀錄，耗時 215 秒：ok 2,808、**dead 7**、unreachable 6、blocked 75。dead 影響 7 筆紀錄：`perplexity-education`／`perplexity-watch`（`perplexity-help-center.mintlify.app/llms-full.txt`，該筆用來主張「官方兩份文件並存」的負面證據來源，現在 404，需找新索引）、`qoder-community-1024`（`qoder.com/community-boost`、`docs.qoder.com/events/communityboost`）、`astamuse-…`、`deepinfra-two-minute-papers-twenty-credit`（`deepinfra.com/papers`）、`nscale-signup-five-current-docs-conflict`（`nscale.com/pricing`）、`salad-ssap-migration-credit-watch`（`salad.com/ssap/`）。本輪未修：這些紀錄不在本批複核名單，404 也不能單獨判活動終止。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,041 筆、S/A/B/C/D＝133/187/127/274/105）、`node --check app.js`、`node tests/filters.cjs`（全綠，含新增斷言）、`python3 tools/prioritize.py`、`git diff --check`。
+瀏覽器（本機 8947、headless Chromium）：資料載入 1,041 筆、概況卡 826／147／50／165、「本輪更新」23 筆（19 複核＋4 新增）；免費方案 679、開發者 593、台灣條件適用 147；關鍵字 Qoduck／Boson／DeepInfra／AI-OCR／fal FLUX 各只回對應紀錄（DeepInfra 2 筆、Boson 2 筆含觀察線索）；「截止日由近到遠」前六筆為 11/11 12:30（今天）→11/12 15:59→11/12→11/13→11/15 23:59→11/15；「再顯示 24 筆」由 24 增至 48；Mango 卡顯示「設定費 未列金額」＋費用依據、Boson 卡顯示 US$0／US$0 與「方案仍列示」；390px 寬 scrollWidth=390 無水平溢出、console error 0。
+
+**下輪優先（最多五項）**
+
+① `qoder-free-mechanisms`（daily，next 11-12 12:00）：Qoduck 已於 11/11 10:00 結束，重讀 `https://docs.qoder.com/events/qoduck-free` 確認頁面是否改列 ended、是否移除摘要中的進行式描述；同時確認每日 100 點與 Efficient 0.0× 是否仍有效（`https://docs.qoder.com/events/100credits`、`/events/efficientunlimited`）。
+② `mango-inference-community`（daily，next 11-12 09:00）：11/12 起 30% 折扣是否回原價——重讀 `https://www.mangoboost.io/platform/mango-inference` 價格表與 `https://inference.mangoboost.io/pricing`；若回原價，摘要與 `expiry` 需改為過去式，並檢查 US$10 贈額到期日是否公布。
+③ `perplexity-watch` / `perplexity-education`（next 11-18／11-25）：`perplexity-help-center.mintlify.app/llms-full.txt` 已 404，「官方兩份文件並存」的負面證據斷了。找新索引（`/llms.txt`、help center 站台地圖）或改引兩份具名文件，找不到就在 `unknowns` 記證據缺口，不要因為 404 就改狀態。
+④ `lets-go2-ai-ocr-launch-six-hundred-pages`（next 11-14）：確認 12/28 簽約截止前是否加開梯次、2026-12-10 發售日是否延期，來源 `https://www.lets-co.com/static/ai/ocr/campaign/index.html`；並查台籍人士／台灣企業在日據點的個案資格。
+⑤ `aocai-working-free-ai-courses-2026`（**12:30 之後第一件事**，daily）：11/16 班報名截止 2026-11-11 12:30，過後須重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3535` 與報名表；若已關閉，把 `deadline_at` 改指 11/26 班（報名至 11/19）或 12/01 BizBoost 班，`deadline_at` 已過卻非已截止會被 validate 擋。
+
+**常態待辦（不佔上面五項）**：6 筆 dead 來源待換路徑（見上）；`verification_scope` 仍缺的可行動官方紀錄（排到時重讀再補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；三個同類「官方沉默」案例（Nebius $1、River US$25、PromptLayer overage）不宜每輪重複追，建議下輪起改 monthly 並只在有公告時提前。

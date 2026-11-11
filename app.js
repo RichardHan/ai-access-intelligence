@@ -81,9 +81,14 @@ function display(value) {
   return String(value);
 }
 
+// 費用欄位是 schema 管制的「美元數字」；null 代表沒有記下美元金額，不是「沒查」。
+// 舊版一律渲染「未核實」，卡片因此自我矛盾：2026-11-11 統計 26 筆 setup_cost_usd 為 null 卻有
+// setup_cost_basis（例如 mango-inference-community 的「設定費 未核實」下方同時寫著
+// 「費用依據：活動頁列註冊US$10額度…」），另有 72 筆 recurring_cost_usd 為 null 但已寫 cost_note。
+// 讀者看到的是「沒查」，實際是「查了，但金額不是美元或不適用」。
 function money(value) {
   return typeof value === 'number' && Number.isFinite(value)
-    ? `US$${value.toLocaleString('zh-TW', { maximumFractionDigits: 3 })}` : '未核實';
+    ? `US$${value.toLocaleString('zh-TW', { maximumFractionDigits: 3 })}` : '未列金額';
 }
 
 function dateLabel(value, includeTime = false) {

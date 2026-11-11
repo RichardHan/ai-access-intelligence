@@ -521,6 +521,18 @@ assert(lindyNote.textContent.includes('US$29.99')&&lindyNote.textContent.include
 const zeroCostCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
 assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明')),'zero-fee cards must not show a monthly-fee explanation');
 console.log('PASS: FREE-tagged records with a known monthly fee explain the fee on the card face.');
+// 費用欄位是美元數字，null 只代表「沒有記下美元金額」，不代表沒查。舊版一律印「未核實」，
+// 於是 26 筆 setup_cost_usd 為 null 卻有 setup_cost_basis 的紀錄在同一張卡上自相矛盾：
+// 「設定費 未核實」底下緊接「費用依據：活動頁列註冊US$10額度…」（mango-inference-community）。
+// 規格值斷言：null →「未列金額」；數字照舊 US$；零費用仍是 US$0（零設定費不等於整體免費）。
+const cardFacts=o=>ctx.createCard(o).children.find(n=>n.className==='card-facts').children.map(r=>[r.children[0].textContent,r.children[1].textContent]);
+const basisOnly=d.offers.find(o=>o.id==='mango-inference-community');
+assert(basisOnly.setup_cost_usd===null&&basisOnly.setup_cost_basis,'anchor record changed: need a null cost with a documented basis');
+assert.deepStrictEqual(cardFacts(basisOnly).find(r=>r[0]==='設定費'),['設定費','未列金額'],'null USD cost must not read as an unverified cost');
+assert(!cardFacts(basisOnly).some(r=>r[1]==='未核實'),'card must not claim a researched fee was never checked');
+assert.deepStrictEqual(cardFacts(d.offers.find(o=>o.id==='lindy-free-fifty-dollar-seven-day-trial')).find(r=>r[0]==='每月費用'),['每月費用','US$29.99']);
+assert.deepStrictEqual(cardFacts(d.offers.find(o=>o.id==='gemini-api-free')).find(r=>r[0]==='設定費'),['設定費','US$0']);
+console.log('PASS: null cost fields render 「未列金額」 instead of claiming the fee was never verified.');
 // 缺 status 的紀錄：藥丸與「優先度依據」必須說同一件事（prioritize 寫「狀態未記錄」）。
 // 舊版 fallback 是「狀態待釐清」，同一張卡因此同時主張「待釐清」與「狀態未記錄」，
 // 且「待釐清」暗示已排入追查，但缺 status 的紀錄未必有排程（2026-11-09 仍有 13 筆）。
