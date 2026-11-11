@@ -555,6 +555,14 @@ function createCard(offer) {
   // 在卡片正面列出 cost_note（`tests/validate.py` 對非已截止者強制要求），完整說明仍留在詳情。
   if ((offer.recurring_cost_usd || 0) > 0 && offer.cost_note) {
     card.append(text('p', `每月費用說明：${display(offer.cost_note)}`, 'cost-basis'));
+  } else if ((offer.setup_cost_usd === null || offer.recurring_cost_usd === null) && offer.cost_note) {
+    // 反過來的情況同樣誤導：費用欄位是 null 時卡片正面只印得出「設定費 未列金額／每月費用 未列金額」，
+    // 而真正說明「要綁卡、超額自動扣款、折扣不是免費」的那句話被鎖在詳情裡。
+    // 2026-11-11 統計 91 筆可行動紀錄屬此類（46 筆在免費專區），例如 ovh-public-cloud-first-project
+    // 的 cost_note 逐字「須綁付款方式；超額自動扣款」、asana-student-starter 的「啟用須信用卡」。
+    // 讀者在不確定的費用旁邊看不到唯一確定的那句話，就會把「未列金額」讀成「可能免費」。
+    // 標籤用「費用說明」而不是「每月費用說明」，因為這裡講的不一定是月費。
+    card.append(text('p', `費用說明：${display(offer.cost_note)}`, 'cost-basis'));
   }
   const foot = text('div', '', 'card-foot');
   const closing = closeBadge(offer);

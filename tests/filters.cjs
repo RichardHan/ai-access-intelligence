@@ -521,6 +521,27 @@ assert(lindyNote.textContent.includes('US$29.99')&&lindyNote.textContent.include
 const zeroCostCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
 assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明')),'zero-fee cards must not show a monthly-fee explanation');
 console.log('PASS: FREE-tagged records with a known monthly fee explain the fee on the card face.');
+
+// 反向的費用誤導：欄位是 null 時卡片正面只寫得出「設定費 未列金額／每月費用 未列金額」，
+// 真正說明「要綁卡、期滿自動扣款、折扣不是免費」的 cost_note 卻只出現在詳情。2026-11-11 統計
+// 91 筆可行動紀錄屬此類（46 筆在免費專區，例：ovh-public-cloud-first-project 的「須綁付款方式」、
+// google-students-tw-plus 的「期滿自動按月收取 NT$165」、nebius 的「requires a bank card」）。
+// 資料驅動斷言：任一費用欄位為 null 且寫了 cost_note 的紀錄，卡片正面必須有「費用說明」且逐字等於該 note；
+// 數字完整的紀錄不得冒出這一列（避免同一欄位在卡片上出現兩次說法）。
+const feeUnknownWithNote=d.offers.filter(o=>(o.setup_cost_usd===null||o.recurring_cost_usd===null)&&typeof o.cost_note==='string'&&o.cost_note.trim());
+assert(feeUnknownWithNote.length>=40,'expected actionable records with an unknown USD fee and a cost_note');
+for(const o of feeUnknownWithNote){
+  const card=ctx.createCard(o);
+  const notes=card.children.filter(n=>n.className==='cost-basis'&&(n.textContent.startsWith('費用說明')||n.textContent.startsWith('每月費用說明')));
+  const knownMonthly=(o.recurring_cost_usd||0)>0;
+  assert.strictEqual(notes.length,1,'unknown-fee card must carry exactly one fee explanation: '+o.id);
+  assert.strictEqual(notes[0].textContent,(knownMonthly?'每月費用說明：':'費用說明：')+o.cost_note,'cost caveat must be shown verbatim: '+o.id);
+}
+const ovhNote=ctx.createCard(d.offers.find(o=>o.id==='ovh-public-cloud-first-project-two-hundred-month')).children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('費用說明'));
+assert(ovhNote&&ovhNote.textContent.includes('須綁付款方式'),'OVH must state the payment-method requirement on the card face');
+const completeFee=d.offers.filter(o=>o.setup_cost_usd!==null&&o.recurring_cost_usd!==null);
+assert(completeFee.length>0&&completeFee.every(o=>!ctx.createCard(o).children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('費用說明'))),'cards with both USD fees recorded must not show the unknown-fee caveat');
+console.log('PASS: unknown USD fees surface the recorded cost caveat instead of hiding it in the details.');
 // 費用欄位是美元數字，null 只代表「沒有記下美元金額」，不代表沒查。舊版一律印「未核實」，
 // 於是 26 筆 setup_cost_usd 為 null 卻有 setup_cost_basis 的紀錄在同一張卡上自相矛盾：
 // 「設定費 未核實」底下緊接「費用依據：活動頁列註冊US$10額度…」（mango-inference-community）。

@@ -2611,3 +2611,63 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項）**：6 筆 dead 來源待換路徑（見上）；`verification_scope` 仍缺的可行動官方紀錄（排到時重讀再補）；`conditional`＋`FREE`＋`HIGH BUT LIMITED` 的狀態語意漂移（先訂規則再改）；三個同類「官方沉默」案例（Nebius $1、River US$25、PromptLayer overage）不宜每輪重複追，建議下輪起改 monthly 並只在有公告時提前。
 
 **發布**：commit `77aeac6` 已推上 `origin/main`（`2e95f19..77aeac6`），對應的 `pages-build-deployment`（run 42932311919）success。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測：1,041 筆、概況卡 826／147／50／165、首頁 scope 為本輪文字（08:05–08:33）、「本輪更新」23 筆；Qoduck 卡片標題含「至 2026-11-11 10:00」、Mango 卡顯示「設定費 未列金額」＋「費用依據：…」、Boson 卡顯示 US$0／US$0、Go2 AI-OCR 卡顯示「申請截止 2026-12-28 · 剩 47 天」，console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。
+
+---
+
+## 2026-11-11 09:05–09:36（Asia/Taipei）｜R=14、A=2（2 機會）、U=1,027、attempted=2
+
+**基準與範圍**：本輪開始 N=1,041（826 機會／50 政策／165 觀察線索）。`python3 tools/queue.py` 顯示**嚴格逾期 0 筆**、7 日內到期 10 筆（9 筆在 12 小時冷卻內）、追查失敗待換路線 0 筆。上一輪 08:33 才結束、相隔 32 分鐘，其 19 筆一律不重讀。本輪改取兩端：**今天／本週就會截止或結束的 7 筆**，加上**官方來源 404 與官方說法互相矛盾的 7 筆**（任務第二、第三優先），另由子代理做新機會研究。14 筆複核（R）、2 筆追查失敗（attempted，不計入 R）、新增 2 筆。未登入、未申請、未付款。
+
+**A 組 7 筆：今天／本週到期**
+
+1. `aocai-working-free-ai-courses-2026`：11/16 班 09:11 **仍受理**（事件頁 200 且掛「我要報名」、報名表完整欄位且全頁無「活動已結束」），報名期間 2026/09/24 15:00–**2026/11/11 12:30**、費用 0、人數限制 250、預計招生 100；**11/17 商研院班新增「實體座位已滿」**（raw HTML 紅字，見流程問題 1），同頁仍保留「報名本場次」；11/26 班截止 2026/11/19、12/01 BizBoost 班「尚有票券」；最新消息無加開梯次。`next_review_at` 設 **12:20**（必須早於 12:30，否則 validate 的「排程晚於截止」規則會擋）。
+2. `taipei-kuai-ai-school-grant-batch2-115`：修訂版計畫書 09:17 重讀，第 2 批截止仍 115/11/13、「預計補助40校」、一般組 7 萬／進階組 12 萬，全文無「延期」「順延」。教育局官網公文公告、公告資訊、重點學校名單三頁仍 0 命中；官網「進階搜尋」實際導向 Google `as_sitesearch`，`Search.aspx` 本身 404，站內搜尋路徑不存在。
+3. `mango-inference-community`：**ToS 已取得**（瀏覽器渲染，v2026-10-12）：§19.3 排除俄羅斯、白俄、敘利亞、中國大陸、香港，**台灣不在清單但未被正面列名**（維持 Unknown）；促銷額度「發放時指定日或發放後六個月較早者」到期。折扣 11/11 當日仍生效，platform 三處與 pricing 頁**仍無年份**。
+4. `heygen-voice-turbo-free-api-until-2026-11-30`：逐字「free until November 30, 2026」（有年份）、模型仍在清單且免 credit、字元與 30 req/min 限制不變、無 deprecat／sunset 字樣。
+5. `fireworks-glimmer-sft`：`2026-12-01T00:00:00-08:00` 前**啟動**工作、免卡、排除 RL／DPO／全參數／部署不變，無延期或名額限制。
+6. `lets-go2-ai-ocr-launch-six-hundred-pages`：10/13〜12/28、600 枚（官方寫 1 ページ＝1 枚，原「枚 vs 頁」缺口結案）、12/10 上線、年約 ¥264,000 含稅＋初期費 ¥11,000、日本國內限定均不變；新增超額加購價 **200 枚／¥11,000**（已寫入 cost_note 與 terms_restrictions）。
+7. `volcengine-ark-1111-token-giveaway-watch`：11.11 當日重讀，規則仍為 **2026.10.29** 版、限中國大陸用戶、至 11/30 23:59:59，規則全文「token」0 命中；活動頁仍以「单模型 50 万、累计 2500 万」呈現且無截止日字樣。
+
+**B 組 7 筆：來源失效、官方衝突、最久未核**
+
+1. `perplexity-watch`：3/day（比較表）與 five per day（10352998）**同日仍並存**；新增免費層「you will have to sign in if you want to try Pro Search」。`llms-full.txt` 仍 404（第 3 日），替代的 `llms.txt` 只有頁面清單、`www…/help-center/llms.txt` 403、sitemap 404；pricing 仍 403、Wayback 2026 全年無 200 快照 → **Pro US$20 仍無官方原文**，`recurring_cost_usd` 維持 null。
+2. `perplexity-education`：US$10／月＋SheerID、教育專文「unlimited Pro Searches」、同頁表格「Weekly limits (average use)」三者仍並存。另見 SheerID 該計畫頁 config 列 233 國含 TW，**只當線索寫進 identity_residency，不改 taiwan**。
+3. `nscale-signup-five-current-docs-conflict`：`/pricing` 404 第 2 日、官網 sitemap 199 筆無 pricing；現行單價改以 `docs/ai-services/models.md` 為權威。新增第三種門檻說法（marketing：「can be started by any developer with $2 credit」）與 docs「minimum $5」矛盾，列入 unknowns；狀態維持 unverified。
+4. `salad-ssap-migration-credit-watch`：`salad.com/ssap/` 仍 404、sitemap 44 筆與 blog sitemap 113 筆均無、`/whats-new/` 0 命中；2024-04-24 原文仍可讀（US$10,000／兩月、10 張 24GB GPU）。404 不足以判終止，狀態不變。
+5. `oracle-ai-services-free-tier`：行銷頁仍稱「free pricing tier for most AI services」，但 **Always Free 資源頁未列** Speech／Language／Vision／Document Understanding／Data Labeling、價目表金額由 JS 注入讀不到數字、官方 region 清單 45 個 identifier **無台灣**。summary 與 unknowns 已改寫成這個精確版本。
+6. `diffbot-free-monthly-tenk-shared-api-credits`：每月 10,000 共用（Extract 1 頁＝1、KG 實體＝25…）、5 req/min、依帳期重置、超額 429、**定價頁與 FAQ 都寫免卡**；一般條款仍要求信用卡（兩說保留）。
+7. `deepinfra-two-minute-papers-twenty-credit`（attempted）：`/papers` 404 第 5 日、`login?deal=2mpapers` 已無 $20 字樣、sitemap 1,062 筆無活動頁、**Wayback 2026 零捕獲**（最近快照仍 2025-04-30）。`verified_at` 不刷新，只記 attempt 與原因。
+8. `astamuse-agent-trial-oct31-index-only`（attempted）：原公告 404，官方 WP REST（トライアル／AIエージェント）與 2026 年度列表最新為 10-23，`after=2026-10-24` 的新聞集合為空。同上，不刷新 `verified_at`。
+
+**新增 2 筆（主 agent 逐字讀官方頁後才納入）**
+
+- `junyi-jutor-ai-english-tutor-taiwan-free`（opportunity、S 級，台灣 Yes）：均一教育平台「全站完全免費使用」「無論選擇用哪個身份，都可以 永久免費 使用全站所有功能喔！」、Jutor「專為台灣學生設計的 AI 英語學習平台」「免費學習」。**免費不等於無限制**：網站政策第六章逐字「基於運算成本限制，部分生成式 AI 服務將對單一帳戶於一定期間內設有使用上限」，官方未公布數字；政策同時禁止在 AI 輸入欄位放個人可識別資訊、內容限個人非商業用途。`quota_classification` 記 UNKNOWN 並在說明寫明。
+- `mingyi-npo-ai-partner-grant-tw-two-hundred-k`（opportunity、S 級，台灣 Yes）：明怡基金會「NPO 好拍檔」AI 獎助，FAQ 逐字「20 萬獎助金可以用在哪些地方？」、限「AI 技術之導入與培訓」、「單一法人至多獲選 2 件」、核銷「不需要單據的審核」、排除倡議推廣類與支持型組織、案例須「已在您的工作流程中實務運行滿 2 個月」。官網已公布 2026 獲選 15 件（全為台灣立案組織）但**無報名截止日與下一梯次時間**，因此狀態記 `campaign_current_availability_unverified`（活動現況待核），不是「已截止」也不是「可申請」。
+
+**未納入（保留否決理由）**：台北市青年 AI 補助、新竹市 AI 領航補助、115 年度中小製造業 AI 工具點數、台智雲 TWAI、Claude for Nonprofits、Google Workspace 非營利、AWS Health Impact、OpenAI Student Collective、中華電信 Google AI Plus、Google 學生方案 — 全部已收錄；ChatGPT Edu 全校版官方仍是「Contact sales」、僅美國 K-12 教育工作者免費，台灣無免費依據；數發部 UNEXT 是見習計畫不是 AI 額度；imCore Core Studio 只有倒數頁無額度敘述。Watchlist 三條留到下輪：台大「AI 平權」弱勢生補助（校務會議 PDF 未載）、imCore Core Studio（11/30 上線）、ChatGPT Edu 全校在台適用性。
+
+**品質改善（本輪唯一一項）：費用未知時，卡片正面要說得出唯一確定的那句話**
+
+- 觀察到的問題：`money()` 對 null 已印「未列金額」，但真正寫著「要綁卡、期滿自動扣款、折扣不是免費」的 `cost_note` 只在 `recurring_cost_usd > 0` 時才上卡片正面。2026-11-11 統計 **93 筆可行動紀錄**屬於「某個美元費用欄位是 null 且有 cost_note」（免費專區內 46 筆）：`ovh-public-cloud-first-project-two-hundred-month` 的 note 逐字「須綁付款方式；超額自動扣款」、`google-students-tw-plus` 的「註冊時須提供有效付款方式；期滿系統自動按月收取新台幣 NT$165」、`nebius-token-factory-signup-one-dollar` 的「requires a bank card」全部只藏在詳情。讀者在「設定費 未列金額／每月費用 未列金額」旁邊看不到唯一確定的事，很容易把未知讀成可能免費。
+- 預期結果：任一美元費用欄位為 null 且有 `cost_note` 的卡片，正面多一列「費用說明：<原文>」，與既有的「每月費用說明」互斥（同一欄位不在同一張卡出現兩種說法）；兩個費用都有值的卡片不出現這一列。
+- 驗證方式：`tests/filters.cjs` 資料驅動斷言 — 符合條件的紀錄必須**恰好一列**費用說明且逐字等於 `cost_note`、有已知月費者用「每月費用說明」、`ovh-…` 必須含「須綁付款方式」、兩個費用都有值的紀錄不得出現此列。反向實測：把該 `else if` 分支拿掉後測試以 AssertionError 失敗，回復後全綠。瀏覽器實測 OVH 卡顯示「費用說明：須綁付款方式…」、Google 學生卡顯示 NT$165 續扣說明。
+
+**本輪遇到的流程問題（下輪要避開）**
+
+1. **表格 cell 內的紅字提醒會被文字擷取吃掉**：CDRI 11/17 班「實體座位已滿」寫在 `<span style="color:#ff0000">` 內、位於表格 cell，`read` 的 markdown 轉換沒有帶出這句話，只有 `curl` 原始 HTML 看得到。凡「額滿／已滿／停辦／延期」這類字樣，先確認是不是被樣式標記吞掉（與 11-11 早上「modal 公告擷取不到」同型）。
+2. **來源時間可能記在 `accessed_time_range` 而不是 `accessed_at`**：`aocai` 的兩筆 ievents 來源用 `accessed_time_range` 記 05:30／02:09，本輪再 append 同日 09:11 的新證據就變成「同日同 URL 兩筆」被 validate 擋。合併時要同時看兩個欄位（前端 `sourceStamp` 早就是這樣讀的）。
+3. **子代理交期與真實時鐘會漂**：本輪一度把 `verified_at`／`updated_at` 寫成 09:40（當時實際 09:28），validate 的 future-clock 檢查擋下後改成當下值。時間戳一律以 `TZ=Asia/Taipei date` 取值，不要用任務敘述裡的預估時間。
+4. **per-call 模型不可用**：`task` 的 `perCallModel` 在本環境關閉，指定的 gpt-6.1-terra／Gemini 3.8 Flash 無法逐一指派，三個子代理都以環境預設模型執行；本則如實記錄，沒有宣稱使用了未實際呼叫的模型。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,043 筆、S/A/B/C/D＝135/187/127/274/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/prioritize.py`（重算後 S 133→135）、`git diff --check`。
+瀏覽器（本機 8951、headless Chromium、停用快取）：資料載入 1,043 筆；概況卡 828／149／50／165；批次列 14／2／1,027；首頁 scope 為本輪文字（09:05–09:36）；關鍵字「均一」「明怡」各只回對應新紀錄；「截止日由近到遠」首筆為 AOCAI「申請截止 2026/11/11 12:30 · 今天」，其後 11/12 15:59、11/12、11/13；OVH 卡顯示「費用說明：須綁付款方式…」、Google 學生卡顯示期滿 NT$165 續扣；新紀錄卡片為「免費機會／資格審核／容易開始」與「資格審核／優惠組合」，費用、狀態（方案仍列示／活動現況待核）與核實 2026/11/11 均正確；390px 寬 scrollWidth=390 無水平溢出、console error 0。
+
+**下輪優先（最多五項）**
+
+① `aocai-working-free-ai-courses-2026`（`next_review_at` **12:20**、`deadline_at` 12:30、daily）：**12:30 之後第一件事**是重讀 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544` 與報名表；確認 11/16 班已關後，把 `deadline_at` 改指 11/26 班（`https://college.itri.org.tw/Lesson/LessonData/7571A149-3346-4FAE-B5AF-DCADB2DBDAC3`，報名至 11:19）或 12/01 BizBoost 班，並改寫摘要第一句——`deadline_at` 已過而狀態仍 `conditional` 會被 validate 擋。順便確認 11/17 班實體額滿後線上是否仍收。
+② `mango-inference-community`（next 11-12 09:00、daily）：11/12 起折扣是否回原價（platform 與 pricing 兩頁價格表）；US$10 贈額是否須先綁付款方式。
+③ `perplexity-watch`（11-18）／`perplexity-education`（11-25）：3/day 與 five per day 是否收斂；`llms-full.txt` 是否恢復（已 404 3 日）；`www.perplexity.ai/pricing` 是否解除 403（決定 Pro US$20 能不能寫）。
+④ `nscale-signup-five-current-docs-conflict`（11-25）：$2（marketing）與 $5（docs）起用門檻的關係、US$5 贈額是否仍發放、`/pricing` 是否復原。
+⑤ `mingyi-npo-ai-partner-grant-tw-two-hundred-k`（**2027-01-15**，monthly_or_new_signal）：查下一梯次報名是否公告（`https://www.mingyifoundation.org/ai-partner` 與 FAQ、LINE 小幫手頁），有公告再改成可申請並補 deadline；2027 年前不必反覆重讀。另 `taipei-kuai-ai-school-grant-batch2-115` 11/13 後若無延期公告改 `applications_closed`。
+
+**常態待辦（不佔上面五項）**：`deepinfra-two-minute-papers-twenty-credit` 與 `astamuse-agent-trial-oct31-index-only` 已連續失敗且官方端全無，下輪起比照「官方沉默」改低頻（`on_new_signal`／現有排程不再提前）；免費專區仍有 173 筆「費用欄位 null、沒有 cost_note」，卡片只有「未列金額」；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）；`tools/linkcheck.py` 本輪未全掃，下輪若要修 404 清單先單筆重掃再當證據。
