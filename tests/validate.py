@@ -9,6 +9,19 @@ def unique_keys(pairs):
  return result
 d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);jsonschema.validate(d,json.loads((p/'schema.json').read_text(),object_pairs_hook=unique_keys))
 history=json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
+# 資料檔的序列化格式是版面契約，不是實作細節：`json.dump()` 預設縮排是 1 空格、這兩個檔案是 2 空格，
+# 任何臨時腳本漏掉 `indent=2` 都會把整份檔案重寫一遍。2026-11-11 本輪實際踩到：改一筆紀錄的腳本
+# 寫出「90,542 insertions / 90,542 deletions」，真正的內容變更（16 筆）完全被格式噪音蓋掉，review 與
+# `git blame` 都失效；同一天另一輪的寫入過程也產生過一次 59,149 行的假 diff。改成 canonical 格式檢查：
+# 讀回後以既有格式重新序列化，必須逐位元組相同。修正方式是把存檔那行改成
+# json.dump(obj, f, ensure_ascii=False, indent=2)（結尾不留換行）。
+for _name in ('offers.json','policy-history.json'):
+ _raw=(p/'data'/_name).read_text()
+ _obj=json.loads(_raw,object_pairs_hook=unique_keys)
+ assert json.dumps(_obj,ensure_ascii=False,indent=2)==_raw, (
+  f'data/{_name} is not in the repo canonical format (ensure_ascii=False, indent=2, no trailing newline) — '
+  'a script rewrote the whole file with different indentation, which buries the real content change; '
+  're-save with json.dumps(obj, ensure_ascii=False, indent=2)')
 ids=[x['id'] for x in d['offers']];assert len(ids)==len(set(ids))
 assert all(h['record_id'] in ids for h in history), 'unknown policy history record_id'
 # Two records for one plan render as two cards with independent status/tier, so a duplicate
@@ -201,6 +214,12 @@ for o in d['offers']:
  assert close_points(o), f'title states a dated deadline but deadline_at/expires_at/expiry are empty — the card shows no countdown or deadline row and sorts as if it had no deadline: {o["id"]}'
 for o in d['offers']:
  assert isinstance(o.get('title'), str) and o['title'].strip(), f'missing or empty title in {o["id"]}'
+ # 這些欄位是純文字，卡片與詳情直接輸出、沒有 markdown 解析：寫進 `**粗體**` 只會在畫面上留下兩個星號。
+ # 2026-11-11 統計 3 筆（supermemory 的 summary、nanonets 的 cost_note，以及本輪新增的 Kiro 免費層 summary
+ # ——後者是本輪自己寫進去的），讀者看到的是斷字，不是強調。只檢查會被直接渲染的欄位，不對整份 JSON 全掃。
+ for _f in ('title','summary','cost_note','access_risk','usable_duration','verification_scope','cancellation','usage_type','quota_details'):
+  _v=o.get(_f)
+  assert not (isinstance(_v,str) and '**' in _v), f'markdown bold in plain-text field {_f} of {o["id"]} (the card renders it literally as **): remove the asterisks'
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'
  assert o['verification']!='Official' or o['sources'] and o['verified_at']
  cadence=o.get('review_cadence')

@@ -2726,3 +2726,81 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項）**：`tools/linkcheck.py` 本輪全掃仍有 7 個 dead（qoder community-boost 兩頁、voyage 行銷 pricing、astamuse 公告、deepinfra /papers、nscale /pricing、salad ssap），全部是已註記的失效頁，沒有新失效來源；下次要修前先單筆重掃（併發下的 404 不能當證據）。免費專區仍有約 170 筆「費用欄位 null、沒有 cost_note」只印「未列金額」；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）。
 
 **發布**：commit `8519c9a` 已推上 `origin/main`（`638ee24..8519c9a`），對應的 `pages-build-deployment`（8519c9a）status=built。推送後在公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測：資料 1,046 筆、概況卡 831／152／50／165、批次列 12／3／1,031、首頁 scope 為本輪文字（10:15–10:56）、資料更新 2026/11/11 10:56；`data/offers.json` 直接下載亦為 1,046 筆且 `last_research_run.reviewed_ids` 12 筆、`new_ids` 3 筆、`attempted_failed_ids` 3 筆；關鍵字「CyLeague」卡片顯示「申請截止 2026-11-30 · 剩 19 天」、「Fun AI」顯示「申請截止 2026/12/18 23:59 · 剩 37 天」、「300 席」回微軟非營利新紀錄；console error 0。以上是推送後在公開站實際載入的結果，不是只憑 Actions 成功推論。本則後段（發布狀態補寫）與資料無關，屬同一批次的文件更新。
+
+
+## 2026-11-11 11:15–12:50（Asia/Taipei）｜R=17、A=3（2 機會＋1 觀察線索）、U=1,029、attempted=1
+
+**基準與範圍**：本輪開始 N=1,046（831 機會／50 政策／165 觀察線索）。`python3 tools/queue.py --limit 22` 顯示**嚴格逾期 0 筆**、7 日內到期 10 筆（9 筆在 12 小時冷卻內，只剩 AOCAI 12:30 這一筆）、追查失敗待換路線 0 筆（1 筆冷卻中）、24 小時內未核 684 筆。上一輪（10:15–11:05，commit `8519c9a`／`ba51fcf`）結束才 10 分鐘，其 12 筆複核與 3 筆新增一律不重讀。本輪三個子代理分工：A 21 天內到期／即將關閉 8 筆、B 最久未核與官方說法衝突 8 筆、C 新機會研究與去重；主 agent 另做 AOCAI 梯次交接、1 筆前一批紀錄的補正、3 筆新紀錄的逐字審查，以及本輪唯一的流程改善。未登入、未申請、未付款。
+
+**A 組 8 筆：21 天內到期或即將關閉（結論：沒有一筆延期、提前關閉、額滿或改價）**
+
+- `moda-adi-forum-2026-free`（11/12 09:30）：活動頁 772 與資策會報名表仍列六個場次並可送出，新聞列表最新 2026-11-10、「ADI FORUM」0 命中。**新增可引用的單篇活動頁 `/ADI/news/events/21254`**（建立與更新日期皆 2026-11-06，內文與 772 相同），已補進 sources。
+- `amazon-ara-multilingual-contextual-ai-fall-2026`（台北 11/12 15:59）：徵案頁仍「October 1 - November 11, 2026 (11:59PM Pacific Time).」、`article:modified_time` 仍 2026-10-28（無二次展延）；索引頁仍「Fall 2026: Open Now」＋「has been extended to November 11.」；program-rules 仍 2025-03-26 版、void 清單未列台灣。
+- `taipei-kuai-ai-school-grant-batch2-115`（11/13）：北一女轉知頁仍「115年11月13日（星期五）前」；修訂版計畫書 PDF **位元組數 406,182 與前次完全相同**（同一檔案）、「9 萬元」0 命中、「延期／延長／順延」各 0；教育局公告列表仍 0 命中「酷」。
+- `ugreen-ai-nas-hackathon-2026`（台北 11/16 15:45）：規則與 Taiwan 合格居住地不變，**參與人數 2061→2071**；宣傳頁與 FAQ 的初賽影片矛盾今日仍並存，依正式規則判「不需影片」。
+- `tw-labor-pretraining-ai-smart-application-tnnu-03`（11/16 16:00）：**報名人數 27→28／34（剩約 6 席）**，日期、自付 5,760 元、188 小時、甄試 11/18 不變，仍可報名。
+- `taoyuan-ai-productivity-online-courses-115`（11/17）：課程頁仍「115-08-28~115-11-17 免費、600 名/堂」、更新日 115-11-10；**頁面自身 11/17 與列表 11/20 的日期衝突仍在**，保留兩說不裁決。
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`（11/15 23:59）：M11W2 期間逐字未變、`dateModified` 2026-11-06，blog 最新一篇仍是 11/06（無 M11W3、無延期）。
+- `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59）：兩份模型頁仍 `Free (limited time)`，docs 內 `extend/postpone/delay` 0 命中。
+
+**B 組 7 筆：最久未核（verified_at 11-01～11-09）與官方衝突**
+
+- `code-for-everyone-ai-school-2026`：**台灣判讀收斂**。公告逐字「2027年3月31日（水）まで」、対象学校種逐字「小学校・中学校・義務教育学校・高等学校・中等教育学校・特別支援学校」；FAQ 逐字「大学での利用は想定しておりません」、申請人限「教諭もしくは管理職の方」；官方申請表「都道府県」欄含選項「その他（在外教育施設・通信制等）」。結論：一般台灣學校或個人不符，唯一路徑是在台日本学制「在外教育施設」（如日僑學校）的教諭／管理職送件並經審查；`taiwan` 仍留 Unknown（官方未點名台灣，只給選項）。另補 ICT 支援企業／支援員個人不發帳號、教育委員會僅限功能確認／研修、不得跨校一括申請。
+- `tidb-ai-startup-up-to-hundred-k`：新增明確目標市場句「You are building for markets such as the United States, Southeast Asia, Japan, or Europe.」，**台灣不在列名市場**；這是適合度敘述不是註冊地排除，故 taiwan 仍 Unknown，但把「未列名」寫成可判讀的敘述。最高 US$100,000、pre-seed～Series B 不變。
+- `assemblyai-startup-recurring-year`：逐字新增「Credits land in your console within 48 hours of approval」與「Startup discounts continue after your credits run out. Standard pricing phases in with no migration and no cliff」；金額仍未公布（兩頁 `12,000`／`12k`／`twelve thousand` 0 命中），審核時程衝突（計畫頁一週 vs 申請頁 2–3 工作日）仍在。
+- `cohere-catalyst-grants-api-credits`：`STATUS: Open`／`rolling basis` 不變；FAQ 支持主題比舊紀錄寬（新增語言模型安全、法律／歷史／社科、多語、價值對齊），追加額度窗口改為具名信箱 `brittawnya@cohere.com`；4 週發表前通知只適用 AI safety 類，舊紀錄寫成通則已收斂。
+- `runpod-academic-research-case-by-case`：計畫仍在，新增機構層級導入（university SSO）與「教學／課程也支援」，個人學生一律個案審查；US$25,000 仍只在 B200 文章 FAQ、非計畫頁，維持不寫入額度。
+- `together-research-invite-grants`：邀請制與「a few hundred dollars」不變；平台最低消費改記為兩段式「US$15 首次購買、之後 US$5」，研究贈額是否免首購仍無明文。
+- `scholarcy-free-summarizer-quota-conflict-watch`：**衝突完整保留**（定價頁 10 summaries ×2、FAQ 每日 1 篇、工具頁每日 3 篇），狀態維持 `conflicting_official_usage_claims`，不任選一版。
+
+**主 agent 直接處理的 2 筆**
+
+- `fun-ai-camp-2027-nthu-taica`：**修正一筆會影響費用的錯誤敘述**。上一批（10:45）寫「住宿與交通未由主辦單位說明（費用另計未核）」，但活動頁「報名資格與注意事項」段逐字「本活動不提供住宿。請自行安排第二階段實體營隊之住宿與交通，並請自備筆電」，且「活動期間將提供『桃園機場捷運 A7 體育大學站 ↔ 長庚大學』接駁車服務」、筆電建議十代 i7 以上。已改寫 `access_risk`、刪除該條 unknowns、新增來源並更新 scope。費用、報名費、退費與截止日不變。
+- `aocai-working-free-ai-courses-2026`：**這一筆本輪沒寫完**。11/16 班報名至 2026-11-11 12:30，本輪在 12:14 前重讀仍掛「我要報名」，但等到 12:30 之後再改 `deadline_at`（改指 11/26 工研院班 11/19）與 title／summary 的動作沒有完成，紀錄停在 09:12 的狀態。梯次交接由**接續的維護回合（12:04 開始那一輪）**完成並記在下一則；本則不改資料，只在此留下未完成的事實，避免下輪誤以為已經處理過。
+
+**新增 3 筆（皆由主 agent 逐字重讀官方頁後才納入）**
+
+- `kiro-free-fifty-credits-monthly`（機會、C 級）：kiro.dev 定價頁逐字「KIRO FREE $0 per month 50 credits Access to open weight models and Claude Sonnet 4.5」「KIRO PRO $20 per user / month 1,000 credits」「Add-on credits ($0.04/credit)」。資料庫原有 4 筆 Kiro 紀錄（學生、新創、首次升 Pro、Kiroween）卻**沒有最基本的免費層**，這是補洞。台灣 Unknown：定價頁與 FAQ 未列可用或帳單國家，且既有紀錄顯示付費帳單國家未含台灣。
+- `moe-ai-talents-ark-115-free-ai-literacy-downloads`（機會、S 級）：教育部 AI 人才方舟資料下載頁逐字列出「臺灣中小學教師與學生AI素養框架」「中小學使用生成式人工智慧注意事項2.1(教師、行政人員及家長版)」「…(學生版)」「115年中小學數位與AI教學指引」「教師數位與AI教學教案示例(國小)」等，頁面未列費用。已明確寫成「文件與教材、不是 API 額度或工具授權」；清單以 AJAX 載入，逐檔直連與授權條款列為缺口。
+- `google-career-certificates-taiwan-free-coursera-accounts`（**觀察線索**）：Google 台灣 2026-11-05 文章逐字「免費提供 Coursera 平台上的 Google 專業證書（ Google Career Certificates ）學習帳號…已有超過 30 所大專院校響應並陸續開通帳號」。**沒有公開申請表單**、未列名額／期程／是否含 AI 證書，因此不放進機會而是觀察線索；同時記錄 grow.google 學術夥伴頁逐字「Be based in the United States」，排除把它當成台灣院校的替代路徑。
+
+**未納入（保留否決理由）**
+
+- **Google.org AI Opportunity Fund 亞太 Phase 3**（子代理提案）：`aiopportunityfund.withgoogle.com/apac` 逐字列 Taiwan 於 14 個市場、AVPN 頁逐字「The Fund is not currently open for general applications. However, you can register your interest as a learner or a partner.」，且 AVPN 頁有台灣人工智慧學校執行長署名。但它在台灣的**交付就是既有的 `taiwan-ai-academy-citizen-ai-literacy`（免費 10 小時課程）**，基金層頁面本身不提供新的可領取利益 → 判為同一方案，不新增紀錄（依「同一活動的不同頁面不是新案例」）。
+- 子代理 C 另外否決 8 筆並附理由：Firebase Studio（已停新註冊）、Qwen Code（現行需付費帳號或自備 key）、Google AI for Education Accelerator（限美國）、Amp Free（是 PAYG 不是額度）、Experience AI（無繁中）、Claude 高教（僅機構銷售）、教育部教育資料素養工作坊（限推薦）、Infoxchange Grassroots AI Impact Lab（印度 NGO 專屬）。
+
+**品質改善（本輪唯一一項）：把兩個「腳本會默默破壞、現有測試看不到」的資料契約變成斷言**
+
+- 觀察到的問題：`json.dump()` 預設縮排是 1 空格，而 `data/*.json` 是 2 空格。本輪主 agent 的整合腳本漏了 `indent=2`，一次寫出 **90,542 insertions／90,542 deletions**，真正的內容變更（16 筆）完全被格式噪音蓋掉；同一時段另一個 session 的寫入也讓我在讀取時看到一次 **59,149 行的假 diff**（檔期中間狀態）。兩次都不是資料錯誤，但都會讓 review、`git blame` 與「這輪到底改了什麼」失效。
+- 預期結果：任何人（包含未來的維護輪）改壞格式時，`tests/validate.py` 立刻失敗並指出正確的存檔寫法，而不是讓整份檔案的 diff 膨脹到無法審閱。
+- 第二個契約（同一個問題的另一半）：`title`／`summary`／`cost_note`／`access_risk` 等欄位是**純文字**，卡片與詳情直接輸出、沒有 markdown 解析，寫進 `**粗體**` 只會在畫面上留下星號。全庫 3 筆命中（`supermemory-startup-research-scale` 的 summary、`nanonets-50-credits-no-card` 的 cost_note，以及**本輪自己新增的 Kiro 免費層 summary**），已一併清掉並加斷言。
+- 驗證方式：兩條斷言都做**反向實測**。序列化：把 `data/offers.json` 以 `indent=1` 重寫 → validate 以 AssertionError 失敗並印出新訊息；還原後回到只剩 README 計數的預期失敗。同一檢查也套用在 `data/policy-history.json`。markdown：把 `**強調**` 塞回 Kiro 那筆的 summary → validate 以 `markdown bold in plain-text field summary of kiro-free-fifty-credits-monthly` 失敗；還原後 0 命中。
+
+**attempted 1 筆（不刷新 `verified_at`）**
+
+- `turboscribe-free-daily-three-thirty-minute-files`：`/pricing`、首頁（含 `#faqs` 錨點所在頁）與 `/terms` 三處全部 Cloudflare 403（curl 兩種 header 組合與內建 reader 皆失敗），已達替代來源上限即停止。**403 不代表方案結束**，每日 3 份／每份 30 分鐘／免卡維持 2026-11-01 讀值；只記 `last_review_attempt_at` 與原因，`next_review_at` 提前到 11/18（不得因一次讀不到就順延一整個月）。
+
+**本輪遇到的流程問題（下輪要避開）**
+
+1. **同一工作區可能有兩個維護 session 同時在跑**：本輪 11:05 開始時，另一個 session 的 10:15–10:56 那一輪還沒 commit，11:06:59 才落盤、11:12 才 push（`8519c9a`／`ba51fcf`）。我因此在讀取時撞到半寫入的 `policy-history.json`（整檔 diff、內容不完整），並一度把「別人的未提交成果」當成本輪基準。規則：**開始前**先 `git rev-parse HEAD origin/main` 與 `git status`，並確認 `data/*.json` 的 mtime 至少 30 秒沒變再讀；**commit 前**再確認一次 remote 沒有新 commit。
+2. **`json.dump` 要帶 `indent=2`**（見品質改善）。任何批次腳本都應先做一次「讀進來、原樣寫回去、`git diff` 必須為空」的 round-trip 測試再開始改資料。
+3. **探索型子代理需要硬性時間盒**：A、B 兩組各約 11 分鐘交件且品質可用；C 組（新機會研究）跑到 30 分鐘、request 數卡在 58 不動，steer 後才交件（交件時間早於 kill 2 分 42 秒）。下次對「開放式搜尋」類任務先給「20 分鐘內必須先把已驗證的部分寫檔」的指令，而不是等它自己收斂。
+4. **活動頁的「注意事項」在摺線下**：fun-ai-camp 的住宿／接駁／筆電要求寫在報價與 FAQ 之後的「報名資格與注意事項」段，只讀價格與 FAQ 就會漏，而且會把「官方明寫不提供」誤寫成「官方未說明」。凡新增台灣營隊／課程紀錄，務必讀到頁尾注意事項。
+5. **子代理的 PROPOSED_FIELDS 不會自動帶 `verification_scope` 與 `sources`**：B 組只提欄位差異，主 agent 需自行由 `SCOPE_TEXT` 與 `EVIDENCE` 組回來源陣列，並清掉 md 分隔線 `---` 被正則吃進 scope 尾巴的殘留（本輪 6 筆）。合併腳本要對 scope 做一次尾端正規化。
+
+**主 agent 的獨立複核（不計入 R）**：子代理的證據抽驗 6 處，全部與官方頁一致——`code.or.jp` 的「2027年3月31日（水）まで」與対象学校種、FAQ 全文（大学での利用／イベント／ICT支援／一括申請）、申請表 `都道府県` 的「その他（在外教育施設・通信制等）」；Cohere 的「STATUS: Open」與 `brittawnya@cohere.com`；AssemblyAI 的「Credits land in your console within 48 hours」「discounts continue after your credits run out」；TiDB 的「You are building for markets such as the United States, Southeast Asia, Japan, or Europe.」；臺北酷AI 計畫書 PDF 406,182 bytes／16 頁與「115 年 11 月 13 日（星期五）前」；StepFun 的「remain free through 11:59:59 AM on November 17, 2026 (UTC+8)」（在 `pricing/details.md`，模型頁只有「Free (limited time)」）。另抽驗 47 個本輪用到的來源 URL：43 個 200、2 個 Cloudflare 403（Scholarcy，紀錄已註明改讀 reader）、1 個 401（Cohere 申請表需要 Google 登入，紀錄本來就寫「無法讀取表單本體」）、其餘 200，沒有新增死連結。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,049 筆、S/A/B/C/D＝139/187/127/275/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/prioritize.py`（S 138→139、C 274→275，其餘不變）、`git diff --check`。
+瀏覽器（本機 8961、headless Chromium）：資料載入 1,049 筆；首頁批次列與 scope 為本輪文字；關鍵字「均一」只回 1 筆、「Fun AI」只回 1 筆且詳情顯示新的住宿／接駁／筆電文字；截止日排序首筆仍是 AOCAI；載入更多 24→48；1280px 與 390px 的 `scrollWidth` 等於視窗寬（無水平溢出）、console error 0。
+
+**下輪優先（最多五項）**
+
+① `aocai-working-free-ai-courses-2026`（`next_review_at` **2026-11-18**、biweekly→weekly 視情況）：11/19 是 11/26 工研院班報名截止，截止後要再往後接 12/01 BizBoost 班（`https://www.niea-bizboost.tw/activity/6fa437fa-e304-4cf2-b67b-56c0d3b905ad`，仍「尚有票券」）。每次交接都要同步 `deadline_at`、`usable_duration` 與 summary 第一句。
+② `kiro-free-fifty-credits-monthly`（12/11，monthly）：查 kiro.dev 的註冊／帳單國家清單與免費層是否需綁卡；若找到國家清單就從 Unknown 定案。順便確認 `kiro-first-paid-subscription-bonus` 的「台灣未列付費國家」是否仍成立。
+③ `turboscribe-free-daily-three-thirty-minute-files`（11/18）：403 需要換路線——用 `browser` 實際渲染（Cloudflare 對 curl 與 reader 都擋）或找官方 help center 子網域；仍失敗就改 `on_new_signal`，不要再每週重讀同一個 403。
+④ `scholarcy-free-summarizer-quota-conflict-watch`（12/11）：三個額度數字仍未收斂，優先找官方 changelog／FAQ 的更新日；若仍衝突，維持 `conflicting_official_usage_claims` 並在卡片上寫清楚「三個數字都出自官方」。
+⑤ `google-career-certificates-taiwan-free-coursera-accounts`（觀察線索，12/11）：找台灣端參與院校名單或申請窗口（growonairtw、Google 台灣 newsroom、各大學研發處公告）；找到就升級為 opportunity 並補名額／期程，找不到就維持線索。
+
+**常態待辦（不佔上面五項）**：`deepinfra-two-minute-papers-twenty-credit`、`astamuse-agent-trial-oct31-index-only` 已連續多輪失敗且官方端全無，維持低頻；`tools/linkcheck.py` 本輪未全掃（併發下的 404 不能當證據，下輪要修 404 前先單筆重掃）；免費專區仍有約 170 筆「費用欄位 null、沒有 cost_note」；另有 7 筆的 summary／verification_scope 含反引號（` 這類 markdown 在卡片上同樣是字面輸出，但多為程式符號、可讀性影響小，要清就與本輪的 `**` 斷言一起擴充規則再清）；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）。
+
+**發布**：**本輪的執行程序在 12:30 前仍未 commit**（工作樹停在 12:19），因此資料、README 計數、`tests/validate.py` 的兩條新斷言與本則紀錄，是由**接續的維護回合（12:04 開始）**原樣 commit 後 push 的；本則的內容未由他人改寫，只有上面 AOCAI 那一行與這一段是接手者補寫的事實說明。commit 與 Pages 部署結果記在下一則。
