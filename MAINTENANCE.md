@@ -2756,7 +2756,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **主 agent 直接處理的 2 筆**
 
 - `fun-ai-camp-2027-nthu-taica`：**修正一筆會影響費用的錯誤敘述**。上一批（10:45）寫「住宿與交通未由主辦單位說明（費用另計未核）」，但活動頁「報名資格與注意事項」段逐字「本活動不提供住宿。請自行安排第二階段實體營隊之住宿與交通，並請自備筆電」，且「活動期間將提供『桃園機場捷運 A7 體育大學站 ↔ 長庚大學』接駁車服務」、筆電建議十代 i7 以上。已改寫 `access_risk`、刪除該條 unknowns、新增來源並更新 scope。費用、報名費、退費與截止日不變。
-- `aocai-working-free-ai-courses-2026`：**這一筆本輪沒寫完**。11/16 班報名至 2026-11-11 12:30，本輪在 12:14 前重讀仍掛「我要報名」，但等到 12:30 之後再改 `deadline_at`（改指 11/26 工研院班 11/19）與 title／summary 的動作沒有完成，紀錄停在 09:12 的狀態。梯次交接由**接續的維護回合（12:04 開始那一輪）**完成並記在下一則；本則不改資料，只在此留下未完成的事實，避免下輪誤以為已經處理過。
+- `aocai-working-free-ai-courses-2026`：**梯次交接在 12:31:45 完成**。11/16 班報名期間在 2026-11-11 12:30 到期（事件頁逐字「2026/09/24 15:00 ~ 2026/11/11 12:30」），因此把 `deadline_at` 由 12:30 改指最近仍開放的 **11/26 工研院台北班**（該頁逐字「報名截止日期：2026/11/19」「起迄日期/ 2026/11/26 ~ 2026/12/08」），title／summary／access_risk／`verification_scope` 同步改寫，`next_review_at` 排 11/18（早於 11/19 截止）。12/01 BizBoost 班仍「尚有票券」但未公布截止日，列入 unknowns；12/02、12/14 兩個更晚的梯次由接續的回合補上。（補記：這條在 12:30 前是未完成的，接續的回合一度在此寫下「本輪沒寫完」；實際情形是本輪在 12:31:45 自行完成並 commit，該錯誤敘述已於下一則紀錄中更正。）
 
 **新增 3 筆（皆由主 agent 逐字重讀官方頁後才納入）**
 
@@ -2803,4 +2803,56 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 **常態待辦（不佔上面五項）**：`deepinfra-two-minute-papers-twenty-credit`、`astamuse-agent-trial-oct31-index-only` 已連續多輪失敗且官方端全無，維持低頻；`tools/linkcheck.py` 本輪未全掃（併發下的 404 不能當證據，下輪要修 404 前先單筆重掃）；免費專區仍有約 170 筆「費用欄位 null、沒有 cost_note」；另有 7 筆的 summary／verification_scope 含反引號（` 這類 markdown 在卡片上同樣是字面輸出，但多為程式符號、可讀性影響小，要清就與本輪的 `**` 斷言一起擴充規則再清）；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移（先訂規則再改）。
 
-**發布**：**本輪的執行程序在 12:30 前仍未 commit**（工作樹停在 12:19），因此資料、README 計數、`tests/validate.py` 的兩條新斷言與本則紀錄，是由**接續的維護回合（12:04 開始）**原樣 commit 後 push 的；本則的內容未由他人改寫，只有上面 AOCAI 那一行與這一段是接手者補寫的事實說明。commit 與 Pages 部署結果記在下一則。
+**發布**：commit `d78a15f` 已推上 `origin/main`（`ba51fcf..d78a15f`）。這一批研究與資料由本輪（11:15 開始）完成；commit 的時間點是 12:32:17，比原本預期晚——12:04 開始的另一個維護回合與本輪同時在跑，兩邊都在等 12:30 之後重讀 AOCAI，本輪先完成並發布。（補記：本段原本被同時段的另一個回合寫成「本輪未 commit，由接續回合代為提交」，那是錯的；實際是本輪自行 commit 並 push。詳細的併發經過記在下一則。）
+
+## 2026-11-11 12:04–12:35（Asia/Taipei）｜R=12、A=1（1 機會）、U=1,037、attempted=0
+
+**基準與範圍**：本輪開始時工作樹有 1,049 筆（833 機會／50 政策／166 觀察線索），**另一個同時段的維護回合（11:15 開始、pid 40428）仍在跑**，它的 3 筆新增與 16 筆複核當時都還沒 commit。開場先確認：`git log` 的 HEAD 仍是 `ba51fcf`、`data/offers.json` 在 12:06:51 與 12:14:01 被整份重寫、`README` 與 `last_research_run` 一度互相矛盾（README 寫複核 19 筆／未核 1,027，批次欄位是 16／1,030）。因此本輪前 25 分鐘只做唯讀來源查核，所有寫入延後到對方停手，並用 `tools/queue.py` 避開它已複核的 16 個 ID。對方在 12:32:17 自行 commit `d78a15f` 並 push，本輪即在其上加值。**R=12、A=1、attempted=0、U=1,037**（結果 1,050 筆）。未登入、未申請、未付款、未操作 VPN。
+
+**會改變讀者決定的更正**
+
+- `aocai-working-free-ai-courses-2026`：上一輪已在 12:31:45 把 `deadline_at` 交接給 11/26 工研院班（11/19 截止）。本輪補的是**更晚的兩個仍開放梯次**：12/02 台北班（ievents 3585，逐字報名期間「2026/10/14 12:00 ~ 2026/11/27 12:30」）與 12/14 班（ievents 3588，「2026/10/19 07:00 ~ 2026/12/11 17:00」）。3588 的內文標【台中場】而地點欄寫臺北市大安區，兩說並存進 unknowns——讀者要報名臺中場卻看到臺北市地址，這種矛盾必須寫出來，不能替官方選一個。
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：**同一筆紀錄裡兩個互相矛盾的數字**。`summary` 早在 01:47 就寫「餘額仍是 NT$253,197（4.4%），自 11/9 17:26 起未再下降」，`cost_note` 卻還寫「餘額以每日數萬元速度下降」、`access_risk` 寫「經費僅剩 5.9%」。12:19 重讀官方頁仍是「剩餘補助經費 $253, 197(4.4%)」，已改寫兩處。順帶確認「購買日期自 115 年 4 月 2 日起至 115 年 10 月 31 日止」——**現在才新訂閱的人不符合補助**，這筆只對「已在期限內購買、尚未送件」的人有行動價值。
+- `mango-inference-community`：`cost_note` 原本是 `null`，卡片只印「未列金額」，讀者看到的是「有 US$10 免費額度」的標題配一個空的費用欄。實際是**按量計費的預付制**：餘額歸零即拒絕請求，而「$10 in free credits」只出現在行銷頁——`inference.mangoboost.io` 的 docs（credits-and-balance、billing-and-payments、models-and-pricing）以 free credit／$10／30%／discount／promo 搜尋 **0 命中**。已寫進 `cost_note`，並把累積的重複來源 URL 併成一筆。
+- `kiro-free-fifty-credits-monthly`：**上一批新增的紀錄把官方已明文的事記成未知**。FAQ 逐字「New users can start with the perpetual Kiro Free tier, which includes 50 credits per month」與「For individual subscriptions, usage limits reset at the start of each billing month. Unused credits do not roll over to the next month.」——重置與不結轉都不是未知。另外定價頁有一段原紀錄漏掉的升級試用「when you first upgrade to Pro, you'll get the rest of the month free, plus 500 trial credits to use within 12 months」，這是**要先付費訂閱**才拿得到的東西，已寫進 `cost_note` 與 `access_risk`，避免被讀成免費層加碼。
+- `read-ai-free-monthly-five-shared-meeting-reports`：額度不變（5 份／月、單場 1 小時、免卡），但條款 §4(b) 逐字「Read AI may use your User Content to train, develop, and improve its artificial intelligence and machine learning technologies」，免費與付費帳號都在授權範圍內（與 Privacy Policy 衝突時以 Privacy Policy 為準）。原紀錄只寫內容權利與參與者同意，漏掉最直接影響「要不要把會議交給它」的那一條。
+- `parseur-free-monthly-twenty-first-process-credits`：把 `taiwan_note` 從「保留地區限制」升級成可引用的範圍——條款只排除 EU／US 禁運國與 SDN／Entity List 等制裁名單，台灣未被列名；仍沒有台灣可用的正面承諾，`taiwan` 維持 Unknown。
+- `supabase-aws-activate-vc-three-hundred`／`context-free-monthly-thousand-shared`：各修一句與官方原文不符的敘述。Supabase 的 US$300 是「any Supabase product including database, auth, storage, and edge functions」，不是模型推論額度；Context.dev 的 Free 除了「2 concurrent」還有**全組織每分鐘 10 次請求**、10 monitors、1 active batch，後者才是實務上先撞到的牆。
+- `scrapegraph-free-credit-reset-conflict`：一次性 500 點與每月 500 點兩種官方說法**今天仍並存**（定價頁 one-time、docs pricing.md `/month`），維持衝突狀態不裁決。
+- `mozilla-foundation-human-scale-ai-incubator-2026`／`jules-free-fifteen-tasks-entrypoint-watch`：主張不變，只補查核路線。Mozilla 官方網域今天直取只回 60 字元空殼（連試三次），改讀 Wayback 對同一頁的快照才取得逐字「The deadline to apply is Friday, November 20, 2026 at 11:59 p.m. Pacific Standard Time (UTC-8).」，這件事寫進 `verification_scope` 與來源標籤，不假裝是直讀官方頁。Jules 的 changelog 逐字確認 11/11 之後轉唯讀、12/31 退場，`deadline_at` 與 `expires_at` 都正確，不動。
+
+**新增 1 筆機會**
+
+- `ibm-bob-free-trial-50-bobcoins-30-days`（A 級）：bob.ibm.com/trial 逐字「Get 50 Bobcoins for 30 days」「After your trial ends, upgrade to Pro, Pro+, or Ultra to continue using IBM Bob.」；定價頁把 Trial 列為「Free／30 days／50 Bobcoins」並註明 **「No payment required」**，付費級距 Pro US$20／月、Pro+ US$60、Ultra US$200。這是額度型試用，不是永久免費層；`taiwan` 記 **Unknown**——官方只寫價格「vary by country … subject to availability」，全站無國別清單，不能因為英文頁可讀就當成台灣可申請。`setup_cost_usd` 0（免付款方式）與 `recurring_cost_usd` 0（試用期無月費）分開寫，沒有把 Pro 的 US$20 混進來。資料庫原本只有 SkillsBuild 與 watsonx Lite 兩筆 IBM 紀錄，這是第一個 IBM 開發工具試用。
+
+**未納入（保留否決理由）**：子代理只找到 1 筆達收錄門檻。Learning Commons（CZI 相關開放教育基建）全站無費用、額度與申請資格，屬基礎設施不是可計量額度；IBM Bob Premium Package 首月免費（2026-12-31 前）須先有付費訂閱，已併入新紀錄的 `cost_note` 不另立；Scale×UMSL 免費 K-12 教師訓練只有二手新聞頁、對象為美國教師；NVIDIA NIM 的聚合站條目與既有 `nvidia-build-free` 疑同一方案。
+
+**品質改善（本輪唯一一項）：把「同時有兩個維護回合在跑」變成一行可查的狀態**
+
+- 觀察到的問題：今天 11:15 與 12:04 **各啟動了一個同題目的維護回合**，兩邊讀寫同一份 6MB `data/offers.json`。可觀察到的後果：那一輪自己的紀錄寫著「同一時段另一個 session 的寫入讓我看到一次 59,149 行的假 diff（檔期中間狀態）」；本輪在 12:06:51 與 12:14:01 兩次看到整份檔案被重寫，其中一次讀到的 README 與批次欄位互相矛盾（19／1,027 vs 16／1,030）；兩輪都排到 `aocai-working-free-ai-courses-2026`，把稀缺的查核時間花在同一個 12:30 截止的官方頁上；最糟的是，本輪在 12:29 寫進 `MAINTENANCE.md` 的兩處接手說明，被那一輪 12:32 的 `git add -A` 一起 commit 進 `d78a15f`，於是那則紀錄一度宣稱「本輪未 commit，由接續回合代為提交」——**內容是錯的**，已在前一則以補記更正。這些都不會被現有測試抓到：`tests/validate.py` 讀的是「已經寫完的檔案」。
+- 預期結果：開場一行 `python3 tools/round_lock.py status` 就知道有沒有人在寫；搶不到鎖就只讀、換 ID、把寫入延後，不必等 `git diff` 突然膨脹幾萬行、或看到別人的 commit 裡有自己的句子才發現。
+- 做法：`tools/round_lock.py`——repo 根目錄 `.round-lock.json`（已列入 `.gitignore`）記 pid／主機／開始時間／備註；判定用 pid 是否還活著，不靠心跳或超時；程序被砍掉留下的鎖，下次 `acquire` 會接管並說明；只有持有者能 `release`。它沒有強制力（不會阻止寫檔），但把衝突從「事後從 diff 猜」變成「事前一行輸出」。
+- 驗證方式：`python3 tools/round_lock.py --self-test` 覆蓋四條規則（活的持有者不得被接管、不同主機的同號 pid 只能接管並講明、只有持有者能 release、pid 已死要能接管）→ `PASS: round lock ...`；另在真的 repo 上實測 `status` → `acquire` → 第二次 `acquire` 被拒 → `release`，輸出 `no round lock: nobody claimed this repo`。
+
+**本輪遇到的流程問題（下輪要避開）**
+
+1. **同一個 repo 可能有兩個回合同時在跑**：本輪前 25 分鐘完全無法寫檔，最後是等對方 commit 後才動。下輪開場先 `python3 tools/round_lock.py status`，再跑 `tools/queue.py`；對方還在跑就只讀，不要中途插隊——本輪的教訓是插隊的句子會被對方的 `git add -A` 一起 commit。
+2. **子代理讀得到、主 agent 讀不到**：Mozilla 官方頁對子代理回完整 HTML、對主 agent 的 curl 只回 60 字元空殼。抽驗失敗先換路線（Wayback／不同 UA／子頁），並在 `verification_scope` 寫清楚讀的是快照還是直讀。
+3. **「複核了但沒更新來源時間」會被擋**：第一次套用時 `supabase`／`context`／`jules` 被 `no per-source accessed time for this batch record` 擋下——只改 summary 不算複核，至少要有一個來源的 `accessed_at` 指到本批次。
+4. **同一 URL 當天只能有一筆來源**：`scrapegraph` 與 `mango` 都累積了重複 URL，直接更新會變成同日兩筆而被擋；寫入前先按 URL 併。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,050 筆，S/A/B/C/D＝139/188/127/275/105）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/prioritize.py`（S 139／A 187→188，其餘不變）、`git diff --check`、`python3 tools/round_lock.py --self-test`。
+
+瀏覽器（本機 8977、headless Chromium，先在資料副本跑完整流程、再到真實 repo 重跑）：資料 1,050 筆；捷徑「本輪更新」13 筆、「免費方案」686 筆、「台灣條件適用」154 筆、「開發者」595 筆；關鍵字「IBM Bob」回新紀錄（A 級）、「服務業AI免費課程」卡的截止膠囊顯示**「申請截止 2026-11-19 · 剩 8 天」**、「新竹市」卡顯示 4.4% 與購買期限已過、「Mango」展開後費用說明為新的 `cost_note`；「截止日由近到遠」排序中 AOCAI 落在 11/17 之後、11/21 Mozilla 之前；載入更多 24→48；390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（最多五項）**
+
+① `aocai-working-free-ai-courses-2026`（`next_review_at` 11/18、`deadline_at` 11/19）：11/19 後把 `deadline_at` 接給 12/02 班（報名至 11/27 12:30）或 12/14 班（12/11 17:00）；同時確認 11/16 班是否真的關閉、11/26 班是否額滿、3588 的地點矛盾是否被官方修正。來源 `https://ievents.iii.org.tw/EventS.aspx?t=0&id=3544`、`...id=3585`、`...id=3588`、`https://college.itri.org.tw/Lesson/LessonData/7571A149-3346-4FAE-B5AF-DCADB2DBDAC3`。
+② `mango-inference-community`（next 11/12 09:00）：11/12 起價格表是否回原價（platform 與 pricing 兩頁），以及 US$10 贈額是否須綁付款方式——docs 至今 0 命中，只能看註冊後的 console（本任務不登入，故列為長期缺口）。
+③ `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（next 11/14）：11/30 前是否出現「經費用罄／停止受理」公告；餘額已連續多次讀值停在 NT$253,197，若 11/30 前仍不動，把 `next_review_at` 拉到月底並在 `unknowns` 註明讀值停滯。來源 `https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
+④ `moe-ai-talents-ark-115-free-ai-literacy-downloads`（12/11）：AJAX 逐檔清單與授權條款仍未取得；要確認 PDF 直連是否需要登入、可否改作與商用。
+⑤ `ibm-bob-free-trial-50-bobcoins-30-days`（12/11）：確認台灣帳號能否完成試用表單（IBM 帳號條款與 store 國別）與 50 Bobcoins 的扣點率；另查 Premium Package 首月免費（2026-12-31 前）是否值得獨立成案。
+
+**常態待辦（不佔上面五項）**：`tools/linkcheck.py` 本輪未全掃（併發下的 404 不能當證據；上次全掃的 7 個 dead 都是已註記的失效頁）；`verification_scope` 缺漏與 `conditional`＋`FREE`＋`HIGH BUT LIMITED` 的語意漂移仍未處理（先訂規則再改）；免費專區約 170 筆「費用欄位 null、沒有 cost_note」只印「未列金額」，本輪只補了 Mango 一筆。
+
+**發布**：__PUBLISH__
