@@ -2906,3 +2906,53 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **常態待辦（不佔上面五項）**：`ntpc-gemini-education-city-pro-accounts-115`（next 12/11：各校剩餘名額、私立學校 115.03.09 函文、116 年度是否續辦）；`taiwan-industry-talent-investment-ai-courses-2026` 的 wda 附件主機仍 404，要找仍可開啟的官方鏡像或改用 s=19409 的新聞頁版本；79 筆紀錄的 `verified_at` 比所有來源查閱時間新（多為 11/07–11/08 批次，來源缺 `accessed_at`），下輪起排到時一併補；`tools/linkcheck.py` 的 9 個 dead 仍屬「已註記的失效頁」，暫不列維修。
 
 **發布**：commit `9fd867a` 已推上 `origin/main`（`0acbc8a..9fd867a`，fast-forward，推送前 `git fetch` 確認遠端無其他更新）。GitHub Pages（legacy build、source=main）於 13:31:23（台北）重建完成：`data/offers.json` 的 `last-modified` 與 etag 大小（6,086,322 bytes）與該 commit 的檔案逐位元組相符。公開站 <https://richardhan.github.io/ai-access-intelligence/> 實測（`?v=9fd867a-fresh` 破快取）：全庫 1,051 筆、資料更新 2026/11/11 13:24 Asia/Taipei；捷徑「本輪更新」19、「免費方案」687、「台灣條件適用」155、「開發者」595；關鍵字「新北市 Gemini」回新紀錄（S 級），詳情顯示「截止與期限 方案或免費期結束 2027-03-31（來源未列時刻）」與「核實時間 2026/11/11 13:24」；console error 0。註記：對應 workflow run 的 `head_sha` 仍顯示 `0acbc8a`（legacy 建置在觸發當下讀取 branch HEAD，run 標籤落後一個 commit），因此發布確認以「伺服器回傳的檔案內容與 commit 相同」為準，不以 run 標籤為準。
+
+## 2026-11-14 06:10–06:50（Asia/Taipei）｜R=20、A=1（1 機會）、U=1,031、attempted=1
+
+**基準**：開場 `HEAD=9dd16cc`、工作樹乾淨、`main == origin/main`。`round_lock.py status` 顯示一筆 06:07:34 的鎖，pid 18010 已不在（前一個回合被砍掉），`acquire` 接管後才開工。資料 1,051 筆（835 機會／50 政策／166 觀察線索）；嚴格逾期 14 筆、7 天內到期 8 筆、retry 1 筆、最久未核仍是 2026-11-01 那批（排程都在 12/01，未到期）。
+
+先跑 `tests/validate.py` 就直接失敗：`amazon-ara-multilingual-contextual-ai-fall-2026` 的 `deadline_at`（11/12 15:59）已過，狀態仍是 `application_based`。順手掃全庫，同樣情況共 3 筆（另有 `moda-adi-forum-2026-free` 11/12、`taipei-kuai-ai-school-grant-batch2-115` 11/13）——前兩天沒有回合，網站因此連續兩天把已截止的活動顯示成可報名。
+
+**範圍與理由**：①逾期與期限剛過的 5 筆（Amazon ARA、MODA ADI FORUM、台北酷 AI、Tencent Hy4、AutoClaw）；②7 日內到期與限時窗 7 筆（UGREEN hackathon、StepFun、桃園課程、勞動部 166783、Rime、AOCAI、新北 UKO）；③輪替與條款追蹤 8 筆（Runable、Felo、Mango、Qoder、Grammarly、DigitalOcean×Secret、新竹市補助、CPC）＋嘗試失敗 1 筆（Adobe）。三個子代理平行（9／10／新機會），主 agent 自行直核 Amazon ARA、ElevenAI、CPC 兄弟課程與 Cloudflare／Reducto 的重複性。
+
+**實質更正**
+
+- `amazon-ara-...`：**Fall 2026 已關閉**。ARA 索引頁由 11/11 讀到的「Fall 2026: Open Now」「extended to November 11」改為「Fall 2026: Closed　The submission period closed on November 11.」；徵案頁時間軸仍寫到 11/11 23:59 PT，且 `article:modified_time` 是截止後的 2026-11-12 15:32。狀態改 `applications_closed`、停止每日追蹤。
+- `moda-adi-forum-2026-free`：**活動已辦畢**。報名系統整個回應只剩「報名已截止，截止時間為 2026/11/12 17:00。」（53 bytes，六個場次表單與送出按鈕消失）；官方 11/12 會後成果稿寫「今（12）日於台北世貿一館舉辦」。改 `closed`、`on_new_signal`。
+- `taipei-kuai-...`：第 2 批期限 11/13 已過，轉知頁與修訂版計畫書 PDF（406,182 bytes 未變）仍寫 11/13、「延期／延長／順延／額滿」0 命中，教育局列表仍查無此案。沒有官方「已截止」字樣，因此判 `expired`（不是 closed_confirmed），表單 `forms.gle` 未開啟列缺口。
+- `hsinchu-...`：剩餘補助經費不再停滯——11/11 的 NT$253,197（4.4%）降到 11/14 的 **NT$192,051（3.3%）**，三日核銷 NT$61,146；受理仍至 11/30 或經費用罄，無停止受理公告。`next_review_at` 由 11/14 拉近到 11/18。
+- `tw-labor-...-tnnu-03`：唯一實質變化是**報名人數 28 → 39，已超過名額 34**（超額報名、靠 11/18 筆試與口試篩選）。原本「剩約 6 席」的敘述已失效，summary／access_risk 改寫。
+- `aocai-...`：11/16 班在官方總覽由未額滿轉為「**已額滿**」；11/27 臺中班同樣額滿。ievents 3588 的「活動地點：臺北市大安區」與【台中場】矛盾已消失（場次表改「臺中市」、上課地點台中文心會議室）。
+- `autoclaw-...`：本期 M11W2 不延長（11/15 23:59 到期），但官方 11/13 已公告下一期 **M11W3（11/16–11/22，同為 100M Tokens／10,000 credits，每帳戶一次）**，週福利續辦；下輪應以 M11W3 為現行期。
+- `mango-inference-community`：11/11 過了 3 天，platform 頁仍印「30% off all models through Nov 11. Prices below already include the discount.」與折扣價（DeepSeek V4.1 Flash $0.20→$0.14），未撤文案也未回原價；pricing 頁仍只回「Loading pricing…」外殼。保留為矛盾，不改費用欄位。
+- `cpc-moeai-elite-free-ai-course-115`：原紀錄「僅 2027/01/14 梯可報名」對它自己那門課仍成立，但同計畫另有兄弟課程「AI 製造業五大職能數據分析實戰」桃園班 **11/23–12/28（30 小時、10 人開班）**，頁面寫「點選上方日期即可報名」。已把兄弟課程寫進 summary，並列報名狀態為缺口（沒有取得開放證據）。
+- `adobe-startups-...`：換三條路線後官方部落格可讀且內容未變，但計畫頁 `business.adobe.com/solutions/startups.html` 仍 HTTP 逾時、Firefly 產品頁 403。依規則只記 `last_review_attempt_at`／reason，**不刷新 `verified_at`**，下次複核排在 11/18（14 天內）。
+- 其餘 10 筆（taoyuan、ntpc-uko、tencent、ugreen、stepfun、runable、felo、qoder、grammarly、digitalocean、rime）主張不變，只更新查閱時間、來源 accessed_at 與少數邊界條件（Qoder 的 Qoduck 頁仍未標 [Ended]、模型選單需登入不可觀測；Tencent 中英文稿 dateModified 仍 2026-11-06、額度仍無數字；Runable 定價頁 SSR payload 有 `limit:15000, interval:"month"` 但同頁 `freePlan.credits.month` 是 null）。
+
+**新增 1 筆機會**
+
+- `elevenlabs-elevenai-free-three-months-mac`（申請審核制、台灣 Unknown）：ElevenLabs 2026 年 11 月的新產品 ElevenAI（macOS 桌面 App：90+ 語言聽寫＋會議紀錄，逐字稿可經 MCP 接到既有 AI 工具）。官方產品頁的 meta／og／twitter description 共 6 處逐字「**Free for 3 months on Mac.**」，但頁面本文只寫「Sign up for early access」；條款要求 18 歲以上、**僅供商業／專業用途、須以組織（Organization）網域信箱註冊**，出口管制只排除受美國制裁國家（未列台灣）。免費期起算日、額度、是否綁卡與期後計價全未公布，台灣是否在 early access 隊列未核。
+
+**未納入（保留否決理由）**：子代理比對 aicreditradar／aifree.dev／freetokens 等目錄後，只提出 4 筆，其中 3 筆經主 agent 直核後**判定為已收錄**：Cloudflare for Startups 的 Tier 3 US$10k 與 Workers AI 自 12/1 起不納入 credits 已寫在 `cloudflare-startup-tier3`（11/10 版）；Reducto 的 15,000 credits／US$150 與「已無美國限定」也已寫在 `reducto-standard-initial-credit-us-only`（11/09 版）；CPC 則只更新兄弟課程。其餘否決：數產署 AI 領航智慧服務代理人（10/21 已截止、限本國公司）、衛福部 AI 排班案（限部屬醫療機構）、AWS Kiro 學生方案擴大到 132 校（亞太名單無台灣學校）、Devin SWE-2 免費（限付費訂閱）、臺中勞工大學 AI 課程（10/2026 前已開課、報名關閉、官網 JS 載不出現行梯次）、ChatGPT Go（付費）、Claude for higher education（無免費額度、合作校無台灣）、高屏澎東分署第 02 期（10/26 已截止）、Neon Agent Plan（須先訂付費方案）、臺北酷課雲酷 AI（校園平台、無可領額度）、US$2–10 級微型促銷（金額過低或需綁卡）。
+
+**品質改善（本輪唯一一項）：`tests/validate.py` 一次列出全部「期限已過但狀態仍可行動」**
+
+- 觀察到的問題：這條規則原本寫在逐筆迴圈裡用 `assert` 中斷，一次只報一筆。今天全庫同時有 3 筆違規，第一輪只看到 `amazon-ara`，改完重跑才看到 `moda`，再跑才看到 `taipei-kuai`——每多一筆就多一次「改資料→重跑」，而且「修完第一筆就綠燈」會讓人誤以為全庫只剩那一筆。
+- 預期結果：一次看到全部違規 ID、欄位與狀態，判斷要關閉哪幾筆不必來回三次。
+- 做法：把判斷移到迴圈前，用 `_passed_deadlines` 收集全部違規後一次 `raise`，判斷邏輯與 `close_points()` 相同，沒有改任何門檻；逐筆迴圈裡的原規則刪除，只留一行指向新位置。
+- 驗證：改完後直接跑 `python3 tests/validate.py`，單一錯誤訊息同時列出 3 筆（amazon 11/12 15:59、moda 11/12、taipei-kuai 11/13）與各自的 status；修完三筆後 PASS（1,052 筆、S/A/B/C/D＝138/188/127/275/108）。
+- 附帶修正（不是第二項改善，是本輪資料變更暴露的測試耦合）：`tests/filters.cjs` 原本拿 `amazon-ara-...` 當「未來截止會顯示膠囊」的範例，該筆今天關閉後 `closeBadge` 依規則回 null，測試就紅了。已改成合成紀錄驗證文字與緊急色，再用動態檢查（任何 `closeBadge` 非 null 的可行動紀錄都必須在卡片正面有膠囊），不再綁單筆隨時會關閉的真實資料。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,052 筆）、`node --check app.js`、`node tests/filters.cjs`（全綠；台灣條件適用 153、免費 685、開發者 594、本輪更新 21）、`python3 tools/prioritize.py`、`python3 tools/queue.py --self-test`、`git diff --check`。資料層稽核：與 HEAD 相比新增 1 筆、刪除 0 筆、變更 21 筆（20 筆複核＋1 筆 attempted），無 ID 變更。
+
+瀏覽器（本機 8971、headless Chromium）：全庫 1,052 筆、資料更新 2026/11/14 06:33；首頁「20 本輪局部複核／1 新增機會／1031 尚未複核」；捷徑「本輪更新」21、「台灣條件適用」153、「免費方案」685、「開發者」594；關鍵字「ElevenAI」回新紀錄（詳情列正確顯示 US$0 設定費、每月費用未列、台灣資格待核實、核實時間 06:33 與 5 項缺口），「ADI FORUM」回已關閉卡（單一歷史標籤「已關閉・原分類」、D 級）；「Amazon Research Awards」詳情顯示「新申請已截止」、截止 11/12 15:59、核實範圍與 12 項缺口；「截止日由近到遠」前三為 AutoClaw 11/15 23:59（剩 1 天）、Tencent 11/15（剩 1 天）、UGREEN 11/16 15:45（剩 2 天）；載入更多 24→48；390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `autoclaw-...` 與 `tencent-hy4-...`（都在 11/15 到期）：11/16 確認兩者到期後狀態；AutoClaw 應改以 M11W3（11/16–11/22）為現行期，Tencent 確認中國站體驗版 500 積分是否同步轉付費。來源 `https://autoclaw.z.ai/blog/news/M11W3/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+② `ugreen-ai-nas-hackathon-2026`（台北 11/16 15:45 截止）與 `tw-labor-...-tnnu-03`（11/16 16:00 截止）：截止前確認是否提前關閉；UGREEN 確認 Updates 是否出現 submissions closed，勞動部確認報名人數是否再增與是否提前關閉。來源 `https://ugreenhackathon.devpost.com/updates`、`https://its.taiwanjobs.gov.tw/Course/Detail?ID=166783`。
+③ `stepfun-...`（11/17 11:59:59）與 `taoyuan-...`（11/17 最後一場）：截止當日上午確認；StepFun 確認 preview 是否退役、免費額度是否照扣，桃園確認 11/17 Teams 連結是否上架與截止日 11/17／11/20 矛盾是否修正。
+④ `mango-inference-community`（11/14 已逾期 3 天仍掛折扣）與 `qoder-free-mechanisms`（每週）：Mango 確認是否回原價、有沒有延期公告或 pricing 頁恢復；Qoder 確認 Qoduck 是否自選單消失（需登入）與 Qwen3.8-Flash 兩頁矛盾是否更新。
+⑤ `adobe-startups-...`（next 11/18、two attempts failed）：改找 Wayback 完整快照、Adobe 官方 helpx 頁或改用瀏覽器直開計畫頁；`hsinchu-...`（next 11/18）確認剩餘經費是否用罄、有無停止受理公告。
+
+**常態待辦（不佔上面五項）**：`ntpc-uko` 的 PL-900 第二梯（11/21–22）報名入口與名額仍未找到；`cpc` 桃園 11/23 班報名狀態；`aocai` 11/26 與 12/02／12/14 班名額；`taipei-kuai` 是否開第 3 批；ElevenAI 台灣 early access 是否開放（官方無國別清單）；`mango` 的「Nov 11」年份；`runable` 定價頁 payload 與 `freePlan.credits.month` 的矛盾。

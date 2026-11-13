@@ -279,12 +279,21 @@ assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadli
 assert.strictEqual(ctx.closeBadge({...syntheticClose,status:'applications_closed'},CLOSE_NOW),null,'closed records must not claim remaining days');
 assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadline_at:'2027-06-30'},CLOSE_NOW),null,'dates beyond 60 days stay in the details row only');
 assert.strictEqual(ctx.closeBadge({...syntheticClose,expires_at:undefined,deadline_at:'2026-11-10'},CLOSE_NOW).days,0);
-const araCard=ctx.createCard(d.offers.find(o=>o.id==='amazon-ara-multilingual-contextual-ai-fall-2026'));
-const araFoot=araCard.children.find(n=>n.className==='card-foot');
-const araPill=araFoot.children.find(n=>n.className&&n.className.includes('deadline-pill'));
-assert(araPill,'card face must show the upcoming deadline');
-assert.strictEqual(araPill.textContent,'申請截止 2026/11/12 15:59 · 剩 2 天');
-assert(araPill.className.includes('deadline-soon'),'a deadline within a week needs the urgent tone');
+// 2026-11-14：這裡原本拿 amazon-ara-... 當範例，但該筆當天已標 applications_closed，closeBadge
+// 依規則不再顯示倒數，測試因此失敗。要測的是「未來截止會在卡片正面顯示膠囊」，不該綁在一筆
+// 隨時可能關閉的真實紀錄上（每次有紀錄到期就會再紅一次）。改用合成紀錄驗證文字與緊急色，
+// 再用真實資料做動態檢查：任何仍可行動、且最近截止點在 60 天內的紀錄都必須有膠囊。
+const soonCard=ctx.createCard({id:'synthetic-soon',title:'Synthetic',summary:'s',status:'active',record_type:'opportunity',verification:'Official',taiwan:'Yes',categories:['FREE'],deadline_at:'2026-11-12T15:59:00+08:00'});
+const soonPill=soonCard.children.find(n=>n.className==='card-foot').children.find(n=>n.className&&n.className.includes('deadline-pill'));
+assert(soonPill,'card face must show the upcoming deadline');
+assert.strictEqual(soonPill.textContent,'申請截止 2026/11/12 15:59 · 剩 2 天');
+assert(soonPill.className.includes('deadline-soon'),'a deadline within a week needs the urgent tone');
+const openWithSoon=d.offers.filter(o=>ctx.closeBadge(o,CLOSE_NOW));
+assert(openWithSoon.length>0,'expected at least one open record with an upcoming close point');
+for (const openRecord of openWithSoon.slice(0,5)) {
+  const openPill=ctx.createCard(openRecord).children.find(n=>n.className==='card-foot').children.find(n=>n.className&&n.className.includes('deadline-pill'));
+  assert(openPill,`an open record with a close point must render a deadline pill: ${openRecord.id}`);
+}
 const plainFoot=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free')).children.find(n=>n.className==='card-foot');
 assert(!plainFoot.children.some(n=>n.className&&n.className.includes('deadline-pill')),'cards without a machine-readable deadline must not show one');
 const closeOrdered=[...d.offers].sort(ctx.byDeadline);

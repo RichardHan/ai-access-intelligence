@@ -197,6 +197,21 @@ def close_points(record):
  if isinstance(expiry, dict) and isinstance(expiry.get('date'), str):
   points.append(('expiry.date', expiry['date'], close_stamp(expiry['date'])))
  return [point for point in points if point[2] is not None]
+# 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
+# 2026-11-09 就是這樣：報名表已回「活動已結束」、活動頁改列 11/08 23:59，但紀錄沒有
+# deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
+# 只要期限寫進機器可讀欄位，這裡就擋得住；散文日期仍要靠人工，README 維護章節寫明要回填。
+# 2026-11-14：這條規則原本寫在下面的逐筆迴圈裡，用 assert 逐筆中斷，一次只報一筆。當天全庫
+# 同時有 3 筆期限已過卻仍可行動（amazon-ara 11/12 15:59、moda-adi-forum 11/12、taipei-kuai
+# 11/13），第一輪只看到第一筆，修完重跑才看到第二筆、第三筆——每多一筆就多一次「改資料→重跑」，
+# 而且「修完第一筆就綠燈」會讓人誤以為全庫只剩那一筆。改成開始時一次收集全部違規並列出 ID；
+# 判斷邏輯與 close_points 相同，只是不再逐筆中斷。
+_passed_deadlines = [(o['id'], field, raw, o.get('status'))
+                     for o in d['offers'] if o.get('status') not in dead
+                     for field, raw, closes in close_points(o) if closes < NOW]
+if _passed_deadlines:
+ raise AssertionError('deadline/expiry already passed but the status is still actionable — mark each closed or record the new end date: '
+                      + '; '.join(f'{rid} {field}={raw} status={status!r}' for rid, field, raw, status in _passed_deadlines))
 # 標題上的期限也要有機器可讀版本。`createCard()` 的截止膠囊、「截止與期限」列與「截止日由近到遠」
 # 排序全部只讀 deadline_at／expires_at／expiry.date；標題卻是讀者第一眼看到的字。2026-11-11 統計
 # 全庫有 1 筆可行動紀錄在標題寫了帶日期的截止語句、三個欄位卻全空：cyleague-cyber-navi-trial
@@ -241,13 +256,8 @@ for o in d['offers']:
   for field,raw,closes in close_points(o):
    if closes>NOW and scheduled and scheduled>closes:
     raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {raw} in {o["id"]}: schedule the review while the offer is still actionable')
- # 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
- # 2026-11-09 就是這樣：報名表已回「活動已結束」、活動頁改列 11/08 23:59，但紀錄沒有
- # deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
- # 只要期限寫進機器可讀欄位，這裡就擋得住；散文日期仍要靠人工，README 維護章節寫明要回填。
- for field,raw,closes in close_points(o):
-  if o.get('status') not in dead and closes<NOW:
-   raise AssertionError(f'{field} {raw} has passed but status is {o.get("status")!r} in {o["id"]}: mark the offer closed or record the new end date')
+ # 期限已過而狀態仍非已截止的檢查已移到迴圈前，一次收集全部違規（見上方 _passed_deadlines）；
+ # 逐筆中斷會讓同時存在的多筆違規一次只看到一筆。
  # 推定時刻不得寫進機器可讀欄位。卡片對帶時刻的值一律渲染成「（台北時間）」加分鐘，
  # 讀者看到的是官方給的截止時鐘；台北青年 AI 補助原始條文只寫「最遲應於11月10日前提出申請」
  # 「以送達本局之日為準」，23:59 是當日邊界推定，寫成 timestamp 後卡片就變成
