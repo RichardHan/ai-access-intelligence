@@ -2956,3 +2956,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ⑤ `adobe-startups-...`（next 11/18、two attempts failed）：改找 Wayback 完整快照、Adobe 官方 helpx 頁或改用瀏覽器直開計畫頁；`hsinchu-...`（next 11/18）確認剩餘經費是否用罄、有無停止受理公告。
 
 **常態待辦（不佔上面五項）**：`ntpc-uko` 的 PL-900 第二梯（11/21–22）報名入口與名額仍未找到；`cpc` 桃園 11/23 班報名狀態；`aocai` 11/26 與 12/02／12/14 班名額；`taipei-kuai` 是否開第 3 批；ElevenAI 台灣 early access 是否開放（官方無國別清單）；`mango` 的「Nov 11」年份；`runable` 定價頁 payload 與 `freePlan.credits.month` 的矛盾。
+
+**來源掃描（full linkcheck，06:43 起跑、119 秒）**：79 筆 blocked（400／401／403／405／429／5xx，多為反爬或擋 HEAD）；dead 影響 10 筆紀錄（astamuse、baseten、deepinfra、nscale、perplexity×2、qoder-community-1024、salad、taiwan-industry-talent-investment、voyage），多是 web.archive 快照 URLError 與前幾輪已註記的失效頁（voyage 定價、nscale 定價、qoder community-boost、salad、astamuse、deepinfra papers、wda 附件）。**本輪新增或更新的來源都不在這份清單內**，因此不新增維修項；`taiwan-industry-talent-investment-ai-courses-2026` 的 wda 附件仍 404，維持寫在 unknowns。
+
+**發布**：commit `cc2c918` 已推上 `origin/main`（`9dd16cc..cc2c918`，fast-forward）。推送時 gh 的 active 帳號是 `richard-han_tmemu`（對本 repo 無權限，第一次 push 回 403），改用同機已登入、且是 repo owner 的 `RichardHan` 推送，推送後已把 active 帳號切回原本的 `richard-han_tmemu`，沒有改動 remote URL 或任何憑證設定。GitHub Pages（legacy build、source=main）重建後，公開 `data/offers.json` 已回 1,052 筆、`latest_research_at` 2026-11-14T06:33:59+08:00、`reviewed_ids` 20 筆／`new_ids` 1 筆／`attempted_failed_ids` 1 筆；公開站（`?v=cc2c918-check` 破快取）實測全庫 1,052 筆、首頁 20 本輪局部複核／1 新增／1031 尚未複核，關鍵字「ElevenAI」回新紀錄（C 級），「ADI FORUM」回已關閉卡（單一歷史標籤），console error 0。
