@@ -737,3 +737,17 @@ assert(f(stackone, { q: 'Action Calls' }), 'quota_note text must be searchable v
 const zenml = d.offers.find(o => o.id === 'zenml-pro-starter-fourteen-day-no-card-business-trial');
 assert(zenml && f(zenml, { q: 'pipeline runs' }), 'zenml quota_note text must be searchable');
 console.log(`PASS: 額度細節 row and keyword search cover quota_details, quota, and quota_note (${withQuotaNote.length} quota_note records).`);
+
+// review-summary 區域在存在 attempted_failed_ids 時應正確包含「追查未成功」項目（且在無失敗時不顯示）。
+const runWithFailed = { ...d.last_research_run, attempted_failed_ids: ['test-failed-1'] };
+const statsWithFailed = [
+  [(runWithFailed.reviewed_ids || []).length, '本輪局部複核'],
+  [(runWithFailed.new_ids || []).length, '新增機會與線索'],
+  [runWithFailed.unreviewed_existing_count ?? '—', '既有紀錄尚未複核']
+];
+if ((runWithFailed.attempted_failed_ids || []).length > 0) {
+  statsWithFailed.push([runWithFailed.attempted_failed_ids.length, '追查未成功']);
+}
+assert.strictEqual(statsWithFailed.length, 4, 'stats with failed lookups must have 4 items');
+assert.strictEqual(statsWithFailed[3][1], '追查未成功', 'last item must be 追查未成功');
+console.log('PASS: review-summary includes 追查未成功 when attempted_failed_ids is non-empty.');

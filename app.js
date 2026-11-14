@@ -722,6 +722,9 @@ function renderOverview() {
     [(run.new_ids || []).length, '新增機會與線索'],
     [run.unreviewed_existing_count ?? '—', '既有紀錄尚未複核']
   ];
+  if ((run.attempted_failed_ids || []).length > 0) {
+    stats.push([run.attempted_failed_ids.length, '追查未成功']);
+  }
   if ($('#review-summary')) $('#review-summary').replaceChildren(...stats.map(([value, label]) => {
     const stat = text('div', '', 'review-stat');
     stat.append(text('strong', value), text('span', label));

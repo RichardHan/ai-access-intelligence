@@ -3271,3 +3271,43 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 線上課堂現況。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
 ④ `aocai-working-free-ai-courses-2026` 與 `rime-stt-nov19-free-window`（皆於 11/19 到期）：查核數位產業署 AI 課程報名額度與 Rime STT 免費視窗現況。來源 `https://academy.digitalcontent.org.tw/`、`https://rime.ai/pricing`。
 ⑤ `runable-free-daily-fifteen-hundred-monthly-cap` 與 `felo-standard-free-new-user-daily-two-hundred-campaign`（`tools/queue.py` 輪替優先項目，next 11/15 09:00）：確認 Runable 每日 1,500 額度與 Felo 新戶每日 200 次活動最新狀態。來源 `https://runable.com/`、`https://felo.ai/`。
+
+---
+
+## 2026-11-15 02:05–02:15 Asia/Taipei 維護紀錄
+
+**本輪基準與成果總覽**：
+- 既有紀錄數 N = 1,077，成功複核既有紀錄 R = 20（均依 ID 去重），新增機會 A = 3（機會 3、政策 0、觀察線索 0），未完成複核既有紀錄 U = 1,057（U = N - R = 1,077 - 20），整筆追查失敗 attempted = 0。全庫總紀錄數增至 1,080 筆（864 項機會、50 項政策、166 筆觀察線索）。
+- 台灣條件適用（開放中）由 173 筆增至 176 筆（含 S 級機會 162 筆）；免費專區由 706 筆增至 709 筆。
+
+**複核結果與重大變動**：
+1. taipei-youth-ai-subscription-subsidy-2026（臺北青年AI補助）：11/10 截止日已屆滿，經檢核青年局官方公告與補助專區，確認無延期或第二波，年度補助正式截止受理。狀態改為 expired。
+2. jules-free-fifteen-tasks-entrypoint-watch（Google Jules）：官方 Changelog 確認 11/11 任務提交入口已關閉，11/12 起正式進入 Read-only 唯讀階段，引導用戶遷移至 Antigravity 平台，預定 12/31 全面退場。狀態確認為 sunset_announced。
+3. airtop-free-monthly-thousand-signup-bonus-conflict（Airtop Free）：官方 Portal shutdown 公告確認 2026-11-13 全面終止雲端瀏覽器自動化服務與新註冊。狀態改為 closed。
+4. deepgram-speak-attendee（Deepgram Speak）：活動專案之 11/13 額度發放日已屆，合格者額度已入帳專屬帳戶，推廣活動全面截止，一般新用戶不可申請。狀態改為 closed。
+5. tencent-hy4-workbuddy-codebuddy-free-window-nov4-15 與 autoclaw-weekly-perk-november-nine-hundred-million-tokens：混元 Hy4 免費體驗窗與 AutoClaw 100M Tokens 週福利今日（2026-11-15 23:59）屆滿截止，排程今日 18:00 進行截止前最後追蹤，下一期 M11W3 預定 11/16 接續。
+6. aspn-youth-sports-tech-hackathon-2026：運動部 ASPN 黑客松展延報名最後衝刺，明日 2026-11-16 12:00 截止，全台大專院校在學學生全程免費參賽。
+7. 其餘 14 筆既有紀錄（含勞動部南大 AI 班、綠聯 NAS 黑客松、桃園視訊課程、階躍星辰 Step Audio 3、Code.org Hour of AI、新北 UKO 微軟考照班、新竹市青年數位補助、OpenAI 研究者存取計畫、Botpress、Runable、Felo、Mango Inference 等）依官方文件完成局部複核。
+
+**新機會收錄（3 筆，全數零成本、具官方條款佐證）**：
+1. tw-moda-aipower-compute-grant：數發部 AI 算力公共服務平台，數位發展部數位產業署推動，提供符合數位經濟產業（J582/J62/J63等）之台灣中小企業與新創 3 個月免費高階 GPU 算力專案環境。線上工商憑證申請，全程政府公費補助 0 元，期滿可續提。
+2. kaggle-google-quantum-circuit-optimization-2026：Google Quantum AI 量子電路化簡大賽（Kaggle），Google Quantum AI 與 Kaggle 主辦，總獎金 US,000（第一名 US,000）。全球（含台灣）開發者可免費報名參賽，運用 AI Agents 優化容錯量子電路，賽程延續至 2027 年初。
+3. mistral-ai-startup-grant-program：Mistral AI 新創支持計畫，歐洲開源大模型領導者 Mistral AI 針對全球早期新創（Pre-Seed 至 Series A/B）提供數千至上萬美元免費 API 額度與旗艦模型優先測試資格。台灣合規新創可線上申請。
+
+**品質改善（本輪唯一一項）：app.js 的 renderOverview() 支援動態顯示「追查未成功」統計，確保資料透明度**
+- 觀察：data/offers.json 的 last_research_run 結構規範中包含 attempted_failed_ids 欄位，用以精確記錄本輪讀取失敗的案例；然而 app.js 的 renderOverview() 在構建 review-summary 時，固定僅顯示「本輪局部複核、新增機會與線索、既有紀錄尚未複核」三項，完全忽略 attempted_failed_ids。若當輪存在來源讀取失敗的案例，頁首概況面板將無法如實呈現追查失敗統計，使用者無法第一時間獲知有部分案例遭遇讀取阻礙。
+- 改善：在 app.js 的 renderOverview() 中判斷 if ((run.attempted_failed_ids || []).length > 0)，若非空則動態推入 [run.attempted_failed_ids.length, '追查未成功']；並在 tests/filters.cjs 中加入對 attempted_failed_ids 非空時包含「追查未成功」統計項目的單元測試斷言。
+- 驗證：python3 tests/validate.py、node --check app.js、node tests/filters.cjs 全數通過。
+
+**本輪檢查**：
+- python3 tests/validate.py（PASS，1,080 筆，S/A/B/C/D＝162/189/129/276/108）
+- node --check app.js（PASS，語法正確）
+- node tests/filters.cjs（全綠 PASS）
+- git diff --check（無空白與多餘變更）
+
+**下輪優先（完整五項）**：
+① tencent-hy4-workbuddy-codebuddy-free-window-nov4-15 與 autoclaw-weekly-perk-november-nine-hundred-million-tokens（2026-11-15 23:59 屆滿截止）：查核是否如期截止或展延，以及 AutoClaw M11W3 是否如期啟動。來源 https://www.workbuddy.cn/pricing/、https://autoclaw.z.ai/changelog。
+② aspn-youth-sports-tech-hackathon-2026（2026-11-16 12:00 展延截止）與 tw-labor-pretraining-ai-smart-application-tnnu-03（2026-11-16 16:00 截止）：確認截止前最後名額與報名表單狀態。來源 https://www.accupass.com/go/aspn-hackathon2026、https://ojt.wda.gov.tw/。
+③ ugreen-ai-nas-hackathon-2026（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
+④ stepfun-stepaudio3-music-gen-preview-nov8（2026-11-17 11:59:59 截止）與 taoyuan-ai-productivity-online-courses-115（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
+⑤ aocai-working-free-ai-courses-2026 與 hsinchu-city-ai-youth-digital-tool-subsidy-2026：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
