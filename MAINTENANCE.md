@@ -3511,3 +3511,57 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
 ④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
 ⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
+
+
+---
+
+## 2026-11-15 07:05–07:15 Asia/Taipei 維護紀錄
+
+**本輪基準與成果總覽**：
+- 既有紀錄數 N = 1,087，成功局部複核輪替候選既有紀錄 R = 20（均依 ID 去重），新增機會 A = 2（機會 2 筆、政策 0 筆、觀察線索 0 筆），全庫總筆數增至 1,089 筆。
+- 未完成本輪複核之既有紀錄數 U = N − R = 1,067。
+- 整筆追查失敗 attempted = 0。
+
+**複核紀錄明細（20 筆，全數完成官方來源比對與驗證）**：
+1. `pyai-developer-signup-50-credit`：重讀 PyAI 官方定價頁。確認 Developer 方案註冊贈送 US$50 免卡額度、10 concurrent calls、20 req/s；sandbox 不計費，正式呼叫依端點費率扣抵未變。
+2. `pyai-startup-program-up-to-100k`：重讀 PyAI Startups 專頁與條款頁（2026-10-29版）。確認審核制額度 $5K 至 $100K、有效效期 12 個月；達 80% 解鎖下批額度未變。
+3. `zo-computer-fourteen-day-no-card-trial`：重讀 Zo Computer 定價頁。確認 Free Trial 為 14 天免卡 AI 與雲端電腦試用、閒置睡眠、14 天後電腦使用權結束但檔案保留未變。
+4. `clickhouse-startup-partner-five-k-twelve-months`：重讀 ClickHouse 官方 Startup Offer 頁面。確認指定合作夥伴新創可申請 $5,000 Cloud credits、效期 12 個月並含 Basic Support；一般試用為 $300 / 30 天未變。
+5. `elicit-academic-nonprofit-discounted-plans`：重讀 Elicit 說明中心 Academic and Nonprofit pricing 文章。確認學術折扣方案維持，非營利組織無獨立專屬折扣但可直接適用學術價格未變。
+6. `elevenlabs-students-api-three-months`：重讀 ElevenLabs 官方學生優惠公告。確認合格大學生享 3 個月免費 ElevenCreative、ElevenAgents 與 ElevenAPI 權限，目前持續開放（台灣未列首發支援國別維持 No）。
+7. `agentops-basic-events`：重讀 AgentOps 官網首頁與定價區塊。確認 Basic 方案 $0/月 提供免費最多 5,000 events 追蹤、支援 400+ LLMs 與多代理除錯未變。
+8. `browser-use-once-credit-paygo`：重讀 Browser Use 定價頁與 ToS（2026-10-15版）。確認 Pay as you go 模式、無訂閱費、點數永久有效、每小時 $0.06、新註冊贈額未變。
+9. `mixedbread-starter-once-five`：重讀 Mixedbread 定價頁與 Platform Billing 文件。確認 Starter 方案免信用卡提供一次性 $5 開發額度、3 stores、100 queries/min；額度用罄需升級 Scale 未變。
+10. `hume-voice-start-twenty-price-redirect`：重讀 Hume 定價頁與最新 API 文件。確認舊 billing 文件轉址至 Audio Decisions 總覽；新帳號 Free Tier 提供 $20 體驗額度、Audio Decisions 每 1M input tokens $0.47 未變。
+11. `vectara-trial-thirty-day-tenk-credits`：重讀 Vectara 定價頁與 Trial 文件。確認 30 Day Free Trial 方案提供完整功能試用、無信用卡要求未變。
+12. `nia-free-monthly-search-lifetime-indexes`：重讀 Nia 官方定價文件。確認 Free 方案 $0/月 提供 3 lifetime indexing、月度搜尋配額；超額硬停需購買 credit packs 或升級未變。
+13. `free-ai-nonprofit-fifteen-million-grant`：重讀 Free.ai Nonprofit 專頁。確認合資格非營利機構（含國際同等機構）可申請 15,000,000 免費 tokens 與一年 Pro 級別 API 權限未變。
+14. `free-ai-education-monthly-five-hundred-k`：重讀 Free.ai Education 專頁。確認教育使用者以合資格學校信箱驗證後，每月提供 500,000 免費 self-hosted tokens 及 Pro 級 API 權限未變。
+15. `mixedbread-startups-250-credits`：重讀 Mixedbread 定價頁。確認 Mixedbread for Startups 提供合資格新創一次性 $250 額度，支持個案審查擴充未變。
+16. `supadata-free-monthly-hundred-hard-stop`：重讀 Supadata 定價頁與 ToS。確認 Free 方案免信用卡提供每月 100 requests、速率 1/s、無自動扣款未變。
+17. `dedalus-hobby-once-twenty-compute-watch`：重讀 Dedalus Labs 定價頁內嵌結構化數據與 FAQ。確認 Hobby 方案 $0 提供一次性 $20 sign-up credit、免卡、含 10 GiB 儲存與最多 4 vCPU / 16 GiB 機器支援未變。
+18. `dedalus-startup-up-to-tenk-twelve-month-watch`：重讀 Dedalus Labs 定價頁 FAQ。確認合資格新創最高可獲贈 $10,000 運算額度，約折合 2 vCPU / 8 GiB 機器 48,000 小時運作未變。
+19. `memmachine-apache-self-hosted-agent-memory`：重讀 MemMachine 定價頁與 GitHub 專案。確認 Open Source 方案 $0/forever、支援自行架設、提供所有代理記憶體類型與核心整合未變。
+20. `deeplearning-ai-free-course-videos-pro-labs-separated`：重讀 DeepLearning.AI 官方公告與會員介紹。確認平台上所有課程影片持續維持免費觀看、實作實驗室與專業證書屬 Pro 方案未變。
+
+**新機會收錄（2 筆，具官方來源與條款佐證）**：
+1. `kaggle-nfl-big-data-bowl-2027`：**NFL Big Data Bowl 2027（Kaggle）**，由國家美式足球聯盟（NFL）贊助主辦之年度旗艦資料科學競賽，總獎金池達 100,000 美元（公開組與大學組各 45,000 美元、決賽隊伍 10,000 美元）。參賽者需運用首度釋出的 NFL Scouting Combine 選手肩墊 RFID 感測器毫米級運動追蹤數據結合 Next Gen Stats 常規賽追蹤紀錄，挖掘選秀測試爆發力與賽季實戰表現之非顯著關聯。2027-01-06 截止交件。台灣開發者與研究者可免費組隊參賽，享有每週 Kaggle 免費 GPU 算力。
+2. `kaggle-enveda-casmi-2026-molecule-id`：**Enveda CASMI 2026（Kaggle）**，由 Enveda Biosciences 贊助主辦之計算生物與化學資訊 AI 競賽，總獎金池達 50,000 美元。參賽者需構建深度學習與圖神經網路模型，根據生物萃取物之串聯質譜（MS/MS）數據，準確推論未標記小分子之 2D 化學拓撲結構（SMILES）。2026-12-07 報名與組隊截止，2026-12-14 最終交件。台灣開發者與化學/生物資訊研究者可免費組隊參賽，享有 Kaggle 每週免費 GPU 算力。
+
+**品質改善：查驗 Dedalus 與 Hume 最新重置/轉址與結構化資料**
+- 觀察：`dedalus-hobby-once-twenty-compute-watch` 與 `dedalus-startup-up-to-tenk-twelve-month-watch` 的方案細節在主頁面 DOM 中為 Next.js SSR 串流注入，一般文字比對易造成空回傳；`hume-voice-start-twenty-price-redirect` 原引用之 billing.md 已 301 轉址。
+- 改善：在本輪查核中精確讀取 Dedalus 之 JSON-LD 結構化資料與 FAQ 答案區段，核實 Hobby $20 贈額與新創 $10,000 算力承諾；並確認 Hume 新版 Audio Decisions 定價架構及轉址路徑完整性。
+- 驗證：`python3 tests/validate.py` 嚴格通過，`tests/filters.cjs` 全綠。
+
+**本輪檢查**：
+- python3 tests/validate.py（PASS，1,089 筆，S/A/B/C/D＝171/188/129/276/109）
+- node --check app.js（PASS，語法正確）
+- node tests/filters.cjs（全綠 PASS）
+- git diff --check（無多餘空白變更）
+
+**下輪優先（完整五項）**：
+① `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15` 與 `autoclaw-weekly-perk-november-nine-hundred-million-tokens`（2026-11-15 23:59 屆滿截止）：查核今日 23:59 屆滿後騰訊 WorkBuddy 是否切回原價/配額，以及 AutoClaw M11W3 是否如期啟動。來源 https://www.workbuddy.cn/pricing/、https://autoclaw.z.ai/changelog。
+② `aspn-youth-sports-tech-hackathon-2026`（2026-11-16 12:00 展延截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（2026-11-16 16:00 截止）：確認截止前最後名額與報名表單狀態。來源 https://www.accupass.com/go/aspn-hackathon2026、https://ojt.wda.gov.tw/。
+③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
+④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
+⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
