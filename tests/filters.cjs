@@ -656,3 +656,31 @@ for (const offer of d.offers) {
 assert.strictEqual(announcementRow(staleAnnouncement).children[1].textContent, staleAnnouncement.announcement_at, 'the announcement date must be shown verbatim, not reformatted');
 assert(!announcementRow(d.offers.find(o => !o.announcement_at)), 'a record without announcement_at must not claim an announcement date');
 console.log(`PASS: 官方公告日期 is shown for the ${announced.length} records that record it and never invented for the rest.`);
+
+// 不同方案（plan_variants）不得對未記錄的鍵硬印「設定 未列金額」或「；未核實」，也不得把
+// credits_usd／duration_days 丟掉（2026-11-14 統計：全庫 8 筆含 plan_variants 的紀錄有 5 筆受影響，
+// 其中 snowflake-ai-trial-2026 原本整列變成「設定 未列金額，每月 未列金額；未核實」）。
+const variantRow = record => ctx.createDetails(record).children
+  .find(node => node.tagName === 'dl').children
+  .find(row => row.children[0].textContent === '不同方案');
+const withVariants = d.offers.filter(o => Array.isArray(o.plan_variants) && o.plan_variants.length);
+assert(withVariants.length >= 8, `expected records with plan_variants, got ${withVariants.length}`);
+for (const offer of withVariants) {
+  const row = variantRow(offer);
+  assert(row, `missing 不同方案 row for ${offer.id}`);
+  const rendered = row.children[1].textContent;
+  for (const v of offer.plan_variants) {
+    assert(rendered.includes(v.plan), `missing variant plan name in ${offer.id}: ${v.plan}`);
+    if (!('setup_usd' in v)) assert(!rendered.includes(`${v.plan}：設定 未列金額`), `omitted setup_usd must not claim 設定 未列金額 in ${offer.id}`);
+    if (v.credits_usd != null) assert(rendered.includes(`額度 US$${v.credits_usd}`), `missing credits_usd in ${offer.id}`);
+    if (v.duration_days != null) assert(rendered.includes(`期限 ${v.duration_days} 日`), `missing duration_days in ${offer.id}`);
+  }
+}
+const snowflakeVariant = variantRow(d.offers.find(o => o.id === 'snowflake-ai-trial-2026')).children[1].textContent;
+assert(snowflakeVariant.includes('AI Data Cloud trial：額度 US$400，期限 30 日'), `unexpected Snowflake variant text: ${snowflakeVariant}`);
+assert(!snowflakeVariant.includes('未核實'), `Snowflake variants with recorded credits/duration must not render 未核實: ${snowflakeVariant}`);
+const nonprofitVariant = variantRow(d.offers.find(o => o.id === 'claude-nonprofits')).children[1].textContent;
+assert(nonprofitVariant.includes('Nonprofit Standard：每月 US$8') && !nonprofitVariant.includes('未核實'), `unexpected Claude Nonprofits variant text: ${nonprofitVariant}`);
+const sarvamVariant = variantRow(d.offers.find(o => o.id === 'sarvam-access')).children[1].textContent;
+assert(sarvamVariant.includes('設定 US$0，每月 未列金額'), `explicit monthly_usd:null in sarvam-access must still render 每月 未列金額: ${sarvamVariant}`);
+console.log(`PASS: 不同方案 row renders recorded fields across all ${withVariants.length} records without inventing 未列金額/未核實.`);

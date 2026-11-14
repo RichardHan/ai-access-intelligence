@@ -299,6 +299,11 @@ for o in d['offers']:
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'
+ if o.get('plan_variants') is not None:
+  assert isinstance(o['plan_variants'], list) and o['plan_variants'], f'empty or non-list plan_variants in {o["id"]}'
+  for _pv in o['plan_variants']:
+   assert isinstance(_pv, dict) and isinstance(_pv.get('plan'), str) and _pv['plan'].strip(), f'missing plan name in plan_variants of {o["id"]}'
+   assert any(k in _pv and _pv[k] is not None for k in ('setup_usd','monthly_usd','credits_usd','duration_days','usage')), f'plan_variants entry has no renderable detail fields in {o["id"]}: {_pv}'
  if o.get('duplicate_of') is not None:
   assert o.get('status')=='duplicate_merged', f'duplicate_of without merged status in {o["id"]}'
   assert o['duplicate_of'] in ids and o['duplicate_of']!=o['id'], f'duplicate_of must point to another existing id in {o["id"]}'

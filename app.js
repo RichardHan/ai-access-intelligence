@@ -401,6 +401,18 @@ function byDeadline(a, b) {
   return compareDeadline(a, b, nowMs());
 }
 
+function formatPlanVariant(variant) {
+  if (!variant || typeof variant !== 'object') return display(variant);
+  const terms = [];
+  if ('setup_usd' in variant) terms.push(`設定 ${money(variant.setup_usd)}`);
+  if ('monthly_usd' in variant) terms.push(`每月 ${money(variant.monthly_usd)}`);
+  if (variant.credits_usd != null) terms.push(`額度 ${money(variant.credits_usd)}`);
+  if (variant.duration_days != null) terms.push(`期限 ${variant.duration_days} 日`);
+  const usage = variant.usage != null && variant.usage !== '' ? display(variant.usage) : '';
+  const body = [terms.join('，'), usage].filter(Boolean).join('；') || '未核實';
+  return `${display(variant.plan)}：${body}`;
+}
+
 function createDetails(offer) {
   const details = text('details', '', 'card-details');
   details.append(text('summary', '查看資格、限制與來源'));
@@ -434,9 +446,15 @@ function createDetails(offer) {
   if (deadline) addRow(grid, '截止與期限', deadline);
   addRow(grid, '取消與續費', offer.cancellation);
   addRow(grid, '存取風險', offer.access_risk);
+  // 不同方案（plan_variants）在資料中有多種結構：有的記 setup_usd／monthly_usd／usage，
+  // 有的只記 monthly_usd（claude-nonprofits、claude-scientists、mem0、mem），
+  // 有的記試用額度與天數 credits_usd／duration_days（snowflake-ai-trial-2026）。
+  // 舊版一律硬印「設定 ${money(setup_usd)}，每月 ${money(monthly_usd)}；${display(usage)}」，
+  // 導致全庫 8 筆有 5 筆印出沒寫進資料的「設定 未列金額」或「；未核實」，其中 snowflake-ai-trial-2026
+  // 甚至把已核實的 US$400／30 日整個丟掉，顯示成「設定 未列金額，每月 未列金額；未核實」。
+  // 改為只渲染該子方案實際記錄的欄位；明確寫入 null（如 sarvam-access 的 monthly_usd: null）仍照實顯示未列金額。
   if (offer.plan_variants) {
-    addRow(grid, '不同方案', offer.plan_variants.map(variant =>
-      `${display(variant.plan)}：設定 ${money(variant.setup_usd)}，每月 ${money(variant.monthly_usd)}；${display(variant.usage)}`));
+    addRow(grid, '不同方案', offer.plan_variants.map(formatPlanVariant));
   }
   if (offer.regional_variants) addRow(grid, '地區方案差異', offer.regional_variants);
   if (offer.vpn_research?.eligibility_note) addRow(grid, '地區與網路限制', offer.vpn_research.eligibility_note);
