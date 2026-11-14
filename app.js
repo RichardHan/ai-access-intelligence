@@ -187,7 +187,7 @@ function regionMatches(o, region) {
 // 會出現在「免費」搜尋結果，但卡片上沒有任何免費主張。下列欄位是卡片與詳情真正顯示的內容。
 const SEARCH_FIELDS = [
   'id', 'title', 'summary', 'categories', 'regions', 'eligibility', 'unknowns',
-  'setup_cost_basis', 'cost_note', 'recurring_cost_original', 'quota_details', 'quota',
+  'setup_cost_basis', 'cost_note', 'recurring_cost_original', 'quota_details', 'quota', 'quota_note',
   'quota_classification_note', 'usable_duration', 'cancellation', 'access_risk',
   'plan_variants', 'regional_variants', 'offer_validity', 'terms_compliance', 'tos_status',
   'legal_and_terms_note', 'deadline_at', 'expires_at', 'expiry', 'duplicate_of',
@@ -443,7 +443,7 @@ function createDetails(offer) {
   if (offer.recurring_cost_annual_usd != null) addRow(grid, '年繳費用', money(offer.recurring_cost_annual_usd));
   addRow(grid, '用量分類', QUOTA_LABELS[offer.quota_classification] || '未核實');
   if (offer.quota_classification_note) addRow(grid, '用量說明', offer.quota_classification_note);
-  if (offer.quota_details || offer.quota) addRow(grid, '額度細節', offer.quota_details || offer.quota);
+  if (offer.quota_details || offer.quota || offer.quota_note) addRow(grid, '額度細節', offer.quota_details || offer.quota || offer.quota_note);
   addRow(grid, '有效期間', offer.usable_duration);
   const deadline = deadlineInfo(offer);
   if (deadline) addRow(grid, '截止與期限', deadline);

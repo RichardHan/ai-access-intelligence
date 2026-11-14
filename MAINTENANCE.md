@@ -3230,3 +3230,44 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
 ④ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（冷卻結束後排入之 retry／closing 項目，next 11/18）：Adobe 計畫頁改試無頭瀏覽器或 Wayback；追蹤新竹市補助剩餘經費是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
 ⑤ `videogen-model1-selected-project-credit-program`、`boson-higgs-realtime-duplex-api-waitlist`、`intel-ai-pc-cloud-remote-instance`、`meeting-ink-transformation-partners`、`taiwan-commerce-single-store-ai-half-hundred-k`（`tools/queue.py` 目前前五筆輪替項目，next 11/25）：確認 VideoGen 專案額度、Boson Higgs 候選名單、Intel AI PC Cloud、Meeting Ink 轉型夥伴與經濟部單一店家 AI 補助現況。來源 `https://videogen.io/`、`https://www.boson.ai/`、`https://www.intel.com/`、`https://www.meeting.ink/`、`https://www.aoc.gov.tw/`。
+
+## 2026-11-14 19:06–19:21（Asia/Taipei）｜N=1,073、R=20、A=4（4 機會）、U=1,053、attempted=0
+
+**基準**：開場 `HEAD=cef09d0`（`main == origin/main`），工作樹含使用者／前次未提交之 `app.js`、`tests/filters.cjs`、`tests/validate.py` 額度細節三種欄位相容性修正（`quota_details`／`quota`／`quota_note` 渲染與搜尋支援，予以保留並納入本輪品質改善驗證）。全庫 1,073 筆（857 機會／50 政策／166 觀察線索）、可行動 985 筆、嚴格逾期 0 筆、7 天內到期 11 筆（皆在 12 小時冷卻內）、追查失敗 0 筆。
+
+**範圍與理由**：依 `python3 tools/queue.py --limit 20` 選出排程最優先輪替的 20 筆紀錄，涵蓋到期前重要追蹤、歷史遺留之來源矛盾與資格模糊項目（含 Claude for Teachers、Adobe for Startups、Kiroween、VideoGen、Mem0 等），交由兩個複核子代理與主代理平行查核，並獨立執行新機會研究與去重檢索：
+- 子代理 A（10 筆）：`adobe-startups-free-year-firefly-acrobat-semrush`、`videogen-model1-selected-project-credit-program`、`boson-higgs-realtime-duplex-api-waitlist`、`intel-ai-pc-cloud-remote-instance`、`meeting-ink-transformation-partners`、`taiwan-commerce-single-store-ai-half-hundred-k`、`kiroween-2026-hackathon-4000-credits`、`fun-ai-camp-2027-nthu-taica`、`mem0-hobby-memory-api`、`perplexity-education`。
+- 子代理 B（10 筆）：`cloudflare-ai-search-monthly-included-november-billing`、`speechmatics-startup-selected-cohort`、`inference-net-open-source-grants-watch`、`eden-ai-signup-ten-professional-credit-watch`、`claude-teachers-us`、`circleback-student-half-nonprofit-thirty-percent`、`coralbricks-signup-five-trial-credit`、`murf-api-signup-ten-credit`、`auphonic-free-two-hour-jingle`、`krea-free-daily-hundred-compute`。
+
+**實質更正與補充**
+
+- `claude-teachers-us`：**Claude for Teachers 免費期官方展延至 2028-07-30，原 2027-06-30 申請截止與一年免費限制取消**。重讀 Anthropic 公告頁（含 2026-11-13 頁尾 Updates 載明展延）、`claude.com/solutions/teachers`、客服說明與 K-12 條款，四處一致明列 free through July 30, 2028；更新過期時間並移除單純申請截止概念。已追加 `policy-history.json`（`deadline_extended`）。
+- `adobe-startups-free-year-firefly-acrobat-semrush`：**Adobe for Startups 計畫頁 FAQ 經 aem.live 源站首次取得完整條款：每團隊上限 5 席、Seed–Series A 階段、須公司網站與商業信箱**。business.adobe.com 前台雖持續逾時，但經由 Edge Delivery 來源站（aem.live）與 Marketo 表單 2277，證實提供 12 個月免費 Firefly Pro Plus / Acrobat Studio for teams / Semrush，每隊上限 5 席，期滿轉付費，且國家清單選單含 Taiwan Region。已追加 `policy-history.json`（`eligibility_clarification`）。
+- `kiroween-2026-hackathon-4000-credits`：**Kiroween 官方發布 Updates 載明額度領取身分驗證細節：採用 Didit 自拍與政府證件驗證，綁定 Devpost 帳號**。領取 4,000 credits 需經 Didit 實名核驗，排除名單未列台灣；更新申請截止為 12/1 12:00 PT、兌換至 12/4。已追加 `policy-history.json`（`eligibility_clarification`）。
+- `videogen-model1-selected-project-credit-program`：**VideoGen Model 1 取得官方前端 FAQ 逐字內容：GA 前需額外安全測試、預期定價較同級模型低 50% 以上、生成產出帶不可見浮水印**。已追加 `policy-history.json`（`incremental_discovery`）。
+- `mem0-hobby-memory-api`：**Mem0 定價 FAQ 首次列出 BYOK 第三方模型建議成本（約 US$3.55–US$5.34／1,000 次 adds）與可用供應商**（OpenAI、Anthropic、Azure OpenAI、OpenRouter）。Free 層額度與 §5.2 永久訓練授權維持不變。已追加 `policy-history.json`（`terms_clarification`）。
+- 其餘 15 筆既有紀錄依官方定價頁、文件與條款完成局部複核，確認額度、費用、台灣可用性與期限未變。
+
+**新機會收錄（4 筆，全數零成本、具官方條款佐證）**
+
+1. `kaggle-google-agent-harness-pele-2027`：**Google Agent Harness on Physical-Engineering's Last Exam（Kaggle）**，Google Cloud AI Research 與 Mercor 主辦長流程工程 Agent 競賽，總獎金 US$400,000，2027-01-05 交件截止。台灣參賽者可用，開源 MIT/Apache-2.0 harness。
+2. `google-buildhybridai-2026-firebase-ai-logic`：**Google #BuildHybridAI 2026（Devpost）**，Firebase AI Logic 混合推論應用黑客松，總獎金 US$30,000，台北 2026-12-01 06:00 交件截止。可零成本以 Firebase 免費配額與裝置端 Gemini Nano 起步。
+3. `google-gear-get-certified-special-edition-paa-2026`：**Google GEAR Get Certified 特別場（Professional Agentic Architect）**，提供免費學習里程碑與原廠 Cloud 認證考試券，申請至 2026-12-09。需企業工作信箱審核。
+4. `coding101-2027-university-software-contest`：**2027 Coding 101 大學軟體創作競賽（教育部）**，教育部指導跨校團隊主辦，AI 輔助軟體開發主題，金獎 NT$30,000，初賽 2026-11-30 至 2027-01-10 交件。並提供 11 門免費 OpenEdu AI 課程。
+
+**品質改善：卡片詳情與搜尋對歷史 `quota_note` 欄位的相容性**
+- 觀察：歷史批次中有 10 筆紀錄將用量細節存於 `quota_note`（如 StackOne 1,000 credits、ZenML 14 天 Pro 試用、Lumenfall 等），而原 `createDetails()` 與 `SEARCH_FIELDS` 僅讀取 `quota_details` 與 `quota`，導致這 10 筆卡片詳情中「額度細節」整列消失，關鍵字搜尋亦無法命中。
+- 改善：在 `app.js` 的 `SEARCH_FIELDS` 加入 `quota_note`，並在 `createDetails()` 取 `offer.quota_details || offer.quota || offer.quota_note`；在 `tests/validate.py` 納入 markdown asterisks 檢查；在 `tests/filters.cjs` 新增覆蓋全庫 10 筆 `quota_note` 的卡片列渲染與關鍵字檢索斷言。
+- 驗證：`python3 tests/validate.py`、`node --check app.js`、`node tests/filters.cjs` 全部通過；無頭瀏覽器實測確認卡片詳情正常呈現。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,077 筆，S/A/B/C/D＝159/189/129/276/108）、`node --check app.js`、`node tests/filters.cjs`（全綠）、`python3 tools/queue.py --self-test`、`python3 tools/round_lock.py --self-test`、`git diff --check`。
+
+瀏覽器驗證（本機 59123、headless Chrome）：全庫 1,077 筆、資料更新 2026/11/14 19:21 Asia/Taipei；首頁顯示「20 本輪局部複核／4 新增機會與線索／1053 既有紀錄尚未複核」；概況卡「861 福利研究／173 台灣條件適用（含 S 級 159 筆）／50 政策追蹤／166 觀察線索」；卡片網格與詳情渲染完整，console error 0。
+
+**下輪優先（完整五項）**
+
+① `autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`（2026-11-15 當日到期，進入緊急重查）：確認 AutoClaw 是否更替為 M11W3 週優惠、騰訊 Hy4 CodeBuddy 免費視窗是否如期截止或展延。來源 `https://autoclaw.z.ai/blog/news/M11W3/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+② `aspn-youth-sports-tech-hackathon-2026`（11/16 12:00 截止）、`ugreen-ai-nas-hackathon-2026`（11/16 15:45 截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（11/16 16:00 截止）：確認截止前最後名額與是否提前關閉。來源 `https://www.accupass.com/go/aspn-hackathon2026`、`https://ugreenhackathon.devpost.com/updates`、`https://its.taiwanjobs.gov.tw/Course/Detail?ID=166783`。
+③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 線上課堂現況。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
+④ `aocai-working-free-ai-courses-2026` 與 `rime-stt-nov19-free-window`（皆於 11/19 到期）：查核數位產業署 AI 課程報名額度與 Rime STT 免費視窗現況。來源 `https://academy.digitalcontent.org.tw/`、`https://rime.ai/pricing`。
+⑤ `runable-free-daily-fifteen-hundred-monthly-cap` 與 `felo-standard-free-new-user-daily-two-hundred-campaign`（`tools/queue.py` 輪替優先項目，next 11/15 09:00）：確認 Runable 每日 1,500 額度與 Felo 新戶每日 200 次活動最新狀態。來源 `https://runable.com/`、`https://felo.ai/`。

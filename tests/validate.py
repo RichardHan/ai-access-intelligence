@@ -232,7 +232,7 @@ for o in d['offers']:
  # 這些欄位是純文字，卡片與詳情直接輸出、沒有 markdown 解析：寫進 `**粗體**` 只會在畫面上留下兩個星號。
  # 2026-11-11 統計 3 筆（supermemory 的 summary、nanonets 的 cost_note，以及本輪新增的 Kiro 免費層 summary
  # ——後者是本輪自己寫進去的），讀者看到的是斷字，不是強調。只檢查會被直接渲染的欄位，不對整份 JSON 全掃。
- for _f in ('title','summary','cost_note','access_risk','usable_duration','verification_scope','cancellation','usage_type','quota_details'):
+ for _f in ('title','summary','cost_note','access_risk','usable_duration','verification_scope','cancellation','usage_type','quota_details','quota_note'):
   _v=o.get(_f)
   assert not (isinstance(_v,str) and '**' in _v), f'markdown bold in plain-text field {_f} of {o["id"]} (the card renders it literally as **): remove the asterisks'
  if o.get('status') is not None: assert isinstance(o['status'], str) and o['status'] in valid_statuses, f'invalid or unmanaged status in {o["id"]}: {o.get("status")}'

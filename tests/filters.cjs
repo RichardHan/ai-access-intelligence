@@ -146,7 +146,7 @@ assert(datacamp.children[1].textContent.includes('台北時間'), 'expires_at wi
 const rime = deadlineRow(d.offers.find(o => o.id === 'rime-stt-nov19-free-window'));
 assert.strictEqual(rime.children[1].textContent, '方案或免費期結束 2026-11-19（來源未列時刻）');
 const teachers = deadlineRow(d.offers.find(o => o.id === 'claude-teachers-us'));
-assert.strictEqual(teachers.children[1].textContent, '期限 2027-06-30（來源未列時刻）');
+assert.strictEqual(teachers.children[1].textContent, '期限 2028-07-30（來源未列時刻）');
 const bothFields = deadlineRow({ deadline_at: '2026-12-01', expires_at: '2026-12-01T23:59:00+09:00' });
 assert.strictEqual(bothFields.children[1].textContent, '申請截止 2026-12-01（來源未列時刻）；方案或免費期結束 2026/12/01 22:59（台北時間）');
 assert(!deadlineRow(withoutPinnedDates({ expires_at: '2026-11-19' })), 'an offer without pinned dates must not show the row');
@@ -711,3 +711,29 @@ assert(nonprofitVariant.includes('Nonprofit Standard：每月 US$8') && !nonprof
 const sarvamVariant = variantRow(d.offers.find(o => o.id === 'sarvam-access')).children[1].textContent;
 assert(sarvamVariant.includes('設定 US$0，每月 未列金額'), `explicit monthly_usd:null in sarvam-access must still render 每月 未列金額: ${sarvamVariant}`);
 console.log(`PASS: 不同方案 row renders recorded fields across all ${withVariants.length} records without inventing 未列金額/未核實.`);
+
+// 額度細節在歷史批次中有三種鍵名：quota_details（110 筆）、quota（5 筆）與 quota_note（10 筆，
+// 含 stackone-starter-monthly-thousand-credit-terms-conflict、zenml-pro-starter-fourteen-day-no-card-business-trial、
+// lumenfall-signup-one-dollar-media-api 等）。createDetails() 與 SEARCH_FIELDS 先前只相容前兩者，
+// 導致這 10 筆的額度細節在卡片詳情中整列消失，且關鍵字（如 Action Calls、pipeline runs）完全搜不到。
+const quotaDetailRow = record => ctx.createDetails(record).children
+  .find(node => node.tagName === 'dl').children
+  .find(row => row.children[0].textContent === '額度細節');
+const withQuotaNote = d.offers.filter(o => o.quota_note);
+assert(withQuotaNote.length >= 10, `expected records using quota_note, got ${withQuotaNote.length}`);
+for (const offer of d.offers) {
+  const expected = offer.quota_details || offer.quota || offer.quota_note;
+  const row = quotaDetailRow(offer);
+  if (expected) {
+    assert(row, `missing 額度細節 row for ${offer.id}`);
+    assert.strictEqual(row.children[1].textContent, ctx.display(expected), `額度細節 row disagrees with recorded quota detail in ${offer.id}`);
+  } else {
+    assert(!row, `unexpected 額度細節 row for ${offer.id}`);
+  }
+}
+const stackone = d.offers.find(o => o.id === 'stackone-starter-monthly-thousand-credit-terms-conflict');
+assert(stackone && stackone.quota_note && !stackone.quota_details && !stackone.quota, 'expected stackone to store its quota detail in quota_note');
+assert(f(stackone, { q: 'Action Calls' }), 'quota_note text must be searchable via keyword search');
+const zenml = d.offers.find(o => o.id === 'zenml-pro-starter-fourteen-day-no-card-business-trial');
+assert(zenml && f(zenml, { q: 'pipeline runs' }), 'zenml quota_note text must be searchable');
+console.log(`PASS: 額度細節 row and keyword search cover quota_details, quota, and quota_note (${withQuotaNote.length} quota_note records).`);
