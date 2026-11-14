@@ -2962,3 +2962,43 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 **來源掃描（full linkcheck，06:43 起跑、119 秒）**：79 筆 blocked（400／401／403／405／429／5xx，多為反爬或擋 HEAD）；dead 影響 10 筆紀錄（astamuse、baseten、deepinfra、nscale、perplexity×2、qoder-community-1024、salad、taiwan-industry-talent-investment、voyage），多是 web.archive 快照 URLError 與前幾輪已註記的失效頁（voyage 定價、nscale 定價、qoder community-boost、salad、astamuse、deepinfra papers、wda 附件）。**本輪新增或更新的來源都不在這份清單內**，因此不新增維修項；`taiwan-industry-talent-investment-ai-courses-2026` 的 wda 附件仍 404，維持寫在 unknowns。
 
 **發布**：commit `cc2c918` 已推上 `origin/main`（`9dd16cc..cc2c918`，fast-forward）。推送時 gh 的 active 帳號是 `richard-han_tmemu`（對本 repo 無權限，第一次 push 回 403），改用同機已登入、且是 repo owner 的 `RichardHan` 推送，推送後已把 active 帳號切回原本的 `richard-han_tmemu`，沒有改動 remote URL 或任何憑證設定。GitHub Pages（legacy build、source=main）重建後，公開 `data/offers.json` 已回 1,052 筆、`latest_research_at` 2026-11-14T06:33:59+08:00、`reviewed_ids` 20 筆／`new_ids` 1 筆／`attempted_failed_ids` 1 筆；公開站（`?v=cc2c918-check` 破快取）實測全庫 1,052 筆、首頁 20 本輪局部複核／1 新增／1031 尚未複核，關鍵字「ElevenAI」回新紀錄（C 級），「ADI FORUM」回已關閉卡（單一歷史標籤），console error 0。
+
+## 2026-11-14 08:05–08:30（Asia/Taipei）｜N=1,052、R=20、A=2（2 機會）、U=1,032、attempted=0
+
+**基準**：開場 `HEAD=6ed60e4`（`main == origin/main`），工作樹已有 `tools/round_lock.py` 的父程序 `ppid` 與 `--pid`／`--force` 修正；前一個 07:05 回合（pid 41342）在 07:20 子代理完成後連續 45 分鐘卡在模型串流逾時重試（未寫入 `data/*.json`），因此先以 `round_lock.py release --force` 釋放殘留鎖、再由本回合（pid 69102）`acquire` 接管。全庫 1,052 筆（836 機會／50 政策／166 觀察線索）、可行動 965 筆、嚴格逾期 0 筆、7 天內到期 8 筆（皆在 06:33 批次 12 小時冷卻內）。
+
+**範圍與理由**：依 `python3 tools/queue.py` 選出 20 筆並以 `--explain` 確認全數為 `會排入 [rotation]`：①當日（11/14 10:00–16:20）排程到期的 13 筆（`aocai-youth-ai-training-2026`、`beatapi-free-models-zero-balance`、`entire-agents-trial-credit-paused`、`runway-builders-startup-up-to-five-hundred-k-api-credits`、`gmi-scale-cohort-three-spring-2027-credits-watch`、`elfa-api-free-once-thousand-credits`、`parallel-mcp-keyless-free-search-fetch-decisions`、`couchbase-activate-starter-kit-current-availability-watch`、`shift-asia-prototype-twenty-companies`、`kilo-auto-free-hosted-models`、`realads-once-fifty-no-watermark`、`satfaq-free-trial-hybrid-ai-two-thousand-points`、`lets-go2-ai-ocr-launch-six-hundred-pages`）；②11/15–11/16 近期排程與條款／期限追蹤的 7 筆（`taiwan-nsp-youth-ai-training-subsidy-2026`、`cht-google-ai-plus-first-year-free-2026`、`byteplus-modelark-free-inference-500k`、`codeai-hour-of-ai-2026`、`recraft-free-daily-credits`、`zai-free-flash-api-models`、`heygen-voice-turbo-free-api-until-2026-11-30`）。三個子代理平行執行（Batch A 10 筆、Batch B 10 筆、新機會發掘），主代理直核 HeyGen、青年 AI 實戰養成班、Elfa、Z.ai、臺北市職能發展學院與 Modal for Builders 官方頁。
+
+**實質更正與補充**
+
+- `heygen-voice-turbo-free-api-until-2026-11-30`：**HTTP 單次 `text` 字數上限由 1–5,000 字元提高為 1–10,000 字元**。官方語音文件（`developers.heygen.com/docs/voices/heygen-voice-speech.md`）正文逐字「`text` takes 1–10,000 characters of plain prose」，API reference（`developers.heygen.com/reference/generate-model-speech.md`）schema 同列 `maxLength: 10000`；免費期仍至 2026-11-30、免 credit 餘額、限 public voice 或 HeyGen Voice 1 instant clone、30 req/min 與共用容量 429 均不變，並將舊紀錄誤寫的 `zh-TW` 區域語系範例更正為官方原文的 `en-US`／`pt-BR`／`zh-HK`。已追加 `policy-history.json`（`quota_change`）。
+- `aocai-youth-ai-training-2026`：重讀經濟部商業發展署「青年 AI 實戰養成班」專區頁，26 班最晚開課日由 2027-03-02 更正為 **2027-03-09**（清華大學新竹班），11/16 台北實踐大學班（240 小時、招生 30 人）當日報名表仍開放；另新核培訓單位**中華科技大學「AI行銷自動化與服務創新實戰班」官方課程頁**（`netideatw.github.io/cust-ai-marketing/`），補齊第 1 梯（115/12/07–116/01/22、每梯限 33 人）**報名截止 2026-11-30 17:00（額滿提前截止）**、本國籍要求、每人限參訓一次且不得同時領取其他政府人才培訓補助，並記錄**時數登載差異**（專區總覽頁標 240 小時、中華科大課程頁寫 264 小時）。已追加 `policy-history.json`（`terms_clarification`），下次複核拉近至 11/18（確認 11/16 實踐班開訓後是否標截止）。
+- `cht-google-ai-plus-first-year-free-2026`：活動頁（`cht.com.tw/home/campaign/googleone/index.html`）現已直接列出「月繳 1399 元搭 Google AI Plus 2TB 首年 0 元」方案卡（與 799/999 搭 400GB 並列），消除了前次「11/04 新聞稿有寫、活動頁未列 1399」的來源落差，並自 `unknowns` 移除該項缺口。
+- `recraft-free-daily-credits`：新引官方 `commercial-rights-and-ownership` 文件，直接佐證 Free 方案生成圖像為公開、所有權歸 Recraft 且不得商用；每日 30 credits 仍僅見於 Google Docs 整合頁（主文件仍只寫 limited credits）。
+- 其餘 16 筆（`beatapi`、`entire`、`runway`、`gmi-scale`、`lets-go2`、`taiwan-nsp`、`byteplus`、`elfa`、`parallel-mcp`、`couchbase`、`shift-asia`、`kilo`、`realads`、`satfaq`、`codeai`、`zai`）官方頁面全部可讀（HTTP 200），核心條件與既有衝突（Entire 計費頁暫停 vs 定價頁未提、RealAds FAQ 無浮水印可商用 vs 條款 §8.3 僅非商用且附則 v1.3 未同步頁首 v1.2、Elfa 舊 docs 路徑 404 但 `get-started/pricing.md` 可讀）維持不變；同網址重複來源條目已整併並保留較早證據。
+
+**新增 2 筆機會**
+
+- `taipei-tvdi-free-ai-vocational-training-116h1`（申請審核制、台灣 Yes、S 級）：臺北市政府勞動局所屬**臺北市職能發展學院 116 年上半年職前訓練**。官方公告與 44 頁招生簡章 PDF 明列「AI 媒體專才×行銷自動化」（520 小時、25 人）與「AI 新媒體運營影音實戰」（480 小時、25 人）等職科，皆為 2027-01-12 開訓、週一至週五全日制，且逐字載明「**培育期間之學雜費、材料費、勞工保險費、職業災害保險費等由本學院負擔**」（設定費與月費皆 0）。限年滿 15 歲以上有就業意願之失業或待業者，須掛號郵寄報名至 **2026-12-02**（郵戳為憑，或 11/30–12/01 現場報名），並經 12/15 筆試 40%＋口試 60% 甄試。
+- `modal-for-builders-compute-credits-2026`（申請審核制、台灣 Unknown、B 級）：Modal 推出的 **Modal for Builders**（`modal.com/builders`），針對有具體 AI 專案要在 Modal 上執行的個人開發者提供 GPU／推論／訓練／Sandboxes 運算額度。官方 FAQ 逐字「**Most projects fall within $1,000–$5,000 in credits. If yours needs more, we'll review it case by case.**」，並明示與 Modal for Startups（創投新創）為不同計畫（「Modal for Builders backs individual projects」）、僅支持少數專案；免申請費，台灣是否在核准範圍與是否需綁卡未載於本頁。
+
+**未納入（保留否決理由）**：子代理原提 `mocas-youth-ai-bootcamp-115`（經濟部商業發展署青年 AI 實戰養成班），經主代理去重比對判定與既有 `aocai-youth-ai-training-2026` 為同一計畫，否決獨立建檔並將其新查得的中華科技大學官方課程頁併入原 ID；其餘否決：數位產業署 GenAI Stars 2026（報名已於 2026-06-23 截止）、商業發展署多店升級第 3 梯（已收錄為 `taiwan-multi-store-ai-upgrade-tier3-2026`）、勞動部高屏澎東分署 AI 智慧商務培訓據點（僅見委辦單位第 02 期簡章 PDF、無分署官網現行招生公告與截止日）、Sea × OpenAI 黑客松台灣站（僅見大學轉知、無官方第一手額度與規則頁）、FreeInference／AnyAPI／Inferbase／Zro／Gonka 等（皆已收錄於資料庫）。
+
+**品質改善（本輪唯一一項）：`tools/round_lock.py` 預設改記父程序 `ppid` 並支援 `--pid` 與 `release --force`**
+
+- 觀察到的問題：上一輪（`6ed60e4`）實測發現 `round_lock.py acquire` 預設記錄執行該 CLI 的短命 Python 子程序 `os.getpid()`，指令返回後該程序立即結束，導致下一秒跑 `status` 就誤判為 `STALE`，回合結束跑 `release` 也因新舊 Python 子程序 pid 不同而被拒絕釋放。
+- 預期結果：跨多次 CLI 呼叫的 `acquire` → `status` → `release` 都能對應到同一個仍存活的父程序（shell／agent runner），並在遇到真正卡死的殘留鎖時可用 `--force` 明確清除。
+- 做法：`default_pid()` 改取 `os.getppid()`（若 `ppid <= 1` 退回 `getpid()`），`acquire`／`release` 支援 `--pid` 指定持有者，`release` 新增 `--force`；`--self-test` 新增跨三個獨立 Python 子程序呼叫 `acquire` → `status` → `release` 的生命週期斷言與 `--force` 測試。
+- 驗證：`python3 tools/round_lock.py --self-test` 通過；本輪實際在兩個不同 turn 執行 `acquire` 與 `status` 均穩定回報 `RUNNING: pid 69102`。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,054 筆，S/A/B/C/D＝139/188/128/275/108）、`node --check app.js`、`node tests/filters.cjs`（全綠；台灣條件適用 154、免費 687、開發者 595、本輪更新 22）、`python3 tools/round_lock.py --self-test`、`python3 tools/queue.py --self-test`、`git diff --check`。
+
+瀏覽器驗證（本機 64041、headless browser）：全庫 1,054 筆、資料更新 2026/11/14 08:27 Asia/Taipei；首頁顯示「20 本輪局部複核／2 新增機會與線索／1032 既有紀錄尚未複核」；概況卡「838 福利研究／154 台灣條件適用（含 S 級 139 筆）／50 政策追蹤／166 觀察線索」；捷徑「本輪更新」22、「台灣條件適用」154、「免費方案」687、「開發者」595；關鍵字「臺北市職能發展學院」回新紀錄（S 級、設定費與月費 US$0、申請截止 2026-12-02 剩 18 天），「Modal for Builders」回新紀錄（B 級、設定費 US$0、月費未列金額），「HeyGen Voice Turbo Free」詳情顯示更新後的「1–10,000 字元」，「青年AI實戰養成班」顯示 2027-03-09 與中華科大 11/30 17:00 截止；「截止日由近到遠」排序前三為 AutoClaw 11/15 23:59（剩 1 天）、騰訊 Hy4 11/15（剩 1 天）、UGREEN 11/16 15:45（剩 2 天）；載入更多 24→48；手機 390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `autoclaw-weekly-perk-november-nine-hundred-million-tokens` 與 `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`（皆於 2026-11-15 到期，next 11/15 09:00）：確認到期前最後狀態及 11/16 起 AutoClaw 是否切換為 M11W3（11/16–11/22）、騰訊中國站體驗版 500 積分是否轉付費。來源 `https://autoclaw.z.ai/blog/news/M11W3/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+② `ugreen-ai-nas-hackathon-2026`（台北 11/16 15:45 截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（11/16 16:00 截止）：截止前確認是否提前關閉與報名人數變化。來源 `https://ugreenhackathon.devpost.com/updates`、`https://its.taiwanjobs.gov.tw/Course/Detail?ID=166783`。
+③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
+④ `vast-startup-spend-match`、`openai-chatgpt-subscriber-api-credits`、`kimi-free-web-app`（皆為 `tools/queue.py` 下一批排程 11/16 12:00 的輪替項目）：確認 Vast.ai 新創儲值匹配、ChatGPT 訂閱者 API credits 與 Kimi Web 免費版條款是否變動。來源 `https://vast.ai/article/vast-for-startups`、`https://help.openai.com/`、`https://www.kimi.com/`。
+⑤ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（皆為 next 11/18）：Adobe 計畫頁兩次逾時，下輪改試瀏覽器直開或 helpx／Wayback；新竹市補助追蹤剩餘經費（11/14 為 NT$192,051／3.3%）是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。

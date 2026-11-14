@@ -12,11 +12,10 @@ pid／主機／開始時間／備註。判斷「有沒有人在跑」用 pid 是
 不靠心跳或超時——回合結束就 release，程序被砍掉則下次 acquire 會把死掉的鎖接管。
 
 用法：
-  python3 tools/round_lock.py status          # 現在有沒有人在寫
-  python3 tools/round_lock.py acquire --note "12:04 這輪"
-  python3 tools/round_lock.py release
-  python3 tools/round_lock.py --self-test     # 以暫存目錄驗證接管與拒絕的規則
-
+  python3 tools/round_lock.py status                   # 現在有沒有人在寫
+  python3 tools/round_lock.py acquire --note "12:04"   # 預設記父程序 ppid，也可用 --pid 指定
+  python3 tools/round_lock.py release                  # 同父程序釋放；殘留鎖可用 --force 清除
+  python3 tools/round_lock.py --self-test              # 以暫存目錄驗證跨子程序生命週期、接管與拒絕規則
 它不阻止任何人寫檔（沒有強制力），但讓「現在有另一個回合在跑」變成一行可查的輸出，
 而不是要等到 git diff 出現幾萬行才發現。搶到鎖之後仍應先跑 `tools/queue.py`，
 避免兩輪挑到同一個 ID。
@@ -54,9 +53,18 @@ def read_lock(path):
         return None
 
 
+def default_pid():
+    """CLI 每次呼叫都是短命的 python 子程序，指令返回後該 pid 立即消失（下一秒 status 就變 STALE、
+    回合結束 release 也會因新舊 python pid 不同而被拒）。預設改記父程序（shell／agent runner）
+    的 ppid，跨指令的 acquire → status → release 才會指向同一個還活著的持有者。
+    """
+    ppid = os.getppid()
+    return ppid if ppid > 1 else os.getpid()
+
+
 def acquire(path, pid=None, host=None, note="", stamp=None):
     """回傳 (ok, message)。活著的持有者存在時不接管——那是別人的回合。"""
-    pid = os.getpid() if pid is None else pid
+    pid = default_pid() if pid is None else int(pid)
     host = socket.gethostname() if host is None else host
     stamp = now_iso() if stamp is None else stamp
     current = read_lock(path)
@@ -73,16 +81,15 @@ def acquire(path, pid=None, host=None, note="", stamp=None):
     return True, (f"locked by pid {pid} at {stamp}" + (f"; took over {stale}" if stale else ""))
 
 
-def release(path, pid=None):
-    pid = os.getpid() if pid is None else pid
+def release(path, pid=None, force=False):
+    pid = default_pid() if pid is None else int(pid)
     current = read_lock(path)
     if not current:
         return False, "no lock to release"
-    if current.get("pid") != pid:
-        return False, f"lock is held by pid {current.get('pid')}, not {pid}; refusing to release"
+    if not force and current.get("pid") != pid:
+        return False, f"lock is held by pid {current.get('pid')}, not {pid}; refusing to release (use --force if stale)"
     path.unlink()
     return True, "released"
-
 
 def status(path):
     current = read_lock(path)
@@ -123,24 +130,51 @@ def self_test():
         assert "STALE" in status(path), status(path)
         ok6, msg6 = acquire(path, pid=me, host=socket.gethostname(), note="resume")
         assert ok6 and "took over" in msg6, msg6
-    print("PASS: round lock (refuses a live holder, takes over a dead pid, only the owner releases).")
+        # 跨子程序生命週期：模擬真實 CLI 分三次獨立 python 程序呼叫 acquire → status → release，
+        # 鎖在第二次呼叫時仍須是 RUNNING（記的是父程序 pid，不是已結束的子程序），且第三次呼叫可正常釋放。
+        ok7, msg7 = release(path, pid=me)
+        assert ok7, msg7
+        import subprocess
+        code = (
+            "import pathlib, sys; "
+            f"sys.path.insert(0, {str(ROOT / 'tools')!r}); "
+            "import round_lock; "
+            f"p = pathlib.Path({str(path)!r}); "
+            "act = sys.argv[1]; "
+            "print(round_lock.acquire(p, note='cli')[1] if act == 'acq' else "
+            "round_lock.status(p) if act == 'st' else round_lock.release(p)[1])"
+        )
+        out_acq = subprocess.check_output([sys.executable, "-c", code, "acq"], text=True).strip()
+        assert f"locked by pid {me}" in out_acq, f"CLI acquire 應記父程序 pid {me}，實際：{out_acq}"
+        out_st = subprocess.check_output([sys.executable, "-c", code, "st"], text=True).strip()
+        assert out_st.startswith(f"RUNNING: pid {me}"), f"跨子程序後鎖不應立刻變 STALE：{out_st}"
+        out_rel = subprocess.check_output([sys.executable, "-c", code, "rel"], text=True).strip()
+        assert out_rel == "released", f"同父程序跨指令 release 應成功：{out_rel}"
+        assert "no round lock" in status(path), "跨指令 release 後應回到沒有鎖"
+        # --force 可清除殘留或不同 pid 的鎖
+        acquire(path, pid=999999, host=socket.gethostname(), note="stale-force")
+        ok8, msg8 = release(path, pid=me, force=True)
+        assert ok8 and msg8 == "released", msg8
+    print("PASS: round lock (refuses a live holder, takes over a dead pid, tracks parent pid across CLI calls, only the owner or --force releases).")
 
 
 def main():
     parser = argparse.ArgumentParser(description="同一個 repo 一次只讓一個維護回合寫入")
     parser.add_argument("action", nargs="?", choices=["status", "acquire", "release"], default="status")
     parser.add_argument("--note", default="")
+    parser.add_argument("--pid", type=int, default=None, help="指定持有鎖的 pid（預設為父程序 ppid）")
+    parser.add_argument("--force", action="store_true", help="release 時強制清除鎖")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
         self_test()
         return
     if args.action == "acquire":
-        ok, message = acquire(LOCK, note=args.note)
+        ok, message = acquire(LOCK, pid=args.pid, note=args.note)
         print(message)
         sys.exit(0 if ok else 1)
     if args.action == "release":
-        ok, message = release(LOCK)
+        ok, message = release(LOCK, pid=args.pid, force=args.force)
         print(message)
         sys.exit(0 if ok else 1)
     print(status(LOCK))
