@@ -3311,3 +3311,44 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ ugreen-ai-nas-hackathon-2026（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
 ④ stepfun-stepaudio3-music-gen-preview-nov8（2026-11-17 11:59:59 截止）與 taoyuan-ai-productivity-online-courses-115（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
 ⑤ aocai-working-free-ai-courses-2026 與 hsinchu-city-ai-youth-digital-tool-subsidy-2026：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
+
+---
+
+## 2026-11-15 03:05–03:15 Asia/Taipei 維護紀錄
+
+**本輪基準與成果總覽**：
+- 既有紀錄數 N = 1,080，成功複核最久未核既有紀錄 R = 20（均依 ID 去重），新增機會 A = 2（機會 2、政策 0、觀察線索 0），未完成複核既有紀錄 U = 1,060（U = N - R = 1,080 - 20），整筆追查失敗 attempted = 0。全庫總紀錄數增至 1,082 筆（866 項機會、50 項政策、166 筆觀察線索）。
+- 台灣條件適用（開放中）由 176 筆增至 178 筆（含 S 級機會 164 筆）；免費專區由 709 筆增至 711 筆。
+
+**複核結果與重大變動**：
+1. `copilotkit-intelligence-developer-free-limits-trial-watch`：核實 Developer 免費方案列示正常，免信用卡，包含 1 席與基本串流功能；更新官方文件並清理重複來源。
+2. `nvidia-dli-teaching-kits-approved-course-codes`：確認 NVIDIA Teaching Kits 計畫正常開放全球大專院校教師申請免費 DLI 自學課程碼與課內 GPU 工作站。
+3. `codex-composer-beta-policy`：複核 OpenAI Codex 官方說明中心文章，確認 Composer beta 預測不耗 credits，送出後方扣額，清理重複來源。
+4. `tavus-developer-basic-free-reset-unconfirmed`：核實 Tavus Free 方案列示每月 20 分鐘對話影片與 1 個並行 session，超額條款維持未核。
+5. `dhanur-paygo-policy`：核實 Dhanur 價格頁終止早期免費存取，新 workspace 提供 ₹25 起始額度，免綁卡無月費。
+6. `ultravox-trial-voice-thirty-min-watch`：核實 Ultravox 價格頁新戶提供 30 分鐘免費語音通話試用，超額 $0.05/分。
+7. `retool-cli-beta-ai-credit-policy`：核實 Retool 官方 CLI 文件與 AI 代理政策。
+8. `datalab-free-thirty-day-work-twenty-personal-ten`：核實 Datalab 官方計費文件 Free Tier 每 30 日免費額度政策。
+9. `copilot-pro-credits`、`aws-activate`、`pinecone-startups-standard`、`portkey-developer-logs`、`context7-free-monthly-thousand-api`、`stability-api-google-signup-twentyfive-credit`、`gravity-free-three-agent-runs`、`eurohpc-ai-factories-industrial`、`huggingface-pro`、`helicone-hobby-qualified-discounts`、`gooey-free-once-five-hundred-noncommercial`、`langfuse-academic-fast-grant` 等 12 筆紀錄：全數打開官方網站確認在線狀態、免費與計費條件，清理歷史積累之重複來源 URL，確保資料簡潔正確。
+
+**新機會收錄（2 筆，具官方來源與條款佐證）**：
+1. `taiwan-nchc-ai-rap-platform-grant`：**國研院國網中心 TAIWAN AI RAP 平台算力支援計畫**，國家高速網路與計算中心打造一站式生成式 AI 應用開發平台，整合國家級 GPU 算力與在地 TAIDE 繁體中文大模型、Llama 等開源模型微調評估工具。開放台灣企業、新創與大專院校學研單位線上申請專案算力試用，全程公費補助 0 元。
+2. `kaggle-google-gemma-4-developer-agent-competition`：**Google The Gemma 4 Developer Agent 競賽（Kaggle）**，Google 贊助主辦之自主代碼修復代理競賽，總獎金池 US$110,000（主預測賽 US$65,000、論文獎 US$35,000、小型模型獎 US$10,000）。2026-11-26 07:59 組隊截止，2026-12-03 07:59 交件截止（台北時間）。台灣開發者可免費報名參賽並享有 Kaggle 每週免費 GPU 運算資源。
+
+**品質改善：清理輪替候選項目中歷史累積的重複來源 URL**
+- 觀察：在複核最久未核案例時，發現部分歷史紀錄（如 `codex-composer-beta-policy`、`tavus-developer-basic-free-reset-unconfirmed`、`dhanur-paygo-policy` 等）在過去多次查核中，同一 URL 被重複追加進 `sources` 陣列，導致資料冗餘並增加驗證負擔。
+- 改善：在更新既有案例時，主動以 URL 去重並保留最新的查核時間與有效 scope，確保每筆來源乾淨無重複，同時確保 `accessed_at` 具有精確的時間戳記。
+- 驗證：`python3 tests/validate.py` 嚴格通過，`tests/filters.cjs` 全綠。
+
+**本輪檢查**：
+- python3 tests/validate.py（PASS，1,082 筆，S/A/B/C/D＝164/189/129/276/108）
+- node --check app.js（PASS，語法正確）
+- node tests/filters.cjs（全綠 PASS）
+- git diff --check（無多餘空白變更）
+
+**下輪優先（完整五項）**：
+① `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15` 與 `autoclaw-weekly-perk-november-nine-hundred-million-tokens`（2026-11-15 23:59 屆滿截止）：查核是否如期截止或展延，以及 AutoClaw M11W3 是否如期啟動。來源 https://www.workbuddy.cn/pricing/、https://autoclaw.z.ai/changelog。
+② `aspn-youth-sports-tech-hackathon-2026`（2026-11-16 12:00 展延截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（2026-11-16 16:00 截止）：確認截止前最後名額與報名表單狀態。來源 https://www.accupass.com/go/aspn-hackathon2026、https://ojt.wda.gov.tw/。
+③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
+④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
+⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
