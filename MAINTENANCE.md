@@ -3002,3 +3002,47 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
 ④ `vast-startup-spend-match`、`openai-chatgpt-subscriber-api-credits`、`kimi-free-web-app`（皆為 `tools/queue.py` 下一批排程 11/16 12:00 的輪替項目）：確認 Vast.ai 新創儲值匹配、ChatGPT 訂閱者 API credits 與 Kimi Web 免費版條款是否變動。來源 `https://vast.ai/article/vast-for-startups`、`https://help.openai.com/`、`https://www.kimi.com/`。
 ⑤ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（皆為 next 11/18）：Adobe 計畫頁兩次逾時，下輪改試瀏覽器直開或 helpx／Wayback；新竹市補助追蹤剩餘經費（11/14 為 NT$192,051／3.3%）是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
+
+## 2026-11-14 09:05–09:28（Asia/Taipei）｜N=1,054、R=20、A=3（3 機會）、U=1,034、attempted=0
+
+**基準**：開場 `HEAD=172f1b6`（`main == origin/main`），工作樹乾淨、`round_lock.py status` 為無鎖，由本回合 `acquire` 鎖定後執行。全庫 1,054 筆（838 機會／50 政策／166 觀察線索）、可行動 967 筆、嚴格逾期 0 筆、7 天內到期 8 筆（皆在 06:33 批次 12 小時冷卻內）、追查失敗 1 筆（`adobe-startups-...` 同在冷卻內）。
+
+**範圍與理由**：依 `python3 tools/queue.py --limit 20` 選出排程在 `2026-11-16 12:00` 最優先輪替的 20 筆紀錄，並以 `queue.py --explain` 驗證 20 筆全數為 `會排入 [rotation]`（無任何 12 小時冷卻或已截止紀錄），交由兩個複核子代理平行查核，第三個子代理負責搜尋台灣政府／學術 AI 培訓補助與國際新機會並對 1,054 筆索引去重：
+- 子代理 A（10 筆）：`vast-startup-spend-match`、`openai-chatgpt-subscriber-api-credits`、`kimi-free-web-app`、`zcode-daily-300m-glm53-flash-claim-watch`、`maritaca-s5-free-limited-launch`、`respan-free-hundred-k-logs-terms-conflict`、`langwatch-developer-free-fiftyk-terms-conflict`、`anthropic-ai-for-science-program-watch`、`claude-oss-six-months-ultra`、`claude-security-enterprise-two-month-credit`。
+- 子代理 B（10 筆）：`coderabbit-startup-annual-half-six-months`、`gmi-a16z-first25-two-k-spend-five-k-credit`、`minimax-design-h3-new-user-watch`、`neo4j-startup-aura-twentyk-application-unavailable`、`openlayer-basic-trial-twentyk-inference-logs`、`synthesia-basic-monthly-ten-min-five-hundred-no-download`、`vultr-new-customer-credit-codes-watch`、`sloyd-guest-daily-plus-separated-pools`、`fireworks-glimmer-sft`、`volcengine-ark-1111-token-giveaway-watch`。
+
+**實質更正與補充**
+
+- `respan-free-hundred-k-logs-terms-conflict`：**Free 方案預設資料保留期（`Default retention period`）由 7 日提高為 30 日**（Team 亦為 30 日，Enterprise 為 Custom）。重讀 `respan.ai/pricing` 比較表確認；100k logs、1k scores、5 datasets、2 evaluators、10 prompts、Proxy 4,200 requests/min 與 Ingestion 412 logs/min 均未變，ToS（2026-10-27）§7 商業用途限制與 §3(6) 自動化存取禁令衝突仍未解。已追加 `policy-history.json`（`quota_change`）。
+- `synthesia-basic-monthly-ten-min-five-hundred-no-download`：**Syren 首發 1,000 credits 的官方到期日出現同頁新舊衝突**。知識庫文章（`help.synthesia.io/en/articles/17697950-how-do-syren-credits-work`，頁面時間戳 `2026-11-12T15:47:32Z`）文末 FAQ「When do Syren launch credits expire?」已改寫為 **`Syren launch credits expire on November 30, 2026 at 23:59 BST`**，但同頁正文「Syren Launch Credits」仍保留 `Expire on November 9, 2026 at 23:59 BST`；定價頁 Basic 卡仍掛「1 Syren video - limited promo」、比較表仍寫「1,000 credits, limited time only」，並新見 Starter 首月 $9（原 $19）、Pro 首月 $49（原 $89）促銷。已保留兩說並追加 `policy-history.json`（`promotion_expiry_revised_conflicting`）。
+- `langwatch-developer-free-fiftyk-terms-conflict`：重讀 `langwatch.ai/docs/pricing` 釐清定價頁「14-day data access」語意——官方文件明寫「Every plan keeps events for 49 days by default」，免費層只是遮蔽超過 14 天的 trace 內容而非刪除，並補記免費組織 Instant Evals 僅有 US$1 總額度；定價頁「€0 free forever」與 ToS（2026-09-22）「14-day free trial … suspended until upgraded」的衝突仍在。
+- `claude-oss-six-months-ultra`：實測條款 §3.1 所列 `claude.com/open-source-max` 以 HTTP 308 永久導向 `claude.com/contact-sales/claude-for-oss`，解除舊紀錄「兩個申請入口何者為現行」的疑問；支援地區頁（Effective Nov 12, 2026）仍列 Taiwan。
+- `openai-chatgpt-subscriber-api-credits`：重讀 `.md` 全文補齊 Business 年繳工作區「全年額度一次發放、年度上限 US$6,000（月繳上限 US$500/月）」與 Pro 升級按比例補發規則；台灣仍列於 API 支援國家清單。
+- 其餘 15 筆（`vast`、`kimi`、`zcode`、`maritaca`、`anthropic-ai-for-science`、`claude-security`、`coderabbit`、`gmi-a16z`、`minimax-design`、`neo4j`、`openlayer`、`vultr`、`sloyd`、`fireworks-glimmer-sft`、`volcengine`）官方頁面全部實讀（Vultr 與 MiniMax／Kimi／Neo4j 申請表以 headless Chromium 渲染），核心條件與既有條款衝突維持不變；`fireworks-glimmer-sft` 與 `volcengine-ark-1111-token-giveaway-watch` 內重複的同網址來源已就地合併並保留較早紀錄。
+
+**新增 3 筆機會**
+
+- `wda-small-enterprise-training-program-116`（條件式、台灣 Yes、S 級）：勞動部勞動力發展署**「小型企業人力提升計畫」（小人提）**。針對受僱勞工參加就業保險人數 50 人以下（未滿 51 人）之民間投保單位，由**政府全額負擔訓練相關費用**（設定費與月費皆 US$0），並指派顧問提供客製化輔導與免費課程規劃；官方 115-06-18 新聞稿明列「數位科技應用、智慧製造、AI導入、節能減碳、ESG管理」為鼓勵規劃領域。115 年度受理已截止，116 年度受理期尚未公告（計畫網已見 116 年度說明會訊息）。
+- `wda-enterprise-hr-upgrade-training-subsidy-116`（條件式、台灣 Yes、S 級）：勞動部勞動力發展署**「企業人力資源提升計畫」（大人提）**。針對就業保險 51 人以上（或未滿 51 人但具 TTQS 通過／曾獲國家訓練獎項／曾接受小人提輔導滿三年）之事業單位，外部訓練依公開收費標準**補助 50%~70%**（雙軸轉型／AI 導入相關外部課程最高 70%），補助上限個別型新臺幣 95 萬元、聯合型 190 萬元、產業推升型 200 萬元；無申請費（設定費 US$0，企業自付 30%~50% 故每月費用記 `null`），依分署計畫頁通則每年度 12/1–12/31 受理下一年度第 1 波申請。
+- `ntu-hua-nan-fintech-ai-hackathon-2026`（方案仍列示、台灣 Yes、S 級）：國立臺灣大學創意創業中心「臺大創新週 2026」之**「臺大×華南金融科技黑客松」**（`tec.ntu.edu.tw/innovation-week`、`luma.com/hccyc199`）。限臺大大學部及研究所一般生（不含在職生），全程免費（含當日午晚餐輕食），賽道為 AI Banking Agents、AI for Trust & Safety、Open Finance × AI，**總獎金新臺幣 18 萬元**（第一名 10 萬＋NTU Ventures Office Hour、第二名 5 萬、第三名 3 萬）；透過 Luma 報名至 **2026-11-23**（須主辦審核），12/1 17:30 開放開發環境、12/4 實體報到與 Live Demo。
+
+**未納入（保留否決理由）**：高屏澎東分署 116 年度第 1 梯次自辦職前訓練（現開第 1 梯次 7 班無 AI 專班，AI 班落在 11/30 才開放的第 2 梯次且簡章為掃描影像 PDF 無法以文字核實費用）、臺中市勞工大學 115 年 AI 課程（115 年班別已結訓、116 年第 1 期尚未開放）、數產署 T 大使計畫（作業要點已於 115-08-18 廢止、改由 UNEXT 承接且 115 年梯次已結束）、臺大創新週學生創新創業競賽（泛創業競賽且與同週金融科技黑客松活動重疊）、元智大學 H200／國網中心教學免費額度與大學算力優惠／勞動部產業人才投資方案／中小及新創署 116 深科技補助／GitHub Copilot 等（皆已收錄於資料庫）。
+
+**品質改善（本輪唯一一項）：`app.js` 的 `closeInstant()` 排除只寫到月份的 `expiry.date`，與 `validate.py`／`queue.py` 對齊**
+
+- 觀察到的問題：`expiry.date` 允許只記到月份（例如 `chatgpt-teachers-us` 的 `2028-06`，代表「免費至 2028 年 6 月」）。`tests/validate.py` 的 `close_points()` 與 `tools/queue.py` 的 `parse_stamp()` 都明文規定「只到月份的值不解析——不猜月末日或月初日」，但前端 `app.js` 的 `closeInstant()` 直接對非 `YYYY-MM-DD` 字串呼叫 `Date.parse(raw)`，在 JS 中 `Date.parse('2028-06')` 會回傳 `2028-06-01T00:00:00.000Z`（1843430400000）。這導致沒有精確日期的 `chatgpt-teachers-us` 在 `soonestClose()` 產生假時間戳，在「截止日由近到遠」排序中被排在所有無截止日紀錄（含 S 級）之前，且一旦只寫年月的紀錄進入 60 天視窗就會在卡片正面顯示以「該月 1 日」計算的錯誤倒數天數。
+- 預期結果：只寫年月的 `expiry.date` 保留在詳情「截止與期限」列呈現原文（`期限 2028-06（來源未列時刻）`），不產生假截止時間戳、不顯示倒數膠囊、不在截止日排序中排進有精確截止日的隊列。
+- 做法：`closeInstant(value)` 開頭加上 `if (!/^\d{4}-\d{2}-\d{2}/.test(raw)) return null;`，要求至少具備完整 `YYYY-MM-DD` 前綴才解析時刻；`tests/filters.cjs` 新增對 `closeInstant('2028-06') === null`、`soonestClose(chatgpt-teachers-us) === null` 以及 60 天內年月字串不顯示 `closeBadge` 的回歸測試。
+- 驗證：`node --check app.js` 與 `node tests/filters.cjs` 通過。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,057 筆，S/A/B/C/D＝142/188/128/275/108）、`node --check app.js`、`node tests/filters.cjs`（全綠；台灣條件適用 157、免費 689、開發者 595、本輪更新 23）、`python3 tools/queue.py --self-test`、`python3 tools/round_lock.py --self-test`、`git diff --check`。
+
+瀏覽器驗證（本機 8992、headless browser）：全庫 1,057 筆、資料更新 2026/11/14 09:26 Asia/Taipei；首頁顯示「20 本輪局部複核／3 新增機會與線索／1034 既有紀錄尚未複核」；概況卡「841 福利研究／157 台灣條件適用（含 S 級 142 筆）／50 政策追蹤／166 觀察線索」；捷徑「本輪更新」23、「台灣條件適用」157、「免費方案」689、「開發者」595；關鍵字「勞動部小人提」「勞動部大人提」「華南金融科技黑客松」「Respan Free」「Synthesia Basic」均回正確卡片與更新後摘要／費用／期限；「截止日由近到遠」排序前五為 AutoClaw 11/15 23:59、騰訊 Hy4 11/15、UGREEN 11/16 15:45、勞動部臺南大學 AI 班 11/16 16:00、StepFun 11/17 11:59；載入更多 24→48；手機 390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `autoclaw-weekly-perk-november-nine-hundred-million-tokens` 與 `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`（皆於 2026-11-15 到期，next 11/15 09:00）：確認到期前最後狀態及 11/16 起 AutoClaw 是否切換為 M11W3（11/16–11/22）、騰訊中國站體驗版 500 積分是否轉付費。來源 `https://autoclaw.z.ai/blog/news/M11W3/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+② `ugreen-ai-nas-hackathon-2026`（台北 11/16 15:45 截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（11/16 16:00 截止）：截止前確認是否提前關閉與報名人數變化。來源 `https://ugreenhackathon.devpost.com/updates`、`https://its.taiwanjobs.gov.tw/Course/Detail?ID=166783`。
+③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
+④ `voyage-free-tokens-batch-excluded`、`xiaomi-mimo-tts-limited-free-api`、`aion-labs-free-daily-api-allowance`、`scaleway-generative-apis-free-million-tokens-audio`（`tools/queue.py` 下一批排程 11/16 12:00–11/17 01:30 的輪替項目）：確認 Voyage 免費 token 排除 Batch 規則、Xiaomi MiMo TTS 限時免費、Aion Labs 日額與 Scaleway 百萬 token 條款。來源 `https://docs.voyageai.com/docs/pricing`、`https://platform.xiaomimimo.com/`、`https://www.aionlabs.ai/`、`https://www.scaleway.com/en/generative-apis/`。
+⑤ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（皆為 next 11/18）：Adobe 計畫頁兩次逾時，下輪改試無頭瀏覽器直開或 helpx／Wayback；新竹市補助追蹤剩餘經費是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。

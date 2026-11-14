@@ -346,9 +346,13 @@ const TAIPEI_DAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Taipei', y
 function nowMs() {
   return Date.now();
 }
+// expiry.date 允許只寫到月份（例：chatgpt-teachers-us 的 2028-06，代表「至 2028 年 6 月」）。
+// Date.parse('2028-06') 在 JS 中會成功解析成該月 1 日 00:00 UTC，於是沒有精確日期的紀錄在
+// 「截止日由近到遠」排序中排在「無截止日」紀錄之前，並在進入 60 天視窗時把月份被當成 1 日倒數。
+// 與 tests/validate.py 的 close_points()、tools/queue.py 的 parse_stamp() 一致：只解析含完整年月日的字串。
 function closeInstant(value) {
   const raw = String(value ?? '').trim();
-  if (!raw) return null;
+  if (!/^\d{4}-\d{2}-\d{2}/.test(raw)) return null;
   if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return Date.parse(`${raw}T23:59:59+08:00`);
   const at = Date.parse(raw);
   return Number.isNaN(at) ? null : at;
