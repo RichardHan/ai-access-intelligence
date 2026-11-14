@@ -3405,3 +3405,56 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
 ④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
 ⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
+
+---
+
+## 2026-11-15 05:05–05:20 Asia/Taipei 維護紀錄
+
+**本輪基準與成果總覽**：
+- 既有紀錄數 N = 1,083，成功局部複核輪替候選既有紀錄 R = 20（均依 ID 去重），新增機會 A = 2（機會 2 筆、政策 0 筆、觀察線索 0 筆），全庫總筆數增至 1,085 筆。
+- 未完成本輪複核之既有紀錄數 U = N − R = 1,063。
+- 整筆追查失敗 attempted = 0。
+
+**複核紀錄明細（20 筆，全數完成官方來源比對與驗證）**：
+1. `ai21-trial-duration-conflict`：重讀官方定價頁、usage-cost 原文與 2026-08-02 版服務條款。新註冊 US$10 額度免卡未變；定價頁（7天）與用量手冊（3個月）之文件矛盾持續存在。
+2. `aryn-docparse-three-month-tenk-monthly`：**重大實質變更**。核實 Aryn 於 2026-03-11 公告被 Glean 收購，雲端 SaaS 服務進入 sunset 退場停運階段；`app.aryn.ai` 註冊頁強制重新導向過渡頁 `/service-transition`，雲端 API 與試用實質關閉；開源 Sycamore 維持 Apache 2.0。狀態由 `active` 調整為 `sunset_announced`。
+3. `baseten-new-workspace-trial`：重讀 billing.md、KB 文章 3999934266 與 5221187836 及條款。新工作區贈額取決於推廣活動未公開固定；預算上限只擋 Model APIs、不停止 Dedicated Deployments 費用；同一 KB 文章首段跨產品共池與末段分產品獨立之矛盾持續存在；§6.3 承諾不以客戶數據訓練模型未變。
+4. `cartesia-free-monthly-twentyk`：重讀 pricing 完整 FAQ、服務條款與 privacy/data-controls。Free 方案每月 20,000 speech credits（TTS/STT 共用池）與 $1 Managed Agents 預付額度未變；免卡、用盡硬停；限個人非商用未變；條款預設用於訓練但提供線上表單 opt-out 未變。
+5. `hyperbrowser-free-starting-fivek-shared`：重讀 pricing 與條款。Free 方案贈送 5,000 API credits（值 $5）、1 並行 session、7 天資料保留；免卡、用盡硬停；條款第 9 節禁止自動化機器人之模板文字與雲端瀏覽器自動化產品定位之形式張力持續存在。
+6. `maxim-developer-free-monthly-tenk-logs`：重讀 evals/pricing 與 webflow.getmaxim.ai 條款。Developer 方案永久免費、最多 3 席、每月 10,000 logs/traces、3 天保留、免卡超額硬停未變；此額度為評估觀測日誌非模型推論；條款承諾不以客戶數據訓練模型；主網域 terms 因架構切換 404 但 Webflow 端點條款有效。
+7. `qodo-fourteen-day-unlimited-trial`：**重大矛盾持續存在**。重讀 pricing、FAQ 與 General/Business 條款。14 天免費試用 Unlimited reviews/credits 免卡未變；期滿程式碼審查自動暫停、無永久免費層未變；定價 FAQ 宣稱「絕不拿代碼訓練模型」，但 General ToS §4.4 明定客戶授權 Qodo 使用 Customer Data 訓練及改進模型之衝突依舊未解。
+8. `scrapfly-signup-thousand-shared-credits`：**文件計費矛盾持續存在**。重讀 pricing、FAQ、Extraction API 文件（rules-and-template、llm-prompt）及條款。註冊送 1,000 API credits 免卡永久有效、用盡硬停未變；llm-prompt 參數每次扣 5 點，template 內 llm_extraction selector 每次扣 1 點之文件差異依舊。
+9. `vapi-free-us-number-not-free-calls`：重讀 free-telephony.md、pricing、billing 文件與 2026-09-14 條款。可免費建 1 個美國電話號碼免卡；起始送 $5 credits；通話不免費（需消耗點數付 $0.05/分 hosting 及原廠模型/語音/電信成本）；僅支援受話、無外撥、不可轉出門號；Add-ons 扣點不足會自信用卡自動扣款未變。
+10. `aliyun-yungongkaiwu-model-studio-teachers`：重讀阿里雲百煉「雲工開物」說明文檔（2026-11-10 更新版）與科研合作頁。高校教師/科研人員享百煉平台 5 折優惠、原價上限 40 萬人民幣（折讓 20 萬），非免費；每日限量 100 位老師；活動至 2027-03-31 未變；排除國際站；教師條款未明示台灣高校納入實名認證，維持 Unknown。
+11. `brave-search-api-free-monthly`：重讀 pricing 與 help-feedback。全線預付儲值制；每 API 方案每月贈 $5 credits，4 方案合計最高 $20；註冊需綁卡防偽（$0/1 預授權立退），儲值額可設 $0，餘額歸零 API 暫停不意外扣款；每月重置不結轉未變。
+12. `e2b-startups-20k-publicity`：重讀 startups、terms.md 與 pricing。新創審核贈一次性 $20,000 沙箱額度與 Pro tier 資格（效期 1 年）；要求成立未滿 3 年、募資 <$5M、公司網域信箱；獲准 7 日內須公開好評並展示 E2B 徽章；2-3 週無回覆即未錄取未變。
+13. `genshi-growth-japan-trial`：重讀利用規約（2026-10-25 版）與首頁。Growth 方案試用期至「申請日次月末日」；月配 560 點；需綁卡；最後一日前未解約次日自動按 JPY 4,800/月續扣；試用解約不收費且可續用至期滿未變。
+14. `langsmith-startups-build-scale`：重讀 startups 與 pricing。Build 方案席位折扣（募資 $25K–$10M）；Scale 方案贈 $10,000 額度（效期 1 年/YC 2 年，募資 <$50M 且須為合作 VC 投資）；限定首次客戶與公司網域；LLM Gateway 額度獨立計費未變。
+15. `llamaparse-free-tenk`：重讀 pricing 與技術計費文件。Pay-as-you-go 免費層每月 10,000 credits、5 並行、10GB 儲存；Agentic Plus 維持 25 credits/頁；超額直接回傳 402 硬停不扣款；啟用 PAYG 超額 $1.50/1k credits 未變。
+16. `llamaparse-startups-two-k`：重讀 startups 專頁。經核准新創享 $2,000 平台額度，效期 1 年；門檻累計股權募資 $250k–$50M、首次客戶；含 Slack 支援與創辦人會議未變。
+17. `turso-starter-free-vector`：重讀 pricing.md、pricing 網頁與 usage-and-billing。Free 方案永久免費、完全免信用卡；100 DB、5GB 空間、每月 5 億讀取及 1,000 萬寫入、3GB 同步；單項超標直接拋 BLOCKED 錯誤碼硬停不扣款未變。
+18. `openrouter-dots3-note-preview-free-until-dec31`：重讀模型專頁與 limits 文件。端點費率 $0、醒目標註 Going away December 31, 2026；512K context、支援圖像與 Tool calling；免綁卡；20 RPM、未儲值每日 50 次、儲值滿 $10 每日 1,000 次未變。
+19. `moea-sme-deep-tech-cross-domain-rd-grant-116`：重讀中企署官方公告與 SBIR 網站。116 年度企業跨域研發補助維持至 115 年 12 月 7 日 17:30 單一受理截止，線上申請無分梯次；聯盟至少 2 家、每案上限 NT$900 萬且經費不逾 50%；補助款 ≦ 自籌款 ≦ 實收資本額未變。
+20. `perplexity-startups-sonar-enterprise-partial`：**重大實質變更**。深入解析官方 Typeform 表單執行數據（`window.rendererData`）：表單內部宣告 `accessScheduling.isFormClosed: true`，明確證實新回覆已關閉受理；表單標題標註為 2025 年舊案；官網主頁 `perplexity.ai/startups` 先前已 301 導向 `/hub`；確認新創申請通道已正式關閉。狀態由 `conditional` 調整為 `applications_closed`。
+
+**新機會收錄（2 筆，具官方來源與條款佐證）**：
+1. `kaggle-name-that-llm-attribution-challenge`：**Google Name That LLM 競賽（Kaggle）**，由 Google 贊助主辦之機器學習競賽，總獎金池達 50,000 美元。參賽者需構建文本作者歸屬模型，針對 40 至 250 字之短文精確辨識背後由 OpenAI、Google、Anthropic 等 18 款頂尖 LLM 中何者生成。獎金採均衡激勵：私有榜前 10 名每隊各獲 US$5,000 現金獎勵。2027-01-06 組隊截止，2027-01-13 最終交件。台灣開發者與研究者可免費參賽，並享有 Kaggle 每週免費 GPU/TPU 雲端算力。
+2. `tw-moe-aicup-2026-vlm-solar-inspection`：**教育部 AI CUP 2026 秋季賽：多模態 VLM 太陽能板瑕疵檢測與根因分析競賽**，教育部資訊及科技教育司推動、陽明交大出題之 AI CUP 2026 秋季賽旗艦議題。參賽者需運用無人機空拍之 RGB 與熱紅外線雙模態影像資料集，結合生成式 AI 與視覺語言模型（VLM），完成太陽能板瑕疵定位並輸出可解釋性瑕疵根因診斷報告。總獎勵達新臺幣 30 萬元及國網中心高效能 GPU 算力資源。中華民國大專院校學生可角逐獎金與算力，目前延長報名中（至 2026-11-30 23:59）。
+
+**品質改善：核實並更新兩筆關鍵過期/終止案例的真實狀態**
+- 觀察：在過往維護中，`aryn-docparse-three-month-tenk-monthly` 與 `perplexity-startups-sonar-enterprise-partial` 一直標記為 active 或 conditional，因行銷首頁仍殘留舊文案或表單外殼尚在。使用者可能誤以為仍可申請免卡 3 個月試用或 $5,000 新創額度。
+- 改善：深入查核證實 Aryn 已被 Glean 收購且雲端 SaaS 服務公告退場（sunset），控制台註冊直接跳轉過渡頁；Perplexity 申請 Typeform 內部數據明確標記 `isFormClosed: true`。將此兩筆案例分別精確標記為 `sunset_announced` 與 `applications_closed`，避免讀者徒勞嘗試。
+- 驗證：`python3 tests/validate.py` 嚴格通過，`tests/filters.cjs` 全綠。
+
+**本輪檢查**：
+- python3 tests/validate.py（PASS，1,085 筆，S/A/B/C/D＝167/188/129/276/109）
+- node --check app.js（PASS，語法正確）
+- node tests/filters.cjs（全綠 PASS）
+- git diff --check（無多餘空白變更）
+
+**下輪優先（完整五項）**：
+① `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15` 與 `autoclaw-weekly-perk-november-nine-hundred-million-tokens`（2026-11-15 23:59 屆滿截止）：查核是否如期截止或展延，以及 AutoClaw M11W3 是否如期啟動。來源 https://www.workbuddy.cn/pricing/、https://autoclaw.z.ai/changelog。
+② `aspn-youth-sports-tech-hackathon-2026`（2026-11-16 12:00 展延截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（2026-11-16 16:00 截止）：確認截止前最後名額與報名表單狀態。來源 https://www.accupass.com/go/aspn-hackathon2026、https://ojt.wda.gov.tw/。
+③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
+④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
+⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
