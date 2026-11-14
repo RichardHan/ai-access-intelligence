@@ -618,6 +618,21 @@ const freeWithSources=d.offers.filter(o=>JSON.stringify(o).includes('免費')).l
 assert(freeHits<=freeWithoutSources,`search hits (${freeHits}) must not exceed records whose own fields mention the term (${freeWithoutSources})`);
 assert(freeHits<freeWithSources,`search must exclude source evidence: ${freeHits} hits vs ${freeWithSources} records that mention it anywhere`);
 console.log('PASS: keyword search reads claim fields only — no JSON key names, no source evidence, no timestamps ('+freeHits+' 免費 hits).');
+// 巢狀物件（例如 quota_details 內的子表格與速率限制字典）在詳情由 display() 遞迴展開顯示，
+// 但舊版 searchText() 只用 Object.values(value).join(' ') 展開一層，導致第二層物件被轉成
+// 字面字串 "[object Object]"：2026-11-14 統計 voyage-free-tokens-batch-excluded 的
+// multimodal_table（含 voyage-multimodal-3.5／voyage-multimodal-3）與
+// reka-vision-three-hour-evaluation 的 rate_limits_per_api_key_rolling_24h 都被壓成
+// "[object Object]"，使卡片詳情明明顯示 voyage-multimodal-3.5 卻搜不到，反而搜 "[object" 會假命中。
+const voyage=d.offers.find(o=>o.id==='voyage-free-tokens-batch-excluded');
+assert(voyage,'expected voyage-free-tokens-batch-excluded record');
+assert(f(voyage,{q:'voyage-multimodal-3.5'}),'nested model names in quota_details must be searchable');
+assert(!f(voyage,{q:'multimodal_table'}),'nested JSON keys must still not be searchable');
+for(const o of d.offers){
+  const st=ctx.searchText(o);
+  assert(!st.includes('[object object]'),`searchText must recursively unwrap nested objects instead of emitting [object Object]: ${o.id}`);
+}
+console.log('PASS: searchText recursively unwraps nested objects without emitting [object Object] or indexing JSON keys.');
 
 // 「本次核實範圍」是一個主張，不是一個欄位名稱。2026-11-10 統計 99 筆已標「官方」的紀錄沒有
 // verification_scope，卡片卻一律印「本次核實範圍：僅限各來源列明主張…」——讀者看到的是「這輪核過、

@@ -30089,5 +30089,72 @@
       "https://ncu.uedu.tw/faq",
       "https://uedu.tw/"
     ]
+  },
+  {
+    "record_id": "moe-ilink-aiea-winter-2026-teacher-workshops",
+    "recorded_at": "2026-11-14T14:16:00+08:00",
+    "change_type": "form_session_status_and_lunch_fee_verified",
+    "summary": "解析 Google 報名表單內嵌題目（FB_PUBLIC_LOAD_DATA_）確認：11/06、11/07 四場次於表單內已標「（已額滿）」（AIEA 網頁仍標報名中），11/20、11/21、12/04、12/05 八場次仍開放勾選參加；表單明定課程開始逾一小時不受理補簽，且無課程收費欄位，僅有可選的代訂午餐便當（NT$120／份，當日報到付現，可選不代訂）。",
+    "sources": [
+      "https://forms.gle/ViG5qCeBpJ3NL1K3A",
+      "https://www.ilink-hss.org/AIEA"
+    ]
+  },
+  {
+    "record_id": "lg-exaone-25-api-free-noncommercial",
+    "recorded_at": "2026-11-14T14:08:21+08:00",
+    "change_type": "default_daily_rate_limit_published",
+    "summary": "EXAONE API 平台 FAQ 擴充為 10 題，faq11 首次公布「Default API rate limit: 100 calls per day」，並說明選用同意（Usage Data Analysis for AI Model Training and Service Improvement）可取得更高每日上限。原紀錄判定「未公布固定配額」，改以 quota_classification=HIGH BUT LIMITED 並改寫 quota_details；rate-limits 文件仍只給標頭範例，RPM／token 上限與選用後的實際上限仍未公布。",
+    "sources": [
+      "https://docs.exaone.ai/en/terms/faq",
+      "https://docs.exaone.ai/en/docs/rate-limits"
+    ]
+  },
+  {
+    "record_id": "google-students-tw-plus",
+    "recorded_at": "2026-11-14T14:12:53+08:00",
+    "change_type": "offer_terms_exclusion_list_edited_without_version_bump",
+    "summary": "Google One 學生優惠條款（one.google.com/offer/studentoffer8）的國家／地區排除名單在 2026-10-01 至 2026-11-03 之間被改寫：由「玻利維亞、阿爾巴尼亞、加拿大、香港、澳門、突尼西亞」縮為「香港、澳門、突尼西亞」，頁面 Last updated 仍停在 2026-08-19，官方未公告。同時該頁未列美國，而說明中心 answer/17422238 的 12 個月 AI Plus 試用段仍列美國，台灣學生頁 FAQ 仍寫限美國大學生，三份官方文件對美國是否排除無單一說法；台灣資格與 12/31 兌換期限、期滿 NT$165／月未變。",
+    "sources": [
+      "https://one.google.com/offer/studentoffer8",
+      "https://web.archive.org/web/20261001050851/https://one.google.com/offer/studentoffer8",
+      "https://web.archive.org/web/20261103193359/https://one.google.com/offer/studentoffer8",
+      "https://support.google.com/googleone/answer/17422238?hl=zh-Hant",
+      "https://gemini.google/tw/students/?hl=zh-TW"
+    ]
+  },
+  {
+    "record_id": "antigravity-free",
+    "recorded_at": "2026-11-14T14:11:00+08:00",
+    "change_type": "free_model_lineup_expanded",
+    "summary": "官方 changelog 顯示 Gemini 4 Carbon（2026-11-10）、Gemini 4 Hydrogen 與 Orchestrator（2026-11-12）上線；models 頁方案表把 Gemini 4 Hydrogen 列為 Free & Google AI Plus 可用，免費層自 11-12 起多出一個 Gemini 4 系列模型，Orchestrator 與 Gemini 4 Argon、Claude 5.5 系列仍限付費／Ultra。同一頁仍註 Claude Sonnet 4.6／Opus 4.6／GPT-OSS-120b「Will be removed on November 18, 2026」。官方內部不一致：11-12 部落格稱 Hydrogen 先開放付費 Pro／Ultra 訂閱者，與 models 頁免費欄 ✅ 衝突，免費層能否選用 Hydrogen 待確認。",
+    "sources": [
+      "https://antigravity.google/docs/models",
+      "https://antigravity.google/docs/changelog",
+      "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity"
+    ]
+  },
+  {
+    "record_id": "perplexity-watch",
+    "recorded_at": "2026-11-14T14:16:32+08:00",
+    "change_type": "pricing_source_gap_resolved",
+    "summary": "Help Center 鏡像 llms-full.txt 於 2026-11-14 首次可讀（先前連三日 404），其中「Using the Connector for Slack」文章首次給出 Pro 官方價格原文：US$20／月或 US$200／年，並列 Enterprise Pro US$40／月或 US$400／年每席、Enterprise Max US$325／月或 US$3,250／年每席；先前「Pro 月費無官方原文」的缺口因此關閉。免費 Pro Search 上限仍是兩說並存（比較表 3/day vs 帳戶管理文 five per day），未收斂。",
+    "sources": [
+      "https://perplexity-help-center.mintlify.app/llms-full.txt",
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/12167980-using-the-connector-for-slack.md",
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you.md",
+      "https://perplexity-help-center.mintlify.app/help-center/en/articles/10352998-account-management-and-security.md"
+    ]
+  },
+  {
+    "record_id": "satfaq-ai-trial-index",
+    "recorded_at": "2026-11-14T14:13:10+08:00",
+    "change_type": "trial_user_campaign_added",
+    "summary": "官方 2026-11-02 新公告把 2,000 點混合型 AI 機器人試用擴及『さっとFAQ』免費試用中的客戶（原本僅限 Basic 以上既有客戶）：活動期間 2026-09-30～2027-03-31，點數與機器人用至試用結束日，未升級 AI 方案者於試用結束後刪除；仍須管理畫面啟用、活動中不可加購點數、可改自帶 OpenAI API key。既有客戶版（至 2026-12-31）同時並存。",
+    "sources": [
+      "https://www.satfaq.jp/news/20261102",
+      "https://www.satfaq.jp/news/20260918_2/",
+      "https://www.satfaq.jp/news/20260918_1/"
+    ]
   }
 ]

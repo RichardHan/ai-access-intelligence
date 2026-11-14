@@ -194,18 +194,21 @@ const SEARCH_FIELDS = [
   'announcement_at'
 ];
 
+function collectSearchValues(value, parts) {
+  if (value === null || value === undefined || value === '') return;
+  if (Array.isArray(value)) {
+    for (const item of value) collectSearchValues(item, parts);
+  } else if (typeof value === 'object') {
+    for (const item of Object.values(value)) collectSearchValues(item, parts);
+  } else {
+    parts.push(String(value));
+  }
+}
+
 function searchText(offer) {
   const parts = [];
   for (const field of SEARCH_FIELDS) {
-    const value = offer[field];
-    if (value === null || value === undefined || value === '') continue;
-    if (Array.isArray(value)) {
-      parts.push(value.map(item => (item && typeof item === 'object' ? Object.values(item).join(' ') : item)).join(' '));
-    } else if (typeof value === 'object') {
-      parts.push(Object.values(value).join(' '));
-    } else {
-      parts.push(String(value));
-    }
+    collectSearchValues(offer[field], parts);
   }
   return parts.join(' ').toLowerCase();
 }
