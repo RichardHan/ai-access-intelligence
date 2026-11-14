@@ -80,6 +80,13 @@ for(const o of d.offers){
   const flagged=!!ctx.latestAttemptFailed(o);
   const expected=!!(o.last_review_attempt_at&&(!o.verified_at||Date.parse(o.last_review_attempt_at)>Date.parse(o.verified_at)));
   assert.strictEqual(flagged,expected,`attempt marker disagrees with data in ${o.id}`);
+  if(o.last_review_attempt_at){
+    const dRows=ctx.createDetails(o).children.find(n=>n.tagName==='dl').children;
+    const expectedLabel=flagged?'最近來源追查':'過往追查紀錄（後續已核實）';
+    const found=dRows.find(r=>r.children[0].textContent===expectedLabel);
+    assert(found,`detail row label for last_review_attempt_at disagrees with latestAttemptFailed in ${o.id}`);
+    assert(!dRows.find(r=>r.children[0].textContent===(flagged?'過往追查紀錄（後續已核實）':'最近來源追查')),`contradictory attempt label in ${o.id}`);
+  }
 }
 console.log(`PASS: latest failed lookup is marked on the card face (${staleAttempts.length} records) and never overrides a newer verification.`);
 

@@ -3046,3 +3046,49 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
 ④ `voyage-free-tokens-batch-excluded`、`xiaomi-mimo-tts-limited-free-api`、`aion-labs-free-daily-api-allowance`、`scaleway-generative-apis-free-million-tokens-audio`（`tools/queue.py` 下一批排程 11/16 12:00–11/17 01:30 的輪替項目）：確認 Voyage 免費 token 排除 Batch 規則、Xiaomi MiMo TTS 限時免費、Aion Labs 日額與 Scaleway 百萬 token 條款。來源 `https://docs.voyageai.com/docs/pricing`、`https://platform.xiaomimimo.com/`、`https://www.aionlabs.ai/`、`https://www.scaleway.com/en/generative-apis/`。
 ⑤ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（皆為 next 11/18）：Adobe 計畫頁兩次逾時，下輪改試無頭瀏覽器直開或 helpx／Wayback；新竹市補助追蹤剩餘經費是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
+
+## 2026-11-14 12:05–12:28（Asia/Taipei）｜N=1,057、R=20、A=4（4 機會）、U=1,037、attempted=0
+
+**基準**：開場 `HEAD=a426f27`（`main == origin/main`），工作樹乾淨、`round_lock.py status` 為無鎖，由本回合 `acquire`（pid 89321）鎖定後執行。全庫 1,057 筆（841 機會／50 政策／166 觀察線索）、可行動 970 筆、嚴格逾期 0 筆、7 天內到期 8 筆（皆在 06:33 批次 12 小時冷卻內）、追查失敗 1 筆（`adobe-startups-...` 同在冷卻內）。
+
+**範圍與理由**：依 `python3 tools/queue.py --limit 20` 選出排程在 `2026-11-16 12:00` 至 `2026-11-17 09:00` 最優先輪替的 20 筆紀錄，並以 `queue.py --explain` 驗證 20 筆全數為 `會排入 [rotation]`（無任何 12 小時冷卻或已截止紀錄），交由兩個複核子代理平行查核，第三個子代理與主代理平行搜尋台灣大專校院／研究機構 AI 平台、全國性 AI 競賽與開發者機會並對 1,057 筆索引去重：
+- 子代理 A（10 筆）：`voyage-free-tokens-batch-excluded`、`xiaomi-mimo-tts-limited-free-api`、`aion-labs-free-daily-api-allowance`、`scaleway-generative-apis-free-million-tokens-audio`、`meta-muse-free`、`routeway-free-models-two-hundred-daily-requests`、`maximo-platform-new-account-five-credit`、`did-mobile-fourteen-day-twelve-credit-trial-scope-watch`、`opencode-accountless-free-models`、`perch-starter-free-monthly-twenty-k-hosted-cli`。
+- 子代理 B（10 筆）：`nousresearch-portal-free-models`、`chatgpt-dots`、`hetzner-inference-experimental-free`、`crawl4ai-cloud-monthly-thousand-no-card`、`duck-ai-free-chat`、`daytona-startup-amount-conflict`、`sambanova-access-policy`、`yuanta-securities-gemini-enterprise-six-months-2026`、`moe-library-aihub-seat-trial-free-paid-ai`、`qoder-lite`。
+
+**實質更正與補充**
+
+- `nousresearch-portal-free-models`：**Free Models 免費模型陣容由 4 款縮為 3 款**。重讀 `portal.nousresearch.com/models` 與 `manage-subscription`（以無頭 Chromium 渲染），`Reflection Beam 1.0 501B A23B` 已自免費目錄移除（全頁 0 命中），現剩 `LongCat-2.5:Free`、`StepFun Step 3.7 Flash` 與 `Xiaomi MiMo-V2.6-Flash:Free` 三款；模型總數由 342 增至 346，Free 方案價格與限制（US$0、Free models only、Standard rate limits、$0 monthly credits）未變。已追加 `policy-history.json`（`free_lineup_change`）。
+- `perch-starter-free-monthly-twenty-k-hosted-cli`：**官方兩頁對 Starter 免費模型陣容出現落差**。重讀 `perchai.app/docs/plans/starter` 與 `perchai.app/pricing`，Starter 文件免費陣容段現僅列 `DeepSeek V4.1 Flash`、`GLM 5.3 Flash` 及限時至 `November 20, 2026, at noon Eastern` 的 `Qwen 3.8 Max`（不再列 `Laguna S 2.1`），但 `pricing` 頁 Starter 卡仍列 `Laguna S 2.1`；每月 20,000 PT 免卡額度與 Starter Data Program 預設開啟規則不變。已保留兩說並追加 `policy-history.json`（`official_statement_inconsistency`）。
+- `opencode-accountless-free-models`：**服務條款生效日更新為 2026-11-08，且淘汰表新增 Crouton Alpha Free（2026-11-09）**。重讀 `opencode.ai/legal/terms-of-service` 與 `docs/console/models/`，ToS 改版說明為涵蓋第三方服務整合，免費轉收費通知、內部自用與禁多帳號規避額度仍保留；現行免費表列 14 款 Free 模型（含 `Jev 1.13 Free` 結構化決策模型）。已追加 `policy-history.json`（`tos_and_model_lineup_update`）。
+- `maximo-platform-new-account-five-credit`：**API 資料政策於今日（2026-11-14）改版，文件新增 `maximo-decisions-1`**。以無頭瀏覽器渲染 `maximoai.co/platform/data-policy` 與 `docs`，頁尾更新為 `Last Updated: November 14, 2026`（零訓練與約 30 日日誌暫存未變，新增 TLS 1.2+/AES-256、API key 雜湊與 Notebook 持續記憶說明）；新帳戶驗證信箱贈 US$5 試用額度仍在。已追加 `policy-history.json`（`terms_and_catalog_update`）。
+- `daytona-startup-amount-conflict`：**首次以無頭 Chromium 成功渲染 Notion 正式條款正文**，補齊前幾輪「條款頁僅得空殼」的證據缺口：確認正式條款仍為 `Last updated 5 June 2025`、第 1.2 條入選 US$10,000 起且里程碑合計上限 US$50,000、第 2.1 條設立不超過 5 年且募資低於 US$15M；與新創專頁 `up to $100k` 的衝突維持並存。
+- `hetzner-inference-experimental-free`：重讀 `experiments-platform`（2026-11-09 更新，載明 OpenClaw 實驗結束）與 `inference` 文件，Qwen3.6-35B-A3B-FP8／Qwen3.8-27B 實驗期免費與每 API key 60 秒 4M 輸入／100k 輸出 tokens、10 次請求限速不變；兩份官方文件僅寫面向 Hetzner 客戶、未見身分驗證字樣，已修正資格表述並追加 `policy-history.json`（`terms_clarification`）。
+- 其餘 14 筆（`voyage`、`xiaomi-mimo`、`aion-labs`、`scaleway`、`meta-muse`、`routeway`、`did-mobile`、`chatgpt-dots`、`crawl4ai`、`duck-ai`、`sambanova`、`yuanta-securities`、`moe-library-aihub`、`qoder-lite`）官方頁面全部實讀，核心條件與既有衝突維持不變（`chatgpt-dots` 另補企業管理員指南 `.md` 證據；`yuanta-securities` 補記 2027/01/13 前須回覆紙本領獎同意簽收函）。
+
+**新增 4 筆機會**
+
+- `nkust-iai-campus-h200-shared-api`（條件式、台灣 Yes、S 級）：國立高雄科技大學**「高科 iAI」全校共享 H200 AI API 服務**（`nkust.edu.tw/p/406-1000-104241,r1363.php`、`iai.nkust.edu.tw`）。校方將燕巢校區機房 16 張 NVIDIA H200 GPU 轉為全校師生共享之 OpenAI 相容 API（Base URL `https://www.iai.nkust.edu.tw/aihub/v1`），涵蓋 LLM、Embedding、多模態、ASR、TTS 與影像生成；校內師生免費申請 API Key（課程使用由教師分配課程額度），限校內教學與研究，嚴禁商業使用（違者永久終止金鑰並追繳等值算力費）。
+- `ntpu-ai-free-campus-generative-platform`（方案仍列示、台灣 Yes、S 級）：國立臺北大學跨域人工智慧前瞻研究中心（NTPU AI4X）之**「NTPU AI」教職員生免費生成式 AI 平台**（`ai4x.ntpu.edu.tw/aiservices.html`、`ai.ntpu.edu.tw`）。對全校教職員與學生免費開放（設定費與月費皆 US$0），須以學校信箱經校內 SSO 登入（另開放訪客試用，對話不儲存），系統依問題難度自動路由小／中／大級距模型（列有 Haiku 5.5、Gemini Flash-Lite、Sonnet 5.5、Gemini Flash、Opus 5.5、Gemini Pro）。
+- `sinica-its-ai-api-two-million-tokens-daily`（條件式、台灣 Yes、S 級）：中央研究院資訊服務處**「AI API 服務」**（`its.sinica.edu.tw/posts/190435`）。院內地端自建 LLM API，資料全程不出內網、不留存且不用於模型訓練；限中研院研究人員（助研究員及研究助技師（含）以上人員）線上申請 API Key，每筆金鑰免費享有**每分鐘 60 次請求（60 RPM）、每日 200 萬 tokens、同時連線數 3**，金鑰效期 1 年可展延，限院內學術研究且嚴禁轉供院外系統。
+- `fgu-three-good-ai-innovation-contest-2026`（方案仍列示、台灣 Yes、S 級）：佛光大學**2026「三好 AI 創新應用競賽」**（`3goodai.fgu.edu.tw`）。分為高中職組、大專組（含碩博士生）及社會組（教師、行政人員、社會人士，可跨校跨機構 1–5 人組隊），免報名費，參賽作品須實際運用 AI 工具完成可觀看／操作之數位作品，**總獎金新臺幣 46 萬元**（4 個組類各取冠軍 5 萬、亞軍 2 萬、季軍 1 萬、最佳三好創新獎與四給精神獎各 5 千，另跨組評選林燈 AI 公益特別獎 5 萬／2 萬／1 萬與潛力獎 5 千×4 隊）；線上報名及完整作品上傳至 **2026-11-30** 截止。
+
+**未納入（保留否決理由）**：商研院服務業人才韌性計畫免費 AI 課程（已收錄於 `aocai-working-free-ai-courses-2026`）、工研院免費 AI 課程系列（同屬 `aocai-working-free-ai-courses-2026` 與 `watchlist-itri-college-free-ai-courses-2027`）、經濟部產業競爭力輔導團人培課程（已收錄於 `cpc-moeai-elite-free-ai-course-115`）、數發部 115 年免費 AI 算力資源（已收錄於 `taiwan-adi-ai-compute-115` 且 10/30 已截止）、文化部地方創生 AI 數位轉型增能課程 2,000 元工具補助（8/20 與 10/29 兩場皆已辦畢）、嘉義市 No.600 培養皿 ChatGPT 文書力（名額 0 人已額滿）、臺中市勞工大學 AI 課程（須先繳學費且報名期已過）、東吳大學 AI 黑客松（10/26 截止）、和泰 AI 黑客松（10/14 截止）、高科大新尖兵班與高屏澎東據點班（屬已收錄制度且僅見委辦簡章 PDF）。
+
+**品質改善（本輪唯一一項）：`app.js` 卡片詳情列區分「最近來源追查」與「過往追查紀錄（後續已核實）」**
+
+- 觀察到的問題：當一筆紀錄過去曾發生來源讀取失敗（留有 `last_review_attempt_at`），而後續回合已改道成功核實（`verified_at >= last_review_attempt_at`）時，卡片正面的 `latestAttemptFailed(offer)` 已正確不顯示「追查未成功」膠囊，但 `createDetails(offer)` 仍無條件把 `last_review_attempt_at` 渲染為 `最近來源追查`。全庫有 20 筆紀錄屬此情況（含本輪複核的 `qoder-lite`，以及今日 09:18 剛核實的 `kimi-free-web-app`、`coze-free-builder-daily-credits` 等）：讀者在詳情看到 `核實時間：2026/11/14 09:18 Asia/Taipei` 的正下方緊接著 `最近來源追查：2026/11/09 17:46；…本輪未能重讀官方頁`，造成同一張卡片自我矛盾。
+- 預期結果：保留歷史追查紀錄不刪除；當最新一次查核仍是失敗（`latestAttemptFailed(offer)` 為真，目前全庫 3 筆）時，詳情維持顯示 `最近來源追查`；當後續已有更新的成功核實（全庫 20 筆）時，詳情改標為 `過往追查紀錄（後續已核實）`，不再把舊失敗冒稱為最近一次追查。
+- 做法：`app.js` 的 `createDetails(offer)` 以 `latestAttemptFailed(offer) ? '最近來源追查' : '過往追查紀錄（後續已核實）'` 決定標籤；`tests/filters.cjs` 新增對全庫所有含 `last_review_attempt_at` 紀錄的詳情列標籤一致性斷言。
+- 驗證：`node --check app.js`、`node tests/filters.cjs` 與本機無頭瀏覽器實測 `Qoder Lite`（顯示「過往追查紀錄（後續已核實）」）及 `Adobe for Startups`（顯示「最近來源追查」）均通過。
+
+**本輪檢查**：`python3 tests/validate.py`（PASS，1,061 筆，S/A/B/C/D＝146/188/128/275/108）、`node --check app.js`、`node tests/filters.cjs`（全綠；台灣條件適用 161、免費 693、開發者 595、本輪更新 24）、`python3 tools/queue.py --self-test`、`python3 tools/round_lock.py --self-test`、`git diff --check`。
+
+瀏覽器驗證（本機 50260、headless browser）：全庫 1,061 筆、資料更新 2026/11/14 12:24 Asia/Taipei；首頁顯示「20 本輪局部複核／4 新增機會與線索／1037 既有紀錄尚未複核」；概況卡「845 福利研究／161 台灣條件適用（含 S 級 146 筆）／50 政策追蹤／166 觀察線索」；捷徑「本輪更新」24、「台灣條件適用」161、「免費方案」693、「開發者」595；關鍵字「高科 iAI」「NTPU AI」「中央研究院 AI API」「三好 AI」「Nous Portal Free」「Qoder Lite」「Adobe for Startups」均回正確卡片、費用、期限膠囊與追查標籤；「截止日由近到遠」排序前三為 AutoClaw 11/15 23:59、騰訊 Hy4 11/15、UGREEN 11/16 15:45；載入更多 24→48；手機 390px 寬 `scrollWidth=390` 無水平溢出、console error 0。
+
+**下輪優先（完整五項）**
+
+① `autoclaw-weekly-perk-november-nine-hundred-million-tokens` 與 `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`（皆於 2026-11-15 到期，next 11/15 09:00）：確認到期前最後狀態及 11/16 起 AutoClaw 是否切換為 M11W3（11/16–11/22）、騰訊中國站體驗版 500 積分是否轉付費。來源 `https://autoclaw.z.ai/blog/news/M11W3/`、`https://www.codebuddy.ai/docs/ide/Account/Subscription`。
+② `ugreen-ai-nas-hackathon-2026`（台北 11/16 15:45 截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（11/16 16:00 截止）：截止前確認是否提前關閉與報名人數變化。來源 `https://ugreenhackathon.devpost.com/updates`、`https://its.taiwanjobs.gov.tw/Course/Detail?ID=166783`。
+③ `stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（11/17 最後一場）：確認 StepFun 免費 preview 是否退役或展延、桃園課程 11/17 Teams 連結與截止日矛盾是否更新。來源 `https://platform.stepfun.ai/docs/en/api-reference/audio/music.md`、`https://www.tiiai.org.tw/training/detail/45`。
+④ `nanonets-50-credits-no-card`、`articul8-bivia-early-adopter-billion-tokens`、`github-copilot-student`、`udio-free-music-credits`、`kiro-startup-pro-plus-2026`（`tools/queue.py` 下一批排程 11/17 09:00–12:00 的輪替項目）：確認 Nanonets 免卡額度、Articul8 註冊入口、GitHub Copilot 學生方案、Udio 免費點數與 Kiro 新創方案現況。來源 `https://nanonets.com/pricing`、`https://www.articul8.ai/`、`https://docs.github.com/en/copilot`、`https://www.udio.com/pricing`、`https://kiro.dev/`。
+⑤ `adobe-startups-free-year-firefly-acrobat-semrush` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（皆為 next 11/18）：Adobe 計畫頁逾時，下輪改試無頭瀏覽器直開或 helpx／Wayback；新竹市補助追蹤剩餘經費是否用罄。來源 `https://business.adobe.com/solutions/startups.html`、`https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323`。
