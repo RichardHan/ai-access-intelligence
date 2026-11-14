@@ -125,10 +125,10 @@ function presetMatches(o, preset, filters) {
 function viewMatches(o, view) {
   if (view === 'unlimited') return UNLIMITED_QUOTA.has(o.quota_classification);
   // 免費專區是可採取行動的入口，必須由 schema 管制的費用欄位判定，不能只靠人工 views 標記：
-  // 設定費與每月費用皆為 0 者一律列入；每月費用未知（null）者只在明確標記 free 時列入；
-  // 已知每月費用 > 0 的試用不得列入（曾把 US$29.99/月 的七日試用列為免費方案）。
+  // 設定費與每月費用皆為 0 者一律列入；費用未知（null）者只在明確標記 free 時列入；
+  // 已知設定費 > 0（例：需先儲值 US$1 開通）或每月費用 > 0（例：US$29.99/月 試用）者一律不列入。
   if (view === 'free') {
-    if ((o.recurring_cost_usd || 0) > 0) return false;
+    if ((o.setup_cost_usd || 0) > 0 || (o.recurring_cost_usd || 0) > 0) return false;
     if (o.setup_cost_usd === 0 && o.recurring_cost_usd === 0) return true;
     return (o.views || []).includes('free');
   }
@@ -588,6 +588,8 @@ function createCard(offer) {
   // 在卡片正面列出 cost_note（`tests/validate.py` 對非已截止者強制要求），完整說明仍留在詳情。
   if ((offer.recurring_cost_usd || 0) > 0 && offer.cost_note) {
     card.append(text('p', `每月費用說明：${display(offer.cost_note)}`, 'cost-basis'));
+  } else if ((offer.setup_cost_usd || 0) > 0 && offer.cost_note) {
+    card.append(text('p', `設定費說明：${display(offer.cost_note)}`, 'cost-basis'));
   } else if ((offer.setup_cost_usd === null || offer.recurring_cost_usd === null) && offer.cost_note) {
     // 反過來的情況同樣誤導：費用欄位是 null 時卡片正面只印得出「設定費 未列金額／每月費用 未列金額」，
     // 而真正說明「要綁卡、超額自動扣款、折扣不是免費」的那句話被鎖在詳情裡。

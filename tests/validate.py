@@ -294,8 +294,8 @@ for o in d['offers']:
  # US$200、Supermemory Scale US$399），其中 5 筆連一句說明都沒有。費用欄位是歷史事實、不改，
  # 但非已截止的這類紀錄必須用 cost_note 說明那個月費是什麼（期滿續用價／替代付費方案／試用後
  # 自願升級），卡片正面才會出現「每月費用說明」。setup_cost_basis 只講設定費，不算說明。
- if o.get('status') not in dead and 'FREE' in (o.get('categories') or []) and (o.get('recurring_cost_usd') or 0)>0:
-  assert isinstance(o.get('cost_note'), str) and o['cost_note'].strip(), f'FREE tag with a known monthly fee needs a cost_note explaining the fee: {o["id"]}'
+ if o.get('status') not in dead and 'FREE' in (o.get('categories') or []) and ((o.get('setup_cost_usd') or 0)>0 or (o.get('recurring_cost_usd') or 0)>0):
+  assert isinstance(o.get('cost_note'), str) and o['cost_note'].strip(), f'FREE tag with a known setup or monthly fee needs a cost_note explaining the fee: {o["id"]}'
  assert isinstance(o.get('unknowns'), list) and all(isinstance(u, str) and u.strip() for u in o['unknowns']), f'invalid unknowns in {o["id"]}'
  assert set(['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note'])<=set(o['eligibility'])
  assert all(isinstance(o['eligibility'].get(k), str) and o['eligibility'][k].strip() for k in ['service_availability','account_eligibility','billing_country','identity_residency','terms_restrictions','taiwan_note']), f'missing or empty eligibility text in {o["id"]}'

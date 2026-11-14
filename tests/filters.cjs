@@ -5,6 +5,8 @@ assert(f(free,{effort:'15'}));assert(f(free,{effort:'30'}));assert(!f({...free,e
 // 已知每月費用 > 0 的試用不得列入（曾把 US$29.99/月 的七日試用列為免費方案）。
 const zeroUntagged=d.offers.find(o=>o.id==='gemini-watch');assert(zeroUntagged.setup_cost_usd===0&&zeroUntagged.recurring_cost_usd===0&&!(zeroUntagged.views||[]).includes('free'));assert(f(zeroUntagged,{cost:'0',view:'free'}),'zero-cost record without free tag must appear in the free preset');
 const paidTrial=d.offers.find(o=>o.id==='lindy-free-fifty-dollar-seven-day-trial');assert(paidTrial.recurring_cost_usd>0&&(paidTrial.views||[]).includes('free'));assert(!f(paidTrial,{cost:'0',view:'free'}),'a trial with a known monthly fee must not appear in the free preset');assert(!f(paidTrial,{view:'free'}));
+const paidSetupFreeTagged=d.offers.find(o=>o.id==='kimi-file-extraction-storage-api-temporarily-free');assert(paidSetupFreeTagged&&paidSetupFreeTagged.setup_cost_usd>0&&paidSetupFreeTagged.recurring_cost_usd===0&&(paidSetupFreeTagged.views||[]).includes('free'));assert(!f(paidSetupFreeTagged,{view:'free'}),'a plan requiring an upfront setup/top-up fee must not appear in the free preset');assert(!ctx.presetMatches(paidSetupFreeTagged,'free'));
+assert(!d.offers.some(o=>((o.setup_cost_usd||0)>0||(o.recurring_cost_usd||0)>0)&&f(o,{view:'free'})),'no record with a known setup or monthly fee > 0 may appear in view=free');
 const unknownRecurring=d.offers.find(o=>o.id==='zo-computer-fourteen-day-no-card-trial');assert(unknownRecurring.setup_cost_usd===0&&unknownRecurring.recurring_cost_usd===null&&(unknownRecurring.views||[]).includes('free'));assert(f(unknownRecurring,{cost:'0',view:'free'}),'free-tagged record with unknown recurring cost stays in the preset');
 const twai=d.offers.find(o=>o.id==='twai-cloud-free-trial');assert(twai.priority_tier==='S'&&twai.priority_score>0);assert(f(twai,{tier:'S'}));assert(!f(twai,{tier:'A'}));const pol=d.offers.find(o=>o.record_type==='policy');assert(pol.priority_tier===null);assert(!f(pol,{tier:'S'}));assert([pol,twai].sort(ctx.byPriority)[0]===twai);console.log('PASS: filter combinations, unknown costs, inclusive effort thresholds, eligibility, unlimited separation, priority tier filter and S→D sort.');
 const ended=d.offers.find(o=>o.id==='chatgpt-back-to-school-us');assert(f(ended,{}));assert(!f(ended,{cost:'0',view:'free'}));assert(!f({...ended,status:'expired_unverified'},{cost:'0',view:'free'}));assert(f({...ended,status:'expired_unverified'},{}));assert(!f({...ended,status:'applications_closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'applications_closed'},{}));assert(!f({...ended,status:'resolved_rumor_disproven'},{cost:'0',view:'free'}));assert(f({...ended,status:'resolved_rumor_disproven'},{}));assert(!f({...ended,status:'closed_to_new_subscriptions'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed_to_new_subscriptions'},{}));assert(!f({...ended,status:'closed'},{cost:'0',view:'free'}));assert(f({...ended,status:'closed'},{}));
@@ -536,12 +538,21 @@ for(const o of paidFreeCards){
   assert(note,'card must explain the monthly fee next to the FREE tag: '+o.id);
   assert(note.textContent.includes(String(o.recurring_cost_usd)),'fee explanation must name the amount: '+o.id);
 }
+const paidSetupFreeCards=d.offers.filter(o=>!deadStatuses.includes(o.status)&&(o.categories||[]).includes('FREE')&&(o.setup_cost_usd||0)>0&&(o.recurring_cost_usd||0)===0);
+assert(paidSetupFreeCards.length>=1,'expected records tagged FREE that carry a known setup fee with zero monthly fee');
+for(const o of paidSetupFreeCards){
+  assert(typeof o.cost_note==='string'&&o.cost_note.trim(),'FREE tag with a known setup fee needs a cost_note: '+o.id);
+  const card=ctx.createCard(o);
+  const note=card.children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('設定費說明'));
+  assert(note,'card must explain the setup fee next to the FREE tag: '+o.id);
+  assert(note.textContent.includes(String(o.setup_cost_usd)),'setup fee explanation must name the amount: '+o.id);
+}
 const lindyCard=ctx.createCard(d.offers.find(o=>o.id==='lindy-free-fifty-dollar-seven-day-trial'));
 const lindyNote=lindyCard.children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明'));
 assert(lindyNote.textContent.includes('US$29.99')&&lindyNote.textContent.includes('不是'),'Lindy must state the fee is not the free trial cost');
 const zeroCostCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
-assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&n.textContent.startsWith('每月費用說明')),'zero-fee cards must not show a monthly-fee explanation');
-console.log('PASS: FREE-tagged records with a known monthly fee explain the fee on the card face.');
+assert(!zeroCostCard.children.some(n=>n.className==='cost-basis'&&(n.textContent.startsWith('每月費用說明')||n.textContent.startsWith('設定費說明'))),'zero-fee cards must not show a setup/monthly-fee explanation');
+console.log('PASS: FREE-tagged records with a known setup or monthly fee explain the fee on the card face.');
 
 // 反向的費用誤導：欄位是 null 時卡片正面只寫得出「設定費 未列金額／每月費用 未列金額」，
 // 真正說明「要綁卡、期滿自動扣款、折扣不是免費」的 cost_note 卻只出現在詳情。2026-11-11 統計
@@ -553,10 +564,11 @@ const feeUnknownWithNote=d.offers.filter(o=>(o.setup_cost_usd===null||o.recurrin
 assert(feeUnknownWithNote.length>=40,'expected actionable records with an unknown USD fee and a cost_note');
 for(const o of feeUnknownWithNote){
   const card=ctx.createCard(o);
-  const notes=card.children.filter(n=>n.className==='cost-basis'&&(n.textContent.startsWith('費用說明')||n.textContent.startsWith('每月費用說明')));
+  const notes=card.children.filter(n=>n.className==='cost-basis'&&(n.textContent.startsWith('費用說明')||n.textContent.startsWith('每月費用說明')||n.textContent.startsWith('設定費說明')));
   const knownMonthly=(o.recurring_cost_usd||0)>0;
+  const knownSetup=!knownMonthly&&(o.setup_cost_usd||0)>0;
   assert.strictEqual(notes.length,1,'unknown-fee card must carry exactly one fee explanation: '+o.id);
-  assert.strictEqual(notes[0].textContent,(knownMonthly?'每月費用說明：':'費用說明：')+o.cost_note,'cost caveat must be shown verbatim: '+o.id);
+  assert.strictEqual(notes[0].textContent,(knownMonthly?'每月費用說明：':knownSetup?'設定費說明：':'費用說明：')+o.cost_note,'cost caveat must be shown verbatim: '+o.id);
 }
 const ovhNote=ctx.createCard(d.offers.find(o=>o.id==='ovh-public-cloud-first-project-two-hundred-month')).children.find(n=>n.className==='cost-basis'&&n.textContent.startsWith('費用說明'));
 assert(ovhNote&&ovhNote.textContent.includes('須綁付款方式'),'OVH must state the payment-method requirement on the card face');
