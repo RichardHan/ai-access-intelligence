@@ -3352,3 +3352,56 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
 ④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
 ⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
+
+
+---
+
+## 2026-11-15 04:05–04:15 Asia/Taipei 維護紀錄
+
+**本輪基準與成果總覽**：
+- 既有紀錄數 N = 1,082，成功複核最久未核既有紀錄 R = 20（均依 ID 去重），新增機會 A = 1（機會 1、政策 0、觀察線索 0），未完成複核既有紀錄 U = 1,062（U = N - R = 1,082 - 20），整筆追查失敗 attempted = 0。全庫總紀錄數增至 1,083 筆（867 項機會、50 項政策、166 筆觀察線索）。
+- 台灣條件適用（開放中）由 178 筆增至 179 筆（含 S 級機會 165 筆）；免費專區由 711 筆增至 712 筆。
+
+**複核結果與重大變動**：
+1. `korea-ai-benefits-unverified`：複核韓國教育與 KOSAF「AI 온이음」官方補助資訊，確認該專案針對境內高中生約 12 萬名（弱勢及農漁村高中學校申請），非全民無限制領取，維持傳言澄清狀態。
+2. `supermaven-sunset-policy`：複核 Supermaven 官方 Blog 退場公告，確認 standalone 服務停辦並退款，既有用戶保留免費補全，建議遷移至 Cursor。
+3. `cursor-watch`：複核 Cursor 官方 Student Discount 說明，確認舊版一年免費學生優惠於 2026-06-25 停止新申請，現行學生替代途徑為校園活動或碩博研究額度申請。
+4. `gemini-academic-program-api-credits`：複核 Google AI 開發者官方 Gemini for Research 文件，確認學術研究者可申請專案 API 額度與較高 RPM 限額。
+5. `mistral-ambassador-community-credits-watch`：複核 Mistral AI 官方大使專頁，確認大使計畫持續接受申請，核給專屬 API 額度與搶先預覽。
+6. `bubble-agent2-free-monthly-mcp`：複核 Bubble 官方 Blog Agent 2 正式版公告，確認包含內建 500 AI credits/app 月額，MCP Beta 獨立計費。
+7. `nvidia-build-free`：複核 NVIDIA Build 開發者常見問題，確認新帳戶提供 1,000 點免費推論額度，一般模型限速 40 RPM，限原型研發。
+8. `langfuse-startup-half-price`：複核 Langfuse 官方 Startups 頁面，確認合規新創（融資不超過 US$5M、成立 5 年內）享 12 個月 50% 折扣。
+9. `convex-startup-seat-waiver-thirty-percent-usage`：複核 Convex 官方 Startups 方案，確認提供最高 1 年 Pro 席位費豁免與用量費七折（上限 $30k）。
+10. `langdock-business-seven-day-no-card-trial`：複核 Langdock 官方定價，確認企業與團隊提供 7 天免信用卡試用（含 €5 額度）。
+11. `notte-free-once-ten-nonexpiring`：複核 Notte 官方定價頁，確認 Free 方案提供一次性 US$10 永久不失效測試額度。
+12. `dumplingai-creator-up-to-tenk-monthly`：複核 DumplingAI Creator 申請專案，確認通過審核之創作者每月最高獲贈 10,000 點 API 額度。
+13. `browseract-creator-approved-template-tenk`：複核 BrowserAct Creator 方案，確認首個上架核准模板贈送 10,000 點一次性額度。
+14. `chalkchalk-free-weekly-ai-student`：複核 Chalkchalk 官方條款與價格，確認每週一自動重置免費 AI 輔導學習額度。
+15. `suno-free-daily-no-monthly-downloads`：複核 Suno 官方說明，確認免費方案每日補充 50 點信用額度（限非商用）。
+16. `napkin-free-weekly-five-hundred`：複核 Napkin AI 官方 Help 文件，確認 Free 方案每週提供 500 AI credits 圖表生成額度。
+17. `elicit-basic-free-research-monthly-pool`：複核 Elicit 價格頁，確認 Basic 方案論文搜尋免費，研究代理享有有限月度共享池。
+18. `langsmith-developer-free-traces`：複核 LangSmith 官方計費文檔，確認個人組織 Developer 方案包含每月 5,000 traces 免費額度。
+19. `coreweave-forge-academic`：複核 CoreWeave Forge 價格頁，確認學術研究方案提供免費 Pro 授權與 200GB 雲端儲存。
+20. `logfire-personal-hard-cap`：複核 Pydantic Logfire 官方價格頁，確認 Personal 免卡永久免費包含每月 1,000 萬筆觀測記錄與 US$0 硬上限。
+同時清理上述 20 筆輪替案例歷史積累之 28 處重複來源 URL，確保每筆來源網址唯一且具有精確查閱時間。
+
+**新機會收錄（1 筆，具官方來源與條款佐證）**：
+1. `kaggle-neurips-2026-smart-buildings-competition`：**NeurIPS 2026 Smart Buildings 競賽（Kaggle）**，由華盛頓大學、NSF AI Institute、哈佛大學、哥倫比亞大學及鹿島建設等主辦之建築能源與減碳機器學習競賽，總獎金池達 US$40,000（主榜競賽與 NeurIPS 研討會論文獎）。參賽者需開發能泛化至未見過商業建築之 HVAC 強化學習/ML 控制代理，在不同建築與氣候情境下達到節能、抑低碳排與維持室內舒適度之平衡。2027-01-03 報名與組隊截止，2027-01-15 23:59 UTC 最終交件截止。台灣開發者與研究者可免費報名參賽，並享有 Kaggle 每週免費 GPU 算力。
+
+**品質改善：清理輪替候選項目中歷史累積的重複來源 URL**
+- 觀察：在複核最久未核案例時，發現如 `cursor-watch`、`bubble-agent2-free-monthly-mcp`、`langsmith-developer-free-traces`、`suno-free-daily-no-monthly-downloads` 等案例，在過去多次查核中同一 URL 被重複追加進 `sources` 陣列（總計多達 28 處重複），導致資料冗餘並增加驗證負擔。
+- 改善：在更新既有案例時，主動以 URL 去重並保留最新的查核時間與有效 scope，確保每筆來源乾淨無重複，同時確保 `accessed_at` 具有精確的時間戳記。
+- 驗證：`python3 tests/validate.py` 嚴格通過，`tests/filters.cjs` 全綠。
+
+**本輪檢查**：
+- python3 tests/validate.py（PASS，1,083 筆，S/A/B/C/D＝165/189/129/276/108）
+- node --check app.js（PASS，語法正確）
+- node tests/filters.cjs（全綠 PASS）
+- git diff --check（無多餘空白變更）
+
+**下輪優先（完整五項）**：
+① `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15` 與 `autoclaw-weekly-perk-november-nine-hundred-million-tokens`（2026-11-15 23:59 屆滿截止）：查核是否如期截止或展延，以及 AutoClaw M11W3 是否如期啟動。來源 https://www.workbuddy.cn/pricing/、https://autoclaw.z.ai/changelog。
+② `aspn-youth-sports-tech-hackathon-2026`（2026-11-16 12:00 展延截止）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（2026-11-16 16:00 截止）：確認截止前最後名額與報名表單狀態。來源 https://www.accupass.com/go/aspn-hackathon2026、https://ojt.wda.gov.tw/。
+③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
+④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
+⑤ `aocai-working-free-ai-courses-2026` 與 `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：查核商業發展署後續梯次報名情況，以及新竹市青年補助剩餘經費水位與額滿公告。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://dep-youth.hccg.gov.tw/。
