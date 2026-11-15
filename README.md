@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,110 筆**（893 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 05:21 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **13 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,094 筆**既有紀錄未完成本輪複核。FlowHunt 7 天試用改為需先付 €1、已退出免費專區；8 筆官方條款衝突逐頁確認未解，並補上 Respan credits 12 個月到期、LangWatch 自動化禁令、Seldon pilot 限既有工作區等新條款；新增 Parallel for Startups US$250、阿里雲 Token Plan 個人版新戶五折與 qwen4 預覽、Vercel AI Gateway 免費模型至 11/23。
+資料集目前有 **1,112 筆**（895 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 06:36 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **17 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,093 筆**既有紀錄未完成本輪複核。新增 CrewAI Cloud Free（每月50次工作流）與 xAI Grok Free（有限 Chat／agent／Grok Build）；Hedra 定價改版後已無免費方案並退出免費專區，Luma 與 Replit 因官方文件互相矛盾改判條款衝突，Cubic 補上非營利／學校五折，Readwise 補齊單一 App 價格，Gemini CLI 確認無免費層、個人存取已移至 Antigravity 免費層。
 
 ## 使用方式
 

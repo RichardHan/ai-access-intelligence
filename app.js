@@ -292,7 +292,7 @@ function sourceReadStamp(source) {
   return match ? match[1] : '';
 }
 function sourceStamp(source) {
-  const raw = String(source.accessed_at || source.accessed_time_range || '');
+  const raw = String(source.accessed_at || source.accessed_time_range || source.accessed_date || '');
   const found = raw.match(SOURCE_STAMP);
   if (found) return found[found.length - 1];
   return sourceReadStamp(source);
@@ -531,7 +531,7 @@ function createDetails(offer) {
     item.append(sourceLink(source) || text('span', source.label || '來源網址待確認'));
     item.append(text('p', `支持範圍：${display(source.scope)}`));
     item.append(text('p', display(source.evidence)));
-    const accessed = source.accessed_at || source.accessed_time_range;
+    const accessed = source.accessed_at || source.accessed_time_range || source.accessed_date;
     const recovered = accessed ? '' : sourceReadStamp(source);
     item.append(text('small', `查閱時間：${accessed || (recovered ? `${recovered}（來源未另列，取自證據文字）` : '未另列，請參照證據文字')}`, 'source-date'));
     if (entry.earlier.length) {
@@ -539,7 +539,7 @@ function createDetails(offer) {
       earlier.append(text('summary', `較早的 ${entry.earlier.length} 筆同網址紀錄`));
       for (const older of entry.earlier) {
         earlier.append(text('p', `支持範圍：${display(older.scope)}｜${display(older.evidence)}`, 'source-earlier-text'));
-        const olderAccessed = older.accessed_at || older.accessed_time_range;
+        const olderAccessed = older.accessed_at || older.accessed_time_range || older.accessed_date;
         const olderRecovered = olderAccessed ? '' : sourceReadStamp(older);
         earlier.append(text('small', `查閱時間：${olderAccessed || (olderRecovered ? `${olderRecovered}（取自證據文字）` : '未另列')}`, 'source-date'));
       }

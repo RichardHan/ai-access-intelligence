@@ -66,6 +66,22 @@ const noReason=ctx.createDetails({last_review_attempt_at:'2026-11-06',eligibilit
 const attemptWithoutReason=noReason.children.find(node=>node.tagName==='dl').children.find(row=>row.children[0].textContent==='最近來源追查');
 assert.strictEqual(attemptWithoutReason.children[1].textContent,'2026-11-06');
 
+// 有些來源只有 accessed_date（YYYY-MM-DD），沒有 accessed_at／accessed_time_range。舊版 sourceStamp
+// 與詳情列都忽略它，卡片於是把已記錄的查閱日期顯示成「未另列」：2026-11-16 全庫仍有 39 個這類來源
+// （含本輪重讀的 Pi API beta）。accessed_date 是機器可讀欄位，必須當作查閱時間顯示與排序。
+assert.strictEqual(ctx.sourceStamp({accessed_date:'2026-11-08'}),'2026-11-08');
+const dateOnly=ctx.createDetails({eligibility:{},sources:[{url:'https://example.com/source',scope:'範圍',evidence:'證據',accessed_date:'2026-11-08'}]});
+const dateOnlySource=dateOnly.children.find(n=>n.tagName==='ol').children[0];
+const dateOnlyStamp=dateOnlySource.children.find(n=>n.tagName==='small');
+assert.strictEqual(dateOnlyStamp.textContent,'查閱時間：2026-11-08');
+for(const o of d.offers){
+  for(const s of o.sources||[]){
+    if(s.accessed_date && !s.accessed_at && !s.accessed_time_range){
+      assert.strictEqual(ctx.sourceStamp(s),s.accessed_date,`accessed_date ignored for ${o.id} ${s.url}`);
+    }
+  }
+}
+
 // 最新一次追查「失敗」不是已核實：卡片正面必須標記，否則讀者只看到較舊的核實日期，
 // 點進來源才發現 404（2026-11-10 全庫 8 筆屬此類，含來源全部失效的 qoder 與 astamuse）。
 assert(css.includes('.attempt-pill'),'missing .attempt-pill in style.css');

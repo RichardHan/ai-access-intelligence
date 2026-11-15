@@ -4271,3 +4271,42 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `alibaba-model-studio-token-plan-personal-new-user-discount`：確認台灣帳號能否購買／實名、新戶價是否含加購包、11/25 後 qwen4 走向；查 token-plan 文件與 region 說明。
 4. `parallel-for-startups-usd250-api-credits`：找條款頁替代路徑（`/terms` 與 `/legal/terms` 皆 404）確認轉讓／轉售／多帳號與台灣受理；查 platform.parallel.ai 與 support。
 5. 最久未核輪替：`swarms-free-api-signup-bonus`、`morph-free-two-hundred-monthly-requests`、`cubic-free-monthly-twenty-ai-reviews`、`upstage-file-search-beta-free`、`readwise-academic-half-price-ghostreader`（本輪研究員只交部分線索，未計入 R，需重新逐頁核）。
+
+## 2026-11-16 06:05–06:36 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds`：06:05 開場，main HEAD `b254e38`，工作樹乾淨；fetch 後與 origin/main 一致，無未完成 PR；`round_lock.py status` 顯示無人持有。Pages 為 main 根目錄 legacy build，對應 `b254e38` 的 pages-build-deployment 於 21:27Z 成功。
+- N=1,110（893 opportunity／50 policy／167 watchlist）；嚴格逾期 0、retry 0、7 日內到期 11 筆（4 筆當日截止已於 01:17 核實，7 筆冷卻中），高風險狀態 91 筆。今日 12:00／12:59／15:45／16:00 四筆截止在本輪結束時尚未到，不重讀、不改判。
+- 三個環境預設 Task 研究員（未指定模型）：A 8 筆最久未核高風險（Hedra、Pi API、Replit、Voiceflow、Luma、Fireworks、SciSpace、CloudRift）；B 8 筆最久未核輪替（Swarms、Morph、Cubic、Upstage、Readwise、LangSearch、Orkes、LM Studio）；C 新機會與去重（20 fetch、4 search）。主 agent 為唯一共享 JSON 寫入者，另自行複核 Gemini Code Assist 退役後續。
+
+### 採用成果與證據界線
+
+- R=17、A=2（機會 2／政策 0／觀察線索 0）、U=1,093、attempted=0；結果 1,112 筆（895／50／167）。
+- **Hedra（費用與分類修正）**：`/pricing` 已改版為 Model Factory＋GPU 秒計價，原「每秒 US$0.0122」API 報價不再存在；Play 另頁只列 Basic US$20／Pro US$50／Teams US$75／Ultra 自 US$100，無 Free。改 recurring_cost_usd=20、categories=LOW-COST、移除 free view；免費影片額度仍未證，狀態維持 unverified。
+- **Luma／Replit 改判 terms_conflict**：Luma 主定價無 Free、Payments FAQ（2026-01-25）仍列 Free、ToS 使用未定義的 Free Use 且不保證美國以外可用；setup／recurring 由 0 改 null、移除 FREE 類別。Replit 頁面 2026-11-10 更新後仍同時寫 6 個月與 12 個月，personal email may not／cannot approved 並存；申請表無國別欄位，台灣仍未證。
+- **Cubic／Readwise 條款與價格補強**：Cubic Free 每月20次、組織共用、依帳戶重置日；新增非營利／學校五折與付款方式。Readwise 確認 Full US$9.99、Reader-only／Highlights-only 各 US$7.99（年繳），試用30天後無免費方案，學術五折限官網且憑 ID 或學校信箱。
+- **Gemini 退役後續**：Gemini CLI README 明列「No free tier or Google AI plans」，個人與 Pro/Ultra 存取於 2026-06-18 移至 Antigravity CLI；Code Assist 個人端點仍停用，但 Google 個人免費 agent 存取改由 Antigravity Individual US$0/月每週配額提供（另筆 `antigravity-free`）。舊「1,000 requests/日 vs 1,500／2,000」文件矛盾已不再適用。
+- **其他複核**：Swarms 付費端點需餘額高於 US$1、低於回 402；Morph 每月200次、250K credits、依訂閱日重置，超額與 $0 暫停兩說並存；Upstage File Search 三項仍 Free，新增 VAT 10% 與相鄰模型 EOL，改 biweekly；LangSearch 無獨立 rpm/rpd、推薦最多 10M tokens/日；Orkes/LM Studio 方案不變，LM Studio 補 Pro US$100；Pi API `/pricing` 兩次 429 bot challenge、價格仍未知；Voiceflow 公開頁結構上無法回答贈額，改 on_new_signal；Fireworks `/startups` 308 導向一般頁、維持待核；SciSpace 原頁 301、sitemap 無替代頁；CloudRift 補 18+、付款方式與申請人保留 IP。
+- **新增 2 筆**（主 agent 逐字重讀）：`crewai-free-fifty-workflow-executions`（託管雲 Free US$0、每月50次 workflow executions、Studio／AI copilot／GitHub／MCP 匯出；付費僅 Enterprise Custom；重置基準與台灣未載）；`xai-grok-free-limited-chat-agent-build`（x.ai/pricing 品牌為 SpaceXSI，Free US$0、Chat／agent／Grok Build 均標 Limited、無數值；FAQ 只提 Chat/Voice，與功能表並存）。
+- C 的 3 筆 watchlist 線索未建立紀錄：Athina TLS 失敗、Galileo 已併入 Splunk、DagsHub 官方 20GB／200GB 自相矛盾；留待下輪有新證據再處理，避免增加薄弱線索。
+
+### 本輪品質改善：accessed_date 來源的查閱時間
+
+- 問題：部分來源只有 `accessed_date: YYYY-MM-DD`，沒有 `accessed_at`／`accessed_time_range`。前端 `sourceStamp` 與詳情列都忽略它，卡片把已記錄的日期顯示成「查閱時間：未另列」；全庫實測 39 個這類來源，本輪重讀的 Pi API beta 就是其中之一。
+- 修法：`sourceStamp`、目前來源列與「較早的同網址紀錄」都改讀 `accessed_date` 作為第三順位；不動資料格式。
+- 驗證：`tests/filters.cjs` 新增單筆渲染斷言與全庫資料驅動斷言（任何只有 accessed_date 的來源都必須回傳該日期）；`node --check app.js`、`node tests/filters.cjs` 通過。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,112 筆（S/A/B/C/D = 173/193/132/279/118，未評級 217）；README 計數與首頁 scope 同步。
+- `git diff` 以 ID 比對：新增 2、無刪除、17 筆複核；政策歷史追加 14 筆（2 筆新基準＋12 筆有意義變動），不改寫舊歷史。
+- 本節只記發布前觀測；遠端 commit、對應 Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. 今日四筆截止：`aspn-youth-sports-tech-hackathon-2026`（12:00）、`kaggle-solar-filament-segmentation-2026`（12:59 CDT／19:59 平台）、`ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）：截止後改判 closed 並記錄是否延期。
+2. `vercel-ai-gateway-parallel-decisions-free-window`（11/23 結束）與 `alibaba-model-studio-token-plan-personal-new-user-discount`（11/30 結束）：確認結束時區、rate limit、付款方式、期後價格與台灣購買資格。
+3. `xai-grok-free-limited-chat-agent-build`：確認 Free 的數值上限、重置週期、Grok Build 是否真的可用，以及台灣 IP／帳號資格；查 x.ai pricing、build 與 docs。
+4. `crewai-free-fifty-workflow-executions`：找 ToS 替代路徑，確認 50 次重置基準、是否含模型推論成本、rate limit 與台灣註冊。
+5. 最久未核輪替：`langsearch-free-daily-token-search-api`（下次 12/16）之前，優先 `morph-free-two-hundred-monthly-requests` 的 credits 換算、`upstage-file-search-beta-free` 的 Beta 結束日，以及 `scispace-campus-leads-access-stipend-watch` 是否出現官方替代頁。
