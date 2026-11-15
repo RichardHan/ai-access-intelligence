@@ -3769,3 +3769,51 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 5. `kaggle-google-quantum-circuit-optimization-2026`：同為損壞金額且有高價值宣稱，依既存sources重讀Kaggle官方overview/rules；若同輪成本不足，排在前三限時風險之後。`kaggle-google-agent-harness-ple-2027`亦有金額缺字，保留未核，不本輪批次補數。
 
 本輪評估：修正會影響金額/付款/商用決策的表述；補最舊證據範圍並揭露開始時刻差異，未宣稱消除全部矛盾；避免新方案重複但未新增涵蓋；改善兩筆資訊可讀性，無全面驗證宣稱。
+
+
+## 2026-11-15 14:05–14:16 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 實際對錶UTC06:05:18／台北14:05:18；main HEAD `91b0b2dc6f35c4c4deffd79e1ba2c5885c1812bf`，工作樹乾淨，fetch後origin/main相同、無未完成PR。Pages仍由main根目錄legacy build；前輪43680352590成功。
+- 可見其他omp維護程序但無鎖/未提交修改，不據此斷言仍在寫入；本輪PID62833取得round_lock，研究員不改共享JSON、不提交。
+- N=1,093（877 opportunity／50 policy／166 watchlist）；可行動1,002、嚴格逾期0、7日內截止11（8冷卻）、retry0、24小時未核780、12小時內已核162筆可行動紀錄。09:10及11:22–13:12無新訊號的項目不重查。AutoClaw/Tencent18:00、Solar20:00留待排程。
+- A僅Smart Buildings：雖04:15才核，但標題US,000、把總池當個人利益、無限制台灣/GPU及法律保證是新風險訊號。B僅GoodMem：11/07為缺verification_scope最舊可行動項目，不是到期刷新。C只查Gamma/Napkin教育非營利並比對既有一般免費層。3個環境預設Task研究員，未指定或宣稱Terra/Gemini；主agent重讀關鍵官方來源統一整合。
+
+### 本輪證據修復
+
+1. `kaggle-neurips-2026-smart-buildings-competition`：[Overview](https://www.kaggle.com/competitions/neurips-2026-smart-buildings)及[Rules](https://www.kaggle.com/competitions/neurips-2026-smart-buildings/rules)以瀏覽器實讀（靜態reader僅外殼）。US$40,000是主榜25,000及論文15,000總池，主榜首獎5,750；清除個人利益40,000及未核60分鐘/GPU保證。11/13首輪論文已截止，不將整賽標成已截止；deadline_at改1/3入賽/組隊、expires_at列1/15最終提交，皆23:59UTC（台北次日07:59）。10/13只是Start Date，不再當公告日。法律改not_verified；台灣Yes仍僅全球規則未排除的條件式地域判斷，補年齡、帳戶/單隊、制裁名單/身分真實、組織授權及領獎文件/稅費。資料CC-BY-NC-SA與得獎方案CC-BY4.0不同，不混用。規則舊slug留缺口，不另建重複活動。
+2. `goodmem-cloud-fourteen-day-no-card-trial`：[Cloud](https://goodmem.ai/cloud)、[Pricing](https://goodmem.ai/pricing)、[Terms](https://cloud.goodmem.ai/terms)確認14天免卡及15美元/月起價未變。補稅外加、暫停只停運算/儲存仍計費、調校run支出上限不等於總帳單上限；§8.3可服務內或聯絡終止，§8.5一般終止後30天匯出/刪除不代表試用期滿保留保證。Cloud仍寫以客戶資料fine-tune、§4.4仍寫不fine-tune，狀態改terms_conflict並依重大條件衝突每日追查。台灣Unknown；未登入控制台，規格、配額、費率、試用保留期未核。補核實範圍，未宣稱供應商本日改條款。
+
+### 新機會預篩、審查取捨與可重用教訓
+
+- Napkin：[官方Help](https://help.napkin.ai/en/articles/12108657-do-you-offer-discounts-to-non-profits-or-students)（10/09版，主agent重讀）明寫不提供dedicated student/nonprofit discount；研究員亦在[定價FAQ](https://www.napkin.ai/pricing/)核到currently不提供。不是永久不會提供，一般Free已有`napkin-free-weekly-five-hundred`。
+- Gamma：[教育頁](https://gamma.app/solutions/educators)僅教學用途與Start for free，footer Education指[Academy課程](https://lab.gamma.app/)，非專屬折扣；研究員讀[定價](https://gamma.app/pricing)與[回饋板](https://ideas.gamma.app/gamma-love/p/student-discount)未找到可核實新優惠。Business內容未完整渲染、機構議價未核，不能說優惠確定不存在。一般Free已有`gamma-free-credits-taiwan-unverified`；兩筆既有紀錄不刷新，不計R/attempted。
+- 不採C的resolved_rumor_disproven新錨點、quarterly未管理週期或把未知教育利益填0；也不採「不同供應商免費課程等於重複」推論。Academy只作本輪範圍外教學入口，不建立薄弱watchlist。
+- 不採B的monthly_or_new_signal建議：本任務明定重大條件衝突每日追蹤。§8.5未明示試用保留，不改寫成「永不適用」的法律斷言。稅費來源為§6.5而不是將FAQ說成唯一依據；不把制裁條款自行轉成台灣法律結論。
+- 唯一品質改善為資料表述/證據界線：修總池當個人利益、免費資源保證、入賽與交件日期混淆，以及試用費用/保留期範圍。無需改前端、schema或另加程式測試；既有批次金額、範圍、期限及費用驗證已涵蓋資料契約。
+- 大JSON先程式索引，來源保留舊證據字串；最小hashline edit整合。read大檔不給snapshot錨點已回報，以AST預覽取得工具錨點後立即撤回（schema未改）。瀏覽器截圖產生檔案但Image reading is disabled，已回報；只宣稱DOM/互動證據，不冒稱像素外觀審查。
+
+- A交付的「5,000是15,000的一半」「剩餘可得35,000」「以參賽人數/獎位當高免費額度」「首獎5,750可替代個人利益」「Start Date當公告日」均未採納。官方另有跨輪只補差額並回流獎池條款，不自行推算剩餘池；獎位/人數不是使用額度。三位研究員均完成並已審查；A開3官方頁、B開5頁、C開6頁，未申請/登入/付款。
+
+### 計數與衍生欄位
+
+- R=2：`kaggle-neurips-2026-smart-buildings-competition`、`goodmem-cloud-fourteen-day-no-card-trial`。A=0 opportunity／0 policy／0 watchlist；U=N−R=1,091；整筆追查失敗attempted=0。結果仍1,093筆，局部查核不代表全庫驗證。
+- updated_at／latest_research_at／completed_at一致為14:16:55；只更新以上2筆核實時間。舊來源證據保留為較早紀錄，2,557筆舊歷史保留、追加2筆有意義更正。依tools/prioritize.py函式重算並edit套用：Smart Buildings28→21.1/S（Taiwan Yes仍按既有規則S，不是獲獎保證）、GoodMem15.8/C不變但狀態文字同步terms_conflict。評分重算不算外部複核。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00後追11/15結束/M11W3換檔；查[更新](https://autoclaw.z.ai/changelog)、[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)，不重刷今早證據。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00後核免費窗終了與配額；查[WorkBuddy](https://www.workbuddy.cn/pricing/)、[CodeBuddy](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00追CDT/UTC不同提交窗口與隊伍5/10人差異；查[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)及既有公開API，不猜新API。
+4. `kaggle-google-quantum-circuit-optimization-2026`：損壞金額、總池當個人利益與過強法律/領獎保證，先索引該ID既存Kaggle Overview/Rules來源逐字核；`kaggle-google-agent-harness-ple-2027`同型保留後續佇列，不按摘要猜補數字。
+5. `goodmem-cloud-fourteen-day-no-card-trial`：11/16核Cloud微調與條款§4.4是否一致、§3.1試用保留及台灣資格是否補文；查[Cloud](https://goodmem.ai/cloud)、[Terms](https://cloud.goodmem.ai/terms)、[Pricing](https://goodmem.ai/pricing)。無條件變動不再追加相同歷史。
+
+本輪評估：修正會影響金額、入賽時點、算力成本與資料使用決策的誤導；補一筆核實範圍並把未解衝突明示，沒有宣稱消除矛盾。起始逾期0、未減少逾期積壓；新增0、不增加涵蓋但避免重複/薄弱紀錄。保留預篩負面證據與日期/利益判讀教訓，改善下輪研究效率及資訊可讀性。
+
+### 發布前驗證
+
+- `python3 tests/validate.py`通過1,093筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過。S/A/B/C/D=173/186/130/277/111。資料比對確認僅2筆既有ID改動、1,091筆完全不變，2,557筆舊歷史與原來源URL保留，追加2筆；兩筆評分與prioritize函式一致。
+- 本機Chromium實際載入14:16:55版：本輪2卡及R2/A0/U1091一致；展開確認Smart Buildings總池、台北1/4 07:59入賽與1/16 07:59最終期限/條件資格/規則來源，以及GoodMem每月費用說明、微調條款差異及Terms來源。台灣Yes/Unknown各1卡；關鍵字、免費篩選（GoodMem0、Smart Buildings1）、截止排序（AutoClaw今日23:59在前）、載入更多24→48均通過。
+- 桌面1365px及手機390px DOM無水平溢出，browser errors/console error皆空。截圖受工具Image reading is disabled限制，未宣稱完成像素審查；本輪前端未改。
+- 再fetch後origin/main仍為開場HEAD，無PR或需整合的其他更新。沿用main直接提交推送；本節僅記錄已完成的發布前證據，遠端commit、對應Pages工作及公開版本須推送後分別核對，不以本節宣稱部署完成。
