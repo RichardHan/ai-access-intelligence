@@ -4232,3 +4232,42 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `samsung-galaxy-fold8-flip8-google-ai-pro-six-months-tw`：確認每機／每帳號兌換次數、電信通路購機、退貨連動與期滿台灣月費；查台灣三星活動頁與 Google One 訂閱條款。
 4. `manus-free-daily-300-credits-1500-monthly-cap`：確認台灣註冊可用性、1,500 上限與每日 300 的實際交互、單一 lite 任務扣點；查 help.manus.im 定價與 credits 規則頁。
 5. `replit-student-core-half-price-edu-verification-watch`：找學籍核驗服務商與學生 checkout 路徑、.edu.tw 接受性與折扣期限；查 https://replit.com/edu/students 與 support 文件。
+
+## 2026-11-16 05:05–05:30 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds` 為 05:05；main HEAD `7fa032e`，工作樹乾淨，fetch 後與 origin/main 一致，無未完成 PR。Pages 為 main 根目錄 legacy build，對應 `7fa032e` 的 pages-build-deployment 於 20:33:22Z 成功，公開站即 04:20 版（1,107 筆）。repo 無 AGENTS.md。
+- N=1,107（890 opportunity／50 policy／167 watchlist）；嚴格逾期 0、retry 0、7 日內到期 11（其中 7 筆冷卻中），當日 12:00／12:59／15:45／16:00 截止的四筆已於 01:17 核實、排程 11:30–15:30，本輪不重讀。高風險狀態 39 筆（terms_conflict 23、conflicting_official_usage_claims 12 等）。
+- 三個環境預設 Task 研究員（未指定模型，依實際可用能力）：A 8 筆官方條款衝突（18 URL）、B 11 筆最久未核與死連結（18 URL）、C 新機會與去重（20 fetch、8 search）。主 agent 為唯一共享 JSON 寫入者；C 的 4 筆候選由主 agent 逐頁重讀後採 3 筆。
+
+### 採用成果與證據界線
+
+- R=13、A=3（機會 3／政策 0／觀察線索 0）、U=1,094、attempted=1（`qoder-community-1024`）；結果 1,110 筆（893／50／167）。
+- **FlowHunt（核心費用修正）**：官方 FAQ 逐字「New accounts pay €1 and get a 7-day trial with €5 of credits. We charge the €1 to keep the platform secure and to stop fraudulent sign-ups.」原紀錄 setup 0、分類 FREE，讀者會看到「7 天免費試用」。已改 setup_cost_usd=1（明註未按匯率換算、僅表示非零門檻）、分類 LOW-COST／VALUE-DEAL、退出免費專區，並把「台灣綁卡未核」改成「須以 Stripe 付款 €1」。
+- **8 筆官方衝突逐頁確認仍未解**：Memobase（500 credits vs 50 operations，條款版次仍 2026-03-02）、Cognee（1M vs 10M tokens；定價新增 Free forever／no card）、StackOne（每席 1,000 credits vs 1,000 Action Calls、1 vs 2 projects；附表新增 §4.1 費率表、定價新增 Starter 1 天日誌）、Scholarcy（10／每日 1／每日 3 三個官方數字並存）、Respan（ToS 仍禁 bot／商業用途；新增 §5.1 Gateway credits 12 個月到期）、LangWatch（free forever vs 14 天試用；新增 §14.1(6) 自動化禁令）、Sloyd（定價 FAQ 稱 Plus／Pro 可商用 vs ToS §6 僅個人 3D 列印；Pro 年繳 US$500）、Seldon（pilot 限既有工作區、企業同條件；Live Audit 退役 vs 試行頁仍列）。
+- **4 筆最久未核輪替**：Axiom 2 小時試用與免卡成立，但「不重置」字句已不在頁面，降為 UNVERIFIED 並補 Pro Max／Ultimate；Moises 5 份／月、每曆月 1 日重置成立，另一篇 5 分鐘與分離組合來源 403；SlidesAI 200 點仍成立，但 10 頁 Balanced 耗 105 點＋每圖 2 點，實際約 1–2 份/月；Jotform Starter 額度不變，FREE* 星號腳注未取得。
+- **新增 3 筆**（均主 agent 逐字重讀）：`parallel-for-startups-usd250-api-credits`（直接申請 US$250、免卡、6 個月到期、每公司一個 offer；文件頁未提台灣）；`alibaba-model-studio-token-plan-personal-new-user-discount`（Lite US$3／Essential US$5 新戶價至 11/30、僅新加坡 region、限工具內互動、不退訂；qwen4-max 預覽至 11/25）；`vercel-ai-gateway-parallel-decisions-free-window`（免費至 11/23、免 Parallel 帳號；時區與 rate limit 未載）。
+- 未採 C 的 Cognition Devin SWE-2 Flash：部落格 CTA 的「Free through 11/30」需 Devin 付費方案（Pro US$20 起），不是新的免費存取；列為下輪再查而非本輪紀錄。
+- Qoder 仍只找到索引快取而頁面 404：`docs.qoder.com/events/communityboost.md` 404、`llms.txt` Events 11 筆無此活動，維持 expired、不刷新 verified_at，只更新 last_review_attempt_at/reason。
+
+### 品質改善：無程式或 schema 變更
+
+- 本輪實際發現的是資料層費用錯誤（FlowHunt 必付 €1 卻存成 setup 0），不是可重現的前端或驗證程式錯誤。既有的 `tests/filters.cjs` 已有一條全庫斷言「任何 setup 或 monthly fee > 0 的紀錄不得出現在 view=free」，資料修好後 FlowHunt 自動退出；另以瀏覽器確認免費專區 725 筆不含 FlowHunt。沒有足夠依據新增 schema 或改前端，故不動程式。
+- 新增與複核紀錄都補了 `verification_scope`、逐來源查閱時間與官方引文；批次欄位與 README 計數同步。政策歷史只追加 9 筆有意義變動（FlowHunt、Respan、LangWatch、Seldon、Axiom、SlidesAI 與 3 筆新基準），不改寫舊歷史。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,110 筆（S/A/B/C/D = 173/191/132/279/118，未評級 217）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+- `git diff` 以 ID 比對：新增 3、無刪除、14 筆變更（13 複核＋qoder attempted），無未列批次卻刷新 `verified_at` 的紀錄。
+- 本機 http.server 載入：全庫 1,110、本輪 13／3／1,094、資料更新 2026/11/16 05:21；本輪更新 16 張（R13＋A3）。免費專區 725 筆，不含 FlowHunt／阿里雲，含 Vercel；搜尋 FlowHunt 1、Parallel for Startups 1、Token Plan 個人版 1、Parallel Decisions 1；載入更多 24→48；台灣條件適用 188。
+- 卡片：FlowHunt 顯示「設定費 US$1」與官方 FAQ 費用依據；Vercel 顯示「方案結束 2026-11-23 · 剩 7 天」；阿里雲顯示「設定費／每月費用 US$0／US$3」與 11/30 截止。桌面 1365px 與手機 390px 均無水平溢出，browser errors 與 console error 皆空。
+- 本節只記發布前觀測；遠端 commit、對應 Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. 今日四筆截止：`aspn-youth-sports-tech-hackathon-2026`（12:00）、`kaggle-solar-filament-segmentation-2026`（12:59 CDT 與 19:59 平台）、`ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）：截止後改判 closed 並記錄是否延期。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：11/23 前確認結束時區、rate limit、是否需付款方式與期後價格；查 changelog 與 AI Gateway pricing。
+3. `alibaba-model-studio-token-plan-personal-new-user-discount`：確認台灣帳號能否購買／實名、新戶價是否含加購包、11/25 後 qwen4 走向；查 token-plan 文件與 region 說明。
+4. `parallel-for-startups-usd250-api-credits`：找條款頁替代路徑（`/terms` 與 `/legal/terms` 皆 404）確認轉讓／轉售／多帳號與台灣受理；查 platform.parallel.ai 與 support。
+5. 最久未核輪替：`swarms-free-api-signup-bonus`、`morph-free-two-hundred-monthly-requests`、`cubic-free-monthly-twenty-ai-reviews`、`upstage-file-search-beta-free`、`readwise-academic-half-price-ghostreader`（本輪研究員只交部分線索，未計入 R，需重新逐頁核）。
