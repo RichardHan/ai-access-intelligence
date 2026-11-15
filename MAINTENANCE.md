@@ -3862,3 +3862,55 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - 本機Chromium載入15:20版、全庫1094；本輪3卡與R2/A1/U1091一致。展開核Quantum總池/首獎/兩個期限/條件資格/正式規則，SerpKite降額/手動付款/月贈差異，Loom費用/非免費/續訂/資格及4來源。台灣Yes本輪1卡、Unknown2卡；免費篩選Loom0、SerpKite1；截止排序首筆AutoClaw今天截止；載入更多24→48。
 - 桌面1365px及手機390px DOM均無水平溢出；browser errors與console error皆空。未改前端，截圖因工具Image reading is disabled不能作像素審查。兩次驗證腳本問題已合理修正：等待1,094但畫面為1094；triple-click未清完整中英混合搜尋字串，改fill後正確。不是網站錯誤，未修改程式迎合腳本。
 - 15:24再fetch：HEAD/origin/main仍為開場d9c3d1d，無未完成PR或需整合更新。沿用main直接提交推送；本節只記錄已完成的發布前證據。遠端commit、對應Pages工作及公開15:20版本須推送後分別核對，不以提交或排隊冒稱部署成功。
+
+## 2026-11-15 16:05–16:16 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 實際對錶UTC08:05:19／台北16:05:19；main HEAD `36739799c69e668b2869e559326a985797d2605d`，開場工作樹乾淨、無未完成PR，fetch未帶入更新。Pages仍為main根目錄legacy build，上輪43689891422成功。repo與上兩層未找到AGENTS.md。
+- 可見既有維護omp程序，但沒有round lock或未提交修改；不據此認定它們仍在寫。本輪PID31941取得鎖，三位研究員只交local artifact，主agent唯一JSON整合者。
+- N=1,094（878 opportunity／50 policy／166 watchlist，包含保留歷史）；可行動1,003、嚴格到期0、7日內截止11（5冷卻）、retry0、24小時未核790、12小時內已核132。AutoClaw/Tencent18:00及Solar20:00留待排程，無新訊號不重刷今早與11:22–15:20已核項目。
+- A起初僅`kaggle-google-agent-harness-ple-2027`：雖06:15才核，損壞金額與GPU/台灣保證是新風險訊號；找到同活動較早`kaggle-google-agent-harness-pele-2027`後，主agent將主檔一併納入修復。B僅11/07最舊一批缺scope的Zro。C僅Beautiful.ai與Coda/Superhuman Docs教育/非營利新資格。
+- 使用3個環境預設Task研究員，未指定或宣稱Terra/Gemini；全部完成且已審查。各組原定最多6官方URL，B實際7個（含404與登入外殼），未嚴守上限；A交付也對頁數/API探測有不一致自述，故不宣稱研究成本完全符合預算。主agent不採其推測端點，僅重讀正式來源。C自行跑了草案schema驗證，未遵守不跑中途檢查的指派；最終無採用草案。
+
+### 計數與實質成果
+
+- R=3：`kaggle-google-agent-harness-pele-2027`、`kaggle-google-agent-harness-ple-2027`、`zro-moonmath-free-flash-models`；其中2筆指同活動，不能稱3個不同優惠。A=0 opportunity／0 policy／0 watchlist；U=N−R=1,091；整筆失敗attempted=0。仍1,094筆；錯路徑404後找到正式頁不是整筆失敗。
+- updated_at／latest_research_at／completed_at一致16:16:13。保留穩定ID、原來源URL及2,562筆政策歷史，僅追加3則實質更正/去重紀錄。未查的1,091筆逐筆不變。依tools/prioritize.py函式重算並edit套用：主檔25→19.6/S，重複25→16.9/D，Zro23.6→19/A；評分不是外部查核，S仍由條件式Taiwan Yes決定，非低門檻或得獎保證。
+
+1. **PLE同活動去重與時區**：[正確主頁](https://www.kaggle.com/competitions/physical-engineerings-last-exam)及[Rules](https://www.kaggle.com/competitions/physical-engineerings-last-exam/rules)由主agent瀏覽器實讀。錯誤slug `google-agent-harness-on-physical-engineerings-last-exam`回404，但活動並未消失。主辦、名稱、資格、利益、期間相同，較晚`-ple-`改duplicate_merged、指向`-pele-`；保留ID與歷史，on_new_signal退出每日查核及行動專區，不刪紀錄、不搬改舊政策歷史。
+2. **金額與成本**：總池US$400,000、前三獎250,000／100,000／50,000，非個人可支配利益。最終交件2027-01-05 23:59 UTC＝台北1/6 07:59，修正兩筆機器期限。11/09僅開賽日期，不當公告日或虛構午夜時刻。Stage 2 Google免費給官方評測key，本機開發不需Cloud/Vertex帳單、付費judge非必要；自選API/算力仍可能自費。刪除「每週GPU福利」與主檔「圖表暗示評測必須自費」「全面不得用API模型」：官方proxy只禁自帶key、外部model server及web search。評測2 CPU/4 GB/每題6h不是可領GPU額度，quota=UNKNOWN。
+3. **資格與授權差異**：最多5人/隊、每隊一件，前100進Stage 2，均分至少0.138且在performance-cost Pareto frontier才具獎項資格。台灣Yes僅全球規則未列地域排除，須年齡、單帳戶/單隊、制裁核驗、機構授權及領獎文件；W-8BEN為外國居民文件例，實際稅率/匯款未核。Rules頁首程式授權僅Apache 2.0，B§5與Overview則Apache 2.0或MIT；保留差異，主檔terms_conflict/daily。Writeup均CC BY 4.0。不把條款當法律結論，不把未列手機要求當成保證免驗證。
+4. **Zro模型與費用**：[Pricing](https://zro.moonmath.ai/pricing)現行Free僅DeepSeek V4.1 Flash每日重置；GLM-5.3在Pro，未見免費GLM-5.3 Flash主張。US$5起是90天效期、無週期扣款的付費包，不是免費利益；撤5美元估值及5分鐘標籤。Search/Fetch按次收費，免費工具配額、token數/時區/超額行為未知，分類改NO FIXED CAP PUBLISHED，非不限量。
+5. **Zro條款界線**：[Terms](https://zro.moonmath.ai/terms)為11/08版；EU gateway及US/Europe推論不代表可自選區域或全球資格。補反多帳戶/共享轉售/帳戶轉讓、撤促銷額度及資料處理範圍；零保留不代表帳單/帳戶資料都不存。撤免卡與台灣直接註冊保證，維持Unknown；訂閱期末取消與EU/EEA/UK撤回權不能當台灣保障。補本輪scope、常態monthly；舊紀錄錯誤不是現行官方來源衝突，不為刷新再改daily。
+
+### 新機會預篩與研究取捨
+
+- Beautiful.ai研究員實讀[教育頁](https://www.beautiful.ai/education)，仍是.edu驗證新學生首年Pro，與`beautiful-ai-student-pro-first-year`同資格；教師/非營利未取得不同可核優惠，不新增，也不刷新既有時間。不以/nonprofits的404斷言優惠不存在。
+- Superhuman研究員及主agent實讀[官方折扣頁](https://help.superhuman.com/hc/en-us/articles/46210187758477-Discounts-for-students-teachers-nonprofits-and-startups-on-Superhuman-Docs)：6/30起暫停新教育/非營利申請，7/7為更新公告，既有折扣續用Docs、不可套bundle。已有新創紀錄註明暫停，沒有重啟訊號，不另加watchlist或刷新新創紀錄；本輪只作預篩，不計R/attempted。
+- 不採C的「6/30與7/7衝突」：生效日和公告更新日可不同，原文明確區分。其把歷史80% off譯成8折亦錯（應付20%、二折）；未將錯誤草案入庫。US$12/月年繳Pro不是已核學生專屬折扣；不額外納入一般付費方案。
+- 不採A刪除重複ID、HIGH_EFFORT／NOT_APPLICABLE新enum、任意降S級、2個月全職工時或直連等於台灣資格的建議。不採B「404證明沒有專頁」「模型清單未列即全球不存在」或登入申請下一步；不申請/付款/領取、不測API。
+
+### 唯一品質改善與可重用教訓
+
+- 聚焦資料可讀性與同活動單一現況：原錯字slug讓去重漏掉相同競賽，造成兩卡與兩套錯期限/成本。以主辦＋產品/活動＋資格＋期間判同一機會，保留舊ID但只保留一個可行動主檔；同步移除把付費包、獎池或算力保證當免費利益的表述。無需改前端/schema或新增程式測試，沿用既有合併/費用/範圍驗證。
+- 官方來源讀不到先用既有目錄/正式連結找正確slug，不把404當停辦，也不要猜API。得獎授權摘要與細則都要讀；同一份規則內也可有差異。日期-only與UTC轉換必須寫入機器欄位，不能只在摘要寫對。
+- 大JSON先索引、記憶體產生最小hashline補丁交edit。read大檔缺snapshot標籤已回報，AST僅預覽取得工具錨點立即撤回，未改schema。截圖回Image reading is disabled已回報，只有DOM/互動證據，未宣稱像素審查。
+
+### 發布前驗證
+
+- `python3 tests/validate.py`通過1,094筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過。S/A/B/C/D=172/186/130/277/113。首次驗證因README在固定計數括號加註歷史而失敗；將註記移至括號外，保留既有契約後通過，未改測試迎合文案。
+- 程式確認3筆既有ID修改、0新增、1,091筆完全不變；2,562筆舊歷史不變、追加3筆；原來源URL保留、3筆評分與prioritize函式一致。
+- 本機Chromium實際載入16:16版：本輪3卡與R3/A0/U1091一致，展開可見PLE總池/台北期限/免費評測/費用/資格/授權差異及官方Rules、重複卡指向主檔、Zro模型/90天付費包/未公布上限與來源。台灣Unknown1、Yes2（一般篩選仍含保留歷史，非台灣快捷入口）；免費搜尋只留PLE主檔及Zro，重複卡排除；載入更多24→48，截止排序首項AutoClaw。
+- 桌面1365px及手機390px DOM無水平溢出，browser errors/console error皆空；前端未改。首次驗證用Agent Harness關鍵字預期1筆但實際另命中Foundry，改用Physical-Engineering確認主檔；不是網站錯誤，不縮窄產品搜尋來迎合腳本。
+- 本節僅記錄已觀測的發布前證據；沿用main提交推送。遠端包含、對應Pages工作及公開16:16版本須推送後分別核對，不能以本節冒稱部署成功；發布結果見本輪回報及GitHub部署紀錄。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00後追11/15換檔；[changelog](https://autoclaw.z.ai/changelog)、[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00後追免費窗與後續額度；[WorkBuddy](https://www.workbuddy.cn/pricing/)、[CodeBuddy](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00追CDT/UTC窗口及隊伍5/10人差異；[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)。
+4. `kaggle-google-agent-harness-pele-2027`：11/16追Apache-only／Apache或MIT、Entry/Team Merger日與正式評測限制；查本輪[主頁](https://www.kaggle.com/competitions/physical-engineerings-last-exam)、[Rules](https://www.kaggle.com/competitions/physical-engineerings-last-exam/rules)。`-ple-`已合併，不再獨立重查或另加同活動。
+5. `serpkite-free-search-api-credits`：11/16追月贈是否需綁Google/GitHub；[Billing](https://serpkite.com/docs/credits-and-billing)、[比較頁](https://serpkite.com/compare/free-serp-api)、[Pricing](https://serpkite.com/pricing)。未有新變動不反覆追加相同衝突。
+
+本輪評估：修正會影響免費模型、成本與交件時刻的錯誤；消除一組活動重複、補最舊scope缺口，揭露而未解決授權差異。起始到期0，不宣稱減少到期積壓；新增0、不增加涵蓋但避免弱線索。保留去重及日期/折扣判讀教訓，降低下輪重複研究並改善資訊可讀性；不作全面驗證宣稱。

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T15:20:26+08:00",
-  "scope": "2026-11-15 15:05–2026-11-15 15:20 Asia/Taipei：局部複核 2 筆既有紀錄、新增 1 筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1091筆既有紀錄未完成本輪複核。更正Quantum競賽首獎、總池/個人利益、入賽/交件期限與資格/成本保證；補SerpKite贈額降額、反濫用及月贈資格差異；新增Loom教育Business + AI折扣。台灣個案與法律未核，未改前端/schema。",
+  "updated_at": "2026-11-15T16:16:13+08:00",
+  "scope": "2026-11-15 16:05–2026-11-15 16:16 Asia/Taipei：局部複核3筆既有紀錄、新增0筆（機會0、政策0、觀察線索0）、整筆追查失敗0筆；其餘1091筆既有紀錄未完成本輪複核。合併同一Google PLE競賽的重複ID並保留歷史，更正台北交件時間、免費官方評測/自費開發界線及授權差異；修正Zro免費模型與付費包混淆。台灣個案、法律與未公布額度仍未核。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -68561,32 +68561,28 @@
     },
     {
       "id": "zro-moonmath-free-flash-models",
-      "title": "Zro by MoonMath：免訂閱每日重置免費開源推論（GLM-5.3 Flash 與 DeepSeek V4.1 Flash）",
+      "title": "Zro by MoonMath：DeepSeek V4.1 Flash 每日免費推論，付費用量包另計",
       "record_type": "opportunity",
       "status": "active",
       "verification": "Official",
       "taiwan": "Unknown",
       "categories": [
-        "FREE",
-        "EASY-EFFORT",
-        "VALUE-DEAL"
+        "FREE"
       ],
       "views": [
         "free",
         "developer"
       ],
-      "regions": [
-        "GLOBAL"
-      ],
+      "regions": [],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "benefit_cost_ratio": null,
-      "quota_classification": "HIGH BUT LIMITED",
+      "quota_classification": "NO FIXED CAP PUBLISHED",
       "usage_type": "Limited",
-      "effort_minutes_max": 5,
+      "effort_minutes_max": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "usable_benefit_usd": 5.0,
+      "usable_benefit_usd": null,
       "legal_status": "not_verified",
       "sources": [
         {
@@ -68600,30 +68596,48 @@
           "scope": "帳戶政策、多帳號禁令、區域處理與安全限制",
           "evidence": "每人或組織限一帳號，禁止多帳號套取額度；嚴禁轉售原始推論存取；歐盟閘道認證，可選歐盟或美國推論區域；禁止惡意網路攻擊或未經授權滲透測試。",
           "accessed_time_range": "2026-11-07T17:05:00+08:00–2026-11-07T17:25:00+08:00"
+        },
+        {
+          "url": "https://zro.moonmath.ai/pricing",
+          "scope": "現行Free模型/每日用量、付費用量包與工具費率、取消",
+          "evidence": "2026-11-15主agent實讀：Free $0/month、Free daily usage on DeepSeek V4.1 Flash. Resets every day.；GLM-5.3列於Pro而非Free。Usage packs from $5、expire after 90 days、no recurring charge；Search $0.02/$0.20、Fetch $0.005/$0.02 per call。取消當期末生效、不按比例退款；未列免費token數、重置時區或超額規則。",
+          "accessed_at": "2026-11-15T16:07:49+08:00"
+        },
+        {
+          "url": "https://zro.moonmath.ai/terms",
+          "scope": "11/08版帳戶、反濫用、資料/區域處理、付費責任與適用範圍",
+          "evidence": "2026-11-15主agent實讀Last updated November 8, 2026：禁止多帳戶套額度、帳戶轉讓、共享/轉售key；自建app/agent允許，但對外提供Zro inference有書面同意限制。請求內容不保留；requests/logs不用於訓練等次用途，另行明確同意除外。所有推論經EU gateway並在US或Europe處理，未承諾可選區域。EU/EEA/UK消費者14天撤回依已用份額扣款，不據此推論台灣法律保障。",
+          "accessed_at": "2026-11-15T16:07:49+08:00"
         }
       ],
       "eligibility": {
-        "service_availability": "歐盟與美國GPU節點，全球API呼叫",
-        "account_eligibility": "每人或組織限單一帳號，支援個人開發者與編程代理（Claude Code、Codex等）",
-        "billing_country": "Free方案免信用卡；用量包採Stripe以美元計價，無強制訂閱",
-        "identity_residency": "全球使用者，需遵守適用之出口管制與AI模型授權條款",
-        "terms_restrictions": "禁止轉售原始API存取，禁止多帳號，嚴禁未授權之網路攻擊或惡意程式生成",
-        "taiwan_note": "台灣使用者可直接註冊API金鑰於本機Agent使用，免綁卡；個別發票與連線延遲未測，標為Unknown。"
+        "service_availability": "OpenAI相容API；條款列所有推論經EU gateway認證/路由，於美國或歐洲運算，可能由第三方基建供應商承接。不等於用戶可自由選地區或全球優惠資格。",
+        "account_eligibility": "每個帳戶屬於一人或一組織；不可多帳戶取得額外用量、試用或促銷，也不能建立帳戶替代被停權帳戶。",
+        "billing_country": "公開頁未列Free是否要求信用卡、支援帳單國家或付款核驗；付費使用者須支付帳戶用量費並維持付款資訊。",
+        "identity_residency": "須遵守適用模型、出口、隱私及安全要求；公開頁未列台灣優惠/身分條件。",
+        "terms_restrictions": "不得出售/轉讓帳戶、共享或轉售API key/原始推論存取；條款允許自建app/agent，但對外提供Zro推論有書面同意限制，不作下游商用全面許可。不得藉多帳戶、虛假推薦或規避限速取得額外福利。",
+        "taiwan_note": "台灣優惠與申請/免卡資格未取得直接官方支持，維持Unknown；EU/US運算地不是台灣資格證據。"
       },
       "unknowns": [
-        "台灣直連歐美端點之連線延遲",
-        "每日具體Token重置上限與超額行為",
-        "商業用途與資料管轄法律適用"
+        "每日token數、重置時區、速率上限及耗盡/超額行為；免費工具額度",
+        "台灣申請、帳單國家、是否綁卡、稅費與實際網路延遲",
+        "整合第三方/下游服務的書面授權界線、模型授權及台灣法律適用"
       ],
-      "verified_at": "2026-11-07T17:25:00+08:00",
-      "next_review_at": "2026-12-07T17:25:00+08:00",
-      "priority_score": 23.6,
+      "verified_at": "2026-11-15T16:07:49+08:00",
+      "next_review_at": "2026-12-15T16:00:00+08:00",
+      "priority_score": 19.0,
       "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·≤5分鐘",
+      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知",
       "announcement_at": null,
       "limited_confirmed": null,
-      "summary": "免訂閱的開源模型推論 API，每日重置免費額度，提供 GLM-5.3 Flash 與 DeepSeek V4.1 Flash；官方未公布每日具體 token 上限與超額後行為。歐盟與美國 GPU 節點、全球 API 呼叫；台灣可直接註冊 API key 在本機 Agent 使用、免綁卡，連線延遲與商業用途條款未核。",
-      "review_cadence": "monthly"
+      "summary": "Free仍為US$0/月、每日重置DeepSeek V4.1 Flash用量；現行免費層未列GLM-5.3 Flash，GLM-5.3列於Pro。每日token數、重置時區及耗盡後行為未公布，非不限量。US$5起是另購用量包、90天到期且不續扣，不是免費贈額；Web Search/Fetch另按次收費。台灣資格與免卡要求未核，不保證直接註冊。",
+      "review_cadence": "monthly",
+      "quota_details": "Free：DeepSeek V4.1 Flash每日重置；未列固定token數、重置時區、RPM/TPM或超額行為。Pro的up to 1B tokens假設特定快取情境，不能套用免費層。",
+      "cost_note": "Free定價US$0/月；另購用量包US$5起、90天到期且無週期扣款，不強制訂閱。Web Search Standard/Pro每次US$0.02/0.20，Fetch每次US$0.005/0.02，是否有免費工具額度未核。Pro月繳US$20、年繳折算US$16/月；非本筆免費方案，不混作免費利益。",
+      "cancellation": "免費層未列訂閱；付費用量包一次性付款、90天到期。訂閱取消於當期末生效、無按比例退款；條款另列EU/EEA/UK消費者14天撤回及扣除已用份額，不能推廣為台灣保障。",
+      "verification_scope": "2026-11-15局部實讀Pricing及11/08版Terms：核免費層現列模型、每日重置、另購用量包/工具費率、訂閱取消、資料處理/區域及反濫用限制。未登入或申請，未測實際額度、免卡、台灣資格、延遲或法律。舊來源GLM-5.3 Flash及可選區域不再作現況依據。",
+      "access_risk": "零保留指prompts/responses/request bodies，不是帳戶或帳單資料均不儲存；條款不以請求/日誌做訓練等次用途，另行明確同意除外。帳戶異常可撤key/撤促銷額度；不得以多帳戶繞過限制。",
+      "quota_classification_note": "每日用量有重置，但所讀官方頁未列固定token或請求數；未公布上限不等於不限量。"
     },
     {
       "id": "vercel-sandbox-hobby-free-five-cpu-hours",
@@ -87189,20 +87203,19 @@
     },
     {
       "id": "kaggle-google-agent-harness-pele-2027",
-      "title": "Google Agent Harness on Physical-Engineering's Last Exam（Kaggle）：總獎金 US$400,000，2027-01-05 交件截止",
-      "summary": "Google Cloud AI Research 與 Mercor 及史丹佛、NYU、華盛頓大學、UNC、哈佛、哥倫比亞等學術夥伴在 Kaggle 開設的 hackathon 型競賽：以 85 個專家審查的長流程工程任務（Physical-Engineering's Last Exam，涵蓋結構、土木、電機、機械四領域）為題，要求參賽者建置開源 agent harness，搭配 Google 贊助的 foundation model（官方指定 8 個 google-cloud/* 模型之一），並產出可被評審驗證的工程交付物。交件為一份不超過 2,000 字的 Kaggle Writeup 加一個 GitHub repo（含 submission.yaml、serve.py、harness.py、Apache-2.0 或 MIT LICENSE 與 unpacked artifacts/，並通過 kit check 與 kit artifacts），Writeup 需含架構圖、score-vs-cost 圖與 29 個 dev 任務的失敗分析。評審分兩階段：Stage 1 為 100 分制 Writeup 與預篩（取前 100 名），Stage 2 於 56 個隱藏測試任務上實際執行。獎金 US$250,000／100,000／50,000，合計 US$400,000。時間：2026-11-09 開始，2027-01-05 23:59 UTC 前交 Writeup 與已 commit 的 repo，2027-01-19 完成 Stage 1 評審、2027-01-26 公布優勝。團隊上限 5 人，每隊僅 1 次提交（截止前可 un-submit、編輯、重交）。",
+      "title": "Google Agent Harness on Physical-Engineering's Last Exam（Kaggle）：US$400,000總獎金池，台北2027-01-06 07:59交件截止",
+      "summary": "Google官方工程Agent黑客松，總池US$400,000，前三名US$250,000／100,000／50,000；不是每人額度。以85個工程任務建置開源harness，交不超過2,000字Kaggle Writeup、GitHub commit與artifacts；最多5人一隊、每隊一件，截止前可重交。最終交件為2027-01-05 23:59 UTC（台北1/6 07:59）。Stage 1前100名進入56題評測，Stage 2由Google免費提供指定模型評測key；本機開發無須Google Cloud/Vertex帳單或付費judge，但自選API/算力仍可能花費。台灣僅條件式地域資格，非領獎保證；官方對得獎程式授權有Apache-only與Apache或MIT兩種措辭。",
       "record_type": "opportunity",
-      "status": "active",
+      "status": "terms_conflict",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
         "FREE",
-        "VALUE-DEAL"
+        "QUALIFICATION"
       ],
       "views": [
         "free",
-        "developer",
-        "value"
+        "developer"
       ],
       "regions": [
         "Global"
@@ -87213,41 +87226,39 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "taiwan": "Yes",
-      "usage_type": "一次性競賽獎金（US$400,000 總獎金，前三名 US$250,000／US$100,000／US$50,000）",
-      "quota_classification": "HIGH BUT LIMITED",
-      "quota_classification_note": "名額由獎項數決定：僅 3 個獎項（第一、二、三名），官方頁列 3 個 prizes、1,619 entrants 但只有 27 participants／27 teams 真正參與，參賽本身不設名額上限。",
-      "quota_details": "總獎金 US$400,000；Main Track 第一 US$250,000、第二 US$100,000、第三 US$50,000；每隊 1 次提交（Writeup 可於截止前編輯重交）；團隊上限 5 人；Stage 1 取前 100 名進 Stage 2；本競賽不發 Kaggle 點數與獎章。",
+      "usage_type": "工程Agent競賽獎金與官方評測；非一般API贈額",
+      "quota_classification": "UNKNOWN",
+      "quota_classification_note": "獎項、參賽人數及評測題數不是可自由支配的API額度；Stage 2官方評測key免費，但未公布獨立token/RPM贈額。",
+      "quota_details": "總池US$400,000，前三名250,000／100,000／50,000；Stage 1取前100名，Stage 2每位入圍者56題各跑3次，均分須至少0.138且在performance-cost Pareto frontier才符合獎項資格。每題2 CPU／4 GB RAM、6小時限時，並非每週GPU福利。",
       "usable_duration": "2026-11-09（開始）至 2027-01-05 23:59 UTC（Writeup 與已 commit 的 GitHub repo 截止）；2027-01-19 Stage 1 評審完成；2027-01-26 Stage 2 結果與優勝公布。",
-      "setup_cost_basis": "報名與參賽免費，僅需免費 Kaggle 帳號並同意官方競賽規則（rulesRequired）。",
-      "cost_note": "無報名費；但需自備可執行 agent harness 的運算與模型存取（官方指定以 Google 贊助的 foundation model 執行，實際配額與是否提供免費額度未核），提交的 score-vs-cost 圖表暗示參賽者需自行負擔推論成本。",
+      "setup_cost_basis": "0元僅指免購買參賽；開發支出與領獎稅費另計。",
+      "cost_note": "規則NO PURCHASE REQUIRED TO ENTER OR WIN。官方明列本機開發不需Google Cloud/Vertex AI帳單、可用自架開源模型或個人訂閱/API，付費LLM judge非必要；Stage 2 Google提供評測key且不收參賽者費用。自備硬體、電力及自行選購API/訂閱成本不由此免除，score-vs-cost不是必須自付官方評測的證據。",
       "valuation_scenario": null,
-      "cancellation": "不適用（免費報名）；規則載官方得視需要修改時間軸，且獎項由贊助商依 rubric 裁量頒發。",
-      "access_risk": "競爭強度高（前 100 名才進 Stage 2）；須開源（Apache-2.0／MIT 與 Writeup CC BY 4.0）；需自建 harness 與承擔推論成本；資料僅限 Competition Use Only，不得轉傳；截止前需完成 git commit 與 kit 檢查，格式不符即失格。",
-      "verified_at": "2026-11-14T19:18:00+08:00",
+      "cancellation": "競賽無訂閱；自行購買的模型/API/算力依各供應商取消與計費規則。獎金須核驗資格，非註冊即給付。",
+      "access_risk": "Stage 2只允許官方proxy注入指定模型，封鎖自帶key、外部模型server與web search，非全面禁止官方API模型。需開源及可重現成果；資料僅限競賽使用、不對未同意規則者散布。授權頁首與B§5有差異，MIT方案應向主辦方確認；未登入驗證平台手機要求。",
+      "verified_at": "2026-11-15T16:15:55+08:00",
       "discovered_at": "2026-11-14T19:18:00+08:00",
-      "announcement_at": "2026-11-09",
+      "announcement_at": null,
       "previous_limit": null,
-      "deadline_at": "2027-01-05",
+      "deadline_at": "2027-01-06T07:59:00+08:00",
       "expires_at": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-05T09:00:00+08:00",
-      "verification_scope": "2026-11-14 新增：18:52–19:12（台北）以 Kaggle 官方競賽頁（overview／rules／overview/timeline／overview/description，頁面為前端渲染，靜態抓取只回外殼，改以瀏覽器渲染後讀取全文）確認獎金結構、資格、交件格式與時間軸，另以 Kaggle 官方 competition API（competitions.CompetitionService/ListCompetitions）核對 deadline 2027-01-05T23:59:59Z、reward USD 400000、numPrizes 3、maxTeamSize 5、maxDailySubmissions 1 與 rulesRequired=true。未註冊 Kaggle 帳號、未按 Join Hackathon、未下載 Competition Data、未執行官方 kit；未核「Google 贊助的 foundation model」是否提供免費 API 額度、Stage 2 隱藏測試集的呼叫成本上限，以及各獎項稅務處理。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T16:00:00+08:00",
+      "verification_scope": "2026-11-15主agent瀏覽器實讀正確競賽主頁與Rules：確認活動/重複ID、總池/前三獎、UTC時程、免費Stage 2 key與本機開發成本界線、交件/模型/評測限制、條件資格與領獎文件；保留頁首Apache 2.0與B§5 Apache 2.0或MIT的措辭差異。舊timeline/description來源保留原時間，本輪未重讀API、不登入/參賽/執行kit。台灣個案、稅率/匯款與法律未核。",
       "eligibility": {
-        "service_availability": "線上競賽，Kaggle 平台全球可存取；官方規則未列服務地區封鎖。",
-        "account_eligibility": "需 Kaggle 帳號（每人僅一個帳號）、滿 18 歲或所在地成年年齡、同意官方競賽規則並按 Join Hackathon；團隊上限 5 人，可合併隊伍（合併須在 Team Merger Deadline 前且提交數不超上限）。",
-        "billing_country": "無付款流程；獎金以美元發放，領獎需簽署資格證明、授權文件與美國稅表（W-9 或 W-8BEN）。",
-        "identity_residency": "官方規則逐字：「you must be ... (iii) not a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, or North Korea; and (iv) not a person or representative of an entity under U.S. export controls or sanctions」，台灣不在排除名單。",
-        "terms_restrictions": "獲獎作品須以 Apache-2.0／MIT（程式碼）與 CC BY 4.0（Writeup）開源；資料僅限本競賽使用、不得重製或轉傳；外部資料與模型須符合 Reasonableness Standard；Kaggle 評估環境無網際網路，不得使用 API 型模型；每人一帳號。",
-        "taiwan_note": "Yes：台灣不在官方排除名單（僅排除克里米亞、DNR、LNR、古巴、伊朗、北韓與受美國制裁者），且賽事全程線上、獎金以美元電匯，領獎需填 W-8BEN；未核台灣參賽者實際領獎的稅務與匯款實務。"
+        "service_availability": "線上Kaggle Hackathon；規則向美國及全球開放但列排除地域與制裁條件，不能把網站可開當成個人合格。",
+        "account_eligibility": "單一真實Kaggle帳戶，須達18歲與居住地成年年齡中較高者（特別同意例外依規則）；一人只加入一隊、每隊最多5人且一件提交。機構代表須雇主/機構知情同意；主辦相關人員可能可參賽但不可領獎。",
+        "billing_country": "參賽無需購買；本機開發不需Google Cloud/Vertex帳單。領獎需資格/授權及美國稅表（外國居民例如W-8BEN），獎金依法扣繳、稅由得獎者負擔；不保證台灣匯款。",
+        "identity_residency": "官方排除Crimea、DNR/LNR、Cuba、Iran、North Korea及受美國出口管制/制裁者；台灣不在地域排除清單。不得假造身分、居住地或其他申請資訊。",
+        "terms_restrictions": "資料限競賽用途、禁止對未參賽者散布；外部資料/工具須符Reasonableness Standard。Rules頁首得獎code寫Apache 2.0，B§5及Overview允許Apache 2.0或MIT，Writeup均CC BY 4.0，保留差異。通知1週內回覆、要求後2週內繳領獎文件，收齊後約30日發獎；不可轉讓獎項。",
+        "taiwan_note": "Yes僅指全球規則未排除台灣地域，仍需年齡、單帳戶、制裁/機構授權及領獎核驗；若所在地無法發獎則不具受獎資格。未核台灣實際受獎、稅率及法規，不是法律意見。"
       },
       "unknowns": [
-        "「Google 贊助的 foundation model」是否提供免費 API 額度與上限（官方頁未載數字）",
-        "Stage 2 隱藏測試集的推論成本與是否補助",
-        "Entry Deadline 與 Team Merger Deadline 的具體日期（規則稱見 Overview > Timeline，該頁只列 Start Date、Final Submission Deadline 與兩階段評審日）",
-        "8 個 google-cloud/* 模型的完整清單與各自費用",
-        "獎金稅務處理與非美國居民實領金額",
-        "報名（Join Hackathon）是否另有地區或機構限制",
-        "法律與監管限制未查核官方法規來源"
+        "Rules頁首Apache 2.0與B§5/Overview的Apache 2.0或MIT差異，MIT得獎授權須主辦澄清",
+        "Entry/Team Merger獨立期限未列於本輪時間軸；開賽僅日期、精確時刻未知",
+        "Stage 2端點token/速率上限與完整成本計算頁未核；自行開發實際支出依選擇而異",
+        "台灣個案受獎、扣繳稅率/匯款、平台手機要求及法律未核",
+        "Rules仍引用ple-bench.com交付指引，主頁稱該站直接報名已關閉、改Kaggle Writeup；舊戶轉移未核"
       ],
       "sources": [
         {
@@ -87277,11 +87288,25 @@
           "scope": "題目背景、85 個工程任務、交件內容與評分方式",
           "evidence": "原文：「introduces a benchmark of 85 expert-reviewed, long-horizon engineering tasks across four core disciplines: structural, civil, electrical, and mechanical engineering」「your task is to build an open-source agent harness, pair it with a Google-sponsored foundation model, and document your engineering findings in a Kaggle Writeup」「Submit one Kaggle Writeup (not to exceed 2,000 words) before the deadline. You can un-submit, edit, and re-submit until the deadline」「must include submission.yaml (set to one of the 8 google-cloud/* models), serve.py, harness.py, an Apache-2.0 or MIT LICENSE」「Stage 1 ... and pre-screening qualification gate ... (Stage 2) live execution on 56 hidden test tasks」。",
           "accessed_at": "2026-11-14T19:11:40+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/physical-engineerings-last-exam",
+          "scope": "現行獎金、時程、提交與免費評測/成本界線",
+          "evidence": "主agent瀏覽器實讀：Main Track $400,000，First/Second/Third $250,000/$100,000/$50,000；January 5, 2027 Final Submission Deadline，All deadlines 11:59 PM UTC。Stage 2 Google supplies the evaluation key at no cost；local dev不需Google Cloud/Vertex billing且paid judge非必要。官方proxy限制自帶keys、外部模型server及web search；前100進56題、每題2CPUs/4GB/6h、均分至少0.138及Pareto門檻。Overview程式授權Apache-2.0或MIT。",
+          "accessed_at": "2026-11-15T16:15:55+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/physical-engineerings-last-exam/rules",
+          "scope": "獎金、條件資格、領獎/稅務、授權措辭差異",
+          "evidence": "主agent瀏覽器實讀：總池$400,000、前三獎250,000/100,000/50,000；5人一隊/每隊一件，NO PURCHASE REQUIRED。全球開放但須成年、單帳戶/單隊、非排除地區/制裁對象及機構授權。台灣未列排除不代表可保證受獎；外國稅表例如W-8BEN、稅負自負，1週回覆/2週交文件/收齊約30日發獎。頁首WINNER LICENSE TYPE程式僅Apache 2.0，B§5則Apache 2.0 or MIT，文件CC BY 4.0；保留差異不自行判效力。",
+          "accessed_at": "2026-11-15T16:15:55+08:00"
         }
       ],
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·時間未知",
-      "priority_score": 25.0,
-      "priority_tier": "S"
+      "priority_note": "官方來源·官方條款有差異·免費·台灣Yes·時間未知·有資格門檻",
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "effective_at": "2026-11-09",
+      "effort_minutes_max": null
     },
     {
       "id": "google-buildhybridai-2026-firebase-ai-logic",
@@ -88129,53 +88154,57 @@
     },
     {
       "id": "kaggle-google-agent-harness-ple-2027",
-      "title": "Google Agent Harness on Physical-Engineering's Last Exam（Kaggle）：總獎金 US,000，2027-01-05 交件截止",
-      "summary": "由 Google 主辦之指標性 AI Agent 競賽，總獎金池高達 40 萬美元。參賽者需運用 Google 贊助之基座模型構建開源 Agent Harness（包含運行時、驗證迴圈與工具調用流），解決涵蓋結構、土木、電機與機械工程等真實物理工程難題。競賽採開源代碼審查與隱藏測試集兩階段評估，第一名獎金達 US,000。台灣開發者可免費組隊參賽，並享有 Kaggle 每週免費 GPU 算力。",
+      "title": "Google PLE Agent Harness：重複紀錄，已併入較早的PELE紀錄",
+      "summary": "本筆與kaggle-google-agent-harness-pele-2027為同一Google PLE工程Agent黑客松，並非第二份獎金或福利。保留ID與舊證據供追溯，退出可行動專區；正確官方slug為physical-engineerings-last-exam。總池US$400,000、台北2027-01-06 07:59交件，現況與資格請見主檔。原錯誤來源404不能當作活動終止證據。",
       "categories": [
         "FREE",
-        "QUALIFICATION",
-        "HIGH-QUOTA"
+        "QUALIFICATION"
       ],
       "views": [
-        "free"
+        "free",
+        "developer"
       ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
-      "effort_minutes_max": 60,
-      "effort_basis": "註冊 Kaggle 帳號並參賽",
+      "effort_minutes_max": null,
+      "effort_basis": "已合併，不再獨立估計申請工時。",
       "taiwan": "Yes",
       "regions": [],
       "verification": "Official",
-      "usage_type": "AI Agent 競賽、官方雲端評測環境與 Kaggle 免費 GPU 算力",
-      "quota_classification": "HIGH BUT LIMITED",
-      "limited_confirmed": true,
+      "usage_type": "工程Agent競賽獎金與官方評測；非一般API贈額",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "免費競賽無需綁卡與取消訂閱",
-      "usable_duration": "2026-11-09 起至 2027-01-05 最終提交截止",
-      "access_risk": "需 Kaggle 帳戶並完成手機驗證；遵守開源協議與代碼開源規範",
-      "verified_at": "2026-11-15T06:15:00+08:00",
+      "cancellation": "競賽無訂閱；自行購買的模型/API/算力依各供應商取消與計費規則。獎金須核驗資格，非註冊即給付。",
+      "usable_duration": "2026-11-09（開始）至 2027-01-05 23:59 UTC（Writeup 與已 commit 的 GitHub repo 截止）；2027-01-19 Stage 1 評審完成；2027-01-26 Stage 2 結果與優勝公布。",
+      "access_risk": "Stage 2只允許官方proxy注入指定模型，封鎖自帶key、外部模型server與web search，非全面禁止官方API模型。需開源及可重現成果；資料僅限競賽使用、不對未同意規則者散布。授權頁首與B§5有差異，MIT方案應向主辦方確認；未登入驗證平台手機要求。",
+      "verified_at": "2026-11-15T16:15:55+08:00",
       "discovered_at": "2026-11-15T06:15:00+08:00",
-      "announcement_at": "2026-11-09T00:00:00+08:00",
-      "effective_at": "2026-11-09T00:00:00+08:00",
-      "deadline_at": "2027-01-05T23:59:00+08:00",
+      "announcement_at": null,
+      "effective_at": "2026-11-09",
+      "deadline_at": "2027-01-06T07:59:00+08:00",
       "expires_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-15T06:15:00+08:00",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
       "priority": "normal",
       "eligibility": {
-        "service_availability": "全球符合 Kaggle 規範之使用者皆可線上參賽。",
-        "account_eligibility": "單一合法 Kaggle 帳號，禁止多帳號作弊。",
-        "billing_country": "無限制，無需填寫信用卡或帳單資訊。",
-        "identity_residency": "台灣使用者具參賽資格（非受美國全面制裁禁運地區）。",
-        "terms_restrictions": "獲獎方案須採開源協議釋出完整代碼與 Harness 架構；嚴格遵守 Kaggle 競賽規約。",
-        "taiwan_note": "台灣開發者與研究者可自由組隊參賽，無地區限制。"
+        "service_availability": "線上Kaggle Hackathon；規則向美國及全球開放但列排除地域與制裁條件，不能把網站可開當成個人合格。",
+        "account_eligibility": "單一真實Kaggle帳戶，須達18歲與居住地成年年齡中較高者（特別同意例外依規則）；一人只加入一隊、每隊最多5人且一件提交。機構代表須雇主/機構知情同意；主辦相關人員可能可參賽但不可領獎。",
+        "billing_country": "參賽無需購買；本機開發不需Google Cloud/Vertex帳單。領獎需資格/授權及美國稅表（外國居民例如W-8BEN），獎金依法扣繳、稅由得獎者負擔；不保證台灣匯款。",
+        "identity_residency": "官方排除Crimea、DNR/LNR、Cuba、Iran、North Korea及受美國出口管制/制裁者；台灣不在地域排除清單。不得假造身分、居住地或其他申請資訊。",
+        "terms_restrictions": "資料限競賽用途、禁止對未參賽者散布；外部資料/工具須符Reasonableness Standard。Rules頁首得獎code寫Apache 2.0，B§5及Overview允許Apache 2.0或MIT，Writeup均CC BY 4.0，保留差異。通知1週內回覆、要求後2週內繳領獎文件，收齊後約30日發獎；不可轉讓獎項。",
+        "taiwan_note": "Yes僅指全球規則未排除台灣地域，仍需年齡、單帳戶、制裁/機構授權及領獎核驗；若所在地無法發獎則不具受獎資格。未核台灣實際受獎、稅率及法規，不是法律意見。"
       },
       "unknowns": [
-        "Stage 2 隱藏測試集具體任務細節與評估延遲限制"
+        "Rules頁首Apache 2.0與B§5/Overview的Apache 2.0或MIT差異，MIT得獎授權須主辦澄清",
+        "Entry/Team Merger獨立期限未列於本輪時間軸；開賽僅日期、精確時刻未知",
+        "Stage 2端點token/速率上限與完整成本計算頁未核；自行開發實際支出依選擇而異",
+        "台灣個案受獎、扣繳稅率/匯款、平台手機要求及法律未核",
+        "Rules仍引用ple-bench.com交付指引，主頁稱該站直接報名已關閉、改Kaggle Writeup；舊戶轉移未核"
       ],
       "sources": [
         {
@@ -88184,20 +88213,33 @@
           "scope": "競賽主題、獎金池、時程與評估機制",
           "evidence": "總獎金 US,000（第一名 k、第二名 k、第三名 k）；2026-11-09 開賽，2027-01-05 提交截止；評估涵蓋土木、結構、電機與機械物理工程驗證。",
           "accessed_at": "2026-11-15T06:15:00+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/physical-engineerings-last-exam",
+          "scope": "現行獎金、時程、提交與免費評測/成本界線",
+          "evidence": "主agent瀏覽器實讀：Main Track $400,000，First/Second/Third $250,000/$100,000/$50,000；January 5, 2027 Final Submission Deadline，All deadlines 11:59 PM UTC。Stage 2 Google supplies the evaluation key at no cost；local dev不需Google Cloud/Vertex billing且paid judge非必要。官方proxy限制自帶keys、外部模型server及web search；前100進56題、每題2CPUs/4GB/6h、均分至少0.138及Pareto門檻。Overview程式授權Apache-2.0或MIT。",
+          "accessed_at": "2026-11-15T16:15:55+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/physical-engineerings-last-exam/rules",
+          "scope": "獎金、條件資格、領獎/稅務、授權措辭差異",
+          "evidence": "主agent瀏覽器實讀：總池$400,000、前三獎250,000/100,000/50,000；5人一隊/每隊一件，NO PURCHASE REQUIRED。全球開放但須成年、單帳戶/單隊、非排除地區/制裁對象及機構授權。台灣未列排除不代表可保證受獎；外國稅表例如W-8BEN、稅負自負，1週回覆/2週交文件/收齊約30日發獎。頁首WINNER LICENSE TYPE程式僅Apache 2.0，B§5則Apache 2.0 or MIT，文件CC BY 4.0；保留差異不自行判效力。",
+          "accessed_at": "2026-11-15T16:15:55+08:00"
         }
       ],
       "record_type": "opportunity",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "正常台灣網路環境可直接連線 Kaggle，無需 VPN。"
+        "eligibility_note": "未測台灣網路或個案資格；不以頁面可開保證可參賽，不建議跨區規避。"
       },
-      "status": "active",
+      "status": "duplicate_merged",
       "legal_status": "not_verified",
-      "priority_score": 25.0,
-      "priority_tier": "S",
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知·有資格門檻",
-      "verification_scope": "2026-11-15 06:15 查核 Kaggle 競賽主頁、官方規約與獎金結構：總獎金 US,000，2027-01-05 截止；台灣合法參賽。"
+      "priority_score": 16.9,
+      "priority_tier": "D",
+      "priority_note": "官方來源·重複紀錄・已併入其他 ID·免費·台灣Yes·時間未知·有資格門檻",
+      "verification_scope": "2026-11-15主agent實讀正確Kaggle主頁及Rules，比對名稱、主辦、獎金、期間與資格確認和kaggle-google-agent-harness-pele-2027為同活動；保留本ID與歷史、不再作獨立機會。錯路徑404不等於活動結束。現行金額、時間、評測費用與條件資格已整合主檔；未登入、無台灣法律結論。",
+      "duplicate_of": "kaggle-google-agent-harness-pele-2027"
     },
     {
       "id": "atlassian-codegeist-2026-developer-hackathon",
@@ -88858,17 +88900,16 @@
       "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-15T15:20:26+08:00",
+  "latest_research_at": "2026-11-15T16:16:13+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T15:05:20+08:00",
-    "completed_at": "2026-11-15T15:20:26+08:00",
+    "started_at": "2026-11-15T16:05:19+08:00",
+    "completed_at": "2026-11-15T16:16:13+08:00",
     "reviewed_ids": [
-      "kaggle-google-quantum-circuit-optimization-2026",
-      "serpkite-free-search-api-credits"
+      "kaggle-google-agent-harness-pele-2027",
+      "kaggle-google-agent-harness-ple-2027",
+      "zro-moonmath-free-flash-models"
     ],
-    "new_ids": [
-      "loom-classroom-education-seventyfive-off-business-ai"
-    ],
+    "new_ids": [],
     "attempted_failed_ids": [],
     "unreviewed_existing_count": 1091
   }
