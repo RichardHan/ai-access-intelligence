@@ -114,6 +114,13 @@ def accessed_day(source):
  raw=str(source.get('accessed_at') or source.get('accessed_time_range') or '')
  found=DATE_ONLY.findall(raw)
  return found[-1] if found else ''
+# 已見 Solar 等競賽標題的美元首段遺失成 US,000。只攔本批次主張，
+# 不猜補舊資料或改寫歷史來源；未核的舊項目留給證據修復佇列。
+BROKEN_USD=_re.compile(r'(?:\bUS|\$)\s*,\d{3}')
+for rid in reviewed+new:
+ for field in ('title','summary','cost_note','access_risk','usable_duration','verification_scope'):
+  value=offers_by_id[rid].get(field)
+  assert not (isinstance(value,str) and BROKEN_USD.search(value)), f'broken USD amount in {field} of {rid}: verify the source or state the amount is unknown; never guess missing digits'
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
  # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複

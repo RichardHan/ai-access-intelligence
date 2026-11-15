@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T11:22:07+08:00",
-  "scope": "2026-11-15 11:05–2026-11-15 11:22 Asia/Taipei：局部複核 3 筆既有紀錄、新增 1 筆機會（政策0、觀察線索0）、整筆追查失敗0筆；其餘1088筆既有紀錄未完成本輪複核。更正Deno Deploy終止公告、Figma教育點數加購路徑與QNX獎金/開源/資格；新增Lucid免費教育帳號與AI Beta，台灣資格及補充AI條款仍待核。並修正同日同筆數批次的首頁摘要漂移。",
+  "updated_at": "2026-11-15T12:14:04+08:00",
+  "scope": "2026-11-15 12:05–2026-11-15 12:14 Asia/Taipei：局部複核 3 筆既有紀錄、新增 1 筆機會（政策0、觀察線索0）、整筆追查失敗0筆；其餘1089筆既有紀錄未完成本輪複核。更正Solar獎金池/期限/領獎限制、Airtable Omni與Canvas耗點界線、Tactiq現行扣點與預覽限制差異；新增Miro非營利付費折扣，非免費訂閱、台灣個案未核。新增本批次損壞美元金額驗證，不刷新未複核項目。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -65497,7 +65497,7 @@
     {
       "id": "tactiq-free-monthly-ten-transcripts-five-ai",
       "title": "Tactiq Free：每月10份逐字稿、5 AI credits，免卡",
-      "summary": "Free永久US$0且免信用卡；逐字稿每月10份、AI每月5點，分池重置不結轉。現行Help稱對大多數使用者與AI操作，同一會議最多扣1點；舊定價FAQ曾稱每次action扣點，個別例外未明。會議轉錄須適當告知參與者；非免費模型API。",
+      "summary": "Free 為 US$0、免卡、無時間限制；每月10份會議逐字稿與5 AI credits分開計算，Help寫依註冊日重置、不結轉。AI扣點仍有現行官方衝突：定價FAQ說每次AI action扣1點，Help則說對大多數使用者每場會議最多1點、同場跨介面多次操作不再扣點；不能保證5點只夠5次提問或一定覆蓋所有操作。超額新逐字稿可能只有預覽，之後月重置不會解鎖舊預覽稿；付費升級才恢復完整存取。非模型API；台灣個案與錄音法律未核。",
       "categories": [
         "FREE"
       ],
@@ -65520,13 +65520,13 @@
       "valuation_scenario": null,
       "cancellation": "免費方案無自動付費承諾；付費升級另有自動續訂條款。",
       "usable_duration": "Free無固定到期；每月額度不結轉",
-      "access_risk": "超額逐字稿可能僅能預覽，翌月重置不解鎖；封存後30日刪除；現行Help對大多數使用者每場最多扣1點，例外與舊FAQ差異未釐清。",
-      "verified_at": "2026-11-02T17:08:00+08:00",
+      "access_risk": "現行定價FAQ與Help對每次action／每場會議扣點、月初／註冊日重置及超額逐字稿存取範圍仍有差異。Help明列預覽稿不能完整查看、搜尋或用AI，後續點數只適用新會議；封存稿30日後刪除。",
+      "verified_at": "2026-11-15T12:10:07+08:00",
       "discovered_at": "2026-10-26T19:48:44+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-02T17:08:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T12:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Chrome extension支援Meet、Zoom、Teams；台灣帳戶及中文品質未實測。",
@@ -65537,28 +65537,30 @@
         "taiwan_note": "Unknown；公開免卡入口不證台灣個案可領，錄音法律適用未核。"
       },
       "unknowns": [
-        "舊定價FAQ每次AI action扣點與現行Help對大多數用戶每場最多1點的差異及例外",
-        "台灣帳戶與錄音法律合規、中文轉錄品質",
-        "額度超限後逐字稿可讀範圍及個案保留期"
+        "現行定價FAQ每次AI action扣1點，Help對大多數用戶每場最多1點；適用例外及實際帳戶機制未釐清。",
+        "定價FAQ稱月初重置、既有逐字稿永遠可存取；Help稱依註冊日重置且超額稿僅預覽，月重置不解鎖，兩說保留。",
+        "台灣帳戶資格、中文品質、錄製同意及法律適用未核；條款沿用2026-10-26證據。"
       ],
       "sources": [
         {
           "url": "https://help.tactiq.io/en/articles/9514873-how-tactiq-ai-credits-work",
-          "scope": "本次局部複核AI額度及扣點",
-          "evidence": "Free每月5 AI credits，註冊日按月重置、不結轉；對大多數用戶及操作，每場會議最多扣1點，可供同場多次AI操作。例外及舊FAQ差異未釐清；台灣及法律未核。",
-          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00"
+          "scope": "Free AI點數、每會議扣點與註冊日重置",
+          "evidence": "Free 5 per month；For most users and AI actions, each meeting uses a maximum of one AI credit；同場browser extension/web app/connected AI assistant共用1點。Free-plan credits renew based on your Tactiq sign-up date；Unused AI credits do not roll over。AI點數耗盡不停止會議轉錄，既有AI Chats可用。",
+          "accessed_at": "2026-11-15T12:10:07+08:00"
         },
         {
           "url": "https://tactiq.io/buy",
           "label": "官方定價",
-          "scope": "Free額度與免卡；AI扣點FAQ",
-          "evidence": "2026-10-26 19:46–19:48 Asia/Taipei實讀：US$0、免卡、每月10 transcripts及5 AI credits；FAQ稱每個AI action扣1點。"
+          "scope": "Free0元免卡、10份逐字稿/5點；現行FAQ矛盾",
+          "evidence": "Free $0；Free forever. No credit card；5 AI credits/mo、10 transcripts/mo。現行FAQ：One AI credit covers a single AI action；重置at the start of the next month；Your existing transcripts always stay accessible。與Help每場扣1點、依註冊日重置及超額預覽限制不同，不能只稱舊FAQ。",
+          "accessed_at": "2026-11-15T12:10:07+08:00"
         },
         {
           "url": "https://help.tactiq.io/en/articles/9530978-what-are-meeting-credits",
           "label": "官方會議額度Help",
-          "scope": "月重置、短會議、封存及超額",
-          "evidence": "2026-10-26 19:46–19:48查閱：少於5分鐘不扣會議點；不結轉，超額稿件可能只預覽，封存30日刪除。"
+          "scope": "逐字稿月額度、短會議、超額預覽與封存",
+          "evidence": "Free每月10 meeting credits；少於5分鐘免扣；依帳戶建立日及約同時刻重置、不結轉。超額may continue capturing但limited to preview access，不能full view/search/use AI；monthly refresh does not unlock既有preview，升級才恢復。Archive可取回1點僅供未來會議，封存稿30日自動刪除。",
+          "accessed_at": "2026-11-15T12:10:07+08:00"
         },
         {
           "url": "https://tactiq.io/privacy/terms",
@@ -65568,16 +65570,17 @@
         }
       ],
       "record_type": "opportunity",
-      "status": "active",
+      "status": "terms_conflict",
       "legal_status": "not_verified",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
         "eligibility_note": "VPN不授予地區或身分資格；不跨區規避。"
       },
-      "priority_score": 19.0,
-      "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知"
+      "priority_score": 16.3,
+      "priority_tier": "C",
+      "priority_note": "官方來源·官方條款有差異·免費·台灣未標記·時間未知",
+      "verification_scope": "2026-11-15T12:10:07+08:00 局部複核定價、AI credits Help與meeting credits Help：Free0元免卡、10份逐字稿/5點、現行扣點及重置矛盾、預覽稿與封存限制。不是僅舊FAQ差異。錄音告知/帳戶及付費續訂條款沿用舊證據，本次未重核；未登入、未實測台灣帳戶或作法律判斷。"
     },
     {
       "id": "aliyun-yungongkaiwu-model-studio-students",
@@ -77367,10 +77370,10 @@
     },
     {
       "id": "airtable-free-plan-monthly-ai-credits",
-      "title": "Airtable Free：每位編輯每月 500 AI credits，建置 app 不計點",
-      "summary": "Airtable 官方說明所有方案都含每月免費 AI credits，Free 方案為「每位具 Editor 以上權限的使用者 500 credits」（per editor and above, per month），全工作區共用、於計費週期開始時重置、當月底到期且不累積；用完只能升級 Team 才能加購。Omni 建置／修改 app 與匯入資料不扣點，但「對資料提問」每次 10 credits、文件分析約 200 credits、網頁搜尋 10 credits，故 500 點屬體驗級額度。Free 方案另有每 base 1,000 筆記錄、每工作區每月 1,000 次 API 呼叫、每 base 75 個自動化、每月 100 次自動化執行、每 base 1GB 附件等上限；5 名 Editor／Creator、50 名 Commenter、唯讀不限。官方 FAQ 另稱非營利與教育折扣方案不包含 Airtable AI（Omni），故本筆只適用 Free 方案本身。未登入、未註冊，台灣是否可用官方未點名。",
+      "title": "Airtable Free：每位編輯每月 500 AI credits，Omni 與 Canvas 耗點不同",
+      "summary": "Free 每位具 Editor 以上權限的使用者每月 500 AI credits，工作區共用；按計費週期重置，官方另寫月底到期。Omni 建置 base／app、匯入與更新資料免費，但生成或修改 Airtable Canvas、對 Canvas agent 提問會耗點，不能概括為所有建置都免費。Omni Q&A 表列 10 點，文件分析約 200 點；實際耗點依模型、輸入與輸出而異。非營利／教育折扣 Team 的專屬 FAQ 明列不能加入 AI，不可套用一般 Free 或 Team 的額度。加購路徑仍有同頁差異：正文要求 Free 先升級 Team，FAQ 卻把 Free 列為可購額度。台灣資格與實際付款流程未核。",
       "record_type": "opportunity",
-      "status": "active_verified",
+      "status": "terms_conflict",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
@@ -77383,7 +77386,7 @@
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "effort_minutes_max": 15,
-      "effort_basis": "分析者估計：以 email 註冊即可建立 workspace，無需付款資料（官方未要求）",
+      "effort_basis": "分析者估計：註冊並建立 workspace 約15分鐘；是否要求付款驗證未核。",
       "taiwan": "Unknown",
       "usage_type": "每月每編輯 500 共享 AI credits（含 Omni Q&A 與 field agent）",
       "quota_classification": "HIGH BUT LIMITED",
@@ -77392,39 +77395,40 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "Free 方案不收費、無訂閱可取消；額度用完需自行升級 Team（US$24/collaborator/月起）才會計費。",
-      "cost_note": "方案本身 US$0；真正的成本在額度以外——用完 500 credits 只能升級 Team，Team 起價 US$24／協作者／月。",
+      "cancellation": "Free 工作區不計費；升級與額度加購需自行操作，未測結帳或取消流程。",
+      "cost_note": "Free 本身 US$0。正文要求先升級 Team 才能加購，FAQ 卻列 Free 可購額度，不能承諾直接加購；折扣 FAQ 引用 Team 月繳牌價 US$24/協作者，非免費層費用。",
       "usable_duration": "每月重置、當月底到期不累積；方案長期存在但官方保留調整額度權利。",
-      "access_risk": "額度為體驗級（一次文件分析約 200 點）；建置 app 不扣點但 Q&A 每次 10 點；Free 方案記錄與 API 上限低，且非營利／教育折扣方案明文不含 AI。",
-      "verified_at": "2026-11-09T17:30:50+08:00",
+      "access_risk": "Canvas 生成／修改會耗點，不在 Omni 建置免點承諾內；AI 也可能受方案或管理員封鎖。非營利／教育折扣 Team 不含 AI；加購路徑官方同頁說法不同。",
+      "verified_at": "2026-11-15T12:09:24+08:00",
       "discovered_at": "2026-11-09T17:30:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T17:30:50+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T12:00:00+08:00",
       "deadline_at": null,
       "expires_at": null,
       "eligibility": {
         "service_availability": "官方說明中心公開列 Free 方案的 AI credits 與方案上限；Airtable 全站可自助註冊 Free 方案。",
         "account_eligibility": "任何可註冊 Airtable 的個人或小型團隊；credits 依「具 Editor 以上權限的協作者」人數計算，Viewer 不配額度但可透過 Omni 消耗共用池。",
-        "billing_country": "Free 方案不計費、無稅務要求（官方 FAQ：「Free plan workspaces are not billed」）；升級 Team 才需付款方式，台灣卡片未實測。",
+        "billing_country": "Free工作區不計費；折扣Team需信用卡，免費帳戶是否要求驗卡及台灣付款實務未核。",
         "identity_residency": "官方未公布國別清單或居住限制；台灣未點名。",
-        "terms_restrictions": "不得超出方案上限（每 base 1,000 筆、每月 1,000 次 API）；credits 為工作區共用、不累積、月底到期；非營利與教育折扣方案另明文不含 Airtable AI。",
+        "terms_restrictions": "credits為工作區共用；Free按計費週期重置，文件另寫月底到期。非營利／教育折扣Team明文不能加入AI。方案或管理員可能封鎖AI；不得把一般方案額度套到折扣方案。",
         "taiwan_note": "Unknown；官方未逐字點名台灣，也未列排除清單。Airtable 稱非營利／教育／學生方案國際客戶皆可申請，可佐證對國際開放，但不構成台灣個案資格保證。"
       },
       "unknowns": [
-        "Free 方案註冊是否需要信用卡（官方頁未逐字聲明）",
-        "同一篇 AI billing 文件頁首「Plan availability: Team, Business, Enterprise Scale」與內文列出 Free 方案 500 credits 並存，未釐清是否僅為權限說明欄位",
-        "模型供應商與推論地區未公布",
-        "台灣是否可用的逐字聲明"
+        "Free註冊是否需要信用卡及台灣帳戶資格未核。",
+        "AI billing正文要求Free先升級Team才能加購，FAQ卻列Free可購額度；未測結帳、不任選一說。",
+        "AI billing頁首Plan availability未列Free，但正文列Free 500點；折扣Team專屬FAQ排除AI，不能用所有方案的概括句覆蓋。",
+        "文件同時寫計費週期重置及月底到期，邊界日如何處理未核。",
+        "官方已列OpenAI、Google Gemini等模型平台；各帳戶可選模型、推論地區及Canvas實際耗點未核。"
       ],
-      "verification_scope": "2026-11-09T17:30 實讀 Airtable 說明中心兩頁：AI billing（全方案含免費 AI credits、Free 500 credits/editor、共用池、計費週期重置、月底到期、建置不扣點、Q&A 10 點、文件分析 200 點）與 plans overview（Free 方案記錄／API／協作者上限表）。另讀非營利教育 FAQ 的「Airtable AI 不適用折扣方案」。未註冊、未登入、未核台灣個案與法律。",
+      "verification_scope": "2026-11-15T12:09:24+08:00 局部複核 AI billing、非營利教育 FAQ 與 Omni 鎖定設定說明：Free 500點、共用池、重置、Omni/Canvas耗點界線、折扣Team排除與加購路徑差異。Free與折扣Team為不同方案，不將其額度差別本身視為衝突；舊plans overview容量上限未重核。未註冊、未結帳、台灣個案及法律未核。",
       "sources": [
         {
           "url": "https://support.airtable.com/docs/airtable-ai-billing",
-          "scope": "Free 方案 AI credits 數量、共用池、重置與到期、動作點數",
-          "evidence": "「All Airtable plans include AI functionality with a set number of free AI credits each month」「Free plans - 500 credits per user with Editor permission and above」「Free, Team, and self-serve Business AI credits reset at the start of your billing cycle」「These free credits expire at the end of the month」「Customers on Free plans must upgrade to the Team plan if they need additional AI credits」「building apps and agents with Omni is free and does not consume AI credits」；點數表：Q&A 10、文件分析 200、網頁搜尋 10、回饋分類 1。",
-          "accessed_at": "2026-11-09T17:30:50+08:00"
+          "scope": "Free500點、共用與重置、Omni/Canvas耗點及加購路徑差異",
+          "evidence": "正文：Free plans - 500 credits per user with Editor permission and above；AI credits are pooled；reset at the start of your billing cycle；These free credits expire at the end of the month。Omni build/create/update records列Free；Canvas generate/change與query agent列Consumes AI credits。正文Customers on Free plans must upgrade to the Team plan；FAQ卻寫Free, Team, and self-serve Business plan customers can purchase additional AI credits。兩說保留；舊URL轉向/articles/3378106230-airtable-ai-billing。",
+          "accessed_at": "2026-11-15T12:09:24+08:00"
         },
         {
           "url": "https://support.airtable.com/docs/airtable-plans",
@@ -77434,14 +77438,20 @@
         },
         {
           "url": "https://support.airtable.com/docs/nonprofit-and-educational-plans-faqs",
-          "scope": "非營利／教育折扣方案不含 Airtable AI；Free 方案不計費",
-          "evidence": "「No. Adding Airtable AI (Omni) to non-profit and educational plans isn't available.」「Free plan workspaces are not billed and don't require tax exemption status.」",
-          "accessed_at": "2026-11-09T17:30:50+08:00"
+          "scope": "折扣Team的AI排除、付費與國際申請條件；Free不計費",
+          "evidence": "No. Adding Airtable AI (Omni) to non-profit and educational plans isn’t available；Free plan workspaces are not billed；international customers are eligible；discounted Team must be paid using a credit card。50%折扣基準為月繳$24/user→$12/user，非Free費用。舊URL轉向/articles/4920135568-applying-for-non-profit-education-and-student-airtable-plans。",
+          "accessed_at": "2026-11-15T12:09:24+08:00"
+        },
+        {
+          "url": "https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable",
+          "scope": "方案與管理員封鎖AI的區分",
+          "evidence": "Enabled by default isn’t the same as available；灰色設定警示可能是Airtable AI isn’t available for your plan，或enterprise admin restrictions。Owner權限不足以繞過方案封鎖；未操作帳戶。",
+          "accessed_at": "2026-11-15T12:09:24+08:00"
         }
       ],
-      "priority_score": 20.6,
-      "priority_tier": "A",
-      "priority_note": "官方來源·已核實列明主張·免費·台灣未標記·≤15分鐘"
+      "priority_score": 17.9,
+      "priority_tier": "B",
+      "priority_note": "官方來源·官方條款有差異·免費·台灣未標記·≤15分鐘"
     },
     {
       "id": "openalex-free-daily-api-budget",
@@ -88347,8 +88357,8 @@
     },
     {
       "id": "kaggle-solar-filament-segmentation-2026",
-      "title": "Solar Filament Segmentation Challenge 2026（Kaggle）：總獎金 US,000，太陽磁絲像素級分割與太空天氣 AI 競賽",
-      "summary": "由美國國家科學基金會國家太陽天文台（NSO）與 ESAIR 實驗室主辦之太陽物理與電腦視覺挑戰賽，總獎金池 3,000 美元（獲獎隊伍獲邀於 IEEE BigData 2026 發表）。參賽者需運用 GONG 全日面 H-alpha 高解析觀測圖像（MAGFiLO 數據集），建立精確辨識太陽色球磁絲（Filament）之實例分割模型（以 Panoptic Quality PQ 與 Dice 為評估指標），用於預測日冕物質拋射（CME）與太空天氣災害。2026-11-15 最終報告與代碼提交截止。台灣開發者與研究者可免費組隊參賽，享有 Kaggle 免費 GPU 算力。",
+      "title": "Solar Filament Segmentation 2026：至多 US$3,000 總獎金池，截止時刻有差異",
+      "summary": "ESAIR Lab 的太陽磁絲分割競賽，由 NSF NSO 贊助、AURA/NSO支付獎金。前三名按評審分數平方正規化分配至多US$3,000總池，非每人額度。截止原文為2026-11-15 11:59 pm CDT（報告及解法），平台API則列2026-11-16T11:59:59Z；舊紀錄23:59 UTC錯誤，兩個現行時間不可互換，應向主辦確認且不要等到較晚時刻。須用Google Form交4頁技術報告與可重現的公開Git repo。台灣不在規則地區排除名單，但仍須成年、帳戶與其他資格；領獎另須銀行/vendor onboarding及稅務文件。IEEE BigData僅列宣布得獎、SABID為自願投稿，不是保證獲邀發表；未核本競賽專屬GPU額度。",
       "categories": [
         "FREE",
         "VALUE-DEAL"
@@ -88366,57 +88376,77 @@
         "Worldwide"
       ],
       "verification": "Official",
-      "usage_type": "Competition prize pool and free cloud compute",
-      "quota_classification": "HIGH BUT LIMITED",
-      "limited_confirmed": true,
-      "usable_benefit_usd": 3000.0,
+      "usage_type": "競賽獎金池；非個人可領取額度",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "valuation_scenario": "總獎金池 3,000 美元，可組隊至多 5 人，參賽期間享有 Kaggle 每週免費 GPU 算力配額",
-      "cancellation": "免付費、無自動扣款或綁約，隨時可停止提交",
-      "usable_duration": "賽程至 2026-11-15 23:59 UTC 最終交件截止",
-      "access_risk": "需撰寫技術報告與公開代碼庫，獲獎者需參加線上或實體研討會成果發表",
-      "verified_at": "2026-11-15T08:15:00+08:00",
+      "valuation_scenario": null,
+      "cancellation": "規則寫NO PURCHASE NECESSARY TO ENTER OR WIN；外部運算與工具成本自理，未操作報名或付款。",
+      "usable_duration": "開賽2026-07-10；報告原文2026-11-15 11:59 pm CDT，平台截止2026-11-16T11:59:59Z；2026-11-30公布優勝。時間有差異，未擇一作唯一截止。",
+      "access_risk": "報告/repo缺件或無法重現不進評審。資料限非商業/學術；得獎作品須採不限制商用的OSI核准開源授權，並授予主辦永久免權利金研究用途授權。領獎須完成AURA/NSO收款與稅務文件；與主辦有指導/利益關係者可能可參賽但不能領獎。",
+      "verified_at": "2026-11-15T12:13:27+08:00",
       "discovered_at": "2026-11-15T08:15:00+08:00",
       "announcement_at": "2026-07-10",
-      "deadline_at": "2026-11-15T23:59:00Z",
-      "expires_at": "2026-11-15T23:59:00Z",
+      "deadline_at": null,
+      "expires_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
       "next_review_at": "2026-11-15T20:00:00+08:00",
       "priority": "standard",
       "eligibility": {
-        "service_availability": "全球 Kaggle 註冊用戶均可免費參與，可個人或組隊（最多 5 人）",
-        "account_eligibility": "年滿 18 歲（或所在地成年法定年齡）之 Kaggle 帳戶，每人限單一帳號",
-        "billing_country": "免費參賽，無信用卡或帳單門檻",
-        "identity_residency": "全球開放，台灣開發者與大專院校研究者具備完整參賽與角逐獎品資格",
-        "terms_restrictions": "每隊每日至多 5 次提交，最終評估限選 2 份，須填寫技術報告並開源代碼庫",
-        "taiwan_note": "Yes：排除名單未列台灣，台灣使用者具備完整參賽資格。"
+        "service_availability": "Kaggle公開競賽頁可讀且仍列a day to go；免費參賽不表示提供專屬GPU。",
+        "account_eligibility": "須Kaggle帳戶、18歲或所在地較高成年年齡（規則列監護同意例外）；單人單帳號、只能加入一隊。規則隊伍最多5人，平台API卻列10，須向主辦釐清。",
+        "billing_country": "參賽/獲獎無必要購買；獎金須能收美國金融機構款項並完成AURA vendor onboarding，稅費與台灣收款未核。",
+        "identity_residency": "規則全球開放但排除Crimea、DNR/LNR、Cuba、Iran、North Korea及受美國出口管制/制裁者；台灣未列名，仍須符合其他條件。",
+        "terms_restrictions": "每隊每日5次、可選2份Final；Google Form須交4頁報告、公開Git repo、requirements.txt、可重現notebook及模型權重。競賽資料限非商業/學術；獲獎作品OSI開源授權不得限制商用。不得多帳號、虛假身分或私下跨隊分享程式碼；領獎需提供適用稅表如外國居民W-8BEN。",
+        "taiwan_note": "Yes僅指規則未排除台灣居住者；不是完整個人資格、領獎/收款或法律合規保證。未實測報名及銀行付款。"
       },
       "unknowns": [
-        "IEEE BigData 研討會發表之旅費補助條件",
-        "海外電匯獎金扣繳稅率"
+        "報告截止原文CDT與平台API截止不同，且11月CDT標記可能有誤；未擇一改成唯一時間，暫停單一截止倒數但今日20:00仍追查。",
+        "正式規則隊伍最多5人，平台API maxTeamSize=10；規則優先遵守，但須主辦澄清配置差異。",
+        "總池up-to US$3,000的最終發放與前三名分數分配、個人稅後金額未知。",
+        "台灣個人資格、AURA vendor onboarding/美國金融機構收款及扣繳稅率未核；不作法律結論。",
+        "未核競賽專屬GPU額度；平台一般Notebook功能不可直接視為本競賽福利。",
+        "overview仍同時留Dice及PQ主指標措辭，API為panoptic_quality；IEEE/SABID旅費與註冊補助未核。"
       ],
       "sources": [
         {
           "url": "https://www.kaggle.com/competitions/filament-segmentation-2026",
-          "scope": "Kaggle 官方競賽頁面、獎金分配與時間表",
-          "evidence": "2026-11-15 實讀：Total Prizes ,000，Panoptic Quality (PQ) 評估指標，2026-11-15 23:59 UTC 最終交件。",
-          "accessed_at": "2026-11-15T08:15:00+08:00"
+          "scope": "競賽、獎金池、報告截止及發表/付款條件",
+          "evidence": "瀏覽器實讀overview：總池up-to $3,000分給前三名，compute_prizes以scores平方正規化；Nov 15, 2026, 11:59 pm CDT為final reports and solutions截止；11/11公告要求Google Form/技術報告/公開repo。IEEE BigData標Optional並宣布得獎，SABID為please consider submitting；AURA/NSO付款需銀行資料/vendor onboarding且能收美國金融機構款項。舊08:15證據金額缺字及23:59UTC錯誤，歷史保留於policy-history。",
+          "accessed_at": "2026-11-15T12:13:27+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/filament-segmentation-2026/rules",
+          "scope": "官方參賽資格、獎金池、隊伍/提交限制、資料及作品授權",
+          "evidence": "TOTAL PRIZES AVAILABLE: $3,000；三名Dynamic。Team size five (5)，每日five (5)，最多two (2) Final。NO PURCHASE NECESSARY；全球開放但排除Crimea/DNR/LNR/Cuba/Iran/North Korea及制裁者；台灣未列名。資料限non-commercial；得獎作品須OSI-approved license不得限制商用；外國居民稅表例如W-8BEN。主辦指導/利益衝突者不具獎金資格。",
+          "accessed_at": "2026-11-15T12:13:27+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+          "scope": "公開唯讀POST查詢competitionName=filament-segmentation-2026的平台配置",
+          "evidence": "主agent於公開競賽頁呼叫此唯讀API：deadline=2026-11-16T11:59:59Z、maxTeamSize=10、reward={id:USD,quantity:3000}、hostName=Earth-Space AI Research (ESAIR) Lab、fileBasedSubmissions=true；截止與人數和overview/rules有差異，不能任選平台值覆蓋。未提交參賽或帳戶資料。",
+          "accessed_at": "2026-11-15T12:13:27+08:00"
         }
       ],
       "record_type": "opportunity",
-      "status": "active",
+      "status": "terms_conflict",
       "legal_status": "not_verified",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "無需 VPN，台灣直連 Kaggle 參賽。"
+        "eligibility_note": "VPN不改變地區或身分資格；台灣帳戶連線與申請未實測。"
       },
-      "priority_score": 25.6,
+      "priority_score": 21.1,
       "priority_tier": "S",
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·時間未知",
-      "verification_scope": "2026-11-15 08:15（Asia/Taipei）讀取 Kaggle 官方競賽頁面：核實總獎金 US,000、GONG H-alpha 太陽磁絲實例分割任務、2026-11-15 最終報告與代碼提交截止；確認台灣可免費組隊參賽並使用 Kaggle 免費 GPU 算力。"
+      "priority_note": "官方來源·官方條款有差異·免費·台灣Yes·時間未知",
+      "verification_scope": "2026-11-15T12:13:27+08:00 主agent以瀏覽器重讀overview及rules，另讀官方GetCompetition API（competitionName=filament-segmentation-2026）：核至多US$3,000總池、報告/平台截止差異、台灣未列排除與領獎限制、主辦/贊助及可重現開源義務。撤回競賽附贈GPU與受邀發表保證；未登入、未申請、未核台灣個案或法律。",
+      "expiry": {
+        "date": null,
+        "text": "報告及解法：Nov 15, 2026, 11:59 pm CDT（官方原文）；平台API：2026-11-16T11:59:59Z（台北11/16 19:59:59）。CDT字面換算為台北11/16 12:59，與平台不同；原文是否誤用夏令時未釐清，不合併為單一倒數。"
+      }
     },
     {
       "id": "qnx-global-hackathon-2026",
@@ -88570,21 +88600,111 @@
       "priority_score": 17.3,
       "priority_tier": "B",
       "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "miro-nonprofit-thirty-percent-all-paid-plans-ai",
+      "title": "Miro 非營利：付費方案30%折扣，含每席月度AI點數",
+      "summary": "合格非營利組織可申請付費Miro方案30%折扣碼，不是免費訂閱。一般Starter含每席每月25 AI credits、Business含50點，團隊共池且不結轉；折扣本身不增加點數。資格須有所在地政府授權機關認證的非營利證明、組織同網域信箱，個人不適用，並須接受名稱/標誌及案例使用條款。官方合併年繳折扣有差異：Help寫44%，活動FAQ仍寫舊Team/Consultant方案約50%；不保證折後實付金額。非美國組織可申請，但台灣證明文件與個案核准未核。",
+      "record_type": "opportunity",
+      "status": "terms_conflict",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "value"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [
+        "Global / 官方 FAQ 稱美國以外亦適用，台灣個案未核"
+      ],
+      "verification": "Official",
+      "usage_type": "付費訂閱折扣；方案內含每人每月 AI credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "未操作付費訂閱或取消流程；折扣可在帳戶有效期間持續，但官方可隨時重驗資格、修改或終止計畫。",
+      "usable_duration": "折扣未公告固定截止日；Starter/Business AI點數每月依方案續約日重置，年繳亦同、不結轉。",
+      "access_risk": "須先通過非營利審核取得 promo code 才能享折扣；不可與 volume discount 或其他產品級促銷併用、不適用既往購買；須同意 Miro 使用名稱/標誌並配合案例或推薦。折扣不增加 AI 額度，額度耗盡 AI 動作暫停，管理員可另購點數包。",
+      "cost_note": "需要付費訂閱，非免費方案；一般年繳牌價Starter US$8/成員/月、Business US$20/成員/月。NPO折扣30%，但官方合併年繳說法44%與約50%不同；不把算術折後價格當實際報價。設定費、稅費、折扣適用加購包與台灣付款未核。",
+      "eligibility": {
+        "service_availability": "官方說明頁、landing page 與申請表均在線；未實際送出申請。",
+        "account_eligibility": "須為在居住國由政府授權機關認證之非營利組織並能提供非營利證明文件；個人不符資格；須以與組織同網域之 business email 申請；須簽署反歧視聲明。",
+        "billing_country": "官方 FAQ 明示美國以外非營利組織亦適用；台灣付款方式、幣別、稅費與折後帳單未核。",
+        "identity_residency": "未排除台灣，但台灣社團法人／財團法人何種文件被 Miro 認可未核；Miro 保留拒絕任何申請之裁量權。",
+        "terms_restrictions": "限直接購買自用，禁止轉讓或轉售；不適用既往購買；不可與 volume discount 或其他產品/訂單級促銷併用；不可折現；Miro 可隨時取消、修改或終止計畫。",
+        "taiwan_note": "Unknown：僅確認『美國以外可用』，未確認台灣非營利個案核准、可接受證明、TWD 計價或營業稅。"
+      },
+      "unknowns": [
+        "台灣非營利證明可接受形式與個案核准；非美國可申請不等於台灣個案保證。",
+        "官方Help年繳合併折扣44%，活動FAQ約50%且沿用舊方案名；實付價與促銷碼有效性未測。",
+        "設定費、台灣幣別稅費/發票/付款方式、Enterprise報價與AI加購包是否適用折扣未核。",
+        "一般付費方案表含AI，但未登入核准後的NPO帳戶確認個別功能配置。",
+        "一般訂閱取消/續費條款及法律監管限制本輪未核。"
+      ],
+      "verification_scope": "2026-11-15T12:11:08+08:00 主agent重讀活動與定價、AI credits，並以瀏覽器讀非營利Help及展開非美國FAQ（文字工具403）。核折扣30%、44%/約50%差異、資格與轉售限制、付費方案25/50點及共池規則；申請表由研究員於12:06–12:08實讀。未申請、未登入、未付款、未核台灣個案或法律。",
+      "verified_at": "2026-11-15T12:11:08+08:00",
+      "discovered_at": "2026-11-15T12:11:08+08:00",
+      "announcement_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T12:00:00+08:00",
+      "legal_status": "not_verified",
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·時間未知·有資格門檻",
+      "sources": [
+        {
+          "url": "https://help.miro.com/hc/en-us/articles/360026839633-Miro-for-non-profits",
+          "scope": "非營利折扣比例、適用方案、合併年繳、資格條款與非美適用",
+          "evidence": "30% 折扣適用所有付費方案；可與 Starter/Business 年繳 20% 合併成 44% off；須政府授權機關認證之非營利證明；個人不符；不可與 volume discount 併用；名稱標誌與案例配合條款；非美國地區可用。 主agent文字讀取403後以瀏覽器成功重讀，展開FAQ確認Yes, it’s available。",
+          "accessed_at": "2026-11-15T12:11:08+08:00"
+        },
+        {
+          "url": "https://miro.com/npo/",
+          "scope": "折扣比例、核准時間、折扣期限與裁量權",
+          "evidence": "非營利組織付費方案 30% 折扣；申請 10 天內核准；折扣可持續至帳號有效期間並可隨時要求重新驗證；landing FAQ 另稱可與年繳合併約 50% off（與 Help 的 44% 不一致）；保留拒絕權。",
+          "accessed_at": "2026-11-15T12:11:08+08:00"
+        },
+        {
+          "url": "https://miro.com/contact/npo/",
+          "scope": "申請要求與免費替代路徑",
+          "evidence": "須用以組織同網域 email 申請並證明為 nonprofit charity；審核期間可用 Free Plan（3 個可編輯看板、無限協作者、不需信用卡）。",
+          "accessed_at": "2026-11-15T12:06:41+08:00/2026-11-15T12:08:19+08:00"
+        },
+        {
+          "url": "https://help.miro.com/hc/en-us/articles/19756209116178-Miro-AI-credits",
+          "scope": "方案對應 AI 點數、共池與重置、加購限制（證明折扣方案確實含 AI 額度）",
+          "evidence": "AI credits 對應：Free 25/月、Starter 25/授權/月、Business 50/授權/月、Education 100/月；團隊共池、每月重置不結轉；Guests/Visitors 不能執行 AI；Starter 與 Business 可另購 100 或 200 點數包。",
+          "accessed_at": "2026-11-15T12:11:08+08:00"
+        },
+        {
+          "url": "https://miro.com/pricing/",
+          "scope": "Starter/Business 牌價與隨方案標示的 AI 點數（必要費用）",
+          "evidence": "Starter US$8/成員/月（年繳）含 25 AI credits/成員/月；Business US$20/成員/月（年繳）含 50 AI credits/成員/月；信用卡可月繳或年繳、無席次下限；Free US$0 僅列 Explore AI 未列點數。",
+          "accessed_at": "2026-11-15T12:11:08+08:00"
+        }
+      ]
     }
   ],
-  "latest_research_at": "2026-11-15T11:22:07+08:00",
+  "latest_research_at": "2026-11-15T12:14:04+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T11:05:21+08:00",
-    "completed_at": "2026-11-15T11:22:07+08:00",
+    "started_at": "2026-11-15T12:05:23+08:00",
+    "completed_at": "2026-11-15T12:14:04+08:00",
     "reviewed_ids": [
-      "deno-deploy-free-tier",
-      "figma-education-ai-credits",
-      "qnx-global-hackathon-2026"
+      "kaggle-solar-filament-segmentation-2026",
+      "airtable-free-plan-monthly-ai-credits",
+      "tactiq-free-monthly-ten-transcripts-five-ai"
     ],
     "new_ids": [
-      "lucid-education-free-ai-beta"
+      "miro-nonprofit-thirty-percent-all-paid-plans-ai"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1088
+    "unreviewed_existing_count": 1089
   }
 }

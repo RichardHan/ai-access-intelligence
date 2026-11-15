@@ -3675,3 +3675,51 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `kaggle-solar-filament-segmentation-2026`：20:00排程、11/15 23:59Z截止將至且標題金額缺字；[官方競賽](https://www.kaggle.com/competitions/filament-segmentation-2026)。核年份、規則、精確截止、獎金與GPU是否真的適用，不憑舊摘要補數字。
 4. `lucid-education-free-ai-beta`：11/22追補充AI條款正文、教育帳號功能對應及台灣學校信箱；[AI條款](https://lucid.co/supplemental-AI-terms)、[教育說明](https://help.lucid.co/hc/en-us/articles/18624964476692-Welcome-to-Lucid-for-Education)。可求官方提供可讀版本，但本任務未代寄信。
 5. `airtable-free-plan-monthly-ai-credits`：研究員發現新舊文件矛盾；[非營利教育FAQ](https://support.airtable.com/docs/nonprofit-and-educational-plans-faqs)排除AI，對照[AI billing](https://support.airtable.com/docs/en/airtable-ai-billing)稱所有方案含AI。先重讀判別方案，不能把Team一般額度直接套到折扣版。
+
+## 2026-11-15 12:05–12:14 Asia/Taipei 維護紀錄
+
+### 基準、範圍與分工
+
+- 實際對錶 UTC 04:05:23／台北12:05:23；`main` HEAD `9b9ca299df30af9161652c8783a120023f6e8b4a`，工作樹乾淨，origin為RichardHan/ai-access-intelligence，fetch後與origin/main一致，無未完成PR。Pages沿用main根目錄legacy build。
+- 另一個同工作樹omp程序仍存在，但無維護鎖或未提交修改，不據此宣稱對方正在寫入；本輪以PID7791取得`round_lock.py`鎖。研究員不改共享JSON、不提交。
+- N=1,092（876 opportunity／50 policy／166 watchlist）。佇列可行動1,001、嚴格逾期0、7日內截止12（8筆冷卻）、retry 0、24小時未核737、12小時內已核158筆可行動紀錄。今早09:10及上一輪11:22無新訊號的項目不重刷。
+- 提前複核理由：Solar雖08:15才核，但標題`US,000`缺字、獎金池當個人利益及資格過強；Airtable有上輪交接的方案範圍疑點；Tactiq為11/02最舊一批缺`verification_scope`的可行動紀錄。不是排程到期，也不是全庫輪替。
+- 使用3個環境預設Task研究員：A僅Solar、B僅Airtable/Tactiq、C僅Miro教育/非營利與Whimsical教育（最多1新增）。三者已交付，主agent審查且重讀重大金額、資格與期限來源；未指定或宣稱使用Terra/Gemini。
+- A為取SPA資料探測5個未成功API路徑，超出合理替代上限；未把404當終止，但此成本偏差須記錄。下輪先瀏覽器渲染已知頁、不要猜測API名稱。A提出均分獎金「期望值」、未管理的quota/cadence值、手動降級S及擇平台截止等建議均未採用。B的`daily_while_conflict`亦不採用，統一既有`daily`。C使用5個成功URL及1個404，預篩限2供應商未擴張。
+
+### 計數與實質成果
+
+- R=3：`kaggle-solar-filament-segmentation-2026`、`airtable-free-plan-monthly-ai-credits`、`tactiq-free-monthly-ten-transcripts-five-ai`。
+- A=1 opportunity：`miro-nonprofit-thirty-percent-all-paid-plans-ai`；policy=0、watchlist=0。結果1,093筆（877／50／166）。U=N−R=1,089；整筆追查失敗attempted=0。Miro Help文字取用403後瀏覽器成功，不算整筆失敗。
+- 三個批次完成時間欄位一致為12:14:04；未核既有ID完全不改。2,551筆舊政策歷史保留，追加4筆有意義更正/新增基準；原來源URL全部保留。依`tools/prioritize.py`函式在記憶體重算後以edit套用：Solar25.6→21.1/S（台灣條件Yes仍依既有規則為S）、Airtable20.6/A→17.9/B、Tactiq19/A→16.3/C、Miro13.8/D。評分不是外部複核。
+
+1. **Solar**：[overview](https://www.kaggle.com/competitions/filament-segmentation-2026)與[rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)實讀確認至多US$3,000是前三名分配的總池，不是每人福利，`usable_benefit_usd=null`、quota=UNKNOWN。移除附贈GPU及受邀IEEE發表保證；BigData是宣布得獎、SABID為自願投稿。報告及可重現repo缺件不進評審；資料限非商業，得獎作品授權卻不得限制商用，兩者不可混淆。台灣未列排除，仍需成年/帳戶/利益衝突審查與AURA vendor onboarding、銀行及適用稅表；不是法律結論。
+2. **Solar期限重大更正**：overview原文`Nov 15, 2026, 11:59 pm CDT`，公開唯讀[GetCompetition](https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition)（POST `competitionName=filament-segmentation-2026`）卻回`2026-11-16T11:59:59Z`；舊23:59UTC不符合任一來源。CDT字面台北12:59，平台台北19:59:59，且11月CDT標記本身可疑。兩者可能對應不同提交流程，不擅自判定哪個是唯一截止；清除舊`deadline_at`/`expires_at`，完整兩說放既有`expiry.text`與摘要，暫不顯示單一倒數，今日20:00仍追查。API隊伍10人與規則5人亦保留差異。
+3. **Airtable**：[AI billing](https://support.airtable.com/docs/airtable-ai-billing)仍列Free每編輯以上500點/月、工作區共池；Omni建置免點不涵蓋Canvas生成/修改/agent查詢。正文說Free需升Team才能加購，FAQ卻把Free列入可購者；保留差異、每日追查。[非營利教育FAQ](https://support.airtable.com/docs/nonprofit-and-educational-plans-faqs)排除AI的是折扣Team，與Free為不同方案，不是Free消失。另[Omni說明](https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable)確認預設啟用不等於方案允許。舊容量上限來源未刷新；台灣Unknown。
+4. **Tactiq**：[現行定價FAQ](https://tactiq.io/buy)依然寫single AI action扣1點，與[AI Help](https://help.tactiq.io/en/articles/9514873-how-tactiq-ai-credits-work)每場會議最多1點同時存在，不再稱僅舊FAQ。0元免卡、10份轉錄/5 AI點不變；[meeting credits](https://help.tactiq.io/en/articles/9530978-what-are-meeting-credits)明列超額稿僅預覽、後續月點數不解鎖，與定價頁「既有稿始終可存取」有範圍差異；月初/註冊日重置措辭亦保留。補核實範圍並每日追查；錄製及續費條款沿用10/26證據、未冒稱重核。
+5. **新增Miro非營利**：[Help](https://help.miro.com/hc/en-us/articles/360026839633-Miro-for-non-profits)與[活動頁](https://miro.com/npo/)確認付費方案30%折扣，[AI credits](https://help.miro.com/hc/en-us/articles/19756209116178-Miro-AI-credits)及[定價](https://miro.com/pricing/)支持Starter25/Business50點每席每月、團隊共池、不結轉。須付費，不放免費專區；年繳牌價8/20美元不是折後報價。Help合併年繳寫44%，活動FAQ約50%且沿用舊方案名，兩說保留、不推算帳單。組織需政府機關認證、同網域信箱、接受宣傳條款；禁止轉售/轉讓。非美組織可申請≠台灣證明一定核准，taiwan仍Unknown。一般取消續費/台灣稅費未核。
+
+### 唯一品質改善與可重用教訓
+
+- 實際問題：5筆既有標題出現`US,000`，讓金額不可讀。只憑其他摘要猜補會製造新錯；本輪僅Solar有官方證據可修。`tests/validate.py`新增本批次主張欄位的損壞美元格式檢查，錯誤訊息要求查源或明示未知，不自動補數字，不改寫舊歷史。
+- 回歸證據：從驗證程式擷取實際新增斷言，原Solar紀錄確實被拒絕；`US$3,000`、`USD 3,000`、`US$0`與「總獎金未核實」通過。其餘4筆未查來源不補數字，保留下一輪清單。
+- 官方段落差異要判斷適用範圍：Free與折扣Team是不同方案；Omni與Canvas也不能合併。競賽獎金不是可支配額度，公開排行榜分數不是最終評審分數，均分總池更不是有根據的期望值。
+- 大JSON先索引；以記憶體產生最小hashline補丁交edit，避免shell展開美元字號。read大檔缺snapshot錨點已回報工具問題；AST僅預覽取得工具產生錨點後撤回，未改schema。find因判斷模型帳戶拒絕不可用，已回報並用已知入口/文字索引替代。
+- 未納入：Miro教育、Whimsical教育已有相同方案ID，未刷新既有時間；未新增一般Miro Free或薄弱觀察線索。
+
+### 驗證與發布交接
+
+- `python3 tests/validate.py`通過1,093筆；`node --check app.js`、`node tests/filters.cjs`及`git diff --check`通過。S/A/B/C/D=173/186/130/277/111；schema、前端未改。
+- 本機瀏覽器：本輪4卡對應R3/A1/U1089，摘要時間窗正確；展開來源可見Solar雙期限、Miro費用及折扣差異、Airtable耗點、Tactiq原文差異。台灣篩選本輪Unknown3/Yes1；Miro關鍵字1筆、免費專區0筆；載入更多24→48；截止排序仍可用，Solar因衝突不給假倒數。
+- 桌面1365px DOM無水平溢出，瀏覽器錯誤清單為空。截圖工具回`Image reading is disabled`，故只有DOM/互動證據，沒有宣稱完成像素外觀審查；本輪未改前端。首次批次詳情點擊用了不存在的selector，重新observe後以實際控制項完成，不是網站錯誤。
+- 本節記錄提交前已觀測的結果；依既有main流程提交推送。對應commit的遠端包含、Pages工作成功及公開版本須分別在推送後核對，不能以本節當部署成功證明；最終結果見本輪回報與GitHub部署紀錄。
+
+### 下一輪優先（最多5項）
+
+1. `kaggle-solar-filament-segmentation-2026`：今日20:00追報告CDT與平台UTC、隊伍5/10人的差異；查[overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)及既有API。勿只等較晚時間，也勿只因日期過了就忽略不同提交窗口。
+2. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00排程後核11/15換檔，不重刷今早證據；查[AutoClaw更新](https://autoclaw.z.ai/changelog)、[WorkBuddy定價](https://www.workbuddy.cn/pricing/)、[CodeBuddy定價](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-google-quantum-circuit-optimization-2026`、`kaggle-neurips-2026-smart-buildings-competition`、`kaggle-google-agent-harness-ple-2027`、`atlassian-codegeist-2026-developer-hackathon`：其標題仍有損壞金額，按風險擇1–2筆重讀各ID既存Kaggle/Devpost官方來源及正式rules。先索引sources，不能照其他摘要補字，也不把總池當個人福利。
+4. `airtable-free-plan-monthly-ai-credits`、`tactiq-free-monthly-ten-transcripts-five-ai`：11/16每日追同頁加購與跨頁扣點/重置/存取差異；查上文billing與Tactiq buy/AI Help/meeting credits，無變更不反覆追加相同政策歷史。
+5. `miro-nonprofit-thirty-percent-all-paid-plans-ai`：11/16核Help44%與活動FAQ約50%是否同步、折扣帳戶AI對應與台灣認證；查Miro NPO Help、活動頁、AI credits及申請說明。未有直接證據不升Taiwan Yes、不填推算折後價格。
+
+本輪評估：修正會影響金額、期限及扣點決策的錯誤；補Tactiq證據範圍並揭露而非掩蓋來源矛盾；逾期積壓起始為0，未宣稱減少；新增非營利涵蓋且避免2項重複；批次金額驗證改善後續可靠性。未全面複核、未解決官方所有衝突。
