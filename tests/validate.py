@@ -114,13 +114,26 @@ def accessed_day(source):
  raw=str(source.get('accessed_at') or source.get('accessed_time_range') or '')
  found=DATE_ONLY.findall(raw)
  return found[-1] if found else ''
-# 已見 Solar 等競賽標題的美元首段遺失成 US,000。只攔本批次主張，
-# 不猜補舊資料或改寫歷史來源；未核的舊項目留給證據修復佇列。
+# 金額經 shell 展開後失去數字（US$110,000 → US,000）不會讓 JSON 失效，卻會讓證據變成
+# 「總獎金池 US,000」，卡片其餘欄位照樣顯示一個看似合理的金額。2026-11-16 全庫掃到 6 筆
+# 紀錄的 7 個欄位（含來源 scope/evidence），另有 vmake 摘要的「US$制」。舊版只檢查本批次
+# 6 個欄位，因此毀損字串可以長存於未複核紀錄；資料修完後改為掃全庫所有字串欄位，避免
+# 下一個臨時腳本再把同樣的缺字寫回來。
 BROKEN_USD=_re.compile(r'(?:\bUS|\$)\s*,\d{3}')
-for rid in reviewed+new:
- for field in ('title','summary','cost_note','access_risk','usable_duration','verification_scope'):
-  value=offers_by_id[rid].get(field)
-  assert not (isinstance(value,str) and BROKEN_USD.search(value)), f'broken USD amount in {field} of {rid}: verify the source or state the amount is unknown; never guess missing digits'
+BROKEN_CURRENCY=_re.compile(r'US\$(?=[\u4e00-\u9fff])')
+def _record_strings(value,path=''):
+ if isinstance(value,str):
+  yield path,value
+ elif isinstance(value,dict):
+  for key,item in value.items():
+   yield from _record_strings(item,key)
+ elif isinstance(value,list):
+  for item in value:
+   yield from _record_strings(item,path)
+for _o in d['offers']:
+ for _path,_value in _record_strings(_o):
+  assert not BROKEN_USD.search(_value), f'broken USD amount in {_path or "record"} of {_o["id"]}: verify the source or state the amount is unknown; never guess missing digits'
+  assert not BROKEN_CURRENCY.search(_value), f'currency symbol immediately followed by CJK text (missing amount) in {_path or "record"} of {_o["id"]}: write the number or drop the symbol'
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
  # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複

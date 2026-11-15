@@ -4193,3 +4193,42 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `replit-student-core-half-price-edu-verification-watch`：找學籍核驗服務商與學生 checkout 路徑、.edu.tw 接受性與折扣期限；查 https://replit.com/edu/students 與 support 文件。
 4. 死連結佇列：`qoder-community-1024`、`baseten-startups-inference-training`、`voyage-free-tokens-batch-excluded`、`nscale-signup-five-current-docs-conflict`、`salad-ssap-migration-credit-watch`、`taiwan-industry-talent-investment-ai-courses-2026`（PDF 主機 404）；優先找可替代官方頁，找不到就維持缺口，不以 404 改狀態。
 5. `cities-deliver-rockefeller-openai-2026`：11/29 前確認台灣組織＋台灣城市政府 LOI 的個案受領資格、Terms PDF 與兩版間接成本 FAQ；查官方頁、Terms 與 FAQ。
+
+## 2026-11-16 04:05–04:20 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 04:05；main HEAD `e40d03f`，工作樹乾淨、無未完成 PR；Pages 為 main 根目錄 legacy build。N=1,104（887 opportunity／50 policy／167 watchlist）；嚴格逾期 0、retry 0、7 日內到期 11 筆（其中 7 筆冷卻中），今日 12:00／12:59／15:45／16:00 截止的四筆已於 01:17 核實、排程在 11:30–15:30，本輪不重讀。
+- 三個環境預設 Task 研究員（未指定模型，依實際可用能力執行）：A 8 筆 2026-11-02 最舊輪替（17 URL）、B 6 筆死連結與轉址（15 URL）、C 新機會與去重（14 URL、6 search）。主 agent 負責共享 JSON、獎金語意、台灣資格與發布；C 回報的三筆新機會由主 agent 逐頁複核後才納入。
+
+### 採用成果與證據界線
+
+- R=20、A=3（機會 3／政策 0／觀察線索 0）、U=1,084、attempted=1（`qoder-community-1024`）；結果 1,107 筆（890／50／167）。
+- **AICUP 太陽能競賽（最影響決策）**：官方 AIdea 賽事頁與 2026-11-02 公告逐字確認報名至 11/30 23:59:59、決賽 01/13；補齊獎金表（第一 NT$100,000、第二 50,000、第三 30,000、優等 2 隊各 15,000、佳作 5 隊各 8,000、評審特別獎 1 隊國網 GPU 值 NT$50,000；總池暫定 NT$300,000 含 GPU）。新增關鍵限制：**現金獎與 GPU 僅限全隊報名時均具中華民國在學身分者**，任一成員為社會人士即列社會人士組、僅頒獎狀。原 `usable_benefit_usd` 9,300 是總池換算，已改首獎 3,125（NT$100,000÷32），摘要與資格同步改寫。來源 `https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699`、`https://www.aicup.tw/ai-cup-2026-competition`。
+- **競賽總池不再當個人效益（5 筆）**：Gemma 4 由 110,000 改首獎 37,000（主賽 65,000、Paper 35,000）、Name That LLM 由 50,000 改每隊 5,000（前 10 名各 5,000）、NFL Big Data Bowl 由 100,000 改單隊最高 20,000（兩軌各 45,000：Finalist 10,000×3、Runner-Up 5,000×3，另 Grand Prize 10,000）、南大 AI 專題由總池換算 14,063 改 null（各組分配為 JS 動態載入，未能讀取）、AICUP 改首獎 3,125。此為 2026-11-15 CASMI 同類修正的延伸；`valuation_scenario` 均保留總池與分配。
+- **LLM7**：`/v1/models` 的 turbo 層現為 6 款（codestral-latest、gpt-oss:20b、minimax-m2.7、mistral-Nemo-Instruct-2407、DeepSeek-V4-Flash-0731、glm-5.3-flash），`nemotron-3-nano:30b` 已不在目錄；100,000 tokens/24h、1/s、60/min、250/hour 未變，Pro US$12/月。摘要改為「以 Models API 即時 turbo 層為準」。
+- **死連結與轉址**：Baseten 舊 `/startup-program/` 404，現行 `/talk-to-us/startup-program/` 200 且逐字支持 US$25,000／US$2,500；Voyage 行銷站 `/pricing` 404，價格權威在 `docs.voyageai.com/docs/pricing`（Batch 排除與 200M／50M 條款未變）；Nscale `/pricing` 404，價格由 `docs.nscale.com/docs/ai-services/models.md` 承接（US$5 仍只有 may be eligible）；Salad `/ssap/` 404、sitemap／docs／whats-new 0 命中，唯一證據仍是 2024-04-24 部落格；勞動部 `nws` PDF 主機 404，學員須知由 `ws.wda.gov.tw` 鏡像 200（199,237 bytes）逐字重核 80%／100%、3 年 NT$100,000、缺課 1/5；115 下半年核定課程明細表仍缺可讀鏡像。`qoder-community-1024` 兩條活動頁 404、docs llms.txt 與 sitemap 均無條目，無替代正文，記 attempted 不刷新 `verified_at`，狀態維持 expired。
+- **金額毀損修復**：全庫掃到 6 筆紀錄的 7 個欄位把 `US$…,000` 寫成 `US,000`（含 Kaggle Quantum／Gemma／NeurIPS／Agent Harness、Atlassian、QNX）與 vmake 的「US$制」；已依現行官方頁補回或改寫為「原文金額缺字」的較早紀錄。llamaparse 摘要原寫 US,000／US50K，官方實為 US$2,000 credits／一年、首次申請、累計募資 US$250K–<US$50M，已更正。
+- **新增 3 筆**（皆逐字官方頁，主 agent 複核）：`samsung-galaxy-fold8-flip8-google-ai-pro-six-months-tw`（台灣三星購機贈 6 個月 Google AI Pro 含 5TB；活動 2026/8/1–2027/8/1、需年滿 18 歲、排除特定 Google One 訂閱者、期滿自動續訂不另通知；購機成本另計，費用欄 null 不是免費）；`manus-free-daily-300-credits-1500-monthly-cap`（Free US$0、每日 300 點但每月上限 1,500、每日點數僅 Manus 2.0 lite、UTC+0）；`droid-free-byo-chatgpt-copilot-openrouter`（Factory Droid Free US$0 自備 ChatGPT／Copilot／OpenRouter 或 API key；Pro US$20 起才含託管推論；免費的是平台不是 token）。後兩筆台灣 Unknown。
+- 其餘 7 筆輪替（Riza、HoneyHive、Splunk、Novita、Retell、Fireworks、Zilliz）逐字重讀後主張未變；Zilliz 的 `/docs/free-trials` 已 301 併入 `register-with-zilliz-cloud`，來源就地合併；Novita 90 天只寫在註冊頁、pricing 文件改寫為 validity period；Fireworks 的 11 月免費 SFT 是另一促銷，未混入 US$1 starter credit。
+- 台灣界線：8 筆輪替與 Droid／Manus 仍 Unknown；Splunk 僅列 US／Europe／Asia Pacific 大區；Retell 電信費率表未列 Taiwan（不等於禁註冊）。20 筆皆局部複核，未登入、未申請、未付款，法律狀態未核。
+
+### 本輪品質改善：金額缺字的回歸防線
+
+- 問題：`BROKEN_USD` 原本只檢查本批次 6 個文字欄位，未複核紀錄的來源 `scope`／`evidence` 即使寫著「總獎金池 US,000」也永遠不會被擋；2026-11-16 全庫實測仍有 7 個欄位。這類缺字不會讓 JSON 失效，卡片其餘欄位照樣顯示看似合理的金額。
+- 修法：先把已知 7 個欄位與 vmake 修完，再把檢查擴到全庫所有字串（遞迴 dict／list），並新增「`US$` 緊接中文」的第二個 pattern；錯誤訊息帶欄位路徑與 ID。以修正前資料重跑同一 pattern 可重現 7+1 筆。
+- 驗證：`python3 tests/validate.py` 通過 1,107 筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+
+### 驗證與發布前證據
+
+- 本機 headless WebKit 載入 1,107 筆：首頁 20／3／1,084、資料更新 04:20、本輪更新 23 張（R20＋A3）；免費專區 724 筆（含 Manus、Droid，不含三星）；台灣條件適用 188 筆（含三星）；關鍵字 Manus 2、AI CUP 1、LLM7 1、Factory Droid 1；載入更多 24→48；截止排序首四張為 ASPN 12:00、Solar 12:59、UGREEN 15:45、TNNU 16:00。AICUP 卡片顯示可用效益 US$3,125、截止 11/30 23:59、三個來源含 AIdea 賽事頁；三星顯示「未列金額」與購機門檻。桌面 1365px 與手機 390px 均無水平溢出，console error 空。
+- 政策歷史追加 8 筆（LLM7、Gemma、Name That LLM、NFL、南大、AICUP、llamaparse、vmake），不改寫舊歷史。`git diff` 以 ID 比對：新增 3、無刪除、26 筆變更（20 複核＋5 筆純文字修復＋qoder attempted），無未列批次卻刷新 `verified_at` 的紀錄。
+- 本節只記發布前觀測；遠端 commit、Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. `aspn-youth-sports-tech-hackathon-2026`／`kaggle-solar-filament-segmentation-2026`／`ugreen-ai-nas-hackathon-2026`／`tw-labor-pretraining-ai-smart-application-tnnu-03`：12:00／12:59／15:45／16:00 後改判 closed；Solar 追蹤 CDT 與平台倒數（19:59 台北）是否出現更正公告；查各自官方頁與 Kaggle 倒數。
+2. `gemini-code-assist-retired`：補註 gemini-cli 文件仍寫 1,000 requests/日，而 Google Cloud 配額頁為 1,500／2,000，避免讀者誤信舊額度；查 gemini-cli docs 與 Cloud quotas。
+3. `samsung-galaxy-fold8-flip8-google-ai-pro-six-months-tw`：確認每機／每帳號兌換次數、電信通路購機、退貨連動與期滿台灣月費；查台灣三星活動頁與 Google One 訂閱條款。
+4. `manus-free-daily-300-credits-1500-monthly-cap`：確認台灣註冊可用性、1,500 上限與每日 300 的實際交互、單一 lite 任務扣點；查 help.manus.im 定價與 credits 規則頁。
+5. `replit-student-core-half-price-edu-verification-watch`：找學籍核驗服務商與學生 checkout 路徑、.edu.tw 接受性與折扣期限；查 https://replit.com/edu/students 與 support 文件。
