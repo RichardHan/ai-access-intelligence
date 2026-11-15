@@ -30952,5 +30952,63 @@
       "https://www.sas.com/en_us/software/on-demand-for-academics/features-list.html",
       "https://support.sas.com/ondemand/caq_new.html"
     ]
+  },
+  {
+    "record_id": "mistral-free-api-policy",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "official_conflict_api_scope",
+    "summary": "Free mode 的 API 存取出現兩個官方版本：Usage and limits 文件（2026-11-16 實讀）逐字「Free mode includes a monthly usage budget for trying Vibe and Studio. It doesn't include API access. Creating API keys and using the API require billing activation and pay-as-you-go.」；API rate limits 客服文（頁面日期 2026-08-12）仍寫「For API automation, use a pay-as-you-go API key created in the console on Free mode or with pay-as-you-go」。兩說並存，免費 API 是否可用無法確認，狀態由 conditional 改 conflicting_official_usage_claims、複核改每週。另原 Tier 4「US$500 與 US$2,000」矛盾已釐清：表格 Tier 4 為 over €500/$500 billed，US$2,000 屬「Higher limits」另列門檻。",
+    "sources": [
+      "https://docs.mistral.ai/admin/billing-usage/usage-limits",
+      "https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them"
+    ]
+  },
+  {
+    "record_id": "monica-education-annual-verification-watch",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "education_pricing_structure_changed",
+    "summary": "Monica 教育頁新增 Ultra 教育價並首度公開資格與驗證方式：Pro US$79/年（標 20% 折扣、US$6.6/月）、Max US$159/年（標 47% 折扣、原價 US$299/年）、Ultra US$82.9/月或 US$995/年（僅標 Education Discount，未列原價與折扣率）；資格為在校或新錄取大學生及各年級教師與職員，須以學校 edu 信箱收驗證碼驗證。頁面為客戶端渲染，純 HTTP 僅回外殼，本輪以瀏覽器渲染讀取；台灣 .edu.tw 是否受理未核，故 taiwan 維持 Unknown。",
+    "sources": [
+      "https://monica.im/education-pricing",
+      "https://monica.im/terms"
+    ]
+  },
+  {
+    "record_id": "google-ai-developer-monthly-cloud",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "credits_redemption_terms_added",
+    "summary": "2026-11-13 官方 blog 新增領取機制與限制：credits 可直接在 Google AI Studio 建立 Developer Program profile、連結帳單並領取；每筆月授予自簽發起 12 個月有效且逐月疊加；以 Cloud 帳單使用 Gemini API 需 US$5 最低預付與餘額才可動用促銷額度；僅主要訂閱者可用、不可家族共享。金額表仍以圖片呈現，未給文字數字，維持既有 US$10／US$40／US$100 參考值。",
+    "sources": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/google-cloud-credits-gdp-ai-studio/"
+    ]
+  },
+  {
+    "record_id": "pruna-build-program-staged-credits",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增分階段免費額度基準：blog 標題寫「Start with $300」、階段表則為 Stage 0 US$20（需填付款方式）、Stage 1 用掉 US$20 後 US$300、Stage 2 於 60 天內用滿 US$900 加 US$900、Stage 3 於 90 天內用滿 US$2,700 加 US$2,700，累積上限 US$3,900；申請每月第三週審查，官方寫不需成立公司但須有真實建置產品。API 按量計價，贈額為可用餘額；未公布未用完額度到期規則，台灣帳單與核准未核（Unknown）。",
+    "sources": [
+      "https://www.pruna.ai/blog/pruna-build-program",
+      "https://www.pruna.ai/pricing"
+    ]
+  },
+  {
+    "record_id": "krea-bots-beta-thousand-credits",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "new_opportunity_baseline_unverified_terms",
+    "summary": "新增 beta 線索：Bots beta 頁兩處寫加入候補可獲 US$1,000 credits（「Join waitlist · Get $1000」「Join the beta. Get $1000 in credits.」），但未寫發放時點、有效期、地區限制、是否限付費或團隊方案，也無條款連結；因此狀態列 needs_verification、不列入免費專區，與既有 Krea Free 每日 100 compute units 分開。",
+    "sources": [
+      "https://www.krea.ai/bots-beta"
+    ]
+  },
+  {
+    "record_id": "google-org-ai-opportunity-fund-apac-phase3",
+    "recorded_at": "2026-11-16T02:28:00+08:00",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增免費培訓基準：AVPN 2026-11-11 公布三期 28 個在地執行夥伴、19 個市場，Google.org 頁另列 18 個新 subgrantee、2024 年以來累計 59 個受助組織；三期目標逾 470 萬學習者，基金累計 US$35M，已培訓逾 850,000 名工作者與 63,000 家小企業。AI Opportunity Learning Platform（aiopportunity.asia）提供 16 語言路徑、測驗推薦與完課證書，學習者可 register interest。台灣列於 Google.org 報告的 14 個關鍵國之一，但是否有台灣夥伴開課未核（Unknown）；個人不能直接申請基金。",
+    "sources": [
+      "https://aiopportunityfund.withgoogle.com/apac",
+      "https://avpn.asia/about/press/ai-opportunity-fund-phase-three-partners"
+    ]
   }
 ]

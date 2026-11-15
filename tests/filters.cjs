@@ -652,7 +652,9 @@ console.log('PASS: searchText recursively unwraps nested objects without emittin
 // 規格值：缺值時標籤必須明說未記錄，有值時必須逐字顯示。
 const scopeRow = record => ctx.createDetails(record).children
   .find(node => node.tagName === 'dl').children
-  .find(row => ['本次核實範圍', '核實範圍未記錄'].includes(row.children[0].textContent));
+  .find(row => row.children[0].textContent === '核實範圍未記錄'
+    || row.children[0].textContent.startsWith('本次核實範圍')
+    || row.children[0].textContent.startsWith('較早的核實範圍'));
 const noScope = d.offers.find(o => o.verification === 'Official' && !(o.verification_scope || '').trim());
 assert(noScope, 'expected an official record without verification_scope to exercise the fallback');
 const fallback = scopeRow(noScope);
@@ -662,7 +664,27 @@ const withScope = d.offers.find(o => (o.verification_scope || '').trim());
 const shown = scopeRow(withScope);
 assert.strictEqual(shown.children[0].textContent, '本次核實範圍');
 assert.strictEqual(shown.children[1].textContent, withScope.verification_scope.trim(), 'the recorded scope must be shown verbatim');
-console.log('PASS: 核實範圍 row states whether the scope was recorded instead of printing a generic claim.');
+// scope 的第一個日期若早於 verified_at，代表某個來源被重讀後 scope 沒跟著改寫；標籤不得再寫
+// 「本次」把兩個日期說成同一次查核。後面的日期可能是活動截止日，只看第一個日期。
+const staleScope = d.offers.find(o => {
+  const first = ((o.verification_scope || '').match(/\d{4}-\d{2}-\d{2}/) || [])[0];
+  return first && o.verified_at && first < o.verified_at.slice(0, 10);
+});
+assert(staleScope, 'expected at least one record whose verification_scope predates verified_at');
+assert.strictEqual(scopeRow(staleScope).children[0].textContent,
+  `較早的核實範圍（${staleScope.verification_scope.match(/\d{4}-\d{2}-\d{2}/)[0]}）`,
+  'a scope older than verified_at must not be labelled 本次核實範圍');
+assert.strictEqual(scopeRow({ verified_at: '2026-11-10T10:00:00+08:00', verification_scope: '2026-10-31 複核活動頁。', eligibility: {}, sources: [] }).children[0].textContent, '較早的核實範圍（2026-10-31）');
+assert.strictEqual(scopeRow({ verified_at: '2026-11-10T10:00:00+08:00', verification_scope: '2026-11-10 複核活動頁，期限 2027-03-31。', eligibility: {}, sources: [] }).children[0].textContent, '本次核實範圍', 'a later deadline date must not make an old scope look fresh');
+assert.strictEqual(scopeRow({ verified_at: '2026-11-10', verification_scope: '未列日期地複核來源。', eligibility: {}, sources: [] }).children[0].textContent, '本次核實範圍');
+for (const offer of d.offers) {
+  if (!(offer.verification_scope || '').trim()) continue;
+  const first = (offer.verification_scope.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
+  const expected = first && offer.verified_at && first < offer.verified_at.slice(0, 10)
+    ? `較早的核實範圍（${first}）` : '本次核實範圍';
+  assert.strictEqual(scopeRow(offer).children[0].textContent, expected, `scope label disagrees with dates in ${offer.id}`);
+}
+console.log(`PASS: 核實範圍 row states whether the scope was recorded, and flags ${d.offers.filter(o => { const f = ((o.verification_scope || '').match(/\d{4}-\d{2}-\d{2}/) || [])[0]; return f && o.verified_at && f < o.verified_at.slice(0, 10); }).length} scopes that predate their verification date.`);
 
 // 「核實時間」不是「公告時間」。卡片的核實日是我們最後一次讀官方頁的時間，公告日才是方案公布的
 // 時間；先前只印前者，於是 2024-04-24 公布、今天重讀仍寫同樣內容的紀錄（salad-ssap 等）看起來

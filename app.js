@@ -429,6 +429,21 @@ function formatPlanVariant(variant) {
   return `${display(variant.plan)}：${body}`;
 }
 
+// 「本次核實範圍」是一個主張：它說這筆紀錄在最近一次查核時確認了什麼。欄位缺值時沿用通用句
+// 會讓「只核了其中一項」與「整筆都核過」在卡片上長得一樣，而通用句又長得像已宣告範圍。
+// 缺值就改標籤，明說這一筆沒有記錄範圍（2026-11-10 全庫 99 筆已標官方但缺此欄位）。
+// 反向的漂移：某個來源當天被重讀、verified_at 前移，scope 那句話仍停在更早的日期。
+// 2026-11-16 統計 22 筆（含 openai-agents-api-public-beta 核實 11/10、範圍寫 10/31；
+// cloudflare-workers-ai-free 核實 11/10、範圍寫 10/31）。卡片把「核實 11/10」與
+// 「本次核實範圍：10/31」並排，讀者自然讀成同一次查核。scope 的第一個日期就是撰寫範圍的
+// 那一天（後面的日期可能是活動截止日，不能拿最大值）；比 verified_at 舊就照實標成較早範圍。
+const SCOPE_DATE = /\d{4}-\d{2}-\d{2}/;
+function scopeLabel(offer, scope) {
+  const verified = String(offer.verified_at || '').slice(0, 10);
+  const first = (String(scope).match(SCOPE_DATE) || [])[0];
+  if (verified && first && first < verified) return `較早的核實範圍（${first}）`;
+  return '本次核實範圍';
+}
 function createDetails(offer) {
   const details = text('details', '', 'card-details');
   details.append(text('summary', '查看資格、限制與來源'));
@@ -438,7 +453,7 @@ function createDetails(offer) {
   // 會讓「只核了其中一項」與「整筆都核過」在卡片上長得一樣，而通用句又長得像已宣告範圍。
   // 缺值就改標籤，明說這一筆沒有記錄範圍（2026-11-10 全庫 99 筆已標官方但缺此欄位）。
   const scope = typeof offer.verification_scope === 'string' ? offer.verification_scope.trim() : '';
-  addRow(grid, scope ? '本次核實範圍' : '核實範圍未記錄',
+  addRow(grid, scope ? scopeLabel(offer, scope) : '核實範圍未記錄',
     scope || '此筆未記錄核實範圍：只有各來源列明的主張有證據，其餘欄位可能沿用較早研究。');
   addRow(grid, '優惠現況', statusInfo(offer).label);
   if (offer.duplicate_of) {

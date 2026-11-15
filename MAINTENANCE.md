@@ -4109,3 +4109,45 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：確認 WorkBuddy 中國站 pricing 是否恢復可讀、體驗版 500 積分是否仍存在；查 https://www.workbuddy.cn/pricing/ 與 docs Pricing，不以本次逾時推論活動終止。
 4. `gitlab-education-ai-credit-exclusion`：11/30 前找第四份官方說法（教育協議／Sales 折扣頁）或等產品內可見狀態，決定 AI Chat 是否為教育授權內含；目前三頁並存不得擇一。
 5. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：11/22 22:30 追 M11W4 是否續開與本期結束狀態；查 [M11W3](https://autoclaw.z.ai/blog/news/M11W3/)、https://autoclaw.z.ai/blog/。另可挑一筆 2026-11-08 最舊批仍缺 scope 的紀錄（`murf-startup-incubator-three-month`、`vespa-cloud-once-three-hundred-no-card-trial`）輪替。
+
+## 2026-11-16 02:05–02:35 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds` 為 02:05；main HEAD `f2521ff`，開場工作樹乾淨、fetch 後與 origin/main 一致、無未完成 PR。Pages 為 main 根目錄 legacy build，`gh run list` 顯示對應 `f2521ff` 的 pages-build-deployment 於 17:30:53Z 成功，公開站 offers.json 即 01:28 版（1,099 筆）。
+- N=1,099；可行動 1,006、嚴格逾期 0、7 日內到期 11（其中 4 筆 01:17 才核、當日 12:00–16:00 截止）、retry 0、next_review 缺值 12（皆已截止／重複合併／on_new_signal）。本輪不重查 48 分鐘前剛核的四筆，留給 11:30–15:30 的 closing 排程關閉。
+- 三個 Task 研究員（未指定模型，環境預設）分工：A 6 筆 7 日內到期（21 URL）、B 10 筆最久未核輪替（24 URL 用罄）、C 新機會與去重（15 URL）。主 agent 為唯一共享 JSON 寫入者，重讀 Mistral 兩頁、Monica 渲染頁、Pruna／Krea／Google.org／AVPN／Simular／Google blog 後才整合。
+- 主 agent 驗證時發現：C 建議的 Simular 更新不成立——現行 summary 從未寫「每日 1,000 點」，只寫每日額度未公布，故不改、不列 R。
+
+### 採用成果與證據界線
+
+- R=17、A=3（機會3／政策0／觀察線索0）、U=1,082、attempted=0；結果 1,102 筆。
+- **Mistral（需更新，核心主張翻轉）**：`docs.mistral.ai/admin/billing-usage/usage-limits` 逐字「Free mode includes a monthly usage budget for trying Vibe and Studio. It doesn't include API access. Creating API keys and using the API require billing activation and pay-as-you-go.」；客服文（2026-08-12）仍寫「For API automation, use a pay-as-you-go API key created in the console on Free mode or with pay-as-you-go」。兩說並存，summary／service_availability 改寫、unknowns 首項改為此衝突、status 改 `conflicting_official_usage_claims`、cadence 改 weekly（排 11/23）。原 Tier 4「US$500 vs US$2,000」矛盾已釐清：表格 Tier 4 為 over €500/$500，US$2,000 屬 Higher limits 列。
+- **Monica（需更新）**：教育頁新增 Ultra US$82.9/月或 US$995/年；Pro US$79/年（20%）、Max US$159/年（47%，原價 US$299）。頁面內嵌驗證對話框明列「current and newly admitted college students, as well as teachers and staff at all grade levels」與「Please enter an email address with edu」＋驗證碼。純 HTTP 只回外殼，以瀏覽器渲染實讀；台灣 .edu.tw 受理與含稅實付未核，taiwan 維持 Unknown。
+- **Google AI 方案 Cloud credits（需更新）**：2026-11-13 blog 補上 AI Studio 內領取、每筆 12 個月滾動有效並逐月疊加、Gemini API 需 US$5 最低預付與餘額才可動用、僅主要訂閱者可用不可家族共享。金額表仍為圖片，US$10／40／100 沿用既有文字來源。
+- **A 組六筆皆仍開放、無延期**：StepFun 免費至 11/17 11:59:59（UTC+8）並在期滿退役 preview；桃園 11/17 19:00 場仍掛報名、課程頁 11/17 與列表公告期 11/20 仍不一致；Antigravity 三款第三方模型 11/18 移除未變、免費欄仍有 Hydrogen／3.8 Flash，11/18 不是方案截止日；AOCAI 11/26 台北班報名至 11/19、總覽由 24 班降為 23 班、11/27 臺中班已額滿；Rime 仍 Free until Nov 19、免卡與條款 §7.4 付款方式衝突未解；Mozilla 截止 11/20 23:59 PST（台北 11/21 15:59），FAQ 明言不受理逾期、不給延期。StepFun／桃園的 next_review 改排 11/17 09:00（截止前）。
+- **B 組其餘 7 筆無實質改變**：CodeAI 仍免費自學（證書條款在需登入頁，未核）；Consensus 40%、學術 email 核驗、人工審查未變；Requesty 200/日免卡與 30 日日誌未變；Awan Lite 20/min、Small 200/日、Medium/Large 各 10/日未變；Elements of AI Introduction 免費證書、Building €50 含 VAT 未變；IBM watson 300K tokens／20 CUH／100 文件未變；Deepgram starter US$1,000／上限 US$100,000／12 個月、需先用完一般額度未變。
+- **新增**：`pruna-build-program-staged-credits`（Stage 0 US$20 需填付款方式、Stage 1 US$300、最高 US$3,900；台灣 Unknown）、`krea-bots-beta-thousand-credits`（頁面兩處寫候補送 US$1,000，但效期／發放條件／地區全未列，status needs_verification、不進免費專區）、`google-org-ai-opportunity-fund-apac-phase3`（28 夥伴／19 市場／16 語言學習平台；台灣列於 14 個關鍵國但無夥伴證據，Unknown）。
+- 未採 C 的 3 筆 watchlist（Infoxchange 只在 JS 首頁、LUMI／Livepeer 僅新聞索引），避免薄弱線索增量；理由留在本節。
+
+### 本輪唯一品質改善：核實範圍日期早於核實時間
+
+- 問題：`verified_at` 會因某個來源當天被重讀而前移，`verification_scope` 那句話不一定跟著改寫；卡片於是把「核實 11/10」與「本次核實範圍：2026-10-31」並排。2026-11-16 統計 22 筆（含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`confident-ai-free-five-weekly-runs-gbmonth`）。
+- 修法：新增 `scopeLabel()`，只取 scope 的第一個日期（後面的日期可能是活動截止日，不能取最大值），若早於 `verified_at` 就標「較早的核實範圍（YYYY-MM-DD）」，範圍原文照舊逐字顯示。
+- 驗證：`tests/filters.cjs` 新增規格值＋全庫資料驅動斷言（22 筆 stale scope 全部命中、同日顯示本次、`2027-03-31` 這類活動日期不影響判斷、無日期 scope 顯示本次）。以「把 `scopeLabel` 改成永遠回本次」的複本實測，stale 範例會回本次、對應斷言失敗。瀏覽器實測搜尋 OpenAI Agents：顯示「較早的核實範圍（2026-10-31）」＋原文。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,102 筆（S/A/B/C/D = 172/190/131/276/117，未評級 216）；`node --check app.js`、`node tests/filters.cjs`（含新斷言）、`git diff --check` 均通過。
+- 本機 http.server：全庫 1,102、本輪 17／3／1,082、資料更新 2026/11/16 02:27；本輪更新專區 20 張＝R17＋A3。
+- 關鍵字：Pruna 1、Krea Bots 1、Monica 2、Mistral 10、Google.org 2；免費專區 721 筆且 Pruna／Google.org 在內、Krea Bots 不在；載入更多 24→48；截止排序首四張為 ASPN 12:00、Solar 12:59、UGREEN 15:45、TNNU 16:00，皆標「今天」。
+- 卡片：Pruna 顯示 A 級、費用依據「加入 Stage 0 需填付款方式…非收費」；桌面 1365px 與手機 390px 均無水平溢出；console error 空。
+- 本節只記發布前觀測；遠端 commit、Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. `aspn-youth-sports-tech-hackathon-2026`／`kaggle-solar-filament-segmentation-2026`／`ugreen-ai-nas-hackathon-2026`／`tw-labor-pretraining-ai-smart-application-tnnu-03`：12:00／12:59／15:45／16:00 後改判 closed；Solar 記錄是否出現 CDT 與平台截止的更正公告。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`／`taoyuan-ai-productivity-online-courses-115`：11/17 09:00 確認是否延期、額滿或提前退役；StepFun 免費呼叫是否需儲值仍未解。
+3. `mistral-free-api-policy`：11/23 前找第三份官方說法（pricing 或 console 文件）判斷 Free mode 是否可建立 API key；目前 docs 與 help 衝突不得擇一。
+4. `monica-education-annual-verification-watch`：以 .edu.tw 信箱實測驗證流程（若可），並補 Ultra 原價與含稅台幣實付；查 https://monica.im/education-pricing。
+5. `krea-bots-beta-thousand-credits`：找 beta 條款或 pricing 頁確認 US$1,000 的發放時點與地區限制；另 `pruna-build-program-staged-credits` 展開 FAQ「What happens if I don't use the credits in time?」補到期規則。
