@@ -4151,3 +4151,45 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `mistral-free-api-policy`：11/23 前找第三份官方說法（pricing 或 console 文件）判斷 Free mode 是否可建立 API key；目前 docs 與 help 衝突不得擇一。
 4. `monica-education-annual-verification-watch`：以 .edu.tw 信箱實測驗證流程（若可），並補 Ultra 原價與含稅台幣實付；查 https://monica.im/education-pricing。
 5. `krea-bots-beta-thousand-credits`：找 beta 條款或 pricing 頁確認 US$1,000 的發放時點與地區限制；另 `pruna-build-program-staged-credits` 展開 FAQ「What happens if I don't use the credits in time?」補到期規則。
+
+
+## 2026-11-16 03:05–03:19 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds` 為 03:05；main HEAD `de6471a`，開場工作樹乾淨、無未完成 PR，Pages 為 main 根目錄 legacy build，對應 `de6471a` 的 pages 工作已於 18:35Z 成功。repo 無 AGENTS.md。
+- N=1,102（886 opportunity／50 policy／166 watchlist）；嚴格逾期 0、7 日內到期 11（其中 7 筆冷卻中）、最久未核為 2026-11-02 的 45 筆、高風險狀態 89。當日 12:00／12:59／15:45／16:00 截止的四筆在 01:17 才核實，本輪不重查，留給各自 11:30–15:30 的 closing 排程。
+- 三個環境預設 Task 研究員（未指定模型）分工：A 9 筆 11/08 高風險（24 URL、1 search）、B 10 筆 11/02 最舊輪替（22 URL、0 search）、C 新機會與去重（18 URL、6 search）。主 agent 為唯一共享 JSON 寫入者，03:13 取得維護鎖；C 另回報 5 個現有 ID 的條件線索，因不在本輪 20 筆上限內未另開複核。
+
+### 採用成果與證據界線
+
+- R=20、A=2（機會1／政策0／觀察線索1）、U=1,082、attempted=0；結果 1,104 筆（887／50／167）。
+- **Valyu（核心主張翻轉）**：`docs.valyu.ai/pricing` 已刪除「新帳戶一次 US$10／公司信箱 US$20、12 個月到期」，改為每月 2,000（公司信箱）／1,000（個人或學校信箱）credits、不累積；個人／學校信箱首月免卡，第二個月起須保存卡片續領（加卡不收費）。首月另有 1,000／500 全來源額度。PAYG US$10／1,600 credits 與「無 overage、402 不執行」未變，平台協議 §9 自動扣款與停權仍在，兩說並存；台灣與條款優先關係未核。
+- **Replit 學生價**：官方學生頁以瀏覽器完整載出「.EDU EXCLUSIVE CORE $10 / month with .edu email」「50% off with .edu verification」「Replit Agent with full AI credits」，`recurring_cost_usd` 由 null 改 10、狀態改 `needs_verification`；但 Claim student discount 的 href 仍是 `https://replit.com/pricing`（一般 Core US$20），未進入學籍核驗或學生 checkout；.edu.tw、核驗商、折扣期限與續價未核。
+- **SchoolAI 新增權益**：說明頁明列每成功邀請一位教師以同一 email 註冊可加 2 次 Space sessions、無上限（學生帳號不計；onboarding Space 不計）。舊紀錄「推薦加額仍標 COMING SOON，不列可用福利」已不成立，summary 與 terms 改寫。
+- **Cloudflare**：limits 頁（2026-11-13）補「resetting at midnight UTC」「Error 1027」、HTTP 與 Cron Trigger 各 10ms CPU、50 subrequests、100 Workers；pricing 仍列付費最低 US$5/月、Pages Functions 按 Workers 計量、Workflows 共用請求。台灣帳戶與免卡仍 Unknown。
+- **Descript**：Free 仍 60 媒體分鐘／月、100 一次性 AI credits；比較表補 Free 影片輸出帶浮水印且上限 720p、網頁連結 1 小時、音訊輸出 unlimited。舊 unknown 已解，綁卡與台灣未核。
+- **CASMI（來源維修＋資格收斂）**：原來源 `/competitions/casmi-2026` 已 404，官方現行 slug 為 `/competitions/enveda-CASMI26-molecule-id-mass-spectra`；以現行頁／Overview／Rules 重核 US$50,000 分配、12/07 23:59 UTC 報名與組隊、12/14 23:59 UTC 交件、每隊 5 人、每日 5 次提交。台灣維持 Yes 但改條件式，移除「具備完整參賽與領獎資格」的絕對宣稱；Kaggle 免費 GPU 配額不再寫成競賽額外贈額。
+- **ModelScope**：每日 200＋綁阿里雲 50 魔粒、短期 24 小時、API 0.5／1／2 點與需實名阿里雲均再確認；阿里雲個人實名只列「已實名支付寶」或「姓名＋身份證號＋掃臉」，未列護照／台灣證件。台灣缺口由「未核」收斂為「官方只列中國身分路徑」，仍 Unknown。
+- 其餘 13 筆無實質變更：Windsurf 條款仍 2025-01-15、`/students` 轉 devin.ai/desktop；Hume 40M credits＝40M voice characters、六個月收件期仍無起算日；SambaCloud 2025 活動頁與首 100 名文案未變、現行 Free 仍須先購點；Pydantic US$10 仍只給付費 Team／Growth；Redis `/startups/` 仍轉首頁、University 頁新增「VC 早期公司、Redis Cloud 免費一年」描述；Gamma 400 點不刷新、推薦上限 2,000、失敗動作不扣點；Fathom 5 場進階摘要與 30 天預覽仍在（預覽現只寫在 Help）；OVH US$200／首專案／一個月／需付款方式未變，亞洲頁 meta £175 與正文 US$200 幣別差異保留；ElevenLabs、Claude 非營利、Bright Data、Brisk、Otter 與既有主張一致。9/9 高風險與 10/10 輪替紀錄的 `taiwan` 均維持 Unknown，沒有取得任何明列台灣的官方頁。
+- **新增**：`cities-deliver-rockefeller-openai-2026`（US$50M、Seed US$500k–<1M／Scale US$1–2M、24 個月、50/50 撥款、11/29 23:59 ET 截止；lead 須非營利／大學實驗室／公益公司且有城市政府 LOI，政府與個人不得直接申請；全球含亞洲、OFAC 全面制裁為硬排除；台灣未點名→Unknown；兩版 FAQ 對 15% 間接成本基礎不同，保留）。`moda-ngoempower-ai-data-training-2026`（數發部免費 NGO/NPO 數據與 AI 培力；2026-10 課程已辦理、2025 輔導已截止，現無新梯次→watchlist，台灣 Yes 僅限國內 NGO/NPO 等組織）。
+
+### 本輪品質改善：死連結與絕對資格宣稱
+
+- 全庫 linkcheck 掃 3,131 個唯一 URL：dead 11、unreachable 25、blocked 90；dead 集中在 10 筆紀錄。多數（qoder、baseten、voyage、nscale、salad、astamuse、deepinfra、Kaggle PLE 重複紀錄、勞動部 PDF）已在該筆 evidence 記錄 404 與 Wayback，屬已知缺口；CASMI 則是**唯一來源直接 404、狀態仍 active**，讀者點來源只會拿到 Kaggle 首頁。本輪就地更新為現行 slug，並把台灣「完整參賽與領獎資格」改成條件式，避免 S 級卡片承諾官方沒有說的絕對資格；同時把 US$50,000 總獎金池從個別 `usable_benefit_usd` 移除（改列 valuation_scenario 說明依名次分配），卡片不再把「可用效益」寫成每位參賽者可得。
+- 沒有修改前端或 schema：本輪沒有發現可重現的程式錯誤；CASMI 的問題是資料來源與文案，資料契約已能表達，恢復來源後無需新增欄位。linkcheck 的其餘 9 筆留在下一輪證據維修佇列，不因 404 單獨改狀態。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,104 筆（S/A/B/C/D = 172/190/131/276/118，未評級 217）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+- 本輪資料變更僅 20 筆既有＋2 筆新增，無其他紀錄被重寫；`git diff` 以 ID 比對確認無刪除、無未列批次卻刷新 `verified_at` 的紀錄。政策歷史追加 8 筆（Valyu、Replit、SchoolAI、Cloudflare、Descript、CASMI、Cities Deliver、MODA NGO），不改寫舊歷史。
+- 本機 omp headless WebKit 載入 1,104 筆：首頁 20／2／1,082、資料更新 03:19、本輪更新 22 張（R20＋A2）；免費專區 722 筆，含 MODA、不含 Cities Deliver（費用未知）；台灣條件適用 187 筆；關鍵字 Earth Engine 1、CASMI 1、Valyu 1、數據賦能 1；載入更多 24→48；截止排序首四張為今日 12:00／12:59／15:45／16:00 的四筆。CASMI 卡片來源已指向現行 slug，詳情的可用效益列為「未列金額」，不再顯示 US$50,000；Valyu 顯示每月 US$0、Replit 顯示每月 US$10。桌面 1365px 與手機 390px 均無水平溢出，browser errors 與 console error 皆空。
+- 本節只記發布前觀測；遠端 commit、Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. `aspn-youth-sports-tech-hackathon-2026`／`kaggle-solar-filament-segmentation-2026`／`ugreen-ai-nas-hackathon-2026`／`tw-labor-pretraining-ai-smart-application-tnnu-03`：12:00／12:59／15:45／16:00 後改判 closed；Solar 記錄是否出現 CDT 與平台截止的更正公告。
+2. `valyu-signup-ten-twenty-twelve-months`：確認個人／學校信箱第二個月加卡後的實際扣款／402 行為、.edu.tw 是否算 university email、台灣註冊與付款；查 pricing 與平台協議 §9。
+3. `replit-student-core-half-price-edu-verification-watch`：找學籍核驗服務商與學生 checkout 路徑、.edu.tw 接受性與折扣期限；查 https://replit.com/edu/students 與 support 文件。
+4. 死連結佇列：`qoder-community-1024`、`baseten-startups-inference-training`、`voyage-free-tokens-batch-excluded`、`nscale-signup-five-current-docs-conflict`、`salad-ssap-migration-credit-watch`、`taiwan-industry-talent-investment-ai-courses-2026`（PDF 主機 404）；優先找可替代官方頁，找不到就維持缺口，不以 404 改狀態。
+5. `cities-deliver-rockefeller-openai-2026`：11/29 前確認台灣組織＋台灣城市政府 LOI 的個案受領資格、Terms PDF 與兩版間接成本 FAQ；查官方頁、Terms 與 FAQ。
