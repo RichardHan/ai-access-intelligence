@@ -3723,3 +3723,49 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 5. `miro-nonprofit-thirty-percent-all-paid-plans-ai`：11/16核Help44%與活動FAQ約50%是否同步、折扣帳戶AI對應與台灣認證；查Miro NPO Help、活動頁、AI credits及申請說明。未有直接證據不升Taiwan Yes、不填推算折後價格。
 
 本輪評估：修正會影響金額、期限及扣點決策的錯誤；補Tactiq證據範圍並揭露而非掩蓋來源矛盾；逾期積壓起始為0，未宣稱減少；新增非營利涵蓋且避免2項重複；批次金額驗證改善後續可靠性。未全面複核、未解決官方所有衝突。
+
+## 2026-11-15 13:05–13:12 Asia/Taipei 研究；13:14 完成發布前驗證
+
+### 基準、選擇與分工
+
+- 實際對錶UTC05:05:20／台北13:05:20；main與fetch後origin/main均為`54351a51823b48a9154ce8d5ca1dd219bb0c4f8e`，工作樹乾淨、無未完成PR。Pages沿用main根目錄legacy build，前一工作43676100563成功。未找到repo AGENTS.md。
+- 可見其他維護提示的omp程序，但開場無維護鎖、無未提交修改，不推論它們正在寫資料。本輪PID38929取得round_lock；三位研究員只交獨立artifact、不改repo、不提交，主agent統一整合。13:14再fetch仍同基準，無需合併他人更新。
+- N=1,093（877 opportunity／50 policy／166 watchlist）；可行動1,002、嚴格到期0、7日內截止11（8筆冷卻）、retry0、24小時未核759、12小時內已核161筆可行動紀錄。到期積壓本來就是0，不能宣稱本輪消除積壓。
+- 09:10、11:22、12:14無新訊號的紀錄不重查；AutoClaw/Tencent今日18:00、Solar20:00追查先留待排程。Codegeist雖06:15核過，但金額缺字及免卡保證是新訊號；Leonardo為11/02最舊一批缺verification_scope的可行動紀錄，因證據缺口而非到期選入。
+- A僅Codegeist（5官方URL）；B僅Leonardo（5官方URL，另快照/瀏覽器替代）；C僅ClickUp與Taskade（6官方URL，1個403改同源查詢替代）。使用環境預設Task研究員，未指定或宣稱Terra/Gemini。三者皆完成，主agent審查交付並重讀重大金額、資格與費用原文。未申請、登入、付款或領取。
+
+### 計數與成果
+
+- R=2：`atlassian-codegeist-2026-developer-hackathon`、`leonardo-free-daily-150-public`；A=0 opportunity／0 policy／0 watchlist；U=N−R=1,091；整筆失敗attempted=0。結果仍1,093筆。read的403後成功讀到正文，不能算整筆追查失敗。
+- updated_at、latest_research_at、completed_at一致為13:12:09。只有2筆既有ID改動；其餘1,091筆逐筆相等，舊來源URL全保留。2,555筆政策歷史逐筆不變，只追加2筆實質更正。評分依tools/prioritize.py函式重算並以edit套用：Leonardo19/A不變，Codegeist25/S→19.6/S；台灣條件Yes依既有評分仍為S，非獲獎保證。
+
+1. **Codegeist金額與資格**：[主頁](https://codegeist2026.devpost.com/)及[正式規則](https://codegeist2026.devpost.com/rules)確認US$120,000總池，三賽道首獎各15,000、二獎各8,000、三獎各5,000，四類專項各6名/1,500；修掉US,000、US,500。不填每人福利、不均分獎金，移除HIGH-QUOTA及虛構註冊工時；quota=UNKNOWN。台北12/23 04:00報名/交件截止未變。台灣未列排除≠人人合格，補成年、名單/利益衝突、英文或英譯、公開YouTube示範及安裝連結；獎金須身分核驗、10工作日內交表、匯費稅費自負，非美居民可能需W-8BEN。Swag為前300位合格Entrants、每作品最多4份，非交件就保證有。
+2. **Codegeist付款重大更正**：[Forge定價](https://developer.atlassian.com/platform/forge/forge-platform-pricing/)明列每app每月免費用量、超量月後結算；需要billing details並加payment method避免中斷，LLM/Container無免費額度。Rovo credits由客戶組織負擔，Forge執行資源由開發者負擔。撤回全程「無需綁卡與付費」；0元只指報名，非整個開發流程。status改conditional，限時活動daily追查；不聲稱實際帳戶已綁卡、已扣款或有固定月租。
+3. **Codegeist來源差異**：[日程](https://codegeist2026.devpost.com/details/dates)開始10/27 09:15 PDT，規則09:00 PT，保留差15分鐘；截止一致，不製造截止衝突。研究員「免費額度足夠一般測試」是未提供用量情境的推斷，未採納；其月後才複核建議亦未採納，依限時規則daily。主agent讀到完整領獎段落，沒有沿用研究員因輸出截斷而稱W-8BEN未可讀的缺口。
+4. **Leonardo權利與功能**：[定價](https://leonardo.ai/pricing/)仍Free0元/150每日tokens/Auto/Public；[tokens FAQ](https://intercom.help/leonardo-ai/en/articles/9044700-tokens-frequently-asked-questions)確認24小時重置、不累積、耗盡等下次、帳戶counter可看時點，不能轉送tokens。Free不含Top-up、私人生成、Leo Agent或不限量Relaxed。定價FAQ明列non-exclusive royalty-free commercial licence；[條款](https://leonardo.ai/terms-of-service)仍2026-01-19版，§8.7輸出IP歸平台、§8.6公開內容可供訓練/商用。所有權與使用許可分開，不把兩者寫成禁止商用；條款§8未重述回授許可是保留缺口，不作效力或不侵權法律保證。自行升級後自動續期、帳戶取消期末生效。台灣Unknown；App Store舊來源未刷新。補本次verification_scope，常態monthly。
+
+### 新機會預篩與未採納項目
+
+- ClickUp：[非營利/教育Help](https://help.clickup.com/hc/en-us/articles/7250693443607-Is-there-a-discount-for-non-profit-or-educational-companies)只稱sometimes discounts、需Support客製價；[非營利入口](https://clickup.com/teams/non-profit)、[折扣頁](https://clickup.com/teams/non-profit/discount)未給比例或AI折扣範圍；[高教頁](https://clickup.com/teams/higher-education)為洽Sales。一般Free AI已在`clickup-free-forever-500-once-ai-credits`，未找到充分不同方案，不新增。
+- Taskade：[非營利頁](https://www.taskade.com/ai/nonprofits)明稱不公布常設非營利折扣，年繳差價不是特殊補助；[學生頁](https://help.taskade.com/en/articles/8958687-taskade-for-students)為使用教學，沒有獨立教育點數。一般免費點數已在`taskade-free-earned-credits-no-monthly-watch`，不新增。
+- C的建議「補既有紀錄但不刷新時間」未採納：這輪只預篩新路徑，不擴大兩筆既有紀錄的範圍。結果僅存本交接，不計R，也不列attempted。下次隨既定12/09、12/11輪替再判斷。
+
+### 品質改善、驗證與可重用教訓
+
+- 本輪唯一品質改善聚焦資料表述：Codegeist損壞金額及無條件免費/高額度標籤會誤導花費決策；改成可讀獎金池、明示Forge費用並撤回高額度。Leonardo補權利/許可及核實範圍屬同輪證據修復。未發現須再改程式的可重現錯誤，故不改schema、前端或測試、不為修改量新增框架。
+- `python3 tests/validate.py`通過1,093筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過。S/A/B/C/D=173/186/130/277/111。另程式逐筆比對2筆修改、0新增、1,091未核不變及2,555舊歷史不變。
+- Orca本機瀏覽器實際載入13:12:09版：本輪2卡與R2/A0/U1091一致；展開來源可見Codegeist120,000/Forge費用/正式規則與Leonardo商用許可/24小時/條款。台灣Yes只剩Codegeist、Unknown只剩Leonardo；關鍵字、免費入口後搜尋、截止排序及載入更多24→48通過。桌面918px及手機390px DOM無水平溢出，console清單為空。
+- 首次互動腳本錯把「免費方案」快捷入口當成保留既有關鍵字；觀測實際query被清空（既有預設行為），改為先點免費再輸入Leonardo即通過，未修改產品以迎合測試。
+- screenshot產生PNG，但read回Image reading is disabled；本輪只有DOM/互動證據，未宣稱完成像素外觀審查。read對大JSON缺snapshot錨點及find判斷模型帳戶拒絕均已回報工具；以索引、最小hashline edit整合，AST只用撤回預覽取得錨點，不套用schema修改。
+- 可重用：競賽「no purchase」不是所需平台的全功能免費承諾；核必需開發平台的現行價目與付款要求。公開輸出IP歸屬也不是商用許可的反命題，須分列所有權、許可、保密及第三方權利。研究員輸出被截斷時讀完整段落，不把工具省略當官方缺漏。
+- 本節只記錄已完成的發布前觀測；提交推送後仍須分別核遠端commit、對應Pages工作與公開版本，最終發布結果見本輪回報及GitHub部署紀錄，不以本節代替部署成功證據。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00後追11/15截止/M11W3換檔；查[更新](https://autoclaw.z.ai/changelog)、[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00後追免費窗終了與現行配額；查[WorkBuddy定價](https://www.workbuddy.cn/pricing/)、[CodeBuddy定價](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00追報告CDT/平台UTC與隊伍5/10差異；查[overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)及前輪已知API，勿等較晚時間才行動。
+4. `kaggle-neurips-2026-smart-buildings-competition`：標題仍US,000，依既存sources重讀Kaggle官方overview/rules，核總池、個人利益、時程與資格，不按舊摘要猜字。
+5. `kaggle-google-quantum-circuit-optimization-2026`：同為損壞金額且有高價值宣稱，依既存sources重讀Kaggle官方overview/rules；若同輪成本不足，排在前三限時風險之後。`kaggle-google-agent-harness-ple-2027`亦有金額缺字，保留未核，不本輪批次補數。
+
+本輪評估：修正會影響金額/付款/商用決策的表述；補最舊證據範圍並揭露開始時刻差異，未宣稱消除全部矛盾；避免新方案重複但未新增涵蓋；改善兩筆資訊可讀性，無全面驗證宣稱。

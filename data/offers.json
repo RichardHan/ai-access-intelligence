@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T12:14:04+08:00",
-  "scope": "2026-11-15 12:05–2026-11-15 12:14 Asia/Taipei：局部複核 3 筆既有紀錄、新增 1 筆機會（政策0、觀察線索0）、整筆追查失敗0筆；其餘1089筆既有紀錄未完成本輪複核。更正Solar獎金池/期限/領獎限制、Airtable Omni與Canvas耗點界線、Tactiq現行扣點與預覽限制差異；新增Miro非營利付費折扣，非免費訂閱、台灣個案未核。新增本批次損壞美元金額驗證，不刷新未複核項目。",
+  "updated_at": "2026-11-15T13:12:09+08:00",
+  "scope": "2026-11-15 13:05–2026-11-15 13:12 Asia/Taipei：局部複核 2 筆既有紀錄、新增 0 筆（機會0、政策0、觀察線索0）、整筆追查失敗0筆；其餘1091筆既有紀錄未完成本輪複核。修正Codegeist獎金缺字、參賽免費與Forge計費界線、條件式台灣資格；釐清Leonardo免費商用許可與IP所有權、150點重置及付費功能。ClickUp/Taskade教育非營利預篩未找到充分且不重複新方案。不改前端或schema，不刷新未核項目。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -65676,7 +65676,7 @@
     {
       "id": "leonardo-free-daily-150-public",
       "title": "Leonardo Free：每日150生成tokens、作品公開",
-      "summary": "官方Free方案US$0/月，每24小時提供150生成tokens，不累積；各操作耗點不同，非150張圖片或免費API。免費模型僅Auto，作品公開，免費輸出IP所有權依條款歸平台。台灣App Store上架不保證每位台灣使用者均通過帳戶資格。",
+      "summary": "官方Free為US$0/月、每日150生成tokens，每24小時重置且不累積；非150張圖片或免費API。僅Auto模型、作品公開，不含私人生成、Leo Agent、付費Top-up或不限量Relaxed模式。定價FAQ明列免費輸出可依非專屬、免權利金授權商用；輸出IP仍依條款歸平台，不代表獨占權或不侵權保證。台灣帳戶資格仍未知。",
       "categories": [
         "FREE"
       ],
@@ -65699,42 +65699,43 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "Free不需付費訂閱；自行升級另計。",
-      "usable_duration": "常態Free層；每日額度每24小時重置且不結轉",
-      "access_risk": "免費生成公開，勿上傳機密；定價FAQ稱可商用，但條款規定免費輸出IP歸平台，商用與權利範圍需按條款核對。",
-      "verified_at": "2026-11-02T17:08:00+08:00",
+      "cancellation": "Free本身無付費訂閱費；自行升級的訂閱會自動續期，可於帳戶取消，當期結束生效；降級下個計費週期生效。",
+      "usable_duration": "常態Free層；150點每24小時重置、不結轉；耗盡等下一次重置，可在帳戶token counter查看時間。",
+      "access_risk": "免費作品公開，平台依§8.6可用於訓練及商業用途；勿上傳機密。定價FAQ的商用授權與§8.7平台輸出IP所有權是不同層次；其他使用者可依服務功能使用公開素材，生成內容不保證獨特或不侵權。",
+      "verified_at": "2026-11-15T13:12:09+08:00",
       "discovered_at": "2026-10-26T22:10:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-02T17:08:00+08:00",
+      "next_review_at": "2026-12-15T13:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "台灣App Store列同開發商免費App；網頁帳戶與實際生成未測。",
         "account_eligibility": "須建立帳戶；至少13歲或當地較高法定年齡，未滿18須監護同意。",
         "billing_country": "Free定價US$0/月；免卡與台灣帳單路徑未核。",
         "identity_residency": "台灣iOS發行已見，個別台灣帳戶是否核准未測。",
-        "terms_restrictions": "免費作品公開，輸出IP歸Leonardo；濫用或異常用量可受限制，不可將每日tokens當成API額度。",
+        "terms_restrictions": "定價FAQ授予免費輸出非專屬、免權利金商用授權；條款§8.7輸出IP歸平台，§8.6公開內容可用於訓練及商業用途。§5禁止轉讓平台使用權、轉售、共用單一登入與繞過驗證；濫用可限流。不把每日tokens當API額度。",
         "taiwan_note": "Unknown：台灣App Store上架是地區發行證據，不等於台灣每位使用者符合Free帳戶資格。"
       },
       "unknowns": [
-        "台灣實際註冊與生成、免卡條件",
-        "每日重置的具體鐘點與Auto模型清單",
-        "免費輸出商用FAQ與條款授權範圍、適用法律未核"
+        "台灣實際註冊與生成、免卡條件；台灣App Store來源沿用2026-10-26，未重讀",
+        "帳戶實際重置時點、Auto路由模型清單及各操作可生成數量未實測",
+        "個別輸出的第三方權利及適用法律未核；官方FAQ商用授權不保證版權保護或不侵權",
+        "商用回授文字見定價FAQ／說明中心，條款§8未重述該許可；其適用與可執行性不作法律判斷"
       ],
       "sources": [
         {
           "url": "https://intercom.help/leonardo-ai/en/articles/9044700-tokens-frequently-asked-questions",
-          "scope": "本次局部複核免費tokens",
-          "evidence": "官方FAQ列Free每日150 tokens、每24小時重置、不累積；價格與條款頁本次403，其他條件及台灣資格未重核。",
-          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00"
+          "scope": "Free 150點/24小時、耗盡等待、不結轉與不可贈送",
+          "evidence": "官方FAQ：Free每天150 tokens，unused expire、不結轉；resets every 24 hours，耗盡須等下次每日重置；hover token counter查看時點。Top-up限active paid subscription，tokens不能轉送；各操作耗點依模型/設定不同。較早紀錄：官方FAQ列Free每日150 tokens、每24小時重置、不累積；價格與條款頁本次403，其他條件及台灣資格未重核。",
+          "accessed_at": "2026-11-15T13:12:09+08:00"
         },
         {
           "url": "https://leonardo.ai/pricing/",
           "label": "官方定價",
-          "scope": "Free價格、每日150 tokens、Auto模型、公開作品及API另計",
-          "evidence": "2026-10-26 22:08–22:10 Asia/Taipei實讀：Free $0/month、150/day、Auto Only、Public；API另按量付費。",
-          "accessed_time_range": "2026-10-26T22:08:04+08:00–2026-10-26T22:10:29+08:00"
+          "scope": "Free費用/150每日點數、公開Auto模型、付費功能界線及商用授權；API另計",
+          "evidence": "主agent以瀏覽器渲染（read回403）：Free $0/month、150/day、Auto Only、Public；表格Free沒有Top-up、Token Bank、Leo Agent、Private Generations及Unlimited Relaxed。FAQ：Free有non-exclusive, royalty-free licence供commercial purposes；API為另行PAYG。較早紀錄：2026-10-26 22:08–22:10 Asia/Taipei實讀：Free $0/month、150/day、Auto Only、Public；API另按量付費。",
+          "accessed_at": "2026-11-15T13:07:45+08:00"
         },
         {
           "url": "https://apps.apple.com/tw/app/leonardo-ai-image-generator/id1662773014",
@@ -65746,9 +65747,9 @@
         {
           "url": "https://leonardo.ai/terms-of-service",
           "label": "官方條款",
-          "scope": "帳戶、年齡、作品權利及用量限制；非法規結論",
-          "evidence": "2026-10-26 22:08–22:10 Asia/Taipei實讀2026-01-19版§1.2、3.1、8.6、8.7、5.3：帳戶及年齡條件、公開內容授權、免費輸出IP歸平台與濫用限制。",
-          "accessed_time_range": "2026-10-26T22:08:04+08:00–2026-10-26T22:10:29+08:00"
+          "scope": "2026-01-19版§1.2、3、4、5、8；服務條款非法律結論",
+          "evidence": "主agent瀏覽器實讀：§1.2至少13歲或所在地資料同意年齡，未滿18須監護同意或負責成人監督；§4付費訂閱自動續期、帳戶取消期末生效；§5.1使用權不可轉讓、5.2禁止轉售/共用登入/繞驗證；§8.6公開內容授權涵蓋AI訓練和商用，8.7免費輸出IP歸平台，8.9不保證獨特。較早紀錄：2026-10-26 22:08–22:10 Asia/Taipei實讀2026-01-19版§1.2、3.1、8.6、8.7、5.3：帳戶及年齡條件、公開內容授權、免費輸出IP歸平台與濫用限制。",
+          "accessed_at": "2026-11-15T13:09:21+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -65761,7 +65762,8 @@
       },
       "priority_score": 19.0,
       "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知"
+      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知",
+      "verification_scope": "2026-11-15局部核對官方定價、tokens FAQ與2026-01-19版條款：Free費用/150每日tokens、Auto/公開作品、付費功能界線、商用授權與IP所有權、帳戶年齡/轉售限制及升級後續訂取消；台灣App Store與個別帳戶、付款實測及法律未核。"
     },
     {
       "id": "eden-ai-signup-ten-professional-credit-watch",
@@ -88139,75 +88141,97 @@
     },
     {
       "id": "atlassian-codegeist-2026-developer-hackathon",
-      "title": "Atlassian Codegeist 2026（Devpost）：總獎金 US,000，Forge 與 Rovo AI Agent 旗艦黑客松",
-      "summary": "Atlassian 官方旗艦年度黑客松 Codegeist 2026，由 Atlassian 主辦、Devpost 協辦，總獎金池達 12 萬美元。參賽者需運用 Atlassian Forge 無伺服器開發架構，結合 Jira、Confluence、Rovo AI Agent 或 Teamwork Graph 開發新一代企業智慧生產力應用。競賽另設最佳 AI Agents 與 Atlassian MCP 整合等多項專項獎（各 US,500），前 300 名符合資格交件者還可獲得官方開發者 Swag。台灣開發者可免費報名參賽。",
+      "title": "Atlassian Codegeist 2026：US$120,000總獎金池，Forge應用與AI Agent競賽",
+      "summary": "官方主頁及規則列US$120,000現金總池；三個賽道首獎各US$15,000，四類專項獎各6名、每名US$1,500，並非每位參賽者的可用額度。免購買參賽，須以Forge整合至少一項Atlassian產品/平台能力；Rovo/AI並非全部作品必選。報名與交件至台北2026-12-23 04:00。台灣未列地域排除，但仍須成年、帳戶及利益衝突審核；Forge需帳單資料，超免費用量收費；LLM/Container沒有免費額度，Rovo AI費用另由客戶組織承擔。領獎費稅另計。",
       "categories": [
         "FREE",
-        "QUALIFICATION",
-        "HIGH-QUOTA"
+        "QUALIFICATION"
       ],
       "views": [
         "free"
       ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
-      "effort_minutes_max": 60,
-      "effort_basis": "註冊 Devpost 帳號並參賽",
+      "effort_minutes_max": null,
+      "effort_basis": "完成可安裝應用、示範影片與申請所需時間未估；不能以註冊時間代表參賽工時。",
       "taiwan": "Yes",
       "regions": [],
       "verification": "Official",
-      "usage_type": "Atlassian Forge 開發環境、Rovo AI Agent 與雲端開發沙箱",
-      "quota_classification": "HIGH BUT LIMITED",
-      "limited_confirmed": true,
+      "usage_type": "Competition prize pool; not per-user AI credits",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "免費參賽無需綁卡與付費",
+      "cancellation": "報名/交件無需購買或付款；Forge官方要求提供帳單資料並加入付款方式以避免中斷，不能稱全程免卡。資源超免費額度、LLM與Container用量計費；停用/取消資源的實際操作未測。",
       "usable_duration": "2026-10-27 起至 2026-12-22 12:00 PT 截止（台北時間 2026-12-23 04:00）",
-      "access_risk": "須使用 Atlassian Forge 架構並提供可安裝之測試連結與示範影片",
-      "verified_at": "2026-11-15T06:15:00+08:00",
+      "access_risk": "須交可安裝測試連結、五分鐘內公開YouTube示範與英文資料或翻譯；獎金須核實身分/資格/作品角色，10個工作日內交回領獎表單。首獎會議票不含旅費；領獎匯款、換匯及稅費自負。",
+      "verified_at": "2026-11-15T13:12:09+08:00",
       "discovered_at": "2026-11-15T06:15:00+08:00",
       "announcement_at": "2026-10-27T09:00:00-07:00",
       "effective_at": "2026-10-27T09:00:00-07:00",
       "deadline_at": "2026-12-23T04:00:00+08:00",
       "expires_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-15T06:15:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T13:00:00+08:00",
       "priority": "normal",
       "eligibility": {
-        "service_availability": "全球合資格地區開發者均可線上參賽。",
-        "account_eligibility": "合法的 Devpost 帳號與 Atlassian 開發者帳號。",
-        "billing_country": "無限制，參賽與 Forge 基本開發環境免費。",
-        "identity_residency": "台灣符合參賽資格（非受制裁排除清單國家）。",
-        "terms_restrictions": "作品須部署於 Atlassian Forge 並整合至少一項 Atlassian 產品能力；附 5 分鐘內 Demo 影片。",
-        "taiwan_note": "台灣個人或團隊開發者均可自由報名參賽並角逐獎項。"
+        "service_availability": "線上競賽；台灣未列規則的具名地域排除，但須逐項符合§3資格。",
+        "account_eligibility": "居住地已成年之個人、合格個人團隊或已成立組織；Devpost帳戶與Atlassian Cloud Developer License；團隊/組織須授權代表。",
+        "billing_country": "報名免費；Forge計費自2026-01-01開始，官方要求帳單資料並加入付款方式，超免費用量月後結算；LLM/Container無免費額度。台灣卡別/帳單/領獎稅務個案未測。",
+        "identity_residency": "規則排除Brazil、Quebec、Russia、Belarus、Crimea、Cuba、Iran、North Korea、Syria、Sudan、Myanmar等，及受列名制裁、主辦/評審關係與利益衝突者；不是僅按國籍判斷。",
+        "terms_restrictions": "Forge作品須整合至少一項指定產品/平台能力；既有作品須依規則於競賽期更新/重建。需原創及合法授權、英文或翻譯、可安裝連結與公開YouTube示範。同一作品最多一大獎加一專項獎；獎品不可轉讓。主辦有評審及宣傳使用權。",
+        "taiwan_note": "Yes僅指台灣未列官方地域排除清單；不保證個別帳戶、組織、銀行/領獎或法律合規。仍需成年、制裁名單及利益衝突審核，不得假身分或跨區規避。"
       },
       "unknowns": [
-        "個別 Forge API 於極高頻率測試時的特定配額門檻"
+        "台灣開發者付款方式、實際資源用量/帳單、Rovo客戶方案授權與停用操作未實測",
+        "台灣個別帳戶、付款與領獎銀行/稅務條件未實測",
+        "Swag限前300位合格參賽者、每作品最多4份且送完為止；不保證目前仍有庫存",
+        "法律或監管未核；規則列出排除地區不是法律意見",
+        "日程頁列10/27 09:15 PDT開始交件，正式規則列09:00 PT；兩說保留，截止均為12/22 12:00 PST，未向主辦釐清開始時刻差異"
       ],
       "sources": [
         {
           "url": "https://codegeist2026.devpost.com/",
           "label": "Codegeist 2026 官方競賽頁與規則",
-          "scope": "黑客松主題、Forge 與 Rovo AI 規範、獎金池與時程",
-          "evidence": "總獎金 US,000，包含 3 大主題賽道（首獎各 ,000）與 Best Agents / Atlassian MCP 專項獎；交件截止為 2026-12-22 12:00 PT。",
-          "accessed_at": "2026-11-15T06:15:00+08:00"
+          "scope": "官方主頁獎金池、獎項及截止；正式規則另列",
+          "evidence": "瀏覽器實讀（read 403）：$120,000 in cash；三賽道1st各$15,000、2nd各$8,000、3rd各$5,000；四種bonus各6名/$1,500；deadline Dec 23, 2026 @ 4:00am GMT+8。Swag前300位Eligible Entrants、每作品最多4份。較早紀錄（原文金額缺字，不作現行依據）：總獎金 US,000，包含 3 大主題賽道（首獎各 ,000）與 Best Agents / Atlassian MCP 專項獎；交件截止為 2026-12-22 12:00 PT。",
+          "accessed_at": "2026-11-15T13:07:45+08:00"
+        },
+        {
+          "url": "https://codegeist2026.devpost.com/rules",
+          "scope": "正式規則§1–8：期間、資格、免費參賽、作品要求與獎項/領獎",
+          "evidence": "瀏覽器實讀：NO PURCHASE OR PAYMENT NECESSARY；報名及交件Oct27 09:00 PT–Dec22 12:00 PT；§3成年/組織資格及Brazil、Quebec等排除，台灣未列但另有利益衝突/名單限制。§4免費Cloud Developer License入口，不保證無限運算；英文或翻譯、公開YouTube <5分鐘、可安裝連結。§8首獎$15,000×3、二獎$8,000×3、三獎$5,000×3、四種bonus $1,500×6；同作品最多一大獎一bonus；Swag前300參賽者每作品最多4份。領獎表單10工作日內回覆、完成後60日內發放；匯費/換匯/稅自負，非美居民可能需W-8BEN。",
+          "accessed_at": "2026-11-15T13:09:21+08:00"
+        },
+        {
+          "url": "https://developer.atlassian.com/platform/forge/forge-platform-pricing/",
+          "scope": "現行Forge免費額度、超量計費、帳單資料與Rovo費用責任",
+          "evidence": "正文Last updated Aug12 2026；每app每月免費用量各自計算、超量月後結算；FAQ計費自Jan1 2026、需billing details並加payment method。Functions 200,000 GB-seconds、KVS讀寫各0.1GB、Logs1GB、SQL1hr/100k requests/730GB-hours、Object Store5k requests；LLM0credits、Container0免費用量。Rovo credits由客戶組織出，Forge資源由開發者出；開發/staging亦計量。",
+          "accessed_at": "2026-11-15T13:12:09+08:00"
+        },
+        {
+          "url": "https://codegeist2026.devpost.com/details/dates",
+          "scope": "研究員實讀日程頁，保留與正式規則開場時刻差異",
+          "evidence": "研究員curl HTTP200實讀：Submissions October27 at9:15am PDT–December22 at12:00pm PST；規則§1開始9:00am PT，差15分鐘；截止一致。主agent read403不代表頁面失效。",
+          "accessed_at": "2026-11-15T13:06:51+08:00"
         }
       ],
       "record_type": "opportunity",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
-        "eligibility_note": "台灣本地網路可直接訪問 Devpost 與 Atlassian 開發者網站。"
+        "eligibility_note": "頁面可讀不等於帳戶或獎金資格；VPN不授予居住或身分資格，不建議規避。"
       },
-      "status": "active",
+      "status": "conditional",
       "legal_status": "not_verified",
-      "priority_score": 25.0,
+      "priority_score": 19.6,
       "priority_tier": "S",
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知·有資格門檻",
-      "verification_scope": "2026-11-15 06:15 查核 Codegeist 2026 競賽規範、官方獎勵池與主題軌道：總獎金 US,000，2026-12-22 12:00 PT 截止；台灣合格參賽。"
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻",
+      "verification_scope": "2026-11-15局部重讀官方主頁、正式規則§1–8、Forge定價；研究員另核日程頁：總池/各獎項、精確截止、免費參賽而非免費全部開發資源、資格排除、作品/英文/測試/授權、Swag與領獎程序；台灣個案、實際申請、法律及實際開發帳單未核。",
+      "cost_note": "報名0美元；Forge每app每月免費Functions 200,000 GB-seconds、KVS讀/寫各0.1 GB、Logs寫入1 GB、SQL 1小時/100,000請求/730 GB-hours、Object Store 5,000請求；超量依表計費（Functions US$0.000025/GB-second）。LLM與Container無免費額度；Rovo credits由客戶組織負擔，Forge執行資源由開發者負擔。實際帳單/稅費未知。"
     },
     {
       "id": "kaggle-nfl-big-data-bowl-2027",
@@ -88692,19 +88716,16 @@
       ]
     }
   ],
-  "latest_research_at": "2026-11-15T12:14:04+08:00",
+  "latest_research_at": "2026-11-15T13:12:09+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T12:05:23+08:00",
-    "completed_at": "2026-11-15T12:14:04+08:00",
+    "started_at": "2026-11-15T13:05:20+08:00",
+    "completed_at": "2026-11-15T13:12:09+08:00",
     "reviewed_ids": [
-      "kaggle-solar-filament-segmentation-2026",
-      "airtable-free-plan-monthly-ai-credits",
-      "tactiq-free-monthly-ten-transcripts-five-ai"
+      "atlassian-codegeist-2026-developer-hackathon",
+      "leonardo-free-daily-150-public"
     ],
-    "new_ids": [
-      "miro-nonprofit-thirty-percent-all-paid-plans-ai"
-    ],
+    "new_ids": [],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1089
+    "unreviewed_existing_count": 1091
   }
 }
