@@ -751,3 +751,28 @@ if ((runWithFailed.attempted_failed_ids || []).length > 0) {
 assert.strictEqual(statsWithFailed.length, 4, 'stats with failed lookups must have 4 items');
 assert.strictEqual(statsWithFailed[3][1], '追查未成功', 'last item must be 追查未成功');
 console.log('PASS: review-summary includes 追查未成功 when attempted_failed_ids is non-empty.');
+
+// 期限已過、狀態還沒更新：`soonestClose()` 只回傳未來的截止點，於是這種紀錄在卡片正面
+// 完全沒有期限列，卻仍留在免費／開發者／Beta 專區（2026-11-16 開場即遇到 Tencent Hy4 與
+// AutoClaw M11W2 兩筆在發布後到期的紀錄）。規格值：過去且有值的截止點必須被標出，
+// 已截止狀態、未來期限、以及只有年月而無法換算的 expiry.date 都不得標。
+{
+  const now = Date.parse('2026-11-16T01:00:00+08:00');
+  const past = { status: 'conditional', expires_at: '2026-11-15T23:59:00+08:00' };
+  assert.strictEqual(ctx.passedClosePoint(past, now)?.value, '2026-11-15T23:59:00+08:00', 'a passed expires_at on an actionable record must be reported');
+  assert.strictEqual(ctx.soonestClose(past, now), null, 'the countdown must stay empty once the point has passed');
+  assert.strictEqual(ctx.closeBadge(past, now), null);
+  const pastDay = { status: 'active', deadline_at: '2026-11-15' };
+  assert.strictEqual(ctx.passedClosePoint(pastDay, now)?.value, '2026-11-15', 'a date-only closed point counts as passed after that day');
+  assert.strictEqual(ctx.passedClosePoint({ status: 'expired', expires_at: '2026-11-15' }, now), null, 'closed records are already labelled and must not double up');
+  assert.strictEqual(ctx.passedClosePoint({ status: 'duplicate_merged', deadline_at: '2026-11-15' }, now), null);
+  assert.strictEqual(ctx.passedClosePoint({ status: 'conditional', expires_at: '2026-11-20' }, now), null, 'a future close point is not passed');
+  assert.strictEqual(ctx.passedClosePoint({ status: 'conditional', expiry: { date: '2028-06' } }, now), null, 'a month-only expiry.date is not converted');
+  assert.strictEqual(ctx.passedClosePoint({ status: 'conditional', expires_at: '2026-11-17' }, now), null);
+  // 兩個欄位都過去時取較晚的那一個：卡片說「最後一個已過的期限」，不是最舊的歷史日期。
+  assert.strictEqual(ctx.passedClosePoint({ status: 'conditional', deadline_at: '2026-11-10', expires_at: '2026-11-15T23:59:00+08:00' }, now)?.label, '方案結束');
+  const cssPassed = fs.readFileSync(__dirname + '/../style.css', 'utf8');
+  assert(cssPassed.includes('.deadline-passed'), 'missing .deadline-passed in style.css');
+  assert(fs.readFileSync(__dirname + '/../app.js', 'utf8').includes("'deadline-passed'"), 'card must render the passed-deadline pill');
+  console.log('PASS: passed close points are flagged on actionable records and stay silent for closed records, future dates and month-only expiry.');
+}

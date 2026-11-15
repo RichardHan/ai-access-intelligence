@@ -4060,3 +4060,52 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - 本輪台灣Yes為0、Unknown為3；關鍵字Langfuse非營利1筆、免費專區排除此新抵用項，Pipedream免費開發仍1筆。載入更多24→48、截止排序首項AutoClaw。桌面1365及手機390px無DOM水平溢出，browser errors及console error皆空；截圖不可讀，未宣稱像素外觀審查。
 - 首次互動腳本用Meta+A清搜尋未生效，字串被接成「Langfuse非營利Pipedream Connect」而等待逾時；依觀測改用tab.fill後完成剩餘情境。這是腳本按鍵假設錯誤，不是網站錯誤，沒有為此修改前端。
 - 本節只記發布前已觀測證據；遠端commit、對應Pages工作與公開版本仍須分別核對，結果見本輪回報及GitHub部署紀錄，不將已推送或排隊當成功發布。
+
+## 2026-11-16 01:05–01:35 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 實際對錶 `TZ=Asia/Taipei date -Iseconds` 為 01:05:13；main HEAD `b26ceaf`，fetch 後與 origin/main 無差異，開場工作樹乾淨、無未完成 PR。Pages 為 main 根目錄 legacy build，`gh api .../pages/builds` 顯示 `b26ceaf` 於 2026-11-15T11:22:36Z 建置成功；公開站 data/offers.json 即 19:16 版（1,097 筆）。repo 與上兩層無 AGENTS.md。
+- 開場 `python3 tests/validate.py` **不通過**：`autoclaw-…`（expires_at 11/15 23:59）與 `tencent-hy4-…`（expires_at 2026-11-15）在發布後到期、狀態仍是 `conditional`，被「期限已過卻仍非已截止」擋下。這不是資料毀損而是本輪必須關閉的窗口，也說明截止點可能在發布之後才到。
+- N=1,097（881 opportunity／50 policy／166 watchlist）；可行動 1,005、嚴格逾期 3、7 日內截止 9、retry 0。三筆逾期為 Solar（排 11/15 20:00）、AutoClaw 與騰訊（排 11/15 23:30）；當日 12:00／15:45／16:00 截止的三筆台灣項目排在 09:00–12:00，本輪提前處理。
+- 三個環境預設 Task 研究員（未指定模型）完成並交付獨立 local artifact；A 16/24 URL、B 18/24、C 12/12。主 agent 為唯一共享 JSON 寫入者，PID 92666 取得維護鎖。
+- 執行偏差：C 的 web_search 用到 3 次且曾開啟 SAS 404 與 Intel 重導頁（已自行計入 12 個 URL 上限並在 ledger 列出）；A 的 Tencent 段用滿 4 個 URL 後未再開替代頁，符合上限但留下 WorkBuddy 定價頁缺口。
+
+### 採用成果與證據界線
+
+- R=12、A=2（機會2／政策0／觀察線索0）、U=1,085、attempted=0；結果 1,099 筆。主 agent 對每一筆結論重讀來源，未直接沿用研究員的時間戳（B 交件的 01:10:55 早於主 agent 實際重讀）。
+- 當日截止四筆全部仍開放，且都**只列一次延期**：ASPN 12:00（Accupass 逐字「延長至 2026 年 11 月 16 日 中午12點」、無已結束／額滿、仍有立即報名）；Solar 12:59（CDT 字面）／19:59:59（平台）；UGREEN 15:45（rules「November 15, 2026 (11:45 pm Pacific Time)」，參與 2,430→2,664）；TNNU 16:00（報名 39／名額 34 未變）。四筆的 `next_review_at` 改排在各自截止前（11:30／12:30／15:15／15:30），因為 `tests/validate.py` 要求複核排在仍可行動時；截止後的關閉檢查由下一輪的「期限已過卻仍非已截止」接手。
+- Solar 兩處官方衝突今日都還在且都不動：overview「Nov 15, 2026, 11:59 pm CDT」vs 平台 `deadline 2026-11-16T11:59:59Z`；rules「The maximum Team size is five (5)」vs API `maxTeamSize=10`。新確認的機制是頁面「Close 19 hours to go」走平台 Z 值，**倒數不會提醒較早的 CDT 時刻**，因此 `deadline_at` 取較早的 12:59 並在 summary 說明兩個時間。合規上限以規則的 5 人為準，但不替主辦解釋配置差異。
+- AutoClaw 換檔：M11W2 期限字串未改且已過、blog 最新貼文停在 11/13、無延期；M11W3（11/13 發布）為 11/16 00:00–11/22 23:59（UTC+8）、同為 100M Tokens／10,000 credits、每帳戶一次、本期獎勵本期到期。紀錄主體改掛 M11W3、`expires_at` 11/22 23:59、cadence 改 weekly（排 11/22 22:30）。「不結轉、每週需重新領取」是由「每期獎勵各自到期」推得，官方沒有 reset／carry-over 字樣，已標為推論。
+- 騰訊改 `expired`：中英文稿日期字串未改、無延期，額度與時區始終未公布。期後只有國際站 CodeBuddy 有明文（Free 100 credits/月、新戶 250／14 天、每日活躍 30、結束日另公告），該頁對 November／Hy4 零命中，不當成活動期滿轉換。中國站 WorkBuddy 定價頁 curl 只得 13,744 bytes 外殼、瀏覽器 90 秒逾時，其「體驗版 500 積分」列為證據缺口，不撤回也不重述為現況。
+- Netlify 改 `active_verified`：300 credits/月硬上限、「all your projects share the same monthly credit allotment」、不結轉、不能加購、用盡後全部站台暫停、Free「You'll never be charged」、AI 推論 180 credits = US$1。付款方式要求只寫 Personal／Pro，Free 既未被要求也未被明文免卡；舊「免卡」證據來自舊制方案文章，已在 unknowns 更正。
+- HeyGen 修掉一處**來源引文不在現行頁面**的錯誤：舊 evidence 寫「Free plan outputs are strictly for personal, non-commercial use… One Free account per person」，現行條款其實是 §4「solely for personal, non-commercial, and internal evaluation purposes」並列出售、再授權、散布、變現、廣告、客戶工作、營收產品；§2 禁的是「Create more than one account to benefit from Our Services」，不是每人一帳號的普查規則。狀態改 `active_verified`；Export resolution 無數值故不推測。
+- StackAI 確認「run」定義**確實未公布**：星號無註腳、FAQ 標題存在但無答案、docs 的 token/credit 頁未定義 run（另有 docs 路徑 404）。ToS §8.H 保留超額計費且無 Free 例外，故維持 `conditional`，不翻成免卡或硬停。
+- GitLab 的三方說法釘到句子並補第三份官方來源：手冊列 AI Chat／IDE 為福利、Duo 功能文件要求 add-on、公開 join 頁完全沒有 AI；100% 折扣明文限定「DAP self-hosted … members using GitLab self-managed」，Duo Pro/Enterprise 屬 Sales 裁量。維持 `terms_conflict`，cadence 由 daily 改 biweekly（排 11/30）。
+- Kimi 的註銷差異改述為**範圍缺口**：API FAQ 逐字「不支持账号注销」、一般條款 §2.3 允許隨時註銷且 Specific Agreement 優先，但兩份文件都沒有把自己限定或延伸到 API 帳號（條款全文無 platform.kimi.com）。「国内手机号」＋「完成实名认证后发放」已確認；可接受證件與是否限大陸籍未公布，故「必須大陸身分證件」仍未確認。
+- 新增兩筆：`google-earth-engine-noncommercial-monthly-eecu-tiers`（2026-04-27 起 Community 150／Contributor 1,000／Partner 100,000 EECU-小時、每月 1 日 PT 午夜重置不累積、用盡轉 restricted mode、Community 免帳單、每年重驗、180 天未存取可終止、禁 quota farming 與 fee-for-service）與 `sas-academic-free-viya-learners-and-oda-studio`（Viya for Learners 需大學信箱；ODA 只需免費 SAS Profile、未隸屬學校者亦可得 Studio；5GB＋教師 3GB、閒置 3 小時／上限 6 小時、禁 HP 與 CAS／Viya 程序、閒置歸檔）。兩筆台灣皆 Unknown：官方頁未具名亦未排除。
+- 不採 C 的 NVIDIA Isaac Sim watchlist 紀錄（只留作下輪研究項）：Apache 2.0 免費與「Omniverse Kit 商業散布需另購」都只是單頁引文，且無免費 GPU，寫成紀錄會變成薄弱線索。
+
+### 本輪唯一品質改善：期限已過但狀態未更新
+
+- 觀察到的問題：`soonestClose()` 只回傳未來的截止點，於是「機器可讀期限已過、狀態還沒更新」的紀錄在卡片正面**連期限那一列都沒有**，卻仍留在免費／開發者／Beta 專區——已結束的活動看起來像普通的條件式方案。本輪開場的 Tencent（11/15 23:59）與 AutoClaw 正是此狀態，且 `validate.py` 只在發布前跑，讀者看的是已發布頁面。
+- 修法：新增 `passedClosePoint()`（已截止狀態不重複標、只認完整日期的 expiry.date、多欄位取較晚者）與卡片 `.deadline-passed` 標記「<標籤>已過 <日期>·狀態待更新」，**不改篩選**（官方可能延期而資料尚未更新，隱藏會造成漏看），`title` 說明請自行核對來源。
+- 驗證：`tests/filters.cjs` 新增規格值斷言（過去 expires_at 必須被回報、`soonestClose`／`closeBadge` 仍為 null、日期級 deadline_at 當日過後才算過、closed／duplicate 不重複標、未來期限不標、`2028-06` 不換算、兩欄位取較晚者、CSS 與 createCard 皆須存在）。以「把 `passedClosePoint` 改成 return null」的複本實測，斷言確實失敗（`a passed expires_at on an actionable record must be reported`）；現行資料此標記為 0 筆（無誤報）。
+- 另以 node + DOM stub 實際呼叫 `createCard()`：條件式＋過去 expires_at 渲染出「方案結束已過 2026/11/15 23:59·狀態待更新」，同資料改成 `expired` 則不渲染。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,099 筆（S/A/B/C/D = 172/189/130/275/117，未評級 216）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 皆通過。
+- 本機 http.server 載入 01:23 版：全庫 1,099、本輪摘要 12／2／1,085、`資料更新 2026/11/16 01:23`。本輪更新專區 14 張＝R12＋A2。
+- 篩選與排序：關鍵字 `Earth Engine` 1 筆、`SAS` 2 筆、`Netlify` 1 筆、`AutoClaw` 3 筆、`M11W3` 1 筆；免費專區 719 筆且含 Earth Engine／SAS、不含已到期的騰訊；載入更多 24→48；截止排序首四張為 ASPN 12:00、Solar 12:59、UGREEN 15:45、TNNU 16:00，皆標「今天」。
+- 卡片內容：騰訊顯示「優惠已到期・原分類：免費機會、Beta 存取」與本輪 scope；Solar 顯示「申請截止 2026/11/16 12:59 · 今天」「官方條款有差異」；Earth Engine 顯示高額度／資格審核與本輪 scope。
+- 桌面 1365px 與手機 390px 皆無 DOM 水平溢出、無越界節點；browser errors 與 console error 均空；`.deadline-passed` 實際渲染 0 筆。截圖能力未驗證像素外觀，只宣稱 DOM 與互動。
+- 本節只記發布前觀測；遠端 commit、對應 Pages 工作與公開版本另見本輪回報。
+
+### 下一輪優先（最多5項）
+
+1. `kaggle-solar-filament-segmentation-2026`：今日 12:59（CDT 字面）與 19:59:59（平台）兩個截止都到齊後關閉並記錄是否出現更正公告；查 [overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)、GetCompetition API。
+2. `aspn-youth-sports-tech-hackathon-2026`／`ugreen-ai-nas-hackathon-2026`／`tw-labor-pretraining-ai-smart-application-tnnu-03`：12:00／15:45／16:00 後改判 closed，記錄是否補報名、UGREEN 11/21 入圍通知與 TNNU 報名人數終值。
+3. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：確認 WorkBuddy 中國站 pricing 是否恢復可讀、體驗版 500 積分是否仍存在；查 https://www.workbuddy.cn/pricing/ 與 docs Pricing，不以本次逾時推論活動終止。
+4. `gitlab-education-ai-credit-exclusion`：11/30 前找第四份官方說法（教育協議／Sales 折扣頁）或等產品內可見狀態，決定 AI Chat 是否為教育授權內含；目前三頁並存不得擇一。
+5. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：11/22 22:30 追 M11W4 是否續開與本期結束狀態；查 [M11W3](https://autoclaw.z.ai/blog/news/M11W3/)、https://autoclaw.z.ai/blog/。另可挑一筆 2026-11-08 最舊批仍缺 scope 的紀錄（`murf-startup-incubator-three-month`、`vespa-cloud-once-three-hundred-no-card-trial`）輪替。

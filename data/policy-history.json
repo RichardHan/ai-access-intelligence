@@ -30837,5 +30837,120 @@
       "https://langfuse.com/pricing",
       "https://docs.google.com/forms/d/e/1FAIpQLSdJorddOgmXa52WFHP9qwSJtrV27_NAUpCFph58pqw1puoQCQ/viewform"
     ]
+  },
+  {
+    "record_id": "kaggle-solar-filament-segmentation-2026",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "deadline_countdown_mechanism_and_team_limit_conflict",
+    "summary": "補兩項決策相關事實：(1) 頁面倒數「19 hours to go」走平台 API 的 2026-11-16T11:59:59Z，不是 overview 的「Nov 15, 2026, 11:59 pm CDT」字面（兩者差 7 小時），因此倒數不會提醒較早的 CDT 時刻；(2) 隊伍上限衝突今日仍在：正式規則「The maximum Team size is five (5)」，平台 API maxTeamSize=10，合規以 5 人為準但不代主辦解釋配置差異。獎金池 up-to US$3,000、每日 5 次提交、最多 2 份 Final 未變；未登入、未按 Join。",
+    "sources": [
+      "https://www.kaggle.com/competitions/filament-segmentation-2026",
+      "https://www.kaggle.com/competitions/filament-segmentation-2026/rules",
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition"
+    ]
+  },
+  {
+    "record_id": "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "weekly_window_rollover_to_m11w3",
+    "summary": "M11W2（11/9 00:00–11/15 23:59 UTC+8）如期結束，期限字串未改、blog 最新貼文停在 11/13、無延期或加碼；紀錄主體改掛 M11W3（11/16 00:00–11/22 23:59 UTC+8），同為 100M Tokens／10,000 credits、每帳戶一次、本期獎勵本期到期。兩期獨立、無 carry-over 字樣，重置與重新領取為由「每期各自到期」推得，非官方明述。changelog 仍停在 2026-08-27、不能作活動佐證；未登入領取。",
+    "sources": [
+      "https://autoclaw.z.ai/blog/news/M11W2/",
+      "https://autoclaw.z.ai/blog/news/M11W3/",
+      "https://autoclaw.z.ai/blog/",
+      "https://autoclaw.z.ai/changelog"
+    ]
+  },
+  {
+    "record_id": "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "free_window_ended_no_extension",
+    "summary": "11/4–11/15 免費使用窗已結束，中英文新聞稿日期字串未改、無延期；額度數字、時鐘與時區官方始終未公布，中英文措辭差異（available for free／一定额度的免费使用）並存不擇一。狀態改 expired；期後僅國際站 CodeBuddy 有明文（Free 100 credits/月、新戶 250／14 天、每日活躍 30、結束日另公告），但該頁對 November／Hy4 零命中，不當活動期滿轉換。中國站 WorkBuddy 定價頁本輪 curl 僅外殼、瀏覽器 90 秒逾時，體驗版 500 積分列證據缺口而非活動終止證據。",
+    "sources": [
+      "https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+      "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+      "https://www.codebuddy.ai/docs/ide/Account/Subscription"
+    ]
+  },
+  {
+    "record_id": "heygen-free-three-monthly-noncommercial-videos",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "license_wording_replaced_and_account_rule_corrected",
+    "summary": "撤換不在現行頁面的舊引文（『Free plan outputs are strictly for personal, non-commercial use… One Free account per person』），改引條款 §4「solely for personal, non-commercial, and internal evaluation purposes」及後續禁止出售、再授權、散布、變現、廣告、客戶工作、營收產品；§2 實際禁止的是「Create more than one account to benefit from Our Services」，不是每人一帳號的普查規則。價格頁確認 3 部/月、每部 1 分鐘、有浮水印、FAQ 明寫 no credit card required；Export resolution 無數值故不推測。",
+    "sources": [
+      "https://www.heygen.com/pricing",
+      "https://www.heygen.com/terms"
+    ]
+  },
+  {
+    "record_id": "netlify-free-monthly-three-hundred-shared-ai-gateway",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "credit_sharing_and_exhaustion_confirmed",
+    "summary": "由推論改為逐字證據：300 credits/月為硬上限、團隊所有專案「share the same monthly credit allotment」、不結轉、不能加購；用盡後全部站台暫停至下期，官方寫 Free「You'll never be charged for the Free plan」。AI Gateway 需 production deploy、AI 推論 180 credits = US$1。付款方式要求只寫 Personal／Pro，Free 既未被要求也未被明文免卡，舊「免卡」證據來自舊制方案文章；狀態改 active_verified。",
+    "sources": [
+      "https://www.netlify.com/pricing/",
+      "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans.md",
+      "https://docs.netlify.com/build/ai-gateway/overview.md",
+      "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/billing-faq-for-credit-based-plans.md"
+    ]
+  },
+  {
+    "record_id": "stackai-free-monthly-five-hundred-runs",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "run_unit_confirmed_unpublished",
+    "summary": "確認 500 runs 的星號在定價頁沒有對應註腳、FAQ「What is a run in StackAI?」只有標題沒有答案、docs 的 token/credit 定義頁也未定義 run（另有 docs 路徑 404），因此計量單位確實未公布而非讀取工具漏字。ToS §8.H 保留超額計費且無 Free 例外；免卡與是否硬停仍未公布，不翻成「免卡」。",
+    "sources": [
+      "https://www.stackai.com/pricing",
+      "https://www.stackai.com/terms-of-service",
+      "https://docs.stackai.com/technical-reference/evaluations-and-observability/token-usage-credits-and-cost-definitions.md"
+    ]
+  },
+  {
+    "record_id": "gitlab-education-ai-credit-exclusion",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "three_way_ai_entitlement_divergence_pinned",
+    "summary": "把爭議釘到句子並補第三份官方來源：教育手冊列「AI Chat and AI Code Suggestions in the IDE」為 Program benefits；Duo 功能文件寫非 agentic 功能「require a Premium or Ultimate subscription and one of the available add-ons」；公開 join 頁福利清單完全沒有 AI。手冊 100% 折扣明文限定「DAP self-hosted … members using GitLab self-managed」，Duo Pro/Enterprise 折扣屬 Sales 裁量；community subscriptions 不配 included credits。維持 terms_conflict，複核改雙週。",
+    "sources": [
+      "https://handbook.gitlab.com/handbook/marketing/developer-relations/programs/education-program/",
+      "https://docs.gitlab.com/user/gitlab_duo/feature_summary/",
+      "https://docs.gitlab.com/subscriptions/gitlab_credits/",
+      "https://docs.gitlab.com/subscriptions/community_programs/",
+      "https://about.gitlab.com/solutions/education/join/"
+    ]
+  },
+  {
+    "record_id": "kimi-api-free-voucher-cn-locked",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "deletion_conflict_reframed_as_scope_gap",
+    "summary": "註銷差異由「條文衝突」改述為範圍缺口：API FAQ 逐字「不支持账号注销」，一般站點條款 §2.3「You may cancel your account at any time」且 Specific Agreement 優先，但兩份文件都沒有把自己限定或延伸到 API 帳號，頁面亦無 platform.kimi.com 字樣。另確認「国内手机号注册的新用户」與「完成实名认证后发放」為原文，可接受證件與是否限大陸籍未公布，故「必須大陸身分證件」仍未確認；複核改每週。",
+    "sources": [
+      "https://www.kimi.com/help/kimi-api/api-free-trial",
+      "https://www.kimi.com/help/kimi-api/api-account-and-auth",
+      "https://www.kimi.com/user/agreement/modelUse?version=v2"
+    ]
+  },
+  {
+    "record_id": "google-earth-engine-noncommercial-monthly-eecu-tiers",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增非商業地理空間 AI 算力基準：2026-04-27 起以 Cloud 專案為單位發每月 EECU 配額，Community 150 EECU-小時（免帳單）、Contributor 1,000（需帳單但不收非商業費用）、Partner 100,000（申請制）；每月 1 日太平洋時間午夜重置、不累積，用盡轉 restricted mode 而非硬停；每年重驗非商業資格、180 天未存取可終止；禁止 fee-for-service 與 quota farming。台灣未具名亦未排除，列 Unknown。",
+    "sources": [
+      "https://earthengine.google.com/noncommercial/",
+      "https://developers.google.com/earth-engine/guides/noncommercial_tiers",
+      "https://developers.google.com/earth-engine/guides/access",
+      "https://earthengine.google.com/terms/"
+    ]
+  },
+  {
+    "record_id": "sas-academic-free-viya-learners-and-oda-studio",
+    "recorded_at": "2026-11-16T01:35:00+08:00",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增統計／分析平台學術免費基準，兩軌資格不同不應合併成一個額度：Viya for Learners 需大學信箱、含 ML/AI 且限學術非商業；OnDemand for Academics 只需免費 SAS Profile、未隸屬學校者亦可得 SAS Studio。ODA 5GB 資料（教師另 3GB）、閒置 3 小時／上限 6 小時、禁止 HP 與 CAS／Viya 程序、閒置帳號停用歸檔。四頁均未要求付款方式，運算配額數字官方未公布；台灣未具名、FAQ 僅泛稱部分國家可能受限。",
+    "sources": [
+      "https://www.sas.com/en_us/software/viya-for-learners.html",
+      "https://www.sas.com/en_us/software/on-demand-for-academics.html",
+      "https://www.sas.com/en_us/software/on-demand-for-academics/features-list.html",
+      "https://support.sas.com/ondemand/caq_new.html"
+    ]
   }
 ]

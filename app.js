@@ -382,6 +382,19 @@ function soonestClose(offer, now = nowMs()) {
   if (CLOSED_STATUSES.has(offer.status)) return null;
   return closePoints(offer).find(point => point.at > now) ?? null;
 }
+// 反過來的情況沒人管：機器可讀的截止點已經過去，狀態卻還是可行動（條件式／官方／申請制…），
+// 這筆紀錄就同時是「免費專區裡看得到」而「卡片正面沒有任何期限」。2026-11-16 00:00 開場即遇到兩筆：
+// Tencent Hy4 免費窗 expires_at 2026-11-15 23:59、AutoClaw M11W2 同日 23:59，兩筆在發布後才到期，
+// 於是網站把它們留在免費／開發者／Beta 專區，而 `soonestClose()` 因為時間已過回傳 null，
+// 卡片連「期限」那一列都不顯示——已結束的活動看起來像一個普通的條件式方案。
+// `tests/validate.py` 的「期限已過卻仍非已截止」會在下一輪發布前擋下，但讀者看的是已發布的頁面，
+// 頁面本身是最後一道防線。這裡不改篩選（官方可能延期而資料尚未更新，隱藏會造成漏看），
+// 只把「期限已過、狀態還沒更新」標在卡片上，讓它與「還可領」不再長得一樣。
+function passedClosePoint(offer, now = nowMs()) {
+  if (CLOSED_STATUSES.has(offer.status)) return null;
+  const past = closePoints(offer).filter(point => point.at <= now);
+  return past.length ? past[past.length - 1] : null;
+}
 function closeBadge(offer, now = nowMs()) {
   const point = soonestClose(offer, now);
   if (!point) return null;
@@ -611,6 +624,13 @@ function createCard(offer) {
   if (failedAttempt) {
     const marker = text('span', `追查未成功 ${dateLabel(failedAttempt.at)}`, 'attempt-pill');
     if (failedAttempt.reason) marker.title = failedAttempt.reason;
+    foot.append(marker);
+  }
+  const passed = passedClosePoint(offer);
+  if (passed) {
+    const raw = String(passed.value);
+    const marker = text('span', `${passed.label}已過 ${/T\d{2}:\d{2}/.test(raw) ? dateLabel(raw, true) : raw}·狀態待更新`, 'deadline-passed');
+    marker.title = '資料中的期限已過，但狀態還沒更新；官方可能延期，請自行核對來源。';
     foot.append(marker);
   }
   card.append(foot, createDetails(offer));
