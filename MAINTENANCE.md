@@ -3914,3 +3914,54 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 5. `serpkite-free-search-api-credits`：11/16追月贈是否需綁Google/GitHub；[Billing](https://serpkite.com/docs/credits-and-billing)、[比較頁](https://serpkite.com/compare/free-serp-api)、[Pricing](https://serpkite.com/pricing)。未有新變動不反覆追加相同衝突。
 
 本輪評估：修正會影響免費模型、成本與交件時刻的錯誤；消除一組活動重複、補最舊scope缺口，揭露而未解決授權差異。起始到期0，不宣稱減少到期積壓；新增0、不增加涵蓋但避免弱線索。保留去重及日期/折扣判讀教訓，降低下輪重複研究並改善資訊可讀性；不作全面驗證宣稱。
+
+
+## 2026-11-15 17:05 本輪研究與維護
+
+### 基準與分工
+
+- 實際對錶UTC09:05:22／台北17:05:22；main HEAD `b3ae0c940b69ded575d6de10407aca77abc31b23`，工作樹乾淨、無未完成PR，fetch未帶入更新。Pages沿用main根目錄legacy build，前輪43694036829成功。未找到repo/上一層AGENTS.md。
+- 可見其他維護omp程序，但無round lock或未提交修改，不能據此認定仍在寫；PID56286取得鎖，主agent為唯一共享JSON寫入者。
+- N=1,094（878 opportunity／50 policy／166 watchlist）；可行動1,002、嚴格到期0、7日內截止11（5冷卻）、retry0、24小時未核789、12小時內已核116。AutoClaw/Tencent18:00與Solar20:00保持排程，不提前刷新今日已核證據。
+- 可行動缺verification_scope共27筆。A選Kimi：最舊一批且涉及大陸手機號/實名與付款風險；B選Autodesk：同為11/08最舊一批、教育用途證據缺口。不是為未到期紀錄刷新時間。C只查n8n/Zapier教育、非營利與新創不同資格，先以產品/方案/資格去重。三組環境預設Task研究員，未指定或宣稱Terra/Gemini。各組最多6個官方URL，主agent重讀關鍵原文；未申請、登入、付款或領取。
+
+### 證據修復與取捨
+
+- `kimi-api-free-voucher-cn-locked`：[中文免費頁](https://www.kimi.com/help/kimi-api/api-free-trial)、[英文頁](https://www.kimi.com/en/help/kimi-api/api-free-trial)確認人民幣15元券、3個月、大陸門號、先券後充值與零餘額403；英文省略中文的實名及K3排除，不能推論英文用戶免條件。[API帳號FAQ](https://www.kimi.com/help/kimi-api/api-account-and-auth)補企業同名銀行帳號/統一社會信用代碼/打款核驗、門號換綁與不支援註銷。
+- 主agent發現研究員漏讀的差異：[一般條款](https://www.kimi.com/user/agreement/modelUse?version=v2)§2.3允許隨時註銷且特定協議優先，與API FAQ適用對應未核，改terms_conflict/daily。不任選一頁、不保證API可刪除。[API概覽](https://www.kimi.com/help/kimi-api/api-overview)現列platform.kimi.com、無訂閱制，更新入口但不因舊網域未出現就判其失效。不把會員支付協議套入API，不採研究員「領券本身不需付款」的過強表述（來源僅未列充值必要）。
+- Kimi No仍僅指一般台灣門號/未實名條件，不排除所有台灣籍人士；個人證件、台灣企業/持大陸門號個案未知。一般站點條款的大陸境內範圍不是國籍或法律結論，legal_status保持not_verified。不採研究員未附證據的「台灣來源IP」說法。
+- `autodesk-flow-studio-education`：[現行指南](https://blogs.autodesk.com/media-and-entertainment/2026/09/28/autodesk-flow-studio-pricing-and-subscription-guide/)確認免費每月2,100點不結轉、學生1席/教師最多250席一年可續、機構最多3,000席三年可續及1080p/5GB等限制。當前教育/定價/條款頁403；[教育頁10/16快照](https://web.archive.org/web/20261016193602/https://www.autodesk.com/education/edu-software/flow-studio)與[總覽11/12快照](https://web.archive.org/web/20261112210543/https://www.autodesk.com/education/edu-software/overview)明列僅教育、不得商業/專業/營利、身分核驗與到期前30天續期。快照擷取時間與本次查閱時間分列，不聲稱今日條款未變。
+- 不採B將教育條款改legal_status=restriction_found：沒有官方法律/監管來源；保留not_verified、台灣Unknown。不採未受管理quarterly週期、全站封鎖推論、免卡或到期自動行為；只記實際路徑失敗。現行指南成功所以是局部R，非整筆attempted失敗；缺口一週後換路線，不延後整月。不擴張B提出的其他Flow方案，留待去重後另輪研究。
+
+### 唯一品質改善與可重用教訓
+
+- 聚焦來源支持範圍與資格可讀性：兩筆原本Official卻無verification_scope/逐來源查閱時間，讀者難辨局部核實；補實讀範圍、歷史快照界線、未解取消/教育用途及台灣限制。可行動缺scope由27降25。無可重現前端程式錯誤，不改schema/app/tests或製造新測試；沿用資料契約並核實際卡片/篩選。
+- 跨語言省略不是較寬鬆資格；一般產品條款與API FAQ相反時，先確認產品/帳號適用範圍。快照可補歷史證據，不能證明現行條款。網站語系、可讀性、授權條款分別不等於優惠資格或法律結論。
+- find判斷模型不可用，改索引/grep；大JSON先程式索引、只讀候選。read大檔缺snapshot錨點已回報，AST只預覽取錨後撤回，不改schema。截圖工具回Image reading is disabled已回報；只宣稱DOM/互動證據，未冒稱像素外觀審查。
+
+### 新機會、去重與計數
+
+- 新增 `n8n-startup-fifty-percent-business-self-hosted`：[定價](https://n8n.io/pricing/startup-plan/)及[官方FAQ](https://support.n8n.io/article/n-8-n-business-plan-for-startups-info-faq)主agent重讀，五折宣傳/€333月均年繳/40,000次workflow每月、員工<20與募資<€5M、信用卡、自架。列價不能再打五折，不把不限steps/users當無限執行或免費AI額度；完整模型費用、稅/續費/超額未知。月繳可取消，補Settings→Usage and Plan→Manage Plan→Business Plan路徑，不操作帳戶。
+- FAQ摘要「Valid for 1 year or until ineligible」、正文「whichever is longer」、定價「one year, or longer if you still meet the requirements」保留差異，改terms_conflict/daily，不採C的conditional/monthly建議。台灣Unknown、法律not_verified、美元欄null而非0；不斷言未讀授權或所有第三方費用一定另計。與既有Cloud14天試用是不同方案/部署/資格/期間。
+- 預篩：[n8n非營利](https://support.n8n.io/article/non-profit-pricing)30% Cloud折扣需文件/組織信箱及客服發碼，具體但本切片上限1筆，保留後輪；[教育](https://support.n8n.io/article/do-you-offer-discounts-for-educational-institutions)僅case-by-case未列幅度，不造薄弱watchlist。
+- [Zapier新創](https://zapier.com/startups)本輪未取得專屬折扣證據；[折扣Help](https://help.zapier.com/hc/en-us/articles/8496197165581-Discounts-for-Zapier-plans)列年繳與非營利15%，既有`zapier-free-one-hundred-tasks-four-hundred-agent-activities`的cost_note已提非營利折扣，不重複新增/刷新。不同資格理論上可獨立，但本輪無須拆分既有涵蓋。不採C「未列即不存在」或非美元定價不含TWD就推定台灣不可用。
+- 三位研究員全部完成並審查。C自行機械檢查草案欄位，未遵守「中途不做檢查」指派；未跑repo測試/修改，最終由主agent統一驗證。B的1,082筆去重敘述不符開場1,094，未採其其他產品不存在結論。
+- N=1,094；R=2（Kimi、Autodesk）；A=1 opportunity／0 policy／0 watchlist；U=N−R=1,092；整筆追查失敗attempted=0。結果1,095筆。失敗子來源保留在scope/unknowns，非整筆失敗、非全部條款已核。
+- updated_at/latest_research_at/completed_at一致17:16:01，2筆既有verified_at僅指上述範圍；新增獨立計A。保留穩定ID與2,565筆政策歷史，追加3筆有意義條件/差異/新增基準。依prioritize函式重算：Autodesk16.3/C不變、Kimi非機會不評級、新n8n13.8/D；衍生分數不算外部查核。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00後核11/15換檔；[changelog](https://autoclaw.z.ai/changelog)、[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00後核免費窗與後續配額；[WorkBuddy](https://www.workbuddy.cn/pricing/)、[CodeBuddy](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00核CDT/UTC窗口與隊伍5/10差異；[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)。
+4. `kimi-api-free-voucher-cn-locked`：11/16釐清API帳號與一般帳號註銷適用對應、個人證件；[API FAQ](https://www.kimi.com/help/kimi-api/api-account-and-auth)、[一般條款](https://www.kimi.com/user/agreement/modelUse?version=v2)及其連結的專用協議；不申請/註銷。
+5. `n8n-startup-fifty-percent-business-self-hosted`：11/16核一年/資格失效/延長差異、月繳/續費及完整商業授權；[Startup定價](https://n8n.io/pricing/startup-plan/)、[FAQ](https://support.n8n.io/article/n-8-n-business-plan-for-startups-info-faq)。無新變動不重複追加同一歷史。
+
+本輪評估：補會影響註冊/取消、教育用途與付費決策的限制與來源範圍；缺scope27→25，揭露但未解決兩組條件差異。起始到期0、不宣稱減少到期積壓；新增1項不同資格且具明確利益的付費新創方案，不當免費。保留預篩與快照教訓，改善研究接續及資訊可讀性，非全面驗證。
+
+### 發布前驗證（17:18）
+
+- `python3 tests/validate.py`通過1,095筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過。S/A/B/C/D=172/186/130/277/114。前端、schema及程式未改，不加無關檢查。
+- 本機Chromium載入17:16:01版，全庫1,095；本輪3卡與R2/A1/U1092一致。展開3卡可見本日scope、未知範圍、n8n費用/效期差異、Autodesk快照/授權、Kimi註銷差異，分別有2/3/5個來源連結。
+- 台灣No本輪1筆、Unknown2筆；關鍵字Autodesk1筆；免費專區n8n Start-up為0、Autodesk為1；載入更多24→48；截止排序首筆AutoClaw。桌面1365px與手機390px無DOM水平溢出；browser errors與console error均空。截圖工具不可讀，未宣稱完成像素外觀審查。
+- 本節僅記已觀測的發布前證據；提交推送後仍須分別確認遠端commit、對應Pages工作與公開17:16版。不得以本節、已推送或排隊宣稱部署成功；結果見本輪回報與GitHub部署紀錄。
