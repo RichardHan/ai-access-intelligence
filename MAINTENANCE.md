@@ -3965,3 +3965,51 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - 本機Chromium載入17:16:01版，全庫1,095；本輪3卡與R2/A1/U1092一致。展開3卡可見本日scope、未知範圍、n8n費用/效期差異、Autodesk快照/授權、Kimi註銷差異，分別有2/3/5個來源連結。
 - 台灣No本輪1筆、Unknown2筆；關鍵字Autodesk1筆；免費專區n8n Start-up為0、Autodesk為1；載入更多24→48；截止排序首筆AutoClaw。桌面1365px與手機390px無DOM水平溢出；browser errors與console error均空。截圖工具不可讀，未宣稱完成像素外觀審查。
 - 本節僅記已觀測的發布前證據；提交推送後仍須分別確認遠端commit、對應Pages工作與公開17:16版。不得以本節、已推送或排隊宣稱部署成功；結果見本輪回報與GitHub部署紀錄。
+
+## 2026-11-15 18:05–18:12 Asia/Taipei 研究與維護
+
+### 基準與分工
+
+- 實際對錶UTC10:05:20／台北18:05:20；main HEAD與fetch後origin/main為`e7f7e2753c65666867c30ef7de87d037bec970f5`。開場工作樹乾淨、無未完成PR；Pages沿用main根目錄legacy build，前輪43698657325成功。repo及上兩層未找到AGENTS.md。
+- 同repo有其他omp程序，但無維護鎖或未提交修改，不以程序存活推論仍在寫入；本輪PID85876取得鎖，主agent唯一共享JSON寫入者。
+- N=1,095（879 opportunity／50 policy／166 watchlist）；可行動1,003、已到期2、7日內截止11（5冷卻）、retry0、24小時未核811、12小時內已核99。兩筆已到期為AutoClaw與騰訊18:00排程；Solar20:00及無新訊號的最近已核項目不提前重刷。
+- A限定上述2筆到期窗；B限定11/08最舊一批且缺scope的Aiven；C限定前輪保留的n8n非營利，先索引1,095筆去重。三個環境預設Task研究員均完成、交付獨立local artifact並經主agent審查；未指定或宣稱Terra/Gemini。
+- 每組上限6官方URL，A實用7（超支首頁），B/C各6。A/B交付的部分時間晚於交付當時時鐘，B批次標題亦誤沿用17:05；均不採其時間。主agent重讀採用原文並以實際時鐘記錄。研究員自行解析草案JSON，B另跑git status，未遵守中途不檢查的指派；未修改repo或提交。
+
+### 成果與證據界線
+
+- R=3：`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`、`aiven-postgresql-free`。A=1 opportunity／0 policy／0 watchlist；U=N−R=1,092；整筆追查失敗attempted=0。結果1,096筆。新紀錄不計入R；不採C「新增算R」建議。
+- updated_at／latest_research_at／completed_at一致18:12:26；只刷新上述3筆既有核實時間。保留全部穩定ID與2,568筆歷史，僅追加騰訊更正、Aiven刪除條款、n8n新增基準3則；AutoClaw期限未變不重複追加同一條件。
+- AutoClaw：[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)仍11/9 00:00–11/15 23:59 UTC+8、100M Tokens／10,000 credits、每帳戶一次、共同到期；[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)另列11/16–22同額度，不延長本期點數。修風險欄「尚未開始」，不提早標expired、不新建同活動。領取/台灣/付款未實測，條款沿用早班證據。
+- 騰訊：[中文稿](https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/)的一定額度與[英文稿](https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/)available for free並列，仍只11/4–15、無時區/時鐘；撤scope的23:59。Hy4標準API價格及TokenHub五折至12/31不是WorkBuddy/CodeBuddy期滿費率，撤回舊cost_note推論。
+- [CodeBuddy Subscription](https://www.codebuddy.ai/docs/ide/Account/Subscription)：Free100/月與每日30的活動必須分開；後者須客戶端有效對話/任務，僅登入/網頁不算，通常次日發放。7天Pro試用須綁卡及開續訂、期滿所選US$10/月或96/年扣款，試用中可管理中心取消；不是11/4–15活動額度。台灣Unknown、法律not_verified。
+- Aiven：[Free文件](https://aiven.io/docs/products/postgresql/concepts/pg-free-tier)仍免卡1CPU/1GB RAM/1GB磁碟/20連線；[條款](https://aiven.io/terms)§13.9允許停機超過180天後刪服務及全部備份，不能把「可重啟」當永久保留，也不是第180天必然刪除。§12.2單一服務在帳戶終止當日起停計費，整份協議另為兩個月通知；§3付費按月事後扣款、稅外加。[擴充清單](https://aiven.io/docs/products/postgresql/reference/list-of-extensions)列pgvector向量搜尋，僅AI資料層用途，不當模型推論贈額；Free執行個體未建立/測試。
+- 新增`n8n-nonprofit-cloud-thirty-percent-coupon`：[非營利Help](https://support.n8n.io/article/non-profit-pricing)列Cloud30%折扣、官方組織文件與組織信箱、Support核發one-time碼。與Cloud14天試用及自架Business新創五折不同資格/利益；頁標2025-08-28更新，不當今日公告。[coupon](https://support.n8n.io/article/how-to-apply-a-coupon-code)只准Cloud新訂閱，舊訂閱取消重訂可能多收費；one-time不證明只折首月或永久折扣。
+- [定價](https://n8n.io/pricing/)的Starter20/Pro50歐元年繳月均為一般牌價，不推算正式七折價格；內含Assistant點數與加購分開，unlimited steps不是無限AI。[取消](https://support.n8n.io/article/i-want-to-cancel-my-subscription)、[退款](https://support.n8n.io/article/refund-policy)、[稅費](https://support.n8n.io/article/is-it-possible-to-exclude-vat-upon-payment)及[Self-Serve](https://n8n.io/legal/self-serve-terms/)補自動續訂、稅外加、帳期末取消、資料刪除及月繳14天退款範圍。條款§9.5政策優先，不把一般non-refundable與退款Help逕判衝突；台灣文件/付款、折扣帳期、AI/Credit/AUP專用條款仍未核。
+
+### 唯一品質改善與可重用教訓
+
+- 聚焦「方案、時間與來源支持範圍不可混用」的資料修正：API價格不是產品續費、下一期不是本期延期、無固定免費期限不是永久資料保留、付費訂閱含AI不等於無限額度。可行動缺scope25→24；未找到須改前端/schema的程式錯誤，不新增框架或測試，沿用資料契約及實際卡片驗證。
+- 不採A保留錯誤API期滿價格、把一頁失敗當整筆attempted、將下次複核排在尚可行動的截止點之後；兩個今日截止項改daily並排23:30，午夜後仍須核換檔。首頁取字不足不證明200M權益已撤，本輪不新增此結論。
+- 不採B「免費客戶必然零賠償」（條款§11.3有例外）、「只能示範不能正式使用」或把平台有台灣區域推成Free可選台灣。法律未核是因未取得官方法律/監管來源，不是只因AUP未讀。
+- 不採C把all Cloud與Business self-hosted-only判成衝突，兩者範圍相容且Enterprise也可Cloud；不採「折扣不含任何AI點數」，定價明列內含點數。AI加購是否也折扣仍未知，不推論疊加或排除。
+- find判斷模型不可用，改程式索引/grep。大檔read缺snapshot已回報，以撤回的AST預覽取錨點後用edit最小補丁；schema未變。瀏覽器截圖回Image reading is disabled已回報，只能宣稱DOM/互動核對。
+- 依tools/prioritize.py既有函式重算：Aiven19/A、騰訊16.1/C不變，n8n13.8/D，AutoClaw為watchlist不評級。評分重算不是外部複核。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：23:30追最後窗口、午夜後核M11W2結束與M11W3換檔；查本輪[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)及[blog](https://autoclaw.z.ai/blog/)，不把下期當延期。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：23:30及11/16核窗口後狀態/產品免費層，查本輪中英文稿及[Subscription](https://www.codebuddy.ai/docs/ide/Account/Subscription)、[WorkBuddy定價](https://www.workbuddy.cn/pricing/)，不猜時區或將TokenHub單價套入。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00追CDT/UTC及隊伍5/10人差異；查[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)，不提早重刷。
+4. `kimi-api-free-voucher-cn-locked`：11/16釐清API與一般帳號註銷適用；查[API FAQ](https://www.kimi.com/help/kimi-api/api-account-and-auth)、[一般條款](https://www.kimi.com/user/agreement/modelUse?version=v2)所連專用協議，不操作帳戶。
+5. `n8n-startup-fifty-percent-business-self-hosted`：11/16追一年/資格失效/延長差異；查[Startup](https://n8n.io/pricing/startup-plan/)、[FAQ](https://support.n8n.io/article/n-8-n-business-plan-for-startups-info-faq)。本輪非營利的折扣帳期/台灣文件與Aiven AUP缺口留月輪替或新訊號，不立刻重刷。
+
+本輪評估：修正會影響付費、領取時間及資料保留決策的錯誤；完成2筆到期排程並補1筆scope，不宣稱解決原有中英文差異。新增1項不同資格的Cloud折扣、沒有新增薄弱觀察線索；改善證據界線與研究接續性，非全庫驗證。
+
+### 發布前驗證
+
+- `python3 tests/validate.py`通過1,096筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過。S/A/B/C/D=172/186/130/277/115。僅資料/文件修改，未改前端、schema或程式。
+- 本機Chromium實際載入18:12:26版，本輪4卡與R3/A1/U1092一致；展開確認Aiven180天/條款、n8n費用/新訂閱/續費/7來源、騰訊無精確時鐘/API與產品費率分離、AutoClaw本期共同到期與下期，皆含本輪scope及來源。
+- 台灣Yes本輪0、Unknown4；關鍵字Aiven1；免費篩選n8n非營利0、Aiven1；載入更多24→48；截止排序首項AutoClaw。桌面1365px及手機390px無DOM水平溢出，browser errors/console error皆空。
+- 首次互動腳本誤把function傳給tab.waitFor，工具只收selector；改以page.waitForFunction完成剩餘驗證，非網站錯誤。截圖仍受Image reading is disabled限制，未宣稱像素外觀審查。
+- 本節只記已觀測的發布前證據；推送後須另核遠端commit、對應Pages工作及公開18:12版，不以提交/排隊冒稱成功發布。結果見本輪回報與GitHub部署紀錄。

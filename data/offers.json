@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T17:16:01+08:00",
-  "scope": "2026-11-15 17:05–2026-11-15 17:16 Asia/Taipei：局部複核2筆既有紀錄、新增1筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1092筆既有紀錄未完成本輪複核。釐清Kimi實名/模型與帳號註銷適用差異、補Autodesk教育用途歷史證據及現行來源缺口；新增n8n自架Business新創五折付費方案並保留效期措辭差異。台灣個案與法律仍未核。",
+  "updated_at": "2026-11-15T18:12:26+08:00",
+  "scope": "2026-11-15 18:05–2026-11-15 18:12 Asia/Taipei：局部複核3筆既有紀錄、新增1筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1092筆既有紀錄未完成本輪複核。核AutoClaw與騰訊今日截止窗，修正API價格與產品續費混用、撤回未公布時鐘；補Aiven停機超過180天可刪服務及備份、AI資料層界線；新增n8n Cloud非營利七折及新訂閱/續費風險。台灣資格與法律均未核。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -23005,7 +23005,7 @@
     {
       "id": "aiven-postgresql-free",
       "title": "Aiven PostgreSQL Free：免卡免費 1GB 託管資料庫",
-      "summary": "Aiven PostgreSQL Free仍免卡且無固定期限，1CPU／1GB RAM／1GB磁碟、20連線，每組織每服務類型一個。無SLA、連線池或VPC；閒置可關閉並重啟，資料區域可變更，台灣帳戶資格未核。",
+      "summary": "Aiven PostgreSQL Free仍免卡、無固定期限，1CPU／1GB RAM／1GB磁碟、20連線，每組織每服務類型一個。一般PostgreSQL擴充文件列pgvector向量搜尋，可作AI檢索資料庫用途，不是免費模型推論/embedding額度；未建立Free執行個體驗證擴充。閒置可停機，但一般條款允許停機超過180天後刪服務及全部備份，非永久保留；無SLA且供應商可改雲與區域，台灣帳戶資格未核。",
       "categories": [
         "FREE"
       ],
@@ -23027,15 +23027,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "Free不需付費；升級付費須新增付款方式，付費後續約及取消條件未核",
-      "usable_duration": "無固定期限；閒置或違反使用政策可關閉",
-      "access_risk": "不提供SLA、支援服務、靜態IP或VPC；資料所在雲及地區可變更，不宜存放需固定地區的正式資料。",
-      "verified_at": "2026-11-08T02:25:00+08:00",
+      "cancellation": "Free本身免卡；升級需新增付款方式並選Upgrade plan，不是免費到期自動升級。一般條款§12.2除訂單另約定，可在帳戶終止單一服務，當日起停止該服務計費；整份協議終止則為兩個月書面通知，兩者不可混用。",
+      "usable_duration": "Free無固定期限；閒置可停機，一般條款允許停機超過180天後刪除服務及全部備份。",
+      "access_risk": "Free文件列無SLA、支援服務、靜態IP或VPC，雲/區域可變更；條款§13.9允許停機超過180天後刪服務及全部備份，應自行備份，不能把可重啟當永久資料保留保證。",
+      "verified_at": "2026-11-15T18:11:53+08:00",
       "discovered_at": "2026-10-27T04:06:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T04:00:00+08:00",
+      "next_review_at": "2026-12-15T18:00:00+08:00",
       "priority": "watch",
       "status": "active",
       "legal_status": "not_verified",
@@ -23044,26 +23044,42 @@
         "account_eligibility": "需Aiven帳戶，每組織每服務類型限一個Free；未實測帳戶建立。",
         "billing_country": "Free註冊免信用卡；台灣帳戶接受性、付費升級條件未核。",
         "identity_residency": "官方文件未明列台灣居住、國籍或資料落地資格。",
-        "terms_restrictions": "不可多帳戶規避限制；Free閒置可關閉，違反使用政策可停用，升級需另添付款方式；法律狀態未核。",
+        "terms_restrictions": "每組織每服務類型一個Free；閒置可停機，違反AUP可停用（AUP全文未核）。一般條款§4須保護帳戶/密碼並自行備份，§5為不可轉讓使用權、§13.6轉讓須事先書面同意；§13.9停機超過180天可刪除服務及全部備份。",
         "taiwan_note": "Free文件未明列台灣帳戶資格；無卡與公開文件不等於台灣註冊核准，也不能承諾資料設於台灣／指定區域。官方可隨時改provider/region/config。"
       },
       "unknowns": [
         "台灣帳戶註冊與服務建立資格",
-        "實際分配的雲及資料區域",
-        "閒置停用門檻和備份保留期限",
-        "付費升級與取消條件"
+        "免費方案可選雲/區域與實際資料位置",
+        "持續閒置的具體停機門檻及日常備份保留期（停機超過180天可連備份刪除已核）",
+        "Free執行個體pgvector安裝與可用版本未實測",
+        "個別付費報價、台灣稅費及AUP全文"
       ],
       "sources": [
         {
           "url": "https://aiven.io/docs/products/postgresql/concepts/pg-free-tier",
-          "scope": "免費期限、免卡、規格、限制、停用及升級",
-          "evidence": "No credit card；indefinitely free。單節點1CPU/1GB RAM/1GB disk，監控備份與extensions；max_connections20、每organization每type一個、無VPC/static IP/integrations/pooling/support/SLA。可停初始數小時無使用或無持續活動服務（後者先通知），可重啟；可改雲／區域／配置。升級paid須新增payment method並點Upgrade plan。"
+          "scope": "Free規格、持續使用、停機與升降級界線",
+          "evidence": "No credit card、indefinitely free；1 CPU/1GB RAM/1GB disk、max_connections20；每organization每type一個，無VPC/static IP/integrations/pooling/support/SLA。初始數小時未使用可power off；無持續活動先通知再power off，均可隨時重啟；違反AUP可shut down，供應商可改雲/region/config。升級需新增payment method並點Upgrade，立即生效；降級須資料容得下且同cloud有Free。未列具體持續閒置天數或停機資料保留期限。 較早紀錄（未記錄查閱時間）：No credit card；indefinitely free。單節點1CPU/1GB RAM/1GB disk，監控備份與extensions；max_connections20、每organization每type一個、無VPC/static IP/integrations/pooling/support/SLA。可停初始數小時無使用或無持續活動服務（後者先通知），可重啟；可改雲／區域／配置。升級paid須新增payment method並點Upgrade plan。",
+          "accessed_at": "2026-11-15T18:09:35+08:00"
+        },
+        {
+          "url": "https://aiven.io/docs/products/postgresql/reference/list-of-extensions",
+          "scope": "一般產品AI向量搜尋擴充，非免費推論額度",
+          "evidence": "Machine learning and artificial intelligence節列pgvector designed for vector similarity search；pgvectorscale為PG16 and newer。一般產品支援表不代表已實測Free執行個體；superuser-only/untrusted多數不能安裝，具體版本/可用性須查執行個體。",
+          "accessed_at": "2026-11-15T18:09:35+08:00"
+        },
+        {
+          "url": "https://aiven.io/terms",
+          "scope": "停機刪除、備份義務、付費與終止界線",
+          "evidence": "2026-09-01版：§13.9 Aiven有權刪除powered-off for more than180 days的Cloud Services且刪所有備份，非第180天必然刪除。§4.4客戶自行適當備份；§3.3每月事後自動扣費、§3.5費率不含VAT及其他銷售稅。§12.2除Order Form另訂可在帳戶終止單一服務、當日起停計費，整份協議則兩個月書面通知；§5不可轉讓使用權、§13.6轉讓須事先書面同意。§11.3有責任限制例外，不推論免費客戶一律無求償。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
         }
       ],
       "record_type": "opportunity",
       "priority_score": 19.0,
       "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知"
+      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知",
+      "verification_scope": "2026-11-15局部實讀Free tier與extensions文件：免卡/無固定期限、1CPU/1GB RAM/1GB磁碟/20連線、每組織每服務類型一個、閒置停機/重啟及供應商可改區域。一般PostgreSQL擴充文件列pgvector向量相似度搜尋，非AI推論或embedding贈額；實際Free執行個體擴充可用性、台灣註冊、個別付費報價及AUP全文未核。另實讀2026-09-01版一般條款§3付費扣款/稅、§12.2單一服務終止、§13.9停機超過180天可連備份刪除；未取得法律監管來源，非法律意見。",
+      "cost_note": "零費用僅指Free方案；自願升級或另購服務按用量收費，一般條款§3列每月事後自動扣款、費率不含VAT/其他適用銷售稅。台灣實際稅費、個別付費報價及外部模型費用未核。"
     },
     {
       "id": "pipedream-connect-development-only",
@@ -67880,7 +67896,7 @@
     {
       "id": "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
       "title": "AutoClaw 週福利：11/9–11/15 登入領 100M Tokens（活動期已開始）",
-      "summary": "AutoClaw（智譜 z.ai）週福利：本期 M11W2 於 2026-11-09 00:00 至 11-15 23:59（UTC+8）登入即領 1 億 Tokens（值 10,000 credits），每帳戶限領一次，獎勵於 11/15 23:59 到期。2026-11-14 重讀：本期沒有延長，但官方已在 11-13 公告下一期 M11W3（11/16 00:00–11/22 23:59 UTC+8，同樣 100M Tokens／10,000 credits、每帳戶一次、11/22 23:59 到期），週福利機制延續；本期與下一期的公告都沒有名額上限。首頁另列新註冊送 200M tokens（值 ¥120）與 GLM Coding Plan 訂閱（含每月配點），與每期 100M 是不同權益。",
+      "summary": "2026-11-15晚間重讀：AutoClaw M11W2仍列11/9 00:00–11/15 23:59（UTC+8）登入領100M Tokens（10,000 credits），每帳戶一次、所有本期獎勵同時到期，不是領取後七天。本期公告未改期限；M11W3另列11/16 00:00–11/22 23:59（UTC+8）同額度，下期不延長本期獎勵。兩頁未列名額上限，不等於無限Tokens。實際登入領取、台灣資格及完整費用仍未核。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -67907,13 +67923,13 @@
       "valuation_scenario": null,
       "cancellation": "點數共同到期；公告未載自動續訂安排。若另購訂閱，須依付款協議及一般條款處理。",
       "usable_duration": "2026-11-09 00:00至11-15 23:59 UTC+8；不是領取後七天。",
-      "access_risk": "尚未開始、使用期間短，且免費用途受非商業限制；台灣資格及實際入口未核。",
-      "verified_at": "2026-11-15T09:10:00+08:00",
+      "access_risk": "本期活動已開始且將於11/15 23:59（UTC+8）結束，晚領使用時間短；非商業限制沿用較早條款證據，台灣資格及實際領取未核。",
+      "verified_at": "2026-11-15T18:08:17+08:00",
       "discovered_at": "2026-11-07T13:05:48+08:00",
       "announcement_at": "2026-11-06T17:12:19+08:00",
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-15T18:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-15T23:30:00+08:00",
       "expires_at": "2026-11-15T23:59:00+08:00",
       "priority": "watch",
       "eligibility": {
@@ -67931,7 +67947,7 @@
         "首頁新註冊 200M 與每帳戶一次的每期 100M 是否可疊加",
         "本期（M11W2）是否已額滿或提前發完（公告未載名額上限）"
       ],
-      "verification_scope": "2026-11-15 09:10 複核 AutoClaw 活動頁面與服務條款：11/9–11/15 100M tokens 登入領取活動今日 23:59 截止；下一期 M11W3 福利窗口預定接續，下輪追蹤換檔現況。",
+      "verification_scope": "2026-11-15晚間局部複核M11W2與M11W3公告之100M/10,000 credits、每帳戶一次、本期共同到期與下期時段；未登入領取，未重核一般條款、首頁及付款協議，該等欄位沿用09:10證據；不把下期當本期延期。",
       "sources": [
         {
           "url": "https://autoclaw.z.ai/",
@@ -67966,15 +67982,15 @@
         },
         {
           "url": "https://autoclaw.z.ai/blog/news/M11W2/",
-          "scope": "活動期間、領取規則、到期時刻、published/modified",
-          "evidence": "「Event period : November 9 (Mon) , 00:00–November 15 (Sun) , 23:59 ( UTC + 8 )」「Log in to AutoClaw during the event to claim 100 million Tokens (worth 10,000 credits) — one claim per account. The reward expires on November 15 at 23:59 ( UTC + 8 )」；dateModified 2026-11-06T09:15:53.000Z。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "本期領取與使用同一截止點",
+          "evidence": "實讀仍列November 9 00:00–November 15 23:59 UTC+8、100 million Tokens worth 10,000 credits、one claim per account；reward expires November 15 23:59。未列延期或名額上限；改導/en/正文。 較早紀錄（2026-11-15T09:10:00+08:00）：「Event period : November 9 (Mon) , 00:00–November 15 (Sun) , 23:59 ( UTC + 8 )」「Log in to AutoClaw during the event to claim 100 million Tokens (worth 10,000 credits) — one claim per account. The reward expires on November 15 at 23:59 ( UTC + 8 )」；dateModified 2026-11-06T09:15:53.000Z。",
+          "accessed_at": "2026-11-15T18:08:17+08:00"
         },
         {
           "url": "https://autoclaw.z.ai/blog/news/M11W3/",
-          "scope": "下一期週福利（是否續辦、期間與額度）",
-          "evidence": "「From November 16 to November 22 , log in to AutoClaw and get 100 million Tokens.」「Event period: November 16, 00:00 (Mon) – November 22, 23:59 (Sun) (UTC + 8)」「one claim per account. Your reward expires on Nov 22 at 23:59 (UTC+8)」；datePublished 2026-11-13T07:30:20.000Z。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "下期獨立時段，非本期獎勵延期",
+          "evidence": "實讀November 16 00:00–November 22 23:59 UTC+8、100M Tokens/10,000 credits、one claim per account、reward expires Nov22 23:59；11/13公告，未聲稱本期點數延長。 較早紀錄（2026-11-15T09:10:00+08:00）：「From November 16 to November 22 , log in to AutoClaw and get 100 million Tokens.」「Event period: November 16, 00:00 (Mon) – November 22, 23:59 (Sun) (UTC + 8)」「one claim per account. Your reward expires on Nov 22 at 23:59 (UTC+8)」；datePublished 2026-11-13T07:30:20.000Z。",
+          "accessed_at": "2026-11-15T18:08:17+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -72638,7 +72654,7 @@
     {
       "id": "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
       "title": "騰訊 Hy4 發表：WorkBuddy／CodeBuddy 11/4–11/15 免費",
-      "summary": "2026-11-11 13:10 重讀騰訊中英文新聞稿：官方仍寫「From November 4 to 15, WorkBuddy and CodeBuddy will be available for free」，dateModified 皆為 2026-11-06（未改稿），無延期或提前結束公告，也未載時區與時鐘點（只知道 11/15 當日結束）。免費額度無數字：英文「available for free」、中文「一定额度的免费使用」並存。產品端 CodeBuddy 現行 Free 方案為 100 credits/月＋每日 30 credits 活躍獎勵（結束日另公告），另有需綁卡並開自動續訂的 7 天 Pro 試用；活動頁本身不出現在任何產品側頁面。",
+      "summary": "2026-11-15晚間重讀中英文新聞稿：WorkBuddy／CodeBuddy免費窗仍列11/4–11/15，未載時區或時鐘點，不可寫成官方承諾23:59。英文available for free與中文一定額度免費使用並存，未公布活動額度數字，不代表不限量。Hy4標準API單價及TokenHub至12/31五折為另一項計費安排，不能推論本免費窗後WorkBuddy／CodeBuddy自動按token扣款。產品端日常免費層及另行綁卡Pro試用不是本活動額度保證。 國際站Free每月100 credits；每日30 credits須在客戶端完成有效AI對話/任務，網頁或僅登入不算，通常次日發放，結束日另公告。另行啟用7天Pro試用須綁卡及開續訂，期滿按所選US$10/月或US$96/年扣款。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -72665,10 +72681,10 @@
       "taiwan": "Unknown",
       "regions": [],
       "usable_duration": "免費窗 2026-11-04 至 2026-11-15（頁面僅給日期，未載時區）；TokenHub 的 Hy4 5 折至 2026-12-31。",
-      "cost_note": "免費窗期間 US$0；之後按 Hy4 標準價約 US$0.90／百萬輸入、US$2.70／百萬輸出、US$0.045／百萬快取輸入計費。",
+      "cost_note": "本筆零費用僅指新聞稿所述期間的免費使用額度，不保證所有功能或超額免費。Hy4標準API單價約US$0.90輸入／US$2.70輸出／US$0.045快取輸入（每百萬tokens）及TokenHub五折至12/31是另一計費安排，不是WorkBuddy／CodeBuddy期滿續費價；後續方案、超額及扣款須依對應產品條款。",
       "access_risk": "免費窗只有新聞稿來源，產品頁未標活動期限；中國站須實名認證騰訊雲帳號、國際站 Pro 試用綁卡後自動扣款；免費窗結束後中國站體驗版是否同步轉付費未公告。",
       "eligibility": {
-        "service_availability": "新聞稿仍未列可用國家或地區；免費窗於 2026-11-15 當日結束（未載時區與時鐘點），無延期公告。",
+        "service_availability": "本輪新聞稿仍列2026-11-04至11-15，未列可用國家、時區或時鐘點；登入後領取及是否另有站內更新未核。",
         "account_eligibility": "需對應產品帳號；是否需付費方案或綁卡未公布。",
         "billing_country": "國際站支援信用卡、簽帳卡、微信支付與預付卡（官方訂閱政策）；台灣發卡是否通過未實測。中國站須綁定已實名認證的騰訊雲帳號，台灣證件能否通過未知。",
         "identity_residency": "新聞稿未列居住地或身分要求。",
@@ -72680,14 +72696,14 @@
         "免費窗是否有人數或 token 上限、是否需付費方案或綁卡",
         "台灣帳號能否通過騰訊雲實名認證（中國站）、台灣卡片能否在國際站付款",
         "免費窗結束後中國站體驗版（限時免費 500 積分）是否同步轉付費",
-        "workbuddy.cn/events/ 回 403，活動頁無法核對",
+        "較早追查workbuddy.cn/events/回403；本輪未重試，無法核對活動入口。",
         "免費窗的中英文官方稿強度不同：英文寫「available for free」、中文寫「一定额度的免费使用」（有額度上限、無數字），不得任選其一當結論",
-        "workbuddy.cn/pricing 與 codebuddy.cn/pricing 現為前端外殼（curl 僅得標題），本輪改讀官方 docs 定價頁，仍無 11/4–15 字樣"
+        "較早紀錄：中國站pricing靜態讀取僅外殼，改讀docs Pricing未見11/4–15；本輪未重核中國站產品定價，不把國際站Subscription代作同一活動額度。"
       ],
-      "verification_scope": "2026-11-15 09:10 複核騰訊混元 Hy4 與 WorkBuddy/CodeBuddy 官方頁面：今日（11/15 23:59）為免費體驗窗口最後一日，產品端維持日常配額機制，新聞稿免費體驗期即將屆滿；下輪持續追蹤 11/16 狀態更新。",
-      "verified_at": "2026-11-15T09:10:00+08:00",
-      "next_review_at": "2026-11-15T18:00:00+08:00",
-      "review_cadence": "weekly",
+      "verification_scope": "2026-11-15晚間局部複核騰訊中英文Hy4新聞稿之11/4–15日期、免費措辭差異與TokenHub獨立折扣；撤回先前scope擅補23:59及cost_note把API價格當產品期滿價格的推論。另實讀國際站Subscription之Free/月贈、每日活躍條件與Pro試用續費取消；未登入、未核台灣實名或付款；中國站一般協議沿用較早證據。",
+      "verified_at": "2026-11-15T18:08:55+08:00",
+      "next_review_at": "2026-11-15T23:30:00+08:00",
+      "review_cadence": "daily",
       "sources": [
         {
           "url": "https://www.codebuddy.cn/agreement/",
@@ -72726,21 +72742,21 @@
         },
         {
           "url": "https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
-          "scope": "中文稿對同一免費窗的措辭與修改時間",
-          "evidence": "「WorkBuddy/CodeBuddy将在11月4日至11月15日期间，为用户提供一定额度的免费使用」；dateModified 2026-11-06T07:36:12+00:00。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "中文免費額度與期限精度",
+          "evidence": "WorkBuddy/CodeBuddy将在11月4日至11月15日期间，为用户提供一定额度的免费使用；此外Hy4在腾讯云TokenHub按刊例价五折至2026年12月31日。未公布免費額度數字/時鐘/時區。 較早紀錄（2026-11-15T09:10:00+08:00）：「WorkBuddy/CodeBuddy将在11月4日至11月15日期间，为用户提供一定额度的免费使用」；dateModified 2026-11-06T07:36:12+00:00。",
+          "accessed_at": "2026-11-15T18:08:17+08:00"
         },
         {
           "url": "https://www.codebuddy.ai/docs/ide/Account/Subscription",
-          "scope": "產品端是否載明 11/4–15 免費窗（重讀）",
-          "evidence": "「Free - 100（credits per month）」「Free users receive 30 credits/day ...」「7-day Pro free trial after linking a credit card and enabling auto-renewal ... 500 credits valid for 7 days」；全文 November／Hy4 0 命中。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "國際站Free、每日活躍獎勵與另行Pro試用的扣款取消",
+          "evidence": "Free100 credits/month；個人Free有效客戶端AI對話/任務可得30 credits/day，僅登入/網頁不算，通常次日發放，結束日另公告。7天Pro試用500 credits須綁卡和enable auto-renewal，期滿所選$10/month或$96/year自動扣款；於試用中management center取消。Free100與Pro試用500不疊加，禁止假資料、多帳戶刷獎/共享轉售；頁面未將這些額度定義為11/4–15活動配額。 較早紀錄（2026-11-15T09:10:00+08:00）：「Free - 100（credits per month）」「Free users receive 30 credits/day ...」「7-day Pro free trial after linking a credit card and enabling auto-renewal ... 500 credits valid for 7 days」；全文 November／Hy4 0 命中。",
+          "accessed_at": "2026-11-15T18:08:55+08:00"
         },
         {
           "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
-          "scope": "英文稿免費窗、TokenHub 折扣、修改時間",
-          "evidence": "「From November 4 to 15, WorkBuddy and CodeBuddy will be available for free.」；「Hy4 ... 50% off ... through December 31, 2026」；datePublished 2026-11-04T08:06:53+00:00、dateModified 2026-11-06T07:36:54+00:00。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "免費窗、模型價格與TokenHub不同安排",
+          "evidence": "From November 4 to 15, WorkBuddy and CodeBuddy will be available for free；另以In addition引出TokenHub Hy4 50% off through December31 2026。前段列Hy4標準模型單價，並未說WorkBuddy/CodeBuddy免費窗結束後按此扣款。未載截止時區/時鐘。 較早紀錄（2026-11-15T09:10:00+08:00）：「From November 4 to 15, WorkBuddy and CodeBuddy will be available for free.」；「Hy4 ... 50% off ... through December 31, 2026」；datePublished 2026-11-04T08:06:53+00:00、dateModified 2026-11-06T07:36:54+00:00。",
+          "accessed_at": "2026-11-15T18:08:17+08:00"
         },
         {
           "url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
@@ -72758,7 +72774,8 @@
       "priority_score": 16.1,
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知",
-      "expires_at": "2026-11-15"
+      "expires_at": "2026-11-15",
+      "cancellation": "國際站Pro試用須於7天內在management center取消自動續訂，否則按啟用時所選US$10/月或US$96/年扣款；取消後當期權益至期末。這是另行選用的試用，非11/4–15免費窗自動續訂承諾。"
     },
     {
       "id": "freebuff-free-coding-agent-daily-hours",
@@ -89012,18 +89029,122 @@
       "priority_score": 13.8,
       "priority_tier": "D",
       "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "n8n-nonprofit-cloud-thirty-percent-coupon",
+      "title": "n8n 非營利：Cloud 訂閱七折碼（需組織證明，非免費）",
+      "summary": "官方對經驗證非營利、NGO或登記慈善組織提供n8n Cloud訂閱30%折扣碼，須組織名稱、官網、官方身分證明及組織信箱帳號，由Support核發給該執行個體。折扣碼僅Cloud新訂閱可用；既有訂閱須先取消再重訂，官方警告可能多收費。one-time描述碼，未明訂折扣延續幾個帳期。方案含AI Agents/MCP/節點及依方案AI點數，但七折不是免費或無限AI；台灣組織文件接受性未核。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "VALUE-DEAL",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "value",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "effort_basis": "未建立帳戶或提交非營利文件，審核時間未公布。",
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": "Cloud付費訂閱30%折扣；用量依所選方案",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "usable_duration": "未公布折扣碼效期、適用帳期數或續約折扣；one-time不等於已核首月或永久優惠。",
+      "cancellation": "Cloud console→Billing→Cancel plan，於已付帳期末停止續約/工作流程，5天後刪執行個體；備份最多90天、帳戶資料100天內刪除，90天內重訂可從最新可用備份還原但不含執行歷史。Help退款政策另列月繳帳單日起14天內取消並聯絡Support可申請當月退款；加購Gateway/Assistant credits原則不退。",
+      "cost_note": "需付折扣後訂閱費與適用稅，非免費。一般牌價Starter €20/月、Pro €50/月均為年繳月均，非非營利正式報價，不直接再乘折扣或換成美元。Self-Serve條款列費用預付、自動續訂、稅外加；AI內含點數與額外加購分開，額外點數/超額適用費用及是否折扣未核。",
+      "access_risk": "先取得碼再開始新訂閱可避免取消重訂的額外費用風險；不要為領碼先付費。碼限組織信箱執行個體且不適用自架；需真實組織核驗。未保證台灣核准、與其他折扣疊加或續約繼續七折。",
+      "verified_at": "2026-11-15T18:11:53+08:00",
+      "discovered_at": "2026-11-15T18:11:53+08:00",
+      "announcement_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-15T18:00:00+08:00",
+      "eligibility": {
+        "service_availability": "非營利Help目前仍列所有n8n Cloud方案30%折扣；一般定價Cloud列Starter/Pro/Enterprise，自架Business不屬Cloud碼範圍。",
+        "account_eligibility": "經驗證非營利、NGO或登記慈善組織；提交組織名稱、官網、官方非營利身分文件與組織信箱n8n帳號，未有帳號者Help建議先開免費試用，Support審核發碼。",
+        "billing_country": "Paddle處理Cloud交易並依所在地/所填資訊計稅；有效VAT ID且當地適用反向課稅才可免VAT，不能套作台灣免稅承諾。台灣付款接受性未核。",
+        "identity_residency": "官方證明文件因所在地而異、通常稅務用途；台灣立案證明種類與翻譯/核驗要求未列。",
+        "terms_restrictions": "碼只適用Cloud新訂閱，不適用自架；既有訂閱重訂可能額外收費。Self-Serve要求資料正確、代表組織具授權、帳戶保密，授權限內部用途且不可轉讓/轉售；AI Terms/Credit Terms/AUP另適用但本輪未讀全文。",
+        "taiwan_note": "Unknown：未列台灣支持或排除，組織文件及付款接受性未核；不能以全球網站或免卡試用替代折扣資格。"
+      },
+      "unknowns": [
+        "折扣碼有效期限、核發時間、折扣帳期數/續約及與其他優惠併用",
+        "台灣組織證明/翻譯與付款方式接受性、實際稅額",
+        "個別非營利正式報價、Enterprise報價流程與折扣適用方式",
+        "折扣對AI加購點數及超額費是否適用，實際模型消耗換算",
+        "AI Terms/Credit Terms/AUP全文與法律監管限制未核"
+      ],
+      "quota_details": "一般Cloud Starter：每月2,500次workflow、1,600 Assistant credits；Pro基礎卡10,000次workflow、Assistant依級距4,000或9,600/月。Assistant每月重置不結轉，可另購；unlimited steps/users/workflows不是無限執行或tokens。非營利個別核准方案仍以報價/結帳為準。",
+      "verification_scope": "2026-11-15實讀非營利FAQ、現行定價、coupon/取消/退款/稅費FAQ及10/26版Self-Serve條款，核30%幅度、文件、新訂閱/Cloud限制、AI內含點數與費用/續約界線。非營利頁標2025-08-28更新，不當本輪公告日；未申請或結帳、未讀AI/Credit/AUP專用條款，台灣核驗、折扣期限及個別報價仍未知。",
+      "sources": [
+        {
+          "url": "https://support.n8n.io/article/non-profit-pricing",
+          "scope": "30%折扣、組織核驗及碼的歸屬",
+          "evidence": "頁標Updated28Aug2025；30% discount code on all n8n cloud plans for verified non-profits, NGOs or registered charitable organizations；組織名稱/網站/官方文件/organizational email帳號；one-time subscription discount code用於該組織信箱建立的instance。未定義折扣持續帳期。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://n8n.io/pricing/",
+          "scope": "Cloud方案AI功能與執行/點數限制",
+          "evidence": "Starter €20/mo billed annually、2.5K executions、Agents/MCP/AI nodes、1,600 Assistant credits/month；Pro €50/mo billed annually、10K executions、up to9,600 Assistant credits。FAQ Assistant依Pro級距4,000/9,600、每月refresh不roll over、可另購；Business self-hosted only；Enterprise Hosted by n8n or Self-hosted。未公布非營利個別報價，unlimited steps不是無限executions。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/how-to-apply-a-coupon-code",
+          "scope": "Cloud新訂閱限定與重訂成本",
+          "evidence": "10/27更新：coupon only n8n Cloud，不可用self-hosted licenses；Cloud console Upgrade plan→checkout Add discount。Only new subscriptions；已訂閱者先取消再重訂could incur extra charges，依帳期處理或找Support。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/i-want-to-cancel-my-subscription",
+          "scope": "取消與資料保留",
+          "evidence": "10/30更新：Billing→Cancel plan，next billing cycle不續訂；當期結束workflow停跑，instance5天後刪除；備份up to90 days，account data within100 days，90天內重訂從latest available backup還原，不含execution history。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/refund-policy",
+          "scope": "月繳退款及AI加購不退",
+          "evidence": "11/02更新：monthly subscriptions帳單日起14天內申請當月退款、須取消account並聯絡support；beyond this scope不保證。Gateway/Assistant credit top-ups與subscription分開、final且unused credits不退，法律要求除外。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/is-it-possible-to-exclude-vat-upon-payment",
+          "scope": "帳單稅依所在地，非非營利免稅承諾",
+          "evidence": "10/26更新：Paddle為all n8n Cloud transactions的Merchant of Record，依location/details計稅；有效VAT ID且reverse-charge rules apply in your country才移除VAT。未列台灣稅率或優惠核准。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        },
+        {
+          "url": "https://n8n.io/legal/self-serve-terms/",
+          "scope": "訂閱續費、稅、不可轉讓與政策優先",
+          "evidence": "Last updated26October2026；§1.1資料正確/帳戶保密/內部用途不可轉讓；§1.3訂閱稅外加；§1.4月/年費預付、自動續訂除非取消；§5.1取消於帳期末生效；§3.6禁止轉售/轉讓授權；§9.5政策與Terms衝突時政策優先，因此退款FAQ的月繳14天不因一般non-refundable字樣被逕自否定。AI/Credit Terms另適用，本輪未讀。",
+          "accessed_at": "2026-11-15T18:11:53+08:00"
+        }
+      ],
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方來源·申請審核制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-15T17:16:01+08:00",
+  "latest_research_at": "2026-11-15T18:12:26+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T17:05:22+08:00",
-    "completed_at": "2026-11-15T17:16:01+08:00",
+    "started_at": "2026-11-15T18:05:20+08:00",
+    "completed_at": "2026-11-15T18:12:26+08:00",
     "reviewed_ids": [
-      "kimi-api-free-voucher-cn-locked",
-      "autodesk-flow-studio-education"
+      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+      "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
+      "aiven-postgresql-free"
     ],
     "new_ids": [
-      "n8n-startup-fifty-percent-business-self-hosted"
+      "n8n-nonprofit-cloud-thirty-percent-coupon"
     ],
     "attempted_failed_ids": [],
     "unreviewed_existing_count": 1092
