@@ -4310,3 +4310,42 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `xai-grok-free-limited-chat-agent-build`：確認 Free 的數值上限、重置週期、Grok Build 是否真的可用，以及台灣 IP／帳號資格；查 x.ai pricing、build 與 docs。
 4. `crewai-free-fifty-workflow-executions`：找 ToS 替代路徑，確認 50 次重置基準、是否含模型推論成本、rate limit 與台灣註冊。
 5. 最久未核輪替：`langsearch-free-daily-token-search-api`（下次 12/16）之前，優先 `morph-free-two-hundred-monthly-requests` 的 credits 換算、`upstage-file-search-beta-free` 的 Beta 結束日，以及 `scispace-campus-leads-access-stipend-watch` 是否出現官方替代頁。
+
+## 2026-11-16 07:05–07:19 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds`：07:05 開場，main HEAD `889ee43`，工作樹乾淨、fetch 後與 origin/main 一致，無未完成 PR；`round_lock.py status` 顯示無人持有。Pages 為 main 根目錄 legacy build，對應 `889ee43`。
+- N=1,112（895 opportunity／50 policy／167 watchlist）；嚴格逾期 0、retry 0、7 日內到期 11 筆（4 筆當日截止於 01:17 已核實、7 筆冷卻中），高風險狀態 92 筆。今日 12:00／12:59／15:45／16:00 四筆截止在本輪結束時尚未到，不重讀、不改判。
+- 三個環境預設 Task 研究員（未指定模型，依實際可用能力執行）：A 6 筆官方條款衝突（16 次讀取）、B 8 筆最久未核輪替（16 次讀取＋GitHub API）、C 新機會與去重（8 次搜尋、13 次頁面）。主 agent 另自行重讀 6 筆金額受損紀錄、複核 3 筆新候選、掃描全庫死連結，並為唯一共享 JSON 寫入者。
+
+### 採用成果與證據界線
+
+- R=20、A=3（機會 3／政策 0／觀察線索 0）、U=1,092、attempted=0；結果 1,115 筆（898／50／167）。
+- **金額缺字（本輪最影響決策的資料錯誤）**：全庫掃到 6 筆紀錄把美元金額寫成只剩貨幣代碼，例如 LangSmith「募資US5K–0M」「Scale為US0,000額度」、E2B「US0,000沙箱額度」、Brave「US免費額度（US/1,000 requests）」、Turso「US/月」、Vespa usage_type「（US00）」、LlamaParse「US0」。這些字串不會讓 JSON 失效，卡片照樣顯示方案，但金額會被讀成零或不存在。已逐筆重讀官方頁補回：LangSmith Build 為首度客戶、募資 US$25K–<US$10M 的席位折扣，Scale 為 US$10,000 credits（Series A 至 US$50M、須合作 VC）；E2B「One-time $20,000 in E2B credits」、成立<3 年／募資<US$5M；Brave「$5.00 per 1,000 requests」「Includes free $5 in credits every month」；Turso Free 月費 $0；Vespa 一次 US$300；LlamaParse Pay-as-you-go $0/月、$1.5/1k credits。另有 2 筆純符號修復（Read Frog 的 US2、Google 學生方案的 NT165）未刷新 `verified_at`、不計入 R。
+- **6 筆官方衝突重讀後全部仍並存**（0 resolved）：Base44 本文只有 Pro US$960／Builder US$480，`up to $1,000 in credits` 只在 meta，ToS §10.4 把點數數量指向 Pricing Page 並稱屬裁量促銷；Make 申請表仍 isClosed:false，合作網絡 6 個月／480k 與自籌 3 個月／240k 並列，行銷 FAQ 仍答「up to six months」；最強AI王公告仍寫 LINE POINTS 50＋200 點，全站彈窗仍寫 5 張咖啡券，本輪證實彈窗為全站注入（無關的 2025 公告頁也有）；Postman 方案卡／tooltip 100/月 vs 比較表與頁面 JSON 50/月；義守 AI 學習頁三處稱全校授權 Copilot／Firefly，圖資處清單仍只列 Office 且 0 次 Copilot；Perplexity 3/day 與 five per day 兩份 .md 並存、`pricing` 仍 403。五筆改 `biweekly`、下次 2026-11-30；Perplexity 維持 weekly／11-18。
+- **8 筆最久未核輪替**：ChatGPT for Teachers 仍限美國 K–12 受僱教職員、免費至 2028-06（Help 頁改稱「flagship model」，不再列 GPT-5.1 型號；主 agent 直連 403，該句由研究員實讀）；GPT4All 仍 MIT、不需 API／GPU，補硬體基線與維護事實（repo 未封存、最後 push 2025-05-27）；Together 首次 US$15／後續 US$5、無免費試用，新增「免費贈點不計門檻」「不收預付卡」「須常駐一張有效卡」；v0 新戶一次 US$5、既有 Free 每月 US$5 不變（docs lastUpdated 2026-11-13）；Replit Core US$20／年付 US$18、Free Mode 30 小時與 60 專案不變；Oracle SMB 仍限美國，新增 App Composer 100 次部署免費層；Phala 仍最高 US$1,000、明示不收股權；Superhuman Docs 仍六個月 Team、合作夥伴才含無限 Docs AI。
+- **新增 3 筆**（主 agent 逐字重讀）：`cloudflare-vectorize-free-dimensions`（Workers Free 內含每月 3,000 萬查詢維度、500 萬儲存維度、100 索引；FAQ 稱免費層永遠可原型；台灣未列排除，是否需卡未載）；`neon-agent-plan-sponsored-free-tier`（須 active Scale＋信用卡＋審核，贊助免費組織＋最高 US$25,000 credits，與 Startup Program 互斥，不是個人可領）；`tokyo-ai-tourism-area-subsidy-2026`（東京都追加募集，上限 4,000 萬日圓、補助率 1/2、受理至 12/11、採択 2 件、須先參加說明會；台灣 No）。
+- 死連結全掃 3,024 URL：dead 10、blocked 105、unreachable 21。10 個 dead 全部是既有紀錄已保留的歷史證據（qoder 2、baseten 舊路徑、voyage 行銷站、astamuse、deepinfra、nscale、salad、勞動部 PDF、kaggle 舊 slug），沒有新的未處理死連結；不以 404 改狀態。
+
+### 本輪品質改善：缺字金額的回歸防線
+
+- 問題：`tests/validate.py` 的 `BROKEN_USD` 只抓「US,000」（失去 `$`、保留數字）與「US$＋中文」，抓不到「$ 與緊接數字一起消失」的變體；6 筆紀錄因此在卡片上顯示看似合理的方案，金額卻已被吃掉。
+- 修法：新增三條全庫字串斷言——`US` 後直接接數字或 `,數字`、`US/` 後接數字或中文單位、`NT` 後直接接數字；訊息要求回官方頁補回或移除主張。`US, UK`、`US/Canada`、`ASUS`、`US$25K`、`US$0/月` 均實測不誤報。
+- 驗證：以修正前的字串樣本（`募資US5K–0M`、`US/1,000 requests`、`US/月`、`（US00）`、`NT165`）重跑三條 pattern 全部命中；修正後 `python3 tests/validate.py` 通過 1,115 筆。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,115 筆（S/A/B/C/D = 174/193/132/279/120，未評級 217）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+- `git diff` 以 ID 比對：新增 3、無刪除、22 筆變更（20 複核＋2 筆純符號修復），無未列批次卻刷新 `verified_at` 的紀錄。
+- 本機 headless Chromium 載入 1,115 筆：首頁 898／189／50／167、本輪 20／3／1,092、資料更新 2026/11/16 07:19；本輪更新 23 張；免費專區 726（含 Vectorize，不含 Neon／東京都）；台灣條件適用 189；搜尋 Vectorize 1、Neon Agent Plan 1、東京都 1、LlamaParse 2、Brave Search 1、US$20,000 6；載入更多 24→48。
+- 卡片：LangSmith 顯示「US$25K–<US$10M」「US$10,000 額度」與核實 11/16；Turso 顯示設定費／每月費用 US$0／US$0；Vespa 標題與內容為 US$300；東京都顯示「申請截止 2026-12-11 · 剩 25 天」；Neon 顯示資格審核、未列金額。桌面 1365px 與手機 390px 均無水平溢出，console error 與 page error 皆空。
+- 政策歷史追加 22 筆（3 新增基準、6 金額修正、5 衝突澄清、5 輪替補強、1 Perplexity 重核、2 reconfirmed），不改寫舊歷史。
+
+### 下一輪優先（最多5項）
+
+1. 今日四筆截止：`aspn-youth-sports-tech-hackathon-2026`（12:00）、`kaggle-solar-filament-segmentation-2026`（12:59 CDT／19:59 平台）、`ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）：截止後改判 closed 並記錄是否延期。
+2. `xai-grok-free-limited-chat-agent-build`：確認 Free 的數值上限、重置週期、Grok Build 是否可用與台灣 IP／帳號資格；查 x.ai pricing 與 docs。`crewai-free-fifty-workflow-executions`：找 ToS 替代路徑、50 次重置基準、是否含模型推論成本。
+3. `vercel-ai-gateway-parallel-decisions-free-window`（11/23 結束）與 `alibaba-model-studio-token-plan-personal-new-user-discount`（11/30 結束）：確認結束時區、rate limit、付款方式、期後價格與台灣購買資格。
+4. 新紀錄後續：`cloudflare-vectorize-free-dimensions` 查 Free 超額行為與是否需卡；`neon-agent-plan-sponsored-free-tier` 查 US$25,000 效期與審核標準；`tokyo-ai-tourism-area-subsidy-2026` 於 12/11 後改判是否延長或關閉。
+5. 18 筆 `verification_scope` 最新日期早於 `verified_at`（例 `openai-agents-api-public-beta-no-harness-fee`、`confident-ai-free-five-weekly-runs-gbmonth`、`anyscale-startup-twenty-k-byoc`、`beam-cloud-developer-paid-not-thirty-free`、`tabstack-mozilla-ten-thousand-trial-credits`）：卡片會同時顯示兩個查核日，逐筆重讀或改寫 scope，不要只改日期。

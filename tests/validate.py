@@ -121,6 +121,15 @@ def accessed_day(source):
 # 下一個臨時腳本再把同樣的缺字寫回來。
 BROKEN_USD=_re.compile(r'(?:\bUS|\$)\s*,\d{3}')
 BROKEN_CURRENCY=_re.compile(r'US\$(?=[\u4e00-\u9fff])')
+# 同一種毀損還有更嚴重的變體：`$` 與緊接的數字一起消失，留下「US0,000」「US5K」「US/月」
+# 「US00」。它比「US,000」更難察覺——「US0,000」看起來就是零，卡片照樣把方案顯示成免費。
+# 2026-11-16 全庫掃到 7 筆（langsmith 的 US$25K–<US$10M／US$10,000 兩處、e2b 的 US$20,000、
+# brave 的 US$5 與 US$5/1,000、turso 的 US$0/月、vespa 的 US$300、llamaparse 的 US$0／月），
+# 其中 6 筆是前幾輪批次寫入時留下的。下面三條把「貨幣代碼後直接接數字或斜線單位」視為缺字：
+# `US, UK` 這類清單與 `US/Canada` 不會命中，`ASUS` 也因前一字為字母而排除。
+BROKEN_USD_DIGITS=_re.compile(r'(?<![A-Za-z])US(?=\d|,\d)')
+BROKEN_USD_SLASH=_re.compile(r'(?<![A-Za-z])US/(?=[\d\u4e00-\u9fff])')
+BROKEN_NT_DIGITS=_re.compile(r'(?<![A-Za-z])NT(?=\d|,\d)')
 def _record_strings(value,path=''):
  if isinstance(value,str):
   yield path,value
@@ -134,6 +143,9 @@ for _o in d['offers']:
  for _path,_value in _record_strings(_o):
   assert not BROKEN_USD.search(_value), f'broken USD amount in {_path or "record"} of {_o["id"]}: verify the source or state the amount is unknown; never guess missing digits'
   assert not BROKEN_CURRENCY.search(_value), f'currency symbol immediately followed by CJK text (missing amount) in {_path or "record"} of {_o["id"]}: write the number or drop the symbol'
+  assert not BROKEN_USD_DIGITS.search(_value), f'USD amount lost its symbol and leading digits in {_path or "record"} of {_o["id"]}: restore the number from the source or remove the claim'
+  assert not BROKEN_USD_SLASH.search(_value), f'USD per-unit amount lost its symbol and digits in {_path or "record"} of {_o["id"]}: write US$0/月 style amounts explicitly'
+  assert not BROKEN_NT_DIGITS.search(_value), f'NT amount lost its symbol in {_path or "record"} of {_o["id"]}: write NT$ before the number'
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
  # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複

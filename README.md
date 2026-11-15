@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,112 筆**（895 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 06:36 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **17 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,093 筆**既有紀錄未完成本輪複核。新增 CrewAI Cloud Free（每月50次工作流）與 xAI Grok Free（有限 Chat／agent／Grok Build）；Hedra 定價改版後已無免費方案並退出免費專區，Luma 與 Replit 因官方文件互相矛盾改判條款衝突，Cubic 補上非營利／學校五折，Readwise 補齊單一 App 價格，Gemini CLI 確認無免費層、個人存取已移至 Antigravity 免費層。
+資料集目前有 **1,115 筆**（898 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 07:19 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **20 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,092 筆**既有紀錄未完成本輪複核。修正 6 筆損失美元符號與數字的金額（LangSmith 新創、E2B 20K、Brave Search API、Turso Free、Vespa Cloud、LlamaParse），並把同一種缺字加進發布前檢查；Base44、Make、最強AI王、Postman、義守大學與 Perplexity 的官方兩說重讀後仍並存，改為兩週追蹤，維持 3 或 5 次、480k 或 240k 等原文並列，不任選一版。新增 Cloudflare Vectorize 免費維度、Neon Agent Plan（須先有 Scale）與東京都 AI 觀光補助（台灣不可直接申請）。ChatGPT for Teachers 仍限美國 K–12 雇用；Together 明列不收預付卡。
 
 ## 使用方式
 
