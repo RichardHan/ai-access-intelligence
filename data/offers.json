@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T18:12:26+08:00",
-  "scope": "2026-11-15 18:05–2026-11-15 18:12 Asia/Taipei：局部複核3筆既有紀錄、新增1筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1092筆既有紀錄未完成本輪複核。核AutoClaw與騰訊今日截止窗，修正API價格與產品續費混用、撤回未公布時鐘；補Aiven停機超過180天可刪服務及備份、AI資料層界線；新增n8n Cloud非營利七折及新訂閱/續費風險。台灣資格與法律均未核。",
+  "updated_at": "2026-11-15T19:16:33+08:00",
+  "scope": "2026-11-15 19:05–2026-11-15 19:16 Asia/Taipei：局部複核2筆既有紀錄、新增1筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1094筆既有紀錄未完成本輪複核。補Pipedream開發/production付款與退款界線；修GitLab教育AI概括排除、補13歲以下機構SaaS限制與續約程序，保留官方AI授權差異；新增Langfuse非營利每月US$199 Cloud抵用。台灣個案及法律未核，不代表全庫驗證。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -23106,15 +23106,18 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "此紀錄僅涵蓋免卡Free開發環境；不要將另行啟用付費試用的自動續訂條款當成免費方案。",
+      "cancellation": "本筆為免卡Free開發環境，不是付費試用。另行升級後自動續訂；Billing Settings可取消，通常當期結束生效，若要立即降回Free須聯絡Support。條款§3.8除另有說明外不退款，FAQ明示期內取消不按比例退款；降級後超出新方案功能的整合停用，取消後連接帳戶及sources由新到舊停用至Free上限。",
       "usable_duration": "Free開發環境未公布固定結束日；政策可能變更",
+      "cost_note": "Free開發環境US$0、免卡；正式客戶production另須Startup：US$99/月按年繳或US$150/月月繳，含100 external users及每月10,000 credits，超額US$2/用戶/月及US$0.012/credit。升級立即收平台費，超額連同下一期平台費於次期開頭收取；付費稅費另計，第三方API與模型費用未核，不包含於免費主張。",
+      "quota_classification_note": "10個上限是unique external user IDs，不是團隊席次；Free每日credits及可連接帳戶數有硬限制但所讀文件未列數字，日額度不結轉。production無硬性用戶上限不等於免費或無限免費用量。",
       "access_risk": "不允許以開發模式服務真實客戶；外部API、模型及第三方帳戶費用不包含在此免費主張。",
-      "verified_at": "2026-11-08T02:25:00+08:00",
+      "verified_at": "2026-11-15T19:11:11+08:00",
+      "verification_scope": "2026-11-15主流程實讀pricing、docs/pricing、Connect environments、pricing/faq及2026-09-30版Terms，核免卡Free、10個external user IDs、僅本人測試、production費用/超額、日額度不結轉、取消及退款界線。台灣開戶/付款、第三方資格費用、Connect免費日額度數字及實際付費試用是否提供未核；未登入、申請、付款或連接帳戶。Workflows的限額不可套用Connect。",
       "discovered_at": "2026-10-27T03:06:39+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T03:00:00+08:00",
+      "next_review_at": "2026-12-15T19:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Connect開發模式可用API、SDK、MCP及連接器；Free不含production。僅研究Connect，不涵蓋另有退場公告的Workflows／String。",
@@ -23127,28 +23130,39 @@
       "unknowns": [
         "台灣帳戶的實際註冊與Connect地區資格",
         "Free工作區每日credits與可連接帳戶數的確切數字；官方文件只說有限制",
-        "各第三方模型、應用或連接器的獨立資格與費用"
+        "各第三方模型、應用或連接器的獨立資格與費用",
+        "Startup目前是否實際提供付費方案免費試用；Terms只保留提供試用的權利，非可領取試用證據"
       ],
       "sources": [
         {
           "url": "https://pipedream.com/pricing",
           "scope": "免卡Free、production分界及付費超額單價",
-          "evidence": "Free $0 no credit card required；every feature in development。Startup $99/mo annually or $150/mo monthly、100 users then$2 each、10,000 credits then$0.012 each；production Free欄為無。"
+          "evidence": "Free $0 no credit card required；every feature in development、Unlimited team members。Startup $99/mo billed annually or $150/mo billed monthly、100 users then $2 each per month、10,000 credits/month then $0.012 each；production Free欄為無。Serving real external users in production requires Startup；一人連五個apps仍算一位external user，不是五席。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://pipedream.com/docs/pricing",
           "scope": "Free硬上限、Connect計量及產品關閉區別",
-          "evidence": "Free有不能超過的daily credit limit及connected accounts限制，未列確切數字。Connect執行action/MCP/proxy/trigger emit按1 credit/30秒compute；management calls不耗credit。Workflows及String於2027-03-31關閉，Connect unaffected。"
+          "evidence": "Free有不能超過的daily credit limit及connected accounts限制，未列確切數字。Connect執行action/MCP/proxy/trigger emit按1 credit/30秒compute；management calls不耗credit。Workflows及String於2027-03-31關閉，Connect unaffected。降級於帳期末生效，超出新方案功能的整合停用；取消時connected accounts/sources由新到舊停用至Free上限。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://pipedream.com/docs/connect/managed-auth/environments",
           "scope": "10外部ID與本人測試限制",
-          "evidence": "development最多10 unique external user IDs；超過須先delete existing users；同一瀏覽器須登入pipedream.com。Personal testing only，不用於真實end users或客戶production。"
+          "evidence": "development最多10 unique external user IDs；超過須先delete existing users；同一瀏覽器須登入pipedream.com。Personal testing only，不用於真實end users或客戶production。production doesn't have any user limits是環境限制說明，定價頁仍按production用戶/credits計費，非免費無限額度。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://pipedream.com/terms",
           "scope": "付費／trial自動續期、第三方及地區限制",
-          "evidence": "§3.2付費方案須付款方式；§3.3自動續訂、§3.5 paid-service trial期後自動月費；§4.1出口制裁限制、§4.3不得繞過地理／技術限制；第三方帳戶另受其條款約束。未明列台灣。"
+          "evidence": "Last Updated September 30, 2026。§3.2付費方案須付款方式；§3.3自動續訂及稅費外加；§3.4額外用量monthly in arrears；§3.5若另獲paid-service trial，期後自動月費須事前取消；§3.7 Billing Settings→Manage Subscription取消於當期結束後生效；§3.8 All payments are non-refundable unless stated otherwise。§4.1出口制裁排除、§4.3不得繞過地理/技術限制；第三方帳戶另受其條款約束，未明列台灣。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
+        },
+        {
+          "url": "https://pipedream.com/docs/pricing/faq",
+          "scope": "升級/超額扣款時點、日額度不結轉及取消退款",
+          "evidence": "升級時Stripe立即收平台費；超額與next platform fee於next billing period開頭收取。Free未用daily credits不roll over，paid included credits亦不結轉。取消可用至帳期末，does not prorate plans cancelled within a billing period；若要立即取消並降Free須聯絡Support。Business可申請invoice付款，不能推論其他方案沒有收據。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -53141,7 +53155,7 @@
     {
       "id": "gitlab-education-ai-credit-exclusion",
       "title": "GitLab教育：Ultimate免費一年，不自動配發AI credits；自託管折扣另審",
-      "summary": "GitLab教育仍免費提供Ultimate一年、無限席及每月50,000 compute minutes，但不自動配發AI credits；30日評估點數須洽Sales。手冊另列AI Chat／IDE建議，非所有AI都被排除；開啟用量計費後可能持續扣費。台灣機構資格仍須個案審核。",
+      "summary": "GitLab教育免費提供Ultimate一年、無限席及每月50,000 compute minutes，但不自動配發included AI credits；30日評估點數須洽Sales。教育手冊列AI Chat／IDE建議為福利，一般功能文件卻要求add-on，教育實際適用關係未釐清，不能斷言所有AI免費或全部排除。招收13歲以下學生的機構不可用SaaS、可申請自託管；台灣仍須個案核准。",
       "categories": [
         "QUALIFICATION",
         "FREE"
@@ -53161,60 +53175,69 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "免費授權一年期須重新驗證及接受條款；付費AI add-on或用量另依核准方案計費，未證自動降級；未授權用途可能被追收費用。",
+      "cancellation": "一年期教育授權須重新驗證及接受條款；續期由原Customer Portal訂閱建立者辦理，換人須轉移擁有權或開support ticket。買過add-on後下次續期須人工quote，不能用教育coupon自助續約。用量計費條款一經接受，於剩餘訂閱及後續自助續約不能退出；未證期滿自動降級。教育協議§5.2初期後可60天書面通知終止，誤用可追收過往費用。",
       "usable_duration": "一年授權期，每年經Proxi.id重驗續期",
-      "access_risk": "僅限受認可機構教職員申請，非個人學生福利；社群/教育方案未附AI點數，不可視為免費AI",
-      "verified_at": "2026-11-08T02:25:00+08:00",
+      "access_risk": "非個人學生可直接申請的福利。不自動配發included credits，不代表所有AI功能被排除；手冊與功能文件的教育適用關係待核。自託管DAP的100%折扣須PM報價，是否涵蓋credits消耗未核，硬體與推論成本不保證免費。禁止校務行政/IT營運及商業用途，誤用可被回溯追收。",
+      "verified_at": "2026-11-15T19:11:11+08:00",
+      "verification_scope": "2026-11-15主流程實讀join、community_programs、gitlab_credits、教育手冊、Duo feature_summary及教育協議六頁，核一年授權、資格/用途、13歲以下機構SaaS排除、續約人/人工quote、無included credits、評估與付費風險。保留教育手冊AI福利與一般add-on要求的適用差異；DAP折扣涵蓋用量、台灣Proxi.id核准、付款/稅及法律未核；未申請、登入、付款或測試功能。協議正文標2022/11/16修訂，頁尾2026/01/07，不當本輪公告。",
       "discovered_at": "2026-10-25T05:15:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T23:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T19:00:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "官方GitLab for Education計畫；限經認可授予學位或文憑之非營利教育機構。",
+        "service_availability": "官方GitLab for Education計畫；限經認可、授予學位/文憑/證書且以教學為主的非營利機構。招收13歲以下學生的機構不合GitLab SaaS資格，但可取得self-managed授權；這是機構層限制，非僅限制個人帳戶年齡。",
         "account_eligibility": "必須由機構全職教師或職員以官方機構信箱申請；需通過Proxi.id第三方學術資格認證；不接受個別學生直接申請。",
         "billing_country": "免費授權無基本訂閱費；台灣大專院校或高中職認證受理情況需經Proxi.id個案核准。",
         "identity_residency": "需為經認可教育機構教職員；禁止用於商業生產或營利目的。",
-        "terms_restrictions": "僅限教學及非商業學術研究，不得用於校務行政或IT營運；不含自動配發AI credits。另可向Sales申請30天免費評估點數（額度不保證），購買/按用量計費須留意同意與追收風險。",
+        "terms_restrictions": "僅限教學及非商業學術研究，不得用於校務行政或IT營運；不得轉讓、轉售或出租教育授權。無自動included credits，Sales可審30天評估池（未保證金額）。免費教育授權無付費技術支援，社群支援另列；一般Duo Pro/Enterprise不耗credits，不得和agentic用量池混算。付款條款接受後可能追收本期及未來on-demand用量。",
         "taiwan_note": "官方稱qualified institutions worldwide並列中國機構改洽JiHu，但未明列台灣或提供台灣Proxi.id核准清單；不得把中國條款自行延伸到台灣，也不能只因未列禁用就標Yes。"
       },
       "unknowns": [
         "台灣特定大專院校Proxi.id自動認證名單",
         "自託管DAP 100%折扣個案人工報價核准門檻",
         "自建模型伺服器之硬體與運算成本",
-        "Sales評估點數是否核准及數額；AI用量計費同意與年度續期契約"
+        "Sales評估點數是否核准及數額；AI用量計費同意與年度續期契約",
+        "教育手冊列AI Chat/IDE Code Suggestions為福利，一般feature_summary要求Premium/Ultimate加Duo Pro/Enterprise，Code Suggestions另可走DAP；教育授權實際套用與是否需付費尚未釐清",
+        "DAP self-hosted 100%折扣是否同時涵蓋credits消耗；不得僅憑授權折扣推定所有AI用量免費"
       ],
       "sources": [
         {
           "url": "https://about.gitlab.com/solutions/education/join/",
           "scope": "免費Ultimate、資格、用途及年度續約",
-          "evidence": "Complimentary Ultimate unlimited seats；1 year annual renewal；50,000 compute minutes/月，額外須購買。申請者為機構全職教職員、使用機構信箱；非營利且認證、授證及教學機構；不得用於校務行政或IT營運。續期由Proxi.id驗證；qualified institutions worldwide，China另洽JiHu。"
+          "evidence": "Complimentary Ultimate unlimited seats；1 year annual renewal；50,000 compute minutes/月，額外須購買。全職教職員/機構信箱、非營利且認證授證教學機構；禁校務行政/IT。Institutions enrolling students under age 13 are not eligible for GitLab SaaS but may obtain self-managed licenses。續期須原訂閱建立者，換人須transfer ownership或support ticket，Proxi.id驗證在職。qualified institutions worldwide，China另洽JiHu；不另售教育授權support。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://docs.gitlab.com/subscriptions/community_programs/",
           "scope": "教育無自動included credits及續約窗口",
-          "evidence": "community subscriptions eligible for monthly commitment pool/on-demand/temporary evaluation credits but do not receive included credits；教育Ultimate另有50,000 compute minutes/月。列three-month renewal period並連向renew subscription。"
+          "evidence": "community subscriptions eligible for monthly commitment pool/on-demand/temporary evaluation credits but do not receive included credits；教育Ultimate另有50,000 compute minutes/月。列three-month renewal period並連向renew subscription；不是把一年授權改成三個月。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://docs.gitlab.com/subscriptions/gitlab_credits/",
           "scope": "評估30日、按用量費用與不可退出的billing同意",
-          "evidence": "included credits不配發community subscriptions。未買monthly commitment／未接受usage billing terms者可向Sales申請免費temporary pool，有效30日，數額依申請用戶而定。on-demand US$1/credit；接受條款後於剩餘訂閱及後續self-serve renewals不能opt out，須支付本期已生及未來on-demand費用。"
+          "evidence": "included credits不配發community subscriptions。未買monthly commitment／未接受usage billing terms者可向Sales申請免費temporary pool，有效30日，數額依申請用戶而定。on-demand US$1/credit；接受條款後於剩餘訂閱及後續self-serve renewals不能opt out，須支付本期已生及未來on-demand費用。Duo Pro/Enterprise及其功能不按用量計費、不消耗GitLab Credits；不可將此點套入所有DAP功能。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://handbook.gitlab.com/handbook/marketing/developer-relations/programs/education-program/",
           "scope": "AI功能口徑與自託管DAP人工折扣",
-          "evidence": "Program benefits列AI Chat and AI Code Suggestions in the IDE；add-ons列self-managed EDU可請求DAP self-hosted免費、PM報價100% discount；其他折扣由Sales決定，購買add-on後須人工renewal quote。不能將沒有included credits等同完全沒有AI功能。"
+          "evidence": "Program benefits列AI Chat and AI Code Suggestions in the IDE；add-ons列self-managed EDU可請求DAP self-hosted免費、PM報價100% discount；其他折扣由Sales決定，購買add-on後下次須manual renewal quote、不能用教育coupon自助續約。沒有included credits不等於完全沒有AI功能；與一般feature_summary的add-on要求適用關係仍未核。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://docs.gitlab.com/user/gitlab_duo/feature_summary/",
           "scope": "非agentic AI功能與add-on區別",
-          "evidence": "Non-Agentic features通常需Premium／Ultimate加Duo Pro或Enterprise；註腳Code Suggestions亦可由Duo Agent Platform取得、無需additional add-on。不同AI功能授權不能一概而論。"
+          "evidence": "Non-Agentic features要求Premium／Ultimate加Duo Pro或Enterprise；註腳Code Suggestions亦可由Duo Agent Platform取得、無需additional add-on。教育手冊另列AI Chat與IDE建議為福利，這份一般功能頁未釐清教育例外；本輪不任選一份當成免費或必付費結論。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         },
         {
           "url": "https://handbook.gitlab.com/handbook/legal/education-agreement/",
           "scope": "一年合約、用途違規追收及renewal",
-          "evidence": "§2.2合規教育用途免付費，非Acceptable Purpose可追收過往誤用；§5.1初期一年，重新核准後可按一年續約。"
+          "evidence": "正文Date of last revision 2022/11/16、頁尾Last modified January 7, 2026。§2.2合規教育用途免付費，非Acceptable Purpose可追收過往誤用；§2.1/3.3授權不可轉讓/轉售/出租；§2.3無Support。§5.1初期一年，重新核准後可按一年續約；§5.2 Following the Initial Term任一方可60天書面通知終止。此為服務合約，未核法律/監管具體適用。",
+          "accessed_at": "2026-11-15T19:11:11+08:00"
         }
       ],
       "record_type": "policy",
@@ -53227,7 +53250,7 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "status": "conditional"
+      "status": "terms_conflict"
     },
     {
       "id": "lambda-inception-thousand-taiwan",
@@ -89132,21 +89155,99 @@
       "priority_score": 13.8,
       "priority_tier": "D",
       "priority_note": "官方來源·申請審核制·費用未知·台灣未標記·時間未知·有資格門檻"
+    },
+    {
+      "id": "langfuse-nonprofit-monthly-pro-credits",
+      "title": "Langfuse非營利：每月US$199 Cloud抵用，Pro基費可涵蓋",
+      "summary": "經驗證的登記非營利/慈善或同等實體可申請每月US$199 Langfuse Cloud抵用，涵蓋Pro基費及內含100k events，超額另計。新舊客皆可，須組織核發信箱及非營利用途聲明；每月1日重置不結轉、每組織一次、持續但年度複審。非模型推論贈額；台灣登記文件受理、實際付款與稅費未核。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "value",
+        "developer"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "setup_cost_basis": "官方列每月抵用額而非設定費；未完成核准或結帳，不把設定費未知填0。",
+      "cost_note": "每月US$199抵用涵蓋Pro US$199/月基費及內含100k units，非現金、非免費模型額度。非營利頁列超額US$8/100k events；一般定價另列逾1M units的量階折減，個案帳單待核。一般Pro列信用卡付款，非營利碼是否豁免綁卡、稅額及超額硬停未核，總費用不填0。",
+      "effort_minutes_max": null,
+      "effort_basis": "頁面宣稱兩分鐘填表、通常少於48小時驗證，非本輪實測或核准保證；另需套用promo code。",
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": "Fixed credits",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "quota_details": "US$199/月Cloud帳單抵用，每月1日重置、不結轉。Pro內含100k events；一般定價以billable units計量，含traces、observations、scores，非100k模型請求或tokens。表單列towards any Cloud plan，非營利頁以Pro涵蓋為例；實際套碼及超額行為未測。",
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "usable_duration": "Ongoing, reviewed annually；每月1日重置不結轉，未公布全體統一申請截止日。",
+      "cancellation": "一般定價列組織設定或Customer Portal管理訂閱；取消生效時點、退款、碼撤回後及年度審核未通過後的扣款行為未核。不能把持續年度複審當永久免費。",
+      "access_risk": "需核准並可能提供非營利證明；每組織一次，濫用/資料不實可撤回。僅Cloud抵用，不是模型供應商免費推論，超額及外部模型成本不保證涵蓋。未申請或付款。",
+      "eligibility": {
+        "service_availability": "Langfuse Cloud非營利優惠公開列示；自託管不適用本抵用，與一般Hobby、研究及新創方案分開。",
+        "account_eligibility": "登記非營利、慈善或同等實體，使命導向且非商業用途；新舊Cloud客戶皆可，受財務代管專案的贊助實體須為登記非營利。表單須組織核發信箱、組織名與網站並確認專供非營利用途。",
+        "billing_country": "一般Pro計價列信用卡；非營利核准/套碼是否須卡、台灣付款方式、稅及總帳單未核。",
+        "identity_residency": "官方以美國501(c)(3)為例，接受registered non-profit/charity/equivalent entity；未明列台灣登記形式或居留條件。",
+        "terms_restrictions": "每組織一份非營利折扣、僅Cloud、月額不結轉；可要求證明、誤用或表單資訊不實可撤回。計畫細節可變，已啟用折扣在current term內有效；完整一般Cloud服務條款、轉讓與折扣疊加尚未核，不提供規避方法。",
+        "taiwan_note": "Unknown：未確認台灣社團法人/財團法人等文件是否被接受；全球服務或可讀網站不代表優惠資格。未註冊、提交表單、領取或付款。"
+      },
+      "unknowns": [
+        "台灣組織登記文件、信箱及個案核准",
+        "非營利抵用是否豁免一般Pro綁卡、稅費及超額自動扣款/硬停",
+        "取消/退款、年度複審或碼撤回後帳單行為，以及一般Cloud條款與折扣疊加限制",
+        "非營利頁超額US$8/100k與一般定價高用量階梯折扣如何套入個案帳單；非模型推論額度"
+      ],
+      "verified_at": "2026-11-15T19:15:26+08:00",
+      "discovered_at": "2026-11-15T19:15:26+08:00",
+      "announcement_at": null,
+      "review_cadence": "monthly",
+      "next_review_at": "2026-12-15T19:00:00+08:00",
+      "verification_scope": "2026-11-15主流程實讀non-profit與pricing，並用Chromium渲染官方連結Google表單（靜態擷取只有頁尾），核每月199抵用、資格/年度複審/不結轉、組織信箱、Pro基費與超額及計量界線。未提交表單、核准、套碼或付款；一般Cloud完整條款、台灣個案及法律未核。不同資格於既有Hobby、research、startup，新增不計既有複核。",
+      "sources": [
+        {
+          "url": "https://langfuse.com/non-profit",
+          "scope": "非營利抵用額、資格、年度複審與使用限制",
+          "evidence": "Standard Non-Profit Credit US$199/month covers full Pro Plan base fee及100k events；additional US$8/100k，Ongoing reviewed annually。Registered non-profit/charity/equivalent entity、mission-driven non-commercial、新舊Cloud客戶；fiscally sponsored專案贊助實體須登記非營利。通常<48h驗證，Settings→Billing套promo code；每月1日重置不結轉、Cloud only、one discount per organization，可要求證明且濫用可撤。active discounts remain valid for current term；非永久不變承諾。",
+          "accessed_at": "2026-11-15T19:15:26+08:00"
+        },
+        {
+          "url": "https://langfuse.com/pricing",
+          "scope": "非營利方案獨立列示、Pro價格/用量、付款及計量",
+          "evidence": "Discounts獨立列Non-profits $199 credits/month。Pro $199/month含100k units、超額$8/100k；graduated rates 100k–1M $8、1M–10M $7、10M–50M $6.50、50M+ $6每100k。billable unit為trace/observation/score。Pro payment methods為Credit card；方案費月初收、用量月末收；組織設定/Customer Portal管理訂閱。未證非營利碼免卡或含稅。",
+          "accessed_at": "2026-11-15T19:15:26+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdJorddOgmXa52WFHP9qwSJtrV27_NAUpCFph58pqw1puoQCQ/viewform",
+          "scope": "官方連結申請表的組織信箱與用途聲明",
+          "evidence": "Chromium渲染實讀Langfuse for Non-Profits & Charities：US$199 monthly credit towards any Cloud plan、Unlimited collaborators；we can only accept email addresses issued by your organization。須姓名、email、Organization name/website及確認exclusively for non-profit purposes；資料不實或用途不符可撤回折扣。頁尾ClickHouse Inc.；未填寫或提交，欄位可讀不等於台灣申請已核准。",
+          "accessed_at": "2026-11-15T19:15:26+08:00"
+        }
+      ],
+      "priority_score": 13.8,
+      "priority_tier": "D",
+      "priority_note": "官方來源·申請審核制·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-15T18:12:26+08:00",
+  "latest_research_at": "2026-11-15T19:16:33+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T18:05:20+08:00",
-    "completed_at": "2026-11-15T18:12:26+08:00",
+    "started_at": "2026-11-15T19:05:20+08:00",
+    "completed_at": "2026-11-15T19:16:33+08:00",
     "reviewed_ids": [
-      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
-      "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
-      "aiven-postgresql-free"
+      "pipedream-connect-development-only",
+      "gitlab-education-ai-credit-exclusion"
     ],
     "new_ids": [
-      "n8n-nonprofit-cloud-thirty-percent-coupon"
+      "langfuse-nonprofit-monthly-pro-credits"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1092
+    "unreviewed_existing_count": 1094
   }
 }

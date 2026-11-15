@@ -4013,3 +4013,50 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - 台灣Yes本輪0、Unknown4；關鍵字Aiven1；免費篩選n8n非營利0、Aiven1；載入更多24→48；截止排序首項AutoClaw。桌面1365px及手機390px無DOM水平溢出，browser errors/console error皆空。
 - 首次互動腳本誤把function傳給tab.waitFor，工具只收selector；改以page.waitForFunction完成剩餘驗證，非網站錯誤。截圖仍受Image reading is disabled限制，未宣稱像素外觀審查。
 - 本節只記已觀測的發布前證據；推送後須另核遠端commit、對應Pages工作及公開18:12版，不以提交/排隊冒稱成功發布。結果見本輪回報與GitHub部署紀錄。
+
+## 2026-11-15 19:05–19:16 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 實際對錶UTC11:05:20／台北19:05:20；main HEAD `d31486f761d6d951003f6da1571bcf015f2c1754`，開場工作樹乾淨、無未完成PR，fetch後與origin/main無差異。Pages為main根目錄legacy build，前輪43703227831成功；repo及上兩層無AGENTS.md。
+- 偵測到其他同任務omp程序，但無維護鎖及未提交修改；不把程序存活當成仍在寫入。本輪PID28436取得鎖，主agent唯一共享JSON寫入者，未更動他人工作或建立排程。
+- N=1,096（880 opportunity／50 policy／166 watchlist）；可行動1,004、已到期0、7日內截止11（5冷卻）、retry0、24小時未核810、12小時內已核83。AutoClaw/Tencent18:08剛核、Solar20:00及翌日截止項保持排程，不為刷新時間提前重讀。
+- 可行動缺verification_scope共24筆；A取11/08最舊批的`pipedream-connect-development-only`（免費開發/production付款風險），B取同批`gitlab-education-ai-credit-exclusion`（教育AI用途與來源範圍缺口），兩筆queue --explain均為rotation、未到期。選擇原因是具體證據缺口，不是例行時間刷新。C限定Pipedream/StackAI/Langfuse不同資格的新方案，先建索引去重，最多納入1筆。
+- 三個環境預設Task研究員均完成並交付獨立local artifact；未指定或宣稱使用Terra/Gemini。A/B各最多6官方URL且未改repo；C自稱6但實為7個主要URL，另探測多個路徑/索引，超出指派上限，已要求停止擴搜並結案。下輪上限應按「所有不同URL，包括表單/索引/失敗探測」計算，不接受把申請表併入頁面而少算。
+
+### 採用成果與證據界線
+
+- `pipedream-connect-development-only`：[定價](https://pipedream.com/pricing)、[環境](https://pipedream.com/docs/connect/managed-auth/environments)仍免卡Free、最多10個external user IDs、僅本人帳戶測試；不是10個團隊席次、production無硬人數上限不是免費上線。Startup另收US$99/月年繳或150/月月繳、超100人US$2/人/月、超10k credits每點0.012。[FAQ](https://pipedream.com/docs/pricing/faq)補升級立即收平台費、超額次期後收、日額度不結轉及取消不按比例退款；[條款](https://pipedream.com/terms)§3.8保留unless stated otherwise，不採A「全面不退款」的過強概括。一般付費試用條款不是今日存在可領取試用的證據。
+- 不採A把Business invoice付款推成「其他方案沒有發票」、Workflows限額套用Connect、無條件自動續訂或自動核准。Connect免費每日credits/帳戶數仍未知；不必要的管轄/賠償細節不擴充。台灣Unknown、法律not_verified；穩定項月輪替。
+- `gitlab-education-ai-credit-exclusion`：[join](https://about.gitlab.com/solutions/education/join/)明列招收13歲以下學生的機構不得SaaS、可自託管，並非只擋個人年齡。續期須原訂閱建立者，換人可轉移擁有權或開support ticket；[教育手冊](https://handbook.gitlab.com/handbook/marketing/developer-relations/programs/education-program/)列買add-on後下次須人工quote、不能教育coupon自助續約。補可影響資格/續期決策的限制。
+- GitLab舊卡summary寫「非所有AI都被排除」，access_risk卻寫「不可視為免費AI」，本機DOM已觀測此矛盾。改為不自動配included credits；[community](https://docs.gitlab.com/subscriptions/community_programs/)、[credits](https://docs.gitlab.com/subscriptions/gitlab_credits/)支持此排除及30天Sales評估池/US$1 on-demand/計費條款不可退出。教育手冊列AI Chat/IDE福利，但[一般功能表](https://docs.gitlab.com/user/gitlab_duo/feature_summary/)要求add-on，教育適用關係未釐清，改terms_conflict/daily，11/16追查；不任選一頁斷言全部免費或全部付費。
+- 不採B把[教育協議](https://handbook.gitlab.com/handbook/legal/education-agreement/)當法律/監管來源而改restriction_found；它是服務合約，legal_status仍not_verified。不採B「DAP折扣一定不含credits」（本身又列未知）、免面談/短等待與90天週期建議。協議正文2022/11/16及頁尾2026/01/07分列，非本輪公告；worldwide不保證台灣個案。
+- 新增`langfuse-nonprofit-monthly-pro-credits`：[非營利頁](https://langfuse.com/non-profit)與[定價](https://langfuse.com/pricing)列US$199/月Cloud抵用，可涵蓋Pro基費及100k events；每月1日重置不結轉、持續但年度複審、每組織一次，新舊客可申請，財務代管專案的贊助者須為登記非營利。官方連結[表單](https://docs.google.com/forms/d/e/1FAIpQLSdJorddOgmXa52WFHP9qwSJtrV27_NAUpCFph58pqw1puoQCQ/viewform)由主agent用Chromium渲染，明列組織核發信箱、非營利用途聲明及towards any Cloud plan；未填寫或提交。與既有Hobby、學術Fast Grant、新創五折的資格/利益不同，既有3筆時間不刷新。
+- 不採C的0/0成本及免費分類：一般Pro列信用卡、超額與用量階梯，非營利免卡/稅及總帳單未核，美元成本維持null、列VALUE-DEAL與QUALIFICATION，不進免費專區。每月199不是模型推論贈額，events/units包括traces/observations/scores。非營利頁超額8/100k與一般高用量階梯如何套帳保留未知；取消/退款、一般Cloud完整條款與台灣文件受理未核。
+- C對Pipedream/StackAI只取得「所查定價/索引未見不同資格方案」；不採其「404/相同SPA外殼證明優惠不存在」、全球可用或台灣通常可行的推論。無新證據不建薄弱watchlist。Langfuse定價另列Hackathons 100/月×3月與OSS300/月首年，僅作後續發現方向；未實讀專屬條款、不新增。
+
+### 計數、品質改善與可重用教訓
+
+- N=1,096；R=2（Pipedream、GitLab）；A=1 opportunity／0 policy／0 watchlist；U=N−R=1,094；整筆追查失敗attempted=0。結果1,097筆（881/50/166）。來源表單靜態擷取不足後成功渲染，不算整筆失敗；新案例不計R。
+- updated_at/latest_research_at/completed_at一致19:16:33；兩筆既有verified_at為主流程完成查閱的19:11:11、新筆19:15:26。保留所有穩定ID與2,571筆既有政策歷史，僅追加3筆有意義的費用/資格差異與新基準。
+- 唯一品質改善為「核實範圍與費用界線」資料修正：可行動缺scope24→22；兩筆補逐來源查閱時間、實讀範圍與未核項。GitLab卡片撤概括排除，Pipedream補退款及production費用；沒有需改前端/schema的可重現程式錯誤，不新增測試或框架。沿用資料契約並驗實際卡片/篩選。
+- 依tools/prioritize.py的score/tier_of/note_of計算新Langfuse13.8/D；兩筆既有是watchlist/policy仍不評級。衍生計分不算外部複核。不採C的17.9/B（依未核0費用及估造15分鐘推算）。
+- 失敗經驗：大型JSON的read缺snapshot/可見行登記，edit曾拒絕剛讀過的行；已回報，重讀工具所列實際行後重試成功，所有檔案均用edit最小補丁。AST預覽僅取錨後撤回，schema未動。截圖回Image reading is disabled已回報；僅能宣稱DOM與互動核對，不能宣稱像素外觀審查。搜尋等待須核標題，不只等「符合1筆」（前後都一筆時會讀到debounce前內容）。
+
+### 下一輪優先（最多5項）
+
+1. `kaggle-solar-filament-segmentation-2026`：今日20:00追CDT/UTC及隊伍5/10差異；查[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)。
+2. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：23:30追本期結束、午夜後換檔；查[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)，下期不是本期延期。
+3. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：23:30及11/16追免費窗後產品配額；查[WorkBuddy](https://www.workbuddy.cn/pricing/)、[Subscription](https://www.codebuddy.ai/docs/ide/Account/Subscription)，不猜時區、不套API牌價。
+4. `gitlab-education-ai-credit-exclusion`：11/16核教育手冊AI福利與一般add-on文件適用差異、DAP折扣用量；查本輪手冊/feature_summary/credits及所連專用文件。無新變動不重複追加相同歷史。
+5. `stackai-free-monthly-five-hundred-runs`：11/08最舊批且缺scope、Free星號計量/超額/卡片未核；查[pricing](https://www.stackai.com/pricing)及原紀錄條款，不把C預篩當成功複核。
+
+本輪評估：修正影響AI存取、機構資格及付款決策的錯誤；減少2筆證據範圍缺口，GitLab官方差異已揭露但未解決。起始到期0，不宣稱減少到期積壓或消除重複；新增1個不同資格且利益明確的非營利Cloud抵用，改善可讀性及交接效率，非全面驗證。
+
+### 發布前驗證
+
+- `python3 tests/validate.py`通過1,097筆；`node --check app.js`、`node tests/filters.cjs`、`git diff --check`均通過。S/A/B/C/D=172/186/130/277/116。本批次三筆評分欄與tools/prioritize.py函式一致；前端/schema/測試未修改。
+- 本機Chromium載入19:16:33版，全庫1,097；本輪3卡與R2/A1/U1094一致。展開卡片核scope/來源：Langfuse3來源及未知總費用、Pipedream5來源及取消不按比例退款、GitLab6來源及13歲以下機構限制/條款差異。
+- 本輪台灣Yes為0、Unknown為3；關鍵字Langfuse非營利1筆、免費專區排除此新抵用項，Pipedream免費開發仍1筆。載入更多24→48、截止排序首項AutoClaw。桌面1365及手機390px無DOM水平溢出，browser errors及console error皆空；截圖不可讀，未宣稱像素外觀審查。
+- 首次互動腳本用Meta+A清搜尋未生效，字串被接成「Langfuse非營利Pipedream Connect」而等待逾時；依觀測改用tab.fill後完成剩餘情境。這是腳本按鍵假設錯誤，不是網站錯誤，沒有為此修改前端。
+- 本節只記發布前已觀測證據；遠端commit、對應Pages工作與公開版本仍須分別核對，結果見本輪回報及GitHub部署紀錄，不將已推送或排隊當成功發布。
