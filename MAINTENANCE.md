@@ -3817,3 +3817,48 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - 本機Chromium實際載入14:16:55版：本輪2卡及R2/A0/U1091一致；展開確認Smart Buildings總池、台北1/4 07:59入賽與1/16 07:59最終期限/條件資格/規則來源，以及GoodMem每月費用說明、微調條款差異及Terms來源。台灣Yes/Unknown各1卡；關鍵字、免費篩選（GoodMem0、Smart Buildings1）、截止排序（AutoClaw今日23:59在前）、載入更多24→48均通過。
 - 桌面1365px及手機390px DOM無水平溢出，browser errors/console error皆空。截圖受工具Image reading is disabled限制，未宣稱完成像素審查；本輪前端未改。
 - 再fetch後origin/main仍為開場HEAD，無PR或需整合的其他更新。沿用main直接提交推送；本節僅記錄已完成的發布前證據，遠端commit、對應Pages工作及公開版本須推送後分別核對，不以本節宣稱部署完成。
+
+## 2026-11-15 15:05–15:20 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶UTC07:05:20／台北15:05:20；main HEAD及fetch後origin/main為`d9c3d1d64bae594e6cd85991aee250a008647303`，開場工作樹乾淨、無未完成PR、無round lock。可見其他omp維護程序，不據此推論它們仍在寫資料；本輪PID82333取得鎖。Pages沿用main根目錄legacy build，上輪43684946493成功；未找到repo/上兩層AGENTS.md。
+- N=1,093（877 opportunity／50 policy／166 watchlist）；可行動1,002、嚴格到期0、7日內截止11（7冷卻）、retry0、24小時未核791、12小時內已核151。AutoClaw/Tencent今日18:00、Solar20:00留待排程；09:10及11:22–14:16無新訊號的紀錄不重刷。
+- A僅Quantum：舊標題US,000、總池當個人利益、首獎/法律/GPU保證為新風險訊號。B僅SerpKite：11/07最舊一批缺verification_scope，因證據缺口選入、不是到期刷新。C僅Descript/Loom教育與非營利，先去重。三組環境預設Task研究員均完成並審查；未指定或宣稱Terra/Gemini。
+- 各組目標上限6官方頁，A實際超出（另讀目錄/GPU文件及API並試3個不存在端點），未宣稱嚴格符合來源預算。後續應在已取得官方頁時停止猜API；本輪主agent只重讀實際官方rules/prizes與公告，未沿用失敗端點。研究員未修改repo或提交，主agent統一edit整合。
+
+### 結果、來源與證據界線
+
+- R=2：`kaggle-google-quantum-circuit-optimization-2026`、`serpkite-free-search-api-credits`；A=1 opportunity／0 policy／0 watchlist；U=N−R=1,091；整筆失敗attempted=0。新增`loom-classroom-education-seventyfive-off-business-ai`，結果1,094筆（878／50／166）。updated_at、latest_research_at、completed_at一致15:20:26。
+- Quantum：[正式規則](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules)、[獎項及日程](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/prizes)瀏覽器實讀，總池150,000＝主榜100,000＋額外50,000；首獎50,000而非舊60,000，撤回個人利益150,000及60分鐘估計。台北1/14 07:59入賽/組隊、1/21 07:59最終交件分欄；11/20及1/4是子獎項期限，不能作整賽截止。[Google公告](https://opensource.googleblog.com/2026/10/announcing-verifiable-quantum-circuit-compilation-competition-on-kaggle.html)為10/21，10/22只是開賽。
+- Quantum免費僅入賽，撤回每週GPU與免卡保證；台灣Yes僅全球規則未列地區排除，補年齡、帳戶/單隊、制裁、機構授權及領獎稅表。legal_status改not_verified，條款不是官方法律來源。通知1週回覆、文件2週交回、約收齊後30日發獎，不保證台灣匯款或稅務。原目錄來源及舊時間保留，但scope明示不再支持細節；期限/獎位不是API用量，quota改UNKNOWN、限時daily。
+- SerpKite：[Pricing](https://serpkite.com/pricing)的2,500是驗email1,000＋首次綁Google/GitHub1,500，月預算用盡降250＋最多250；月贈1,000不受該預算影響。[Billing](https://serpkite.com/docs/credits-and-billing)列次月1日00:00 UTC發放、各key共用5req/s、同裝置/網路新帳戶可能不發贈額並403（受邀團隊例外，誤判向support申訴），餘額不足402拒絕。[Spend controls](https://serpkite.com/docs/spend-controls)的Auto-recharge僅寄結帳link、使用者付款才扣款，不是背景儲值。
+- SerpKite保留差異：[官方比較頁](https://serpkite.com/compare/free-serp-api)另稱月贈須綁Google/GitHub，Billing僅寫verified accounts；status改terms_conflict/daily，不採研究員active/monthly建議。[Terms](https://serpkite.com/legal/terms)10/28版的促銷點數無現金價值不代表不可有替代價值，但本筆既無可靠情境且贈量可變，撤US$2.5估值。免費效期/累積未獲明確說明，不把付費點數不過期套入；台灣Unknown並撤回直接註冊保證。
+- 新增Loom：[教育支援](https://support.atlassian.com/loom/docs/loom-education-discount-verification/)及[母品牌FAQ](https://www.atlassian.com/licensing/purchase-licensing)明列Classroom75% off、Academic50% off皆含Business + AI，補前輪「折扣適用性未知」缺口；與既有非營利不同資格。舊免費教育不收新戶、進階AI須付費Business + AI；學校信箱/Goodstack/Atlassian裁量。中小學生資格兩頁不一，terms_conflict/daily；台灣Unknown、quotaUNKNOWN，未宣稱Unlimited。
+- [Loom定價](https://www.loom.com/pricing)月繳牌價24美元/使用者不等於教育實付；Loom.com年繳按使用者、Atlassian.com按級距，不採研究員算術折扣價及草案互相矛盾的年費180/240。[取消續訂](https://support.atlassian.com/loom/docs/disable-auto-renewals-for-business-or-business-ai-subscriptions/)確認預設續訂、Plan and Billing→Manage Subscription→Cancel Subscription期末降級；教育個別報價/續期/退款未核。主agent先試的manage-your-loom-subscription路徑404，改官方搜尋取得此正文；不把404當停辦。
+- Descript命中`descript-education-nonprofit-hobbyist-discount`，C實讀[教育非營利頁](https://help.descript.com/billing-payments-plans/nfp-edu)12美元月繳/8美元年繳折算、Hobbyist及3席與既有一致，不新增、不刷新原紀錄、不計R。Loom非營利已在`atlassian-nonprofit-annual-twentyfive-ai`，不重複。新途徑申請表僅外殼未送出；子頁失敗/改導不算整筆attempted。
+
+### 品質改善與研究教訓
+
+- 唯一品質改善聚焦「條件式利益不得寫成保證」：總獎金池與個人利益、首獎錯額、贈額降額、免費與續費/運算成本、資格與法律分開。未發現需改前端/schema的程式錯誤，不造重構或新測試；驗證用既有資料契約及實際卡片/篩選。
+- 主agent重新讀重大金額/免費/資格原文並對錶。A交付時間早於本輪開場，未沿用；verified_at/accessed_at使用主agent實讀後時鐘，不採「以commit時鐘蓋來源時間」建議。A保留no_restriction_found、monthly甚至排到1月、最終交件當入賽deadline、期限當有限使用額度等建議均未採納。規則其實有約30日發獎，不沿用研究員「時程全未公布」。
+- 不把官方比較頁當中立第三方；只採SerpKite對自身資格的說法。折扣掛在母品牌FAQ時，子品牌教育頁改導不是方案消失；舊免費方案結束也不代表沒有現行折扣。
+- 大JSON先程式索引；hashline edit保留ID及舊來源。read大檔缺snapshot/未記已讀行導致edit首拒，已回報；用撤回的AST預覽取得錨點，schema未改。截圖回Image reading is disabled已回報，只能宣稱DOM/互動核對，不冒稱像素外觀審查。
+- 依tools/prioritize.py函式重算並edit套用：Quantum28→21.1/S、SerpKite23.6→20.9/A、Loom12.6/D；分數不是外部查核也不是資格保證。政策歷史僅追加3則有意義更正/基準，不以本輪查閱日宣稱供應商改版日。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00後追換檔/11/15結束；[changelog](https://autoclaw.z.ai/changelog)、[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00後核免費窗及配額；[WorkBuddy](https://www.workbuddy.cn/pricing/)、[CodeBuddy](https://www.codebuddy.cn/pricing/)。
+3. `kaggle-solar-filament-segmentation-2026`：今日20:00追CDT/UTC窗口與隊伍5/10差異；[Overview](https://www.kaggle.com/competitions/filament-segmentation-2026)、[Rules](https://www.kaggle.com/competitions/filament-segmentation-2026/rules)。
+4. `serpkite-free-search-api-credits`：11/16核月贈是否須綁Google/GitHub；[Billing](https://serpkite.com/docs/credits-and-billing)、[比較頁](https://serpkite.com/compare/free-serp-api)、[Pricing](https://serpkite.com/pricing)；不重複追加相同衝突歷史。
+5. `loom-classroom-education-seventyfive-off-business-ai`：11/16核中小學生範圍、台灣核驗及教育正式價格/續期；[教育支援](https://support.atlassian.com/loom/docs/loom-education-discount-verification/)、[授權FAQ](https://www.atlassian.com/licensing/purchase-licensing)及所連申請入口；不送表、不推算報價。
+
+本輪評估：修正會影響金額、付款、領取預期及入賽時點的錯誤；補一筆舊核實範圍、揭露兩項資格差異，尚未解決差異；起始到期0不宣稱消除積壓。新增1筆不同教育資格的AI折扣、避免兩筆重複；研究教訓及前端可讀欄位改善可接續性，不作全面驗證宣稱。
+
+### 發布前驗證（15:24完成）
+
+- `python3 tests/validate.py`通過1,094筆，`node --check app.js`、`node tests/filters.cjs`、`git diff --check`通過；S/A/B/C/D=173/186/130/277/112。程式對開場快照確認僅2筆既有ID改動、1筆新增、1,091筆未核完全不變，2,559筆舊政策歷史逐筆保留並追加3筆，舊來源URL保留，3筆評分與prioritize函式一致。
+- 本機Chromium載入15:20版、全庫1094；本輪3卡與R2/A1/U1091一致。展開核Quantum總池/首獎/兩個期限/條件資格/正式規則，SerpKite降額/手動付款/月贈差異，Loom費用/非免費/續訂/資格及4來源。台灣Yes本輪1卡、Unknown2卡；免費篩選Loom0、SerpKite1；截止排序首筆AutoClaw今天截止；載入更多24→48。
+- 桌面1365px及手機390px DOM均無水平溢出；browser errors與console error皆空。未改前端，截圖因工具Image reading is disabled不能作像素審查。兩次驗證腳本問題已合理修正：等待1,094但畫面為1094；triple-click未清完整中英混合搜尋字串，改fill後正確。不是網站錯誤，未修改程式迎合腳本。
+- 15:24再fetch：HEAD/origin/main仍為開場d9c3d1d，無未完成PR或需整合更新。沿用main直接提交推送；本節只記錄已完成的發布前證據。遠端commit、對應Pages工作及公開15:20版本須推送後分別核對，不以提交或排隊冒稱部署成功。

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T14:16:55+08:00",
-  "scope": "2026-11-15 14:05–2026-11-15 14:16 Asia/Taipei：局部複核 2 筆既有紀錄、新增 0 筆（機會0、政策0、觀察線索0）、整筆追查失敗0筆；其餘1091筆既有紀錄未完成本輪複核。修正Smart Buildings獎金池/個人利益、入賽與交件期限、GPU及台灣資格保證；補GoodMem費用、試用資料保留界線與微調條款衝突。Gamma/Napkin教育非營利預篩無充分不重複新方案；未改前端/schema、未刷新其他紀錄。",
+  "updated_at": "2026-11-15T15:20:26+08:00",
+  "scope": "2026-11-15 15:05–2026-11-15 15:20 Asia/Taipei：局部複核 2 筆既有紀錄、新增 1 筆（機會1、政策0、觀察線索0）、整筆追查失敗0筆；其餘1091筆既有紀錄未完成本輪複核。更正Quantum競賽首獎、總池/個人利益、入賽/交件期限與資格/成本保證；補SerpKite贈額降額、反濫用及月贈資格差異；新增Loom教育Business + AI折扣。台灣個案與法律未核，未改前端/schema。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -68472,9 +68472,9 @@
     },
     {
       "id": "serpkite-free-search-api-credits",
-      "title": "SerpKite：免綁卡免費搜尋與AI代理API，註冊贈2,500點後每月1,000點",
+      "title": "SerpKite：免卡搜尋與AI API，新戶通常最多2,500點、預算用完降額；每月1,000點",
       "record_type": "opportunity",
-      "status": "active",
+      "status": "terms_conflict",
       "verification": "Official",
       "taiwan": "Unknown",
       "categories": [
@@ -68497,44 +68497,67 @@
       "effort_minutes_max": 5,
       "savings_usd": null,
       "valuation_scenario": null,
-      "usable_benefit_usd": 2.5,
+      "usable_benefit_usd": null,
       "legal_status": "not_verified",
       "sources": [
         {
           "url": "https://serpkite.com/pricing",
-          "scope": "免費方案額度、重置週期、限速與MCP伺服器",
-          "evidence": "驗證信箱贈1,000點，綁定Google或GitHub加贈1,500點（共2,500點），次月起每月固定贈送1,000點；免信用卡，限速5 req/s，含所有端點與MCP。",
-          "accessed_time_range": "2026-11-07T17:05:00+08:00–2026-11-07T17:25:00+08:00"
+          "scope": "免費額度、當月贈額預算降額、限速、端點與付費包",
+          "evidence": "2026-11-15實讀：驗證信箱1,000點、首次綁GitHub或Google再1,500點；若當月signup/account-linking免費預算用完，後續新戶註冊250點、綁定最多250點。每月1,000點不受該預算影響；免卡、Free全端點/MCP、帳戶各key共用5 req/s。Starter US$10/10,000點，稅依Paddle結帳。較早紀錄（2026-11-07）：驗證信箱贈1,000點，綁定Google或GitHub加贈1,500點（共2,500點），次月起每月固定贈送1,000點；免信用卡，限速5 req/s，含所有端點與MCP。",
+          "accessed_at": "2026-11-15T15:08:29+08:00"
         },
         {
           "url": "https://serpkite.com/legal/terms",
-          "scope": "帳戶資格、年齡、多帳號禁令與加拿大管轄法律",
-          "evidence": "須年滿18歲，每人或組織限一帳號，嚴禁建立多帳號領取免費額度；免費點數無現金價值不可退款；受加拿大安大略省法律管轄。",
-          "accessed_time_range": "2026-11-07T17:05:00+08:00–2026-11-07T17:25:00+08:00"
+          "scope": "年齡、帳戶及轉售限制、促銷點數、退款與刪除帳戶",
+          "evidence": "2026-11-15實讀2026-10-28生效條款：18歲且可締約；禁止多帳號領免費點數及轉售原始服務。免費點數為促銷、無現金價值、可前瞻變更並因濫用撤回。誤買且完全未用的包可14天內email申請退款；刪帳未用購買點數沒收。可在dashboard隨時停止使用及刪帳。較早紀錄（2026-11-07）：須年滿18歲，每人或組織限一帳號，嚴禁建立多帳號領取免費額度；免費點數無現金價值不可退款；受加拿大安大略省法律管轄。",
+          "accessed_at": "2026-11-15T15:08:29+08:00"
+        },
+        {
+          "url": "https://serpkite.com/docs/credits-and-billing",
+          "scope": "每月贈額時點、共用池、餘額不足與同裝置/網路限制",
+          "evidence": "2026-11-15實讀官方markdown alternate：驗證帳戶從註冊次月1日00:00 UTC起每月1,000點；免費及購買點數共用餘額，無每日上限但受限速。餘額不足於執行前回402 insufficient_credits。與另一帳號同裝置或網路的新帳號不獲免費點數、請求403 account_restricted直到購包；受邀團隊成員例外，誤判可聯絡support。預付無月租、無續訂；1 credit不等於每種AI呼叫一次，Research lite/standard/deep為30/75/200點，AI步驟失敗仍可能收已成功搜尋部分。",
+          "accessed_at": "2026-11-15T15:08:29+08:00"
+        },
+        {
+          "url": "https://serpkite.com/docs/spend-controls",
+          "scope": "Auto-recharge需使用者完成付款，非背景自動扣款",
+          "evidence": "2026-11-15實讀官方markdown alternate：Settings開啟Auto-recharge並選threshold/pack後，低餘額僅寄one-click checkout link；Nothing is charged until you complete the checkout。月spend cap為點數上限，超限於執行前403 spend_cap_reached且不計費。",
+          "accessed_at": "2026-11-15T15:08:29+08:00"
+        },
+        {
+          "url": "https://serpkite.com/compare/free-serp-api",
+          "scope": "官方自營比較頁對每月贈額另要求綁Google/GitHub，與帳務文件資格措辭不同",
+          "evidence": "2026-11-15實讀2026-10-29更新頁：The monthly grant needs a linked GitHub or Google account；但同頁簡介及帳務文件僅稱verified accounts。保留差異，不保證只驗證email即可每月領取；競品比較數字不採入。",
+          "accessed_at": "2026-11-15T15:14:35+08:00"
         }
       ],
       "eligibility": {
-        "service_availability": "全球提供，加拿大主機與雲端節點",
-        "account_eligibility": "年滿18歲個人或組織，提供有效信箱，嚴禁多帳號領取免費點數",
-        "billing_country": "免綁信用卡即可使用免費額度；若加購點數由Paddle處理，支援各國幣別與稅費",
-        "identity_residency": "全球使用者，需通過Turnstile驗證並禁止拋棄式臨時信箱",
-        "terms_restrictions": "禁止轉售原始API存取，禁止多帳號濫用，免費點數不得退款",
-        "taiwan_note": "台灣使用者可透過Google或GitHub直接註冊取得免費額度，免綁卡；個別發票與在地付款未測，標為Unknown。"
+        "service_availability": "官方提供公開搜尋與AI API及MCP；本輪頁面未列可據以確認台灣帳戶資格的國家清單。",
+        "account_eligibility": "18歲且可締約、有效信箱；首次綁Google/GitHub才有額外點數，禁止多帳號領贈額。相同裝置/網路新帳戶可能無免費額度並被限制，受邀團隊成員例外。",
+        "billing_country": "免費層免卡；自願購買預付包由Paddle處理可用付款方式與稅額，台灣結帳及發票未測。",
+        "identity_residency": "禁止拋棄式信箱，可能需Turnstile驗證；本輪未核台灣居住/身分個案，勿繞過反濫用限制。",
+        "terms_restrictions": "禁止轉售原始服務、多帳號濫用及存取登入後內容；免費點數無現金價值不可退款。第三方結果的著作權及個資使用責任仍由使用者負擔，不作法律保證。",
+        "taiwan_note": "維持Unknown：支援Google/GitHub登入不等於台灣申請或領點保證；未實際註冊，也未核到明列台灣的資格來源。"
       },
       "unknowns": [
-        "台灣本地網路延遲",
-        "大量並發限速表現",
-        "個別發票開立與商用法律合規"
+        "月贈額資格差異：帳務文件寫verified accounts，官方比較頁另要求綁GitHub/Google；尚未釐清只驗email是否足夠",
+        "當月免費贈額預算餘量及個別新戶實際可領點數未公開，2,500點不是保證",
+        "免費點數是否累積及其效期未獲明確獨立說明；購買點數不過期不得直接套用免費點數",
+        "台灣帳戶申請、付款/發票、同網路限制個案與法律/監管適用未核"
       ],
-      "verified_at": "2026-11-07T17:25:00+08:00",
-      "next_review_at": "2026-12-07T17:25:00+08:00",
-      "priority_score": 23.6,
+      "verified_at": "2026-11-15T15:14:35+08:00",
+      "next_review_at": "2026-11-16T15:00:00+08:00",
+      "priority_score": 20.9,
       "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·≤5分鐘",
+      "priority_note": "官方來源·官方條款有差異·免費·台灣未標記·≤5分鐘",
       "announcement_at": null,
       "limited_confirmed": null,
-      "summary": "搜尋與 AI 代理 API：註冊贈 2,500 點、之後每月 1,000 點，免綁卡；點數用於搜尋與代理呼叫，超量依方案計費。服務由加拿大主機與雲端節點提供，官方稱全球可用；台灣可直接以 Google／GitHub 註冊，個別發票與在地付款未測。",
-      "review_cadence": "monthly"
+      "summary": "免卡Free含搜尋、AI端點與MCP；驗證信箱通常1,000點、首次綁Google/GitHub再1,500點，但當月贈額預算用完改為250＋最多250點。月贈1,000點不受該預算影響，帳務文件列次月1日00:00 UTC起發放；比較頁另要求綁Google/GitHub，與僅寫verified accounts的文件有資格差異。各key共用5 req/s、餘額不足拒絕請求；Auto-recharge只寄付款連結。同裝置/網路新帳戶可能無贈額，台灣資格未核。",
+      "review_cadence": "daily",
+      "verification_scope": "2026-11-15局部複核官方Pricing、Terms、Credits and billing、Spend controls及免費層比較頁：確認贈額降額、月發放時點及資格差異、共用池/限速、預付/手動結帳、反濫用限制與退款刪帳；未註冊、付款、測API，台灣個案、免費點數效期、法律及原估設定時間未核。",
+      "cost_note": "免費層無月租且免卡；自願購買Starter US$10/10,000點起，稅由Paddle結帳計算。餘額不足回402，不是自動轉超額帳單；Auto-recharge只寄結帳連結，須自行確認付款。",
+      "cancellation": "無訂閱續期；可停止使用並在dashboard刪帳。誤買且完全未用的點數包可14天內寄support申請退款；刪帳會沒收未用購買點數，先用完或申請適用退款。",
+      "quota_details": "每月1,000點於註冊次月起每月1日00:00 UTC發放（台北08:00）；免費及購買點數共用餘額。5 req/s為Free帳戶各key共用。搜尋一頁通常1點；Answer fast 3點、standard三來源8點；Research lite/standard/deep為30/75/200點，不能把點數直接當AI呼叫數。"
     },
     {
       "id": "zro-moonmath-free-flash-models",
@@ -87596,12 +87619,12 @@
     },
     {
       "id": "kaggle-google-quantum-circuit-optimization-2026",
-      "title": "Google Quantum AI 量子電路化簡大賽（Kaggle）：總獎金 US,000，運用 AI 優化超大規模容錯電路",
-      "summary": "Google Quantum AI 於 Kaggle 主辦之可驗證量子電路優化編譯競賽，總獎金池達 150,000 美元（金獎 60,000 美元）。參賽者需運用 LLM、Agentic Workflows 或啟發式演算法壓縮大型容錯量子電路，官方提供開源驗證套件。全球（含台灣）開發者可免費報名參賽。",
+      "title": "Google Quantum AI可驗證量子電路編譯競賽：總池US$150,000、主榜首獎US$50,000",
+      "summary": "Google Quantum AI於Kaggle舉辦的AI輔助量子電路編譯競賽，總獎金US$150,000（主榜100,000＋額外50,000），主榜首獎50,000而非60,000；不是每人可領額度。台北2027/1/14 07:59入賽/組隊截止，1/21 07:59最終交件。免費入賽不代表運算或AI工具成本全免；台灣未列於地域排除，但仍須符合帳戶、年齡、制裁及領獎條件，無法律或匯款保證。",
       "record_type": "opportunity",
-      "status": "active",
+      "status": "conditional",
       "verification": "Official",
-      "legal_status": "no_restriction_found",
+      "legal_status": "not_verified",
       "categories": [
         "FREE",
         "VALUE-DEAL"
@@ -87612,38 +87635,42 @@
       ],
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
-      "effort_minutes_max": 60,
+      "effort_minutes_max": null,
       "taiwan": "Yes",
       "regions": [
         "GLOBAL"
       ],
-      "usage_type": "Contest Prize Pool",
-      "quota_classification": "HIGH BUT LIMITED",
-      "limited_confirmed": true,
-      "usable_benefit_usd": 150000,
+      "usage_type": "競賽獎金池，非個人API或算力額度",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "valuation_scenario": "競賽總獎金池 US,000；第一名獎金達 US,000。",
-      "verified_at": "2026-11-15T02:11:00+08:00",
+      "valuation_scenario": "US$150,000為全部獎金池；主榜第1名US$50,000，不把總池或首獎估成個人確定利益。",
+      "verified_at": "2026-11-15T15:18:30+08:00",
       "discovered_at": "2026-11-15T02:11:00+08:00",
-      "announcement_at": "2026-11-10",
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-15T09:00:00+08:00",
-      "verification_scope": "2026-11-15 首度核實：Kaggle 賽事規則、Google Quantum AI 官方贊助、US,000 總獎金池與台灣開發者參賽獲獎資格。",
-      "usable_duration": "競賽交件期預計延續至 2027 年初。",
-      "cancellation": "免費報名參賽，無訂閱或續費費用。",
-      "cost_note": "報名與參賽完全免費，Kaggle 平台免費提供每週 GPU 額度。",
-      "access_risk": "每人限單一帳號，可組隊參賽，代碼需符合開源授權規範。",
+      "announcement_at": "2026-10-21",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T15:00:00+08:00",
+      "verification_scope": "2026-11-15主agent以瀏覽器實讀Kaggle正式rules及overview/prizes（含Timeline），另讀Google官方公告：核總池/首獎、入賽與最終期限、免費入賽、條件資格/領獎稅表及Apache 2.0。官方slug為google-verifiable-quantum-circuit-compilation，保留既有ID。未登入、報名、提交或付款；未核個人GPU配額、台灣匯款/扣繳、實際身分核驗及法律。原目錄來源保留作舊證據，不再支持現行詳細主張。",
+      "usable_duration": "10/22開賽；11/20里程碑獎、2027/1/4最長領先獎計算截止，1/13入賽/組隊、1/20最終交件，均23:59 UTC。前兩者為子獎項期限，不是整場截止；主辦可更新日程。",
+      "cancellation": "規則NO PURCHASE REQUIRED TO ENTER OR WIN；不屬訂閱續費。主辦可依規則取消、終止、修改或暫停賽事。",
+      "cost_note": "0元僅指入賽，規則不要求購買；額外LLM、運算、資料或工具可能有成本。未核個人Kaggle GPU配額，不保證每週免費算力或整個開發過程零成本。獎金稅費由得獎者負擔。",
+      "access_risk": "每人單一帳號/單隊、最多5人；每日最多5次提交、最終選2份。禁止隊外私下分享程式碼/資料；得獎須交可重現程式及文件、適用Apache 2.0，獎金不可轉讓。收到獲獎通知須1週內回覆、所需文件通知後2週內交回。",
+      "deadline_at": "2027-01-14T07:59:00+08:00",
+      "expires_at": "2027-01-21T07:59:00+08:00",
       "eligibility": {
-        "service_availability": "全球 Kaggle 平台可用。",
-        "account_eligibility": "具合法行為能力之全球開發者、學者、學生（遵循 Kaggle 標準規約）。",
-        "billing_country": "全球（含台灣，免信用卡）。",
-        "identity_residency": "排除受美國制裁地區；台灣合法適用。",
-        "terms_restrictions": "不可多帳號作弊，嚴格禁止私人代碼共享。",
-        "taiwan_note": "台灣參賽者享有完全合法報名與獎金電匯受領資格。"
+        "service_availability": "正式規則向美國及全球居民開放，但排除列明地區及受美國出口管制/制裁的人或實體；不保證任何個人帳號通過。",
+        "account_eligibility": "須Kaggle帳號並在入賽截止前接受規則；原則為18歲或居住地成年年齡孰高（主辦同意及監護人同意例外）。代表機構須獲授權，主辦及關係企業人員可參賽但不得獲獎。",
+        "billing_country": "規則只證明入賽或獲獎不要求購買，不推導免信用卡/台灣付款保證。獎金須資格及稅務文件，外國居民可能需W-8BEN，稅費自負。",
+        "identity_residency": "排除Crimea、DNR、LNR、古巴、伊朗、北韓及受美國出口管制/制裁者；台灣未列地區排除。虛假身分/居住資訊可取消資格。",
+        "terms_restrictions": "每人單一帳號/單隊，最多5人；禁隊外私下共享、偽造代理帳號及轉讓獎金。資料與得獎方案列Apache 2.0，外部資料/LLM/工具須符合可取得性與合理成本規則，得獎須提交可重現文件。",
+        "taiwan_note": "Yes僅表示全球規則未把台灣列為排除地區，仍有年齡、帳戶、制裁、機構及領獎審查；不能解讀為完全合法或保證收到獎金。規則另載無法發獎的國家不符領獎資格；台灣個案/法律未核。"
       },
       "unknowns": [
-        "最終決賽提交驗證集精確關閉時間點"
+        "台灣得獎者實際匯款、扣繳、身分驗證與法律/監管適用未核",
+        "主榜與額外獎能否同時獲得未找到明確規定，不推算個人最大利益",
+        "個人GPU及外部AI工具的實際可用量/費用未核；獎金池不是使用額度"
       ],
       "sources": [
         {
@@ -87652,11 +87679,29 @@
           "scope": "賽事總獎金池US,000與賽程規範",
           "evidence": "Google Quantum AI launches a ,000 prize pool competition on Kaggle challenging participants to optimize fault-tolerant quantum circuits using AI agents.",
           "accessed_at": "2026-11-15T02:11:00+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/prizes",
+          "scope": "瀏覽器實讀獎金分級、子獎項公開要求與Timeline",
+          "evidence": "2026-11-15主agent實讀：主榜50,000/25,000/10,000/5,000/5,000/5,000，額外50,000＝里程碑10,000、最長領先10,000、三單項合計30,000。Timeline：11/20里程碑、1/4最長領先、1/13入賽及組隊、1/20最終交件；均23:59 UTC。子獎項需依規定公開notebook及資料直到最終截止。10/22為Start Date，不是公告日。",
+          "accessed_at": "2026-11-15T15:18:30+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules",
+          "scope": "正式規則：總池、免費入賽、地域/年齡/帳戶、授權及領獎文件稅費",
+          "evidence": "2026-11-15主agent瀏覽器實讀：TOTAL PRIZES AVAILABLE $150,000、首獎$50,000；NO PURCHASE REQUIRED TO ENTER OR WIN。最多5人、5提交/日、2最終提交；全球開放但列排除地區及制裁限制，台灣未列；18歲/成年孰高、機構授權及真實身分。資料/得獎license Apache 2.0。通知1週回覆、接受文件2週交回，收到文件後約30日發獎；稅費自負，可要求W-9/W-8BEN，不可轉讓獎金。這是服務/比賽條款，不是台灣法律來源。",
+          "accessed_at": "2026-11-15T15:18:30+08:00"
+        },
+        {
+          "url": "https://opensource.googleblog.com/2026/10/announcing-verifiable-quantum-circuit-compilation-competition-on-kaggle.html",
+          "scope": "正式公告日期與競賽官方入口",
+          "evidence": "Wednesday, October 21, 2026；Google Quantum AI作者公布Kaggle competition，三個benchmarks及Apache 2.0 reference baseline/standalone verifier。公告連到google-verifiable-quantum-circuit-compilation。",
+          "accessed_at": "2026-11-15T15:18:30+08:00"
         }
       ],
-      "priority_score": 28.0,
+      "priority_score": 21.1,
       "priority_tier": "S",
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知"
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知"
     },
     {
       "id": "mistral-ai-startup-grant-program",
@@ -88729,17 +88774,101 @@
           "accessed_at": "2026-11-15T12:11:08+08:00"
         }
       ]
+    },
+    {
+      "id": "loom-classroom-education-seventyfive-off-business-ai",
+      "title": "Loom教育折扣：Classroom 75% off、學術機構50% off，均含Business + AI",
+      "summary": "Atlassian官方授權FAQ把Loom Business + AI列入Classroom 75% off及Academic 50% off清單；這是付費折扣，不是免費AI。須教育身分、學校信箱及Goodstack核驗，核准由Atlassian裁量。Loom支援頁列16歲以上中小學/高教師生，母品牌Classroom FAQ僅列大學生、研究生與教師，中小學生資格仍有差異。台灣與折扣後結帳金額未核；舊免費教育方案不再接受新申請。",
+      "record_type": "opportunity",
+      "status": "terms_conflict",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "value"
+      ],
+      "taiwan": "Unknown",
+      "regions": [],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "usage_type": "Education discount on paid AI video tools",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cost_note": "非免費。Loom.com公開Business + AI月繳牌價US$24/使用者/月；教育折扣後價格、稅額、適用週期及席次以核准報價為準，不自行乘折扣當報價。Loom.com年繳按付費使用者、Atlassian.com年繳按使用者級距，不能直接混算。",
+      "cancellation": "官方Business/Business+AI說明為預設自動續訂；Workspace Settings→Plan and Billing→Manage Subscription→Cancel Subscription完成降級流程後，當期結束才降級並停止後續收費。教育折扣續期與已整合Atlassian帳務的個別操作未核，不保證退款。",
+      "usable_duration": "未公布教育折扣統一截止日或固定效期；Atlassian保留修改資格或停止折扣授權的權利。",
+      "access_risk": "需先有學校信箱的有效Loom帳號並經Goodstack核驗；申請可被拒，不能假冒學籍或借用帳號。一般Business折扣不等於取得Business + AI功能。",
+      "eligibility": {
+        "service_availability": "官方教育支援頁、授權FAQ與定價頁可讀；未送出申請、未測帳戶內核准或AI使用。",
+        "account_eligibility": "Classroom供課堂/學習用途：母品牌FAQ列合資格大學生、研究生及教師；Loom頁另列認可中小學/高教師生、至少16歲且用學校官方信箱。Academic為合資格教育機構另一路徑。",
+        "billing_country": "Loom.com公開支援信用卡月繳/年繳；本輪未核台灣付款、幣別、稅費、教育報價與最低席次。",
+        "identity_residency": "Goodstack核驗、Atlassian最終裁量；未找到可直接確認台灣學校或居住身分適用的國別清單。",
+        "terms_restrictions": "Classroom須課堂或學習用途，與Academic機構授權分開申請；進階AI須Business + AI。折扣不保證免費或不限AI用量，Atlassian可修改資格或終止折扣。",
+        "taiwan_note": "Unknown：官方列教育角色不等於台灣個案一定通過；未註冊、申請或付款，不作台灣法律結論。"
+      },
+      "unknowns": [
+        "Classroom中小學生資格：Loom頁primary/secondary/tertiary與母品牌FAQ的collegiate/graduate/teachers措辭不一致",
+        "台灣學校與個人能否通過Goodstack核驗",
+        "折扣適用月繳/年繳、有效期、續期、最低席次、併用及實際結帳含稅價",
+        "Business + AI實際AI額度/公平使用限制；Unlimited videos不是Unlimited AI",
+        "教育退款條件、整合Atlassian後取消介面與個案法律/監管適用"
+      ],
+      "verified_at": "2026-11-15T15:16:14+08:00",
+      "discovered_at": "2026-11-15T15:16:14+08:00",
+      "announcement_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-16T15:00:00+08:00",
+      "verification_scope": "2026-11-15實讀Loom教育支援頁、Atlassian授權FAQ的Academic/Classroom及裁量段、Loom定價與取消自動續訂文件：核75%/50%折扣含Business + AI、付費/續訂、資格差異及舊免費方案不收新戶。未登入或送表、未核台灣個案、教育實際報價/AI額度及法律。",
+      "sources": [
+        {
+          "url": "https://support.atlassian.com/loom/docs/loom-education-discount-verification/",
+          "scope": "教育資格、學校信箱、Goodstack、AI方案及舊免費途徑",
+          "evidence": "The legacy Free Education Plan is no longer available to new applicants；Advanced AI features require Business+AI。列teacher/professor/student、accredited primary/secondary/tertiary、at least 16、official school email。一般academic up to 50% off、classroom 75% off；申請由Goodstack核驗，未操作申請。",
+          "accessed_at": "2026-11-15T15:16:14+08:00"
+        },
+        {
+          "url": "https://www.atlassian.com/licensing/purchase-licensing",
+          "scope": "Classroom與Academic折扣清單、資格及核准裁量",
+          "evidence": "Classroom供eligible collegiate students, graduate students, and teachers用於classroom or learning activities，75% off list price清單含Loom - Business/Business + AI；Academic合資格教育機構50% off清單含Loom - Business/Business + AI/Enterprise。Goodstack核驗但Atlassian determines qualification at its sole discretion，可停止或修改折扣資格。用量式服務依商業方案同等allowances，不代表AI無限。",
+          "accessed_at": "2026-11-15T15:16:14+08:00"
+        },
+        {
+          "url": "https://www.loom.com/pricing",
+          "scope": "Business + AI月繳公開牌價、AI功能及兩個購買入口的年繳差異",
+          "evidence": "Business + AI US$24 per user/month，列AI Workflows、Auto Titles/Summaries/Chapters/Tasks、Filler Word/Silence Removal。FAQ：Loom.com年繳按distinct paid users，Atlassian.com按user tiers；信用卡月繳或年繳。未將不限影片數量推成不限AI，未把牌價乘折扣當正式教育報價。",
+          "accessed_at": "2026-11-15T15:16:14+08:00"
+        },
+        {
+          "url": "https://support.atlassian.com/loom/docs/disable-auto-renewals-for-business-or-business-ai-subscriptions/",
+          "scope": "Business/Business+AI預設續訂及取消生效點",
+          "evidence": "By default subscriptions renew on renewal date；Workspace Settings的Plan and Billing→Manage Subscription→Cancel Subscription完成downgrade flow。當期仍可用，renewal時降級且不再扣款；Cancel my downgrade可恢復自動續期。教育個別續約報價未載明。",
+          "accessed_at": "2026-11-15T15:16:14+08:00"
+        }
+      ],
+      "priority_score": 12.6,
+      "priority_tier": "D",
+      "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-15T14:16:55+08:00",
+  "latest_research_at": "2026-11-15T15:20:26+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T14:05:18+08:00",
-    "completed_at": "2026-11-15T14:16:55+08:00",
+    "started_at": "2026-11-15T15:05:20+08:00",
+    "completed_at": "2026-11-15T15:20:26+08:00",
     "reviewed_ids": [
-      "kaggle-neurips-2026-smart-buildings-competition",
-      "goodmem-cloud-fourteen-day-no-card-trial"
+      "kaggle-google-quantum-circuit-optimization-2026",
+      "serpkite-free-search-api-credits"
     ],
-    "new_ids": [],
+    "new_ids": [
+      "loom-classroom-education-seventyfive-off-business-ai"
+    ],
     "attempted_failed_ids": [],
     "unreviewed_existing_count": 1091
   }
