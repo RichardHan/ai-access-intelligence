@@ -3617,3 +3617,61 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ③ `ugreen-ai-nas-hackathon-2026`（台北時間 2026-11-16 15:45 第一輪徵件截止）：確認初審截止後評審階段公告與入圍遠端 NAS 實機安排。來源 https://nas.ugreen.com/。
 ④ `stepfun-stepaudio3-music-gen-preview-nov8`（2026-11-17 11:59:59 截止）與 `taoyuan-ai-productivity-online-courses-115`（2026-11-17 最後視訊場次）：確認 StepFun preview 是否正式改為收費版及桃園視訊課程執行現況。來源 https://www.stepfun.com/、https://youth.tycg.gov.tw/。
 ⑤ `aocai-youth-ai-training-2026` 與 `ant-ling-ling-3-2-flash-free-two-weeks`：查核教育部/署方青年培訓計畫名額與報名動態，以及螞蟻百靈 Flash 免費 API 專案狀態。來源 https://serv.gcis.nat.gov.tw/AOCAI/、https://ling.alipay.com/。
+
+---
+
+## 2026-11-15 11:05–11:22 Asia/Taipei 維護紀錄
+
+### 基準、範圍與分工
+
+- 開場實際對錶 2026-11-15T03:05:21Z／台北11:05:21；`main` HEAD `50d3f9c`，工作樹乾淨，origin為RichardHan/ai-access-intelligence，遠端main同HEAD，無未完成PR。Pages既有方式為main根目錄legacy build，未更動發布設定。
+- 偵測到另一個同工作樹Codex程序，但沒有維護鎖或未提交修改，不能僅憑程序存在判定其正在維護。以本輪PID取得`tools/round_lock.py`鎖；研究員不改共享JSON、不提交。
+- N=1,091（875 opportunity／50 policy／166 watchlist）；佇列可行動1,001、嚴格逾期0、7日內截止12（9筆在冷卻）、retry 0、24小時未核739、12小時內已核156筆可行動紀錄。全庫含非行動紀錄的12小時內已核數為165。
+- 不重查09:10批次20筆；QNX例外是金額證據缺字及獎金池被填成個人利益的新訊號。Deno與Figma是仍可行動且缺`verification_scope`的最舊一批（11/02），缺口而非排程到期是提前複核原因。
+- 使用3個預設Task研究員：A QNX高風險1筆、B Deno/Figma證據缺口2筆、C非營利/教育去重。未指定或宣稱使用Terra／Gemini。三者均已交付；主agent重讀重大變更的直接官方來源並統一整合。
+- C的正式候選為Lucid、HubSpot、Loom，但研究員另做其他供應商預篩，超出「最多考察3供應商」的原訂邊界；不把預篩算成既有複核。下輪限制應將預篩也計入供應商上限，不以「正式候選」另切配額。
+
+### 計數與資料成果
+
+- R=3：`deno-deploy-free-tier`、`figma-education-ai-credits`、`qnx-global-hackathon-2026`。
+- A=1 opportunity：`lucid-education-free-ai-beta`；policy=0、watchlist=0。結果1,092筆（876／50／166）。
+- U=N−R=1,088；整筆追查失敗attempted=0。另有新紀錄Lucid的1個條款來源未成功讀到正文，不計整筆失敗，也不宣稱完整條款已核。
+- `updated_at`、`latest_research_at`與批次完成時間均為11:22:07；未複核既有紀錄不刷新時間。只追加4筆政策歷史（3更正、1新增基準），不改寫舊歷史。
+
+### 會影響決策的更正與新增
+
+1. Deno：官方[2026-10-09公告](https://deno.com/blog/cloudflare)明訂再營運六個月後關閉，[定價頁](https://deno.com/deploy/pricing)寫2027年4月終止。由conditional改sunset_announced，退出可行動專區但保留可搜尋歷史；僅存`expiry.date=2027-04`，不猜4/9或4/30。Free仍列每月1M requests／20GiB／10 CPU hr／150 GiB-hr，非模型額度。公告僅承諾付費者遷移支援，不推論免費者絕無支援。撤回「Free不含Sandbox」斷言：歷史[changelog](https://docs.deno.com/deploy/changelog/)曾開放全用戶試用，但不證明現行計費。KV/儲存超額、驗卡預授權、台灣帳戶仍未知。
+2. Figma：[教育AI點數頁](https://help.figma.com/hc/en-us/articles/37611757713431-AI-credits-on-the-Education-plan)確認每人3,000點/月不共享、不累積；耗盡須等重置或改付費方案，不能直接在Education加購。升級原團隊後其他教育成員不能免費協作。[教育說明](https://help.figma.com/hc/en-us/articles/360041061214-Figma-for-Education)補到期降Starter、4檔以上鎖定，非自動轉付費；AI不含K–12/高中。台灣仍Unknown。僅採主agent重讀範圍，未刷新舊高教行銷頁及個別操作耗點證據。
+3. QNX：[主頁](https://qnx.devpost.com/)及[規則](https://qnx.devpost.com/rules)確認現金總池50,000美元、首獎10,000美元，並非每人額度，`usable_benefit_usd=null`、quota=UNKNOWN。規則要求提交時即公開開源repo，非獲獎後才開源；排除含Brazil，不只是OFAC。台灣僅未列排除清單、仍須符合年齡與其他資格，不是法律合規結論。截止12/15 14:00 EST（台北12/16 03:00）未變。[QNX Everywhere](https://qnx.software/en/developers/get-started/qnx-everywhere)須myQNX與授權申請處理、限非商業，QEMU可用不是贈送硬體或GPU。保留09:10歷史缺字，另追加更正。
+4. 新增Lucid：[免費教育帳號](https://help.lucid.co/hc/en-us/articles/360049831771-Sign-up-for-a-free-Educational-account)供K–12/高教師生，需機構信箱；[AI說明](https://help.lucid.co/hc/en-us/articles/30324063850516-Boost-productivity-with-Lucid-AI)列Free方案、Beta及未來可能收費。沒有公布固定上限不等於不限量。「optimized for English only」是英文最佳化，不採研究員較強的「英文限定」說法。AI表未單列Education，台灣學校與個別功能核准未知；不保證永久免費、免卡或無續費。
+- 依`tools/prioritize.py`的score/tier_of/note_of重算相關欄位：Deno 18.6/B→15.9/D，QNX 28/S→23.8/S，Figma18.6/B不變，Lucid17.3/B。衍生評分不計外部複核。
+
+### 未納入、證據缺口與可重用教訓
+
+- HubSpot非營利：[官方資格](https://www.hubspot.com/nonprofit-eligibility-criteria)限定澳洲、紐西蘭、美國、加拿大，故本輪不新增。Loom：[教育折扣說明](https://support.atlassian.com/loom/docs/loom-education-discount-verification/)稱舊免費教育方案停止新申請，進階AI需Business+AI；折扣適用性與最終價未確認，不新增薄弱線索。
+- Lucid[補充AI條款](https://lucid.co/supplemental-AI-terms)以read及自有瀏覽器均只有外殼與可及性說明。沒有將失敗寫成條款核實；缺口、失敗時間和路線保留在source/unknowns，安排11/22重追而非延後一整月。未聯絡官方或操作帳號。
+- QNX規則read回403，自有瀏覽器能讀全文；403只代表取用方式失敗。Deno遷移支援只提付費用戶不能反推免費用戶明文不准；Figma加購要求升級不能縮寫成「可加購」。
+- 研究員指出歷史金額缺字還涉及`kaggle-google-agent-harness-pele-2027`、`kaggle-google-quantum-circuit-optimization-2026`、`kaggle-neurips-2026-smart-buildings-competition`、`kaggle-name-that-llm-attribution-challenge`、`google-buildhybridai-2026-firebase-ai-logic`、`coding101-2027-university-software-contest`、`azure-startups`。本輪未核這些金額，不批次推補、不改歷史。主agent另直接看到Solar標題「US,000」；列下輪優先。
+- 大JSON先索引再讀候選；本輪以記憶體組資料、產生最小hashline補丁交給edit，避免shell展開`$`與全檔格式重寫。工具對大檔read遺漏snapshot錨點，已回報；由AST預覽取得工具產生的錨點後撤回預覽，再用edit整合，未套用AST提案。
+
+### 本輪唯一品質改善：同日同筆數的首頁摘要漂移
+
+- 現況證據：08:05摘要仍描述Solar與Opik，但`last_research_run`已為09:05的QNX批次；兩輪皆20筆，舊測試只比日期與R，無法發現。瀏覽器同時看到摘要U=1069、統計U=1070。
+- 最小修正：更新本輪摘要，`tests/validate.py`要求scope包含批次台北完整分鐘時間窗`YYYY-MM-DD HH:MM–YYYY-MM-DD HH:MM Asia/Taipei`，直接由started_at/completed_at計算；不改schema、前端或框架。
+- 回歸證據：使用現存錯誤摘要執行新增斷言，確實拒絕；相同日期、相同20筆、正確09:05–09:10時間窗則接受。未只測字串存在。下輪更新scope時務必同步時間窗。
+
+### 發布前驗證
+
+- `python3 tests/validate.py`通過1,092筆（S/A/B/C/D=173/188/129/276/110）；`node --check app.js`、`node tests/filters.cjs`及`git diff --check`全部通過。
+- 保全檢查：恰3筆既有ID改動、1筆新增；所有舊來源URL保留；2,547筆既有政策歷史逐筆不變、追加4筆；無未核實ID的時間刷新。
+- 本機瀏覽器實際操作：本輪更新4張卡與R3/A1/U1088一致；關鍵字搜尋、台灣資格Unknown/Yes、免費篩選、截止排序、載入更多24→48均可用。Deno全庫可搜尋、免費專區不出現；Figma加購限制、QNX個人額度更正、Lucid來源與條款缺口皆在卡片顯示。
+- 桌面1365px及手機390px的DOM寬度無水平溢出，瀏覽器錯誤清單為空。本環境截圖回「Image reading is disabled」，故上述為DOM／互動驗證，沒有宣稱完成像素外觀審查；本輪未改前端。
+- 驗證後依既有main分支發布；遠端commit、Pages工作與公開資料版本在發布後分別確認，最終發布結果以本輪回報及GitHub部署紀錄為準。
+
+### 下一輪優先（最多5項）
+
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：今日18:00排程後核11/15截止與M11W3換檔；[M11W2](https://autoclaw.z.ai/blog/news/M11W2/)、[M11W3](https://autoclaw.z.ai/blog/news/M11W3/)、[changelog](https://autoclaw.z.ai/changelog)。09:10已核，無訊號勿提前再刷。
+2. `tencent-hy4-workbuddy-codebuddy-free-window-nov4-15`：今日18:00起追11/15免費窗終了及產品額度；[WorkBuddy定價](https://www.workbuddy.cn/pricing/)、[CodeBuddy定價](https://www.codebuddy.cn/pricing/)、[WorkBuddy更新](https://www.workbuddy.cn/docs/workbuddy/Changelog)。
+3. `kaggle-solar-filament-segmentation-2026`：20:00排程、11/15 23:59Z截止將至且標題金額缺字；[官方競賽](https://www.kaggle.com/competitions/filament-segmentation-2026)。核年份、規則、精確截止、獎金與GPU是否真的適用，不憑舊摘要補數字。
+4. `lucid-education-free-ai-beta`：11/22追補充AI條款正文、教育帳號功能對應及台灣學校信箱；[AI條款](https://lucid.co/supplemental-AI-terms)、[教育說明](https://help.lucid.co/hc/en-us/articles/18624964476692-Welcome-to-Lucid-for-Education)。可求官方提供可讀版本，但本任務未代寄信。
+5. `airtable-free-plan-monthly-ai-credits`：研究員發現新舊文件矛盾；[非營利教育FAQ](https://support.airtable.com/docs/nonprofit-and-educational-plans-faqs)排除AI，對照[AI billing](https://support.airtable.com/docs/en/airtable-ai-billing)稱所有方案含AI。先重讀判別方案，不能把Team一般額度直接套到折扣版。

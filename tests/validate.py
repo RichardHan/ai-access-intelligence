@@ -366,6 +366,12 @@ assert _m, 'top-level scope must state how many existing records this batch revi
 _scope_reviewed=int(_m.group(1).replace(',',''))
 assert _scope_reviewed==len(reviewed), f'top-level scope says it reviewed {_scope_reviewed} records but last_research_run.reviewed_ids has {len(reviewed)} — update the homepage sentence with the batch'
 assert run['started_at'][:10] in _scope, f'top-level scope does not mention this batch date {run["started_at"][:10]} — the homepage is showing an older round'
+# 同日兩輪若都是複核 20 筆，日期與筆數無法攔住沿用上一輪摘要。
+# 首頁摘要須包含完整批次時間窗（台北時間），避免 09:05 批次仍顯示 08:05。
+_scope_start=datetime.datetime.fromisoformat(run['started_at']).astimezone(TZ_TPE)
+_scope_end=datetime.datetime.fromisoformat(run['completed_at']).astimezone(TZ_TPE)
+_scope_window=f"{_scope_start:%Y-%m-%d %H:%M}–{_scope_end:%Y-%m-%d %H:%M} Asia/Taipei"
+assert _scope_window in _scope, f'top-level scope must contain this batch window ({_scope_window}) — same-day counts alone cannot detect a stale round'
 _m=_re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
 if _m: assert int(_m.group(1).replace(',',''))<=len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
 # scope 只描述「這一輪做了什麼」。`tools/prioritize.py` 舊版會在每次執行時把

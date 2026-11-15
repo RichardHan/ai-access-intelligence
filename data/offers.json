@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T09:10:00+08:00",
-  "scope": "2026-11-15（08:05–08:15 Asia/Taipei）局部複核 20 筆最久未核既有紀錄、新增 1 筆機會（政策 0、觀察線索 0）、整筆追查失敗 0 筆；其餘 1069 筆既有紀錄未於本輪重查。本輪複核 Opik Free Cloud、Langfuse Hobby、Arize AX Free、JAPAN AI、Oracle Cloud Free Tier、Leap Free、GitHub Copilot Pro、Oracle Startup Growth Engine、AnythingLLM Desktop、SciSummary、Voicenotes Basic、Murf、Trigger.dev YC、Anyscale、Streamlit Community Cloud、Mintlify Startup、Mintlify OSS、Supernormal Free、tl;dv Free、Monica Free 等，清理 22 處歷史重複來源網址；並首度收錄 Solar Filament Segmentation Challenge 2026 太陽磁絲 AI 分割大賽（總獎金 US,000）。",
+  "updated_at": "2026-11-15T11:22:07+08:00",
+  "scope": "2026-11-15 11:05–2026-11-15 11:22 Asia/Taipei：局部複核 3 筆既有紀錄、新增 1 筆機會（政策0、觀察線索0）、整筆追查失敗0筆；其餘1088筆既有紀錄未完成本輪複核。更正Deno Deploy終止公告、Figma教育點數加購路徑與QNX獎金/開源/資格；新增Lucid免費教育帳號與AI Beta，台灣資格及補充AI條款仍待核。並修正同日同筆數批次的首頁摘要漂移。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -52103,8 +52103,8 @@
     },
     {
       "id": "deno-deploy-free-tier",
-      "title": "Deno Deploy Free：每月1M requests／AI應用代管",
-      "summary": "Deno Deploy Free US$0/月，1M requests、20GiB egress、10 CPU小時與150GiB-hours記憶體等限額；非免費AI模型推論。官方歷史changelog稱Free組織未連卡驗證前額度受限，requests/頻寬/CPU/記憶體超限則應用暫停至下一計費週期；儲存與KV超額行為未確認。台灣帳戶及驗卡預授權未核。",
+      "title": "Deno Deploy Free：每月1M requests，已公告2027年4月終止",
+      "summary": "Deno Deploy Free 仍列 US$0/月、1M requests、20GiB egress、10 CPU小時及150GiB-hours記憶體，屬應用代管而非模型推論。官方2026-10-09公告再營運六個月後關閉，定價頁明示2027年4月終止；僅明文承諾付費用戶的遷移支援，未保證免費用戶。歷史changelog規定連卡驗證前僅受限額度，requests/頻寬/CPU/記憶體超限暫停至下一計費週期。台灣帳戶、驗卡預授權、KV/儲存超額與Sandbox計費未核。",
       "categories": [
         "FREE",
         "HIGH-QUOTA"
@@ -52128,34 +52128,36 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "Free主要運算額度超限後應用暫停至下個計費週期；其他資源超限與刪除方式未核。",
-      "usable_duration": "Free方案未列結束日期；每月requests/KV額度",
-      "access_risk": "免費層未連卡驗證前額度受限；requests/頻寬/CPU/記憶體超限會暫停應用。舊changelog政策是否後續調整待追；不含Sandbox。",
-      "verified_at": "2026-11-02T17:08:00+08:00",
+      "usable_duration": "已公告2027年4月終止，確切日未公布；目前Free定價頁仍列每月額度。",
+      "access_risk": "已公告終止，應規劃遷移；公告僅承諾付費用戶遷移支援，免費層支援未知。連卡驗證前額度受限，主要運算超限暫停。changelog載明閒置超過30天的版本自動停用，再閒置7天刪除。Sandbox是否免費及台灣個案未核。",
+      "verified_at": "2026-11-15T11:15:59+08:00",
       "discovered_at": "2026-10-25T03:49:56+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-10-09",
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-02T17:08:00+08:00",
+      "review_cadence": "monthly_or_new_signal",
+      "next_review_at": "2026-12-15T11:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Deno Deploy serverless JavaScript/TypeScript代管服務Free層：1M requests/月、20GiB egress、10h active CPU、150GiB-hr memory、10GiB revision storage、10 apps、1 concurrent build、1GiB KV、1M read/500K write units/月；5 domains；community support。",
         "account_eligibility": "Free供個人與小型專案；官方2025-09 changelog稱連結信用卡完成組織驗證前額度受限，不應把全部標示上限視為免卡即得。",
         "billing_country": "Free標示US$0/月；完整Free限額需連卡驗證，台灣卡及暫時預授權未核。主要運算超限暫停應用。",
         "identity_residency": "官方價格頁未列地區/身分限制；個別台灣註冊/服務可用性未測。",
-        "terms_restrictions": "Free不含Sandbox、wildcard subdomains與email support；CPU只在執行時使用，idle app約20–30秒後自動停止。官方定價頁標示Deno is joining Cloudflare，方案/服務可能變更。",
+        "terms_restrictions": "Free不含wildcard subdomains及email support；idle app約20–30秒後自動停止。2025-12-18 changelog稱Sandbox曾開放所有Deploy用戶試用，不能沿用「Free不含Sandbox」的斷言，其現行費用未知。2026-10-09已公告Deploy終止。",
         "taiwan_note": "未找到官方台灣排除，但未實測台灣帳戶、付款或app部署；不等於模型服務在台可用或法律結論。"
       },
       "unknowns": [
         "KV與儲存超額行為、未連卡實際限額及驗卡預授權未核",
         "台灣帳戶註冊、部署區域/資料所在地和付費方式",
-        "加入Cloudflare後Deno Deploy免費額度是否變更"
+        "2027年4月確切關閉日、免費層新註冊是否提前停止及遷移支援",
+        "Sandbox現行可用性與計費；2025-12-18試用公告不等於現行免費承諾"
       ],
       "sources": [
         {
           "url": "https://deno.com/deploy/pricing",
-          "scope": "本次局部複核Free代管價格與額度",
-          "evidence": "Free為US$0/月，包含每月100萬requests、20 GiB egress、10 CPU小時及150 GiB-hours記憶體；非模型推論。未核台灣個案、驗卡與法律。",
-          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00"
+          "scope": "本次Free定價、配額與終止橫幅",
+          "evidence": "Free $0/month：1M requests、20GiB egress、10 CPU hr、150GiB-hr memory；頁首 Deno Deploy will be sunset in April 2027。未列確切日或台灣資格。",
+          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00",
+          "accessed_at": "2026-11-15T11:15:59+08:00"
         },
         {
           "url": "https://docs.deno.com/deploy/",
@@ -52167,9 +52169,16 @@
         {
           "url": "https://docs.deno.com/deploy/changelog/#september-26th-2025",
           "label": "Deno官方Deploy變更日誌",
-          "scope": "連卡驗證前限制及主要運算額度超限暫停；為舊公告，後續政策待核",
-          "evidence": "2026-10-26查閱2025-09-26公告：Free組織連卡驗證前受限；requests、bandwidth、CPU或memory-time超限暫停apps至下個billing cycle。",
-          "accessed_time_range": "2026-10-26T18:48:25+08:00"
+          "scope": "歷史changelog：主要運算超限暫停、連卡前受限、Sandbox試用及閒置刪除",
+          "evidence": "2025-09-26：Free超出requests、bandwidth、CPU或memory time暫停至下個billing cycle，Pro才列超額帳單；驗證前restricted Free limits，需linking a credit card。2025-12-18：Sandbox開放所有Deploy用戶試用；閒置30天停用、再7天刪除。這些歷史條目不證明KV/儲存超額與Sandbox現行計費。",
+          "accessed_time_range": "2026-10-26T18:48:25+08:00",
+          "accessed_at": "2026-11-15T11:15:59+08:00"
+        },
+        {
+          "url": "https://deno.com/blog/cloudflare",
+          "scope": "2026-10-09終止公告及遷移支援範圍",
+          "evidence": "Deno Deploy will continue operating for six months before shutting down. We will provide migration support for paying customers moving to Cloudflare Workers. 未保證免費用戶遷移支援；未給確切關閉日。",
+          "accessed_at": "2026-11-15T11:15:59+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -52178,11 +52187,16 @@
         "additional_cost_usd": null,
         "eligibility_note": "不推薦跨區規避；台灣帳戶可用性未核。"
       },
-      "status": "conditional",
+      "status": "sunset_announced",
       "legal_status": "not_verified",
-      "priority_score": 18.6,
-      "priority_tier": "B",
-      "priority_note": "官方來源·需符合條件·免費·台灣未標記·≤30分鐘"
+      "priority_score": 15.9,
+      "priority_tier": "D",
+      "priority_note": "官方來源·已公告終止·免費·台灣未標記·≤30分鐘",
+      "expiry": {
+        "date": "2027-04",
+        "text": "定價頁公告2027年4月終止；2026-10-09公告再營運六個月後關閉，未公布確切日期。"
+      },
+      "verification_scope": "2026-11-15 主 agent 實讀定價、Cloudflare整合公告與Deploy changelog：核Free月額度、2027年4月終止、遷移支援措辭、連卡前受限、主要運算超限暫停及閒置版本刪除。未核台灣帳戶、付款預授權、KV/儲存超額、Sandbox計費或法律；未操作部署。"
     },
     {
       "id": "vultr-match-ai-compute",
@@ -52584,7 +52598,7 @@
     {
       "id": "figma-education-ai-credits",
       "title": "Figma Education：教育版免費，每人每月3,000 AI credits",
-      "summary": "Figma官方高等教育頁提供學生與教職員免費 Education plan，教育團隊含Professional方案功能；AI僅提供高等教育與核准bootcamp用戶（不含K-12/高中），官方AI說明列每位使用者每月3,000 credits，按月重置、不共享、不累積。高等教育學生資格1年、教職員2年後需重新申請。台灣是否可核准與AI功能地區供應未由官方頁明確確認，故taiwan=Unknown。",
+      "summary": "Figma Education提供學生與教職員免費教育方案；AI工具僅限高等教育及核准bootcamp，不含K-12/高中。每人每月3,000 AI credits，獨立、不共享、不累積。額度用完須等重置，或改到可加購點數的付費方案，不能直接在Education加購。高教學生資格1年、教職員2年後須重驗；到期降為Starter，團隊檔案超過3個會鎖定。官方只列select regions，台灣資格與AI供應維持Unknown。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -52608,22 +52622,22 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": null,
+      "cancellation": "教育資格到期：非owner成員降為view-only；owner團隊3檔以內轉免費Starter，4檔以上降Starter並鎖定，可下載/移檔、減至3檔、重驗或另選付費升級。官方描述為免費降級，非自動轉付費。",
       "usable_duration": "高教學生1年、教職員2年；核准bootcamp學生6個月、教師2年，期滿須重驗；AI點數每月重置不累積",
       "access_risk": "需教育資格審核，僅部分地區可用；台灣及個別agentic操作點數未核",
-      "verified_at": "2026-11-02T17:08:00+08:00",
+      "verified_at": "2026-11-15T11:15:59+08:00",
       "discovered_at": "2026-10-25T04:47:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-02T17:08:00+08:00",
+      "next_review_at": "2026-12-15T11:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "官方教育說明確認Higher education與approved bootcamp用戶可用AI tools；K-12及高中教育版不包含AI工具。地區限select regions，台灣未明列。",
-        "account_eligibility": "學生或教職員須在結構化課堂、以學校信箱申請；至少13歲，國際使用者須高於所在地同意年齡。教育者僅教職身分合格，非教學職員不合格。",
+        "account_eligibility": "課堂中在學學生或教職員以學校信箱申請，非教學職員不合格；說明中心要求本人已達可自行同意年齡（不能由家長代同意）。舊高教行銷頁另列至少13歲及所在地同意年齡，不應只看13歲門檻。",
         "billing_country": "教育方案與每月AI credits免費；本次官方頁未說明付款方式要求。",
         "identity_residency": "高教須登入與學校網域相符的email並經SheerID驗證；bootcamp由核准課程管理員代為驗證，不可自行驗證；改email會撤銷教育狀態。",
-        "terms_restrictions": "僅高教/核准bootcamp教育用戶可用AI工具；每人3,000點/月獨立且不結轉，耗盡後需等重置或選購更多點；非所有AI功能均消耗點數。",
+        "terms_restrictions": "僅高教/核准bootcamp教育用戶可用AI工具；每人3,000點/月獨立且不結轉，耗盡須等重置或改至可加購點數的付費方案，不能在Education直接加購。升級原團隊後其他Education成員不能繼續免費協作。不可轉售或濫用教育授權；非所有AI功能均耗點。",
         "taiwan_note": "官方頁有非美國教育申請與未列學校人工提交流程，但明示服務僅限select regions，未列臺灣支援與AI功能地域資格，維持Unknown；提交申請不代表核准。"
       },
       "unknowns": [
@@ -52634,9 +52648,10 @@
       "sources": [
         {
           "url": "https://help.figma.com/hc/en-us/articles/37611757713431-AI-credits-on-the-Education-plan",
-          "scope": "本次局部複核教育方案AI點數",
-          "evidence": "每人每月3,000 AI credits，個人分配、不共享、不結轉；未核台灣教育帳戶、付款與法律。",
-          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00"
+          "scope": "本次教育AI月額度及加購路徑",
+          "evidence": "Education users get 3,000 AI credits per month；assigned to each person、reset monthly and don’t roll over。耗盡須等重置或move to a plan；Paid plans can purchase additional AI credits。升級既有團隊後其他教育成員不能免費協作。",
+          "accessed_time_range": "2026-11-02T17:06:02+08:00–2026-11-02T17:09:00+08:00",
+          "accessed_at": "2026-11-15T11:15:59+08:00"
         },
         {
           "url": "https://www.figma.com/education/higher-education/",
@@ -52648,9 +52663,10 @@
         {
           "url": "https://help.figma.com/hc/en-us/articles/360041061214-Figma-for-Education",
           "label": "Figma官方教育資格說明",
-          "scope": "教育版範圍及AI功能限制、資格與審核有效期",
-          "evidence": "2026-10-25 04:47 Asia/Taipei直接查閱：AI tools僅限higher education及approved bootcamp用戶，不供K-12/高中；服務僅在select regions。學生/教職員須在課堂並以學校信箱申請，SheerID驗證；高教資格學生1年、教職員2年。未提交申請或實測核准。",
-          "accessed_time_range": "2026-10-25T04:47:00+08:00–2026-10-25T04:47:00+08:00"
+          "scope": "本次AI資格、地區限制、驗證及到期處理",
+          "evidence": "AI僅higher education/bootcamp，不含K-12/high school；only available in select regions。須本人可自行同意、課堂身分與學校email，高教經SheerID。到期成員view-only；owner團隊降Starter，4檔以上鎖定，3檔以下可用。未核台灣申請。",
+          "accessed_time_range": "2026-10-25T04:47:00+08:00–2026-10-25T04:47:00+08:00",
+          "accessed_at": "2026-11-15T11:15:59+08:00"
         },
         {
           "url": "https://help.figma.com/hc/en-us/articles/33459875669015-How-Figma-AI-credits-work",
@@ -52669,7 +52685,8 @@
       "legal_status": "not_verified",
       "priority_score": 18.6,
       "priority_tier": "B",
-      "priority_note": "官方來源·需符合條件·免費·台灣未標記·≤30分鐘·有資格門檻"
+      "priority_note": "官方來源·需符合條件·免費·台灣未標記·≤30分鐘·有資格門檻",
+      "verification_scope": "2026-11-15 主 agent 實讀Education AI credits及Figma for Education兩頁：核每月3,000個人點數、重置不累積、加購須改付費方案、AI適用教育身分、select regions、SheerID與到期降級鎖檔。未登入、申請、付款、核台灣個案或法律；高教行銷頁與個別操作耗點沿用舊證據。"
     },
     {
       "id": "asus-google-ai-plan-three-month-bundle",
@@ -88403,8 +88420,8 @@
     },
     {
       "id": "qnx-global-hackathon-2026",
-      "title": "QNX Global Hackathon 2026（Devpost）：總獎金 US$50,000+，運用 QNX SDP 8.0 與 AI 工具構建次世代嵌入式系統",
-      "summary": "BlackBerry QNX 官方首屆全球黑客松，總獎金池超過 50,000 美元（首獎 $10,000）。參賽者運用 QNX Everywhere 免費非商業授權（QNX SDP 8.0、Developer Desktop、Hypervisor，支援 Raspberry Pi 5 或 QEMU 模擬器），結合 AI 代理、自動化驅動、機器人醫療、車載移動或開源工具構建嵌入式應用。台灣合格開發者、團隊與機構均可免費報名參賽，2026-12-15 14:00 EST（台北 12/16 03:00）截止交件。",
+      "title": "QNX Global Hackathon 2026：US$50,000 總獎金，免費非商業開發授權",
+      "summary": "免費參賽、無須購買；現金總獎金 US$50,000，首獎 US$10,000，並非每位參賽者可領取的額度。提交截止 2026-12-15 14:00 EST（台北 12/16 03:00）。作品須實質運行於或支援 QNX 8.0；提交時即須公開含開源授權的程式庫，提供英文材料或翻譯及不足三分鐘的公開 YouTube 示範。QNX Everywhere 需 myQNX 帳戶及授權申請處理，只供非商業使用；可用 QEMU，不必購買目標硬體。台灣未列競賽排除清單，但個人資格、授權核准及領獎仍須審核，非法律意見。",
       "record_type": "opportunity",
       "status": "active",
       "verification": "Official",
@@ -88421,85 +88438,153 @@
       "recurring_cost_usd": 0,
       "effort_minutes_max": 180,
       "usage_type": "Free hackathon entry and free QNX SDP 8.0 non-commercial developer access",
-      "quota_classification": "HIGH BUT LIMITED",
-      "limited_confirmed": true,
-      "usable_benefit_usd": 50000.0,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "valuation_scenario": "參賽全程免費，享有 QNX SDP 8.0 完整開發環境免費非商業使用權限，並可角逐總額 US$50,000+ 現金大獎與技術團隊深入交流機會。",
+      "valuation_scenario": "獎金池不是每位參賽者可取得的免費額度；不以競賽總獎金估算個人可用利益。",
       "taiwan": "Yes",
       "regions": [
         "GLOBAL"
       ],
       "usable_duration": "2026-11-02 至 2026-12-15 14:00 EST（台北時間 2026-12-16 03:00）",
-      "cost_note": "免費參賽，QNX SDP 8.0 開發套件透過 QNX Everywhere 計畫提供非商業免費存取，無隱藏訂閱費用。",
-      "access_risk": "需具備嵌入式系統或 QEMU/樹莓派開發基礎；提交需包含公開開源 repo、技術架構說明及 3 分鐘以內之示範影片。",
+      "cost_note": "參賽無須購買或付款；QNX Everywhere 提供非商業免費授權，可用 QEMU。自行採購硬體或第三方 API 的費用不包含在免費參賽內；獲獎者自行負擔適用稅費、匯款及換匯費，實際金額未核。",
+      "access_risk": "須自行完成開發與提交。程式庫提交時即須公開開源，材料須為英文或附英文翻譯；不可把競賽獎金池當免費算力額度，未承諾贈 GPU 或硬體。",
       "eligibility": {
-        "service_availability": "全球開放，排除受美國 OFAC 全面制裁國家/地區；台灣合規開放。",
-        "account_eligibility": "需具備 Devpost 帳號及註冊 myQNX 開發者帳號取得 QNX SDP 8.0 下載授權。",
-        "billing_country": "無綁卡要求，參賽與取得開發授權皆為 US$0。",
-        "identity_residency": "年滿 18 歲（或當地成年法定年齡）之個人、團隊或法人組織均可參賽。",
-        "terms_restrictions": "作品必須實質建置或運行於 QNX 8.0（或支援 QNX 8.0 之主機工具鏈）；獲獎需在規定期限內開源程式碼。",
-        "taiwan_note": "Yes；台灣未受限制，開發者可直接以個人或團隊名義免費報名並提交作品。"
+        "service_availability": "線上競賽；正式規則排除 Brazil、Russia、Crimea、Cuba、Iran、North Korea，以及規則所指其他受限制地區。台灣未列名；此為競賽條款判讀，不是法律或監管結論。",
+        "account_eligibility": "免費 Devpost 帳戶；取得 QNX Everywhere 須 myQNX 帳戶、填授權資料，待申請成功處理後取得非商業授權。",
+        "billing_country": "規則明訂 NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN；未操作授權表單或付款。得獎者承擔適用稅費、匯款與換匯費，海外者可能須交 W-8BEN。",
+        "identity_residency": "正式規則要求參賽時年滿18歲；主頁另寫須超過居住地法定成年年齡，不能把兩者寫成擇一。團隊由合格個人組成，已成立組織可參賽並指定代表；主辦、承辦、評審、相關雇員與利益衝突者等不合格。",
+        "terms_restrictions": "提交時即須提供公開且含開源授權的 GitHub/GitLab/Bitbucket 程式庫與可重現建置指引；QNX 8.0 實質使用證據、英文材料或翻譯、公開 YouTube 影片不足3分鐘。開源移植類須在活動期間建立新 repository，不可直接提交 upstream fork。多件作品須實質不同，禁止操縱投票；QNX 工具另受其授權約束。",
+        "taiwan_note": "Yes 僅表示台灣未列官方競賽排除清單；仍須符合年齡、利益衝突、作品與授權條件，獲獎另驗身分。未核台灣個案或適用法律，不能稱「台灣合法合規」。"
       },
       "unknowns": [
-        "入圍評選具體時程依主辦方 Devpost 後續公佈為準",
-        "海外獲獎團隊獎金電匯扣稅標準依各國稅務協定處理"
+        "台灣個別帳戶、QNX 授權申請與領獎文件核准結果未實測",
+        "第三方 API、選配硬體及台灣實際稅費金額未核",
+        "適用法律與監管限制未查核；主辦方規則不是法律來源"
       ],
-      "verification_scope": "2026-11-15 09:10 核對 Devpost 官方比賽頁（qnx.devpost.com）與官方規則全文：確認總獎金 US$50,000+、報名交件截止為 2026-12-15 14:00 EST（台北 12/16 03:00）、台灣合規開放、QNX SDP 8.0 提供免費非商業開發存取。",
-      "verified_at": "2026-11-15T09:10:00+08:00",
-      "next_review_at": "2026-11-25T09:00:00+08:00",
-      "review_cadence": "weekly",
-      "priority_score": 28.0,
+      "verification_scope": "2026-11-15 主 agent 實讀 Devpost 主頁、瀏覽器渲染正式規則及 QNX Everywhere：核現金獎金、截止、免參賽費、排除資格、提交即開源、非商業授權申請及稅費責任。未登入、申請、領取、測試台灣帳戶或查核適用法律。",
+      "verified_at": "2026-11-15T11:12:14+08:00",
+      "next_review_at": "2026-11-16T11:00:00+08:00",
+      "review_cadence": "daily",
+      "priority_score": 23.8,
       "priority_tier": "S",
       "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知",
       "deadline_at": "2026-12-15T14:00:00-05:00",
       "sources": [
         {
           "url": "https://qnx.devpost.com/",
-          "scope": "Devpost 官方黑客松主頁、獎金分配與時間表",
-          "evidence": "2026-11-15 實讀：總獎金 US,000+，五大專案類別，2026-12-15 14:00 EST 最終交件。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "現金總獎金、截止與提交要求",
+          "evidence": "2026-11-15 實讀：$50,000 in cash；Grand Prize $10,000；Dec 15, 2026 @ 2:00pm EST；repository must be public and open source。主頁 $50,000+ in prizes 包含其他非現金獎勵。較早證據 US,000+ 金額缺字，本次更正。",
+          "accessed_at": "2026-11-15T11:12:14+08:00"
         },
         {
           "url": "https://qnx.devpost.com/rules",
-          "scope": "官方競賽規則、參賽資格與合規要求",
-          "evidence": "2026-11-15 實讀：年滿 18 歲個人、團隊或組織均可免費參賽；排除 OFAC 全面制裁國家，台灣合法合規開放參賽；作品需在 QNX 8.0 運行或支援其工具鏈並公開開源。",
-          "accessed_at": "2026-11-15T09:10:00+08:00"
+          "scope": "正式規則§1、3、4、8：資格、免參賽費、提交與獎金責任",
+          "evidence": "2026-11-15 read 403 後以瀏覽器讀取全文：NO PURCHASE OR PAYMENT NECESSARY；18 years or older；排除清單含 Brazil，非僅 OFAC；提交即須 public and open source、English or English translation；總現金獎金加總 US$50,000，首獎 US$10,000；稅費由獲獎者負擔。台灣未列名不等於法律合規結論。",
+          "accessed_at": "2026-11-15T11:12:14+08:00"
+        },
+        {
+          "url": "https://qnx.software/en/developers/get-started/qnx-everywhere",
+          "scope": "免費非商業授權及申請步驟",
+          "evidence": "QNX Everywhere provides free access ... for non-commercial use；must have a myQNX account；complete license form；After we’ve successfully processed your request ... receive your ... license。包含 SDP 8.0、Developer Desktop、Hypervisor；未操作表單。",
+          "accessed_at": "2026-11-15T11:12:14+08:00"
         }
       ]
+    },
+    {
+      "id": "lucid-education-free-ai-beta",
+      "title": "Lucid 教育帳號免費；Lucid AI Beta 開放含 Free 方案",
+      "summary": "Lucidchart／Lucidspark 提供 K–12 與高教師生免費教育帳號，須用教育機構核發信箱並選 Student 或 Educator。Lucid AI 說明另列 Free、Individual、Team、Enterprise 可用，可生成圖表、看板、摘要與整理想法；目前為 Beta，官方保留未來改付費的可能，未公布固定點數或次數，不等於不限量。AI僅針對英文最佳化，其他語言部分功能可能不如預期。AI方案表未單列Education，個別教育功能與台灣學校核准仍待確認。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION",
+        "BETA-ACCESS"
+      ],
+      "views": [
+        "free",
+        "beta"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "effort_minutes_max": null,
+      "taiwan": "Unknown",
+      "regions": [],
+      "usage_type": "教育帳號免費；AI Beta含Free方案，未公布固定用量上限",
+      "quota_classification": "NO FIXED CAP PUBLISHED",
+      "limited_confirmed": false,
+      "cancellation": "本次僅核免費帳號文件，未核付費試用、自動續訂與取消流程；勿把目前免費視為永久免費。",
+      "cost_note": "教育帳號免費；Lucid AI目前開放含Free方案，官方保留未來付費訂閱模式。未實測是否需付款驗證，未核付費試用或升級條款。",
+      "usable_duration": "教育方案文件未載效期；AI為Beta、未承諾永久免費，無公布結束日。",
+      "access_risk": "需真實教育機構核發信箱；台灣核准未測。英文最佳化而非保證其他語言可用；管理員可停用AI，FedRAMP不適用。AI補充條款頁僅回外殼，細則未讀到。",
+      "verified_at": "2026-11-15T11:21:37+08:00",
+      "discovered_at": "2026-11-15T11:21:37+08:00",
+      "announcement_at": null,
+      "review_cadence": "weekly",
+      "next_review_at": "2026-11-22T11:00:00+08:00",
+      "eligibility": {
+        "service_availability": "教育帳號面向K–12及Higher Education個別教師與學生；AI說明列Free、Individual、Team、Enterprise，不適用FedRAMP。Education未單列於AI方案表。",
+        "account_eligibility": "建立Lucid帳戶時用教育機構核發信箱，首次登入選Student或Educator；未自動取得教育版可填官方eduRequests求助。",
+        "billing_country": "免費教育帳號文件未列付款要求；未實測信用卡、帳單國家或付費方案。",
+        "identity_residency": "須真實教育身分與機構信箱；所讀頁面未列台灣或各國名單，年齡與居住條款未核。",
+        "terms_restrictions": "Lucid AI目前Beta，未來可能改付費；英文最佳化，Team/Enterprise管理員可停用，FedRAMP不適用。補充AI條款正文未載入，轉售、重複帳戶、fair use及資料使用細則未完整核實；不建議虛假身分或跨區規避。",
+        "taiwan_note": "Unknown：官方未明列台灣或.edu.tw核准規則；網站可讀不代表台灣學校帳戶必定取得教育方案或全部AI功能。"
+      },
+      "verification_scope": "2026-11-15 主 agent 實讀官方免費教育帳號與Lucid AI說明：核機構信箱、免費教育身分、AI含Free方案、Beta、英文最佳化及未來可能收費。補充AI條款以read及瀏覽器僅得外殼，不計為條款核實；未登入、註冊、送件、付款或驗台灣學校與法律。",
+      "unknowns": [
+        "Education未單列於AI方案表，個別教育帳號實際AI功能、限額及管理員控制未測",
+        "台灣學校信箱與教育資格核准、年齡與居住限制未核",
+        "AI固定額度、rate limit及fair use未公布於所讀功能頁，未公布不等於不限量",
+        "AI補充條款read與瀏覽器均未載正文；需向官方legal@lucid.co取得可讀版本或等文件修復",
+        "未來收費時間與價格、付款驗證、自動續費及取消流程未核"
+      ],
+      "sources": [
+        {
+          "url": "https://help.lucid.co/hc/en-us/articles/360049831771-Sign-up-for-a-free-Educational-account",
+          "scope": "免費教育帳號、機構信箱及申請步驟",
+          "evidence": "A free Lucid for Education plan is available to individual teachers and students in K-12 and Higher Education；must use the email address assigned to you by your educational institution；首次登入選Student或Educator，未核准可填eduRequests。頁面更新2026-10-22，非本次查閱日期。",
+          "accessed_at": "2026-11-15T11:21:37+08:00"
+        },
+        {
+          "url": "https://help.lucid.co/hc/en-us/articles/30324063850516-Boost-productivity-with-Lucid-AI",
+          "scope": "AI方案、Beta、語言最佳化及未來收費風險",
+          "evidence": "Plan availability: Free, Individual, Team, and Enterprise；currently available to all users but may be subject to a paid subscription model in the future；currently in beta；optimized for English only，Some functionality may not work as expected when used in another language。未公布數值上限；Education未單列，FedRAMP不提供。頁面更新2026-11-03。",
+          "accessed_at": "2026-11-15T11:21:37+08:00"
+        },
+        {
+          "url": "https://lucid.co/supplemental-AI-terms",
+          "scope": "失敗追查：只確認條款入口存在，不支持條款內容",
+          "evidence": "2026-11-15 read與自有瀏覽器只見標題及第三方文件可及性說明，未見條款正文；未核實AI補充條款。官方列legal@lucid.co可聯絡，未寄信。",
+          "accessed_at": "2026-11-15T11:21:37+08:00"
+        }
+      ],
+      "priority_score": 17.3,
+      "priority_tier": "B",
+      "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-15T09:10:00+08:00",
+  "latest_research_at": "2026-11-15T11:22:07+08:00",
   "last_research_run": {
-    "started_at": "2026-11-15T09:05:00+08:00",
-    "completed_at": "2026-11-15T09:10:00+08:00",
+    "started_at": "2026-11-15T11:05:21+08:00",
+    "completed_at": "2026-11-15T11:22:07+08:00",
     "reviewed_ids": [
-      "tencent-hy4-workbuddy-codebuddy-free-window-nov4-15",
-      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
-      "aspn-youth-sports-tech-hackathon-2026",
-      "ugreen-ai-nas-hackathon-2026",
-      "tw-labor-pretraining-ai-smart-application-tnnu-03",
-      "taoyuan-ai-productivity-online-courses-115",
-      "stepfun-stepaudio3-music-gen-preview-nov8",
-      "antigravity-free",
-      "rime-stt-nov19-free-window",
-      "mozilla-foundation-human-scale-ai-incubator-2026",
-      "google-maps-demo-key-ai-studio-free-daily",
-      "kimi-file-extraction-storage-api-temporarily-free",
-      "lg-exaone-25-api-free-noncommercial",
-      "iteracompute-free-qwen-3-8-27b-monthly-30m",
-      "taipei-industry-incentive-ai-rd-batch2-2026",
-      "taiwan-multi-store-ai-upgrade-tier3-2026",
-      "moe-ilink-aiea-winter-2026-teacher-workshops",
-      "google-students-tw-plus",
-      "google-vids-omni-free-sixty-seconds-monthly",
-      "google-ai-professional-certificate-tw-pro-3mo"
-    ],
-    "new_ids": [
+      "deno-deploy-free-tier",
+      "figma-education-ai-credits",
       "qnx-global-hackathon-2026"
     ],
+    "new_ids": [
+      "lucid-education-free-ai-beta"
+    ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1070
+    "unreviewed_existing_count": 1088
   }
 }
