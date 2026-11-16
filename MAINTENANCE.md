@@ -5425,3 +5425,60 @@ R 的 9 個 ID：`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`
 3. `aocai-working-free-ai-courses-2026`：2026-11-19 前確認 11/26 台北班是否仍受理。來源：https://serv.gcis.nat.gov.tw/AOCAI/courses/working 。
 4. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
 5. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-18 09:00 再讀餘額是否仍為 $129,593(2.2%)，並看 1323 是否改採 PDF 的兩個月送件句。來源：https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323 。
+
+---
+
+## 2026-11-17 04:06–2026-11-17 04:24 Asia/Taipei｜N=1,141 · R=13 · A=0 · U=1,128 · attempted=0
+
+### 開場狀態
+
+04:05 開場，`tools/round_lock.py status` 無人持鎖，04:06 取得鎖。HEAD `44f484b`、工作樹乾淨、`origin/main` 同點。Pages 是 main 根目錄的 `pages-build-deployment`，repo 內沒有自訂 workflow。嚴格逾期 0、7 日內到期 9（7 筆冷卻）。`stepfun-stepaudio3-music-gen-preview-nov8` 與 `taoyuan-ai-productivity-online-courses-115` 的截止都在 2026-11-17 稍晚，且數小時前才核過，本輪不在截止前重讀。
+
+本環境的 subagent 不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入時它們仍在讀頁，下列更正以主 agent 自己打開的官方頁為準。未採用未交卷的轉述。
+
+### 計數
+
+N=1,141；R=13；A=0（機會 0、政策 0、觀察 0）；U=1,128；attempted=0。結束仍 1,141 筆。
+
+R 的 13 個 ID：`ntpc-uko-microsoft-ai-cert-free-2026`、`taiwan-mobile-free-ai-life-course-2026q4`、`taiwan-multi-store-ai-upgrade-tier3-2026`、`cht-gemini-shorts-contest-2026`、`fgu-three-good-ai-innovation-contest-2026`、`microsoft-foundry-copilot-harness-free-runtime`、`zai-free-flash-api-models`、`elfa-api-free-once-thousand-credits`、`qoder-free-mechanisms`、`routeway-free-models-two-hundred-daily-requests`、`beatapi-free-models-zero-balance`、`scaleway-generative-apis-free-million-tokens-audio`、`byteplus-modelark-free-inference-500k`（最後一筆只核地區清單）。
+
+### 會影響決策的更正
+
+- **`ntpc-uko-microsoft-ai-cert-free-2026`**：舊摘要寫 PL-900 報名入口不在頁上。2026-11-17 PL-900 課頁的報名連結轉到 PL-900 表單，仍列第二梯 11/21–22、免費、保證金新臺幣 1,000 元。頁面逐字「你必須登入才能填寫這份表單。」未登入、未送出。取消截止 11/18 23:59。AB-730 兩梯已過。
+- **`beatapi-free-models-zero-balance`**：免費文字模型由三個增為四個：`glm-5.3-flash-free`、`deepseek-v4.1-flash-free`、`hy4-free`、`hy4-flash-free`。零餘額可呼叫、儲值前 1 RPM、儲值後最多 10 RPM 未變。JEV 免費 ID 仍記 2026-11-05 退役。
+- **`qoder-free-mechanisms`**：每日 100 Credits 仍在，結束日仍 TBA。Qoduck 頁仍寫 2026-11-11 10:00（UTC+8）結束。`flashoffer` 本次 HTTP 404。離峰頁 FAQ 寫 Qwen3.8-Flash 免費於 2026-11-06 16:00 UTC 結束，其後一般時段 0.1×、離峰 0.04×。Ultimate 離峰第二階段至 2026-11-30 00:00 UTC。Efficient 頁本次未重讀。
+- **`elfa-api-free-once-thousand-credits`**：文件仍寫 Free key 一次 1,000 credits、60 RPM、用盡 429。行銷定價頁仍無 Free 方案，PAYG 最低儲值 US$20。不把缺欄讀成終止。
+- **`routeway-free-models-two-hundred-daily-requests`**：FAQ 仍寫 20 RPM／200 RPD，rate-limits 仍寫 5 RPM／200 RPD。範例錯誤訊息裡的 60 RPM 不是第三個政策。
+- **`scaleway-generative-apis-free-million-tokens-audio`**：產品頁仍同時寫新客 100 萬 tokens，以及 beta 期間完全免費。faq.md 與 60 分鐘音訊主張本次未重讀。
+- **`zai-free-flash-api-models`**：GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash 仍 Free。最新 GLM-5.3-Flash 與各 FlashX 仍收費。
+- **`byteplus-modelark-free-inference-500k`**：可用地區清單（Last Updated 21 April 2026）仍含 Taiwan。免費額度頁正文三次未讀到，500k 不刷新為本次已核。
+- **`taiwan-mobile-free-ai-life-course-2026q4`**：免費聲明與 11/21、12/19 場次未變。第四季可見的立即報名連到第四季報名表；各場次舊表單錨點在 HTML 註解裡。月份選項沒展開，未送出。
+- **`cht-gemini-shorts-contest-2026`、`fgu-three-good-ai-innovation-contest-2026`、`microsoft-foundry-copilot-harness-free-runtime`**：徵件或計費句未變。中華電信仍限年滿 18 歲的中華民國國籍自然人，徵件至 2026-11-30 18:00。Foundry 執行環境仍是 12/1 前免費，支援區頁本次未重讀。
+- **`taiwan-multi-store-ai-upgrade-tier3-2026`**：公告 807 仍寫第 3 梯至 115/11/30 17:00。curl 讀到列表前兩則：2026/11/11 活絡商圈須知，2026/11/02 才是本案。這兩則之間沒有提前截止。列表更後面未逐則讀完。
+
+### 未納入
+
+沒有新增。研究代理結案前沒有交出具官方正文的新候選，不把未交卷的搜尋當新案例。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是官方頁互相矛盾，以及靜態擷取讀不到 BytePlus 額度頁與商業署公告列表；既有規則已寫明外殼頁要換渲染，本輪渲染 BytePlus 時瀏覽器無回應，不把工具失敗寫成活動終止。
+
+### 未解證據缺口
+
+- 新北 PL-900：剩餘名額；Pearson VUE 考試費由誰負擔。
+- 商業署第 3 梯：11/02 之後的公告列表本次沒讀到。
+- BeatAPI：條款頁與台灣註冊。
+- Elfa：免費 key 是否仍能在未儲值時核發；條款頁本次未重讀。
+- Qoder：Efficient、離峰折扣，以及 App 內 Qoduck 是否已移除。
+- Scaleway：faq.md 的 60 分鐘音訊句。
+- BytePlus：500k 與 Free Tokens Only 正文。
+- Z.ai：免費模型是否須先儲值；台灣註冊未實測。
+
+### 下一輪優先（最多 5 項）
+
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-17 11:59:59 後確認 preview 是否退役、付費 model ID 與是否須先儲值。來源：StepFun 模型頁與定價頁。
+2. `taoyuan-ai-productivity-online-courses-115`：2026-11-17 截止後改狀態。來源：桃園市課程頁。
+3. `ntpc-uko-microsoft-ai-cert-free-2026`：2026-11-18 23:59 取消截止前後，確認 PL-900 表單是否仍可送出、有無額滿句。來源：https://tibame.tw/UfMB0 與 PL-900 課頁。
+4. `byteplus-modelark-free-inference-500k`：換渲染路線重讀免費額度頁，確認 500k 與 Free Tokens Only 是否仍在。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
+5. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
