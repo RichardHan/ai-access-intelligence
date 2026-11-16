@@ -4,9 +4,9 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,138 筆**（918 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-16 18:45 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史記錄）。本輪成功局部複核 **14 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **1,121 筆**既有紀錄未完成本輪複核。最影響判讀的三件事：`kaggle-neurips-2026-smart-buildings-competition` 的入賽／組隊截止其實有**三份**官方呈現（Overview 書面 2027-01-03、頁面 Progress Timeline「December 4, 2026」、平台 API 2026-12-03T23:59:59Z），參賽者 757080 直接提問 8 天後仍 0 回覆──12 月初若 API 生效，讀者可能比書面時間提早一個月被鎖；`devin-free-light-agent-quota` 舊摘要寫「SWE-2 免費使用列於 Pro」，官方文件其實是 **Free 方案可選 SWE-2 Flash Medium**，且同一頁並存 11/30 與 12/04 兩個免費結束日；`tencent-edgeone-makers-free-edition-quotas` 的 Cloud Functions 記憶體時長兩份官方文件差 **10 倍**（500,000 vs 50,000 GB-s），另補上免費版長期有效、週期自開通日起算與儲存不重置。
+資料集目前有 **1,138 筆**（918 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-16 20:10 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史記錄）。本輪成功局部複核 **20 筆**既有案例，新增機會 **0 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,118 筆**既有紀錄未完成本輪複核。最影響判讀的三件事：`google-ai-pro-ultra-monthly-cloud-credits-ai-studio` 的每月 credit 金額終於有文字版官方數字（AI Pro **US$10**、Ultra 5x **US$40**、Ultra 20x **US$100**，核發日是首次領取的每月週年日、每筆 12 個月失效），先前只能從公告的圖片表格猜；`yzu-ai-center-h200-hpc-trial-watch` 的「額度待確認」已解決——使用須知 v9 明列 **35GB VRAM／3 vCPU／30GB RAM／200GB**、專案三個月可再延三個月、容器 5 日／任務 2 日、限校內 IP，但**費用三份官方文件都沒寫**；`digitalocean-startups-core-gpu-policy` 舊紀錄的「標準支持 15 個月」在現行條款與 Hatch 條款全文都查無，已移除，暫停中的 Startups 方案仍只有一句「early 2027」、沒有任何新方案細節。
 
-同日另有四輪在同一工作樹接力：14:05–16:10（20 筆複核、3 筆新增）、16:05–16:54（15 筆、3 筆）、17:05–18:12（17 筆、2 筆：Agora 語音 AI 與 Imagine Cup 2027）以及本輪 18:25–18:45（14 筆、3 筆）。各輪 `verified_at` 分別標在 14:29–15:55、16:53、17:35–18:12 與 18:19–18:44，互不併入彼此的批次數字。五輪合計使全庫由 1,125 增至 1,138，逐輪範圍見 [MAINTENANCE.md](MAINTENANCE.md)。
+同日共有六輪在同一工作樹接力：14:05–16:10（20 筆複核、3 筆新增）、16:05–16:54（15 筆、3 筆）、17:05–18:12（17 筆、2 筆：Agora 語音 AI 與 Imagine Cup 2027）、18:25–18:45（14 筆、3 筆）以及本輪 19:05–20:10（20 筆、0 筆新增）。各輪 `verified_at` 分別標在 14:29–15:55、16:53、17:35–18:12、18:19–18:44 與 19:08–20:02，互不併入彼此的批次數字。前五輪使全庫由 1,125 增至 1,138，本輪零新增、把名額用在重讀與更正，逐輪範圍見 [MAINTENANCE.md](MAINTENANCE.md)。
 
 ## 使用方式
 
@@ -45,4 +45,5 @@
 - 複核順序交給 `python3 tools/queue.py`（先看排程、再看最久未核），不要每輪重寫臨時腳本；死連結用 `python3 tools/linkcheck.py` 掃。
 - 免費／台灣資格／額度專區只讀 schema 管制的欄位；同一事實存在兩個欄位時，篩選讀有管制的那一個。
 - 未知是 `null` 不是 0；未公布上限不是無限；官方頁互相衝突時保留兩說，不任選一版。
+- 「核實日期比所有來源的查閱時間都新」是可被機器抓出來的訊號：`tests/validate.py` 會列出落後 7 天以上的紀錄（查閱時間讀 `accessed_at`／`accessed_time_range`／`accessed_date`，必要時退回證據文字開頭的日期）。這一條 2026-11-16 修過一次——舊版只讀 `accessed_at`，讓 342 筆至少一個來源用 `accessed_time_range` 的紀錄整批逃過檢查。
 - 發布前跑 `python3 tests/validate.py`、`node --check app.js`、`node tests/filters.cjs`、`git diff --check`；時間戳先對錶（`TZ=Asia/Taipei date -Iseconds`），不得寫入未來時間。

@@ -5170,3 +5170,80 @@ N=1,135；R=14；A=3（2 機會、0 政策、1 觀察線索）；U=1,121；attem
 5. `amd-radeon-token-factory-free-api`、`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`：查台灣註冊可行性與每日點數／各方案 credit 金額；AI Studio 的金額表可從 `aistudio.google.com/learn/claim-google-ai-plan-credits-in-ai-studio` 取得文字版。
 
 ---
+
+## 2026-11-16 19:05–20:10（Asia/Taipei）｜N=1,138 · R=20 · A=0 · U=1,118 · attempted=0
+
+### 開場狀態
+
+19:05 開場，`tools/round_lock.py status` 顯示無人持鎖（同日五輪都已在 18:38 前收工），19:05:42 取得鎖。HEAD `df62876`、工作樹乾淨、`origin/main` 同點。Pages 是 legacy build（main 分支根目錄），repo 內沒有 workflows，發布靠 push 後 GitHub 自動 build。
+
+基準：1,138 筆（918 機會／50 政策／170 觀察）、嚴格逾期 0、7 天內到期 8、`retry` 桶 0、輪替 848。同日 12 小時內已有 192 筆被複核，`queue.py` 排最前的兩個 `closing` 案例都在 18:43–18:44 才剛核過；因此本輪不重查「未到期且無新訊號」的案例，名額分配給 (a) 10 天內到期 8 筆、(b) 證據落後清單、(c) 新機會與去重。
+
+### 品質改善：證據落後檢查的自身盲點（先於研究完成）
+
+- **觀察到的問題**：`tests/validate.py` 的「核實日比所有來源新 >7 天」只讀 `accessed_at`。資料裡有 664 個來源把查閱時間寫在 `accessed_time_range`（342 筆紀錄至少一個來源如此，其中 50 筆完全沒有 `accessed_at`），另有 51 個來源只寫 `accessed_date`、34 筆紀錄只把日期寫在證據文字開頭。舊版遇到這些直接 `continue`，清單只剩 13 筆——不是「通過」，是「沒被看」。實例：`smallest-startup-voice-grant-watch` 宣稱 11-11 複核、來源停在 10-26（16 天）；`exa-starter`、`dify-sandbox-trial-credits` 同為 16 天。
+- **修法**：改用與 app.js `sourceStamp()` 相同的解析順序（`accessed_at` → `accessed_time_range` → `accessed_date` → 證據文字開頭的「YYYY-MM-DD … 實讀／重讀」），只取字串裡最後一個日期、比日曆日，避免時區與格式造成假陽性；另加 4 行合成資料斷言釘住這四種寫法，把 fallback 拿掉就會失敗。
+- **使用者結果**：卡片上的「核實」藥丸與來源查閱時間不再能長期各說各話。**驗證證據**：修完重跑 `tests/validate.py`，note 由 13 筆變 36 筆；本輪補掉 13 筆後剩 23 筆，成為下一輪清單。刻意維持 note 而非 assert——既有紀錄要靠逐筆重讀補，改成 assert 只會逼人改測試。
+
+### 範圍與分工（3 個 read-only subagent，全部只回報、不寫 repo）
+
+- **A｜10 天內到期 8 筆**：solar filament（今晚 19:59:59）、StepFun StepAudio 3（明早 11:59:59）、桃園市 AI 課程（11/17）、Antigravity（11/18 模型移除）、aocai 課程（11/19）、Rime STT（11/19）、Vercel AI Gateway Parallel（11/23）、IteraCompute（11/24）。
+- **B｜證據落後 10 筆**：smallest、sarvam、digitalocean、runpod、botpress、YZU、thunder、softbank、retool、taskade。
+- **C｜新機會與去重**：以官方頁篩 10 條線索、逐條比對 1,138 筆既有 ID，交付 1 條建議新增、3 條既有更新、7 條否決、5 條觀察。
+- 主 agent 另親自重讀 5 筆，並親核 YZU 使用須知 PDF；所有寫進資料的引文都對應主 agent 自己開過的頁面，subagent 的「unchanged」不直接採用（11 個新引用 URL 在寫入前逐一確認 HTTP 200）。沒有使用「gpt-6.1-terra／Gemini 3.8 Flash」這種可指定模型名；本環境的 subagent 只有 `task`／`scout` 等 agent 類型可選，實際由預設模型執行，如實記錄。
+
+### 計數
+
+N=1,138；R=20；A=0（機會 0、政策 0、觀察 0）；U=1,118；attempted=0。
+
+R 的 20 個 ID：`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`、`exa-starter`、`verda-content-approved-compute-credits`、`dify-sandbox-trial-credits`、`opencode-accountless-free-models`、`smallest-startup-voice-grant-watch`、`sarvam-access`、`digitalocean-startups-core-gpu-policy`、`runpod-creator-early-access`、`botpress-free-hundred-conversations-reset-overage-watch`、`yzu-ai-center-h200-hpc-trial-watch`、`thunder-students`、`softbank-perplexity`、`retool-startups-60k-approval-risk`、`kaggle-solar-filament-segmentation-2026`、`stepfun-stepaudio3-music-gen-preview-nov8`、`antigravity-free`、`taoyuan-ai-productivity-online-courses-115`、`rime-stt-nov19-free-window`、`aliyun-model-studio-new-user-quota`。
+
+20 筆上限用滿，因此 A 已複核的 `aocai-working-free-ai-courses-2026`、`vercel-ai-gateway-parallel-decisions-free-window`、`iteracompute-free-qwen-3-8-27b-monthly-30m`，以及 C 的 `gemini-code-assist-retired`（上游 docs 仍列 1,000 requests/日，與退役公告矛盾）本輪**沒有寫回**，列為下一輪第一批；不要把它們當成已複核（`verified_at` 仍是舊值）。
+
+### 會影響決策的更正
+
+- **`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`（金額從圖片變成可引用的文字）**：官方 Benefits FAQ 逐字「Google AI Pro : $10 USD per month … Ultra 5x : $40 … Ultra 20x : $100」，並補「核發日為首次領取的每月週年日，不是每月 1 日」「credits 自核發起一年失效」「可抵扣產品含 Gemini API／AI Studio／Firebase／Maps」「獨立 GDP Premium 已停售」。`quota_classification` UNKNOWN → HIGH BUT LIMITED、`usage_type` → Monthly credits；US$5 預付與主要訂閱者限制不變。
+- **QwenCloud（不新增，併入 `aliyun-model-studio-new-user-quota`）**：C 建議新增 `qwencloud-international-new-user-free-quota`，逐條比對後判定與既有 Model Studio 是同一家新加坡實體（網站頁尾 Intelligent Cloud Computing (Singapore) Pte Ltd）、同一種額度（每模型約 1M tokens、90 天、僅 Singapore、只抵即時推論）。差異只有入口與門檻：QwenCloud 明寫「complete your payment information to activate your free quota」，Model Studio 文件寫啟用即自動給額度。依「同活動不重複收錄」合併進原 ID，unknowns 留下「兩者是否共用帳號池、能否各領一份」。**本輪 A=0。**
+- **`yzu-ai-center-h200-hpc-trial-watch`（額度與期限首度有官方數字）**：使用須知 v9（115.08.01 施行）逐字給出 35GB VRAM／3 vCPU／30GB RAM／200GB、專案三個月可再延三個月、容器 5 日／任務 2 日、限校內 IP（校外須校園 VPN）、禁營利；算力頁寫「校內學生」，`identity_residency` 由「是否接受非元智學生未明文」改為「限元智校內」。**費用三處都沒寫**，unknowns 保留「是否收費」。`quota_classification` UNKNOWN → HIGH BUT LIMITED。
+- **`digitalocean-startups-core-gpu-policy`（刪掉一條沒有來源的福利）**：舊紀錄寫「credits 12 月、Standard 支持 15 月」；本輪在現行 Startups 條款（2026-05-11）與 Hatch 條款全文檢索都查無「Standard Support」或 15 個月，該子句已移除。暫停、early 2027、US$10,000 月上限、排除清單、需公司信箱與有效卡、不得轉讓全部重現，頁面**仍無**任何 2027 新方案細節。
+- **`sarvam-access`（終於拿到條款本文）**：舊紀錄說 `/terms`、`/terms-and-conditions` 404、`indus.sarvam.ai/terms` 403；本輪找到正確入口 `https://www.sarvam.ai/terms-of-service`（200，Version 2.0，2026-07-29 生效），逐字「The Offerings may not be available in all countries, regions or languages」。REGION-LOCKED 從「無條文可引」變成「有概括條文、台灣未明列」，taiwan 仍 Unknown；另確認 commercial-licensing 頁明文「free credits count」可商用。
+- **`botpress-...-watch`（衝突解決，但不是全部）**：比較表 Free 欄的加購對話與超額自動加值都是「—」，另有「Credit grant auto-recharge isn't available on Free/Community plans」，因此 95% 自動加購只屬付費方案。仍未標 Free 的 100 次是否每月重置（付費方案才寫 /mo）。
+- **`retool-startups-60k-approval-risk`（把推論標成推論）**：官方只寫「先升級月繳再申請、核准後於首張發票折抵」，沒有「未核准可退費」的字；access_risk 已改寫為推論風險。定價頁 1,000／3,000 與 docs 750／1,500 的 AI credits 衝突今天仍並存。
+- **`thunder-students`（台灣資格 Unknown → No）**：官方逐字「Only students enrolled at US universities qualify」，台灣本地大學不符；note 說明在美就讀的台灣人仍可能以校信箱符合，但那是學籍資格。依 `kiro-students` 先例標 No（優先層級 C → D）。
+- **`dify-sandbox-trial-credits`（措辭會誤導）**：官方是「200 message credits … consumed based on the model type」，不是「200 模型總額」；付費方案才標 `/month`，所以 Sandbox 的 200 點是一次性。標題與摘要已改。
+- **`kaggle-solar-filament-segmentation-2026`（截止後觀察成功，狀態改 closed）**：19:08–19:37 四次 API 讀值仍開放（提交 16,917→16,924）；20:00:18 與 20:02:13 兩次同為 16,932（停止增加），20:02:32 以 headless 瀏覽器載入競賽頁，頁首與 Timeline 由「an hour to go」變成「3 minutes ago」、Join Competition 消失。`status` terms_conflict → closed、`review_cadence` daily → event、`next_review_at` 改 11-30（公布優勝）。**注意**：curl 與 r.jina.ai 在 20:02 仍回 CDN 快取的「an hour to go」，這類頁面不能用文字代理判斷關閉。
+- 其餘 10 筆重讀後無實質變更：`exa-starter`、`verda-content-approved-compute-credits`、`runpod-creator-early-access`、`smallest-startup-voice-grant-watch`（FAQ 答案仍鎖在 JS）、`softbank-perplexity`（仍「終了時期未定」）、`opencode-accountless-free-models`（免費與付費模型以 `-free` 後綴區分，接錯 ID 就計費）、`stepfun-...-nov8`、`antigravity-free`（plans 頁新增證據，Hydrogen 兩說降級為推出順序）、`taoyuan-...-115`、`rime-stt-nov19-free-window`。
+
+### 未納入與否決（C 的 7 條，留在這裡避免下一輪重做）
+
+- **否決**：Blackbox（只剩 Enterprise 承諾額度）、Coda（coda.io/pricing 已導向 Superhuman Docs）、Codebuff（1¢/credit PAYG，無 $0 方案）、Qwen Code 免費層（現行 `/auth` 只剩訂閱或 BYOK）、Stepfun StepAudio 3（距失效不到 17 小時且中國站）、Claude Campus Ambassadors（9/12 已截止、API credits 無數量）、AWS AI & ML Scholars（本屆額滿關閉）。
+- **觀察（不建卡）**：AWS AI & ML Scholars 2027 梯次（每年 3 月重讀）、Claude Campus 2027 窗口與 credits 數量、SenseNova TokenPlan Free Beta（platform.sensenova.cn 為 JS-only）、SCNet／Intern InkStone／Qiniu Conatus／Unisound（中國站實名）、Predibase（pricing 403）。
+- **attempted、不計數**：Clarifai（連線逾時＋DNS 失敗）、Predibase（403）、SenseNova（JS-only）。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,138 筆（S/A/B/C/D = 177/200/136/279/126，未評級 220）。優先度已用 `tools/prioritize.py` 重算，衍生變更只有三筆：solar（S→D，因 closed）、thunder（C→D，因台灣 No）、google credits（14.2→15.4，仍 C）。
+- `node --check app.js`、`node tests/filters.cjs`、`git diff --check` 全綠。
+- 本輪顯示層未改（app.js／style.css／tests/filters.cjs 皆未動），瀏覽器檢查做在本機靜態站：資料載入 1,138 筆、console error 0；「本輪更新」預設列出 20 筆；關鍵字 `元智`、`US$40` 各命中 1 筆且卡片顯示新摘要；台灣篩選 192 筆、免費預設 743 筆、排序「最近核實」把本輪更新的 Alibaba 排第一；「再顯示 24 筆」可用；桌面 1280 與手機 390 寬都無水平溢出（scrollWidth = clientWidth）。
+- `git diff`：19 筆既有紀錄欄位更新＋1 筆狀態改 closed、5 筆 policy-history 追加、README 首段與維護規則各一段、validate.py 的檢查與註解；無刪除紀錄、無 ID 變更、無歷史改寫。
+
+### 未解證據缺口
+
+- Solar filament：Google Form 的實際關閉時刻（表單需登入 Google，未開）；提交數在 19:37→19:59 只增加 8 筆，關閉後凍結是「拒絕提交」或「計數停止」無法分辨。
+- StepFun：免費期結束後付費版的 model ID 名稱未公布；免費呼叫是否豁免「先儲值」仍未寫明。
+- Antigravity：每週／每五小時配額數值未公布；未登入實測免費層選單是否真的出現 Gemini 4 Hydrogen。
+- Retool：AI credits 750／1,500 與 1,000／3,000 的衝突未解；未核准退費政策無官方文字。
+- QwenCloud／Model Studio：是否共用帳號池、台灣發卡能否完成「付款資訊」解鎖。
+- YZU：費用（免費或計費）與試行結束日，三份官方文件都沒有。
+- Sarvam：門號／身分驗證是否限印度、台灣信用卡結帳。
+- Botpress：Free 100 次是否每月重置。
+
+### 下一輪優先（最多 5 項）
+
+1. **先寫回本輪已複核但受 20 筆上限擋下的 4 筆**（證據已入手，仍需對錶）：`aocai-working-free-ai-courses-2026`（11/26 台北班報名 11/19 截止，臺中班已額滿）、`vercel-ai-gateway-parallel-decisions-free-window`（11/23 到期，模型頁 Price Free／Context 32K）、`iteracompute-free-qwen-3-8-27b-monthly-30m`（11/24 00:00 PT 截止、每月 30M tokens）、`gemini-code-assist-retired`（補來源：上游 gemini-cli docs 仍列 1,000 requests/日，與退役公告矛盾）。
+2. **證據落後清單剩下的 23 筆，先做 16 天那批**：`rosalind-academic`、`dify-education-200-total`、`blaxel-starting-credit-payment-bonus`、`extend-document-once-tenk-credits-terms-gap`。`python3 tests/validate.py` 開頭的 note 就是最新清單。
+3. **短期到期**：`stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 後確認退役與付費 model ID）、`taoyuan-ai-productivity-online-courses-115`（11/17 截止後改狀態）、`antigravity-free`（11/18 三款第三方模型移除後確認免費欄）、`rime-stt-nov19-free-window`（11/19 後確認 STT 是否由 US$50 額度扣抵）。
+4. **`kaggle-neurips-2026-smart-buildings-competition`**：12 月初前每週重讀 API 與 757080，確認 12-03 是否真的鎖入賽（三說並存）。另 `kaggle-solar-...` 11-30 公布優勝後可補最終結果再結案。
+5. **`aliyun-model-studio-new-user-quota`／QwenCloud**：查「付款資訊」解鎖是否需實際扣款、台灣發卡是否被接受，以及兩個入口是否共用帳號池。
+
+---

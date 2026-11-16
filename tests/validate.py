@@ -418,31 +418,47 @@ for _o in d['offers']:
  if _m: assert _m.group(1)==_o['taiwan'], (
   f'taiwan_note says {_m.group(1)!r} but the taiwan field is {_o["taiwan"]!r} in {_o["id"]}: '
   'the card shows both side by side and the taiwan field drives the S tier and the 台灣條件適用 preset')
-# 卡片的「核實」藥丸只顯示 verified_at，但證據時間在每個來源自己的 accessed_at。2026-11-16 全庫掃到 21 筆的
-# verified_at 比所有被引用來源都新 7 天以上（最久 21 天：v0-students 寫 11-15 複核，唯一來源的 accessed_at 仍是
-# 10-24；adobe-firefly-assistant-free-beta-regions 落後 20 天）。這正是「只刷新查核時間、沒有重讀」的外觀，
-# 而讀者和下一輪都看不出來——卡片照樣顯示新的核實日。刻意做成非致命 note：既有 21 筆要靠逐筆重讀補，做成
-# assert 只會讓人改測試而不是補證據。新批次照實更新 accessed_at 就不會被列出。沒有時區的 accessed_at 無法
-# 跨時區比較，直接跳過（zencoder、arize 兩筆屬此類，不列入清單）。
-_EVIDENCE_LAG=datetime.timedelta(days=7)
+# 卡片的「核實」藥丸只顯示 verified_at，但證據時間在每個來源自己的查閱時間欄位。這正是「只刷新查核時間、
+# 沒有重讀」的外觀，而讀者和下一輪都看不出來——卡片照樣顯示新的核實日。刻意做成非致命 note：既有清單要靠
+# 逐筆重讀補，做成 assert 只會讓人改測試而不是補證據。新批次照實更新查閱時間就不會被列出。
+#
+# 2026-11-16 修正一個自己造成的盲點：舊版只讀 `accessed_at`，但全庫有 664 個來源把查閱時間寫在
+# `accessed_time_range`（342 筆紀錄至少一個來源如此；其中 50 筆的來源完全沒有 accessed_at，另有 51 個
+# 來源只寫 `accessed_date`、34 筆紀錄的來源完全沒有結構化查閱時間、只把日期寫在證據文字開頭）。舊版遇到
+# 這些直接 `continue`，於是「宣稱的核實日比所有證據都新」的紀錄有一半逃過檢查（`smallest-startup-voice-grant-watch`
+# 落後 16 天、`exa-starter` 16 天、`mindee-fourteen-day-two-hundred-credit-trial` 等）。現在改用與 app.js
+# `sourceStamp()` 相同的解析順序：accessed_at → accessed_time_range → accessed_date → 證據文字開頭的
+# 「YYYY-MM-DD … 實讀／重讀」。只取字串裡最後一個日期（區間取結束、帶註記也能取到），再比日曆日，
+# 避免時區與格式差異造成假陽性。
+_READ_VERB=__import__('re').compile(r'^\s*(\d{4}-\d{2}-\d{2})(?:[ ,，]*(?:[0-9]{1,2}[:：][0-9]{2}(?:[:：][0-9]{2})?)?)?[^\n]{0,30}?(?:實讀|重讀|查閱|讀取|複核|瀏覽|檢視)')
+def _evidence_day(source):
+ raw=str(source.get('accessed_at') or source.get('accessed_time_range') or source.get('accessed_date') or '')
+ days=DATE_ONLY.findall(raw)
+ if days: return days[-1]
+ _m=_READ_VERB.match(str(source.get('evidence') or ''))
+ return _m.group(1) if _m else ''
+_EVIDENCE_LAG=7
 _lagged=[]
 for _o in d['offers']:
- _acc=[]
- for _s in _o.get('sources',[]):
-  try: _ad=datetime.datetime.fromisoformat(_s.get('accessed_at') or '')
-  except ValueError: continue
-  if _ad.tzinfo is not None: _acc.append(_ad)
- if not _acc or not _o.get('verified_at'): continue
- try: _vd=datetime.datetime.fromisoformat(_o['verified_at'])
+ _days=[_d for _d in (_evidence_day(_s) for _s in _o.get('sources',[])) if _d]
+ if not _days or not _o.get('verified_at'): continue
+ try:
+  _vd=datetime.date.fromisoformat(_o['verified_at'][:10]); _newest=max(_days)
+  _lag=(_vd-datetime.date.fromisoformat(_newest)).days
  except ValueError: continue
- if _vd.tzinfo is None: continue
- _lag=_vd-max(_acc)
- if _lag>_EVIDENCE_LAG: _lagged.append((_lag.days,_o['id']))
+ if _lag>_EVIDENCE_LAG: _lagged.append((_lag,_o['id']))
 if _lagged:
  _lagged.sort(reverse=True)
  print(f'note: {len(_lagged)} records claim a verification newer than every cited source by >7 days '
-       f'(update per-source accessed_at when re-reading): '
+       f'(update the per-source access time when re-reading): '
        + ', '.join(f'{_i} ({_d}d)' for _d,_i in _lagged[:8]) + (' …' if len(_lagged)>8 else ''))
+# 上面這條檢查的解析規則自己就是一次回歸：舊版只讀 accessed_at，導致 342 筆只有 accessed_time_range 的
+# 紀錄整個逃過檢查（不是「通過」，是「沒被看」）。用合成資料釘住三種寫法，任何人把 fallback 拿掉都會在這裡
+# 失敗，而不用等下一輪才發現清單又變短。
+assert _evidence_day({'accessed_time_range':'2026-11-16T11:20:00+08:00/2026-11-16T11:26:00+08:00'})=='2026-11-16'
+assert _evidence_day({'accessed_date':'2026-11-07'})=='2026-11-07'
+assert _evidence_day({'evidence':'2026-11-01 05:06–05:07 Asia/Taipei 實讀：頁面仍列 Free'})=='2026-11-01'
+assert _evidence_day({'evidence':'2026-10-23 日本時間上線，額度 100 點'})==''
 # README 首段是讀者在 GitHub 上第一眼看到的宣稱：資料量、三類分項、本輪複核與新增筆數、尚未複核筆數。
 # 這些數字全部手寫，資料一改就要人工同步；漏改一次，首頁就會宣稱錯的資料量或批次進度，而網站本身
 # （由 offers.json 算出來的 overview）仍然是對的——兩個入口互相矛盾。2026-11-10 對照前五個 commit
