@@ -5361,3 +5361,67 @@ R 的 10 個 ID：`dify-education-200-total`、`blaxel-starting-credit-payment-b
 3. `aocai-working-free-ai-courses-2026`：2026-11-19 前確認 11/26 台北班是否仍受理。來源：https://serv.gcis.nat.gov.tw/AOCAI/courses/working 。
 4. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
 5. 證據落後且本輪未讀的 `vizard-free-monthly-sixty-video-credits`、`tensorpix-free-signup-weekly-credits`、`signld-nonprofit-education-lifetime-half-price`；另渲染 `https://aimfg.org.tw/ai_learning`，確認經濟部 AI 線上課程是否仍免費、證書與抽獎是否官方。
+
+---
+
+## 2026-11-17 03:06–2026-11-17 03:36 Asia/Taipei｜N=1,139 · R=9 · A=2 · U=1,130 · attempted=0
+
+### 開場狀態
+
+03:05 開場，`tools/round_lock.py status` 無人持鎖，03:06:46 取得鎖。HEAD `213de37`、工作樹乾淨、`origin/main` 同點。Pages 是 main 根目錄的 `pages-build-deployment`，repo 內沒有自訂 workflow。嚴格逾期 0、7 日內到期 9（6 筆冷卻）。`stepfun-stepaudio3-music-gen-preview-nov8` 與 `taoyuan-ai-productivity-online-courses-115` 的截止都在 2026-11-17 稍晚，且數小時前才核過，本輪不在截止前重讀。
+
+本環境的 subagent 不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入以主 agent 自己打開的官方頁為準。
+
+### 計數
+
+N=1,139；R=9；A=2（機會 2、政策 0、觀察 0）；U=1,130；attempted=0。結束 1,141 筆。
+
+R 的 9 個 ID：`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`hsinchu-city-ai-youth-digital-tool-subsidy-2026`、`google-cloud-teaching-learning-credits`、`vizard-free-monthly-sixty-video-credits`、`tensorpix-free-signup-weekly-credits`、`signld-nonprofit-education-lifetime-half-price`、`taskade-free-earned-credits-no-monthly-watch`、`langtail-free-thousand-logs-payment-terms-watch`、`together-research-invite-grants`。
+
+新增：`aimfg-manufacturing-ai-talent-coupon-120k`、`signld-free-forever-fifty-monthly-credits`。
+
+### 會影響決策的更正
+
+- **`hsinchu-city-ai-youth-digital-tool-subsidy-2026`**：2026-11-17 03:14 與 03:17 兩讀仍是「剩餘補助經費 $129,593(2.2%)」，與 2026-11-16 11:21 起相同，不是新的下降。購買日期仍至 115/10/31，現在新訂閱不符合。V4-7 PDF §陸寫購買後兩個月內送件，§捌與網頁寫月費制一個月內、年費制兩個月內。附件二寫非臺灣銀行、土地銀行帳戶扣 30 元手續費。
+- **`vizard-free-monthly-sixty-video-credits`**：比較表 Free 欄浮水印移除為 Not included，未用點數不結轉。方案卡寫 60 credits/month，頁尾寫 Enjoy your first 60 credits for free。狀態改 `terms_conflict`。未渲染 HTML 的付費價格 $0 是佔位，不採用。
+- **`tensorpix-free-signup-weekly-credits`**：定價頁仍只寫 a few。說明中心 2026-04-02 文章標題寫 up to 2 Credits per week，正文寫 0.3 至 1.2，且帳戶已有 2 credits 以上不再發每週免費點。不把任一數字當成確定值。
+- **`together-research-invite-grants`**：正文仍寫 invite-only。渲染後同一頁有姓名、信箱、學校與 NEXT。帳務文件寫免費點數不算進 US$15 首購，未購買前不能建立 API key。狀態改 `terms_conflict`。
+- **`signld-nonprofit-education-lifetime-half-price`**：五折仍是付費方案。美國非營利限 501(c)(3)，其他法域可提同等文件，教育機構須經認證。定價頁另有獨立免費層，不併入這筆。
+- **`google-cloud-teaching-learning-credits`**：金額、免卡、台灣清單未變。一年效期仍是三說：課程開始日後 12 個月、兌換後一年、券面日期。申請頁寫只有 faculty 可申請。
+- **`taskade-free-earned-credits-no-monthly-watch`**：仍無每月 AI credits，推薦上限仍 3,500。補上 Free 的 3 個 AI apps、每月 10 次自動化、250 MB。
+- **`langtail-free-thousand-logs-payment-terms-watch`**：方案卡與 §7.9 付款方式衝突仍在。FAQ 答案靜態頁未展開，本次不採用未展開的句子。
+- **`autoclaw-weekly-perk-november-nine-hundred-million-tokens`**：M11W3 仍是 11/16 00:00 至 11/22 23:59（UTC+8）、100M tokens、每帳戶一次。blog 最新仍為 11/13，無下一期公告。
+
+### 新增
+
+- `aimfg-manufacturing-ai-talent-coupon-120k`：產發署 Coupon，製造業企業完成措施一與措施二後每家定額新臺幣 12 萬元，受理至 2027-09-30 17:00。個人不能申請。與 `taiwan-moeai-manufacturing-tool-reimbursement-hundred-k`（工具費最高 10 萬）及 `cpc-moeai-elite-free-ai-course-115`（單一免費課程）不同。菁英頁另寫企業自辦內訓最高 12 萬、核實撥付，是否同一筆未解，不另立紀錄。來源 https://eii.nat.gov.tw/aimfg/coupon 與 https://eii.nat.gov.tw/aimfg/docs/attachment-18-consent-form_202611.pdf 。
+- `signld-free-forever-fifty-monthly-credits`：Free Forever 每月 50 credits、免卡、無期限。14 日 Growth 試用結束退回 Free，頁面沒有寫自動扣款。來源 https://signld.ai/pricing 。
+
+### 未納入
+
+- aimfg `/ai_learning`：本輪瀏覽器看到的是「頁面不存在」。首頁與 `/coupon`、`/elite` 可讀。線上課程費用與證書沒有官方句子，不建卡。
+- 企業自辦內訓 12 萬：可能與 Coupon 同一筆額度，留在 Coupon 紀錄的缺口。
+- Zoom AI Launchpad、Google AI Studio 月額度、雲市集點數、數發部算力、臺北市職能發展學院 12/2 班：都已有紀錄。
+- 桃竹苗分署「最高 350 萬」只見新聞，官方頁本輪沒打開，不改 `wda-enterprise-hr-upgrade-training-subsidy-116`。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是官方頁互相矛盾，以及未渲染的定價 HTML 會把付費價格顯示成 $0、把付費卡的勾勾文字抽成 Free 功能；`MAINTENANCE.md` 既有規則已經寫明定價頁文字擷取會遺失勾叉。`terms_conflict` 藥丸已會顯示「官方條款有差異」。沒有新的、可被測試抓住的畫面錯誤。
+
+### 未解證據缺口
+
+- 新竹市：PDF 兩種送件期限哪一句為準；餘額何時用罄。
+- Vizard：每月 60 與 first 60 哪一句為準；台灣。
+- TensorPix：0.3–1.2 與 up to 2 哪一句為準；註冊點數仍是 a few。
+- Together：公開表單是否仍只邀請部分人；研究贈額是否算 free credits。
+- 產發署：措施一是診斷加導入，還是工具採購；自辦內訓 12 萬是否同一筆；須知網址寫 moeai-plus，申請鈕在 aimfg/coupon。
+- Langtail：FAQ 答案本次未展開。
+- `aimfg` 線上課程費用與證書。
+
+### 下一輪優先（最多 5 項）
+
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-17 11:59:59 後確認 preview 是否退役、付費 model ID 與是否須先儲值。來源：StepFun 模型頁與定價頁。
+2. `taoyuan-ai-productivity-online-courses-115`：2026-11-17 截止後改狀態。來源：桃園市課程頁。
+3. `aocai-working-free-ai-courses-2026`：2026-11-19 前確認 11/26 台北班是否仍受理。來源：https://serv.gcis.nat.gov.tw/AOCAI/courses/working 。
+4. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
+5. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-18 09:00 再讀餘額是否仍為 $129,593(2.2%)，並看 1323 是否改採 PDF 的兩個月送件句。來源：https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323 。
