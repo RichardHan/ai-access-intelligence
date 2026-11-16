@@ -4461,3 +4461,57 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（11/18）：再讀 `dgservice` 餘額；低於 1% 或見額滿公告即改狀態與標題。
 4. 3 筆新紀錄的缺口：Puter 免費額度金額與台灣註冊（`docs.puter.com`、dashboard）、Gemini Decision 1 配額是否共用（`ai.google.dev/gemini-api/docs/rate-limits`）、Comfy 免費 Agent credits 數量與台灣付款（`comfy.org/pricing`）。
 5. 18 筆 `verification_scope` 第一個日期早於 `verified_at`（上一輪留下的清單，含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`aliyun-yungongkaiwu-model-studio-students`）：輪到時重讀再改寫 scope，不要只改日期。
+
+---
+
+## 2026-11-16 10:05–10:26（Asia/Taipei）｜N=1,120 · R=16 · A=1 · U=1,104 · attempted=0
+
+### 下一輪優先（完整五項，放在本則最前）
+
+1. **今日截止後改判**：`aspn-youth-sports-tech-hackathon-2026`（12:00）、`kaggle-solar-filament-segmentation-2026`（報告 12:59／平台 19:59:59）、`ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）四筆在 09:22 才核過、本輪未重讀；截止後要改判 `applications_closed` 並確認是否延期，來源 Accupass／Kaggle GetCompetition API／Devpost updates／台灣就業通。`taoyuan-ai-productivity-online-courses-115` 11/17 截止同理。
+2. `google-ai-professional-certificate-tw-pro-3mo`（排程 11/17）：行銷頁「2027-01-01」對條款「November 6, 2026」（已過 10 天）；確認是否改版或下架，仍衝突就維持 `terms_conflict`。
+3. `moa-agri-ai-module-diffusion-116`（本輪新增，週排程 11/23）：兩處未解——能量登錄時點（115-12-07 前仍具身分 vs 新登錄者 115-12-31 前完成）、名額與總預算；查 `https://www.intelligentagri.com.tw/smartagrilist/` 與後續公告，並確認 11/17、11/23 說明會是否改期。
+4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（11/18）：再讀 `dgservice` 餘額；低於 1% 或見額滿公告即改狀態與標題。
+5. `verification_scope` 第一個日期早於 `verified_at` 的 19 筆（`tests/filters.cjs` 目前會列出）：輪到時重讀再改寫 scope，不要只改日期；含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`aliyun-yungongkaiwu-model-studio-students`。
+
+### 基準、範圍與分工
+
+開場：嚴格逾期 0 筆、7 天內到期 11 筆（其中 4 筆今日截止）、`retry` 桶 0 筆、24 小時未核 849 筆、12 小時內已核 166 筆。上一輪 09:23 才結束，其 16 筆不重讀；今日截止的 4 筆在 09:22 核過、冷卻未過，也不重讀，改由下一輪在截止後判狀態。本輪範圍＝**最久未核的兩組**（2026-11-04～11-10 核實、12 天未動）：8 筆「未決風險」狀態＋8 筆教育／非營利折扣，各派一個 subagent 讀官方頁並交回逐字引文，主 agent 另行直取關鍵頁覆核後才寫入（本輪 subagent 的全部關鍵引文，主 agent 都用 `curl`／瀏覽器／`pdftotext` 重讀過一次）。第三個 subagent 只做新機會與去重，交回 1 筆可用、5 筆重複、3 筆不可行。
+
+### 實質變更（16 筆複核；沒有一筆改狀態，改的是會影響行動的條件）
+
+- **`scribe-education-nonprofit-pro-twentyfive-percent`（最會改變行動）**：官方 FAQ 5 天前改版，補上兩件先前只能寫「未核」的事——折扣只適用「Pro plan price」與 Enterprise 的「creator seats」，且「The discount does not apply to module costs」（舊摘要還留著「獨立 Autocapture 模組是否適用折扣未核」，同一段自相矛盾，已刪掉那句）。學生管道的字面條件是「A student with a valid .edu email address」，台灣學生慣用的 `.edu.tw` 不符字面；`taiwan_note` 已改成「條件式＋.edu 字面限制」。另補 Pro Team 每席 US$17／年繳等值 US$13（至少 5 席）。
+- **`capacities-student-annual-pro-forty-percent`**：方向相反但同樣關鍵——官方明列「.edu or academic email address alone」**不被接受**，必要文件是在學證明、當學期課表、學費收據或含到期日的學生證。台灣學生因此不以 `.edu.tw` 為門檻；`taiwan_note` 改寫，`unknowns` 換成「台灣學校與在學證明文件是否被接受」。另補 Pro 有候補名單、Paddle 為 Merchant of Record、可 PayPal／Apple Pay／Google Pay。
+- **`typeform-education-nonprofit-subscription-discount`**：教育者／非營利月繳 25%、年繳 40% 官方寫「forever」，學生月繳 40%（12 個月）／年繳 50%（1 年）；折扣須與計費週期一致。舊摘要「折扣長期適用不保證價格固定」已可換成官方措辭。
+- **`asana-nonprofit-starter-advanced-fifty-percent`**：同頁三種資格說法並存（Who is eligible 列 academic institutions／正文以 501(c)(3) 或等效國際資格界定並把 K-12 與高教導向教育方案／FAQ 仍寫 Premium 或 Business）。已寫進摘要與 `taiwan_note`，不擇一；另記「It lasts forever unless you choose to leave Asana」與 Goodstack／Percent 驗證。
+- **`miro-startup-subscription-credit`**：補抵用須 6 個月內啟用、一家新創一個 credit、方案變更即失效、超額由卡扣款，以及 venture-backed 新創 Enterprise 25% 的替代路徑（非抵用金）。
+- **`sakana-api-platform-early-access-2026`**：同站 `sakana.ai/fugu/` 已公布 Fugu 系列每百萬 token 價格（Fugu Max 輸入 US$2／輸出 US$6）並明文排除 EU／EEA；但早期存取公告仍寫「Pricing and terms of use will be shared at that time」，兩者不可互換，已新增該來源並改寫 unknowns 與 `taiwan_note`（台灣未列、未排除）。
+- **`muse-pricing-community-lead`**：第三方 `getmusehelp.com` 三次（https／http／www）皆 DNS 無法解析，其「100M／週」說法目前無可讀來源；Meta 官方頁（含 2 天前更新的 How to get started with Muse）仍只寫「available for free with a usage limit」。此為來源失敗，不是 100M 被推翻。
+- **`grok-retention-community`、`helium-for-cause-nonprofit-50k-watch`、`giskard-…-watch`、`akool-…-three-months`、`codex-compensation-account-specific-lead`、`akashml-free-credit-unconfirmed`**：逐字重讀後主張不變（§8 促銷條款、50 席／US$50,000／25+ countries、Limited spots 與 HubSpot 表單仍在、三個月 Studio 與 40% 年繳、不提供免費促銷補償、trial credits 需驗證付款方式但金額未公布）。`akashml.com/pricing` 與 AKOOL 的 Google Form 分別回 404／401，已寫進 evidence，不據此改狀態。
+- **`appwrite-education-…`、`notion-nonprofit-business-discount`、`asana-student-starter-free-twelve-months`**：數字全數重現（六個月／2 projects／不含 add-ons／GitHub Student Pack 驗證；50% Business／每組織 3 個工作區／3–7 個工作日；12 個月 100%／50 席／Goodstack／結帳須輸卡），只補驗證方式與可接受文件。
+
+### 新增 1 筆（opportunity）
+
+- **`moa-agri-ai-module-diffusion-116`**：農業部 116 年度「AI 增能共創智慧農業 2.0」技術模組整合擴散應用輔導。公告（`theme_data.php?...&id=10343`，115-11-06）與作業手冊 PDF（35 頁）皆實讀：三型按場域計價——每場域最高 NT$5 萬／50 萬／100 萬，各須至少 5／3／1 場域；「申請輔導經費須小於自籌款」「以計畫總經費之 50% 為上限」；收件至 **2026-12-15 17:00（郵戳為憑）**；說明會 11/17 10:00 視訊、11/23 14:00 農業部 1011 會議室；資格限能量登錄技服業者、國內登記農企業（非陸資、淨值為正）或農會／漁會／農業合作社；每案僅受理單一業者獨立提案，執行期至 116-11-30。`categories` 記 QUALIFICATION＋LOW-COST 而非 FREE：讀者要自籌至少半數。S 級、週排程。
+- 未納入（subagent 提出的重複／不可行）：Keenable US$5,000、Zoom AI Launchpad、Modal for Builders、OpenAI 退伍軍人 Plus（美軍身分，台灣無合法路徑）、中國多校免費 token（限在籍師生）、AMD Radeon Cloud 免費端點（中國站註冊、額度不可量化）。
+
+### 本輪品質改善：相對時間詞改寫為絕對日期（+ 回歸防線）
+
+- 觀察到的問題：卡片正文直接渲染 `title`／`summary`／`access_risk`／`unknowns`／`verification_scope`，但這些欄位曾被寫成「今日」「明天」「本日」「距截止剩 29 天」。2026-11-16 全庫掃到 **25 筆紀錄、37 處**（22 筆 31 處屬今日家族，另 3 筆 6 處是「本日」），實際誤導的例子：`fal-flux3-max-five-daily-sandbox` 標題寫「今日仍 6 次」（核實日 11-16，讀者無從得知是哪一天）、`autoclaw-halloween-40m-expiry-conflict-watch` 標題寫「公告今日截止」而截止日是 11-08、`mango-inference-community` 摘要寫「只能明天再讀」而那句話寫於 11-15、`wistron-compute-donation-third-cohort-2027h1` 寫「今日11/8尚未截止」卻在 11-14 更新、`ntpc-uko-microsoft-ai-cert-free-2026` 寫「今日 9:30–17:30」而那天是 11-14；`xiaomi-mimo-signup-credit-current-issuance-watch` 四個欄位寫「本日是否仍發放」、`taiwan-commerce-single-store-ai-half-hundred-k` 的缺口寫「本日補助經費餘額」——兩筆的「本日」都不是讀者看得到的今天。
+- 使用者結果：同樣的句子在下一次發布後仍然成立，讀者不必猜「今日」是哪一天；需要判斷截止壓力時，卡片底部的截止膠囊與「剩 N 天」本來就是由機器可讀欄位即時計算，不會過期。
+- 做法：25 筆逐句改成絕對日期（`今日 11/14` → `2026-11-14 記錄時`、`本日是否仍發放` → `2026-11-09 當時是否仍發放`、`剩 29 天` → `29 天（2026-11-14）`），保留原文語境；`sources[].evidence` 不動（那是查閱當時的引文）。「明日」沒有納入機器規則：資料裡的命中全是官方文案引用（Activepieces 的「Daily／明日刷新」）或複合詞，不是指涉寫入當天。
+- 驗證：`tests/validate.py` 新增全庫規則，掃描所有讀者可見字串（排除 `sources`），命中 `今日|今天|明天|後天|昨日|昨天|本週|這週` 或 `(僅剩|剩下|還剩|剩) N 天` 即失敗並印出欄位路徑。修正前 22 筆違規、修正後 0 筆；另外以「`今日仍 6 次` 必須命中、`2026-11-16 仍 6 次` 必須不命中」自我驗證規則本身。「本日」刻意不進機器規則：它會命中「版本日期」「註明日期的學生證」這類複合詞，也會誤抓「隔日重置」這種規則敘述；三筆真正的相對用法已人工改寫並在此列明。
+
+### 來源衝突與工作經驗
+
+- **subagent 回報的查閱時間會超出批次完成時間**：兩個 agent 寫「10:05–10:25」「10:05–10:30」「10:30–10:40」，本輪實際完成是 10:26。已全部改寫成 10:05–10:26（新增紀錄 10:18–10:26），不採用未對錶的時間窗。這與 2026-11-08、11-09 的紀錄同一個問題，規則重申：`verified_at` 與 scope 內的區間一律以主 agent 對錶後的真實時間為準。
+- **PDF 表格的「無法判定」多半是取字方式的問題，不是文件沒寫**：subagent 說作業手冊「每項計畫至少導入 N 場域」對不上三型（殘留 5／3／1）。改用 `pdftotext -layout` 後欄位對齊，逐字就是「單一技術導入型 5 場域／技術套組型 3 場域／整廠擴散型 1 場域」，與「最高 5 萬／50 萬／100 萬」同列。教訓：表格類 PDF 先用 layout 模式抽取再判斷「文件未載」。
+- **同一頁多種資格說法要留在摘要裡**：Asana 非營利頁的三種說法（Who is eligible／正文 501(c)(3)／FAQ 舊方案名）與先前 Kaggle、Google AI Pro 的處理一致——保留並列，不任選一版。
+- **「頁面 5 天前更新」本身就是證據**：Scribe 的 FAQ 顯示 `Updated 5 days ago`，代表 11-05 的核實已被覆蓋；這類訊號應優先重讀，而不是等到月度輪替。
+- **第三方站消失不等於主張為假**：`getmusehelp.com` DNS 失效只寫成來源失敗與新的缺口，`quota_classification` 維持 UNKNOWN，沒有把 100M 寫進任何額度欄位。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,121 筆（S/A/B/C/D = 177/196/131/279/121，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（全部 PASS，含免費專區 731 筆、台灣 preset 192、S 級 177）、`git diff --check` 均通過。
+- `git diff` 檢查：`data/offers.json` 只有 17 筆 `verified_at` 變更（16 複核＋1 新增），`next_review_at` 16 筆月度＋1 筆週度，沒有無關紀錄的時間刷新；新增 ID 1 個、移除 0 個；README 與 scope 的數字對回資料。
+- 本機靜態站（`python3 -m http.server`）以 headless WebKit 實測：全庫 1,121、符合 1,121；台灣條件適用 192、免費方案 731、本輪更新 17；搜尋「智慧農業」1 筆且卡片顯示 S 級、申請截止 2026/12/15 17:00（剩 29 天）、費用說明寫自籌條件；Scribe 卡片顯示更新後的 `.edu` 限制與模組不折扣；「截止日由近到遠」排序可用；console error 0；手機 390×844 `scrollWidth` 390 無水平溢出。

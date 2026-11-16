@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-16T09:23:51+08:00",
-  "scope": "2026-11-16 09:05–2026-11-16 09:23 Asia/Taipei 局部複核 16 筆：今日截止與期限衝突 6 筆（aspn 運動科技黑客松 12:00、kaggle-solar 兩條提交通道、ugreen 15:45、tw-labor tnnu 16:00、google-ai-professional 兩份官方期限、新竹市補助餘額），今日排程輪替 10 筆（qnx、airtable、tactiq、miro 非營利、codegeist、goodmem、serpkite、loom 教育、n8n startup、taoyuan）。新增機會 3 筆：Puter.js user-pays、Gemini Decision 1 免費層、Comfy Cloud 新戶 5 次 GPU；政策與觀察線索 0 筆。辨識出 Kaggle 報告與平台提交是兩條通道，把 Google AI Pro 兌換期限衝突寫進機器可讀欄位，並更正 aspn 已過時的「僅剩兩天」風險描述。",
+  "updated_at": "2026-11-16T10:26:29+08:00",
+  "scope": "2026-11-16 10:05–2026-11-16 10:26 Asia/Taipei 局部複核 16 筆：8 筆未決風險紀錄（xAI 留存傳聞、Helium 非營利、Giskard 封測、Muse 免費額度、AKOOL 教育、Sakana 早期存取、Codex 補償傳聞、AkashML 試用額度）全部維持原判、5 筆教育／非營利折扣條件補強（Scribe 模組不折扣與 .edu 字面條件、Capacities 學術信箱單獨無效、Typeform 教育者／非營利 forever、Miro venture 25%、Asana 非營利頁三說並存）、3 筆政策與資料補充（Grok §8、Notion 驗證方式、Appwrite 驗證來源）。新增 1 筆農業部 116 年度智慧農業技術模組擴散輔導（台灣 Yes、12/15 截止、自籌至少半數）；政策 0 筆、觀察線索 0 筆。品質改善：22 筆紀錄的相對時間詞（今日／明天／剩 N 天）改寫為絕對日期，並在 tests/validate.py 加上回歸防線。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -320,7 +320,7 @@
     {
       "id": "asana-nonprofit-starter-advanced-fifty-percent",
       "title": "Asana 非營利：合格組織 Starter 或 Advanced 五折",
-      "summary": "合格非營利組織及具同等國際資格者可申請 Starter 或 Advanced 訂閱五折；仍須付費。一般定價表列每帳單帳戶每月50,000或75,000 AI Studio點數，折扣方案實際適用及台灣審核未核。",
+      "summary": "合格非營利組織及具同等國際資格者可申請 Starter 或 Advanced 訂閱五折；仍須付費。一般定價表列每帳單帳戶每月50,000或75,000 AI Studio點數，折扣方案實際適用及台灣審核未核。 2026-11-16 重讀：頁面「Who is eligible?」標題列「Nonprofits, academic institutions, and libraries」，但正文把 K-12 與高教導向教育方案、並以 501(c)(3) 或等效國際資格界定非營利；FAQ 仍寫「Premium or Business」舊方案名。三處並存，未擇一。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -345,11 +345,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-06T19:11:02+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-06T19:11:02+08:00",
-      "verification_scope": "僅核非營利活動頁、一般方案定價表及訂閱條款；未申請、付款或確認台灣個案及法律。一般方案AI額度不保證個別折扣訂單適用。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 Asana 非營利頁：Starter／Advanced 五折、折扣「lasts forever」、Goodstack／Percent 驗證、等效國際資格等未變；同頁對學術機構與方案名稱仍有三種並存說法，已寫進摘要不擇一。未送件；台灣法人類型接受度、折後金額與稅費未核。",
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-06T19:11:02+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "usable_duration": "活動FAQ稱折扣持續至離開Asana；個別訂單及未來變更仍須確認。",
       "cancellation": "訂閱條款除訂單另有約定，期滿按當時費率自動續約；不續須至少提前30日通知。個別折扣訂單及適用版本須確認。",
       "access_risk": "頁面主文列Starter／Advanced，FAQ仍用Premium／Business舊名稱；AI加購點數及實際折扣範圍須向Asana確認。",
@@ -359,7 +359,7 @@
         "billing_country": "台灣付款方式、折扣後金額與稅務未核；服務為付費訂閱。",
         "identity_residency": "台灣法人文件與國際同等資格之個案接受度未核。",
         "terms_restrictions": "一般訂閱條款限制轉售、共用席位及不當使用；個別訂單可能優先於一般條款。",
-        "taiwan_note": "Unknown：國際同等資格不代表所有台灣機構可通過審核。"
+        "taiwan_note": "條件式：官方寫 501(c)(3) 與公共圖書館，另接受「equivalent international designations」；台灣組織須以等效國際資格送 Goodstack／Percent 個案驗證，官方未列可接受的台灣法人登記類型。"
       },
       "unknowns": [
         "台灣機構認證及付款、稅費",
@@ -370,9 +370,9 @@
       "sources": [
         {
           "url": "https://asana.com/industry/nonprofit",
-          "scope": "非營利資格、五折、審核及期限",
-          "evidence": "主文列Starter／Advanced五折及國際同等資格；FAQ仍列Premium／Business，稱折扣持續至離開Asana。醫院及附屬機構不符。",
-          "accessed_time_range": "2026-11-06T19:05:43+08:00/2026-11-06T19:11:02+08:00"
+          "scope": "折扣、有效期間、驗證夥伴與頁面內部資格矛盾（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「Get 50% off Asana for your nonprofit」；「It lasts forever unless you choose to leave Asana.」；「We work with Goodstack to verify your eligibility… or the Percent team.」；「qualifying nonprofits with 501(c)(3) designation and public libraries… also available to organizations with equivalent international designations」；同頁「Who is eligible?」卻列「Nonprofits, academic institutions, and libraries」，FAQ 另寫「Choose a Premium or Business plan」，與 Starter／Advanced 名稱並存。｜較早紀錄：主文列Starter／Advanced五折及國際同等資格；FAQ仍列Premium／Business，稱折扣持續至離開Asana。醫院及附屬機構不符。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://asana.com/pricing",
@@ -575,11 +575,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-06T15:10:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-06T15:10:00+08:00",
-      "verification_scope": "僅核學生優惠頁、一般Starter定價表及訂閱條款；學生帳戶AI實際額度、台灣學校文件、結帳及法律未核。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 Asana 學生頁：Starter 12 個月 100% 折扣、最多 50 席、Goodstack 驗證、結帳須輸入信用卡、期滿按當時價格收費等未變；可接受文件為學生證／在學證明／修課證明／學費收據。未註冊；台灣學校與文件能否通過 Goodstack 未核。",
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-06T15:10:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "usable_duration": "合格後Starter折扣12個月，最多50席；不保證期滿續享折扣。",
       "cancellation": "學生頁稱期滿按當時價格收費；一般訂閱條款§4.4除訂單另有規定外自動續期，須至少提前30日通知不續約。以個別訂單與取消流程為準。",
       "access_risk": "須提交信用卡及學籍資料；12個月後可能自動收費。定價表為一般Starter規格，學生帳戶適用性未實測。",
@@ -600,9 +600,9 @@
       "sources": [
         {
           "url": "https://asana.com/industry/students",
-          "scope": "學生資格、12個月折扣、席位及付款",
-          "evidence": "合格18歲以上高教學生經Goodstack驗證，Starter折扣12個月、最多50席；結帳需信用卡，期滿按當時價格收費。",
-          "accessed_at": "2026-11-06T15:10:00+08:00"
+          "scope": "折扣比例、席位上限、驗證夥伴、必要文件與綁卡（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「100% discount for 12 months to students 18 years of age and older currently enrolled in eligible academic institutions worldwide. Our partner, Goodstack, will verify…」；「12-month free trial in the Starter tier」「50-seat maximum」；「you’ll be required to enter your credit card information and the discount code. You won’t be charged at checkout, only at the renewal period」；可接受文件含學生證、在學證明、修課證明或學費收據。｜較早紀錄：合格18歲以上高教學生經Goodstack驗證，Starter折扣12個月、最多50席；結帳需信用卡，期滿按當時價格收費。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://asana.com/pricing",
@@ -850,11 +850,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-06T03:09:39+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-06T03:09:39+08:00",
-      "verification_scope": "僅核學生折扣、訂閱及AI預算官方文件；未申請、付款，台灣個案和法律未核。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀官方折扣文件與定價頁：40%、在學且剩餘至少 3 個月、限新購年繳 Pro、續約回原價等未變；新增確認學術信箱單獨不被接受（改以在學證明等文件），以及 Pro 候補名單與 Paddle 付款方式。未申請；台灣文件接受度、折後金額與稅費未核。",
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-06T03:09:39+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "usable_duration": "新Pro年訂閱首年折扣；續年需重新申請、取消舊訂閱並建立新年約。",
       "cancellation": "訂閱設定中取消，權益維持至當期結束；未取消則原價續訂。",
       "access_risk": "資格與付款均需審核；不得轉讓學生折扣或使用VPN付款。",
@@ -865,21 +865,22 @@
         "billing_country": "付款由Paddle處理，地區價格、稅費與台灣付款未核；不可用VPN付款。",
         "identity_residency": "須由官方審核學籍；台灣學校及個別證明文件是否接受未核。",
         "terms_restrictions": "僅新Pro年訂閱首年，不能轉讓或與其他優惠併用；續年須重新申請並建立新訂閱。",
-        "taiwan_note": "Unknown；服務或付款可用不代表台灣學籍或優惠獲核。"
+        "taiwan_note": "條件式：官方未列國家清單；必要文件是在學證明（在學證明信、當學期課表、學費收據或含到期日的學生證），官方明列「.edu or academic email address alone」不被接受，因此台灣學生不以 .edu.tw 為必要條件；是否核准仍由官方個案審查，未實證。"
       },
       "unknowns": [
-        "台灣學校、證明及付款是否獲准",
+        "台灣學校與在學證明文件是否被接受",
         "折後實際年費與稅費",
         "Pro每月AI預算固定金額或次數",
-        "學生折扣是否涵蓋Plus加購"
+        "學生折扣是否涵蓋Plus加購",
+        "Capacities Pro 目前有候補名單（pricing FAQ），是否影響新訂閱未核"
       ],
       "quota_details": "Pro所有AI功能共用少量每帳期預算，不結轉；耗盡暫停至重置。Plus增加預算，充值須加購Plus。",
       "sources": [
         {
           "url": "https://docs.capacities.io/more/discount",
-          "scope": "學生資格、折扣、續訂與取消",
-          "evidence": "Pro年約首年40%折扣；學籍至少餘三個月並須正式證明，未取消按原價續訂。",
-          "accessed_at": "2026-11-06T03:09:39+08:00"
+          "scope": "折扣比例、必要文件、排除對象、續約與付款方式（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀：「40% discount of our annual Capacities Pro plan」；「currently enrolled full-time or part-time at an accredited institution」；「Not accepted: .edu or academic email address alone」；必要文件含 enrollment letter、當學期課表、學費收據、含到期日學生證；「The discount is not available to education staff, institutions, or NGOs.」「only applies when starting a new yearly Capacities Pro subscription」；續約「will continue at the full amount」。｜較早紀錄：Pro年約首年40%折扣；學籍至少餘三個月並須正式證明，未取消按原價續訂。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://docs.capacities.io/reference/subscriptions",
@@ -889,9 +890,9 @@
         },
         {
           "url": "https://capacities.io/pricing",
-          "scope": "Pro及Plus標價和FAQ",
-          "evidence": "價格頁顯示Pro US$9.99/月及Plus年繳折算US$8.33/月；FAQ提候補，實際折後及稅費以結帳為準。",
-          "accessed_at": "2026-11-06T03:09:39+08:00"
+          "scope": "Pro 價格、付款方式與候補名單（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：Pro「$9.99 /month USD」；付款「credit card, via PayPal, Apple Pay, or Google Pay」，「Paddle.com is the Merchant of Record for all our orders」；FAQ「there’s a waiting list for Capacities Pro」。｜較早紀錄：價格頁顯示Pro US$9.99/月及Plus年繳折算US$8.33/月；FAQ提候補，實際折後及稅費以結帳為準。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         }
       ],
       "priority_score": 12.6,
@@ -902,7 +903,7 @@
     {
       "id": "typeform-education-nonprofit-subscription-discount",
       "title": "Typeform 學生、教育者及非營利：付費AI表單訂閱折扣",
-      "summary": "學生月繳六折12個月或年繳五折1年；教育者及非營利月繳七五折、年繳六折，須向客服申請優惠碼。付費方案含AI表單建立；定價頁同一Basic月價有US$39與US$29差異，實付、台灣資格與稅費未核。",
+      "summary": "學生月繳六折12個月或年繳五折1年；教育者及非營利月繳七五折、年繳六折，須向客服申請優惠碼。付費方案含AI表單建立；定價頁同一Basic月價有US$39與US$29差異，實付、台灣資格與稅費未核。 2026-11-16 重讀官方折扣頁：教育者／非營利月繳 25%、年繳 40% 官方寫「forever」，學生月繳 40%（12 個月）、年繳 50%（1 年）；折扣只能套用在同計費週期的方案。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -926,12 +927,12 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-05T18:12:38+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-05T18:12:38+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-05T18:12:38+08:00",
-      "verification_scope": "僅核官方折扣頁、AI與服務條款及定價頁；未申請或付款，台灣資格、結帳價格、適用法律未核。",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀官方折扣頁：四種折扣比例與「forever」措辭逐字核對，先前記錄的「折扣長期適用不保證價格固定」已可補上官方 forever 字樣；計費週期須與折扣一致。未申請；台灣機構信箱與非營利證明是否被接受、折後稅費與定價頁 US$39／US$29 差異未核。",
       "cancellation": "付費訂閱及加購項自動續訂，期末前於My Account取消；稅另計，通常不退款，仍須確認適用例外。",
       "cost_note": "折扣適用付費方案，非免費AI；定價頁Basic主卡片月繳US$39，對照區另列US$29，未以其中之一推算實付。",
       "access_risk": "Typeform AI未另訂限額時每曆年1,000次互動；一般服務條款明定非企業MCP每曆年200次呼叫，不能當成無限AI。AI可能將表單內容傳給AI供應商。",
@@ -951,9 +952,9 @@
       "sources": [
         {
           "url": "https://help.typeform.com/hc/en-us/articles/360039728951-Non-profit-NGO-and-student-discounts-at-Typeform",
-          "scope": "優惠資格與折扣",
-          "evidence": "學生月繳40%折扣12個月或年繳50%折扣1年；教育者及非營利月繳25%、年繳40%折扣，客服申請優惠碼。",
-          "accessed_at": "2026-11-05T18:12:38+08:00"
+          "scope": "四種折扣的比例、期間與計費週期限制（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀：「Student monthly: 40% discount for 12 months on a monthly plan」「Student yearly: 50% discount for 1 year on a yearly plan」「Educator/NGO monthly: 25% discount forever on a monthly plan」「Educator/NGO yearly: 40% discount forever on a yearly plan」；「You can only apply for a yearly discount if you’re on a yearly plan, and a monthly discount if you’re on a monthly plan.」｜較早紀錄：學生月繳40%折扣12個月或年繳50%折扣1年；教育者及非營利月繳25%、年繳40%折扣，客服申請優惠碼。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://www.typeform.com/pricing",
@@ -1089,12 +1090,12 @@
       "cancellation": "折扣期限、取消與續費條件未核。",
       "usable_duration": "折扣期間未明；一般AI額度每月重置，不結轉。",
       "access_risk": "須核准並訂閱Business；台灣組織證明、付款方式、稅費及折後價格未核。超額使用可由管理員啟用另購Notion credits。",
-      "verified_at": "2026-11-05T10:09:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-05T10:09:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-05T10:09:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "eligibility": {
         "service_availability": "官方面向全球民間社會組織提供申請，需審核；未實際申請。",
         "account_eligibility": "提供組織資料與文件供Notion核實；每組織最多申請三個workspace，僅適用Business。",
@@ -1109,13 +1110,13 @@
         "折扣期限及個別購買安排的AI額度",
         "適用法律或監管限制未核"
       ],
-      "verification_scope": "僅核非營利申請、Business折扣與一般AI額度；未核台灣個案、實際帳單或法律。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 Notion 非營利頁與 AI credits 說明：Business 五折、僅限 Business、每組織最多 3 個工作區、自家團隊 3–7 個工作日審核、每月 1,500 Standard／500 Select credits 未變。未送件；台灣組織文件接受度與折後帳單未核。",
       "sources": [
         {
           "url": "https://www.notion.com/nonprofits",
-          "scope": "非營利申請、審核與Business五折",
-          "evidence": "面向全球民間社會組織，提供Business五折；以文件和公開資料核實，每組織最多三個workspace，審核約3至7個工作日。",
-          "accessed_time_range": "2026-11-05T10:06:43+08:00/2026-11-05T10:09:00+08:00"
+          "scope": "折扣比例、適用方案、驗證方式、工作區上限與審核時間（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「We support civil society organizations worldwide… with 50% off our Business Plan.」「Notion verifies organizations in-house using the documents you provide us and public databases.」「Currently, this program is only eligible for the Business Plan.」「Each organization can request discounts for up to three workspaces.」「the Notion team will verify your application in 3 to 7 business days.」｜較早紀錄：面向全球民間社會組織，提供Business五折；以文件和公開資料核實，每組織最多三個workspace，審核約3至7個工作日。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://www.notion.com/help/manage-your-ai-credits",
@@ -1180,7 +1181,7 @@
         "Nonprofit Agent費用是否被券涵蓋",
         "Self-hosted優惠與Enterprise排除規則衝突"
       ],
-      "verification_scope": "2026-11-14 複核（Asia/Taipei）：重讀 docs.retool.com/support/discount-programs、docs.retool.com/support/billing-usage/ai-credits 與 retool.com/pricing。折扣頁仍「Eligible Nonprofits can get a monthly coupon of $1,625 for a monthly subscription to Retool's Team or Business plan… intended to allow for full coverage of 25 Business Standard users on the monthly plan」「discount programs cannot be used for our Enterprise tier or any annual plans」「Organizations using Retool can only be accepted to one of the three discount programs」。AI credits 文件仍 Free 250／Team 750／Business 1,500、「Credits renew on the first day of each calendar month and do not roll over」；定價頁仍 Team 1,000／Business 3,000 pooled AI credits 並寫「Renews monthly, doesn't roll over」。750／1,500 與 1,000／3,000 的數字衝突今日仍未解。未登入、未送件，台灣非營利個案核准與付款條件未核。",
+      "verification_scope": "2026-11-14 複核（Asia/Taipei）：重讀 docs.retool.com/support/discount-programs、docs.retool.com/support/billing-usage/ai-credits 與 retool.com/pricing。折扣頁仍「Eligible Nonprofits can get a monthly coupon of $1,625 for a monthly subscription to Retool's Team or Business plan… intended to allow for full coverage of 25 Business Standard users on the monthly plan」「discount programs cannot be used for our Enterprise tier or any annual plans」「Organizations using Retool can only be accepted to one of the three discount programs」。AI credits 文件仍 Free 250／Team 750／Business 1,500、「Credits renew on the first day of each calendar month and do not roll over」；定價頁仍 Team 1,000／Business 3,000 pooled AI credits 並寫「Renews monthly, doesn't roll over」。750／1,500 與 1,000／3,000 的數字衝突在 2026-11-14 重讀時仍未解。未登入、未送件，台灣非營利個案核准與付款條件未核。",
       "sources": [
         {
           "url": "https://docs.retool.com/support/discount-programs",
@@ -1284,7 +1285,7 @@
     {
       "id": "miro-startup-subscription-credit",
       "title": "Miro 新創計畫：訂閱抵用與有限 AI 點數",
-      "summary": "合作夥伴支持且符合條件的新創可申請US$1,000訂閱抵用；其他符合條件的新創可個案申請US$500。這是訂閱抵用，不是API額度。Starter每席每月25 AI點、Business每席每月50點，團隊共用、每月重置且不結轉；超過訂閱抵用額由付款卡扣款。台灣資格及實際結帳未核。",
+      "summary": "合作夥伴支持且符合條件的新創可申請US$1,000訂閱抵用；其他符合條件的新創可個案申請US$500。這是訂閱抵用，不是API額度。Starter每席每月25 AI點、Business每席每月50點，團隊共用、每月重置且不結轉；超過訂閱抵用額由付款卡扣款。台灣資格及實際結帳未核。 2026-11-16 重讀：抵用須在 6 個月內啟用、一家新創僅一個 credit、變更方案（升降級）即喪失優惠；超出抵用額由付款卡扣款；另有「Venture Backed startups 25% discount on Enterprise Plan」的替代路徑（非抵用金）。",
       "record_type": "opportunity",
       "status": "application_based",
       "categories": [
@@ -1310,12 +1311,12 @@
       "cancellation": "訂閱取消及稅費細節未核；變更方案會失去促銷，額度用盡後卡片開始扣款。",
       "usable_duration": "每家新創限一次，抵用應在六個月內啟用；後續有效期未明。",
       "access_risk": "申請需審核，付款與超出抵用額費用需自付；須同意官方名稱標誌與案例分享要求。",
-      "verified_at": "2026-11-05T03:08:36+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-05T03:08:36+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-05T03:08:36+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "eligibility": {
         "service_availability": "公開接受申請並審核，未操作帳號或付款。",
         "account_eligibility": "合作夥伴路徑須獨立經營、少於30人且非服務商；個別申請須有自有網域、Crunchbase可驗證募資且非服務商。不得為現行、過期或試用付費訂閱的管理員或成員。",
@@ -1329,13 +1330,13 @@
         "抵用啟用後有效期、訂閱續費及取消條件",
         "適用法律或監管限制未核"
       ],
-      "verification_scope": "僅核官方新創計畫資格、訂閱抵用及AI點數文件；台灣個案、實際付款和法律未核。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 Miro Startup Program 與 AI credits 說明：US$1,000／US$500 抵用、6 個月內啟用、一案一 credit、方案變更失效、超額扣卡等條件未變，另補 venture-backed Enterprise 25% 替代路徑。未送件；台灣企業核准、稅費與取消條件未核。",
       "sources": [
         {
           "url": "https://help.miro.com/hc/en-us/articles/360014912819-Miro-Startup-Program",
-          "scope": "新創計畫資格、訂閱抵用與條款",
-          "evidence": "合作夥伴新創US$1,000、個別新創US$500；一次、六個月內啟用；超額由卡扣款，變更方案失去促銷，並有宣傳及案例分享條款。",
-          "accessed_at": "2026-11-05T03:08:36+08:00"
+          "scope": "抵用金額、啟用期限、方案變更、超額扣款與 venture-backed 替代路徑（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀：「$1,000 credit」（合作夥伴案）／「Individual startups are eligible for a $500 credit… case-by-case」；「Your credit should be activated within 6 months.」「One startup is eligible for one credit.」「Changing your plan (downgrade or upgrade) will result in the forfeiture of the promotion.」「When you reach the credit limit ($1,000 or $500), your card will start getting charged.」「We offer Venture Backed startups a 25% discount on our Enterprise Plan.」｜較早紀錄：合作夥伴新創US$1,000、個別新創US$500；一次、六個月內啟用；超額由卡扣款，變更方案失去促銷，並有宣傳及案例分享條款。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://help.miro.com/hc/en-us/articles/19756209116178-Miro-AI-credits",
@@ -1352,7 +1353,7 @@
     {
       "id": "scribe-education-nonprofit-pro-twentyfive-percent",
       "title": "Scribe 教育與非營利：AI文件 Pro 訂閱75折",
-      "summary": "登記非營利組織、具有效.edu電郵的學生及教育機構員工可申請Pro訂閱總價25%折扣，個案審核後發結帳碼；非免費、非API額度。Pro Personal標價月繳每席US$35或年繳每席月等值US$25，Team至少5席；稅另計。定價表含AI自動擷取，獨立Autocapture模組是否適用折扣未核。台灣.edu.tw與組織個案資格、實際結帳及折扣續期未知。",
+      "summary": "登記非營利組織、具有效.edu電郵的學生及教育機構員工可申請Pro訂閱總價25%折扣，個案審核後發結帳碼；非免費、非API額度。Pro Personal標價月繳每席US$35或年繳每席月等值US$25，Team至少5席；稅另計。台灣.edu.tw與組織個案資格、實際結帳及折扣續期未知。 2026-11-16 重讀官方 FAQ（Updated 5 days ago）：「A student with a valid .edu email address」是學生管道的字面條件；折扣只適用「Pro plan price」與 Enterprise 的「creator seats」，「The discount does not apply to module costs」——先前列為未知的獨立模組問題已解。定價頁另列 Pro Team 月繳每席 US$17／年繳等值 US$13（至少 5 席）。",
       "record_type": "opportunity",
       "status": "application_based",
       "categories": [
@@ -1381,39 +1382,39 @@
       "cancellation": "條款§7.2稱除訂單另有約定，訂閱自動續期；不續期須至少提前30日書面通知，費用一般不退款。實際訂單與取消方式須確認。",
       "usable_duration": "折扣期間及續約是否適用未公布。",
       "access_risk": "須付費且審核不保證通過；稅費另計。條款§4.2對所定義User Content授權含AI訓練，與Customer Agreement資料範圍有區別，敏感流程須先核對適用契約。",
-      "verified_at": "2026-11-05T01:08:30+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-05T01:08:30+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-05T01:08:30+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "eligibility": {
         "service_availability": "官方公開折扣申請頁可讀，個案需審核；未操作申請或付款。",
         "account_eligibility": "登記非營利組織、具有效.edu電郵的學生或教育機構員工；非美國組織須主管機關適當證明。",
         "billing_country": "結帳折扣及台灣付款相容性未核；稅另計。",
         "identity_residency": "官方稱全球，台灣.edu.tw、非營利證明及個案資格未確認。",
-        "terms_restrictions": "帳戶不得共用或以虛假身分註冊；條款年齡與授權條件適用。不得轉售或規避資格。",
-        "taiwan_note": "Unknown：全球申請說明不保證台灣個案核准。"
+        "terms_restrictions": "帳戶不得共用或以虛假身分註冊；條款年齡與授權條件適用。不得轉售或規避資格。 2026-11-16 重讀：Enterprise 折扣只限 creator seats，模組費用（modules）不適用；折扣以 promo code 於結帳套用，頁面未載到期日。",
+        "taiwan_note": "條件式：官方寫 worldwide，非營利須附主管機關證明並個案審核；但學生管道字面要求「valid .edu email address」，台灣學生慣用的 .edu.tw 不符字面條件，是否個案接受未核。"
       },
       "unknowns": [
         "台灣.edu.tw是否接受、台灣組織證明與支付方式",
         "折扣期間、續約及既有訂閱適用性",
-        "獨立Autocapture模組是否包含或折扣、模型額度",
+        "模型額度與其他模組是否另有折扣（FAQ 已明示一般模組費用不適用折扣）",
         "適用法律或監管限制未核"
       ],
-      "verification_scope": "僅核官方折扣、公開定價AI功能及條款列明範圍；未核實際結帳、台灣個案或獨立模組。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）以瀏覽器重讀官方 FAQ、pricing 與條款：25% 折扣仍在、頁面 5 天前改版；新增確認模組費用不適用折扣、Enterprise 僅 creator seats、學生管道字面要求 .edu 信箱；Pro Team 價格補齊。未送件、未結帳；台灣 .edu.tw 與組織證明是否被接受未核。",
       "sources": [
         {
           "url": "https://support.scribehow.com/hc/en-us/articles/8814004248221-Does-Scribe-offer-a-discount-to-nonprofits-students-or-educational-institutions",
-          "scope": "折扣及申請資格",
-          "evidence": "登記非營利、有效.edu學生與教育機構員工可申請Pro總價25%折扣；國際組織須適當證明，個案審核後發結帳碼。",
-          "accessed_time_range": "2026-11-05T01:06:45+08:00/2026-11-05T01:08:30+08:00"
+          "scope": "折扣比例、學生 .edu 字面條件、折扣適用範圍與審核方式（2026-11-16 瀏覽器重讀）",
+          "evidence": "2026-11-16 以瀏覽器重讀（頁面標「Updated 5 days ago」）：「Scribe offers a 25% discount on Pro plans to registered nonprofits, students, and educational institutions worldwide.」；「A student with a valid .edu email address」；「Organizations outside of the U.S.: The appropriate certification letter from your governing body」「We review submissions case by case.」；「Enterprise 25% off creator seats」「The discount does not apply to module costs」。｜較早紀錄：登記非營利、有效.edu學生與教育機構員工可申請Pro總價25%折扣；國際組織須適當證明，個案審核後發結帳碼。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://scribe.com/pricing",
-          "scope": "公開Pro價格及AI功能",
-          "evidence": "Pro Personal月繳每席35美元、年繳每席月等值25美元；Team至少5席。比較表列AI-powered automatic capture；獨立Autocapture模組是否包含未核。",
-          "accessed_time_range": "2026-11-05T01:06:45+08:00/2026-11-05T01:08:30+08:00"
+          "scope": "Pro Personal 與 Pro Team 現行價格（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀：Pro Personal 月繳 US$35、年繳每席月等值 US$25；Pro Team 月繳每席 US$17、年繳每席月等值 US$13，至少 5 席。稅另計（條款 §7.3 fees exclusive of taxes）。｜較早紀錄：Pro Personal月繳每席35美元、年繳每席月等值25美元；Team至少5席。比較表列AI-powered automatic capture；獨立Autocapture模組是否包含未核。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://scribe.com/legal/terms",
@@ -5111,7 +5112,7 @@
     {
       "id": "krater-student-fifteen-twenty-discount-conflict-watch",
       "title": "Krater 學生折扣：首年 15%（單一區塊標題殘留 20%）",
-      "summary": "官方學生頁今日以 15% 為唯一口徑：meta 描述、H1 導言與步驟 3 標題、四則 FAQ 全寫「15% off … for the first year」、結帳自動套用、不需學生信箱或驗證；只有頁面中間一個區塊標題仍寫「20% off for 1 year」，與同頁其餘六處及定價頁不一致，判為殘留文案，實付折扣仍未經結帳實測。一般 Pro 為 US$20／月（每月 1,500 點）、Ultra、Max 另有級距，無免費試用。台灣付款與稅費未核。",
+      "summary": "官方學生頁在 2026-11-08 重讀時以 15% 為唯一口徑：meta 描述、H1 導言與步驟 3 標題、四則 FAQ 全寫「15% off … for the first year」、結帳自動套用、不需學生信箱或驗證；只有頁面中間一個區塊標題仍寫「20% off for 1 year」，與同頁其餘六處及定價頁不一致，判為殘留文案，實付折扣仍未經結帳實測。一般 Pro 為 US$20／月（每月 1,500 點）、Ultra、Max 另有級距，無免費試用。台灣付款與稅費未核。",
       "record_type": "watchlist",
       "status": "conditional",
       "verification": "Official",
@@ -5184,7 +5185,7 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "cost_note": "付費訂閱，非免費：一般 Pro US$20／月（1,500 點／月）；學生 15% 折扣為首年、結帳自動套用、不需學籍驗證；年繳為月繳 10 倍（等同免費 2 個月）。20% 僅見於單一區塊標題。",
-      "quota_note": "Max 方案今日定價頁列 10,000–100,000 點（5 個級距），非先前記錄的 10,000–1,000,000 可選範圍。"
+      "quota_note": "Max 方案 2026-11-08 定價頁列 10,000–100,000 點（5 個級距），非先前記錄的 10,000–1,000,000 可選範圍。"
     },
     {
       "id": "cloudflare-ai-search-monthly-included-november-billing",
@@ -5265,7 +5266,7 @@
       "priority_score": 15.3,
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知",
-      "access_risk": "官方頁現載2026-12-01起計費；超額依價目計費，生成與query rewriting另計。原紀錄的11/01起計費與今日頁面文字衝突，已保留舊證據並以今日文字更新；免費帳戶超額是否硬停未核。",
+      "access_risk": "官方頁現載2026-12-01起計費；超額依價目計費，生成與query rewriting另計。原紀錄的11/01起計費與 2026-11-14 頁面文字衝突，已保留舊證據並以該日文字更新；免費帳戶超額是否硬停未核。",
       "usable_duration": "計費起日2026-12-01（官方頁現行文字）；納入額度按月計算。頁面未另附變更公告，11月是否仍不計費僅能依該頁文字判讀。",
       "cost_note": "官方頁2026-11-12價目：超額base ingestion $0.75/百萬tokens、影像處理另加$0.50/百萬tokens（OCR token共用5M納入額度）、儲存$2.00/GB-month、語意/向量/混合查詢$0.75/1,000、全文查詢$0.10/1,000；Workers Paid第5,000個instance以上每個$0.10/月。"
     },
@@ -6028,8 +6029,8 @@
     },
     {
       "id": "autoclaw-halloween-40m-expiry-conflict-watch",
-      "title": "AutoClaw萬聖節4,000點：公告今日截止，到期文字仍矛盾",
-      "summary": "萬聖節檔期活動期 10/31 00:00–11/08 23:59（UTC+8），已於 2026-11-08 23:59 結束（今日 11/09；後檔 M11W2 11/09–11/15 已上線）。頁面自 11/3 起未再編輯（dateModified 2026-11-03T07:23:11Z），文末「expire on November 1 at 23:59」與上週公告 M10W4 逐字相同並連往上週活動頁，判為殘留文案；本檔條款一致寫 11/8 23:59，官方未發布更正。頁面另載 11/4 07:00–11/5 07:00（UTC+8）加碼 10,000 credits、24 小時有效。因此「up to 80M」在檔期內僅限同時補領上週未領點數者，現已不可達。",
+      "title": "AutoClaw萬聖節4,000點：公告 11/08 截止，到期文字仍矛盾",
+      "summary": "萬聖節檔期活動期 10/31 00:00–11/08 23:59（UTC+8），已於 2026-11-08 23:59 結束（2026-11-09 記錄；後檔 M11W2 11/09–11/15 已上線）。頁面自 11/3 起未再編輯（dateModified 2026-11-03T07:23:11Z），文末「expire on November 1 at 23:59」與上週公告 M10W4 逐字相同並連往上週活動頁，判為殘留文案；本檔條款一致寫 11/8 23:59，官方未發布更正。頁面另載 11/4 07:00–11/5 07:00（UTC+8）加碼 10,000 credits、24 小時有效。因此「up to 80M」在檔期內僅限同時補領上週未領點數者，現已不可達。",
       "record_type": "watchlist",
       "status": "expired",
       "verification": "Official",
@@ -6066,7 +6067,7 @@
         "taiwan_note": "Unknown：尚無台灣註冊及領點的肯定官方證據；時區相同不構成帳戶資格。"
       },
       "unknowns": [
-        "登入後今日是否仍可領取及實際餘額",
+        "登入後（2026-11-09 記錄時）是否仍可領取及實際餘額",
         "台灣註冊與付款接受度",
         "「up to 80M」是否仍以任何方式成立（上週點數已於 11/1 失效）"
       ],
@@ -7050,7 +7051,7 @@
     {
       "id": "cognee-free-memory-token-grant-conflict-watch",
       "title": "Cognee Cloud Free：免卡工作區，1M／10M額度衝突仍存在",
-      "summary": "兩份官方文件今日皆可讀、皆未撤回：cognee.ai/pricing 寫 Free 方案「1 workspace and 1M tokens included」，docs 帳務文件則寫 10M tokens，衝突仍存在，不任選一方為定論。首個工作區免卡、註冊即建立；額外工作區 US$5／月、超出免費餘額需儲值。docs Quick Start 另載「Sign-ups are sometimes capped. When they are, a new account lands on We're at capacity with Sign out as the only action — you are on the waitlist」，即註冊可能排隊，額度存在不等於當下可註冊。兩頁均未寫每月重置，推定為一次性內含額度（推論，非官方明文）。",
+      "summary": "兩份官方文件 2026-11-16 皆可讀、皆未撤回：cognee.ai/pricing 寫 Free 方案「1 workspace and 1M tokens included」，docs 帳務文件則寫 10M tokens，衝突仍存在，不任選一方為定論。首個工作區免卡、註冊即建立；額外工作區 US$5／月、超出免費餘額需儲值。docs Quick Start 另載「Sign-ups are sometimes capped. When they are, a new account lands on We're at capacity with Sign out as the only action — you are on the waitlist」，即註冊可能排隊，額度存在不等於當下可註冊。兩頁均未寫每月重置，推定為一次性內含額度（推論，非官方明文）。",
       "record_type": "watchlist",
       "status": "conflicting_official_usage_claims",
       "verification": "Official",
@@ -7236,12 +7237,12 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-09T09:13:23+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-11-01T17:08:20+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T09:00:00+08:00",
-      "verification_scope": "2026-11-09 09:07–09:12 主 agent 重讀各筆官方頁（見來源）。僅核列明主張；未登入、未註冊、未付款。",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 he2.ai/ai-for-cause 與首頁：50 席、US$50,000、25+ countries、額滿即關閉逐字仍在，頁面仍可申請；未列國家清單、無台灣字樣。未送件，名額是否已滿、額度效期與超額費率未核。",
       "eligibility": {
         "service_availability": "已登記非營利機構、營運至少5年；名額與台灣資格未核。",
         "account_eligibility": "已登記非營利機構、營運至少5年；名額與台灣資格未核。",
@@ -7259,9 +7260,9 @@
       "sources": [
         {
           "url": "https://he2.ai/ai-for-cause",
-          "scope": "方案仍存在、名額與額度、國家數、12個月合作與收件機制（2026-11-09 重讀）",
-          "evidence": "「Helium for Cause gives 50 nonprofits $50,000 in AI credits…」；「25+Countries eligible」；「A full year of access with renewal options, quarterly reviews, and continuous feature updates as Helium grows.」；「Applications close the moment the cohort fills. Once these spots are claimed, Helium for Cause is closed until the next round」；「We read every application and reply within 5–7 business days.」；「Valid nonprofit registration」「5+ years of operations」「An active online presence」｜較早紀錄：官方列50席、5萬美元AI額度、12個月合作，要求非營利登記及營運5年以上。",
-          "accessed_at": "2026-11-09T09:13:23+08:00"
+          "scope": "Helium for Cause：名額、金額、資格、收件狀態與國家敘述（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「Helium for Cause gives 50 nonprofits $50,000 in AI credits…」「50 Spots available」「$50K In AI credits」「25+ Countries eligible」「Applications close the moment the cohort fills.」；資格列合法非營利登記、營運 5 年以上、明確使命與影響指標、線上能見度；頁面與首頁皆無關閉或額滿字樣，全站無 Taiwan 字樣。｜較早紀錄：「Helium for Cause gives 50 nonprofits $50,000 in AI credits…」；「25+Countries eligible」；「A full year of access with renewal options, quarterly reviews, and continuous feature updates as Helium grows.」；「Applications close the moment the cohort fills. Once these spots are claimed, Helium for Cause is closed until the next round」；「We read every application and reply within 5–7 business days.」；「Valid nonprofit registration」「5+ years of operations」「An active online presence」｜較早紀錄：官方列50席、5萬美元AI額度、12個月合作，要求非營利登記及營運5年以上。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         }
       ],
       "priority_score": null,
@@ -9118,7 +9119,7 @@
       "announcement_at": null,
       "review_cadence": "monthly",
       "next_review_at": "2026-12-01T13:00:00+08:00",
-      "verification_scope": "2026-11-11 13:14–13:15（台北）以 Chromium 實讀定價頁、首頁與服務條款：每日 3 份、每份上限 30 分鐘、一次上傳 1 份、處理優先度較低、免信用卡全部逐字確認；11:20 的 Cloudflare 403 已排除為機器人防護（非方案結束），本日恢復可讀。未註冊、未核每日重置時區、免費保存期限或台灣帳戶資格。",
+      "verification_scope": "2026-11-11 13:14–13:15（台北）以 Chromium 實讀定價頁、首頁與服務條款：每日 3 份、每份上限 30 分鐘、一次上傳 1 份、處理優先度較低、免信用卡全部逐字確認；11:20 的 Cloudflare 403 已排除為機器人防護（非方案結束），2026-11-11 恢復可讀。未註冊、未核每日重置時區、免費保存期限或台灣帳戶資格。",
       "id": "turboscribe-free-daily-three-thirty-minute-files",
       "title": "TurboScribe Free：每日3份、每份30分鐘AI轉錄",
       "summary": "免費每日3份轉錄，每份最多30分鐘、一次上傳1份，處理優先度較低；免信用卡。台灣帳戶及重置時區未核。",
@@ -15230,11 +15231,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-04T08:11:22+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-30T17:06:51+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-04T08:00:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "cancellation": "期滿可選Free或Pro；未選方案則停用，非宣稱自動續訂Pro。",
       "usable_duration": "加入起六個月；2026-11-01起對已超過六個月的組織執行期滿限制，非新申請截止日。",
       "access_risk": "期滿未選方案會停用組織，資料可能依保留政策刪除。",
@@ -15252,13 +15253,13 @@
         "卡片、超額費用與資料保留期限",
         "一般條款及台灣法律"
       ],
-      "verification_scope": "本輪僅複核新列來源明載主張；未申請、付款或核實台灣個案、其他舊欄位及法律。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 appwrite.io/education：六個月、2 個 projects、Pro 等級（不含 email support）、不含 add-ons、每帳號一次、期滿未選方案組織停用等敘述未變；學生資格由 GitHub Student Developer Pack 驗證。未登入，台灣學籍是否通過 GitHub Education 未核。",
       "sources": [
         {
           "url": "https://appwrite.io/education",
-          "scope": "本輪局部複核；其他欄位保留既有證據",
-          "evidence": "GitHub Student Pack驗證者免費六個月、兩專案Pro用量、不含附加項；不可商用；期滿未選方案組織停用。",
-          "accessed_time_range": "2026-11-04T08:06:37+08:00/2026-11-04T08:11:22+08:00"
+          "scope": "Education 方案期間、專案數、add-ons、期滿處理與驗證方式（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「Verified students get six months of Appwrite Cloud with Pro resources for free.」「2 projects with equal usage limits as the Appwrite Pro plan (minus email support)」「The Education plan lasts six months from the day you join, and each account can join once.」「The Console reminds you five weeks before your term ends.」「the Education plan does not cover any add-ons」；驗證由 GitHub Student Developer Pack 自動完成。｜較早紀錄：GitHub Student Pack驗證者免費六個月、兩專案Pro用量、不含附加項；不可商用；期滿未選方案組織停用。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://appwrite.io/changelog/entry/2026-09-30.md",
@@ -15450,11 +15451,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-09T17:20:13+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-30T16:08:30+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T17:20:13+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
@@ -15474,13 +15475,13 @@
         "生成額度、API及方案具體內容",
         "台灣院校排名資格、付款卡與法律"
       ],
-      "verification_scope": "2026-11-09T17:20 重讀 akool.com/education-program（含原始 HTML 的 FAQ 摺疊內容）與 info.akool.com 表單頁：方案與資格不變，新增「研究生需教授背書」「試用後無自動扣款」兩項官方答覆。Google 表單回 401，受理現況未實測；未申請、未核台灣院校與法律。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 akool.com/education-program 與 info 子網域：三個月 Studio、40% 年繳折扣、QS/THE 前 1,000 大學教師與教授指導團隊等條件逐字未變，無結束日；申請表單（Google Form）再次回 401，無法確認是否仍收件。未送件。",
       "sources": [
         {
           "url": "https://akool.com/education-program",
-          "scope": "教育資格、福利、試用後處置與FAQ",
-          "evidence": "頁面仍在線並列「$3,000 Studio Plan, Free for 3 Months」「Exclusive 40% Discount on Annual Subscriptions」，對象為 QS/THE 前 1,000 名大學教師、研究者或教授指導的學生團隊。FAQ（原始 HTML，摺疊內容不在渲染後文字）逐字：「Yes, graduate students can apply if they have a faculty advisor's endorsement. The advisor must complete the verification process through our verification portal.」「After the trial period, institutions can continue with a 40% discount on annual licenses. Please note, there is no automatic billing; you choose whether to continue.」另提供含講義的課程模組。",
-          "accessed_at": "2026-11-09T17:20:13+08:00"
+          "scope": "教育方案：方案價值、折扣、資格與有無結束日（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「$3,000 Studio Plan, Free for 3 Months」「Exclusive 40% Discount on Annual Subscriptions」「Faculty/Researchers at Top 1000 Universities (QS/THE ranked)」「Student teams supervised by professors」；FAQ「After the trial period, institutions can continue with a 40% discount on annual licenses. Please note, there is no automatic billing; you choose whether to continue.」；全頁無活動結束日。｜較早紀錄：頁面仍在線並列「$3,000 Studio Plan, Free for 3 Months」「Exclusive 40% Discount on Annual Subscriptions」，對象為 QS/THE 前 1,000 名大學教師、研究者或教授指導的學生團隊。FAQ（原始 HTML，摺疊內容不在渲染後文字）逐字：「Yes, graduate students can apply if they have a faculty advisor's endorsement. The advisor must complete the verification process through our verification portal.」「After the trial period, institutions can continue with a 40% discount on annual licenses. Please note, there is no automatic billing; you choose whether to continue.」另提供含講義的課程模組。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://info.akool.com/education-program",
@@ -16237,11 +16238,11 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-09T09:13:23+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-30T12:08:25+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T09:00:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
@@ -16261,14 +16262,13 @@
         "封測專用合約、付款及後續收費",
         "台灣資格及法律"
       ],
-      "verification_scope": "2026-11-09 09:07–09:12 主 agent 重讀各筆官方頁（見來源）。僅核列明主張；未登入、未註冊、未付款。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀官方頁：名額與新創限定字樣未變、申請表單仍嵌入；仍無名額數、期限與封測專用合約。表單存在不等於會受理，未送件。",
       "sources": [
         {
           "url": "https://www.giskard.ai/saas-ai-agents-red-teaming",
-          "scope": "封測頁仍上線、免費但名額有限與對象（2026-11-09 重讀）",
-          "evidence": "「**Limited spots:** try our new Agentic Red Teamer on your own agent, free.」；「Limited offer for startups and small teams」；頁面標「Last Published: Thu Oct 29 2026」，未公布名額數、期限或封測專用條款｜較早紀錄：頁面稱新創與小團隊可在自有代理免費測試，名額有限；修正後通過重測才發attestation。",
-          "accessed_time_range": "2026-10-30T12:05:00+08:00–2026-10-30T12:08:25+08:00",
-          "accessed_at": "2026-11-09T09:13:23+08:00"
+          "scope": "新創免費紅隊封測：頁面版本、名額敘述與申請表單是否仍在（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（raw HTML，77,318 bytes）：仍逐字「Limited spots: try our new Agentic Red Teamer on your own agent, free.」「Limited offer for startups and small teams」；HubSpot 表單仍嵌入同一頁（portalId 25507147），未被候補或關閉公告取代；頁面仍為 2026-10-29 版，無名額數、免費測試次數、期限或封測合約。｜較早紀錄：「**Limited spots:** try our new Agentic Red Teamer on your own agent, free.」；「Limited offer for startups and small teams」；頁面標「Last Published: Thu Oct 29 2026」，未公布名額數、期限或封測專用條款｜較早紀錄：頁面稱新創與小團隊可在自有代理免費測試，名額有限；修正後通過重測才發attestation。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://www.giskard.ai/pricing",
@@ -18038,7 +18038,7 @@
         "taiwan_note": "Yes：官方明定台灣登記店家與統編程序，但仍須個案資格驗證、合格方案及補助審核；預算可提前用罄。法律監管不因政府計畫官網存在就視為全面核實。"
       },
       "unknowns": [
-        "本日補助經費餘額與實際個案核准",
+        "補助經費餘額（2026-11-14 未取得）與實際個案核准",
         "個別方案價格、合約、續訂與取消退款",
         "個案行業別（附件 3 稅籍營業項目）與受影響聲明之認定",
         "第四梯方案上架是否續辦（截至 2026-11-14 仍未公告，梯次表僅列至第三梯 115/10/20 截止）"
@@ -18250,7 +18250,7 @@
     {
       "id": "xiaomi-mimo-signup-credit-current-issuance-watch",
       "title": "Xiaomi MiMo：舊公告新舊戶可領credits，現行發放及效期待核",
-      "summary": "2026年1月官方公告稱新舊戶可到Balance領免費credits，但未列金額、效期或現行申領截止；不能當作本日保證贈額。後續公告已明定1月26日16:00 UTC+8開始計費，餘額不足停止API，故不得沿用較早公告的全免費狀態。台灣資格未核。",
+      "summary": "2026年1月官方公告稱新舊戶可到Balance領免費credits，但未列金額、效期或現行申領截止；不能當作 2026-11-09 當時的保證贈額。後續公告已明定1月26日16:00 UTC+8開始計費，餘額不足停止API，故不得沿用較早公告的全免費狀態。台灣資格未核。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -18272,7 +18272,7 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "cancellation": "公告稱計費後先扣免費額度再扣充值餘額，不足則無法使用API；現行充值、自動補值、退款及取消條款未取得，不推定免卡或無扣款風險。",
-      "usable_duration": "免費credits金額、領取期限、有效期限及本日是否仍發放均未知；API全免費期已於2026-01-26 16:00 UTC+8結束。",
+      "usable_duration": "免費credits金額、領取期限、有效期限及2026-11-09 當時是否仍發放均未知；API全免費期已於2026-01-26 16:00 UTC+8結束。",
       "access_risk": "舊公告仍可瀏覽不證明目前可領。未登入Balance、領取或充值；FAQ本次僅取得頁面殼，未取得正文。",
       "verified_at": "2026-11-09T09:13:23+08:00",
       "discovered_at": "2026-10-29T18:06:50+08:00",
@@ -18281,7 +18281,7 @@
       "review_cadence": "monthly",
       "next_review_at": "2026-12-09T09:00:00+08:00",
       "eligibility": {
-        "service_availability": "2026-01-20及01-23公告均稱新舊戶可到Balance領credits；未確認本日仍發放，API已於01-26開始計費。",
+        "service_availability": "2026-01-20及01-23公告均稱新舊戶可到Balance領credits；2026-11-09 未確認仍發放，API已於01-26開始計費。",
         "account_eligibility": "公告稱新舊使用者可領；現行重複申領、帳戶驗證及年齡限制未取得。",
         "billing_country": "舊公告稱非中國大陸使用者可免實名充值，並列 Apple Pay、Google Pay 及信用卡／簽帳卡；2026-11-09 重讀同一頁：原文只二分「Chinese mainland users」與「Other users」，全站無台灣字樣，台灣付款核准與贈額是否需卡仍未載。",
         "identity_residency": "未找到明列台灣帳戶、居住或公司資格；非中國大陸使用者的一般說明不等於台灣開通確認。",
@@ -18289,7 +18289,7 @@
         "taiwan_note": "Unknown：未核台灣帳戶、手機／信箱註冊、付款或領取資格，不得以頁面可讀推定合格。"
       },
       "unknowns": [
-        "本日是否仍發放、新舊戶實際金額、領取截止及credits效期",
+        "2026-11-09 當時是否仍發放、新舊戶實際金額、領取截止及credits效期",
         "台灣註冊、身分、居住與付款資格",
         "現行服務及促銷條款、免卡與自動補值設定、退款／取消及適用法律限制"
       ],
@@ -23029,7 +23029,7 @@
     {
       "id": "autodesk-flow-studio-education",
       "title": "Autodesk Flow Studio Education：合資格大學生／教師每月2,100點",
-      "summary": "Autodesk Flow Studio Education現行指南仍列免費每月2,100點、不結轉；合資格18歲以上大學生、教師及機構，學生1席/教師最多250席一年可續、機構最多3,000席三年可續。教育頁2026-10-16及總覽11-12快照明列僅教育用途、不得商業/專業/營利用途；現行教育頁403，快照不代表今日條款未變。台灣資格、綁卡與耗盡行為未核。",
+      "summary": "Autodesk Flow Studio Education現行指南仍列免費每月2,100點、不結轉；合資格18歲以上大學生、教師及機構，學生1席/教師最多250席一年可續、機構最多3,000席三年可續。教育頁2026-10-16及總覽11-12快照明列僅教育用途、不得商業/專業/營利用途；現行教育頁403，快照不代表 2026-11-15 條款未變。台灣資格、綁卡與耗盡行為未核。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -23102,7 +23102,7 @@
       "priority_score": 16.3,
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻",
-      "verification_scope": "2026-11-15 局部複核現行官方方案指南：免費/每月2,100點不結轉、學生教師資格、席位/期限與能力。另實讀Wayback保存的官方教育頁2026-10-16、總覽2026-11-12快照之非商業教育限制與續期規則；快照不是今日有效性證明。當前教育/定價/條款頁403、支援路徑404，未核完整現行授權、台灣個案、付款/耗盡或法律；一週後換路線追查。"
+      "verification_scope": "2026-11-15 局部複核現行官方方案指南：免費/每月2,100點不結轉、學生教師資格、席位/期限與能力。另實讀Wayback保存的官方教育頁2026-10-16、總覽2026-11-12快照之非商業教育限制與續期規則；快照不是 2026-11-15 有效性證明。當前教育/定價/條款頁403、支援路徑404，未核完整現行授權、台灣個案、付款/耗盡或法律；一週後換路線追查。"
     },
     {
       "id": "aiven-postgresql-free",
@@ -27226,7 +27226,7 @@
     {
       "id": "sambanova-access-policy",
       "title": "SambaNova：Free 名稱不等免費推論，Plans 與 rate-limits 文件仍互相矛盾",
-      "summary": "兩份官方文件今日逐字重讀，矛盾未解：Plans 頁寫 Free 須「Add a payment method and purchase credits to run your first requests」；同時 rate-limits 文件仍定義「Free Tier: Applied when there is no payment method linked with your account」，並列 Free Tier 各模型 20 RPM／20 RPD／200,000 TPD。本次未找到任何裁決來源（文件索引無 FAQ、Plans 的 Billing 為前端載入），因此實務上應以 Plans 頁的購買流程為準，rate-limits 表不得當成可免費請求的證據。限額表內容：Production Free Tier 為 DeepSeek-V3.1、Meta-Llama-3.3-70B-Instruct、gpt-oss-120b（各 20/20/200000）；Developer Tier 為 60/12000、240/48000、60/12000 且跨模型每日 2,000 萬 tokens。Preview 模型這次列 DeepSeek-V3.2 與 gemma-4-31B-it（Free 20/20/200000、Developer 60/12000），僅供評估、不得用於 production。台灣資格未知。",
+      "summary": "兩份官方文件 2026-11-14 逐字重讀，矛盾未解：Plans 頁寫 Free 須「Add a payment method and purchase credits to run your first requests」；同時 rate-limits 文件仍定義「Free Tier: Applied when there is no payment method linked with your account」，並列 Free Tier 各模型 20 RPM／20 RPD／200,000 TPD。本次未找到任何裁決來源（文件索引無 FAQ、Plans 的 Billing 為前端載入），因此實務上應以 Plans 頁的購買流程為準，rate-limits 表不得當成可免費請求的證據。限額表內容：Production Free Tier 為 DeepSeek-V3.1、Meta-Llama-3.3-70B-Instruct、gpt-oss-120b（各 20/20/200000）；Developer Tier 為 60/12000、240/48000、60/12000 且跨模型每日 2,000 萬 tokens。Preview 模型這次列 DeepSeek-V3.2 與 gemma-4-31B-it（Free 20/20/200000、Developer 60/12000），僅供評估、不得用於 production。台灣資格未知。",
       "categories": [
         "QUALIFICATION",
         "BETA-ACCESS"
@@ -27797,7 +27797,7 @@
     {
       "id": "mango-inference-community",
       "title": "Mango Inference：官方US$10註冊額度與限時七折；「1T免費tokens」為誤讀",
-      "summary": "Mango Inference 為 OpenAI 相容的按量計費 API（無訂閱、無最低消費）。2026-11-11 09:16 重讀：platform 頁仍列「$10 in free credits when you sign up」與「30% off all models for 30 days after launch, through Nov 11」，價格表同時印原價與折扣價（例 DeepSeek V4.1 Flash 1017：input $0.20→$0.14、cached $0.006→$0.004、output $0.80→$0.56 per 1M tokens）；pricing 頁仍寫「30% off for new users until Nov 11.」，兩處都未標年份，重讀當日 11/11 折扣仍在，11/12 起是否即回原價未實測。社群原文的「$100 이상 결제 시 결제액만큼 추가 크레딧（계정당 최대 $1,000）」配對活動標題與內文都寫「10/31까지」，截止日已過、不再可申請；官方兩頁本輪仍無「1T」「trillion」或配對方案字樣。US$10 註冊贈額未標結束日，明細只寫「will expire after the stated validity period」。餘額歸零即拒絕請求，充值上下限與自動加值未公布。 另取得 ToS v2026-10-12：§19.3 排除俄羅斯、白俄、敘利亞、中國大陸與香港（台灣不在清單，但未被正面列名，故 taiwan 仍為 Unknown）；促銷額度到期為「發放時指定日或發放後六個月較早者」，platform 頁未寫期限。 2026-11-11 12:12–12:14 重讀：折扣與贈額文案仍在、價格表仍印折扣價（DeepSeek V4.1 Flash 1017 input $0.20→$0.14、output $0.80→$0.56 per 1M tokens），官方 docs 全站無贈額與折扣字樣。11/12 起是否回原價只能明天再讀。",
+      "summary": "Mango Inference 為 OpenAI 相容的按量計費 API（無訂閱、無最低消費）。2026-11-11 09:16 重讀：platform 頁仍列「$10 in free credits when you sign up」與「30% off all models for 30 days after launch, through Nov 11」，價格表同時印原價與折扣價（例 DeepSeek V4.1 Flash 1017：input $0.20→$0.14、cached $0.006→$0.004、output $0.80→$0.56 per 1M tokens）；pricing 頁仍寫「30% off for new users until Nov 11.」，兩處都未標年份，重讀當日 11/11 折扣仍在，11/12 起是否即回原價未實測。社群原文的「$100 이상 결제 시 결제액만큼 추가 크레딧（계정당 최대 $1,000）」配對活動標題與內文都寫「10/31까지」，截止日已過、不再可申請；官方兩頁本輪仍無「1T」「trillion」或配對方案字樣。US$10 註冊贈額未標結束日，明細只寫「will expire after the stated validity period」。餘額歸零即拒絕請求，充值上下限與自動加值未公布。 另取得 ToS v2026-10-12：§19.3 排除俄羅斯、白俄、敘利亞、中國大陸與香港（台灣不在清單，但未被正面列名，故 taiwan 仍為 Unknown）；促銷額度到期為「發放時指定日或發放後六個月較早者」，platform 頁未寫期限。 2026-11-11 12:12–12:14 重讀：折扣與贈額文案仍在、價格表仍印折扣價（DeepSeek V4.1 Flash 1017 input $0.20→$0.14、output $0.80→$0.56 per 1M tokens），官方 docs 全站無贈額與折扣字樣。11/12 起是否回原價，2026-11-15 記錄時仍未確認。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -30725,12 +30725,12 @@
       "cancellation": "官方：每月自動續訂，可隨時取消；實際購買地區與帳戶可見方案須於訂閱前確認。",
       "usable_duration": null,
       "access_risk": "資格、容量及政策可能改變",
-      "verified_at": "2026-11-09T16:31:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-23T19:00:09+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T16:31:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "有限測試，依地區與帳戶；官方2026-09新聞稿確認美國推出，非完整當期國家清單。",
@@ -30744,7 +30744,8 @@
         "免費額度數字（100M／週）僅見 Meta 執行長 2026-09-08 的 X 貼文，help／pricing／newsroom 皆未列",
         "當期完整支援地區清單、台灣帳戶與付款條件",
         "Muse token 定義與實際任務換算、免費額度重置的星期與時區",
-        "加購 Muse tokens 的單價與最小購買量未列於所讀頁面"
+        "加購 Muse tokens 的單價與最小購買量未列於所讀頁面",
+        "第三方 getmusehelp.com 於 2026-11-16 DNS 無法解析，100M／週 說法目前無可讀來源"
       ],
       "sources": [
         {
@@ -30769,7 +30770,7 @@
           "url": "https://getmusehelp.com/pricing/",
           "label": "獨立站定價主張",
           "scope": "非官方，數字不進正式費用／quota欄",
-          "evidence": "歷史線索保留；2026-10-26再次實讀仍主張Free 100M/週，並自稱獨立站。官方本次未列免費數字，不將該主張升格為官方確認。"
+          "evidence": "歷史線索保留；2026-10-26再次實讀仍主張Free 100M/週，並自稱獨立站。官方本次未列免費數字，不將該主張升格為官方確認。2026-11-16 三次解析 getmusehelp.com（https／http／www）皆 Could not resolve host；第三方站目前不可讀，其「Free 100M／週」主張不可再驗，也不因此判定為假"
         },
         {
           "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
@@ -30782,6 +30783,12 @@
           "label": "Meta官方Muse說明中心",
           "scope": "地區及功能可用性限制",
           "evidence": "2026-10-26正文實讀：app與網站尚未在各地提供，已提供地區仍可能缺少部分功能；本頁未列具體國家清單。"
+        },
+        {
+          "url": "https://www.meta.com/help/superintelligence/1331373868832401/",
+          "scope": "Muse 使用上限與免費敘述（2026-11-16 重讀；頁首 Updated: 2 days ago）",
+          "evidence": "2026-11-16 重讀：「Muse is available for free with a usage limit. If you reach your free usage limit and want more usage, you can upgrade to a paid subscription, or wait until your free usage limit refreshes.」全頁仍無免費每週 token 數字、無支援國家清單。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -30795,7 +30802,7 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-09 16:31 重讀 Meta help 訂閱頁與加購說明：免費版有每週上限、用盡後三種選項、加購 tokens 不需訂閱且不過期、Power US$20／Maximum US$100 週額皆逐字可讀；about.fb.com 發布稿只寫免費與訂閱分級、未列數字。X 貼文為第一方社群發言，依規則只當線索。未登入、未訂閱、未付款。"
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 Meta 三份說明頁（含 2 天前更新的 How to get started with Muse）：仍只寫「available for free with a usage limit」，未公布每週 token 數；getmusehelp.com 三次 DNS 失敗。未登入，台灣可用度與重置時區未核。"
     },
     {
       "id": "korea-ai-benefits-unverified",
@@ -31583,12 +31590,12 @@
       "cancellation": "依原購買平台取消；新combined plan至少續訂前24小時操作，取消後原則可用至當期末。實際留存促銷的取消效果、續費日與金額須看本人書面offer及帳單，不建議先付款求優惠。",
       "usable_duration": "社群自述為3個月或首月半價；官方未公布統一方案。",
       "access_risk": "帳戶專屬優惠及新舊方案並存；免費、折扣、付一送二不能互換描述。台灣出現在套裝取消條款，不證明台灣帳戶一定獲邀留存優惠。",
-      "verified_at": "2026-11-08T11:25:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-23T19:59:06+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T11:25:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "未有本次實讀官方公開留存活動條款；僅保留帳戶差異社群線索。",
@@ -31607,8 +31614,9 @@
       "sources": [
         {
           "url": "https://docs.x.ai/grok/faq.md",
-          "scope": "官方取消、退款、額外用量及帳戶分流",
-          "evidence": "Web於grok.com/?_s=billing管理；iOS向Apple取消、Android向Google Play取消。Web／Google Play退款送accounts.x.ai/refund審核，Apple自行處理。FAQ未載三個月留存優惠。另載可購Extra Usage Credits及開Auto Top Up。"
+          "scope": "Grok FAQ 全文掃描：有無留存／註冊促銷與三個月免費承諾（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（raw markdown，HTTP 200）：全文 promo／retention／three month／trial 掃描僅命中資料保留條款「Deleted chats and files are removed from systems within standard retention windows」，無任何三個月留存優惠；定價頁仍 Free $0、Plus $8、Premium $30、Super $100、Ultra $200，並寫「Prices shown do not include applicable taxes or fees (e.g. VAT).」｜較早紀錄：Web於grok.com/?_s=billing管理；iOS向Apple取消、Android向Google Play取消。Web／Google Play退款送accounts.x.ai/refund審核，Apple自行處理。FAQ未載三個月留存優惠。另載可購Extra Usage Credits及開Auto Top Up。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://x.ai/legal/terms-of-service",
@@ -31617,8 +31625,9 @@
         },
         {
           "url": "https://x.ai/legal/bundled-subscription-terms",
-          "scope": "套裝方案、促銷與台灣取消權的契約文字",
-          "evidence": "Last Updated October 7, 2026。§6須至少續訂前24小時取消，取消後可用至當期末；§8僅稱可能提供促銷或試用，結束後按標準價自動續訂。Regional Terms明列Taiwan消費者購買後5日可取消，已使用部分可按比例保留費用；這是契約文字，不是本輪獨立法律判斷。Legacy X Premium仍適用原X條款，除非轉新combined plan。"
+          "scope": "Bundled Subscription Terms §8 促銷與自動續訂（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（Last Updated October 7, 2026）：「X Subscription Corp may offer promotional pricing or free trial periods for Paid Services… At the end of a promotional or trial period, your subscription will automatically renew at the standard subscription fee unless you cancel before the end date of the promotion or trial.」；§10 以「live in a country supported by X Subscription Corp」界定可用國，未列台灣。｜較早紀錄：Last Updated October 7, 2026。§6須至少續訂前24小時取消，取消後可用至當期末；§8僅稱可能提供促銷或試用，結束後按標準價自動續訂。Regional Terms明列Taiwan消費者購買後5日可取消，已使用部分可按比例保留費用；這是契約文字，不是本輪獨立法律判斷。Legacy X Premium仍適用原X條款，除非轉新combined plan。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://x.ai/pricing",
@@ -31642,7 +31651,7 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "verification_scope": "實讀完整相關訂閱FAQ段落、xAI／SpaceXSI Consumer Terms、現行pricing、Bundled Subscription Terms及X Purchaser Terms。未登入個人帳戶或操作取消以誘發優惠。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀 xAI FAQ、Bundled Subscription Terms 與定價頁：§8 仍只一般性承認促銷與期滿自動續訂，FAQ 全文無三個月留存優惠字樣；定價五個方案價格未變。未登入、未購買；個別帳戶是否收到留存優惠仍未核。",
       "cost_note": "沒有可核實的普遍三個月免費成本。官方允許促銷結束後標準價自動續訂，額外用量／Auto Top Up也可能自費；不得估算保證節省額。"
     },
     {
@@ -38064,12 +38073,12 @@
       "cancellation": null,
       "usable_duration": null,
       "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-11-10T04:21:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly_or_new_signal",
-      "next_review_at": "2026-12-10T09:00:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
@@ -38084,7 +38093,7 @@
         "社群自述的補償是否實際入帳",
         "其他帳戶是否可能適用"
       ],
-      "verification_scope": "2026-11-10 04:21 主 agent 重讀 help.openai.com「How resets work in Codex」全文（頁首 Updated: 12 days ago）：免費促銷 reset 不補償、不延長、不補發，付費 reset 另處理。未核付費 reset 購買流程、其他已計費服務或任何個案，未讀個人帳戶。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）批次重讀 Codex reset 政策頁：仍明示不提供免費促銷 reset 的手動補償、credits 或退款，也沒有個案補償表單；頁面僅區分付費 reset 的購買與帳務。主代理直取回 403，未登入、未送件。",
       "sources": [
         {
           "url": "https://help.openai.com/en/articles/20001498",
@@ -38095,9 +38104,9 @@
         {
           "url": "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
           "label": "官方Reset政策",
-          "scope": "Codex reset 政策全文：免費促銷 reset 不提供 credits／退款／補償、不延長、不補發；付費 reset 另處理",
-          "evidence": "「Free banked and automatic resets are discretionary promotional benefits, with no guaranteed availability or schedule.」；「Banked resets are not cash, API credits, or transferable credit balances.」；「Support does not provide manual or courtesy promotional resets, extend expiration dates, or replace free resets…」；「We do not provide credits, refunds, or other compensation for these free benefits.」；「This policy applies to free promotional resets. Paid reset purchases and other billed services are handled separately」。",
-          "accessed_at": "2026-11-10T04:21:00+08:00"
+          "scope": "Codex 免費重置政策：有無補償管道（2026-11-16 批次重讀）",
+          "evidence": "2026-11-16 批次重讀（頁首 Updated: 19 days ago）：「Support does not provide manual or courtesy promotional resets, extend expiration dates, or replace free resets… We do not provide credits, refunds, or other compensation for these free benefits.」「Support does not review individual promotional eligibility…」；頁面僅連 paid reset 購買頁與 referral 條款，無補償申請表單。主代理同日直取該 URL 回 403（bot 阻擋），故以批次實讀引文記錄。｜較早紀錄：「Free banked and automatic resets are discretionary promotional benefits, with no guaranteed availability or schedule.」；「Banked resets are not cash, API credits, or transferable credit balances.」；「Support does not provide manual or courtesy promotional resets, extend expiration dates, or replace free resets…」；「We do not provide credits, refunds, or other compensation for these free benefits.」；「This policy applies to free promotional resets. Paid reset purchases and other billed services are handled separately」。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://www.reddit.com/r/codex/comments/1x7z4ol/codex_weekly_allowance_dropped_from_58_to_0_in_8/",
@@ -41799,7 +41808,7 @@
       "priority_tier": "A",
       "priority_note": "官方來源·已核實列明主張·免費·台灣未標記·≤15分鐘",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-09 15:23–15:40 重讀 get.mem.ai/pricing：Free 25 訊息／25 新筆記／追蹤 25／15 個開啟工作／3 小時 Voice；Plus US$9（50/50/50、25 開啟、10 小時）；Pro US$29（100/100、1 Custom Routine、1 Connection、50 次 Routine 執行）；Custom Routines／Routine Executions／Connections 在 Free 與 Plus 皆為「—」；每月帳期重置。未登入；條款頁今日 404，付款國與取消流程未載。",
+      "verification_scope": "2026-11-09 15:23–15:40 重讀 get.mem.ai/pricing：Free 25 訊息／25 新筆記／追蹤 25／15 個開啟工作／3 小時 Voice；Plus US$9（50/50/50、25 開啟、10 小時）；Pro US$29（100/100、1 Custom Routine、1 Connection、50 次 Routine 執行）；Custom Routines／Routine Executions／Connections 在 Free 與 Plus 皆為「—」；每月帳期重置。未登入；條款頁 2026-11-09 為 404，付款國與取消流程未載。",
       "status": "active_verified"
     },
     {
@@ -43816,12 +43825,12 @@
       "cancellation": "自動加值可選啟用，若開啟需自行管理；一般已付費用依條款不退款，未核個案取消流程。",
       "usable_duration": "試用額度會到期，具體期限未公布",
       "access_risk": "資格、額度或政策可能改變；試用耗盡及效期後可能失去存取。",
-      "verified_at": "2026-11-10T04:24:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "discovered_at": "2026-10-24T13:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-03T07:07:07+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -43838,13 +43847,13 @@
         "試用額度到期天數",
         "是否每帳戶一次、可否重複註冊"
       ],
-      "verification_scope": "2026-11-10 04:24 主 agent 重讀 akashml.com/docs/getting-started/introduction：付款方式驗證後發 trial credits、trial 到期／購買的不到期。金額、到期天數、台灣資格未取得；未註冊、未綁卡。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀官方 docs、首頁與 terms：試用額度存在但金額與到期天數仍未公布；條款要求姓名、email、密碼、郵寄地址與有效付款方式，無國家清單或台灣字樣；akashml.com/pricing 404。未註冊、未加卡。",
       "sources": [
         {
           "url": "https://akashml.com/docs/getting-started/introduction",
-          "scope": "trial credits 取得條件（驗證付款方式）與到期行為（2026-11-10 重讀；金額未公布）",
-          "evidence": "「Trial credits are granted when you verify a payment method during onboarding.」；「Credit pools have optional expiration dates. Trial credits expire; purchased credits do not.」；「Create an account … and verify your email. / Add a payment method during onboarding to receive trial credits.」；較早紀錄：試用額度在onboarding驗證付款方式後授予，會到期；自動加值可選。金額及期限未列。",
-          "accessed_at": "2026-11-10T04:24:00+08:00"
+          "scope": "試用額度的取得條件與到期規則（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀（HTTP 200）：「Trial credits are granted when you verify a payment method during onboarding.」「Trial credits expire; purchased credits do not.」；同站 quick start 另寫「trial credits on signup」，兩處措辭並存，金額與到期天數仍未公布。akashml.com/pricing 回 404（無定價頁）。｜較早紀錄：「Trial credits are granted when you verify a payment method during onboarding.」；「Credit pools have optional expiration dates. Trial credits expire; purchased credits do not.」；「Create an account … and verify your email. / Add a payment method during onboarding to receive trial credits.」；較早紀錄：試用額度在onboarding驗證付款方式後授予，會到期；自動加值可選。金額及期限未列。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         },
         {
           "url": "https://akashml.com/",
@@ -52316,7 +52325,7 @@
       "priority_score": 18.1,
       "priority_tier": "B",
       "priority_note": "官方來源·需符合條件·零設定費·台灣未標記·≤30分鐘·有資格門檻",
-      "verification_scope": "2026-11-14 複核（Asia/Taipei）：www.snowflake.com/en/snowflake-trial/ 以 curl 直取兩次均回 403，改以 headless Chromium 渲染（HTTP 200）實讀；docs.snowflake.com/en/user-guide/admin-trial-account 與 signup.snowflake.com 直讀。確認試用頁仍「Unlock the full Snowflake AI Data Cloud with $400 in free credits, or try Cortex Code CLI subscription with $40 in free inferences. Both are built for a 30-day experience.」與「external network access, hybrid tables, and use of Openflow are limited to 10 credits daily until you add payment」；文件仍「all you need is a valid email address; no payment information or other qualifying information is required」「AI features are disabled by default on self-service trial accounts until you add a credit card」「The trial continues for 30 days (from the sign-up date) or until you've depleted your free usage balance, whichever occurs first」「trial accounts cannot be canceled through the web interface」，限制清單仍列 external network access、hybrid tables、outbound private connectivity、Openflow 不可用；signup 頁仍注入 window.trial.isoCode = \"TW\"，前端 bundle 仍含 label:\"Taiwan\",isoCode:\"TW\",countryCode:\"+886\"。Cortex Code 註冊頁今日渲染仍只有「Snowflake Trial」標題，US$40／US$360 分池與期後 US$20/月仍未核。未註冊、未加卡，卡片與台灣付款成功未測。"
+      "verification_scope": "2026-11-14 複核（Asia/Taipei）：www.snowflake.com/en/snowflake-trial/ 以 curl 直取兩次均回 403，改以 headless Chromium 渲染（HTTP 200）實讀；docs.snowflake.com/en/user-guide/admin-trial-account 與 signup.snowflake.com 直讀。確認試用頁仍「Unlock the full Snowflake AI Data Cloud with $400 in free credits, or try Cortex Code CLI subscription with $40 in free inferences. Both are built for a 30-day experience.」與「external network access, hybrid tables, and use of Openflow are limited to 10 credits daily until you add payment」；文件仍「all you need is a valid email address; no payment information or other qualifying information is required」「AI features are disabled by default on self-service trial accounts until you add a credit card」「The trial continues for 30 days (from the sign-up date) or until you've depleted your free usage balance, whichever occurs first」「trial accounts cannot be canceled through the web interface」，限制清單仍列 external network access、hybrid tables、outbound private connectivity、Openflow 不可用；signup 頁仍注入 window.trial.isoCode = \"TW\"，前端 bundle 仍含 label:\"Taiwan\",isoCode:\"TW\",countryCode:\"+886\"。Cortex Code 註冊頁 2026-11-14 渲染仍只有「Snowflake Trial」標題，US$40／US$360 分池與期後 US$20/月仍未核。未註冊、未加卡，卡片與台灣付款成功未測。"
     },
     {
       "id": "deno-deploy-free-tier",
@@ -57657,7 +57666,7 @@
         "搜尋頁按次收費（US$0.008–0.016）與文件 social 段落每日免費搜尋的適用關係",
         "文件 USD 計費與條款 NTD 計費之差異、結帳稅費及發票",
         "台灣個案及各上游模型資格",
-        "免費模型清單輪替速度（今日 4 款，較 11-08 少 1 款）"
+        "免費模型清單輪替速度（2026-11-10 為 4 款，較 11-08 少 1 款）"
       ],
       "sources": [
         {
@@ -58582,7 +58591,7 @@
     {
       "id": "memobase-free-credit-operation-conflict",
       "title": "Memobase免費額度：首頁500 credits與條款50 operations不一致",
-      "summary": "首頁今日明列 Free 為「$0 /forever、500 credits / month」，並載「Monthly limits reset on the first of each month」、store_memory=10 credits、search=1 credit、forget_memory 免費；公開條款則以 50 operations 描述免費層，兩者單位不同（credits vs operations）且換算關係官方未說明，衝突未解。兩頁對「每月第一日重置」一致，時區未載。",
+      "summary": "首頁 2026-11-16 明列 Free 為「$0 /forever、500 credits / month」，並載「Monthly limits reset on the first of each month」、store_memory=10 credits、search=1 credit、forget_memory 免費；公開條款則以 50 operations 描述免費層，兩者單位不同（credits vs operations）且換算關係官方未說明，衝突未解。兩頁對「每月第一日重置」一致，時區未載。",
       "categories": [],
       "views": [],
       "setup_cost_usd": 0,
@@ -60923,8 +60932,8 @@
     {
       "id": "fal-flux3-max-five-daily-sandbox",
       "status": "terms_conflict",
-      "title": "fal FLUX 3 Max：sandbox 免費次數由介面動態顯示（今日仍 6 次），50% 折扣 11/22 結束、11/23 台北 07:59 恢復原價",
-      "summary": "sandbox 的 FLUX 3 Max 免費生成次數仍無官方公告值：2026-11-14 頁首由伺服器輸出「6 free generations today. No account needed.」（11-09 為 7，11-10、11-11、11-14、11-16 皆 6），官方 sandbox 文件只寫「Sandbox occasionally offers free credits for specific models」，全篇無 daily／reset／24 hour 字樣，也未定義判給規則。折扣結束日維持以模型 llms.txt 為權威：11/8 00:00 UTC 至 11/22 為 50% 折（720p US$0.085／秒、1080p US$0.145／秒），「Regular rates … resume on November 23, 2026 at 00:00 UTC」，即台北時間 11/23 07:59 起恢復原價；今日 11/14 仍在折扣窗內。landing 頁 /flux-3-max 自標「Information updated as of November 10, 2026」卻仍寫「50% off until November 21」，仍是差一日的未同步文案。原 /flux-video 頁本次已改為 FLUX 3 Max 生成器頁（200，標題「Flux Video Generator | FLUX 3 Max AI Video」），先前的「Launch discounts are running until December 31」字樣已不在頁面上，第三種說法消失。",
+      "title": "fal FLUX 3 Max：sandbox 免費次數由介面動態顯示（2026-11-16 仍 6 次），50% 折扣 11/22 結束、11/23 台北 07:59 恢復原價",
+      "summary": "sandbox 的 FLUX 3 Max 免費生成次數仍無官方公告值：2026-11-14 頁首由伺服器輸出「6 free generations today. No account needed.」（11-09 為 7，11-10、11-11、11-14、11-16 皆 6），官方 sandbox 文件只寫「Sandbox occasionally offers free credits for specific models」，全篇無 daily／reset／24 hour 字樣，也未定義判給規則。折扣結束日維持以模型 llms.txt 為權威：11/8 00:00 UTC 至 11/22 為 50% 折（720p US$0.085／秒、1080p US$0.145／秒），「Regular rates … resume on November 23, 2026 at 00:00 UTC」，即台北時間 11/23 07:59 起恢復原價；2026-11-14 記錄時仍在折扣窗內。landing 頁 /flux-3-max 自標「Information updated as of November 10, 2026」卻仍寫「50% off until November 21」，仍是差一日的未同步文案。原 /flux-video 頁本次已改為 FLUX 3 Max 生成器頁（200，標題「Flux Video Generator | FLUX 3 Max AI Video」），先前的「Launch discounts are running until December 31」字樣已不在頁面上，第三種說法消失。",
       "categories": [
         "VALUE-DEAL"
       ],
@@ -62371,7 +62380,7 @@
     {
       "id": "scrapegraph-free-credit-reset-conflict",
       "title": "ScrapeGraphAI Free：500點一次／每月官方矛盾，免費資料可供訓練",
-      "summary": "Free標示US$0、500 API credits；首頁稱one-time，官方文件稱每月，重置實質衝突未解。首頁另列10 requests/minute、1 monitor及1 concurrent crawl；不是保證每月500次請求。免費輸入、目標內容、輸出、log及metadata可供研究/訓練，敏感或未授權資料勿提交。 2026-11-11 12:05–12:26 重讀：衝突未解，兩份官方頁今天仍分別寫「one-time」與「/ month」，維持 conflicting_official_usage_claims，不任選一版。",
+      "summary": "Free標示US$0、500 API credits；首頁稱one-time，官方文件稱每月，重置實質衝突未解。首頁另列10 requests/minute、1 monitor及1 concurrent crawl；不是保證每月500次請求。免費輸入、目標內容、輸出、log及metadata可供研究/訓練，敏感或未授權資料勿提交。 2026-11-11 12:05–12:26 重讀：衝突未解，兩份官方頁 2026-11-11 仍分別寫「one-time」與「/ month」，維持 conflicting_official_usage_claims，不任選一版。",
       "categories": [
         "FREE"
       ],
@@ -62397,7 +62406,7 @@
       "usable_duration": "首頁500點一次，文件500點/月；實際重置及到期未核。",
       "access_risk": "免費資料可供訓練；停止免費並改付費/enterprise才是條款所述退出方式。各API及proxy耗點不同，500點不可泛化為500次。",
       "verified_at": "2026-11-11T12:33:41+08:00",
-      "verification_scope": "2026-11-11 12:05–12:26（台北）重讀定價頁與 docs 的 pricing.md：一次性 500 點與每月 500 點兩種官方說法今日仍並存（本輪不裁決）；首頁直取回傳混淆字串，改以 /pricing 為替代路線成功。未登入；免費池實際重置行為需登入 dashboard 才可確認。",
+      "verification_scope": "2026-11-11 12:05–12:26（台北）重讀定價頁與 docs 的 pricing.md：一次性 500 點與每月 500 點兩種官方說法 2026-11-11 仍並存（本輪不裁決）；首頁直取回傳混淆字串，改以 /pricing 為替代路線成功。未登入；免費池實際重置行為需登入 dashboard 才可確認。",
       "discovered_at": "2026-10-26T03:49:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -68613,7 +68622,7 @@
       "announcement_at": null,
       "review_cadence": "weekly",
       "next_review_at": "2026-11-20T09:00:00+08:00",
-      "verification_scope": "2026-11-14 08:19 重讀 elfa.ai/pricing、elfa.ai/terms 與 docs.elfa.ai/get-started/pricing.md：一次性 1,000 點（非每月）、60 RPM、用盡回 429、4xx/5xx 不計費、PAYG 最低儲值 US$20 與 Grow 價格皆逐字成立；定價頁仍無 Free 欄位；docs 舊路徑 /api-reference/introduction 今日仍 404，現行內容在 get-started/pricing.md。未登入、未申請 key，未以台灣 IP 實測、未核免費點效期與 Grow 自動續訂／取消期限，法律與監管未核。",
+      "verification_scope": "2026-11-14 08:19 重讀 elfa.ai/pricing、elfa.ai/terms 與 docs.elfa.ai/get-started/pricing.md：一次性 1,000 點（非每月）、60 RPM、用盡回 429、4xx/5xx 不計費、PAYG 最低儲值 US$20 與 Grow 價格皆逐字成立；定價頁仍無 Free 欄位；docs 舊路徑 /api-reference/introduction 2026-11-14 仍 404，現行內容在 get-started/pricing.md。未登入、未申請 key，未以台灣 IP 實測、未核免費點效期與 Grow 自動續訂／取消期限，法律與監管未核。",
       "usable_duration": "一次1,000點，Free不重置；官方未列此免費額度到期日。不是永久不限量或每月1,000點。",
       "cancellation": "免費池耗盡後回429，須自行升級才續用，未見自動升級承諾。API服務可停止整合並中斷MCP；一般帳戶可由設定刪除或聯絡客服。另選Grow付費訂閱的自動續約及取消期限，已讀頁未明確規定，不推定適用免費key。",
       "cost_note": "Free入口及1,000點內無訂閱費；是否需卡或暫時驗證保留額未實測。另選PAYG為US$0.0145/credit、最低儲值US$20、無訂閱，Card或USDC；若選Grow則US$870/月或年繳US$8,874，含120,000點/月，超額US$0.009/credit。不要把付費價格當作自動產生費用。若另用區塊鏈支付或第三方工具，可能有網路/第三方費用。",
@@ -71329,7 +71338,7 @@
     {
       "id": "medux-free-trial-3000-credits",
       "title": "Medux免費試用3,000點待核：每月或一次性說法不一致",
-      "summary": "定價頁首段與 FAQ 今日仍不同調，但 FAQ 措辭已變：現為「New users start with 3,000 free trial credits」，先前記錄的「one-time」字樣今日已不在頁面；首段仍寫「3,000 trial credits per month」。方案表仍顯示 「Pricing data is unavailable from the backend」而無法載入，故點數換算、重置週期與是否需綁卡仍未知。Workshop／API／MCP 共用同一餘額；條款以 PRC 法律管轄、爭議送上海楊浦區人民法院。",
+      "summary": "定價頁首段與 FAQ 於 2026-11-10 仍不同調，但 FAQ 措辭已變：現為「New users start with 3,000 free trial credits」，先前記錄的「one-time」字樣 2026-11-10 已不在頁面；首段仍寫「3,000 trial credits per month」。方案表仍顯示 「Pricing data is unavailable from the backend」而無法載入，故點數換算、重置週期與是否需綁卡仍未知。Workshop／API／MCP 共用同一餘額；條款以 PRC 法律管轄、爭議送上海楊浦區人民法院。",
       "record_type": "watchlist",
       "status": "needs_verification",
       "verification": "Official",
@@ -71572,7 +71581,7 @@
       "next_review_at": "2026-11-21T12:00:00+08:00",
       "deadline_at": "2026-12-13T23:59:00+08:00",
       "eligibility": {
-        "service_availability": "官方計畫頁可讀，第三屆線上申請開放至2026/12/13 23:59（台北時間），並於2026/11/25舉行線上說明會；今日11/8尚未截止。",
+        "service_availability": "官方計畫頁可讀，第三屆線上申請開放至2026/12/13 23:59（台北時間），並於2026/11/25舉行線上說明會；2026-11-08 記錄時尚未截止。",
         "account_eligibility": "新創須具台灣連結之一（註冊於台灣／台灣分公司／在台實質研發辦公室／創辦人至少一人台灣國籍），主持人須為負責人或 CTO；學研須台灣合法登記大專院校（含中央研究院）且非教學用途；入選後須簽制式合約（不可調整）。",
         "billing_country": "頁面稱提供免費算力，未列行政或平台費用；台灣公司付款與稅務處理未載。",
         "identity_residency": "以台灣連結為核心（註冊地、分公司、在台研發辦公室或創辦人國籍），海外團隊符合其一亦可；個人身分或IP不能替代。",
@@ -71587,7 +71596,7 @@
         "是否需負擔任何行政或平台費用（PDF 未寫，不能斷言為 0）",
         "審查評分權重與錄取率"
       ],
-      "verification_scope": "2026-11-14 13:11–13:14 複核 Garage+ 第三屆計畫頁與申請公告 PDF（8 頁，重新下載）：申請截止 2026/12/13 23:59（台北）、算力使用期 2027/02/25–2027/08/23 15:00、11/25 線上說明會、2027/01/22 教育訓練、增補申請截止 2027/07/09、5,000–33,000 GPU 小時區間全部未變；距截止剩 29 天仍未截止。未報名、未註冊。",
+      "verification_scope": "2026-11-14 13:11–13:14 複核 Garage+ 第三屆計畫頁與申請公告 PDF（8 頁，重新下載）：申請截止 2026/12/13 23:59（台北）、算力使用期 2027/02/25–2027/08/23 15:00、11/25 線上說明會、2027/01/22 教育訓練、增補申請截止 2027/07/09、5,000–33,000 GPU 小時區間全部未變；距截止 29 天（2026-11-14）仍未截止。未報名、未註冊。",
       "sources": [
         {
           "url": "https://garageplus.asia/wistronpower",
@@ -72102,7 +72111,7 @@
       "previous_limit": null,
       "limited_confirmed": true,
       "title": "新北有課UKO：微軟AB-730與PL-900認證培訓免費，保證金1,000元可全退",
-      "summary": "新北市青年局「新北有課」微軟 AI 商務應用國際認證培訓，免費、每梯 36 人，共四梯次 144 個名額；優先錄取設籍、居住、就學或就業於新北市的 18–40 歲民眾。正取須繳新臺幣 1,000 元保證金，完整參訓並在期限內完成首次考試、寄回證明即全額退還，不以通過與否為條件，退款預計 115/12/15 前。2026-11-14 重讀：AB-730 兩梯（11/7、11/14）均已屆期，今日第二梯開課後不再有 AB-730 場次；僅剩 PL-900 第二梯 11/21–22，取消報名截止 11/18。現有 Google 報名表只涵蓋 AB-730，PL-900 的報名入口與名額未在頁面上。",
+      "summary": "新北市青年局「新北有課」微軟 AI 商務應用國際認證培訓，免費、每梯 36 人，共四梯次 144 個名額；優先錄取設籍、居住、就學或就業於新北市的 18–40 歲民眾。正取須繳新臺幣 1,000 元保證金，完整參訓並在期限內完成首次考試、寄回證明即全額退還，不以通過與否為條件，退款預計 115/12/15 前。2026-11-14 重讀：AB-730 兩梯（11/7、11/14）均已屆期，2026-11-14 第二梯開課後不再有 AB-730 場次；僅剩 PL-900 第二梯 11/21–22，取消報名截止 11/18。現有 Google 報名表只涵蓋 AB-730，PL-900 的報名入口與名額未在頁面上。",
       "status": "active",
       "categories": [
         "FREE",
@@ -72117,7 +72126,7 @@
       "review_cadence": "event",
       "next_review_at": "2026-11-20T09:00:00+08:00",
       "verification_scope": "2026-11-15 複核新北青年局 UKO 專案：微軟 AB-730 與 PL-900 考照班持續辦理，全額補助考照費用，保證金 1,000 元出席達標可全退。",
-      "usable_duration": "AB-730 第二梯即 2026-11-14（今日 9:30–17:30，已無後續 AB-730 梯次）；僅剩 PL-900 第二梯 2026-11-21–22；保證金退款預計 2026-12-15 前。",
+      "usable_duration": "AB-730 第二梯即 2026-11-14（2026-11-14 9:30–17:30，已無後續 AB-730 梯次）；僅剩 PL-900 第二梯 2026-11-21–22；保證金退款預計 2026-12-15 前。",
       "cancellation": "課程前三日23:59前取消方可退費；未完整參訓或未於期限內完成首次考試者不退還保證金；新北有課半年內2次未到者一年內禁報名。",
       "cost_note": "免學費；保證金NT$1,000，完整參訓並完成首次考試即全額退還，不以通過與否為條件。",
       "access_risk": "優先錄取新北設籍／居住／就學／就業者，名額未滿時其他地區可錄取；須自備筆電並實體到課。",
@@ -79095,33 +79104,39 @@
         "GLOBAL"
       ],
       "discovered_at": "2026-11-10T01:52:00+08:00",
-      "verified_at": "2026-11-10T01:52:00+08:00",
+      "verified_at": "2026-11-16T10:23:29+08:00",
       "review_cadence": "monthly_or_new_signal",
-      "next_review_at": "2026-12-10T01:52:00+08:00",
+      "next_review_at": "2026-12-16T10:23:29+08:00",
       "usable_duration": "早期存取：官方稱依準備進度個別聯繫申請者，未公布名額、時程或免費額度。",
       "summary": "Sakana AI 於 2026-10-28 開放企業版 Sakana API Platform 早期存取申請：組織／工作區管理、API key 與用量集中管理、RBAC、稽核日誌（CSV）、預算上限與 MSA／DPA，API 為 OpenAI 相容，先上 Sakana Fugu 與 Fugu Ultra，Namazu 與 Fugu Max 後續。官方明寫「料金およびご利用条件は、ご案内の際にお伝えします」（價格與使用條件在個別通知時才給），公告未承諾任何免費額度，故列觀察線索而非可領取機會。",
       "cost_note": null,
-      "verification_scope": "2026-11-10 01:52 讀官方日英雙語公告：早期存取申請入口（Google 表單）、供應模型順序、管理功能清單、「Pricing and terms of use will be shared at that time」。未送件。",
+      "verification_scope": "2026-11-16 10:05–10:26（Asia/Taipei）重讀早期存取公告與申請表單（仍可開啟、未關閉），另新讀同站 Fugu 產品頁：已公布 Fugu 系列每百萬 token 價格與 EU／EEA 排除，台灣未列。未送件；早期存取是否附免費額度、名額與合約條件仍未核。",
       "eligibility": {
         "service_availability": "官方公告頁在線，申請表單（forms.gle）可開啟；平台本身尚未一般提供。",
         "account_eligibility": "對象為企業客戶；官方稱逐案審查並個別聯繫，未列公司規模或註冊地條件。",
         "billing_country": "價格、付款方式與是否需 MSA 均在個別通知時說明；未公布金額。",
         "identity_residency": "官方未列可申請國家；不推定台灣公司可取得。",
         "terms_restrictions": "申請不保證取得存取；輸入資料不用於訓練列為資料條款，但完整條款未公開。",
-        "taiwan_note": "Unknown：官方只說逐案聯繫，未列地區限制，也未承諾台灣企業可申請或附免費額度。"
+        "taiwan_note": "官方未列台灣；Fugu 產品頁僅排除 EU／EEA 並稱其他地區可能受網路或當地法規影響，未提及台灣，故維持 Unknown；未送件。"
       },
       "unknowns": [
         "早期存取是否附免費試用額度或 credits（公告未提）",
-        "價格結構、最低消費與合約要求（稱個別通知時說明）",
+        "價格結構、最低消費與合約要求：早期存取公告稱個別通知；同站 Fugu 產品頁已公布 Fugu 系列每百萬 token 價與 US$20／100／200 月費，但不等於 API Platform 早期存取條件",
         "台灣登記的公司或個人能否申請（未列國家）",
         "Fugu／Namazu 的實際可用地區與資料處理條款全文"
       ],
       "sources": [
         {
           "url": "https://sakana.ai/api-platform-earlyaccess/",
-          "scope": "早期存取範圍、模型順序、管理功能與「價格另行通知」原文（2026-11-10 01:52 讀取）",
-          "evidence": "「Sakana AIは本日、エンタープライズのお客様向けのSakana API Platformを発表し、そのアーリーアクセスプログラムを開始しました。」；「料金およびご利用条件は、ご案内の際にお伝えします。」；「We will offer access to applicants as they become ready … Pricing and terms of use will be shared at that time.」；日期 October 28, 2026。",
-          "accessed_at": "2026-11-10T01:52:00+08:00"
+          "scope": "早期存取公告：日期、價格與名額敘述、申請表單（2026-11-16 重讀）",
+          "evidence": "2026-11-16 重讀：公告仍為 October 28, 2026；「Pricing and terms of use will be shared at that time.」與日文「料金およびご利用条件は、ご案内の際にお伝えします。」未變；申請表單 forms.gle/ZaxjS98B3zc84fA69 仍可開啟、未關閉；頁面仍無免費額度、名額或國家清單。｜較早紀錄：「Sakana AIは本日、エンタープライズのお客様向けのSakana API Platformを発表し、そのアーリーアクセスプログラムを開始しました。」；「料金およびご利用条件は、ご案内の際にお伝えします。」；「We will offer access to applicants as they become ready … Pricing and terms of use will be shared at that time.」；日期 October 28, 2026。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
+        },
+        {
+          "url": "https://sakana.ai/fugu/",
+          "scope": "Fugu 產品頁（非早期存取條款）：已公布價格與 EU/EEA 排除（2026-11-16 新讀）",
+          "evidence": "2026-11-16 新讀（HTTP 200）：Fugu Max「$2 per million input tokens and $6 per million output tokens」；頁首「Not yet available in the EU/EEA while we work toward compliance with GDPR and EU-specific regulations.」；FAQ 另寫 Fugu 可在日本以外使用，但 EU／EEA 不提供。台灣未列、未排除。此頁不是 API Platform 早期存取的合約條件。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
         }
       ],
       "priority_score": null,
@@ -80169,7 +80184,7 @@
       ],
       "usage_type": "Gemini Enterprise 6 個月，官方稱無限 Token 但受公平使用政策限制",
       "quota_classification": "TEMPORARILY UNLIMITED",
-      "summary": "活動仍進行中（今日 2026-11-14 在活動期間內）：2026/11/02–12/31 於活動網站完成登錄並開戶成功之全新戶，可抽 20 名「Gemini Enterprise 6 個月方案（Token 吃到飽）」；另有限量前 200 名早鳥，條件是登錄、開戶完成且成功買進台股或美股累計任 3 筆，依完成登錄時間排序，同時間再比開戶完成先後。官方寫「提供企業級商務辦公之無限Token使用體驗」，但同時載明須遵守 Google 公平使用政策，並排除自動化高頻請求、大規模程式原始碼分析／開發（如 Code Assist 高頻調用）與超大型影音密集生成。6 個月期滿系統自動終止，官方明寫不提供續訂、延長或折抵其他方案。對象限「從未於元大證券開過戶之全新戶：限本國自然人、不含98戶」，同一身分證字號限領一次；11/1（含）前註銷又於 11/2（含）後新開戶者視為全新戶，但 11/2（含）後銷戶或有證券違約交易紀錄者不適用。名額是否額滿以元大系統 2027/1/2 判定為準；得獎通知與領獎連結預計 2027/1/15 前發放。本次另核到原紀錄未載的時序：得獎人須於 2027 年 1 月 13 日前回覆紙本領獎同意簽收函，並於 2027/1/20 前完成領獎；獎項金額超過 NT$1,000 者開立扣繳憑單。這是需開證券戶（早鳥另需實際成交 3 筆）的行銷活動，交易有市場風險與手續費，不是無條件免費方案。",
+      "summary": "活動仍進行中（2026-11-14 記錄時在活動期間內）：2026/11/02–12/31 於活動網站完成登錄並開戶成功之全新戶，可抽 20 名「Gemini Enterprise 6 個月方案（Token 吃到飽）」；另有限量前 200 名早鳥，條件是登錄、開戶完成且成功買進台股或美股累計任 3 筆，依完成登錄時間排序，同時間再比開戶完成先後。官方寫「提供企業級商務辦公之無限Token使用體驗」，但同時載明須遵守 Google 公平使用政策，並排除自動化高頻請求、大規模程式原始碼分析／開發（如 Code Assist 高頻調用）與超大型影音密集生成。6 個月期滿系統自動終止，官方明寫不提供續訂、延長或折抵其他方案。對象限「從未於元大證券開過戶之全新戶：限本國自然人、不含98戶」，同一身分證字號限領一次；11/1（含）前註銷又於 11/2（含）後新開戶者視為全新戶，但 11/2（含）後銷戶或有證券違約交易紀錄者不適用。名額是否額滿以元大系統 2027/1/2 判定為準；得獎通知與領獎連結預計 2027/1/15 前發放。本次另核到原紀錄未載的時序：得獎人須於 2027 年 1 月 13 日前回覆紙本領獎同意簽收函，並於 2027/1/20 前完成領獎；獎項金額超過 NT$1,000 者開立扣繳憑單。這是需開證券戶（早鳥另需實際成交 3 筆）的行銷活動，交易有市場風險與手續費，不是無條件免費方案。",
       "eligibility": {
         "service_availability": "台灣限定活動；Gemini Enterprise 由 Google Cloud 提供，主辦單位僅提供獎項。",
         "account_eligibility": "限從未於元大證券開過戶之全新戶，且限本國自然人（不含98戶）；完成開戶須送出申請並經元大證券審核通過；同一身分證字號限領一次。",
@@ -82026,7 +82041,7 @@
     {
       "id": "taiwan-multi-store-ai-upgrade-tier3-2026",
       "title": "商業服務業多店升級AI補助：第3梯受理至11/30 17:00，每案上限NT$300萬",
-      "summary": "2026-11-11 07:08–07:11 重讀：商業署公告 807（2026/11/02）未更新，第3梯受理仍為「自公告日起至115年11月30日（一）下午5時止」，線上送件入口同為 smebiz.org.tw/apply_aicase。訊息公告列表最新一筆就是這則 11/02 公告，其後（11/03–11/11）無任何提前截止、經費用罄或延長公告，故「經費用罄得提前截止」的風險仍在但今日未發生。",
+      "summary": "2026-11-11 07:08–07:11 重讀：商業署公告 807（2026/11/02）未更新，第3梯受理仍為「自公告日起至115年11月30日（一）下午5時止」，線上送件入口同為 smebiz.org.tw/apply_aicase。訊息公告列表最新一筆就是這則 11/02 公告，其後（11/03–11/11）無任何提前截止、經費用罄或延長公告，故「經費用罄得提前截止」的風險仍在，但至 2026-11-15 未發生。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -84116,7 +84131,7 @@
       "cost_note": "申請免費。現行補助上限（10/29 修訂版）：一般組最高 NT$70,000（資本門 5 萬、經常門 2 萬）、進階組最高 NT$120,000（資本門 9 萬、經常門 3 萬）；舊版表 2 的 9 萬元已作廢，不再並列為現行上限。",
       "access_risk": "僅限臺北市公立高中職以下學校（不含國立學校、市立幼兒園），須校內核章並以電子公文送件，2026-11-13 截止；預計補助 40 校、超額由教育局審查；執行人力（AI 酷課師培訓至少 2 名、每學期研習與成果報告）由學校自行吸收。",
       "title": "臺北市「酷 AI 學習系統」重點推動學校：第 2 批申請已於 2026-11-13 截止（無延期公告）",
-      "summary": "臺北市政府教育局 115 學年度「酷 AI 學習系統」重點推動學校徵選及獎勵計畫，第 2 批期限 115 年 11 月 13 日已過（今日 11/14）。2026-11-14 重讀北一女轉知頁與修訂版計畫書 PDF（406,182 bytes，與前次位元組數相同）：期限仍為 115/11/13、一般組最高 7 萬（資本門 5 萬＋經常門 2 萬）、進階組最高 12 萬、預計補助 40 校，兩份文件皆無延期、延長、順延或額滿字樣；教育局公文公告列表仍查無此案。未取得官方「已截止」或表單關閉的直接證據，判定依據是期限已過且無延期公告。先前「一般組 7 萬或 9 萬」的內部衝突已解：9 萬元只存在於僅載 1153078958 號函核定的舊版。",
+      "summary": "臺北市政府教育局 115 學年度「酷 AI 學習系統」重點推動學校徵選及獎勵計畫，第 2 批期限 115 年 11 月 13 日已過（2026-11-14 記錄）。2026-11-14 重讀北一女轉知頁與修訂版計畫書 PDF（406,182 bytes，與前次位元組數相同）：期限仍為 115/11/13、一般組最高 7 萬（資本門 5 萬＋經常門 2 萬）、進階組最高 12 萬、預計補助 40 校，兩份文件皆無延期、延長、順延或額滿字樣；教育局公文公告列表仍查無此案。未取得官方「已截止」或表單關閉的直接證據，判定依據是期限已過且無延期公告。先前「一般組 7 萬或 9 萬」的內部衝突已解：9 萬元只存在於僅載 1153078958 號函核定的舊版。",
       "status": "expired",
       "taiwan": "Yes",
       "usage_type": "學校教學設備與軟體經費補助（資本門／經常門），搭配酷 AI 教學平台免費使用",
@@ -88825,7 +88840,7 @@
     {
       "id": "kaggle-solar-filament-segmentation-2026",
       "title": "Solar Filament Segmentation 2026：至多 US$3,000 總獎金池，截止時刻有差異",
-      "summary": "ESAIR Lab 太陽磁絲分割競賽，NSF NSO 贊助、AURA/NSO 支付獎金。前三名按評審分數平方正規化分配至多 US$3,000 總池（非每人額度），獎金平分給已核實隊員，須能以美國金融機構收款並完成 AURA vendor onboarding。2026-11-16 複核：報告與解法截止仍逐字寫「Nov 15, 2026, 11:59 pm CDT」（字面＝台北 11/16 12:59），平台 API 與頁面倒數用的是 2026-11-16T11:59:59Z（台北 19:59:59），倒數只反映平台值、不會提醒較早的 CDT 時刻。隊伍上限同樣並存：正式規則第 1 條寫「The maximum Team size is five (5)」，平台 API maxTeamSize=10，兩份官方文件今日均未修正，合規上限依規則為 5 人。台灣不在排除名單，仍須成年、單一帳號並符合制裁／出口管制條款。",
+      "summary": "ESAIR Lab 太陽磁絲分割競賽，NSF NSO 贊助、AURA/NSO 支付獎金。前三名按評審分數平方正規化分配至多 US$3,000 總池（非每人額度），獎金平分給已核實隊員，須能以美國金融機構收款並完成 AURA vendor onboarding。2026-11-16 複核：報告與解法截止仍逐字寫「Nov 15, 2026, 11:59 pm CDT」（字面＝台北 11/16 12:59），平台 API 與頁面倒數用的是 2026-11-16T11:59:59Z（台北 19:59:59），倒數只反映平台值、不會提醒較早的 CDT 時刻。隊伍上限同樣並存：正式規則第 1 條寫「The maximum Team size is five (5)」，平台 API maxTeamSize=10，兩份官方文件 2026-11-16 均未修正，合規上限依規則為 5 人。台灣不在排除名單，仍須成年、單一帳號並符合制裁／出口管制條款。",
       "categories": [
         "FREE",
         "VALUE-DEAL"
@@ -88872,7 +88887,7 @@
       },
       "unknowns": [
         "報告截止原文 CDT 與平台 API／倒數的 11:59:59Z 字面差 7 小時，哪一個對 Google Form 技術報告有拘束力未經主辦說明；11 月是否誤標 CDT（美國應為 CST）亦未釐清。",
-        "正式規則隊伍上限 five (5)、平台 API maxTeamSize=10，兩份官方文件今日並存未修正；未按 Join 實測平台是否真的允許 6–10 人組隊。",
+        "正式規則隊伍上限 five (5)、平台 API maxTeamSize=10，兩份官方文件 2026-11-16 並存未修正；未按 Join 實測平台是否真的允許 6–10 人組隊。",
         "總池 up-to US$3,000 的最終發放與前三名分數分配、個人稅後金額未知。",
         "台灣個人資格、AURA vendor onboarding／美國金融機構收款及扣繳稅率未核；不作法律結論。",
         "未核競賽專屬 GPU 額度；平台一般 Notebook 功能不可直接視為本競賽福利。",
@@ -91242,36 +91257,108 @@
       "deadline_at": null,
       "expires_at": null,
       "effort_minutes_min": null
+    },
+    {
+      "id": "moa-agri-ai-module-diffusion-116",
+      "title": "農業部116年度AI增能共創智慧農業2.0：技術模組整合擴散輔導，每場域最高NT$100萬，12/15截止",
+      "summary": "2026-11-16 10:18–10:26 讀農業部公告與申請作業手冊（PDF，35 頁）：116 年度計畫收件至 2026-12-15 17:00（掛號郵寄、郵戳為憑），三種輔導型別按場域計價——單一技術導入型每場域最高 NT$5 萬（每案至少 5 場域）、技術套組型最高 NT$50 萬（至少 3 場域）、整廠擴散型最高 NT$100 萬（至少 1 場域）。這不是免費方案：輔導經費須小於自籌款，且以計畫總經費 50% 為上限（手冊例：6 場域單一技術型政府最高 30 萬、場域業主至少自籌 30 萬）。申請資格限已通過智慧農業能量登錄且在 115/12/7 前仍具身分的技服業者、國內登記農企業（非陸資、前一年度淨值為正）或農會／漁會／農業合作社；每案僅受理單一業者獨立提案，執行期自 116 年核定日至 116/11/30。說明會 11/17 10:00 視訊、11/23 14:00 農業部 1011 會議室。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "QUALIFICATION",
+        "LOW-COST"
+      ],
+      "views": [
+        "taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "TW"
+      ],
+      "usage_type": "政府輔導補助（按導入場域計價，非API額度或訂閱）",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "cancellation": "不適用（補助申請非訂閱）；手冊未載撤回或解約機制。",
+      "cost_note": "無報名費，但自籌款是必要條件：輔導經費須小於自籌款、且不超過計畫總經費 50%，等於申請人與場域業主至少負擔半數；以新臺幣核撥，撥款分期、核銷憑證與稅務未核。",
+      "usable_duration": "收件至 2026-12-15 17:00（郵戳為憑）；執行期自 116 年計畫核定日至 116-11-30。",
+      "access_risk": "個人農民、未登記團隊與未取得能量登錄者不能提案；每案僅受理單一業者獨立提案，不接受聯合申請；文件未於期限前送達、資格不符或記載不實者駁回，補正以 1 次為限。各型名額與總預算未公布。",
+      "verified_at": "2026-11-16T10:23:29+08:00",
+      "discovered_at": "2026-11-16T10:23:29+08:00",
+      "announcement_at": "2026-11-06",
+      "review_cadence": "weekly",
+      "next_review_at": "2026-11-23T10:23:29+08:00",
+      "deadline_at": "2026-12-15T17:00:00+08:00",
+      "eligibility": {
+        "service_availability": "農業部全球資訊網公告頁與申請作業手冊 PDF 皆可讀；收件採掛號郵寄、郵戳為憑，公告未列線上送件系統。",
+        "account_eligibility": "(一) 智慧農業科技服務機構：須通過能量登錄且 115-12-07 前仍具該身分（新申請登錄者另寫須於 115-12-31 前完成登錄並通過審查，兩日期並存）；(二) 農企業：國內從事農業生產或試驗研究、依法辦理公司／有限合夥／商業登記、非陸資、前一年度淨值為正且非銀行拒絕往來戶；(三) 農民團體：依農會法、漁會法、合作社法組織之農會、漁會及農業合作社。",
+        "billing_country": "以新臺幣核撥；申請人須為國內登記主體，無報名費，但自籌款為必要條件。",
+        "identity_residency": "以法人或團體登記身分為準；個人農民須透過農企業或農民團體提案。",
+        "terms_restrictions": "輔導經費須小於自籌款且不超過計畫總經費 50%；技術套組型與整廠擴散型須串接至少 2 項【智慧農業官網／技術專區】列表技術；補正以 1 次為限且不得實質變更計畫內容；文件未於期限前送達、資格不符或記載不實者駁回。",
+        "taiwan_note": "Yes：計畫以國內登記主體與智慧農業能量登錄為資格核心，在台登記農企業、農會／漁會／農業合作社與已登錄技服業者均可依規則申請；個人與未登記團隊不適用，且須自籌至少半數經費。"
+      },
+      "unknowns": [
+        "各型名額、總預算、歷年核定件數與通過率（手冊未列）",
+        "能量登錄時點兩說：115-12-07 前仍具身分 vs 新登錄者須於 115-12-31 前完成登錄",
+        "能否與其他政府補助併行、自籌款認列範圍",
+        "撥款分期、核銷憑證與稅務處理",
+        "說明會報名方式（公告稱詳 EDM，未取得連結）",
+        "適用法律與監管未核"
+      ],
+      "verification_scope": "2026-11-16 10:18–10:26（Asia/Taipei）實讀農業部公告（theme_data.php?id=10343，HTTP 200）與申請作業手冊 PDF（redirect_files.php?id=62021，35 頁）：截止 2026-12-15 17:00、兩場說明會、三型輔導上限、50% 與自籌款規則、三類申請資格、執行期至 116-11-30 皆逐字核對。未報名、未送件；名額、總預算、撥款與稅務未核。",
+      "sources": [
+        {
+          "url": "https://www.moa.gov.tw/theme_data.php?theme=news&sub_theme=hot&id=10343",
+          "scope": "收件截止日、說明會場次與公告日期（2026-11-16 實讀）",
+          "evidence": "2026-11-16 實讀（HTTP 200）：公告標題「即日起開放申請農業部116年度『AI增能共創智慧農業2.0—技術模組整合擴散應用輔導計畫』（115年12月15日截止收件）」；「請於本(115)年12月15日下午5時前備妥文件掛號郵寄(郵戳為憑)」；「計畫徵案說明會2場次:本年11月17日上午10時(視訊會議)、11月23日下午2時(本部1011會議室)，報名資訊詳EDM」。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
+        },
+        {
+          "url": "https://www.moa.gov.tw/redirect_files.php?id=62021",
+          "scope": "申請作業手冊：三型輔導上限、經費比率、申請資格、期程（2026-11-16 實讀）",
+          "evidence": "2026-11-16 實讀（PDF 35 頁）：「輔導金額上限：最高 5 萬元/場域、最高 50 萬元/場域、最高 100 萬元/場域」對應「每項計畫至少導入 5 個場域／3 場域／1 個場域」；「1.比率限制：申請輔導經費須小於自籌款。2.補助上限：申請輔導經費以計畫總經費之 50% 為上限。」；「執行期程：自 116 年計畫核定日至 116 年 11 月 30 日止」；「每項計畫僅受理單一業者/農民團體獨立提案，不開放聯合申請或共同研提」。",
+          "accessed_at": "2026-11-16T10:23:29+08:00"
+        }
+      ],
+      "priority_score": 18.8,
+      "priority_tier": "S",
+      "priority_note": "官方來源·申請審核制·零設定費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-16T09:23:51+08:00",
+  "latest_research_at": "2026-11-16T10:26:29+08:00",
   "last_research_run": {
-    "started_at": "2026-11-16T09:05:00+08:00",
-    "completed_at": "2026-11-16T09:23:51+08:00",
+    "started_at": "2026-11-16T10:05:00+08:00",
+    "completed_at": "2026-11-16T10:26:29+08:00",
     "reviewed_ids": [
-      "aspn-youth-sports-tech-hackathon-2026",
-      "kaggle-solar-filament-segmentation-2026",
-      "ugreen-ai-nas-hackathon-2026",
-      "tw-labor-pretraining-ai-smart-application-tnnu-03",
-      "google-ai-professional-certificate-tw-pro-3mo",
-      "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
-      "qnx-global-hackathon-2026",
-      "airtable-free-plan-monthly-ai-credits",
-      "tactiq-free-monthly-ten-transcripts-five-ai",
-      "miro-nonprofit-thirty-percent-all-paid-plans-ai",
-      "atlassian-codegeist-2026-developer-hackathon",
-      "goodmem-cloud-fourteen-day-no-card-trial",
-      "serpkite-free-search-api-credits",
-      "loom-classroom-education-seventyfive-off-business-ai",
-      "n8n-startup-fifty-percent-business-self-hosted",
-      "taoyuan-ai-productivity-online-courses-115"
+      "grok-retention-community",
+      "helium-for-cause-nonprofit-50k-watch",
+      "giskard-startup-free-agentic-red-team-closed-beta-watch",
+      "muse-pricing-community-lead",
+      "akool-education-top-thousand-studio-three-months",
+      "sakana-api-platform-early-access-2026",
+      "codex-compensation-account-specific-lead",
+      "akashml-free-credit-unconfirmed",
+      "appwrite-education-six-month-two-projects-noncommercial",
+      "scribe-education-nonprofit-pro-twentyfive-percent",
+      "miro-startup-subscription-credit",
+      "notion-nonprofit-business-discount",
+      "typeform-education-nonprofit-subscription-discount",
+      "capacities-student-annual-pro-forty-percent",
+      "asana-student-starter-free-twelve-months",
+      "asana-nonprofit-starter-advanced-fifty-percent"
     ],
     "new_ids": [
-      "puter-js-user-pays-free-monthly-allowance",
-      "gemini-decision-1-decisions-api-free-tier",
-      "comfy-cloud-five-free-gpu-runs-new-user"
+      "moa-agri-ai-module-diffusion-116"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1101
+    "unreviewed_existing_count": 1104
   }
 }

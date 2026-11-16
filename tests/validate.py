@@ -146,6 +146,30 @@ for _o in d['offers']:
   assert not BROKEN_USD_DIGITS.search(_value), f'USD amount lost its symbol and leading digits in {_path or "record"} of {_o["id"]}: restore the number from the source or remove the claim'
   assert not BROKEN_USD_SLASH.search(_value), f'USD per-unit amount lost its symbol and digits in {_path or "record"} of {_o["id"]}: write US$0/月 style amounts explicitly'
   assert not BROKEN_NT_DIGITS.search(_value), f'NT amount lost its symbol in {_path or "record"} of {_o["id"]}: write NT$ before the number'
+# 相對時間詞會隨發布日期腐壞，而卡片不會跟著改。2026-11-16 全庫掃到 22 筆紀錄、31 處（標題、摘要、
+# access_risk、quota_note、unknowns、verification_scope、eligibility.*）：`fal-flux3` 標題寫「今日仍 6 次」
+# 但核實日是 11-16、`autoclaw` 標題寫「公告今日截止」而截止日是 11-08、`mango` 摘要寫「只能明天再讀」
+# 而那是 11-15 的話、`wistron` 寫「今日11/8尚未截止」卻在 11-14 才更新——讀者分不出哪些字是寫入當天
+# 的狀態、哪些是現在的事實。散文日期可以留，但「今日／明天／剩下 N 天」這種指涉必須換成絕對日期，
+# 因為卡片與排序都只用機器可讀欄位，句子裡的相對時間沒有任何東西會校正它。
+# 只掃紀錄自己主張、卡片看得到的欄位；`sources[].evidence` 是當時查閱的引文，保留原文語境，不在此列。
+_RELATIVE_TIME=_re.compile(r'今日|今天|明天|後天|昨日|昨天|本週|這週')
+_REL_DAYS=_re.compile(r'(?:僅剩|剩下|還剩|剩)\s*[\d一二三四五六七八九十]+\s*天')
+def _reader_strings(value,path=''):
+ if isinstance(value,str):
+  yield path,value
+ elif isinstance(value,dict):
+  for key,item in value.items():
+   if key=='sources': continue
+   yield from _reader_strings(item,f'{path}.{key}' if path else key)
+ elif isinstance(value,list):
+  for index,item in enumerate(value):
+   yield from _reader_strings(item,f'{path}[{index}]')
+for _o in d['offers']:
+ for _path,_value in _reader_strings(_o):
+  _hit=_RELATIVE_TIME.search(_value) or _REL_DAYS.search(_value)
+  assert not _hit, (f'relative time word「{_hit.group(0)}」in {_path} of {_o["id"]}: write the absolute date it referred to '
+                    '(the card keeps showing the sentence after the day has passed)')
 for rid in reviewed+new:
  urls=[s.get('url') for s in offers_by_id[rid]['sources']]
  # 規則本意是「同一 URL 這次查核要就地更新，不要追加第二筆」，但舊版寫成整筆紀錄不得有重複
