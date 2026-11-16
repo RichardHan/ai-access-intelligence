@@ -4401,3 +4401,63 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `google-ai-professional-certificate-tw-pro-3mo`：到 11/23 前再確認條款是否被改成 2027-01-01（或行銷頁改成 11/06）；這是台灣讀者現在最可能踩到的期限衝突。
 4. `vercel-token-pass-thirty-for-eighty-credit`：查 changelog 發布日期、`pricing.md` 的 5 個模型 list price，重算 US$150 實際 token 量；並確認是否已有非 Early Access 的一般方案。
 5. 18 筆 `verification_scope` 第一個日期早於 `verified_at`（含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`aliyun-yungongkaiwu-model-studio-students` 的 2025-11-11 疑為年份誤植）：輪到時重讀再改寫 scope，不要只改日期。
+
+---
+
+## 2026-11-16 09:05–09:23（Asia/Taipei）｜N=1,117 · R=16 · A=3 · U=1,101 · attempted=0
+
+開場基準：嚴格逾期 0 筆、7 天內到期 11 筆（佇列已排入 4 筆今日截止）、24 小時未核 842 筆。上一輪（08:05–08:18）47 分鐘前才複核 17 筆，因此本輪不重刷未到期案例：只做「今日會改變讀者行動」的 6 筆、`next_review_at` 落在今天的 10 筆輪替，以及新機會研究。
+
+### 實質變更（16 筆複核，皆附官方原文）
+
+- **`kaggle-solar-filament-segmentation-2026`（決策相關，最重要）**：兩個官方時鐘其實是**兩條提交通道**。Important Dates 逐字「Nov 15, 2026, 11:59 pm CDT」對的是 Google Form 的 4 頁技術報告與解法（字面換算台北 11/16 12:59）；`2026-11-16T11:59:59Z`（台北 19:59:59）是 Kaggle 平台提交截止，頁面倒數只走平台值。先前紀錄只寫「兩者不一致、不併成單一倒數」，讀者因此不知道**今天中午前**就得交報告。已把通道關係寫進 `expiry.text`，`deadline_at` 維持較早的 12:59，`usable_duration` 說明倒數取較早者。
+- **`google-ai-professional-certificate-tw-pro-3mo`**：衝突未收斂且更嚴重——行銷頁註腳仍「優惠將於 2027 年 1 月 1 日到期」，Google One 優惠條款仍「Offer expires and must be redeemed by November 6, 2026.」（Last updated July 31, 2025，**已過 10 天**）。`expiry` 原本是 null，衝突只存在摘要散文裡；已新增 `expiry.text` 並列兩說，補 `access_risk`（三個月期滿按台灣標準月費自動續訂，Google AI Pro 5 TB 每月 NT$650），`next_review_at` 提前到 11/17。
+- **`aspn-youth-sports-tech-hackathon-2026`**：截止仍為 11/16 12:00（頁面逐字「延長至 2026 年 11 月 16 日 中午12點」、無已結束／額滿字樣）。修正過時的 `access_risk`（原寫「僅剩兩天」）並拿掉摘要裡「頁面仍有『立即報名』」這句——報名鈕由 JS 載入，靜態 HTML 讀不到，不能當已核事實。
+- **`tw-labor-pretraining-ai-smart-application-tnnu-03`**：報名至 16:00 未變，報名人數 39 → 40（名額 34）。同步 `summary` 與 `access_risk`（原先前者寫 39、後者要改成 40 就會自相矛盾——上一輪留下的「即時數字四處同步」通則再次命中）。
+- **`ugreen-ai-nas-hackathon-2026`**：截止 11/15 23:45 PT（台北 11/16 15:45）未變，Devpost 參與人數 2,664 → 2,731，updates 最新仍是催件、無延期。
+- **`hsinchu-city-ai-youth-digital-tool-subsidy-2026`**：09:17 再讀仍是「剩餘補助經費 $192,051(3.3%)」，與 08:08 逐字相同；`next_review_at` 提前到 11/18（14 天內用完 3.3%、官方無額滿預警）。
+- **10 筆今日輪替**（qnx、airtable、tactiq、miro 非營利、codegeist、goodmem、serpkite、loom、n8n startup、taoyuan）：9 筆 unchanged、1 筆（loom）經主 agent 覆核後也判 unchanged。官方數字與衝突狀態全部照舊，只更新 `verified_at`／`next_review_at`／`verification_scope`。
+- **排程修正**：airtable、tactiq、miro、goodmem、serpkite、n8n 六筆穩定方案原本標 `daily`，但內容是長期存在的文件矛盾、不是時效事件；`tests/validate.py` 的 `MAX_CADENCE_GAP` 要求 daily 必須 3 天內重排，等於每週重讀同一頁。改標 `weekly`、`next_review_at` 11/23。今日截止的 4 筆仍維持 `daily`，且 `next_review_at` 都排在各自截止**之前**（aspn 11:45、kaggle 12:45、ugreen 15:30、tnnu 15:45），截止過後自然落回逾期桶。
+
+### 新增 3 筆（皆實際開啟官方頁）
+
+- `puter-js-user-pays-free-monthly-allowance`：User-Pays 模式，開發者 US$0、成本由每位登入使用者自己的**每月免費額度**負擔（金額只在 dashboard、未公布、不累積）；免費層可用 `puter.ai.*`，但 OpenAI／Anthropic 相容端點與 realtime 回 402 需付費；限流 30 次/10 秒、同時 3 個。台灣無地區限制公告但未實測註冊 → Unknown。
+- `gemini-decision-1-decisions-api-free-tier`：Decision 1 輸出 0 tokens，免費層輸入「Free of charge」、官方公布 200 RPM／50,000 TPM／**10,000 RPD**，付費 US$0.10／1M 輸入 tokens；不支援 Batch 與 context caching，免費層內容用於改善產品。可用地區清單逐字含 Taiwan → Yes（S 級）。
+- `comfy-cloud-five-free-gpu-runs-new-user`：新戶 5 次真實 GPU 執行（RTX PRO 6000 96GB）＋免費 Agent credits，一次性非每月，單次上限 30 分鐘，只計執行中 GPU 時間；台灣未列限制但未實測 → Unknown。`recurring_cost_usd` 留 null（試用後是自願訂閱，不是自動扣款），並在 `cost_note` 寫清 Standard US$16–20/月。
+
+### 來源衝突與被否決的 subagent 結論（重要工作經驗）
+
+- **Loom 75% 折扣：subagent 判「Atlassian 75% 清單不含 Loom Business + AI，只有 Confluence」，主 agent 讀原始 HTML 後否決。** 該頁有三張表：Academic 50% 清單列「Loom - Business/Business + AI/Enterprise」、**Classroom 75% 清單逐字列「Loom - Business/Business + AI」**、Open source 100% 清單亦列。若照 subagent 的 patch 改標題與摘要，等於把 75% 降成 50%（US$24/席 → 差一倍的價格錯誤）。已在本輪 `verification_scope` 寫明兩段清單位置，並把「中小學 vs collegiate/graduate/teachers 措辭差異」留在 unknowns。
+- **Google AI 開發者額度「新增 US$5 預付、12 個月有效、僅主要訂閱者」的建議更新**：`google-ai-developer-monthly-cloud` 今晨 02:12 已寫入同一份 2026-11-13 blog 的三項條件，屬重複，未再改。
+- **Google AI 專業認證「行銷頁 FAQ 每月 US$49 與 AI Pro NT$650 衝突」**：兩者是不同商品（Coursera 課程訂閱 vs Google AI Pro 訂閱），`cost_note` 早已分開寫，不列為新衝突。
+- **Subagent 時鐘超前**：三個 agent 回報的查閱時間到 09:38–09:43，實際當時才 09:20 左右。所有 `verified_at`、`accessed_at`、`verification_scope` 已用真實時鐘重寫成 09:22／批次窗口 09:05–09:23；`tests/validate.py` 的「時間戳不得超前」規則本來就會擋，這次是人工先發現。
+
+### 本輪品質檢查（無程式變更）
+
+- `tools/linkcheck.py` 全掃 3,171 個 URL：dead 10、unreachable 25、blocked 91。10 個 dead **全部**在既有紀錄裡已被標成 404 並附替代來源或缺口說明（qoder 活動頁、baseten 舊行銷頁、voyageai `/pricing`、astamuse 公告、deepinfra `/papers`、nscale `/pricing`、salad `/ssap`、wda `nws` PDF、kaggle PLE 舊 slug、qoder docs），沒有新增破損，因此不動資料。
+- 一致性掃描：非 CLOSED 但最後可動作時點已過 0 筆；`next_review_at` 早於 `verified_at` 0 筆；`next_review_at` 晚於未來截止點 0 筆；`dates/offers.json` 無全檔重排（diff 404 insertions / 104 deletions）。
+- 免費專區有 2 筆「自身結論是沒有免費額度」的觀察線索（`pika-free-zero-monthly-credit-packs-watch` 每月 0 點、`taskade-free-earned-credits-no-monthly-watch` 無每月點數），卡片同時帶「觀察線索」與「免費機會」。這是可修正的閱讀問題，但屬個案資料判斷（是否退出免費專區等於承認該線索沒有價值），本輪沒有足夠依據改成通則或前端規則，留待有更多同類案例再處理。
+- **本輪不做程式／測試變更**：唯一可機械偵測的新缺陷是「即時數字在 summary 與 access_risk 不同步」，但通用規則會誤攔 30+ 筆合法散文（上一輪已記錄），而本輪的 2 筆已人工修正。沒有可重現的程式錯誤，不製造改動。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,120 筆（S/A/B/C/D = 176/196/131/279/121，未評級 217）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+- 本機 headless WebKit（1280×900 與 390×844）：全庫 1,120、符合 1,120；台灣條件適用 191、免費方案 731、開發者 622、本輪更新 19；「顯示更多」24 → 72；搜尋 `Puter` 6 筆（Puter 第一）、`Decision 1` 1 筆；截止日排序第一為 ASPN（12:00）、第二為 Solar Filament；console error 0、手機 scrollWidth 390 無水平溢出。
+- 卡片核對：Comfy 顯示 A 級／設定費 US$0／「費用說明」含 Standard US$16–20；Gemini Decision 1 顯示 S・台灣條件適用；Google AI Pro 顯示期限衝突；tnnu 摘要與 access_risk 都是 40 人。
+
+### 未解證據缺口
+
+- Kaggle：CDT 是否誤標（美西 11 月應為 PST/CST）未釐清；`rules` 頁的隊伍上限 5 vs 平台 `maxTeamSize=10` 兩份官方文件並存。
+- Google AI 專業認證：11-06 之後是否仍能成功兌換未實測（禁止兌換／付款）；哪一版條款有效官方無公告。
+- Puter：免費額度金額只在 dashboard、台灣註冊是否需手機驗證、免費層能否呼叫 Claude／GPT-6 系列。
+- Gemini Decision 1：是否與 `gemini-api-free` 其他模型共用同一組免費配額；未以台灣帳戶實測呼叫。
+- Comfy Cloud：免費 Agent credits 數量、5 次 run 是否含 Partner Node 費用、台灣付款方式。
+- 新竹市：`dep-youth.hccg.gov.tw` DNS 仍失效，只剩數位申辦平台一個來源；連兩次同值無法判斷是「停止核銷」還是「無人申請」。
+
+### 下一輪優先（最多 5 項）
+
+1. 今日截止 4 筆（`aspn-youth-sports-tech-hackathon-2026` 12:00、`kaggle-solar-filament-segmentation-2026` 12:59／19:59、`ugreen-ai-nas-hackathon-2026` 15:45、`tw-labor-pretraining-ai-smart-application-tnnu-03` 16:00，另 `taoyuan-ai-productivity-online-courses-115` 明日 11/17）：截止後改判 closed 並確認是否延期；來源 Accupass、Kaggle GetCompetition API、Devpost updates、台灣就業通、tycg。
+2. `google-ai-professional-certificate-tw-pro-3mo`（11/17）：條款 2026-11-06 已過、行銷頁仍寫 2027-01-01；確認是否改版或下架，若仍衝突就維持 `terms_conflict` 並在標題點出「條款日期已過」。
+3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（11/18）：再讀 `dgservice` 餘額；低於 1% 或見額滿公告即改狀態與標題。
+4. 3 筆新紀錄的缺口：Puter 免費額度金額與台灣註冊（`docs.puter.com`、dashboard）、Gemini Decision 1 配額是否共用（`ai.google.dev/gemini-api/docs/rate-limits`）、Comfy 免費 Agent credits 數量與台灣付款（`comfy.org/pricing`）。
+5. 18 筆 `verification_scope` 第一個日期早於 `verified_at`（上一輪留下的清單，含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`aliyun-yungongkaiwu-model-studio-students`）：輪到時重讀再改寫 scope，不要只改日期。
