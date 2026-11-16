@@ -4567,7 +4567,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 ---
 
-## 2026-11-16 12:05–12:50（Asia/Taipei）｜N=1,123 · R=7 · A=0 · U=1,116 · attempted=0
+## 2026-11-16 12:05–12:50（Asia/Taipei）｜N=1,123 · R=8 · A=0 · U=1,115 · attempted=0
 
 ### 併發：開場時有另一個回合在同一份檔案上寫入（本輪怎麼處理）
 
@@ -4578,9 +4578,9 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 ### 基準
 
-嚴格逾期 1 筆（`aspn-…` 11:45）、7 天內到期 10 筆、`retry` 桶 0 筆、24 小時未核 828 筆。上一輪 12:16 剛結束（R=21），其 21 筆全部跳過。本輪範圍＝**最久未核且未被上一輪覆蓋的 6 筆**（11-06～11-15 核實、12–14 天未動）＋ 1 筆今日截止後的狀態確認。
+嚴格逾期 1 筆（`aspn-…` 11:45）、7 天內到期 10 筆、`retry` 桶 0 筆、24 小時未核 828 筆。上一輪 12:16 剛結束（R=21），其 21 筆全部跳過。本輪範圍＝**最久未核且未被上一輪覆蓋的 6 筆**（11-06～11-15 核實、12–14 天未動）＋ 2 筆今日截止／時刻爭議（ASPN、Kaggle Solar Filament）。
 
-### 實質變更（7 筆複核；最重要的一筆是修正，不是新增）
+### 實質變更（8 筆複核；最重要的一筆是修正，不是新增）
 
 - **`e2b-hobby-free-hundred-dollar-credits`（決策相關，最重要）**：兩個數字都錯，且錯在會直接影響容量規畫。
   - **並發上限 20 → 10**。官方定價卡逐字「10 concurrent sandboxes」，`docs.e2b.dev/billing` 的方案對照表也是「Concurrent sandboxes | 10 | 100 - 1,100」。舊紀錄寫的 20 其實是同表的**另一列**「Concurrent builds | 20」（建置數，不是可同時執行的沙箱數）；`sources[].evidence` 也照抄了 20，所以靠「來源有寫」檢查不出來。已把 builds 與 sandboxes 的差別寫進摘要與 `access_risk`。
@@ -4591,6 +4591,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - **`blockrun-free-open-model-gateway`**：新增兩條官方自述——「Our free Mistral upstream is down — calls to nvidia/mistral-* still return 200, answered by a healthy free model.」與「NVIDIA retired every free Llama in November 2026.」。後者是 **BlockRun 對 NVIDIA 的說法**，NVIDIA 官方頁沒有這句，所以只寫在摘要並標明來源身分，不寫進額度欄位、不改模型清單。
 - **`agentset-free-thousand-pages-tenk-monthly-retrievals`**：Free 卡逐字「$0 USD」「Forever Free」「1,000 pages / 10,000 retrievals」「Not included: Connectors / Custom integrations」；比較表「Retrievals per month 10,000」但頁數只寫「Pages included 1,000」，加購列才是「Additional page per month」。因此「檢索＝每月」成立、「頁數週期」仍未知，`unknowns` 改寫成這個精確說法。
 - **`beautiful-ai-student-pro-first-year`**：教育頁逐字「Beautiful.ai for students, one year free!」「This offer is available for new student subscribers only and valid for 12 months from activation.」「Verified students (with a .edu email) are eligible」。台灣學生若無 .edu 信箱，需走說明中心的替代文件，這句仍留在摘要。
+- **`kaggle-solar-filament-segmentation-2026`（時刻模型的修正）**：這筆的 `deadline_at` 原本是報告通道的 12:59，理由是「取較早者為實際風險點」。12:47 唯讀重取 GetCompetition API 後確認：平台 deadline 仍 `2026-11-16T11:59:59Z`（台北 19:59:59）、賽事仍開放（提交數 16,830→16,836、隊伍 1,562→1,563 都在動）。問題是 12:59 之後，任何非「已截止」狀態都會被 `tests/validate.py` 判為違規，於是這一筆要嘛被錯誤地標成已截止（明明還能提交），要嘛讓驗證失敗。已把 `deadline_at` 改指唯一無歧義的平台硬截止 **19:59:59**，並在**標題、摘要、`expiry.text` 三處**寫明「報告通道原文『Nov 15, 2026, 11:59 pm CDT』字面為台北 12:59，但 11 月美西應為 PST（台北 15:59），CDT 標示可疑、未交報告者即使平台仍開也進不了評審」。這是「機器可讀期限只放一個值」的取捨：倒數取硬截止，較早的子通道風險用三處文字承擔，下一輪 19:59 後再整筆改判。
 - **`aspn-youth-sports-tech-hackathon-2026`**：12:38 截止後重讀，頁面仍逐字「(延長至 2026 年 11 月 16 日 中午12點)」與橫幅「活動延長報名至11/16 (一)」，全頁無「已結束」「額滿」，也沒有第二次延期；報名鈕由 JS 載入無法從靜態 HTML 判斷。維持 `applications_closed`，並把「按鈕狀態不可知」寫進 scope。
 
 ### 新機會：11 個候選全部與既有 ID 重複，A=0
@@ -4629,8 +4630,8 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 ### 驗證與發布前證據
 
 - `python3 tests/validate.py`：PASS 1,123 筆（S/A/B/C/D = 178/196/131/279/122，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（含額度細節、關鍵字、追查失敗與「期限已過仍可行動」三條）、`git diff --check` 均通過。
-- `git diff` 檢查：`data/offers.json` 只有 7 筆 `verified_at`／`next_review_at`／`verification_scope` 變更（無新增、無刪除 ID、無狀態變更——ASPn 的 `applications_closed` 是上一輪判的，本輪只補截止後的重讀證據）；`data/policy-history.json` 追加 2 筆（E2B 更正、Lovable 扣款條款重核），不改寫舊紀錄。
-- 本機靜態站（`python3 -m http.server`＋headless Chromium，1280×900 與 390×844）：全庫 1,123、免費方案 731、台灣條件適用 193、開發者 622、本輪更新 7；搜尋「E2B」第一張卡標題已是「並發上限10」，摘要顯示「Hobby並發上限10個沙箱（Concurrent builds才是20；Pro為100–1,100）」「底座US$150/月＋用量（官方試算100並發合計約US$316/月）」；搜尋「客語」2 筆；console error 0；手機 `scrollWidth` 390＝`clientWidth` 390，無水平溢出。
+- `git diff` 檢查：`data/offers.json` 只有 8 筆 `verified_at`／`next_review_at`／`verification_scope` 變更（其中 kaggle 另改 `deadline_at`／`title`／`summary`／`expiry`）（無新增、無刪除 ID、無狀態變更——ASPn 的 `applications_closed` 是上一輪判的，本輪只補截止後的重讀證據）；`data/policy-history.json` 追加 2 筆（E2B 更正、Lovable 扣款條款重核），不改寫舊紀錄。
+- 本機靜態站（`python3 -m http.server`＋headless Chromium，1280×900 與 390×844）：全庫 1,123、免費方案 731、台灣條件適用 193、開發者 622、本輪更新 8（公開站以同一份資料重測，見下）；搜尋「E2B」第一張卡標題已是「並發上限10」，摘要顯示「Hobby並發上限10個沙箱（Concurrent builds才是20；Pro為100–1,100）」「底座US$150/月＋用量（官方試算100並發合計約US$316/月）」；搜尋「客語」2 筆；console error 0；手機 `scrollWidth` 390＝`clientWidth` 390，無水平溢出。
 
 ### 未解證據缺口
 
@@ -4643,7 +4644,7 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 ### 下一輪優先（最多 5 項）
 
-1. `kaggle-solar-filament-segmentation-2026`（今日 19:59:59 平台截止後）：改判 `applications_closed`，並確認報告通道 12:59 與平台 19:59 的關係是否改變；來源 Kaggle GetCompetition API＋Overview。
+1. `kaggle-solar-filament-segmentation-2026`（排程 19:45、平台 19:59:59 截止）：截止後改判 `applications_closed`；另確認官方 Important Dates 的「CDT」是否被改成 PST 或改日期（若改成 11/15 23:59 PST＝台北 11/16 15:59，代表報告通道其實還沒關）。來源 Kaggle GetCompetition API＋Overview。
 2. `ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00，12:12 讀值已 44 人／名額 34）：今日截止後改判；來源 Devpost updates、台灣就業通。
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（每日追蹤）：再讀 `dgservice` 餘額（12:16 為 2.2%／NT$129,593），見額滿或低於 1% 即改狀態與標題。
 4. `e2b-startups-20k-publicity`：同一個 E2B 帳號體系，`Concurrent builds` 與併發的差異也要在該筆寫清楚；另查 US$100 與新創 US$20K 額度是否有到期日條款（pricing／billing／startups terms）。
