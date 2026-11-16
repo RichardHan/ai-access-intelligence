@@ -5299,3 +5299,65 @@ Base44 定價頁有 Cyber Monday「30% Off／Code: BASE30」橫幅，同時寫 F
 5. `dify-education-200-total` 與 `blaxel-starting-credit-payment-bonus`：把本輪已讀但未寫回的畢業保留對齊、以及定價頁 Up to $200 與部落格付款加碼的並存寫進原 ID。來源：https://www.dify.ai/education 、https://docs.dify.ai/en/cloud/use-dify/workspace/subscription-management 、https://blaxel.ai/pricing 。
 
 ---
+
+## 2026-11-17 02:06–2026-11-17 02:18 Asia/Taipei｜N=1,138 · R=10 · A=1 · U=1,128 · attempted=0
+
+### 開場狀態
+
+02:05 開場，`tools/round_lock.py status` 無人持鎖，02:05:58 取得鎖。HEAD `4d492a1`、工作樹乾淨、`origin/main` 同點。Pages 是 main 根目錄，沒有 repo workflows。嚴格逾期 0、7 日內到期 9（7 筆冷卻）。`stepfun-stepaudio3-music-gen-preview-nov8` 與 `taoyuan-ai-productivity-online-courses-115` 的截止都在 2026-11-17 稍晚，且 6 小時前才核過，本輪不在截止前重讀。
+
+本環境的 subagent 不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入時它們仍在讀頁，下列更正以主 agent 自己打開的官方頁為準，不沿用上一輪「已讀到對齊」的轉述。約 15 分鐘後仍未交卷，已明確停止；沒有採用未交付的轉述。
+
+### 計數
+
+N=1,138；R=10；A=1（機會 1、政策 0、觀察 0）；U=1,128；attempted=0。結束 1,139 筆。
+
+R 的 10 個 ID：`dify-education-200-total`、`blaxel-starting-credit-payment-bonus`、`base44-free-monthly-25-message-100-integration`、`extend-document-once-tenk-credits-terms-gap`、`kapwing-free-ten-ai-credits`、`pixverse-basic-initial-daily-credits`、`hex-education-free-professional-analytics`、`meetgeek-education-nonprofit-startup-thirty-percent`、`motherduck-startups-eight-k-annual-commit`、`otter-student-teacher-pro-discount`。
+
+新增：`hex-team-fourteen-day-no-card-trial`。
+
+### 會影響決策的更正
+
+- **`dify-education-200-total`（上一輪「已對齊」不成立）**：教育頁寫畢業或離職後可保留已核驗狀態；文件寫只到效期結束，年度重驗須現行在學或在職。200 總額不月重置、Yearly 減免、Monthly 收全額仍兩邊一致。狀態改 `terms_conflict`。台灣校域仍 Unknown。
+- **`blaxel-starting-credit-payment-bonus`**：定價頁只寫最高 US$200 free credits，沒有付款條件；2025-12-03 文章仍寫加付款方式或首購後才到 US$200。不把定價頁讀成免卡即送。Tier 0 仍是 10 個 sandboxes。狀態改 `terms_conflict`。
+- **`kapwing-free-ten-ai-credits`**：同一頁方案卡寫 Unlimited exports with a watermark，比較表寫每月 30 分鐘。Free 仍是 10 credits 且未標每月重置。狀態改 `terms_conflict`。
+- **`extend-document-once-tenk-credits-terms-gap`**：10,000 credits／US$100 仍在。新增衝突：定價頁 Split Light 0.5 credits/page，文件 1.5.0 起為 0.25。零資料保留兩說與網站條款排除 API 仍在。維持觀察。
+- **`otter-student-teacher-pro-discount`**：說明中心本次 HTTP 200（上一輪 403）。非 .edu 仍須洽客服，不保證 .edu.tw 通過。教育價仍是 US$13.59／US$79.99。一般 Pro 卡另顯示 US$8.49，沒有定義成教育價。
+- **`hex-education-free-professional-analytics`**：教育免費 Professional 仍在。同頁非營利折扣沒有比例，不另立紀錄。
+- **`meetgeek-education-nonprofit-startup-thirty-percent`**：折扣措辭未變。教育區塊 Basic 列每月 3 小時轉錄，非營利區塊的 Basic 清單沒有這句。US$13.30 仍未說明折前或折後。
+- **`motherduck-startups-eight-k-annual-commit`**：US$8,000 換 US$16,000 等值未變，並確認是在 7 日免費試用之外。不是免費方案。
+- **`base44-free-monthly-25-message-100-integration`**：Free 25／100／5 apps 與每日 5 點未變。橫幅仍同時寫 Final Hours 與 Sale ends in 14 days，代碼 BASE30，沒有日曆結束日，不另立紀錄。
+- **`pixverse-basic-initial-daily-credits`**：起始 60、每日 30、UTC 00:00 刷新未變，頁首仍 October 19, 2026。條款本次未重讀。
+
+### 新增
+
+- `hex-team-fourteen-day-no-card-trial`：任何人 14 日 Team 試用、免卡，不做動作降回 Community，不是自動扣款。Team 標價 US$75／Editor／月。試用點數未公布。與教育免費 Professional 不是同一方案。來源 https://hex.tech/pricing 。
+
+### 未納入
+
+- Base44 Cyber Monday（BASE30）：結束語自相矛盾且不是日曆日期。
+- Hex 非營利折扣：官方只寫 discounted program，沒有比例。
+- 經濟部 AI 線上課程平台：大學轉知頁給了 `eii.nat.gov.tw` 連結，該站 308 到 `aimfg.org.tw` 的前端外殼，官方正文讀不到，不建卡。
+- Base44 新創頁：2026-11-16 已核，本文仍是 Pro 年約 US$960／Builder 年約 US$480，meta 的 US$1,000 credits 仍無本文對應。無新訊號，不刷新。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是官方頁互相矛盾，不是篩選或卡片邏輯錯誤；`terms_conflict` 藥丸已會顯示「官方條款有差異」。證據落後的 19 筆是查閱時間沒寫進來源，不是前端把舊來源排成新核實；本輪重讀的 10 筆已補上 `accessed_at`。
+
+### 未解證據缺口
+
+- Dify：結帳時採教育頁還是文件的畢業規則；台灣校域。
+- Blaxel：註冊當下實際贈額；beta 免費項目結束日；條款 PDF 本次未重讀。
+- Kapwing：10 credits 是否每月重置；兩種匯出上限哪一說為準。
+- Extend：Split Light 以哪一版計費；API 合約仍缺。
+- Otter：US$8.49 的適用對象；.edu.tw 人工審查結果未送件。
+- Hex Team 試用：14 日內實際點數。
+- `aimfg.org.tw` 的 AI 線上課程：外殼讀不到費用、資格與證書規則。
+
+### 下一輪優先（最多 5 項）
+
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-17 11:59:59 後確認 preview 是否退役、付費 model ID 與是否須先儲值。來源：StepFun 模型頁與定價頁。
+2. `taoyuan-ai-productivity-online-courses-115`：2026-11-17 截止後改狀態。來源：桃園市課程頁。
+3. `aocai-working-free-ai-courses-2026`：2026-11-19 前確認 11/26 台北班是否仍受理。來源：https://serv.gcis.nat.gov.tw/AOCAI/courses/working 。
+4. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
+5. 證據落後且本輪未讀的 `vizard-free-monthly-sixty-video-credits`、`tensorpix-free-signup-weekly-credits`、`signld-nonprofit-education-lifetime-half-price`；另渲染 `https://aimfg.org.tw/ai_learning`，確認經濟部 AI 線上課程是否仍免費、證書與抽獎是否官方。
