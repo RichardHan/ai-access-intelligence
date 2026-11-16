@@ -4349,3 +4349,55 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `vercel-ai-gateway-parallel-decisions-free-window`（11/23 結束）與 `alibaba-model-studio-token-plan-personal-new-user-discount`（11/30 結束）：確認結束時區、rate limit、付款方式、期後價格與台灣購買資格。
 4. 新紀錄後續：`cloudflare-vectorize-free-dimensions` 查 Free 超額行為與是否需卡；`neon-agent-plan-sponsored-free-tier` 查 US$25,000 效期與審核標準；`tokyo-ai-tourism-area-subsidy-2026` 於 12/11 後改判是否延長或關閉。
 5. 18 筆 `verification_scope` 最新日期早於 `verified_at`（例 `openai-agents-api-public-beta-no-harness-fee`、`confident-ai-free-five-weekly-runs-gbmonth`、`anyscale-startup-twenty-k-byoc`、`beam-cloud-developer-paid-not-thirty-free`、`tabstack-mozilla-ten-thousand-trial-credits`）：卡片會同時顯示兩個查核日，逐筆重讀或改寫 scope，不要只改日期。
+
+## 2026-11-16 08:05–08:18 Asia/Taipei 研究與維護
+
+### 基準、範圍與分工
+
+- 對錶 `TZ=Asia/Taipei date -Iseconds`：08:05 開場，main HEAD `0799f01`，工作樹乾淨、fetch 後與 origin/main 一致，無未完成 PR；`round_lock.py status` 顯示無人持有。Pages 為 main 根目錄 legacy build，對應 `0799f01`。
+- N=1,115（898 opportunity／50 policy／167 watchlist）；嚴格逾期 0、retry 0、7 日內到期 11 筆（4 筆當日截止於 01:17 已核實）。整個 repo 沒有 `AGENTS.md`，規則入口是 README「維護」段＋本檔。
+- 三個 Task 研究員（環境關閉 per-call model，未指定模型）：A 官方衝突 7 筆（29 次讀取）、B 最久未核輪替 8 筆、C 新機會與去重（45 次讀取、13 條被否決線索）。主 agent 另自行重讀新竹市補助、Lambda／Future AGI／Requesty、fal、EXAONE、Google One 方案頁、Vercel Token Pass、Mistral、Hostinger，並為唯一共享 JSON 寫入者。
+
+### 採用成果與證據界線
+
+- R=17、A=2（機會 2／政策 0／觀察線索 0）、U=1,098、attempted=0；結果 1,117 筆（900／50／167）。
+- **新竹市 AI 青年補助（本輪最影響決策的更正）**：標題與費用說明寫「剩餘經費 4.4%／NT$253,197」，但同一筆的 11-14 來源證據已是 3.3%／NT$192,051。11-16 08:08 重讀數位申辦平台仍是 `$192,051(3.3%)`，青年中心頁本次已完全不顯示餘額（只剩「計畫總經費 570 萬元」），`dep-youth.hccg.gov.tw` DNS 無法解析。已把標題、摘要、費用說明、存取風險統一為 3.3%，並把讀值序列（11/9 340,843 → 11/11 253,197 → 11/14、11/16 192,051）寫進費用說明；下輪 11/20 前要再讀，經費可能早於 11/30 用罄。
+- **LG EXAONE 台灣由 Unknown 改為 No**：`showroom.exaone.ai/en/terms` 自台灣渲染出「Access Restricted／This service is not accessible from your current location.」，同一頁內建文案另寫「It is only available in South Korea and the United States.」；ToS §1.5 把 User 定義為「registered as a member under the Showroom Terms」，而 §8.2 要求註冊時填真實所在國。取 API key 的必要步驟在台灣不可完成，因此改判 No 並加 REGION-LOCKED；docs／api 文件站仍可讀，已在摘要寫明「可讀不代表可註冊」。免費與每日 100 次呼叫、商用條款衝突不變。
+- **Vercel Token Pass 額度調升與超額行為改寫**：docs 逐字「For $30 per team each month, you get $150 of credit」（原 US$80）、精選模型由 3 個增為 5 個（新增 Kimi K3.1 Pro、GLM 5.3 Flash）；同頁「Standard API keys and OIDC tokens fall back to your AI Gateway credits. Token Pass-scoped keys fail until your next billing period」——原紀錄的「用完即停、不會自動超額」現在只對 Token Pass 專用金鑰成立，一般 key 會回退到付費 Gateway 額度。另把 `setup_cost_usd` 由 US$20 改為 0：Pro US$20 是前置月費、不是設定費，原寫法讓首月變成 US$70（實際 US$50），與本庫「setup＝首月基價且須在 setup_cost_basis 說明非額外費用」的慣例不一致（lovable-student、qoder-lite、runway-referral 皆如此）。
+- **Google AI Professional Certificate**：台灣方案頁逐字「Google AI Pro (5 TB)」「每月 $650」，補進費用說明與 billing_country；優惠條款仍寫「must be redeemed by November 6, 2026」（已過）而台灣行銷頁仍寫 2027-01-01，衝突維持並列，不任選一版。
+- **GEAR Get Certified 維持台灣 Unknown**：官方 getcertified 與 plans-and-pricing 兩頁都沒有國別／居住地條款，硬門檻是「available only for Google Cloud customers who have an active Google Workspace corporate account」＋公司信箱（個人與學生信箱不受理）。研究員建議升為 Yes，主 agent 不採：沒有正面台灣陳述、也未自台灣網域實測 GEAR 報名，而多數讀者並非 Google Cloud 企業客戶；升 Yes 會讓它進「台灣條件適用」S 級清單。已在 taiwan_note 寫明理由，並合併兩個重複的 unknowns。
+- **其餘複核**：fal sandbox 頁首 11/16 仍「6 free generations today. No account needed.」，文件仍只寫偶爾提供、無每日重置規則；NovAI transparency 頁自標 2026-11-15 19:10 UTC，仍列 US$2 免卡與信用卡最低加值 US$1，terms 頁仍寫「coming soon」；Perplexity 兩篇 Help Center 只寫學生「at a discount」，未見免費方案；Google Vids Omni 四種官方數字仍並存；8 筆輪替中 Future AGI 補「教育機構不適用本計畫」、Requesty 補「開放原始碼基金會／政府資助研究機構」兩類、Lambda 來源改記 301 後的 lambda.com，其餘條款與金額未變。
+- **新增 2 筆**：`mistral-large-4-open-weights-self-host`（官方 blog 與 HF 模型卡：1T 參數、49B 啟用／含 embedding 與 output 52B、modified MIT 且 MaaS 須另授權、HF license 標 other；台灣無地區限制，門檻是 8 GPU 級算力）、`hostinger-ai-builder-seven-day-trial-credits`（7 天、250 AI credits、免卡、每帳號一個試用網站、不能發布；Black Friday 期間 AI Builder 頁不提供試用，須從模板頁進入；贈送 credits 250–1,000 不按月續發、多數 3 個月到期）。
+
+### 本輪品質檢查（無程式變更）
+
+逐項掃描後沒有足以支持改動的系統性缺陷，因此本輪不動 app.js／tests：
+
+- 已到期卻仍可行動 0 筆、重複標題 0 筆、`next_review_at` 早於 `verified_at` 0 筆、未來時間戳 0 筆、`categories` 含 FREE 卻有已知費用而未寫 cost_note 0 筆。
+- 免費專區 507 筆 0／0 費用紀錄中，221 筆的費用說明同時提到月費與金額，逐筆看都是「免費層 vs 付費層」的正常分層，不是隱藏費用。
+- 唯一值得留下的通則（寫在這裡，不寫成測試）：「即時數字」（剩餘經費、名額、剩餘天數）常被重複寫進 title／summary／cost_note／access_risk 四處，複核只更新一處就會自相矛盾；新竹市這筆就是 title 與 cost_note 停在 4.4%、scope 與 unknowns 已是 3.3%。這類數字無法用 validator 通用判定（34 筆散文百分比與來源不一致但多為合法衍生值），只能在複核時同步四處。
+- 第二條通則：前置訂閱是月費，不能同時記成 `setup_cost_usd` 與 `recurring_cost_usd`；`setup` 有值時必須用 `setup_cost_basis` 說明「首月基價，非額外設定費」，否則卡片會把首月成本算兩次。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py` 通過 1,117 筆（S/A/B/C/D = 175/194/131/279/121，未評級 217）；`node --check app.js`、`node tests/filters.cjs`、`git diff --check` 均通過。
+- `git diff` 以 ID 比對：新增 2、無刪除、19 筆變更（17 複核＋Vercel／EXAONE 的欄位更正含在複核內），無未列批次卻刷新 `verified_at` 的紀錄。
+- 本機 headless WebKit 載入 1,117 筆：首頁 900／190／50／167、本輪 19、既有未複核 1,098、資料更新 2026/11/16 08:18；免費專區 728、台灣條件適用 190、載入更多 24→48。卡片：新竹市顯示「申請截止 2026-11-30 · 剩 14 天」與 3.3%；EXAONE 顯示「台灣資格 不符合所列資格」與「地區限定」標籤、D 級；Token Pass 顯示設定費 US$0／每月費用 US$50；Mistral 與 Hostinger 各 1 筆。手機 390px 無水平溢出（scrollWidth 390），console error 0。
+- 政策歷史追加 19 筆（13 複核、2 新增基準、4 條款／資格澄清），不改寫舊歷史。
+
+### 未解證據缺口
+
+- 新竹市：青年中心頁已不顯示餘額、`dep-youth.hccg.gov.tw` DNS 失效，只剩數位申辦平台一個來源；額滿無預警公告機制。
+- EXAONE：官方只用錯誤頁文案說「僅韓國與美國」，條款正文沒有可用國家清單，也沒有例外審核途徑。
+- Google AI Professional：行銷頁與條款兌換期限差 56 天，Google 無公告；11-06 之後實際兌換是否成功未測。
+- Vercel：調升生效日期（changelog 擷取文字無日期）、US$150 對應的實際 token 量、台灣團隊訂閱資格。
+- Hostinger：台灣結帳與幣別（`/tw`、`/zh-tw` 皆 404）、250 試用 credits 是否在 7 天後失效、credits 轉讓條款頁 404。
+- Mistral：授權全文、1T 參數的 VRAM／量化需求、MaaS 授權價格。
+
+### 下一輪優先（最多5項）
+
+1. 今日 12:00／12:59／15:45／16:00 四筆截止（`aspn-youth-sports-tech-hackathon-2026`、`kaggle-solar-filament-segmentation-2026`、`ugreen-ai-nas-hackathon-2026`、`tw-labor-pretraining-ai-smart-application-tnnu-03`）：截止後改判 closed，並確認是否延期。
+2. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（11/20 排程）：再讀 `dgservice` 餘額；若低於 1% 或見額滿公告，立即改狀態並更新標題。
+3. `google-ai-professional-certificate-tw-pro-3mo`：到 11/23 前再確認條款是否被改成 2027-01-01（或行銷頁改成 11/06）；這是台灣讀者現在最可能踩到的期限衝突。
+4. `vercel-token-pass-thirty-for-eighty-credit`：查 changelog 發布日期、`pricing.md` 的 5 個模型 list price，重算 US$150 實際 token 量；並確認是否已有非 Early Access 的一般方案。
+5. 18 筆 `verification_scope` 第一個日期早於 `verified_at`（含 `openai-agents-api-public-beta-no-harness-fee`、`cloudflare-workers-ai-free`、`aliyun-yungongkaiwu-model-studio-students` 的 2025-11-11 疑為年份誤植）：輪到時重讀再改寫 scope，不要只改日期。

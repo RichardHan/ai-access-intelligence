@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,115 筆**（898 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 07:19 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **20 筆**既有案例，新增機會 **3 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,092 筆**既有紀錄未完成本輪複核。修正 6 筆損失美元符號與數字的金額（LangSmith 新創、E2B 20K、Brave Search API、Turso Free、Vespa Cloud、LlamaParse），並把同一種缺字加進發布前檢查；Base44、Make、最強AI王、Postman、義守大學與 Perplexity 的官方兩說重讀後仍並存，改為兩週追蹤，維持 3 或 5 次、480k 或 240k 等原文並列，不任選一版。新增 Cloudflare Vectorize 免費維度、Neon Agent Plan（須先有 Scale）與東京都 AI 觀光補助（台灣不可直接申請）。ChatGPT for Teachers 仍限美國 K–12 雇用；Together 明列不收預付卡。
+資料集目前有 **1,117 筆**（900 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 08:18 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **17 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,098 筆**既有紀錄未完成本輪複核。修正新竹市 AI 青年數位工具補助的剩餘經費（標題與費用說明誤寫 4.4%／NT$253,197，11/16 實讀為 3.3%／NT$192,051），並把 LG EXAONE 2.5 的台灣資格由 Unknown 改為 No（Showroom 自台灣回應 Access Restricted，官方錯誤文案稱僅韓國與美國可用，而 ToS 以 Showroom 會員定義使用者）。Vercel Token Pass 同價 US$30 的額度由 US$80 升為 US$150、精選模型增至 5 個，且「用完即停」只適用 Token Pass 專用金鑰，一般 API key 與 OIDC 會回退到 AI Gateway 付費額度。Google AI Professional 補上台灣 AI Pro（5 TB）月費 NT$650 與需合格付款方式，但行銷頁 2027-01-01 與 Google One 條款 2026-11-06 的兌換期限仍衝突。新增 Mistral Large 4 開放權重（1T 參數、MaaS 須另取得商業授權）與 Hostinger AI Builder 7 天 250 credits 免卡試用（不能發布；Black Friday 期間須從模板頁進入）。
 
 ## 使用方式
 
