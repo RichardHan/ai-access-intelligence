@@ -5025,3 +5025,76 @@ N=1,130；R=15；A=3（2 機會、0 政策、1 觀察線索）；U=1,115；attem
 5. `kaggle-neurips-2026-smart-buildings-competition`：12 月初前再讀 API 與 Overview，確認 12-03 是否真的鎖入賽／合隊（若 API 未同步，讀者可能提前一週被鎖）。
 
 ---
+
+## 2026-11-16 17:05–18:12（Asia/Taipei）｜N=1,133 · R=17 · A=2 · U=1,116 · attempted=0
+
+### 開場狀態：另一個回合正在寫同一個 repo
+
+17:05 開場時 `tools/round_lock.py status` 回 **RUNNING: pid 29789 since 16:11（16:05 round: recheck + quality）**，`data/policy-history.json` 的 mtime 是 17:06:02——對方不是殘留鎖，是正在寫檔的回合。因此本輪先只讀：把 `data/*.json` 快照到 `/tmp`、用 `tools/queue.py` 建佇列、派研究子代理去讀官方頁，**不碰 repo**。對方 17:10:54 以 `8545938` commit 並釋放鎖後，才 `acquire` 並開始改資料。教訓與 14:05 那輪相同：`round_lock` 只能告訴你「有人在跑」，不能阻止你先寫；看到活著的持有者就只讀，等它 commit 再追加。
+
+### 基準、範圍與分工
+
+開場（快照 1,133 筆）：可行動 1,036 筆、嚴格逾期 0 筆、7 天內到期 8 筆（6 筆冷卻中）、`retry` 桶 0 筆、24 小時未核 772 筆、12 小時內已核 185 筆。對方那輪的 15 筆（16:53 核實）與 3 筆新增全部跳過。
+
+三個 subagent 皆唯讀、只回報結構化 claims 與 field_updates；主 agent 統一改 JSON，並自行重讀關鍵結論的官方頁（CoreWeave 402、Notta 97.99／無 .tw、Devpost 截止與台灣 20 歲、TVDI 簡章 15 人開班與賠償條款、Azure Sponsorship 國別表、Secret US$149／年、Agora 四頁、Imagine Cup 首頁與 rules 404、IteraCompute 促銷截止、CyLeague 方案價、Tencent corporate accounts）。
+
+- **A｜到期與高風險 7 筆**：iteracompute（11/24 16:00）、cyleague（11/30）、nextwave（11/30 23:59）、fireworks（12/1 16:00）、google-buildhybridai（12/1 06:00）、tvdi（12/2 郵戳）、digitalocean（2027-01-17）。無延期、無提前終止。
+- **B｜最久未核輪替 10 筆**（11-07／11-08 核實）：retool、linear、openai-nonprofit、notta、firecrawl、rime、tencent、daytona、ragie、coreweave（policy）。
+- **C｜新機會與去重**：評估 11 個候選，2 筆納入，其餘否決或併入既有紀錄（見下）。
+
+### 計數
+
+本輪：N=1,133；R=17；A=2（1 機會、0 政策、1 觀察線索）；U=1,116；attempted=0。合併 1 組重複紀錄（`gemini-api-free` → `gemini-watch`，不動筆數）。
+
+### 會影響決策的更正
+
+- **`coreweave-forge-free-pricing-transition`（本輪最重要）**：舊紀錄寫「超額回 429」。官方 usage-limits 逐字「When your organization reaches its cap, Inference requests return a `402` error.」，429 是 `Concurrency limit reached for requests`；同頁也不再要求付費推論「預付」，改為 Free／Academic 先啟用 PAYG、其後按月計費。讀者若照舊紀錄預期 429，會把「額度用完」誤判成「暫時塞車」而重試。
+- **`notta-education-half-price-pro-business`**：Pro 年繳原價是 **US$97.99**（舊紀錄的來源證據寫 $99）；官方教育文章 Updated November 02, 2026。另確認自助驗證網域清單（.edu、.edu.、.ac. 及各國名校）**不含任何 .tw**——台灣學校一律走人工審核，這點原本只寫「需個案驗證」。舊紀錄引用的「月額依最初購買日重置」已不在現行文章，改列未知。
+- **`digitalocean-secret-ai-startup-100-2026`（費用前提）**：卡片原本只顯示「每月費用 未列金額」，看不出必須先買 Secret Premium（US$149／年或 US$399 一次付）才拿得到 US$100 點數。已補 `cost_note`，卡片正面會出現費用說明：以年費計淨成本約 US$49 起，不是零成本。
+- **`retool-education-monthly-discount`（新矛盾）**：pricing FAQ 稱學生／非營利優惠「apply to cloud-hosted and self-hosted」，docs 只給月繳 Team／Business（自架僅 Enterprise，而 Enterprise 被排除）。AI credits 兩份官方數字仍不同（750／1,500 vs 1,000／3,000）。
+- **`tencent-tokenhub-free-trial`（新限制）**：國際站註冊文件逐字「it does not support binding corporate accounts」，企業戶可能只能用個人帳戶；1 年 vs 90 天效期衝突未解。
+- **`google-buildhybridai-2026-firebase-ai-logic`（精度）**：`deadline_at` 由 `2026-12-01` 細化為 `2026-12-01T06:00:00+08:00`（Devpost 兩頁皆「Nov 30, 2026 @ 2:00pm PST」）；台灣 20 歲門檻與排除名單未含台灣同步重現。
+- **`firecrawl-startups-annual-double-credits`（證據收窄）**：2x 與 <5 年／<US$10M／<50 人現在只剩 `/startups` 的 page metadata，正文已改成 Slack Connect 表單。優惠未被撤銷，但可讀證據變薄，已寫進 summary 與 unknowns。
+- **`rime-starter-fifty-model-pool`（條號更正）**：Free 禁送 Caller 音訊的條號由 §3.2 更正為現行 §6.3；real calls 行銷衝突仍在；STT 的「Free until Nov 19」屬另一筆 `rime-stt-nov19-free-window`。
+- **`taipei-tvdi-free-ai-vocational-training-116h1`（責任條款）**：簡章逐字補記「開訓前未達 15 人得暫緩或停止開班」與「違反規章遭退訓或中途無故輟訓應依契約賠償各項費用」；郵寄 12/02（郵戳）、現場僅 11/30–12/01。
+- **`iteracompute`／`cyleague`／`nextwave`／`fireworks`／`ragie`／`linear`／`openai-nonprofit`**：重讀後多為證據收窄或補充（IteraCompute 路由池與 128K／256K 兩個官方內部矛盾仍在；CyLeague 補 5 級方案價；Linear 補 Business US$16／人／月；OpenAI 非營利正文稱 Goodstack、申請表卻在 poweredbypercent）。
+
+### 新增 2 筆（主 agent 實讀官方頁）
+
+- **`agora-conversational-ai-300-free-minutes-rtc-10k`（條件式）**：ConvoAI US$0.10／分鐘、前 300 分鐘免費，單價內含指定 ASR／LLM／TTS（BYOK 不折價）；計費文件寫每月結算先扣免費額度；同帳戶 RTC 每月 10,000 合併分鐘免費。ToS 排除古巴／伊朗／北韓／蘇丹／敘利亞並要求 18 歲，未列台灣；但 §7 把 free trial 限於內部示範，是否適用免費分鐘額度未寫明 → `taiwan: Unknown`、status `conditional`。
+- **`imagine-cup-2027-microsoft-for-startups`（watchlist）**：冠軍 US$250,000 現金＋US$1,000,000 credits、Top Student Startup US$25,000＋US$250,000，報名截止 2027-02-28。`/en-us/rules`、`/en-us/official-rules`、`/rules` 三條路徑皆 302 到 `/Error/Page_404`，國別與年齡資格無法確認，因此不列可領機會。
+
+未納入：**Microsoft for Startups**（候選與既有 `azure-startups` 是同一計畫、同一組 learn.microsoft.com 來源；改為把新證據寫進該筆 unknowns：Azure Sponsorship 計費國別表 ms-azr-0036p 逐字列「Taiwan – Dollar (NT$) TWD」，但那只證明贊助方案的計費國別，不等於 Startup 註冊頁國別下拉已含台灣）、**TwelveLabs**（已存在 `twelvelabs-free-video-api`）、LMNT（已停運）、Magnific／Freepik（定價頁只有付費層、docs 403）、turbopuffer（明言無免費層、最低 US$16／月）。
+
+### 本輪品質改善：兩張卡描述同一個免費層，額度分類卻互相矛盾
+
+- **觀察到的問題**：`gemini-api-free`（2026-10-23 10:42 建立）與 `gemini-watch`（10:40 建立）引用**同一組六個 ai.google.dev 來源**，描述同一個 Gemini API／AI Studio 免費層，但各自渲染成一張 S 級卡：一張 `quota_classification: UNKNOWN`（卡片寫「用量尚未核實」）、另一張 `NO FIXED CAP PUBLISHED`（「未公布固定上限」）；`regions` 也一邊有 Taiwan、一邊空。全庫以「可行動紀錄、共同來源 ≥3 個 URL」掃過 10 組候選，只有這一組是同一方案（其餘如同 `work-codex-go`／`plus`、`retool-education`／`retool-nonprofit`、`elements-of-ai` 兩門課都是不同方案）。
+- **使用者結果**：重複卡消失，「台灣條件適用」少一張重複（193→192），`gemini-watch` 吸收另一筆獨有內容（`regions: ["Taiwan"]`、升 Paid 最低 US$5 預付、deprecations 與 billing.md.txt 來源、AI Studio Workspace 的 Paid 資料判定），並保留 `gemini-api-free` 的 ID 與歷史供追溯。
+- **驗證**：`tests/validate.py` 的 `duplicate_of`／`duplicate_merged` 斷言通過；`tests/filters.cjs` 原本拿 `gemini-api-free` 當「開放卡片」樣本（單一 FREE 標籤、可行動），合併後它變成歷史標籤而失敗——改用 `lmstudio-bionic-free-local-no-account`（同樣單一 FREE、可行動），25 項全過。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,135 筆（S/A/B/C/D = 178/200/135/279/124，未評級 219）。
+- `node --check app.js`、`node tests/filters.cjs`（25 項 PASS）、`git diff --check` 均通過。
+- 逐筆檢查本輪 17 筆的 `verified_at` 與 `verification_scope` 同日、且每個 ID 至少一個來源 `accessed_at` 落在本批次（validator 的 per-source 規則）；沒有刷新未查核紀錄。
+- `tools/queue.py` 重算：逾期 0、7 天內到期 8（6 冷卻）、`retry` 0；`--explain` 確認 `gemini-api-free` 已退出佇列、兩筆新增在 12 小時冷卻內。
+
+### 未解證據缺口
+
+- Agora：300 分鐘是否每月重置、ToS §7「free trial 限內部示範」是否適用免費分鐘額度、Cloud Proxy 最低月費 US$500 的適用條件。
+- Notta：.edu.tw 人工審核結果與所需證明；Web 教育折扣是否自動續約。
+- CoreWeave：Free 推論 allowance 的實際 token／金額數值（文件只寫 allowance）；ARIA 限時免費的截止日與 GA 後計費起算點。
+- Tencent：1 年 vs 90 天實際生效期限；「不支援 corporate accounts」對企業戶的實際含義。
+- DigitalOcean／Secret：剩餘 50 名額；Secret 合作頁「$5,000 in credits for 1 year」標題與退款條款矛盾本輪因 Cloudflare 無法重現。
+- Imagine Cup：正式規則頁 404，台灣國別資格、年齡、團隊組成全部未核。
+- Firecrawl：優惠只剩 page metadata，是否仍會實際核給未知。
+
+### 下一輪優先（最多 5 項）
+
+1. `kaggle-solar-filament-segmentation-2026`：11/16 19:59:59Z 截止後確認狀態與是否延期（`next_review_at` 已排在 19:45）。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：11/17 11:59:59 後確認 preview 是否退役、付費版是否需先儲值。
+3. `agora-conversational-ai-300-free-minutes-rtc-10k`：查 docs 是否寫明 300 分鐘重置週期與 ToS §7 適用範圍；這是本輪新增且台灣 Unknown 的一筆。
+4. `gemini-watch`（合併後的唯一卡）：重讀 pricing 與 rate-limits，確認 17 個 Free 段落是否變動，並補上 AI Studio 個別專案額度的官方說明。
+5. `tests/validate.py` 剩下的 16 筆證據落後清單（先做 S／A 級）：`nebius-builder`（17 天）、`elevenlabs-startup-grant`、`amd-developer-credits`（16 天）、`runpod-creator-early-access`、`botpress-...`（13 天）。
+
+---
