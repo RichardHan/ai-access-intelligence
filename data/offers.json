@@ -8425,7 +8425,7 @@
     {
       "id": "ugreen-ai-nas-hackathon-2026",
       "title": "UGREEN AI NAS Hackathon：報名已截止，台灣合格居民曾可參賽、入圍免費測試一天",
-      "summary": "報名與 Round 1 提交已於 2026-11-15 11:45 pm PT（台北 11/16 15:45）截止，新報名者已無法參加；已交件者續等 11/21 入圍 email 通知（最多 30 隊）、11/22–28 指定一天遠端實機測試、決賽提交至 11/30 23:45 PT。正式規則的 Asia-Pacific 合格居住地名單明列 Taiwan，成年個人或最多 3 人隊伍，法人與利益衝突者排除。判定依據：rules 逐字載明截止時點，updates 最新仍是 3 天前的 final call、無延期或重開公告；Devpost 首頁為前端渲染，靜態文字不顯示 countdown 或 closed 字樣，故不是憑頁面狀態字判斷。截止前最後讀值：參與人數 14:41 為 2,792。",
+      "summary": "報名與 Round 1 提交已於 2026-11-15 11:45 pm PT（台北 11/16 15:45）截止，新報名者已無法參加；已交件者續等 11/21 入圍 email 通知（最多 30 隊）、11/22–28 指定一天遠端實機測試、決賽提交至 11/30 23:45 PT。正式規則的 Asia-Pacific 合格居住地名單明列 Taiwan，成年個人或最多 3 人隊伍，法人與利益衝突者排除。判定依據：rules 逐字載明截止時點，updates 最新仍是 3 天前的 final call、無延期或重開公告；Devpost 首頁為前端渲染，靜態文字不顯示 countdown 或 closed 字樣，故不是憑頁面狀態字判斷。截止前最後讀值：參與人數 14:41 為 2,792；16:01 截止後頁面轉為「This hackathon has ended」、參與人數 2,804。",
       "record_type": "watchlist",
       "status": "applications_closed",
       "verification": "Official",
@@ -8474,7 +8474,7 @@
         "台灣適用法律及稅務",
         "宣傳頁與正式規則對初賽影片的要求不一致，官方未表態（依正式規則優先）"
       ],
-      "verification_scope": "2026-11-16 15:45（Asia/Taipei）主 agent 以 curl 重讀 Devpost rules 與 updates（皆 HTTP 200）：rules 逐字「Submit these items on the Hackathon Website by Sunday, November 15, 2026 at 11:45 pm PT」；updates 最新一則為「3 days ago Final call for submissions」，無延期或重開公告；首頁靜態文字無 countdown 或 closed 字樣（前端渲染），故以規則載明的截止時點判定新報名已關閉，並保留入圍後的 11/21 通知與 11/22–28 測試期。未報名、未交件。",
+      "verification_scope": "2026-11-16 15:45（Asia/Taipei）主 agent 以 curl 重讀 Devpost rules 與 updates（皆 HTTP 200）：rules 逐字「Submit these items on the Hackathon Website by Sunday, November 15, 2026 at 11:45 pm PT」；updates 最新一則為「3 days ago Final call for submissions」，無延期或重開公告；首頁靜態文字無 countdown 或 closed 字樣（前端渲染），故以規則載明的截止時點判定新報名已關閉，並保留入圍後的 11/21 通知與 11/22–28 測試期。未報名、未交件。16:01 再以瀏覽器讀取渲染後首頁：出現「This hackathon has ended」與 Participants (2804)，Join hackathon 按鈕消失，故關閉判定另有頁面自身宣告支持，非僅依規則時點推論。",
       "sources": [
         {
           "url": "https://ugreenhackathon.devpost.com/rules",
@@ -8491,8 +8491,8 @@
         {
           "url": "https://ugreenhackathon.devpost.com/",
           "scope": "截止時間字串、參與人數、是否有關閉／延期橫幅",
-          "evidence": "2026-11-16 13:20 重讀（HTTP 200）：「Deadline: Nov 15, 2026 @ 11:45pm PST」「$ 46,000 in cash」「2771 participants」，仍有 Join hackathon；無 ended／closed／no longer 字樣。",
-          "accessed_at": "2026-11-16T13:20:34+08:00"
+          "evidence": "2026-11-16 13:20 重讀（HTTP 200）：「Deadline: Nov 15, 2026 @ 11:45pm PST」「$ 46,000 in cash」「2771 participants」，仍有 Join hackathon；無 ended／closed／no longer 字樣。2026-11-16 16:01 截止後以瀏覽器重讀渲染結果（HTTP 200）：「This hackathon has ended」「Participants (2804)」，Join hackathon 按鈕已不存在——這是官方頁面自己的結束宣告，比單純依規則截止時點判定更直接。",
+          "accessed_at": "2026-11-16T16:01:00+08:00"
         },
         {
           "url": "https://ugreenhackathon.devpost.com/updates",

@@ -4748,6 +4748,16 @@ Freebuff（25 國 allowlist，台灣未證實）。You.com、Morph、Nscale、Ru
   `cloudflare-vectorize-free-dimensions`（不在本批次）的來源 `accessed_at` 改成 2026-09-01（76 天前）再跑，
   清單由 21 增為 22 並列出該筆、PASS 仍成立——刻意做成非致命 `note:`，因為既有 21 筆要靠逐筆重讀補，不是靠改測試。
 
+### 兩個到期改判（皆非憑「已截止」字樣）
+
+- **`ugreen-ai-nas-hackathon-2026`（15:45）**：先依 rules 逐字截止時點＋updates 無延期公告判為 `applications_closed`。
+  16:01 再讀時，Devpost 首頁原始 HTML 已含「This hackathon has ended」與「Participants (2804)」，`Join hackathon` 消失——
+  官方頁面自己宣告結束，比規則時點推論更強，已補進 `evidence` 與 `verification_scope`。教訓：15:45 那次抓頁只搜了
+  `closed`／`countdown`／`Join hackathon`，沒想到 Devpost 的用字是 **ended**；換字再抓一次就命中，不必停在推論。
+- **`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）**：課程深連結（ID=166783）已導向「職前訓練網-課程查詢」
+  列表頁、不再顯示該班，配合報名窗口 115/10/2 13:00–115/11/16 16:00 判為 `applications_closed`，並依規則把
+  `review_cadence` 由 daily 改為 `monthly_or_new_signal`、`next_review_at` 推到 12/16。甄試（11/18）與錄訓結果未核。
+
 ### 來源衝突與工作經驗
 
 - **「未知」與「禁止」是兩種完全不同的答案**：HeyGen 的商用授權不是文件沒寫，而是寫在主服務條款、不在 API 文件。
@@ -4860,3 +4870,84 @@ N=1,123；R=15；A=2（2 機會）；U=1,108；attempted=0。
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（每日追蹤）：再讀 `dgservice` 餘額，見額滿或低於 1% 即改狀態與標題。
 4. `e2b-startups-20k-publicity`：同帳號體系，`Concurrent builds` 與 sandboxes 的差異要寫清楚；查 US$100 與 US$20K 是否有到期日條款（pricing／billing／startups terms）。
 5. `cht-google-ai-plus-first-year-free-2026` 與 `google-antigravity-scientists-highest-tier-six-months`：subagent 回報 11-04 中華電信擴大方案（寬頻前 6 個月、單租年約 8 折）與 Gemini 4 Carbon 加入科學家計畫，**本輪未核**；下輪讀官方頁後再更新，不憑二手轉述。
+
+## 2026-11-16 14:05–16:10（Asia/Taipei）｜N=1,125 · R=20 · A=3 · U=1,105 · attempted=0（與 15:05–16:02 的另一輪併存，見下）
+
+### 下一輪優先（最多 5 項）
+
+1. `kaggle-solar-filament-segmentation-2026`（19:59:59）：截止後改判；另確認 Important Dates 的「Nov 15, 2026, 11:59 pm CDT」是否再改（11 月美西應為 PST）。
+2. `kaggle-neurips-2026-smart-buildings-competition`：以登入的瀏覽器工作階段重取 GetCompetition API，核對 `prohibitNewEntrantsExplicitDeadline`／`teamMergerExplicitDeadline` 是否真為 2026-12-03（與 Overview 的 2027-01-03 差一個月）。本輪 API 直連被擋（403／404），只記為未重現線索。
+3. `stepfun-stepaudio3-music-gen-preview-nov8`：免費窗口 2026-11-17 11:59:59 結束；到期後重讀 pricing details 確認已改付費、preview 是否退役；免費呼叫是否需先儲值仍未解。
+4. `fireflies-free-auto-join-storage-credit-conflicts`：儲存單位 per seat vs per team 已並列，但哪一個是實際計費／限制單位未解；查 billing／admin 文件或客服說明。
+5. `augment-code-trial-thirty-thousand-credits`：免費方案是否仍存在（部落格稱可轉 Free、定價頁只有付費方案）；台灣發卡是否通過綁卡。
+
+### 併發：本輪與另一個回合同一天、同一工作樹
+
+14:05 開場時 `tools/round_lock.py status` 回「no round lock」，15:13 取得鎖。另一個回合於 15:05–16:02 在同一份 `data/*.json` 上完成 19 筆複核、2 筆新增（`dahl-inference-100m-signup-tokens`、`callmissed-free-1000-credits-payment-verification`），16:02 覆寫 `last_research_run`／`scope`／README 首段，16:03 以 `4027e78` commit（該 commit 同時包含本輪稍早寫入的資料、README、`tests/validate.py` 與政策歷史）。**因此目前 `last_research_run` 描述的是 15:05–16:02 那一輪（R=19、A=2），不是本節這一輪。**
+
+本節只記錄 14:05–16:10 這一輪自己的 20 筆複核與 3 筆新增；兩輪合計使全庫由 1,125 增至 1,130（本輪 +3、另一輪 +2），另外 2 筆（`ugreen-ai-nas-hackathon-2026`、`tw-labor-pretraining-ai-smart-application-tnnu-03`）兩輪都複核過。每筆的 `verified_at` 與 `verification_scope` 各自標明實際查閱時間（本輪多在 14:29–14:55，截止後補讀為 16:01），不互相覆蓋。教訓：`round_lock` 在對方開場後才取得時擋不住已啟動的寫入，開場若看到別的回合在同一棵樹活動，應先只讀、等它 commit，再追加（MAINTENANCE 前段已有同類紀錄）。
+
+### 基準、範圍與分工
+
+開場（14:05）：全庫 1,125 筆、可行動 1,030 筆、嚴格逾期 1 筆（`kaggle-neurips`，next_review 14:00）、7 天內到期 10 筆（5 筆冷卻中）、`retry` 桶 0 筆、24 小時未核 808 筆、12 小時內已核 204 筆。上一輪 13:05–13:35 才核完 15 筆，其 `reviewed_ids` 全部跳過。
+
+三個 subagent 皆唯讀、只回報結構化 patch，主 agent 統一改 JSON；關鍵結論（Fireflies 儲存、Resend 行銷配額、Augment 定價頁、CHT 活動頁、E2B terms、Docker／Sail／deAPI 三頁、Kaggle Overview）由主 agent 自行重讀後才寫入 `accessed_at`。
+
+- **A｜到期與高風險 10 筆**：`kaggle-neurips`、`ugreen`（15:45）、`tnnu-03`（16:00）、`kaggle-solar`（19:59:59）、`stepfun`（11/17）、`autoclaw`（11/22）、`hsinchu`（每日）、`e2b`、`cht`、`antigravity`。
+- **B｜最久未核輪替 10 筆**（11-07／11-08 核實）：fibery、augment、murf、octoparse、resend、tabstack、fireflies、granola、laminar、replicate。
+- **C｜新機會與去重**：12 個候選，3 筆納入，其餘否決或延後（見下）。
+
+### 計數
+
+本輪：N=1,125；R=20；A=3（3 機會、0 政策、0 觀察線索）；U=1,105；attempted=0。另一輪：R=19、A=2。
+
+### 會影響決策的更正
+
+- **`fireflies-free-auto-join-storage-credit-conflicts`（本輪最重要）**：原紀錄只寫「每席 400 分鐘儲存」。官方方案指南逐字「You get 400 minutes of storage per seat」，官方定價頁逐字「400 mins of storage/team」（付費層另寫 8,000 mins of storage/seat）。兩份官方文件單位不同，已把 summary／usable_duration／terms_restrictions 改為並列衝突，unknowns 新增該項；不再宣稱單一數字。
+- **`autoclaw-weekly-perk-...`（條款殘留上一期）**：`eligibility.terms_restrictions` 原寫「11/15 23:59 共同到期」，與 `expires_at` 2026-11-22T23:59 矛盾；活動頁逐字 11/16 00:00–11/22 23:59（UTC+8）、reward 於本期結束到期。已更正並在 scope 註明那是上一期 M11W2 的殘留。
+- **`augment-code-trial-thirty-thousand-credits`（來源收窄＋新衝突）**：30,000 點綁卡試用仍見於官方部落格（Last updated 2026-09-17），但定價頁與首頁全文已無「30,000」與「free plan」，只列 Standard US$20、Business US$100、Enterprise。部落格稱可轉免費方案，與定價頁衝突；已補 Business 方案並把衝突寫進 summary 與 unknowns。
+- **`cht-google-ai-plus-first-year-free-2026`（金額精度）**：11/04 新聞稿逐字確認首月／首年 0 元、寬頻前 6 個月、單租年約 8 折起、5GB 至 116/1/31、Hami Point 至 115/11/30，且「不論新舊客戶」。但 400GB 首年卡只寫「期滿恢復原價」、未印原價；NT$165 是「Google AI Plus (400GB) 單月租方案」標價（另有 400GB+i聽聽 165、400GB+防駭 189），不能逕作首年卡期滿價。2TB（330）與 5TB（650）才有明文原價。
+- **`e2b-startups-20k-publicity`（並行單位釐清）**：官方 FAQ 為「100 concurrent sandboxes」，可加購至 1,100；template 的 concurrent builds 另限 Hobby／Pro 20 個，與本計畫並行 sandboxes 不是同一項。另發現未回覆的解讀官方不一致：terms.md 稱 2–3 週未回覆即未錄取，FAQ 稱仍在審核中——兩說並存。
+- **`resend-free-transactional-agent-email`（新增權益）**：官方配額文件在 Free Account Quotas 下列「Marketing emails: unlimited emails to up to 1,000 contacts per month.」，且廣播郵件不計入交易郵件配額。
+- **`nebius-europe-compute-grants-watch`（内部矛盾）**：`taiwan` 為 No，`taiwan_note` 卻以「Unknown：」開頭。官方招募範圍逐字為 Europe，統一改為 No 並保留未列完整居住定義的缺口。
+- 截止面：UGREEN 14:16 為 2,781 人、14:41 為 2,792 人，16:01 頁面轉為「This hackathon has ended」、2,804 人（本輪補記此渲染證據，另一輪的關閉判定原本只依規則時點）；tnnu-03 13:16 為 44 人、14:41 為 45 人（名額 34），16:00 後深連結導向課程查詢頁；Kaggle 太陽磁絲 14:44 頁首仍「6 hours to go」；新竹市餘額 11:21 起六讀皆 NT$129,593(2.2%)，消耗已放緩，先前每小時推估不再成立。
+- 無實質變更但已重讀：fibery、murf、octoparse、tabstack、granola、laminar、replicate、antigravity（Gemini 4 Carbon 確為官方 2026-11-13 貼文承認的模型名，但無頁面把它連到 1 萬人計畫）。
+
+### 新增 3 筆（皆主 agent 實讀官方頁）
+
+- **`docker-agentic-platform-250-sandbox-credit`（A 級）**：2026-09-22 至 2027-01-31 23:59 PT 新註冊者一次 US$250 沙箱運算額度（取代標準 US$25），每人每帳戶一次、須綁有效信用卡、僅超額扣款、兌換後 6 個月失效；額度只抵沙箱運算，模型 API 由自備 key 的供應商另計。台灣未列名，`taiwan: Unknown`。
+- **`sail-research-free-five-monthly-credit-card`（B 級）**：官方首頁「$5 in monthly free credits」，docs 條件逐字「$5/month in free credits when you attach a payment method」；4 席、200 保留 vCPU、預付制。條款只排除制裁地區，未列台灣。**門檻是綁卡，不是免費即用。**
+- **`deapi-five-welcome-credit-30-day`（A 級）**：新帳號驗證後 US$5 促銷點數、免信用卡，自建立帳號起 30 天失效（30 天內儲值可保留），每人限一次；Basic 層「typically 1–10 RPM」；條款以馬爾他法為準，無國別清單。
+
+未納入：MARA Inference（US$5，但 `/terms`、`/legal/terms`、`/tos` 全 404，方案頁還殘留「SambaNova Cloud」字樣，合約條件無法確認）、HPC-AI（US$2，無條款頁）、VModel／Vectoree／SmarToken（官方頁無該優惠或站台不可達）、IONOS（三條官方路徑 404）、Magnific（免費層 AI 點數無法從頁面確認）。Dahl 與 CallMissed 本輪評估後未納入（Dahl 的 1 億 tokens 按官方單價僅約 US$2 且閒置 7 天即失效；CallMissed 以印度門號／WhatsApp 通道為主），另一輪已各自建檔並保留這些限制。
+
+### 本輪品質改善：`taiwan` 藥丸與 `taiwan_note` 前綴互相矛盾
+
+- **觀察到的問題**：卡片把 `taiwan` 渲染成藥丸、`eligibility.taiwan_note` 渲染成「台灣資格說明」，兩者並排。全庫掃到 1 筆自相矛盾：`nebius-europe-compute-grants-watch` 的 `taiwan` 是 `No`，說明卻以「Unknown：」開頭。`taiwan` 同時驅動 S 級判定與「台灣條件適用」篩選，所以矛盾的那一邊是說明文字，而讀者只會覺得「到底能不能用」。
+- **使用者結果**：該筆說明改以 `No：` 開頭並保留「未列完整居住／國籍定義」的缺口；藥丸與說明現在說同一件事。
+- **驗證**：`tests/validate.py` 新增斷言「`taiwan_note` 若明確以 Yes／No／Unknown 等前綴開頭，必須等於 `taiwan` 欄位」（全庫 217 筆有前綴，其餘自由敘述不強制）。以合成案例注入「taiwan=No、note=Unknown：」實測會擋下（`AssertionError: taiwan_note says 'Unknown' but the taiwan field is 'No' …`），復原後 PASS。
+
+### 來源衝突與工作經驗
+
+- **同一個數字在兩個官方頁可以有兩個單位**：Fireflies 的 400 分鐘，指南寫 per seat、定價頁寫 per team；兩頁都在線、都沒有「已更新」衝突。這種「不是數字錯，是單位錯」最難靠關鍵字比對抓到，只能兩頁都讀。
+- **定價頁可以比部落格更舊**：Augment 的 30,000 點試用只剩部落格有，定價頁反而退回純付費方案。「官方頁仍有活動」與「活動頁是唯一證據」是兩件事，紀錄要指明證據在哪一頁。
+- **首年 0 元卡的「期滿原價」不一定印在卡上**：CHT 400GB 卡只寫「期滿恢復原價」，165 是另一個單月租方案的價格。把同頁其他方案價格當成這張卡的期滿價，是很容易犯的推論錯誤。
+- **Kaggle 的 API 與 Overview 可以差一個月**：subagent 讀到 API 的 2026-12-03，但主 agent 重試被擋（403／404）。未被主 agent 重現的 API 值只寫進 unknowns 並註明「未重現」，不改機器可讀欄位——否則卡片會用一個沒人再確認過的日期排序。
+- **前端渲染的頁面不能只看 curl**：UGREEN 首頁的靜態 HTML 沒有 closed 字樣，另一輪因此只憑規則時點關閉；以瀏覽器讀渲染結果則直接看到「This hackathon has ended」。結束判定最好兩者都有。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,130 筆（S/A/B/C/D = 178/199/134/279/123，未評級 217）。
+- `node --check app.js`、`node tests/filters.cjs`（全部 PASS）、`git diff --check` 均通過。
+- `git diff` 檢查（本輪自己的變更）：新增 3 個 ID、移除 0 個；20 筆複核的 `verified_at` 與 `verification_scope` 各自標明查閱時間；沒有未列批次的時間刷新（另一輪的 19 筆屬它的批次）。
+- 本機靜態站（`python3 -m http.server` ＋ 內建瀏覽器，1280×900 與 390×844）：全庫 1,128（另一輪新增前）、台灣條件適用 194、免費方案 736、本輪更新 23（20＋3）；搜「Fireflies」1 筆且摘要顯示 per seat／per team 並列；「Docker Agentic」1 筆顯示設定費 US$0／每月費用 US$0／資格待核實；「截止日由近到遠」第一張為 UGREEN 並顯示「申請截止 2026/11/16 15:45 · 今天」；載入更多 24→48；console error 0；手機 `scrollWidth` 390＝`clientWidth` 390，無水平溢出。截圖已存但本回合無法讀圖，視覺檢查以 DOM 文字與尺寸斷言替代。
+
+### 未解證據缺口
+
+- Fireflies：儲存額度實際以 per seat 或 per team 計，未開帳戶實測。
+- Augment：是否仍有免費方案、台灣發卡是否通過綁卡。
+- Kaggle NeurIPS：API 的 2026-12-03 入賽／合隊截止是否真實；API 直連被擋，未重現。
+- Docker／Sail／deAPI：三筆的台灣受理（卡別、帳單地址、註冊地）官方都沒有寫。
+- Sail：US$5 是否每月重設或累積；US-only 20% 加價屬於哪個方案。
+- CHT：400GB 首年卡期滿後的實際月費；首年 0 元方案結束日。
+- tnnu-03：是否限失業／待業身分；學習獎勵金金額；11/18 甄試結果。
