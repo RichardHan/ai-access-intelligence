@@ -4515,3 +4515,51 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - `python3 tests/validate.py`：PASS 1,121 筆（S/A/B/C/D = 177/196/131/279/121，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（全部 PASS，含免費專區 731 筆、台灣 preset 192、S 級 177）、`git diff --check` 均通過。
 - `git diff` 檢查：`data/offers.json` 只有 17 筆 `verified_at` 變更（16 複核＋1 新增），`next_review_at` 16 筆月度＋1 筆週度，沒有無關紀錄的時間刷新；新增 ID 1 個、移除 0 個；README 與 scope 的數字對回資料。
 - 本機靜態站（`python3 -m http.server`）以 headless WebKit 實測：全庫 1,121、符合 1,121；台灣條件適用 192、免費方案 731、本輪更新 17；搜尋「智慧農業」1 筆且卡片顯示 S 級、申請截止 2026/12/15 17:00（剩 29 天）、費用說明寫自籌條件；Scribe 卡片顯示更新後的 `.edu` 限制與模組不折扣；「截止日由近到遠」排序可用；console error 0；手機 390×844 `scrollWidth` 390 無水平溢出。
+
+
+## 2026-11-16 11:05–12:16（Asia/Taipei）｜N=1,121 · R=21 · A=2 · U=1,100 · attempted=0
+
+### 下一輪優先（放在最前）
+
+1. **今日其餘截止**：`kaggle-solar-filament-segmentation-2026`（報告 12:59／平台 19:59:59）、`ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）三筆在 09:22 核過、本輪未重讀；截止後要改判 `applications_closed` 並確認是否延期（Kaggle GetCompetition API／Devpost updates／台灣就業通）。`taoyuan-ai-productivity-online-courses-115` 11/17 截止同理。
+2. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（本輪已改每日追蹤）：餘額 3 小時內由 NT$192,051（3.3%）降到 NT$129,593（2.2%）；下一次讀 `dgservice` 餘額，見額滿或低於 1% 即改狀態與標題。
+3. `aspn-youth-sports-tech-hackathon-2026` 已依官方 12:00 截止改判 `applications_closed`，但頁面沒有「已結束」字樣、報名鈕由 JS 載入；下次（11/23）確認是否補開報名或公布錄取名單。
+4. `google-ai-professional-certificate-tw-pro-3mo`：條款在 11-06 當天被回溯改寫（Wayback 08:08Z vs 10:50Z 同日兩筆存檔），行銷頁仍寫 2027-01-01；下一輪若仍衝突就維持 `terms_conflict`，不要任選一版。
+5. **兩筆未整合的輪替**：`adobe-express-k12-free-standard-250`、`kaggle-free-notebook-compute` 本輪 subagent 重讀後條件不變，但 Adobe credits FAQ 對 curl 回 403、Kaggle 以瀏覽器讀取，主 agent 未能獨立重現引文，故保留原 `verified_at`；排到時以瀏覽器重讀再改寫 scope 與來源查閱時間。
+
+### 基準、範圍與分工
+
+開場：嚴格逾期 0 筆、7 天內到期 9 筆（4 筆今日截止）、`retry` 桶 0 筆、24 小時未核 833 筆、12 小時內已核 183 筆。N=1,121。三個 subagent 並行：A 到期／衝突 7 筆（桃園、Antigravity、AOCAI、Mozilla、臺大黑客松、新竹、Google 憑證）、B 最久未核輪替 13 筆、C 新機會與去重（3 提案、8 否決）。主 agent 另行直讀新竹餘額、Google 行銷頁與條款、Wayback 兩筆存檔、satfaq 兩份公告、經濟部 AI 新秀頁與客語語料庫頁，並用 curl 對 GitHub／HuggingFace／Apple／Zed／ElevenLabs 的引文做存在性抽查。
+
+### 實質變更（21 筆複核；2 筆狀態改變）
+
+- **`hsinchu-…-subsidy-2026`**：餘額 11:21、11:27、11:35 三讀皆「$129,593(2.2%)」，較同日 08:08 的 NT$192,051（3.3%）少 NT$62,458；標題、摘要、cost_note、access_risk 與 unknowns 同步改寫，`review_cadence` 由 weekly 改 daily（每日追蹤）。仍無額滿或停止受理字樣。
+- **`google-ai-professional-certificate-tw-pro-3mo`**：用 Wayback 同網址同日 08:08Z／10:50Z 兩筆存檔證明條款期限在 2026-11-06 台北 16:08–18:50 之間由「January 1, 2027」改寫為「November 6, 2026」，`Last updated` 仍掛 July 31, 2025；台灣與美國行銷頁仍寫 2027-01-01。維持 `terms_conflict`，並記錄「2026-11-16 當日能否兌換無法從官方文字確認」。`policy-history.json` 追加 `official_term_rewritten_same_day`。
+- **`aspn-youth-sports-tech-hackathon-2026`**：12:16 截止後重讀，頁面無第二波延期、無「已結束／額滿」，改判 `applications_closed`，cadence 由 daily 改 event。
+- **`satfaq-*`（去重）**：`satfaq-ai-trial-index` 與 `satfaq-free-trial-hybrid-ai-two-thousand-points` 是同一活動的兩種資格分支（免費試用戶至 2027-03-31、Basic 以上客戶至 2026-12-31）。本輪重讀兩份公告後把 index 併入 opportunity（`duplicate_merged`＋`duplicate_of`），機會摘要改成同時涵蓋兩種資格；觀察線索減 1，總數不變。
+- **其餘 16 筆**：條件不變，但都逐字重讀並改寫 scope 與來源查閱時間：桃園（11/17 班仍可報名、Teams 連結未上架、報名列表 11/20 是「公告日期」欄）、AOCAI（11/26 台北班報名至 11/19、總覽 23 班）、Mozilla（11/20 23:59 PST 不延期、7 席含 3 席 anchor、FAQ 對 curl 回 403 未改 URL）、臺大黑客松（11/23、限一般生）、Antigravity（11/18 移除三款第三方模型、Hydrogen 免費欄與部落格仍衝突）、GitHub Copilot Free、HuggingFace ZeroGPU、Vercel Gateway、Modal Starter、Apple Siri 預覽、Zed 學生、Gemini for Education、ElevenLabs 非營利、Pitch、Xtensio、Mindee。
+
+### 新增 2 筆（皆實讀官方頁）
+
+- **`moea-ai-xinxiu-training-stipend-116`**（S）：經濟部產發署 AI 新秀計畫，4 個月培訓（≥300 小時）＋4 個月企業實習，學習獎勵金培訓期 NT$2 萬／月、實習期 NT$3 萬／月，合計上限 NT$20 萬；限副學士以上非在職者（在職勞工、自營作業者、公司負責人不符），一生限 1 次。培訓單位受理已於 115-07-31 截止，學員須經各專班招生與遴選，官方未列名額與截止日。
+- **`hakka-tw-speech-corpus-license`**（S）：客委會臺灣客語語音資料庫，四縣／海陸腔各 300 小時辨識＋60 小時合成語料，僅授權「特定單位或機構」作 AI 開發，不得再轉授權／販售／商業轉讓，成果須標註來源；官網未列費用，故 `setup_cost_usd` 留 null。
+- 未納入：e等公務園 115 年 AI 組裝課程（與既有 `taiwan-hrd-free-ai-introduction-2026` 同平台同質，避免重複）、Oumi（已收錄）、Sora 免費額度（已下線）、Atria Dawn（503，證據不足）、勞動部高屏澎東第 02 期（已截止）、衛福部／教育部 116 年度（個人不可行或已截止）。
+
+### 本輪品質改善：合併重複收錄的同一活動
+
+- 觀察到的問題：`satfaq-ai-trial-index`（觀察線索）與 `satfaq-free-trial-hybrid-ai-two-thousand-points`（福利研究）自 11-06 起並存，兩筆都描述 2,000 點混合 AI 機器人試用、引用同一組官方公告，搜尋「satfaq」會看到兩張卡；11-14 的輪次又把 index 擴寫成同時涵蓋兩種資格，重疊更高。
+- 使用者結果：同一活動只出現在一張可採取行動的卡片；index 保留為 `duplicate_merged` 供追溯，觀察線索數由 167 降為 166（總數 1,121 不變），免費方案的 731 筆與台灣 preset 不受影響。
+- 驗證：`tests/validate.py`（duplicate_of 必須指向存在的 ID、不得串鏈）、`tests/filters.cjs`（機會專區排除 merged 紀錄）與瀏覽器實測（搜尋 satfaq 只剩一張可領卡＋一張歷史標籤卡）。
+
+### 來源衝突與工作經驗
+
+- **同日 Wayback 存檔可以定位「何時被改寫」**：Google One 條款 08:08Z 與 10:50Z 兩筆存檔逐字不同，把「不知道哪版有效」變成「條款在 11-06 當天被回溯改寫、行銷頁未同步」。比只比較現行頁與舊快照更能回答「現在能不能用」。
+- **subagent 的 URL 修正建議要用自己的抓取驗證**：A 組回報 Mozilla FAQ 舊路徑 404、應改為 `/call-for-proposals/faqs/`，但主 agent 對兩個路徑都拿到 403（Cloudflare），且紀錄本來就指向正確路徑；未採用該修正，改在 scope 註明 403 與未改 URL。
+- **curl 403 不等於頁面內容改變**：Adobe credits FAQ 對 curl 回 403，subagent 的引文無法用 curl 重現；本輪不更新該筆（避免替沒重讀的內容背書），留給下一輪以瀏覽器重讀。
+- **edit 大量 JSON 的三個實際陷阱**（本輪各踩一次並修好）：插入新 key 會與檔案後段同名 key 形成重複鍵（`verification_scope`，Python `json` 取最後一個，驗證器不會報）；替換字串前緣會把殘留尾巴留在引號外；只改 `verified_at` 不改 scope／來源會讓驗證器擋下。收尾前用 `object_pairs_hook` 掃重複鍵、用 `json.load` 掃語法、用「今天核實的每筆都要有 scope 日期＋至少一個當日來源」自查。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,123 筆（S/A/B/C/D = 178/196/131/279/122，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（全部 PASS；核實範圍 flags 18 筆早於 verified_at）、`git diff --check` 均通過。
+- `git diff` 檢查：`data/offers.json` 21 筆 `verified_at` 變更（含 2 筆新增）、2 筆 status 變更（`duplicate_merged`、`applications_closed`）、1 筆 cadence 改 daily；新增 ID 2 個、移除 0 個；README／scope／last_research_run 數字一致（1,123／21／2／1,100）。
+- 本機靜態站以 headless WebKit 實測：全庫 1,123；台灣條件適用 193、免費方案 731、本輪更新 23；搜尋「客語」2 筆且新卡顯示 S 級；新竹卡標題顯示 2.2%；ASPN 卡標題顯示已於 12:00 截止；Google 憑證卡顯示 Wayback 改寫時點；「截止日由近到遠」可用；載入更多 24→48；console error 0；手機 390×844 `scrollWidth` 390 無水平溢出。
