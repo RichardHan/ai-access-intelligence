@@ -531,7 +531,9 @@ assert(closedTags.children[0].className.includes('tag-closed'),'closed tag must 
 assert(closedTags.children[0].textContent.includes('優惠已到期'),'closed tag must name the status');
 assert(closedTags.children[0].textContent.includes('原分類'),'closed tag must keep the historical categories');
 assert(!closedTags.children[0].textContent.startsWith('免費機會'),'closed card must not open with a claimable tag');
-const openCard=ctx.createCard(d.offers.find(o=>o.id==='gemini-api-free'));
+// 樣本改用 lmstudio-bionic-free-local-no-account（單一 FREE 分類、可行動）：原本的 gemini-api-free
+// 在 2026-11-16 併入 gemini-watch（status=duplicate_merged），卡片已改為歷史標籤，不能再當「開放卡片」樣本。
+const openCard=ctx.createCard(d.offers.find(o=>o.id==='lmstudio-bionic-free-local-no-account'));
 const openTags=openCard.children.find(n=>n.className==='card-tags');
 assert.strictEqual(openTags.children.length,1,'open card keeps its category tags');
 assert.strictEqual(openTags.children[0].textContent,'免費機會','open card must keep the positive category tag');

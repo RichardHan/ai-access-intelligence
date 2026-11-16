@@ -32147,5 +32147,116 @@
       "https://v0.app/students"
     ],
     "recorded_at": "2026-11-16T16:54:00+08:00"
+  },
+  {
+    "record_id": "gemini-api-free",
+    "change_type": "duplicate_merged",
+    "summary": "與 gemini-watch 為同一官方免費層：兩筆同日（2026-10-23 10:40／10:42）建立，來源集合為同一組 ai.google.dev 文件（可用地區列 Taiwan、Free Tier 輸入輸出 $0、RPD 以 project 計並於 Pacific 午夜重置），但卡片分開顯示且 quota_classification 一邊 UNKNOWN、一邊 NO FIXED CAP PUBLISHED。已依「併入較早 ID」慣例標為 duplicate_merged、duplicate_of=gemini-watch，並把本筆獨有內容（Taiwan 在 regions、付費升 Paid 最低 US$5 預付、deprecations 與 billing.md.txt 來源、AI Studio Workspace 的 Paid 資料判定）移入 gemini-watch。",
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://ai.google.dev/gemini-api/docs/available-regions"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "notta-education-half-price-pro-business",
+    "change_type": "price_correction_and_domain_gap",
+    "summary": "Pro 年繳原價由舊紀錄的 US$99 更正為官方現行 US$97.99（教育價 US$48.99 不變）；官方教育文章標示 Updated November 02, 2026。另確認自助驗證網域清單（.edu、.edu.、.ac. 及各國名校）不含任何 .tw 網域，台灣學校須人工審核；舊紀錄引用的「月額依最初購買日與時間重置」已不在現行文章，改列未知。",
+    "sources": [
+      "https://support.notta.ai/hc/en-us/articles/17418832708251-How-to-apply-for-Notta-educational-discount",
+      "https://www.notta.ai/en/pricing"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "coreweave-forge-free-pricing-transition",
+    "change_type": "error_code_and_billing_model_corrected",
+    "summary": "舊紀錄寫「超額回 429」有誤：官方 usage-limits 逐字「When your organization reaches its cap, Inference requests return a `402` error.」，429 是並發上限（Concurrency limit reached）。同頁也不再出現「付費推論須預付」，改為 Free／Academic 需先啟用 PAYG、其後按月計費；Free 預設消費上限 US$100/月不變。",
+    "sources": [
+      "https://docs.coreweave.com/products/inference/serverless/usage-limits.md"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "retool-education-monthly-discount",
+    "change_type": "official_conflict_recorded",
+    "summary": "新增官方矛盾：retool.com/pricing 的 FAQ 稱學生／非營利優惠「apply to cloud-hosted and self-hosted」，docs 折扣方案頁則只給月繳 Team／Business（自架僅 Enterprise，而 Enterprise 被排除）。AI credits 兩份官方數字仍不同（docs 750／1,500、pricing 1,000／3,000），FAQ 只說 base credits 永久、bonus 可能變動，未給拆分；Agents 按小時計價且不動用點數池。",
+    "sources": [
+      "https://retool.com/pricing",
+      "https://docs.retool.com/support/discount-programs",
+      "https://docs.retool.com/support/billing-usage/ai-credits"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "tencent-tokenhub-free-trial",
+    "change_type": "eligibility_restriction_added",
+    "summary": "國際站註冊文件逐字新增確認：「Tencent Cloud does not support virtual cards or gift cards, and it does not support binding corporate accounts.」對企業申請者影響大，已寫入 billing_country 與 unknowns。1 年 vs 90 天效期衝突、共池與每模型 1M 並存、每模型 US$10 凍結與活動至 2026-12-31 均未變。",
+    "sources": [
+      "https://intl.cloud.tencent.com/document/product/378/17985",
+      "https://intl.cloud.tencent.com/document/product/1300/80423"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "digitalocean-secret-ai-startup-100-2026",
+    "change_type": "cost_prerequisite_recorded",
+    "summary": "卡片原本只寫「每月費用 未列金額」，看不出必須先買 Secret Premium（US$149／年或 US$399 一次付），而換得的 DO 點數僅 US$100、90 天到期——以年費計淨成本約 US$49 起，不是零成本。已補 cost_note 讓卡片正面顯示費用說明；DO 條款（Last Updated 2026-10-14）的窗口、50 名、僅新帳戶、排除 pass-through 均重現。Secret 合作頁的「$5,000 in credits for 1 year」標題與退款條款矛盾本輪因 Cloudflare 無法重現，改列未知。",
+    "sources": [
+      "https://www.digitalocean.com/legal/promotional-offer-100-in-digitalocean-credits-for-50-ai-startups-on-secret",
+      "https://www.joinsecret.com/pricing"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "google-buildhybridai-2026-firebase-ai-logic",
+    "change_type": "deadline_precision",
+    "summary": "deadline_at 由只有日期 2026-12-01 細化為 2026-12-01T06:00:00+08:00：Devpost 賽事頁與 Official Rules 皆逐字「Nov 30, 2026 @ 2:00pm PST」。資格逐字「(or at least twenty years old in Taiwan)」與排除名單未含台灣同步重現；US$30,000 獎金結構不變。",
+    "sources": [
+      "https://firebasehybridaihackathon.devpost.com/",
+      "https://firebasehybridaihackathon.devpost.com/rules"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "rime-starter-fifty-model-pool",
+    "change_type": "citation_corrected",
+    "summary": "Free 方案禁送 Caller 音訊／PHI／第三人個資的條號由舊紀錄的 §3.2 更正為現行 §6.3（Training on Customer Data），條文內容與 real calls 行銷衝突不變；另確認 §1 限定服務僅供商業用途、非消費者，§7.4「keep a valid payment method on file」與定價頁免卡並存。STT 的「Free until Nov 19」屬另一筆紀錄 rime-stt-nov19-free-window。",
+    "sources": [
+      "https://www.rime.ai/terms",
+      "https://www.rime.ai/pricing"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "firecrawl-startups-annual-double-credits",
+    "change_type": "evidence_scope_narrowed",
+    "summary": "年繳雙倍月額（2x monthly credits for a year）與資格（<5 年、<US$10M、<50 人）現在只出現在 /startups 頁面的 metadata（meta／og description），正文已改成索取資料的 Slack Connect 表單，不再公開優惠內容與資格。優惠本身未被撤銷，但可讀證據變薄，已寫入 summary 與 unknowns；Standard 100,000 credits/月、$83/月年繳（$990/年）不變。",
+    "sources": [
+      "https://www.firecrawl.dev/startups",
+      "https://www.firecrawl.dev/pricing"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "agora-conversational-ai-300-free-minutes-rtc-10k",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增：Agora Conversational AI Engine US$0.10／分鐘、前 300 分鐘免費（單價內含指定 ASR／LLM／TTS，BYOK 不折價），計費文件說明每月結算先扣免費額度；同帳戶 RTC 每月 10,000 合併分鐘免費。ToS 排除古巴／伊朗／北韓／蘇丹／敘利亞並要求 18 歲，未列台灣；但 ToS 第 7 條把 free trial 限於內部示範，是否適用免費分鐘額度未寫明。",
+    "sources": [
+      "https://www.agora.io/en/pricing/agora-conversational-ai-platform",
+      "https://www.agora.io/en/pricing/",
+      "https://docs.agora.io/en/ai/reference/pricing",
+      "https://www.agora.io/en/terms-of-service/"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "imagine-cup-2027-microsoft-for-startups",
+    "change_type": "new_watchlist_baseline",
+    "summary": "新增觀察線索：Imagine Cup 2027 由 Microsoft for Startups 主營運，冠軍 US$250,000 現金＋US$1,000,000 credits、Top Student Startup US$25,000＋US$250,000 credits，報名截止 2027-02-28。正式規則頁三條路徑皆 302 到 /Error/Page_404，國別與年齡資格無法確認，因此列 watchlist 而非可領機會。",
+    "sources": [
+      "https://imaginecup.microsoft.com/en-us"
+    ],
+    "recorded_at": "2026-11-16T17:35:00+08:00"
   }
 ]

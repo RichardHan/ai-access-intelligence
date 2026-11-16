@@ -4,9 +4,9 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,133 筆**（915 項機會、50 項政策、168 筆觀察線索），更新時間 **2026-11-16 16:54 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **15 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **1,115 筆**既有紀錄未完成本輪複核。最影響判讀的兩筆：`kaggle-neurips-2026-smart-buildings-competition` 的平台 API 終於以正確 slug 重現（HTTP 200），證實「入賽／組隊截止 2026-12-03」與 Overview 的 2027-01-03 是同一時間並存的兩份官方資料、不是舊快取；`notion-business-trial-standard-select-credits` 的「30 天試用」沒有官方依據，官方寫「Most trials run for 14 or 30 days, depending on the offer」。另修正 v0 學生方案漏掉的 US$20／月金額，並把 76 個來源層的 `verified_at` 併入卡片唯一會顯示的 `accessed_at`。
+資料集目前有 **1,135 筆**（916 項機會、50 項政策、169 筆觀察線索），更新時間 **2026-11-16 18:12 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史記錄）。本輪成功局部複核 **17 筆**既有案例，新增機會 **1 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **1,116 筆**既有紀錄未完成本輪複核。最影響判讀的三件事：`coreweave-forge-free-pricing-transition` 原本寫「超額回 429」，官方文件其實是達到消費上限回 **402**、429 只代表並發超限，且已不再要求付費推論預付；`notta-education-half-price-pro-business` 的 Pro 原價是 **US$97.99** 不是 99，且自助驗證網域清單**沒有任何 .tw**；同日建立的 `gemini-api-free` 與 `gemini-watch` 其實是同一組官方來源的同一個免費層，已合併為一筆（原本一張卡寫「用量未核實」、另一張寫「未公布固定上限」）。另補上 `digitalocean-secret-ai-startup-100-2026` 的必要成本：要先買 Secret 會員 US$149／年才拿得到 US$100 點數，淨成本為正。
 
-同日 14:05–16:10（Asia/Taipei）另有一輪在同一工作樹完成 **20 筆**局部複核與 **3 筆**新增（`docker-agentic-platform-250-sandbox-credit`、`sail-research-free-five-monthly-credit-card`、`deapi-five-welcome-credit-30-day`）；那 20 筆的 `verified_at` 各自標在 14:29–15:55，未併入上列 19 筆批次數字。兩輪合計使全庫由 1,125 增至 1,130，逐輪範圍見 [MAINTENANCE.md](MAINTENANCE.md)。
+同日 14:05–16:10 與 16:05–16:54（Asia/Taipei）另兩輪在同一工作樹分別完成 **20 筆**與 **15 筆**局部複核、各 **3 筆**新增；它們的 `verified_at` 各自標在 14:29–15:55 與 16:53，未併入本輪 17 筆。三輪合計使全庫由 1,125 增至 1,135，逐輪範圍見 [MAINTENANCE.md](MAINTENANCE.md)。
 
 ## 使用方式
 
