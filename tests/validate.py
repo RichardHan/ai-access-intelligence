@@ -327,6 +327,18 @@ for o in d['offers']:
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
   assert isinstance(s.get('evidence'), str) and s['evidence'].strip(), f'missing or empty source evidence in {o["id"]}'
+ # 截斷的網址看起來就像同一份文件，只是少了尾段：卡片照樣把它渲染成可點的來源，讀者點進去卻是 404，
+  # 而 evidence 裡引用的字句其實來自完整的那一份。2026-11-16 的 linkcheck 就在
+  # taiwan-industry-talent-investment-ai-courses-2026 抓到一筆：Download.ashx?u=…19c43463（404）
+  # 與同一附件的完整連結並存，前者是後者的前綴。只對同一支 Download.ashx?u= 端點做前綴比對，
+  # 避免誤傷 /docs 與 /docs/pricing 這類合法的父子路徑（全庫有 266 組這種前綴關係）。
+ _urls=[s.get('url','') for s in o.get('sources',[])]
+ for _a in _urls:
+  if 'Download.ashx?u=' not in _a: continue
+  for _b in _urls:
+   assert not (_b != _a and _b.startswith(_a)), (
+    f'truncated source URL in {o["id"]}: {_a} is a prefix of {_b}; point the source at the full attachment '
+    '(the card renders the short URL as a link that returns 404)')
  if o.get('verified_at') and o.get('next_review_at'):assert o['next_review_at']>=o['verified_at'], f'next_review_at precedes verified_at in {o["id"]}'
  if o.get('review_cadence') is not None:assert o['review_cadence'] in {'daily','monthly','weekly','biweekly','on_new_signal','monthly_or_new_signal','event'}, f'invalid review_cadence in {o["id"]}: {o.get("review_cadence")}'
  # A closed offer cannot be acted on daily; daily cadence would re-queue it every round.

@@ -4649,3 +4649,78 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（每日追蹤）：再讀 `dgservice` 餘額（12:16 為 2.2%／NT$129,593），見額滿或低於 1% 即改狀態與標題。
 4. `e2b-startups-20k-publicity`：同一個 E2B 帳號體系，`Concurrent builds` 與併發的差異也要在該筆寫清楚；另查 US$100 與新創 US$20K 額度是否有到期日條款（pricing／billing／startups terms）。
 5. `google-ai-professional-certificate-tw-pro-3mo`（11/17）：條款 11-06 已過、行銷頁仍寫 2027-01-01；確認是否改版或下架，仍衝突就維持 `terms_conflict`。
+
+---
+
+## 2026-11-16 13:05–13:35（Asia/Taipei）｜N=1,123 · R=15 · A=2 · U=1,108 · attempted=0
+
+### 基準、範圍與分工
+
+開場（13:05，Asia/Taipei）：嚴格逾期 0 筆、7 天內到期 10 筆（5 筆冷卻中）、`retry` 桶 0 筆、24 小時未核 815 筆、12 小時內已核 203 筆。上一輪 12:11–12:48 才核完 8 筆，其 `reviewed_ids` 全部跳過；佇列下一個到期點是 14:00，因此本輪不重查熱門項目，改做兩塊：
+
+- **A｜到期與證據缺口 7 筆**：今日 16:00 截止的臺南大學職訓班、15:45 截止的 UGREEN 黑客松、每日追蹤的新竹市補助、明怡 NPO 獎助與數發部培力（無新梯次）、astamuse 與 DeepInfra 兩筆 404 歷史活動。
+- **B｜台灣 S 級教育／非營利／新創 8 筆**（11-08 核實、8 天未動）：Adobe Express K–12、Google Workspace 非營利、OpenAI 研究者、AWS 非營利、ProWritingAid、Temporal 新創、JetBrains Junie Lite、台智雲創櫃啟航。
+- **C｜新機會與去重**：4 個提案、10 個否決（Sora 已停用、Cursor 定價頁內容不符、OpenTyphoon／Gonka／Claude for Startups 重複、CapCut 免費版不含 AI 額度、Vidu 點數頁 JS 載入取不到數字…）。
+
+三個 subagent 只讀不寫，主 agent 統一改 JSON；關鍵來源（Google 比較表、OpenAI FAQ、Temporal pricing、Junie 文件、TechSoup 三頁、台智雲、WDA 附件）由主 agent 自行重讀並以自己讀取的時間寫入 `accessed_at`。
+
+### 計數
+
+N=1,123；R=15；A=2（2 機會）；U=1,108；attempted=0。
+
+### 會影響決策的更正
+
+- **`google-workspace-nonprofit-free-ai`（額度下修，最重要）**：Deep Research 由紀錄中的「每月 5 份」更正為官方比較表逐行的「**1 report per 4 hours**」。5 reports per 4 hours 是 Business Standard 欄，不是非營利免費欄。同頁 Vids AI 的限時註腳仍是「at least through May 31, 2026」，該日已過而頁面未更新，列為缺口、不推定現行仍含。公告頁改稱「Gemini Notebook」，比較表仍列 NotebookLM，兩種寫法並存。
+- **`openai-researcher-access-thousand-year`（地區差異）**：FAQ 新增「For Japanese users, if the grant date is after November 13, 2026 then credits are only valid for a period of 180 days.」只點名日本；台灣仍在支援國家清單且未列名，維持 12 個月，不推論為全球縮短。
+- **`temporal-startup-six-k-one-year-active-funded`（矛盾釐清）**：pricing.md 同頁寫「No commitment required to get started」與「A credit card is required to sign up for Temporal Cloud」，兩者不衝突（無最低承諾 ≠ 免綁卡）；新帳戶另有 US$150／90 天額度。原 `unknowns` 的矛盾項改為「US$6,000 與 US$150 是否可疊加」。
+- **`jetbrains-junie-lite-free-model-tier`（適用範圍）**：官方文件逐字「Junie Lite is not available inside JetBrains AI Assistant」，僅 JetBrains Air 與 Junie CLI；推論只在 JetBrains 基礎設施、程式碼不用於訓練。文件頁尾更新為 13 November 2026。
+- **`aws-nonprofit-techsoup-budget-tiers`（措辭更正）**：原寫「三個商品頁均以正文明列臺灣」；實際只有小型（node/7472）與大型（node/9325）寫「臺灣合格的非營利組織」，中型（node/9324）同句未寫臺灣。金額、行政費、預算門檻未變。
+- **`tw-labor-pretraining-ai-smart-application-tnnu-03`**：13:09 讀值 44 人／名額 34（09:22 為 40），頁面仍無額滿或停止報名；補記錄訓依甄選成績名次（筆試 50%、口試 50%），口試取預訓人數 2 倍（68 人）。
+- **`hsinchu-city-ai-youth-digital-tool-subsidy-2026`**：11:21、11:27、11:35、13:09、13:16 五讀同為「$129,593(2.2%)」，1 小時 41 分未再變動；受理至 11/30 或經費用罄，未見額滿公告。
+- **`twai-aiga-startup-investment`**：頁面 `dateModified` 為 2025-11-20、`datePublished` 2025-07-17，2026 年無更新；全頁無截止日、梯次或名額，維持 `application_based`，不升為 active。
+- 其餘 7 筆（UGREEN 2,771 人、明怡、數發部、astamuse、DeepInfra、Adobe、ProWritingAid）無實質變更，逐字重讀後只更新來源查閱時間與範圍。
+
+### 新增 2 筆（皆實讀官方頁）
+
+- **`gemini-app-free-compute-limits-tw`（S）**：消費端 Gemini Apps 免費層，本庫過去只收 API／教育／企業與電信捆綁，缺這一類。官方逐字「Your limit refreshes every 5 hours until you reach your weekly limit.」「Without an AI plan | Standard limits」「Without an AI plan | 32k tokens」；功能表在免費欄對 Nano Banana 2 圖像生成、音樂生成與 Deep Research 有勾，影片生成、Nano Banana Pro 重繪、Tasks in Gemini、Daily brief 無勾；國家清單含 Taiwan。免費層無費用，但升級入口導向付費方案。
+- **`dreamina-free-daily-credits-regional`（B）**：CapCut 體系 Dreamina，官方逐字「US free accounts receive 120 credits per day, while daily allowances vary in other regions.」「daily credits expire at the end of the day.」台灣每日點數未公布，`taiwan: Unknown`；免費輸出可能帶浮水印，去浮水印屬付費。
+
+未納入：Higgsfield（免費方案無任何點數，屬扣款風險警示而非福利）、WPS Office 繁中（AI 權益只標「有限」、價格 HTML 未渲染，證據不足）、Vidu（方案卡 JS 載入，數字取不到）。
+
+### 本輪品質改善：來源網址截斷
+
+- **觀察到的問題**：`tools/linkcheck.py` 全掃（3,181 個 URL）列出 11 筆 dead，其中 `taiwan-industry-talent-investment-ai-courses-2026` 的「115 年度下半年核定課程明細表」來源存成 `Download.ashx?u=…19c43463` 的**截斷前綴**（GET 404），而同一筆的 `evidence` 引用的字句其實來自完整 PDF。卡片仍把短網址渲染成可點連結，讀者點進去是 404；`evidence` 看起來有憑有據，所以靠「來源有沒有寫」檢查不出來。
+- **使用者結果**：課程明細表來源改指官方公告頁所列完整附件（`e0e6382e…pdf`），重新下載為 HTTP 200、application/pdf、2,038,833 bytes、99 頁，原引文「廣告工程 AI 數位經營實務班 45 24 $7,330…」可在表內逐字找到；卡片的三個附件連結現在都是完整網址。
+- **驗證**：`tests/validate.py` 新增斷言「同一 `Download.ashx?u=` 端點的來源網址不得互為前綴」。以注入截斷網址的合成案例實測會擋下（`AssertionError: truncated source URL…`），復原後 PASS。只對 `Download.ashx?u=` 比對，避免誤傷 `/docs` 與 `/docs/pricing` 這類合法的父子路徑（全庫有 266 組前綴關係）。
+
+### 來源衝突與工作經驗
+
+- **同一頁的兩個欄位要一起讀**：Google 非營利的錯不是「頁面沒寫」，而是把 Business Standard 欄的 5/4h 讀成非營利欄的額度。此後遇到「免費欄 vs 付費欄」的比較表，先確認每一列的欄序，再抄數字。
+- **地區條款只點名一國時，不要外推**：OpenAI 的 180 天只寫日本；「未點名台灣」不等於「台灣也縮短」，也不等於「台灣排除」。
+- **404 已記錄，不代表來源正確**：WDA 那筆的 `evidence` 早就寫了「nws.wda.gov.tw 仍 404」，但來源網址本身是截斷的，卡片照樣給出壞連結。死連結清單要回頭對「這一筆的網址是否完整」，不只看「有沒有註記」。
+- **subagent 的引文要用自己的抓取重現**：Adobe、OpenAI、TechSoup 對 curl 直連回 403／Incapsula，改 `r.jina.ai` 後成功；主 agent 逐一重讀後才寫入 `accessed_at`，沒有沿用 subagent 的時間。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,125 筆（S/A/B/C/D = 179/196/132/279/122，未評級 217）。
+- `node --check app.js`、`node tests/filters.cjs`（全部 PASS）、`git diff --check` 均通過。
+- `git diff` 檢查：新增 2 個 ID、移除 0 個；變更 16 筆（15 筆複核＋1 筆來源修復），沒有未列批次的 `verified_at` 刷新；README／scope／`last_research_run` 數字一致（1,125／15／2／1,108）。
+- 本機靜態站（`python3 -m http.server` ＋ Chromium，1280×900 與 390×844）：全庫 1,125、台灣條件適用 216、免費方案 733、本輪更新 15＋新增 2；搜「Gemini 免費版」1 筆（S 級，摘要顯示每 5 小時刷新與 32k）、「Dreamina」1 筆（B 級）、「每4小時」命中 Google Workspace 卡（顯示 1 report per 4 hours）；產業人才投資方案卡片的三個附件連結皆為完整網址；「截止日由近到遠」第一張為 UGREEN（15:45）；載入更多 24→48；console error 0；手機 `scrollWidth` 390＝`clientWidth` 390，無水平溢出。
+
+### 未解證據缺口
+
+- Gemini 免費層：實際生成張數與對話次數、台灣年齡門檻（13 或 18）、Deep Research 是否常態可用、Gemini 4 Hydrogen 是否納入免費自動選模。
+- Dreamina：台灣每日點數與重置時區、是否需付款方式、免費層商用授權。
+- Google 非營利：Vids AI 在 2026-05-31 後是否續供，官方頁未更新。
+- OpenAI：日本 180 天條款是否擴及台灣。
+- 新竹市補助：餘額停在同值 1.5 小時，無法判斷是暫無新案或系統計數停止；距用罄僅 NT$129,593。
+- 台智雲：2026 年是否續辦無公告可證；申請表需登入，未確認收件。
+- DeepInfra：US$20 活動的申領期限、credits 效期與台灣資格在 2026 年已無官方文字可查。
+
+### 下一輪優先（最多 5 項）
+
+1. `ugreen-ai-nas-hackathon-2026`（15:45）與 `tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00）：截止後改判 `applications_closed`；來源 Devpost updates、台灣就業通。
+2. `kaggle-solar-filament-segmentation-2026`（19:59:59）：截止後改判；另確認 Important Dates 的 CDT／PST 寫法是否再改。來源 Kaggle GetCompetition API＋Overview。
+3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（每日追蹤）：再讀 `dgservice` 餘額，見額滿或低於 1% 即改狀態與標題。
+4. `e2b-startups-20k-publicity`：同帳號體系，`Concurrent builds` 與 sandboxes 的差異要寫清楚；查 US$100 與 US$20K 是否有到期日條款（pricing／billing／startups terms）。
+5. `cht-google-ai-plus-first-year-free-2026` 與 `google-antigravity-scientists-highest-tier-six-months`：subagent 回報 11-04 中華電信擴大方案（寬頻前 6 個月、單租年約 8 折）與 Gemini 4 Carbon 加入科學家計畫，**本輪未核**；下輪讀官方頁後再更新，不憑二手轉述。
