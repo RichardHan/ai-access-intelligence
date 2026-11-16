@@ -31969,5 +31969,132 @@
       "https://nws.wda.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9yZWxmaWxlLzEwMjk0LzE5MjMzL2UwZTYzODJlLTQ3YmQtNDRmOS04ZTE2LTJiYWM0MjdjYjI2Zi5wZGY%3d&n=MTE15bm05bqm5LiL5Y2K5bm055Si5qWt5Lq65omN5oqV6LOH6KiI55Wr5qC45a6a6Kqy56iL5piO57Sw6KGoLeS6lOWIhue7si5wZGY%3d"
     ],
     "recorded_at": "2026-11-16T13:18:43+08:00"
+  },
+  {
+    "record_id": "fireflies-free-auto-join-storage-credit-conflicts",
+    "change_type": "storage_unit_conflict_recorded",
+    "summary": "Free 儲存額度單位官方兩處不一致：方案指南逐字「You get 400 minutes of storage per seat」，官方定價頁逐字「400 mins of storage/team」。原紀錄只寫每席 400 分鐘，已改為並列兩說；付費方案頁另寫 8,000 mins of storage/seat。",
+    "sources": [
+      "https://guide.fireflies.ai/articles/4027724828-learn-about-the-fireflies-free-plan",
+      "https://fireflies.ai/pricing"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+    "change_type": "stale_previous_window_expiry_corrected",
+    "summary": "本期 M11W3 活動期 2026-11-16 00:00 至 11-22 23:59（UTC+8），獎勵於本期結束到期；紀錄的 eligibility.terms_restrictions 仍殘留上一期 M11W2 的「11/15 23:59 到期」字樣，與 expires_at 2026-11-22T23:59 矛盾，已更正。",
+    "sources": [
+      "https://autoclaw.z.ai/blog/news/M11W3/"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "augment-code-trial-thirty-thousand-credits",
+    "change_type": "trial_claim_source_narrowed",
+    "summary": "30,000 點綁卡試用仍見於官方部落格（Last updated 2026-09-17），但定價頁與首頁全文已無「30,000」或「free plan」字樣，定價頁僅列 Standard US$20、Business US$100 與 Enterprise；部落格稱試用後可轉免費方案，與定價頁衝突。新增 Business 方案與此衝突為待解項目。",
+    "sources": [
+      "https://www.augmentcode.com/blog/our-new-credit-based-plans-are-now-live",
+      "https://www.augmentcode.com/pricing"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "cht-google-ai-plus-first-year-free-2026",
+    "change_type": "renewal_price_precision_corrected",
+    "summary": "2026-11-04 新聞稿逐字確認「申辦精采5G方案可享Google AI Plus 服務首月或首年免付費體驗，指定寬頻方案享前6個月免付費體驗」「不論新舊客戶」。但 400GB 首年 0 元卡只寫「期滿恢復原價」，未印原價數字；NT$165/月是 400GB 單月租方案標價，不能逕作首年卡期滿價（2TB 為 330、5TB 為 650 才有明文原價）。",
+    "sources": [
+      "https://www.cht.com.tw/zh-tw/home/cht/messages/2026/1104-1520",
+      "https://www.cht.com.tw/home/campaign/googleone/index.html"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "e2b-startups-20k-publicity",
+    "change_type": "concurrency_unit_and_reply_terms_clarified",
+    "summary": "官方 FAQ：Pro 層級「sessions up to 24 hours, 100 concurrent sandboxes, custom sandbox CPU and RAM」，並行可加購至 1,100；template 的 concurrent builds 另限 Hobby／Pro 20 個，與本計畫的並行 sandboxes 非同一項。另發現未回覆的解讀官方不一致：terms.md 稱 2–3 週未回覆即未錄取，startups FAQ 稱仍在審核中。",
+    "sources": [
+      "https://e2b.dev/startups",
+      "https://e2b.dev/startups/terms.md",
+      "https://docs.e2b.dev/faq/template-limit"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "nebius-europe-compute-grants-watch",
+    "change_type": "taiwan_note_prefix_corrected",
+    "summary": "taiwan 欄位為 No，但 taiwan_note 原以「Unknown：」開頭，同一張卡一邊寫台灣不適用、一邊寫未確認。官方招募範圍逐字為 Europe，故統一為 No，並保留「未列完整居住／國籍定義」的缺口；validate.py 新增前綴與 taiwan 欄位一致性檢查。",
+    "sources": [
+      "https://dev.nebius.com/builders-compute-grants",
+      "https://dev.nebius.com/builders"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "resend-free-transactional-agent-email",
+    "change_type": "marketing_quota_added",
+    "summary": "官方配額文件在 Free Account Quotas 下列「Marketing emails: unlimited emails to up to 1,000 contacts per month.」，且廣播郵件不計入交易郵件配額。原紀錄只寫交易郵件額度，已補記。",
+    "sources": [
+      "https://resend.com/docs/knowledge-base/account-quotas-and-limits",
+      "https://resend.com/pricing"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "kaggle-neurips-2026-smart-buildings-competition",
+    "change_type": "api_vs_overview_deadline_conflict_recorded",
+    "summary": "Overview 逐字「January 3, 2027 - Entry Deadline」「January 15, 2027 - Final Submission Deadline」「All deadlines are at 11:59 PM UTC」。一輪唯讀 GetCompetition API 查詢回報 prohibitNewEntrantsExplicitDeadline／teamMergerExplicitDeadline 為 2026-12-03T23:59:59Z、deadline 為 2027-01-15T17:59:59Z，與 Overview 差一個月／6 小時；主 agent 本輪重試 API 被擋（403/404）未重現，故只記為待追查線索，不改既有欄位。",
+    "sources": [
+      "https://www.kaggle.com/competitions/neurips-2026-smart-buildings/overview"
+    ],
+    "recorded_at": "2026-11-16T15:16:00+08:00"
+  },
+  {
+    "record_id": "heygen-voice-turbo-free-api-until-2026-11-30",
+    "change_type": "free_plan_output_commercial_use_prohibited",
+    "summary": "免費期的可用性未變（Voice Turbo Free 至 2026-11-30），但使用範圍由「未知」改為「明文禁止商用」：主條款 §4〈License to your Content (For Users in the Free Plan)〉逐字「you are granted a limited, non-exclusive, non-transferable, revocable license to your User Output solely for personal, non-commercial, and internal evaluation purposes」並列「may not be sold, sublicensed, redistributed, monetized, or used in connection with commercial activities, advertising, client work, revenue-generating product or any other services」。Voice 補充條款只說明「do not expand Free Plan output rights」，適用者為主條款 §4。舊紀錄的 unknowns 曾把商用授權列為未聲明，那是只讀 API 文件的結果。",
+    "sources": [
+      "https://www.heygen.com/terms",
+      "https://developers.heygen.com/docs/voices/heygen-voice-speech"
+    ],
+    "recorded_at": "2026-11-16T15:26:00+08:00"
+  },
+  {
+    "record_id": "rime-stt-nov19-free-window",
+    "change_type": "free_window_scope_clarified_and_training_carveout_recorded",
+    "summary": "11/19 是 STT 計價豁免的結束，不是全部免費的結束：定價 FAQ 逐字「Every account starts with $50 of usage free every month, across every Rime model, with no card required」，11/20 起 STT 為 US$0.002/分（Flex）。STT 是否由該每月 US$50 額度扣抵官方未列舉，列為推論。另記條款 §6.3(b)：Free 的訓練授權排除 Voice Recordings 與任何含自然人聲音的音訊，且 Free 禁止送Caller audio，與定價頁「Try every Rime model on real calls」衝突未解；§7.4 要求保留有效付款方式、§7.7 把付費方案的免費試用視為付費方案，故不得斷言此 30 天窗口免卡。",
+    "sources": [
+      "https://www.rime.ai/pricing",
+      "https://www.rime.ai/terms"
+    ],
+    "recorded_at": "2026-11-16T15:19:00+08:00"
+  },
+  {
+    "record_id": "aocai-youth-ai-training-2026",
+    "change_type": "cohort_closed_and_ict_procurement_restriction_recorded",
+    "summary": "專區頁 2026-11-16 15:24 讀值：「報名已截止」由 3 班增為 4 班，11/16 開課的台北實踐大學班已截止（11/14 當日仍開放）；最近可行動梯次為 11/30 台南成大、12/01 台中實踐、12/07 台北中華科大（限 33 人、報名至 11/30 17:00）、12/08 新竹清大。培訓單位頁另列「執行本計畫期間，不得採購、使用或導入中國大陸廠牌之資通訊產品或服務」與「每名學員限參與本計畫 1 次」——前者對打算使用中國 AI 工具的學員是實質限制，舊紀錄未載。獎勵金 2 萬＋3 萬的條件與 10 萬元上限未變。",
+    "sources": [
+      "https://serv.gcis.nat.gov.tw/AOCAI/courses/youth",
+      "https://usc-sai-youth.github.io/usc-sai-youth/"
+    ],
+    "recorded_at": "2026-11-16T15:24:00+08:00"
+  },
+  {
+    "record_id": "kilo-auto-free-hosted-models",
+    "change_type": "free_model_rate_limit_applies_to_authenticated_too",
+    "summary": "Gateway 文件逐字「All free model requests (both anonymous and authenticated) are rate-limited by IP address: Free models per IP 200 requests per hour」「If you exceed this, requests return HTTP 429」。舊紀錄只把匿名流量寫成 200 次/小時、把已登入上限列為未知；官方其實對兩者同一上限，故移除該未知。免費目錄 3 款、$0.00/1M、免信用卡不變。",
+    "sources": [
+      "https://kilo.ai/docs/llms.txt"
+    ],
+    "recorded_at": "2026-11-16T15:26:00+08:00"
+  },
+  {
+    "record_id": "cleanapis-free-500k-tokens-month",
+    "change_type": "same_page_rate_limit_self_contradiction_located",
+    "summary": "衝突定位到同一頁兩個區塊：方案卡「Free Forever — no card required」「0.5M tokens / month」「60 requests / min」，同頁 Compare plans 表卻寫 Free 為 80（requests/min）。該表的付費欄 Requests/min 也與方案卡不符（卡片 120/300/600/1,200/3,000 對表格 120/120/120/120/150），整欄不可靠；因此以方案卡 60 為保守下限，維持 terms_conflict，不任選一版。",
+    "sources": [
+      "https://cleanapis.com/pricing"
+    ],
+    "recorded_at": "2026-11-16T15:26:00+08:00"
   }
 ]

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,125 筆**（908 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 13:35 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **15 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,108 筆**既有紀錄未完成本輪複核。最有價值的一筆是更正額度：`google-workspace-nonprofit-free-ai` 的 Deep Research 由「每月 5 份」改為官方比較表逐行的 **1 report per 4 hours**（Business Standard 才是每 4 小時 5 份），同頁 Vids AI 的限時註腳停在 2026-05-31 且未更新。同批補記 `openai-researcher-access-thousand-year` 的日本條款：2026-11-13 後核發者效期縮為 180 天，台灣未列名。新增兩筆消費端方案：`gemini-app-free-compute-limits-tw`（運算額度每 5 小時重置、32k 上下文、台灣列支援地區，影片生成不在免費欄）與 `dreamina-free-daily-credits-regional`（美區每日 120 點當日到期、台灣額度未公布）。`temporal-startup-six-k-one-year-active-funded` 釐清「註冊需卡」與「no commitment」不衝突；`jetbrains-junie-lite-free-model-tier` 補記不提供於 AI Assistant、推論只在 JetBrains 基礎設施；`aws-nonprofit-techsoup-budget-tiers` 更正「三頁均寫臺灣」為僅小型與大型頁明列；`tw-labor-pretraining-ai-smart-application-tnnu-03` 13:09 讀值 44 人／名額 34，並補記錄訓依甄試名次。
+資料集目前有 **1,130 筆**（913 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 16:02 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **19 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,109 筆**既有紀錄未完成本輪複核。最影響判讀的一筆是更正商用授權：`heygen-voice-turbo-free-api-until-2026-11-30` 原本把「可否商用」列為未知，官方主條款 §4 其實明文只授權「personal, non-commercial, and internal evaluation purposes」，且不得用於廣告、客戶工作或營收產品——免費 Voice Turbo API 不能拿來接案。同批澄清 `rime-stt-nov19-free-window` 的 11/19 並非全面轉付費（Free 方案仍每月 US$50 額度，但禁止送通話錄音）、`aocai-youth-ai-training-2026` 的 11/16 台北班已截止（可報名梯次改看 11/30 以後），並關閉 Kilo 已登入免費用戶速率上限的未知（不論匿名或登入同為每 IP 每小時 200 次）。
 
 ## 使用方式
 

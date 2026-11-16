@@ -4652,6 +4652,142 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 
 ---
 
+## 2026-11-16 15:05–16:02（Asia/Taipei）｜N=1,128 · R=19 · A=2 · U=1,109 · attempted=0
+
+### 開場狀態與同 repo 的另一個回合
+
+15:05 開場時工作樹已有未提交的修改（`data/offers.json`、`data/policy-history.json`、`README.md`、`tests/validate.py`），
+且 `tools/round_lock.py status` 顯示 **pid 40796（14:05 那一輪）仍持有鎖**（15:13:55 取得），尚未提交。依 README 的規則
+「偵測到別的回合還在跑時，只讀不寫」，本輪前 40 分鐘全部只讀：建索引、跑佇列、派 3 個 subagent 研究，等它提交後才動
+`data/*.json`。前 40 分鐘不是空等——中間把 19 筆的官方來源全部自行抓過一次，也把 dry-run patch 在 /tmp 的複本上
+跑過完整驗證。它最終沒有 commit（見下），本輪改為接管它的資料後才寫入。
+
+基準：全庫 1,128 筆、可行動 1,033 筆、嚴格逾期 1 筆、7 天內到期 10 筆（5 筆冷卻中）、追查失敗 0 筆、
+24 小時未核 795 筆。上一輪（14:05–15:05）剛複核 20 筆並新增 3 筆，其 `reviewed_ids`／`new_ids` 全部跳過；
+MAINTENANCE 上一輪列的 5 項優先也已被它做完（UGREEN、臺南大學、Kaggle solar、新竹市、CHT／Antigravity），
+因此本輪改由佇列往下取，並刻意避開它的 23 個 ID。
+
+**同一個 commit 也帶著 14:05 那一輪的成果**：那一輪的 `data/*.json`、`README.md` 與 `tests/validate.py` 修改
+（R=20、A=3：Docker Agentic Platform US$250 沙箱額度、Sail Research 每月 US$5、deAPI US$5）在 15:05 就寫完且
+`validate.py` 全綠，但它的 session 到 15:52 仍未 commit、也不再寫入任何檔案（持有鎖 38 分鐘）。本輪的做法是：
+不覆蓋、不 reset，先把它的資料留在工作樹，套上本輪 patch 後一起驗證與提交，commit 訊息同時說明兩個批次。
+主 agent 另外自行抓過它的 3 筆新紀錄官方頁（Docker 促銷頁、Sail docs pricing、deAPI pricing 皆 HTTP 200，
+US$250／$5/month／US$5 歡迎點數逐字重現），才把它們一起發布。若那一輪之後恢復並重寫 `offers.json`，
+會以本 commit 為基礎產生新的未提交差異，不會改寫已推送的歷史。
+
+### 範圍與分工（3 個 subagent，全部只讀）
+
+- **A｜到期與限時 5 筆**：`rime-stt-nov19-free-window`（11/19）、`heygen-voice-turbo-free-api-until-2026-11-30`（11/30）、
+  `lets-go2-ai-ocr-launch-six-hundred-pages`（12/28）、`kaggle-google-quantum-circuit-optimization-2026`（逾期）、
+  `kaggle-google-agent-harness-pele-2027`（terms_conflict）。
+- **B｜證據缺口與來源衝突 7 筆**：`nebius-token-factory-signup-one-dollar`、`river-inference-25-credit`、
+  `entire-agents-trial-credit-paused`、`cleanapis-free-500k-tokens-month`、`promptlayer-free-observability-2500-requests`、
+  `parallel-mcp-keyless-free-search-fetch-decision`、`kilo-auto-free-hosted-models`。
+- **C｜台灣相關 4 筆＋新機會**：`aocai-youth-ai-training-2026`、`taiwan-nsp-youth-ai-training-subsidy-2026`、
+  `shift-asia-prototype-twenty-companies`、`ant-ling-ling-3-2-flash-free-two-weeks`，另搜 20 餘個線索、否決大部分。
+
+subagent 只交結構化結果，不寫檔；所有要改的 19 筆主 agent 都自己抓過一次官方頁（`curl`，必要時 `r.jina.ai`），
+寫進 `accessed_at` 的時間是主 agent 自己讀的時間，不是 subagent 的時間。
+
+### 計數
+
+N=1,128；R=19；A=2（2 機會、0 政策、0 觀察線索）；U=1,109；attempted=0。
+
+### 會影響決策的更正
+
+- **`heygen-voice-turbo-free-api-until-2026-11-30`（最重要，商用授權由「未知」改為「禁止」）**：舊紀錄寫「商用授權未在API文件聲明」。
+  主條款 §4「License to your Content (For Users in the Free Plan)」逐字「you are granted a limited, non-exclusive, non-transferable,
+  revocable license to your User Output **solely for personal, non-commercial, and internal evaluation purposes**」，並明列
+  「may not be sold, sublicensed, redistributed, monetized, or used in connection with **commercial activities, advertising, client work,
+  revenue-generating product** or any other services」。Voice 補充條款只說「do not expand Free Plan output rights」，適用的就是 §4。
+  → 讀者若拿免費 Voice Turbo API 接案或做營收產品，違反條款；要商用必須付費方案。免費期仍為 2026-11-30（文件逐字，無延期公告）。
+- **`rime-stt-nov19-free-window`（標題與風險敘述會誤導）**：11/19 是「STT 計價豁免」的結束，不是「免費結束」。
+  定價 FAQ 逐字「Every account starts with $50 of usage free every month, **across every Rime model**, with no card required」，
+  11/20 起 STT 為 US$0.002/分（Flex）。→ 之後 STT 改由每月 US$50 額度吸收（**推論**，官方未列舉扣抵關係，已寫進 unknowns）。
+  另補：§6.3(b) 的 Free 訓練授權把「Voice Recordings」與「任何含自然人聲音的音訊」排除，且 Free 禁止送 Caller audio——
+  與定價頁「Try every Rime model on real calls」衝突未解。標題改為「11/19 前全方案免計價，之後 Free 仍每月 US$50 額度但禁通話錄音」。
+- **`aocai-youth-ai-training-2026`（S 級，今天到期的那一班）**：專區頁 15:24 讀值「報名已截止」由 3 班增為 4 班，
+  11/16 開課的台北實踐大學班已截止（11/14 仍開放）。最近可行動梯次改為 11/30 台南成大、12/01 台中實踐、
+  12/07 台北中華科大（限 33 人、報名至 11/30 17:00）、12/08 新竹清大。另補培訓單位頁兩條實質限制：
+  「執行本計畫期間，不得採購、使用或導入中國大陸廠牌之資通訊產品或服務」「每名學員限參與本計畫 1 次」。
+- **`kilo-auto-free-hosted-models`（關閉一個未知）**：Gateway 文件逐字「All free model requests (**both anonymous and authenticated**)
+  are rate-limited by IP address: Free models per IP **200 requests per hour**」→ 已登入用戶沒有更高上限，舊紀錄的「已登入上限未知」移除。
+- **`cleanapis-free-500k-tokens-month`（衝突定位）**：同一頁方案卡寫「60 requests / min」、Compare plans 表寫「80」；
+  該表付費欄的 Requests/min 也與方案卡不符，整欄不可靠 → 以 60 為保守下限，維持 `terms_conflict`，不任選一版。
+- **`river-inference-25-credit`（第三次確認）**：`console.river.ai/api/auth/config` 今天回 `"signup_bonus_enabled":false`
+  （11-10、11-11 亦同）。這是執行期旗標、不是公告，官方無結束聲明，故維持「無法區分已終止與暫時關閉」，不升級為確認終止。
+- **兩筆 Kaggle（誠實標註讀取極限）**：量子賽總池 US$150,000／首獎 US$50,000、PLE 總池 US$400,000／250/100/50 皆逐字重現；
+  PLE 的授權衝突定位為「頁首 Apache 2.0」對「B §5(a) Apache 2.0 **or MIT**」（MIT 不是 Apache-2.0 的子授權，互斥）。
+  但兩筆的 Kaggle Timeline 元件本輪**仍讀不到**（原生 HTML 只有外殼、competition API 回 401/404、reader proxy 只回 Description），
+  因此 `deadline_at`／`expires_at` 沿用 11-15 瀏覽器讀值，並在 `verification_scope` 寫明「本輪未重新確認、不改期」。
+  這是局部複核，不是期限的再次驗證。
+
+### 新增 2 筆（皆主 agent 實讀官方頁）
+
+- **`dahl-inference-100m-signup-tokens`（B）**：FROMZERO OÜ（愛沙尼亞）開源模型 API，註冊送 **1 億 tokens**，逐字
+  「They burn after **7 days without a request**; accounts that have topped up keep everything.」儲值只收加密貨幣（NOWPayments），
+  無信用卡路徑；新帳號 key 需自行從池內分配。台灣 `Unknown`（無國別清單）。
+- **`callmissed-free-1000-credits-payment-verification`（C）**：新帳號 1,000 credits（1 credit = ₹1 ≈ US$0.0104，約 US$10.4）
+  「Credits do not expire.」但條款逐字「To use the API, or any go-live feature, you must have a verified payment method on your account:
+  a card or a **UPI Autopay** mandate.」——UPI 是印度機制，台灣實務上只能靠國際信用卡；console 內建 agent 測試不需付款方式。
+
+未納入並記下理由：Entire 的 $100（pricing 與 Credit Terms 只寫「one-time promotional credit」未載金額、且已暫停）、
+VModel $10（僅首頁橫幅，docs 網域不存在）、AgentRouter（noindex JS 空殼、無可讀條款）、HPC-AI（金額在摺疊 FAQ、純 HTTP 取不到）、
+Freebuff（25 國 allowlist，台灣未證實）。You.com、Morph、Nscale、Runware、Inception、Gradium、AssemblyAI、Trelis、deAPI 等
+經 grep 確認已在庫中，不重複收錄。
+
+### 本輪品質改善：核實時間與證據時間對不上的紀錄
+
+- **觀察到的問題**：卡片的「核實」藥丸只顯示 `verified_at`，但每筆來源各有自己的 `accessed_at`。全庫有 **21 筆**的
+  `verified_at` 比**所有**被引用的來源都新 7 天以上（另有 2 筆的 `accessed_at` 沒有時區、無法跨時區比較，跳過），最久 21 天：`v0-students` 寫「2026-11-15 06:15 複核 v0.app/students」，
+  但它唯一來源的 `accessed_at` 仍是 2026-10-24（`adobe-firefly-assistant-free-beta-regions` 20 天、`deepgram-speak-attendee` 15 天）。
+  這正是本任務禁止的「刷新時間」外觀：讀者看到新的核實日，看不到證據其實沒跟著更新。
+- **使用者結果**：`tests/validate.py` 每次執行都會印出一行 `note:`，列出這 21 筆與落後天數，下一輪不必再自己找，
+  也不會有人把「已核實」當成「證據剛重讀過」。本輪改動的 19 筆都同步更新了來源 `accessed_at`，所以不會出現在清單裡。
+- **如何驗證**：跑 `python3 tests/validate.py` 確認印出 21 筆且本輪 19 筆不在其中；另在複本把
+  `cloudflare-vectorize-free-dimensions`（不在本批次）的來源 `accessed_at` 改成 2026-09-01（76 天前）再跑，
+  清單由 21 增為 22 並列出該筆、PASS 仍成立——刻意做成非致命 `note:`，因為既有 21 筆要靠逐筆重讀補，不是靠改測試。
+
+### 來源衝突與工作經驗
+
+- **「未知」與「禁止」是兩種完全不同的答案**：HeyGen 的商用授權不是文件沒寫，而是寫在主服務條款、不在 API 文件。
+  查 API 產品時，方案層的權利限制常只出現在主 ToS 的 plan 專章（此處 §4 標題就寫著 For Users in the Free Plan）。
+- **時間軸讀不到就說讀不到**：Kaggle 的 Timeline 是 client-rendered，API 401/404、reader 只回 Description。
+  這時正確做法是保留舊期限並在 `verification_scope` 標明「本輪未重新確認」，而不是拿二手網站的日期當官方確認。
+- **同 repo 多回合併行是常態**：今天 12:05、13:05、14:05、15:05 各起一輪，14:05 那輪持有未提交資料超過 40 分鐘。
+  `round_lock.py` 真的擋下了本輪的寫入（`acquire` 回 "another round is running"），這就是它存在的理由：先讀、先研究、
+  先讀、先研究、在 /tmp 複本上把 patch 驗到全綠，是這次沒有把 6 MB JSON 寫壞的原因；但鎖本身只提供「有人在寫」的訊號，
+  沒有逾時接管機制，所以最後仍要靠人判斷「這個回合已經停了」才接手。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,130 筆（S/A/B/C/D = 178/199/134/279/123，未評級 217）。
+- `node --check app.js`、`node tests/filters.cjs`、`git diff --check`。
+- `git diff`：新增 2 個 ID、移除 0 個、變更 19 筆；沒有未列批次的 `verified_at` 刷新。
+- 本機靜態站（1280×900 與 390×844）：本輪更新 19＋新增 2、HeyGen 卡片顯示商用禁止、Rime 新標題、
+  AOCAI 顯示 4 班已截止、console error 0、手機無水平溢出。
+
+### 未解證據缺口
+
+- Rime：11/19 的時區與截止鐘點；STT 與每月 US$50 額度的扣抵關係（目前是推論）；Free 是否真的免卡（§7.4 對 §7.7）。
+- HeyGen：「client work」與「internal evaluation」的界線；11-30 後是否延長；socket free quota 數值。
+- Kaggle 兩筆：Timeline 元件的入賽／組隊／最終交件確切鐘點本輪未重讀；台灣受獎與扣繳未核。
+- AOCAI：各班報名截止日與剩餘名額；中華科大 240 小時與該校 264 小時的登載不一致。
+- Dahl / Modal / CallMissed：台灣 IP 與付款可行性的實測；額度到期與速率上限。
+
+### 下一輪優先（最多 5 項）
+
+1. **確認 14:05 那一輪是否復活**：它的資料已隨本 commit 發布（R=20、A=3）。若該 session 之後再寫 `offers.json`，
+   會以本 commit 為基礎產生新的未提交差異；先跑 `tools/round_lock.py status` 與 `git status`，必要時以本 commit 為準重新套用。
+2. `tests/validate.py` 印出的 21 筆證據落後清單（先做 S／A 級）：`v0-students`（21 天）、`adobe-firefly-assistant-free-beta-regions`（20 天）、
+   `deepgram-speak-attendee`（15 天）、`cerebras-trial`、`wordtune-academic-thirty-percent-twelve-months`。來源見各筆 `sources`。
+3. `kaggle-google-quantum-circuit-optimization-2026`、`kaggle-google-agent-harness-pele-2027`：用瀏覽器（非 reader proxy）重讀
+   Overview > Timeline，補回入賽／組隊／最終交件鐘點，並確認 11/20 里程碑是否仍在。
+4. `rime-stt-nov19-free-window`：11/20 當天確認 STT 是否真的從 US$50 額度扣、以及 Free 方案是否要求補卡（pricing／terms §7.4、§7.7）。
+5. `aocai-youth-ai-training-2026`：11/30 台南成大班與 12/01 台中班開課前確認是否額滿；另核中華科大 240 vs 264 小時。
+
+---
+
 ## 2026-11-16 13:05–13:35（Asia/Taipei）｜N=1,123 · R=15 · A=2 · U=1,108 · attempted=0
 
 ### 基準、範圍與分工

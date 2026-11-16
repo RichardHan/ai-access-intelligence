@@ -398,6 +398,43 @@ for o in d['offers']:
   if o['taiwan']=='Yes' and o.get('status') not in dead:assert o['priority_tier']=='S'
   if o.get('priority_tier')=='S':assert o['taiwan']=='Yes' and o.get('status') not in dead, f'invalid S-tier in {o["id"]}'
  else:assert o['priority_tier'] is None and o['priority_score'] is None
+# 卡片把 `taiwan` 渲染成藥丸，把 `eligibility.taiwan_note` 渲染成說明文字，兩者並排。2026-11-16 全庫掃到 1 筆
+# 自相矛盾：nebius-europe-compute-grants-watch 的 taiwan 是 "No"，taiwan_note 卻以「Unknown：」開頭，同一張卡
+# 一邊說台灣不適用、一邊說未確認；而 `taiwan` 還驅動 S 級判定與「台灣條件適用」篩選，所以錯的是說明文字
+# 那一邊，人眼看不出來。只檢查明確寫了 Yes／No／Unknown 前綴的說明（全庫 217 筆），沒寫前綴的自由敘述
+# 不在此列——強迫每筆都加前綴會變成重寫既有內容，而不是修正矛盾。
+TAIWAN_NOTE_PREFIX=__import__('re').compile(r'^\s*(Yes|No|Unknown|Conditional|Partial)\s*[：:]')
+for _o in d['offers']:
+ _note=(_o.get('eligibility') or {}).get('taiwan_note') or ''
+ _m=TAIWAN_NOTE_PREFIX.match(_note)
+ if _m: assert _m.group(1)==_o['taiwan'], (
+  f'taiwan_note says {_m.group(1)!r} but the taiwan field is {_o["taiwan"]!r} in {_o["id"]}: '
+  'the card shows both side by side and the taiwan field drives the S tier and the 台灣條件適用 preset')
+# 卡片的「核實」藥丸只顯示 verified_at，但證據時間在每個來源自己的 accessed_at。2026-11-16 全庫掃到 21 筆的
+# verified_at 比所有被引用來源都新 7 天以上（最久 21 天：v0-students 寫 11-15 複核，唯一來源的 accessed_at 仍是
+# 10-24；adobe-firefly-assistant-free-beta-regions 落後 20 天）。這正是「只刷新查核時間、沒有重讀」的外觀，
+# 而讀者和下一輪都看不出來——卡片照樣顯示新的核實日。刻意做成非致命 note：既有 21 筆要靠逐筆重讀補，做成
+# assert 只會讓人改測試而不是補證據。新批次照實更新 accessed_at 就不會被列出。沒有時區的 accessed_at 無法
+# 跨時區比較，直接跳過（zencoder、arize 兩筆屬此類，不列入清單）。
+_EVIDENCE_LAG=datetime.timedelta(days=7)
+_lagged=[]
+for _o in d['offers']:
+ _acc=[]
+ for _s in _o.get('sources',[]):
+  try: _ad=datetime.datetime.fromisoformat(_s.get('accessed_at') or '')
+  except ValueError: continue
+  if _ad.tzinfo is not None: _acc.append(_ad)
+ if not _acc or not _o.get('verified_at'): continue
+ try: _vd=datetime.datetime.fromisoformat(_o['verified_at'])
+ except ValueError: continue
+ if _vd.tzinfo is None: continue
+ _lag=_vd-max(_acc)
+ if _lag>_EVIDENCE_LAG: _lagged.append((_lag.days,_o['id']))
+if _lagged:
+ _lagged.sort(reverse=True)
+ print(f'note: {len(_lagged)} records claim a verification newer than every cited source by >7 days '
+       f'(update per-source accessed_at when re-reading): '
+       + ', '.join(f'{_i} ({_d}d)' for _d,_i in _lagged[:8]) + (' …' if len(_lagged)>8 else ''))
 # README 首段是讀者在 GitHub 上第一眼看到的宣稱：資料量、三類分項、本輪複核與新增筆數、尚未複核筆數。
 # 這些數字全部手寫，資料一改就要人工同步；漏改一次，首頁就會宣稱錯的資料量或批次進度，而網站本身
 # （由 offers.json 算出來的 overview）仍然是對的——兩個入口互相矛盾。2026-11-10 對照前五個 commit
