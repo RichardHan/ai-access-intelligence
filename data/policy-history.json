@@ -32096,5 +32096,56 @@
       "https://cleanapis.com/pricing"
     ],
     "recorded_at": "2026-11-16T15:26:00+08:00"
+  },
+  {
+    "record_id": "kaggle-neurips-2026-smart-buildings-competition",
+    "change_type": "api_conflict_reproduced_with_correct_slug",
+    "summary": "GetCompetition API 以 competitionName=neurips-2026-smart-buildings 直連成功（HTTP 200），仍回 prohibitNewEntrantsExplicitDeadline／teamMergerExplicitDeadline = 2026-12-03T23:59:59Z，而 Overview Timeline 逐字為「January 3, 2027 - Entry Deadline」「January 3, 2027 - Team Merger Deadline」。前兩輪的 403／404 是 slug 拼字問題，不是權限；API deadline 亦仍比「11:59 PM UTC」早 6 小時（2027-01-15T17:59:59Z）。卡片依規則 §3(a) 以 Overview>Timeline 為權威採 2027-01-03，兩值並存不裁決。",
+    "sources": [
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+      "https://www.kaggle.com/competitions/neurips-2026-smart-buildings",
+      "https://www.kaggle.com/competitions/neurips-2026-smart-buildings/rules"
+    ],
+    "recorded_at": "2026-11-16T16:54:00+08:00"
+  },
+  {
+    "record_id": "kaggle-google-agent-harness-pele-2027",
+    "change_type": "deadline_precision_and_missing_entry_window",
+    "summary": "Timeline（瀏覽器直讀）4 條皆為日期、頁尾「All deadlines are at 11:59 PM UTC」；GetCompetition API deadline=2027-01-05T23:59:59Z，故 deadline_at 由 2027-01-06T07:59:00+08:00 修正為 07:59:59（舊值少 59 秒）。API 34 個欄位與 Timeline 都沒有 Entry／Team Merger 期限，判定為官方未設（非漏讀），開賽只給日期。",
+    "sources": [
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+      "https://www.kaggle.com/competitions/physical-engineerings-last-exam/overview/timeline"
+    ],
+    "recorded_at": "2026-11-16T16:54:00+08:00"
+  },
+  {
+    "record_id": "kaggle-solar-filament-segmentation-2026",
+    "change_type": "organizer_denies_extension_but_statement_conflicts_with_platform",
+    "summary": "主辦在 Discussion 759466 逐字「There is no extension. There was a timezone discrepency that we addressed.」；759316 另一則稱「We updated the Kaggle's due date to match the promised 11:59 PM CDT.」但平台 API 與頁首倒數都是 2026-11-16T11:59:59Z（比 11:59 PM CDT 晚 7 小時），三項官方陳述無法同時成立。平台仍 launched=true、totalSubmissions 16:12→16:53 由 16,875 增至 16,881；參與者兩度要求以 UTC 確認，未見官方回覆。",
+    "sources": [
+      "https://www.kaggle.com/competitions/filament-segmentation-2026/discussion/759466",
+      "https://www.kaggle.com/competitions/filament-segmentation-2026/discussion/759316",
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition"
+    ],
+    "recorded_at": "2026-11-16T16:54:00+08:00"
+  },
+  {
+    "record_id": "notion-business-trial-standard-select-credits",
+    "change_type": "trial_length_claim_corrected",
+    "summary": "舊標題與摘要寫「30 天免費試用」，官方 paid-plan-trials 頁逐字為「Most trials run for 14 or 30 days, depending on the offer」——30 天不是固定承諾。試用 AI 額度另有官方逐字「Trials starting on or after October 19, 2026: Your trial includes 1,500 Standard credits and 500 Select credits per month.」已改為 14 或 30 天並保留額度。",
+    "sources": [
+      "https://www.notion.com/help/paid-plan-trials",
+      "https://www.notion.com/help/guides/get-the-most-out-of-your-business-trial-with-notion-ai"
+    ],
+    "recorded_at": "2026-11-16T16:54:00+08:00"
+  },
+  {
+    "record_id": "v0-students",
+    "change_type": "missing_amount_restored_and_target_wording_conflict",
+    "summary": "舊摘要把官方 FAQ 的「$20 credits per month for free for 1 year」寫成「每月 US 免費額度」，金額整段消失（卡片看起來像沒有金額的承諾）。已依官方逐字補回 US$20／月、為期 1 年；同時記錄 FAQ 稱對象為「US-based universities」、active schools 名單卻含加拿大 University of Waterloo 的用語不一致，taiwan 維持 No。",
+    "sources": [
+      "https://v0.app/students"
+    ],
+    "recorded_at": "2026-11-16T16:54:00+08:00"
   }
 ]

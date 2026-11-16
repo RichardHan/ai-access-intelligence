@@ -327,6 +327,14 @@ for o in d['offers']:
   assert s.get('url', '').startswith('https://'), f'invalid source URL in {o["id"]}: {s.get("url")}'
   assert isinstance(s.get('scope'), str) and s['scope'].strip(), f'missing or empty source scope in {o["id"]}'
   assert isinstance(s.get('evidence'), str) and s['evidence'].strip(), f'missing or empty source evidence in {o["id"]}'
+  # 來源層的查閱時間只有 accessed_at／accessed_time_range／accessed_date 會被卡片讀出來。
+  # 2026-11-16 統計 76 個來源帶著 `verified_at`：其中 36 個是唯一時間戳（卡片因此顯示
+  # 「查閱時間：未另列」，例：tinyfish-students 的 students 與 terms），另外 40 個與 accessed_at
+  # 並存、19 個兩者還不同天（例：gladia-startup-studio 的 11-10 與 10-25）。同一來源兩個時間、
+  # 其中一個永遠不顯示，讀者與下一輪都無法判斷哪一個才是那次查閱。已全部併入 accessed_at；
+  # 這條擋住下一個臨時腳本再寫回舊欄位。
+  assert 'verified_at' not in s, (f'source-level verified_at in {o["id"]} ({s.get("url")}): '
+                                  'per-source read time belongs in accessed_at (the card only renders that field)')
  # 截斷的網址看起來就像同一份文件，只是少了尾段：卡片照樣把它渲染成可點的來源，讀者點進去卻是 404，
   # 而 evidence 裡引用的字句其實來自完整的那一份。2026-11-16 的 linkcheck 就在
   # taiwan-industry-talent-investment-ai-courses-2026 抓到一筆：Download.ashx?u=…19c43463（404）

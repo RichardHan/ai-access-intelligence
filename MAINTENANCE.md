@@ -4951,3 +4951,77 @@ N=1,123；R=15；A=2（2 機會）；U=1,108；attempted=0。
 - Sail：US$5 是否每月重設或累積；US-only 20% 加價屬於哪個方案。
 - CHT：400GB 首年卡期滿後的實際月費；首年 0 元方案結束日。
 - tnnu-03：是否限失業／待業身分；學習獎勵金金額；11/18 甄試結果。
+
+---
+
+## 2026-11-16 16:05–16:54（Asia/Taipei）｜N=1,130 · R=15 · A=3 · U=1,115 · attempted=0
+
+### 開場狀態：第三個同日下午的回合
+
+16:05 開場時 `git status` 只有 `data/offers.json`、`README.md`、`MAINTENANCE.md` 的未提交修改，`tools/round_lock.py status` 顯示 pid 40796（14:05 那一輪）仍持有鎖。
+它於 16:03:59 以 `c1c91be` 提交（同時帶上 15:05 那一輪的 19 筆複核與 2 筆新增），16:04 之後只再補上 UGREEN 的 Devpost「This hackathon has ended」渲染證據與 README 註記，16:11 釋放鎖。
+本輪 **16:11:56 取得鎖**後才寫 `data/*.json`；在此之前只做唯讀工作（建索引、跑佇列、派 3 個 subagent、自行抓來源）。寫入期間 `data/offers.json` 的 mtime 沒有再被別的回合動過。
+
+基準（16:10）：全庫 1,130 筆、可行動 1,033 筆、嚴格逾期 1 筆（`kaggle-google-agent-harness-pele-2027`，next_review 16:00）、7 天內到期 8 筆（6 筆冷卻中）、`retry` 桶 0 筆、24 小時未核 781 筆、12 小時內已核 195 筆。上一輪（15:05–16:02）的 21 個 ID 全部跳過；14:05 那輪的 23 個 ID 也不在本輪清單。
+
+### 範圍與分工（3 個 read-only subagent，全部只回報、不寫 repo）
+
+- **A｜到期與期限衝突 4 筆**：`kaggle-solar-filament-segmentation-2026`（19:59:59 關閉）、`kaggle-google-agent-harness-pele-2027`（逾期）、`kaggle-neurips-2026-smart-buildings-competition`（API vs Overview 差一個月）、`stepfun-stepaudio3-music-gen-preview-nov8`（11/17 11:59:59 到期）。
+- **B｜證據時間落後 8 筆**：`v0-students`、`adobe-firefly-assistant-free-beta-regions`、`deepgram-speak-attendee`、`cerebras-trial`、`tavily-researcher`、`assemblyai-startup-recurring-year`、`tinyfish-students`、`algolia-startups`（即 `tests/validate.py` 證據落後清單的前 8 名）。
+- **C｜新機會與去重**：29 個線索，4 個候選，主 agent 覆核後納入 2 個、1 個轉觀察線索、1 個判定為既有紀錄（見下）。
+
+subagent 只交結構化結果；本輪要改的 15 筆與 3 筆新紀錄，主 agent 都自己抓過或重讀了直接支持結論的官方內容（Kaggle API、兩則 Discussion、PLE Timeline 瀏覽器直讀、StepFun pricing/models、Azure Speech 定價頁、Notion 三頁、v0／Adobe／Deepgram／Cerebras／Tavily／AssemblyAI／TinyFish／Algolia／Microsoft Learn 各頁、Fly.io 方案頁與服務條款、OpenRouter 模型頁、Featherless 贊助頁）。`accessed_at` 寫的是主 agent 自己的讀取時間。
+
+### 計數
+
+N=1,130；R=15；A=3（2 機會、0 政策、1 觀察線索）；U=1,115；attempted=0。
+
+### 會影響決策的更正
+
+- **`kaggle-neurips-2026-smart-buildings-competition`（本輪最重要：把「讀不到」變成「已重現的官方矛盾」）**：前兩輪都記「GetCompetition API 403／404 被擋、2026-12-03 未重現」。本輪改用正確的 `competitionName=neurips-2026-smart-buildings` 直連 **HTTP 200**，`teamMergerExplicitDeadline` 與 `prohibitNewEntrantsExplicitDeadline` 確實仍是 `2026-12-03T23:59:59Z`，而 Overview Timeline 逐字是「January 3, 2027 - Entry Deadline／Team Merger Deadline」。這不是舊快取，是同一時刻兩份官方資料相差一個月；rules §3(a) 明定以 Overview > Timeline 為權威，故卡片採 2027-01-03，API 欄位為何沒同步則未解。API 的 deadline（2027-01-15T17:59:59Z）也比「11:59 PM UTC」早 6 小時。
+- **`kaggle-google-agent-harness-pele-2027`（期限精度＋關閉一個未知）**：Timeline 以瀏覽器直讀成功（4 條、頁尾「All deadlines are at 11:59 PM UTC」），API `deadline=2027-01-05T23:59:59Z`；`deadline_at` 由 `07:59:00` 修正為 `07:59:59`。API 34 個欄位與 Timeline 都沒有 Entry／Team Merger 期限，判定為官方未設（兩條獨立路徑同時缺席），不是漏讀。
+- **`kaggle-solar-filament-segmentation-2026`（衝突性質改變）**：主辦在 Discussion 759466 逐字「There is no extension.」，759316 卻稱「We updated the Kaggle's due date to match the promised 11:59 PM CDT.」；平台 API 與頁首倒數都是 `11:59:59Z`（比 11:59 PM CDT 晚 7 小時），三項官方陳述無法同時成立。平台 16:53 仍 `launched=true`、提交數由 16,875 增至 16,881。`deadline_at` 不變，unknowns 改寫成三說並存。
+- **`notion-business-trial-standard-select-credits`（標題原本沒有官方依據）**：舊標題寫「30 天免費試用」，官方 `paid-plan-trials` 逐字是「Most trials run for 14 or 30 days, depending on the offer」。已改為 14 或 30 天；1,500 Standard／500 Select 的試用額度另外有官方逐字支持，保留。
+- **`v0-students`（金額整段消失）**：舊摘要寫「每月 US 免費額度」，把官方 FAQ 的 `$20 credits per month for free for 1 year` 掉成沒有金額的句子。已補回 US$20／月；同時記錄 FAQ 說「US-based universities」但名單含加拿大 Waterloo 的用語不一致，`taiwan` 維持 No。
+- **`cerebras-trial`（速率表抄錯一格）**：舊摘要把 qwen-3.8-27b 併入「各 5 RPM」。官方 Free Trial 表實為 gpt-oss-120b 5 RPM／30K uncached TPM／1M TPH／TPD，qwen-3.8-27b 300 RPM／150K uncached TPM／750K total TPM、無 TPH／TPD。已更正。
+- **`adobe-firefly-assistant-free-beta-regions`（移除沒有依據的地區標記）**：FAQ 已更新為「Last updated on Nov 10, 2026」，beta 仍開放；全篇 country 0 筆，因此移除 `regions:["Global"]`（`taiwan` 本來就是 Unknown，兩者先前互相矛盾）。
+- 其餘重讀後無實質變更：`deepgram-speak-attendee`（/speak 已改 recap、無新途徑，維持 closed）、`tavily-researcher`（另見學生方案 4 個月 Project Plan，但該文標示一年前更新、未實測）、`assemblyai-startup-recurring-year`、`tinyfish-students`（後綴清單仍無 .edu.tw）、`algolia-startups`、`azure-speech-free-f0-500k-neural-tts`（50 萬字元／月與 Taiwan North 不變）、`stepfun-stepaudio3-music-gen-preview-nov8`（免費窗未變）。
+
+### 新增 3 筆（皆主 agent 實讀官方頁）
+
+- **`fly-io-startups-fifteen-k-credit`（機會）**：Seed／Series A 且有創投或加速器投資的新創最高 US$15,000 使用額度，可抵 Machines、Sprites、Managed Postgres、volumes、頻寬，核發後一年到期；官方逐字「Bootstrapped or self-funded companies aren't eligible for this program.」申請不必先建帳號或綁卡。台灣沒有節點，亞太走東京／新加坡。`taiwan: Yes`（條件式）——官方方案頁與服務條款都無國別限制，只有美國出口法規條款。
+- **`openrouter-baidu-ernie-55-flash-preview-free`（機會）**：`baidu/ernie-5.5-flash-preview:free` 端點 prompt 與 completion 標價 0，1,024,000 token 上下文、支援 tool calling，2026-11-10 釋出、由 Baidu Qianfan 提供；仍受 OpenRouter 免費層 20 RPM／每日 50 次（累購 US$10 後 1,000 次）。頁面未載 prompt 是否用於訓練、未公布結束日，`taiwan: Unknown`（與其他 OpenRouter 紀錄一致）。
+- **`featherless-sponsorship-open-weight-pilot`（觀察線索）**：開源模型贊助，免費算力或 hosted inference，首批只有 3–5 案；金額、GPU 時數、期限、是否需付費帳號都未公布，因此不列為可估算價值的免費額度。
+
+**未納入**：Microsoft for Startups 經比對是既有紀錄 `azure-startups`（本輪改為更新它，補上 2026-10-30 版頁面的「三個工作天審核」與「third-party AI models (including Anthropic) 不列入額度」）；TestMu KaneCLI（活動頁 404）、Crusoe×NVIDIA（路徑 404、要求美國信用卡）、Cognition Devin 免費期（僅付費方案）、數位發展部 12 月課程（已公告錄取名單）、MARA／Vectoree／VModel／HPC-AI（官方頁無該優惠或站台不可達）皆否決。
+
+### 本輪品質改善：來源層的 `verified_at` 是卡片永遠不顯示的第二個時間
+
+- **觀察到的問題**：卡片「查閱時間」只讀 `accessed_at`／`accessed_time_range`／`accessed_date`；但全庫有 **76 個來源物件**帶著 `verified_at`。其中 36 個是該來源唯一的時間戳，於是詳情顯示「查閱時間：未另列，請參照證據文字」，而證據文字裡根本沒有日期（`tinyfish-students` 的 students 與 terms 就是這樣）；另外 40 個與 `accessed_at` 並存，19 個兩者還不同天（`gladia-startup-studio` 的 11-10 與 10-25），同一來源兩個時間、其中一個永遠不出現。
+- **使用者結果**：來源層時間統一收斂到 `accessed_at`（36 個由 `verified_at` 升格、40 個移除重複欄位），卡片不再對有日期的來源說「未另列」。`tests/validate.py` 的「核實比所有來源新 >7 天」清單同步由 21 筆降到 16 筆，因為其中 5 筆的來源時間原本藏在 `verified_at`。
+- **如何驗證**：`python3 tests/validate.py` 新增硬性規則「source 不得有 `verified_at`」；在複本把 `satfaq-free-trial-hybrid-ai-two-thousand-points` 的一個來源塞回 `verified_at` 後跑，validate 立即以該 ID 失敗，還原後 PASS。另以 `createDetails()` 直接渲染 `tinyfish-students`／`v0-students`／`notion-...`，三個來源的「查閱時間」都印出實際時間而非「未另列」。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,133 筆（S/A/B/C/D = 179/200/134/279/123，未評級 218）。
+- `node --check app.js`、`node tests/filters.cjs`、`git diff --check` 全綠。
+- 本機靜態站（1280×900 與 390×844）：console error 0；首頁顯示 1,133 筆／915 機會／193 台灣條件適用／15 本輪複核／3 新增；「本輪更新」18 筆（15+3）、免費方案 740 筆、台灣條件適用 193 筆、載入更多由 24→48；依截止日排序第一筆是 solar filament；手機 scrollWidth＝clientWidth＝390，無水平溢出。
+- `git diff`：新增 3 個 ID、無刪除、15 筆批次紀錄的 `verified_at` 與 `verification_scope` 同步更新；另有 21 筆只改了來源時間欄位（不刷新 `verified_at`）。
+
+### 未解證據缺口
+
+- NeurIPS：API 的 2026-12-03 何時／是否會同步成 2027-01-03；API 17:59:59Z 與 Overview 23:59Z 哪個是實際關閉時刻。
+- Solar filament：Google Form 報告通道的實際關閉時刻（主辦兩種說法），以及 19:59:59 後平台是否真的關閉。
+- PLE：授權條款 Apache 2.0 vs B §5「Apache 2.0 or MIT」仍待主辦澄清；Stage 2 端點成本頁未核。
+- StepFun：免費呼叫是否需先儲值（§7.1 字面涵蓋、未見豁免）、免費總量與台灣帳戶。
+- Tavily 學生方案（4 個月 Project Plan）：該文標示一年前更新，是否仍受理未實測。
+
+### 下一輪優先（最多 5 項）
+
+1. `kaggle-solar-filament-segmentation-2026`：19:59:59 後立即重取 API 與頁面，確認關閉並改狀態；順手記 Google Form 是否仍開。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：11/17 11:59:59 後確認 preview 是否退役、是否需先儲值才能用付費版。
+3. `tests/validate.py` 剩下的 16 筆證據落後清單（先做 S／A 級）：`nebius-builder`（17 天）、`elevenlabs-startup-grant`、`amd-developer-credits`（16 天）、`runpod-creator-early-access`、`botpress-...`（13 天）。
+4. `fly-io-startups-fifteen-k-credit`、`openrouter-baidu-ernie-55-flash-preview-free`：查台灣團隊送件與投資人驗證實務、OpenRouter 免費層對該端點的實際每日上限；確認 ERNIE prompt 訓練政策。
+5. `kaggle-neurips-2026-smart-buildings-competition`：12 月初前再讀 API 與 Overview，確認 12-03 是否真的鎖入賽／合隊（若 API 未同步，讀者可能提前一週被鎖）。
+
+---

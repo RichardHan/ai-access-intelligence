@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,130 筆**（913 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 16:02 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **19 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,109 筆**既有紀錄未完成本輪複核。最影響判讀的一筆是更正商用授權：`heygen-voice-turbo-free-api-until-2026-11-30` 原本把「可否商用」列為未知，官方主條款 §4 其實明文只授權「personal, non-commercial, and internal evaluation purposes」，且不得用於廣告、客戶工作或營收產品——免費 Voice Turbo API 不能拿來接案。同批澄清 `rime-stt-nov19-free-window` 的 11/19 並非全面轉付費（Free 方案仍每月 US$50 額度，但禁止送通話錄音）、`aocai-youth-ai-training-2026` 的 11/16 台北班已截止（可報名梯次改看 11/30 以後），並關閉 Kilo 已登入免費用戶速率上限的未知（不論匿名或登入同為每 IP 每小時 200 次）。
+資料集目前有 **1,133 筆**（915 項機會、50 項政策、168 筆觀察線索），更新時間 **2026-11-16 16:54 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **15 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **1 筆**；整筆追查失敗 **0 筆**。其餘 **1,115 筆**既有紀錄未完成本輪複核。最影響判讀的兩筆：`kaggle-neurips-2026-smart-buildings-competition` 的平台 API 終於以正確 slug 重現（HTTP 200），證實「入賽／組隊截止 2026-12-03」與 Overview 的 2027-01-03 是同一時間並存的兩份官方資料、不是舊快取；`notion-business-trial-standard-select-credits` 的「30 天試用」沒有官方依據，官方寫「Most trials run for 14 or 30 days, depending on the offer」。另修正 v0 學生方案漏掉的 US$20／月金額，並把 76 個來源層的 `verified_at` 併入卡片唯一會顯示的 `accessed_at`。
 
 同日 14:05–16:10（Asia/Taipei）另有一輪在同一工作樹完成 **20 筆**局部複核與 **3 筆**新增（`docker-agentic-platform-250-sandbox-credit`、`sail-research-free-five-monthly-credit-card`、`deapi-five-welcome-credit-30-day`）；那 20 筆的 `verified_at` 各自標在 14:29–15:55，未併入上列 19 筆批次數字。兩輪合計使全庫由 1,125 增至 1,130，逐輪範圍見 [MAINTENANCE.md](MAINTENANCE.md)。
 
