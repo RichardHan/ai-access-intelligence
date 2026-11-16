@@ -32258,5 +32258,87 @@
       "https://imaginecup.microsoft.com/en-us"
     ],
     "recorded_at": "2026-11-16T17:35:00+08:00"
+  },
+  {
+    "record_id": "tencent-edgeone-makers-free-edition-quotas",
+    "change_type": "official_conflict_added",
+    "summary": "免費版規則補齊：開通即自動取得、Long-term validity、額度週期自開通時刻起算每月、儲存空間不隨週期重置、額滿僅當期功能停用且不產生費用。新增官方文件衝突：配額頁寫 Cloud Functions 記憶體時長 500,000 GB-s／月，方案比較頁寫 Free 50,000 GB-s，相差 10 倍，保留兩說不擇一。",
+    "sources": [
+      "https://edgeone.ai/document/211893332490612736",
+      "https://pages.edgeone.ai/document/billing-free-plan",
+      "https://pages.edgeone.ai/document/billing-plan-comparison"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "devin-free-light-agent-quota",
+    "change_type": "condition_corrected",
+    "summary": "更正：SWE-2 Flash Medium 可在 Devin Free 方案使用（High／Max 需付費），僅限 Desktop 與 CLI、不適用 cloud sessions；舊摘要寫成「SWE-2 免費使用列於 Pro」。官方同一頁並存兩個免費結束日：SWE-2 Flash 至 2026-12-04 18:00 UTC、SWE-2 全系列至 2026-11-30，之後 SWE-2 Flash 每百萬 token 輸入 US$0.10／輸出 US$0.50。",
+    "sources": [
+      "https://docs.devin.ai/desktop/models"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "kaggle-neurips-2026-smart-buildings-competition",
+    "change_type": "official_conflict_evidence_added",
+    "summary": "入賽／組隊截止的官方呈現由兩份變成三份：Overview 書面 Timeline 2027-01-03、頁面 Progress Timeline「Merger & Entry — December 4, 2026」、GetCompetition API 2026-12-03T23:59:59Z。參賽者 757080 直接提問「Dec 4 還是 Jan 3」，8 天後仍 0 回覆；主辦 757604 只承諾 round 1 結束後發布 round 2 時間表 full update，截至本輪未發布。最終提交截止與獎金不變。",
+    "sources": [
+      "https://www.kaggle.com/competitions/neurips-2026-smart-buildings",
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+      "https://www.kaggle.com/competitions/neurips-2026-smart-buildings/discussion/757080"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "kaggle-solar-filament-segmentation-2026",
+    "change_type": "evidence_clarified",
+    "summary": "主辦 759316 逐字「The form will also remain open till this time」，即報告表單與平台同一截止；舊紀錄「報告通道較早關閉」的假設不成立。但「this time」本身仍矛盾：平台 API 與頁首倒數是 2026-11-16T11:59:59Z（台北 19:59:59），重要日期頁寫 11:59 PM CDT；較新的 759466 只說「There is no extension.」。18:43 重取 API 仍 launched=true、提交數 16,912，未觀察到關閉。",
+    "sources": [
+      "https://www.kaggle.com/competitions/filament-segmentation-2026",
+      "https://www.kaggle.com/api/i/competitions.CompetitionService/GetCompetition",
+      "https://www.kaggle.com/competitions/filament-segmentation-2026/discussion/759316"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "amd-developer-credits",
+    "change_type": "evidence_clarified",
+    "summary": "Cloud 額度 30 天的起算點在三份 AMD 官方頁措辭不同：resources FAQ 寫「from successful account creation or login」、Developer Cloud FAQ 寫「from the date of deposit」、技術文章寫「30 days after activation」。另確認審核 2–3 個工作日、Fireworks US$50 兌換碼 90 天內需兌換、兌換後用至耗盡（技術文章的「valid for 90 days from issuance」措辭較鬆）。",
+    "sources": [
+      "https://developer.amd.com/resources/",
+      "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+      "https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-claim-amd-cloud-credits.html"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "amd-radeon-token-factory-free-api",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增：AMD Radeon Cloud 中國站的 Token Factory 免費 OpenAI／Anthropic 相容 API，不扣 GPU credits、always on；每金鑰 30 RPM、每帳戶 20 RPM、併發 8，另有以點數計的每日上限（數字未公布，UTC+8 00:00 重置）。條款限 trial／development、禁 production 與轉售、記錄 prompt 與輸出約兩天且不用於訓練。台灣能否註冊中國站未實證。",
+    "sources": [
+      "https://amd-aim.github.io/radeon-cloud-docs/introduction/",
+      "https://amd-aim.github.io/radeon-cloud-docs/guides/token-factory/",
+      "https://amd-aim.github.io/radeon-cloud-docs/api/terms/"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "google-ai-pro-ultra-monthly-cloud-credits-ai-studio",
+    "change_type": "new_opportunity_baseline",
+    "summary": "新增：2026-11-13 起 Google AI Pro／Ultra 訂閱者的每月 Google Cloud credits 可在 AI Studio 內領取並抵扣 Gemini API；每筆 credit 自核發起 12 個月有效、逐月堆疊、只有主要訂閱者可用，且 Gemini API 走 Cloud 帳單需先預付 US$5。各方案金額僅出現在圖片表格，內文無數字；這是付費訂閱附帶權益，不是免費方案。",
+    "sources": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/google-cloud-credits-gdp-ai-studio/"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
+  },
+  {
+    "record_id": "capy-open-source-daily-credits",
+    "change_type": "new_watchlist_baseline",
+    "summary": "新增觀察線索：Capy 開源方案讓公開 GitHub repo 申請每日 agent 與 Review credits，額度逐案核定、無公開數字，官方明寫條款可能變更；Capy 免費方案本身不含 credits。因無可估算額度，列 watchlist。",
+    "sources": [
+      "https://capy.ai/open-source"
+    ],
+    "recorded_at": "2026-11-16T18:45:45+08:00"
   }
 ]

@@ -5098,3 +5098,75 @@ N=1,130；R=15；A=3（2 機會、0 政策、1 觀察線索）；U=1,115；attem
 5. `tests/validate.py` 剩下的 16 筆證據落後清單（先做 S／A 級）：`nebius-builder`（17 天）、`elevenlabs-startup-grant`、`amd-developer-credits`（16 天）、`runpod-creator-early-access`、`botpress-...`（13 天）。
 
 ---
+
+## 2026-11-16 18:25–18:45（Asia/Taipei）｜N=1,135 · R=14 · A=3 · U=1,121 · attempted=0
+
+### 開場狀態：同一天第五輪，且前一輪還在跑
+
+18:20 開場時 `tools/round_lock.py status` 顯示 pid 87460（17:05 那一輪）仍持有鎖，`data/offers.json` 每隔幾分鐘被寫入（mtime 18:30:38）。依 README 規則，本輪在 18:38:53 取得鎖之前**只做唯讀工作**：建索引、跑 `tools/queue.py`、派 3 個 read-only subagent、自行抓來源。那一輪於 18:33 以 `0b29f56` 提交並 push（17 筆複核、2 筆新增、Pages 18:37 build 成功），18:38 釋放鎖後本輪才寫資料。
+
+基準（18:20）：全庫 1,133 筆（該輪尚未提交完），嚴格逾期 0 筆、7 天內到期 8 筆、`retry` 桶 0 筆。可寫入時的 N 是該輪提交後的 **1,135 筆**。該輪已複核的 20 個 ID（17 筆 reviewed＋2 筆新增＋合併的 `gemini-api-free`）全部排除在本輪清單外。
+
+### 範圍與分工（3 個 read-only subagent，全部只回報、不寫 repo）
+
+- **A｜到期與期限衝突 3 筆**：`kaggle-solar-filament-segmentation-2026`（今晚 19:59:59）、`stepfun-stepaudio3-music-gen-preview-nov8`（明早 11:59:59）、`kaggle-neurips-2026-smart-buildings-competition`（API vs Overview 差一個月）。
+- **B｜最久未核的可行動 S/A 級 6 筆**：`typhoon-free-research-api-rate-limited`、`tencent-edgeone-makers-free-edition-quotas`、`neo4j-auradb-free-tier-200k-nodes`、`trigger-dev-free-monthly-five-compute`、`inngest-free-monthly-fifty-k-executions`、`glama-free-mcp-inspector`。
+- **C｜新機會與去重**：5 個候選（AMD Radeon Token Factory、Devin SWE-2 Flash 免費窗、Google AI Pro/Ultra 雲端 credits、Capy 開源方案、Anthropic CVP），另列 4 個既有 ID 應更新與 12 條否決線索。
+
+主 agent 另外親自重讀 3 筆（`nebius-builder`、`elevenlabs-startup-grant`、`amd-developer-credits`，即上一輪列為優先的證據落後清單前三名），並自行重讀 `kiro-students` 與 `devin-free-light-agent-quota`。subagent 的「unchanged」不直接採用：所有寫進資料的引文都對應主 agent 自己開啟過的頁面（Kaggle 另用 curl POST `GetCompetition` 取得 API 值；Discussion 以瀏覽器直讀）。
+
+### 計數
+
+N=1,135；R=14；A=3（2 機會、0 政策、1 觀察線索）；U=1,121；attempted=0。
+
+### 會影響決策的更正與新矛盾
+
+- **`kaggle-neurips-2026-smart-buildings-competition`（入賽／組隊截止從「兩說」變「三說」）**：舊紀錄記 API `2026-12-03T23:59:59Z` 與 Overview 書面 Timeline `2027-01-03`；本輪直讀頁面發現 Progress Timeline 另顯示「Merger & Entry — December 4, 2026」，而參賽者 757080 的澄清串（"Dec 4, 2026 vs Jan 3, 2027"）8 天後仍 **0 Comments**；主辦 757604 只承諾 round 1 結束後發布 round 2 時間表 full update，截至本輪未發布。卡片仍採規則 §3(a) 的 Overview 為權威，但 unknowns 已改寫成三說並列。
+- **`kaggle-solar-filament-segmentation-2026`（「報告通道較早關閉」的假設不成立）**：主辦 759316 逐字「The form will also remain open till this time.」——表單與平台同一截止，不是較早關閉。但「this time」本身仍矛盾：平台 API 與頁首倒數是 `2026-11-16T11:59:59Z`（台北 19:59:59），Important Dates 寫 11:59 PM CDT；較新的 759466 只說「There is no extension.」並稱時區落差已處理。18:43 重取 API：`launched=true`、提交數 16,912（16:53 為 16,881），仍開放。
+- **`devin-free-light-agent-quota`（舊摘要寫錯方案層級）**：舊摘要「SWE-2 免費使用列於 Pro」；官方 docs 逐字「SWE-2 Flash Medium is available on the Free plan. SWE-2 Flash High and Max require a paid plan.」，且限 Desktop／CLI、不適用 Devin cloud sessions。同一頁還並存兩個免費結束日：SWE-2 Flash 至 `2026-12-04 18:00 UTC`、SWE-2 全系列至 `2026-11-30`，結束後 SWE-2 Flash 每百萬 token 輸入 US$0.10／輸出 US$0.50。標題、摘要、categories、unknowns 與 cadence（weekly）一併改寫。
+- **`tencent-edgeone-makers-free-edition-quotas`（官方文件差 10 倍）**：配額頁寫 Cloud Functions「Total Memory Time 500,000 GB-s/month」，方案比較頁寫 Free「Cloud Functions memory duration 50,000 GB-s」。同時補上免費版「Long-term validity」、開通即取得無須另行訂閱、週期自開通時刻起算每月、儲存空間不隨週期重置、額滿僅當期功能停用且不產生費用。
+- **`amd-developer-credits`（30 天起算點三頁措辭不同）**：resources FAQ 寫「from successful account creation or login」、Developer Cloud FAQ 寫「from the date of deposit」、技術文章（2026-06-22）寫「30 days after activation」。另確認審核 2–3 個工作日、Fireworks US$50 兌換碼須 90 天內兌換、兌換後用至耗盡（文章寫「valid for 90 days from issuance」措辭較鬆）。
+- **`kiro-students`（維持 No，但把理由寫清楚）**：重讀 170 餘所具名學校清單仍無任何台灣院校；未列學校段落只寫「If we extend the offer to your school, we may reach out」，沒有自行申請或人工補件入口。`taiwan_note` 與 `taiwan` 欄位先前敘述不一致的部分已統一。
+- 其餘重讀後無實質變更：`typhoon-free-research-api-rate-limited`（兩模型仍 5 RPS／200 RPM；新增 rate-limits 頁的 OCR 2 RPS／20 RPM、ASR 100 RPM 與 429 行為）、`neo4j-auradb-free-tier-200k-nodes`（20 萬節點／40 萬關係／1GB／單一資料庫／Graph Analytics 2GB、1 session、4 小時）、`trigger-dev-free-monthly-five-compute`（US$5/月、20 並行、Preview branches 的 pricing vs limits 矛盾仍在）、`inngest-free-monthly-fifty-k-executions`、`glama-free-mcp-inspector`（AI chat 文案由「tier-1 model」改為「your choice of Glama models」）、`nebius-builder`（條款 Last Modified: September 2026，C.1 仍只承諾 25＋25，landing/FAQ 仍列 $50 Toloka）、`elevenlabs-startup-grant`、`stepfun-stepaudio3-music-gen-preview-nov8`（preview 仍免費至 11/17 11:59:59）。
+
+### 新增 3 筆（皆主 agent 實讀官方頁）
+
+- **`amd-radeon-token-factory-free-api`（機會）**：AMD Radeon Cloud 中國站的 Token Factory，免費、always on、OpenAI 相容並另接受 Anthropic Messages API（可接 Claude Code），不扣 GPU credits。每金鑰 30 RPM、每帳戶 20 RPM、併發 8，另有以點數計的每日上限（數字未公布、UTC+8 00:00 重置）。條款（Last updated 2026-09-10）限 trial／development、禁 production／轉售、記錄 prompt 與輸出約兩天且不用於訓練。`taiwan: Unknown`——文件無國別排除文字，但 Token Factory 只在中國站（developer.amd.com.cn），台灣能否註冊未實證。
+- **`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`（機會）**：2026-11-13 起 AI Pro／Ultra 訂閱者的每月 Google Cloud credits 可在 AI Studio 內建立 profile、設定帳單、領取並抵扣 Gemini API。每筆 credit 自核發起 12 個月有效、逐月堆疊、只有主要訂閱者可用，且走 Cloud 帳單需先預付 US$5。各方案金額只出現在圖片表格、內文無數字，因此 `quota_classification: UNKNOWN`、`taiwan: Unknown`；這是付費訂閱權益，不是免費方案。
+- **`capy-open-source-daily-credits`（觀察線索）**：公開 GitHub 開源專案可申請每日 agent／Review credits，額度逐案核定、無公開數字，官方明寫「program terms can change over time」；Capy 免費方案本身不含 credits。無可估算額度，列 watchlist。
+
+**未納入**：Devin SWE-2 Flash 免費窗（判為既有 `devin-free-light-agent-quota` 的條件變動，更新原 ID 而非新卡）、Google AI Pro/Ultra credits 的舊候選（併入新 ID）、Anthropic CVP（需付費方案、無 credits）、AgentRouter／NaraRouter（無官方定價或條款頁、轉售型 gateway）、Hugging Face Inference Providers（官方已改為免費層無 credits）、Mistral Education（付費且國家選單無台灣）、Freebuff（25 國且不含台灣）、AI21（第三方稱已關閉 API 與既有官方紀錄衝突，未重讀官方頁故不動資料）。
+
+### 品質改善：本輪檢查後判定無需改動（留有證據）
+
+依規則「沒有足夠依據就不改」，本輪沒有為了改而改。實際檢查過並排除的四類問題：
+
+1. **免費標籤與費用矛盾**：`viewMatches('free')` 已由 schema 管制的 `setup_cost_usd`／`recurring_cost_usd` 判定，8 筆「FREE 類別但月費已知」的紀錄（Lindy US$29.99、AgentMail US$200 等）都帶 `cost_note` 且被排除在免費專區外，不是可領取的免費方案。
+2. **重複收錄**：以 difflib 對 1,133 筆標題做相似度掃描（>0.82），**0 組**；`validate.py` 的 6 組「同來源 URL」配對逐一檢視，都是同文件下的不同方案（Retool 教育／非營利、Elements of AI 兩門課、Monica 免費／教育、Codex Go/Plus、Mixedbread starter/startups、Dedalus hobby/startup），不需要合併。
+3. **台灣資格自相矛盾**：掃描 `taiwan: Yes` 但內文出現「不支援台灣／不適用／Not available in Taiwan」的紀錄：**0 筆**；反向 `taiwan: No` 而 `taiwan_note` 以 Yes/Conditional 開頭：**0 筆**。
+4. **死連結**：`tools/linkcheck.py` 掃 3,207 個 URL：dead 9、unreachable 26。逐筆檢視後，actionable 紀錄裡的 404 都是**刻意記錄的證據**（`voyage-free-tokens-batch-excluded` 的 `voyageai.com/pricing` 明文寫「HTTP 404（3,035 bytes 外殼）」、`nscale`／`baseten` 同），不是漏改的連結。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,138 筆（S/A/B/C/D = 178/200/136/280/124，未評級 220）。
+- `node --check app.js`、`node tests/filters.cjs`、`git diff --check` 全綠。
+- 本輪顯示層未改（app.js／style.css／tests 皆未動），因此瀏覽器檢查只做資料面：本機靜態站載入 1,138 筆、console error 0。
+- `git diff`：新增 3 個 ID、14 筆 reviewed 的 `verified_at`／`verification_scope`／來源 `accessed_at` 同步更新、8 筆 policy-history 追加；無刪除、無歷史改寫。
+
+### 未解證據缺口
+
+- Solar filament：19:59:59 之後是否真的關閉、Google Form 實際關閉時刻（本輪讀取時仍開放），以及 11:59 PM CDT 與 11:59:59Z 哪個是主辦實際意思。
+- NeurIPS：Progress Timeline 的 "December 4" 與 API 的 `2026-12-03T23:59:59Z` 是否會在 12 月初真的鎖住新入賽；757080 仍 0 回覆。
+- Devin：11/30 與 12/04 兩個免費結束日哪個適用於 SWE-2 Flash；Free 方案實際可用次數與是否需卡。
+- EdgeOne：Cloud Functions 記憶體時長 500,000 vs 50,000 GB-s 哪個現行；Pro/Business 已開賣與「商業化前從寬」敘述並存的實際生效時點。
+- AMD Token Factory：每日點數上限數字、台灣帳號能否完成中國站註冊與驗證。
+
+### 下一輪優先（最多 5 項）
+
+1. `kaggle-solar-filament-segmentation-2026`：19:59:59 後立刻重取 API 與頁面，確認關閉並改狀態（`next_review_at` 已排在今晚 19:45）。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：11/17 11:59:59 後確認 preview 是否退役、付費版是否需先儲值。
+3. `kaggle-neurips-2026-smart-buildings-competition`：12 月初前每週重讀 API 與 757080，確認 12-03 是否真的鎖入賽。
+4. `tests/validate.py` 剩下的 13 筆證據落後清單（先做 S／A 級）：`runpod-creator-early-access`、`botpress-free-hundred-conversations-reset-overage-watch`（13 天）、`yzu-ai-center-h200-hpc-trial-watch`、`thunder-students`、`sarvam-access`（10 天）。
+5. `amd-radeon-token-factory-free-api`、`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`：查台灣註冊可行性與每日點數／各方案 credit 金額；AI Studio 的金額表可從 `aistudio.google.com/learn/claim-google-ai-plan-credits-in-ai-studio` 取得文字版。
+
+---
