@@ -4563,3 +4563,88 @@ Wiro 全球高教在學學生可申請一次200美元點數，入帳後12個月�
 - `python3 tests/validate.py`：PASS 1,123 筆（S/A/B/C/D = 178/196/131/279/122，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（全部 PASS；核實範圍 flags 18 筆早於 verified_at）、`git diff --check` 均通過。
 - `git diff` 檢查：`data/offers.json` 21 筆 `verified_at` 變更（含 2 筆新增）、2 筆 status 變更（`duplicate_merged`、`applications_closed`）、1 筆 cadence 改 daily；新增 ID 2 個、移除 0 個；README／scope／last_research_run 數字一致（1,123／21／2／1,100）。
 - 本機靜態站以 headless WebKit 實測：全庫 1,123；台灣條件適用 193、免費方案 731、本輪更新 23；搜尋「客語」2 筆且新卡顯示 S 級；新竹卡標題顯示 2.2%；ASPN 卡標題顯示已於 12:00 截止；Google 憑證卡顯示 Wayback 改寫時點；「截止日由近到遠」可用；載入更多 24→48；console error 0；手機 390×844 `scrollWidth` 390 無水平溢出。
+
+
+---
+
+## 2026-11-16 12:05–12:50（Asia/Taipei）｜N=1,123 · R=7 · A=0 · U=1,116 · attempted=0
+
+### 併發：開場時有另一個回合在同一份檔案上寫入（本輪怎麼處理）
+
+1. 12:05 開場即發現 `.round-lock.json` 由另一回合持有（pid 87866，11:24 起），且 `data/offers.json` 在 12:05:31 被寫到一半（`json.load` 直接失敗）。依 README「偵測到別的回合還在跑時，只讀不寫」，本輪全程只做唯讀工作：讀 schema／validator／app.js、跑 `tools/linkcheck.py`、以 `/tmp` 快照做瀏覽器探測、開兩個 subagent 做外部研究。
+2. 該回合 12:26 提交並 push `5e10c28`（R=21、A=2），12:28:28 釋放鎖。本輪此時才 `acquire` 並寫入。
+3. 因此本輪刻意改成**它沒覆蓋的切片**：先讀 `last_research_run.reviewed_ids`（21 筆）排除，再用 `tools/queue.py` 的冷卻與到期序挑選。這比「照自己的清單重跑一次」省下 21 次重複查核，也避免同一天同一筆被兩個回合來回改寫。
+4. 教訓：**同一 repo 的兩個回合可以同時存在**（排程重疊），鎖只能防止同時寫，不能防止重複研究。開場除了 `round_lock.py status`，還要讀 `last_research_run` 才能知道上一輪剛核過什麼。
+
+### 基準
+
+嚴格逾期 1 筆（`aspn-…` 11:45）、7 天內到期 10 筆、`retry` 桶 0 筆、24 小時未核 828 筆。上一輪 12:16 剛結束（R=21），其 21 筆全部跳過。本輪範圍＝**最久未核且未被上一輪覆蓋的 6 筆**（11-06～11-15 核實、12–14 天未動）＋ 1 筆今日截止後的狀態確認。
+
+### 實質變更（7 筆複核；最重要的一筆是修正，不是新增）
+
+- **`e2b-hobby-free-hundred-dollar-credits`（決策相關，最重要）**：兩個數字都錯，且錯在會直接影響容量規畫。
+  - **並發上限 20 → 10**。官方定價卡逐字「10 concurrent sandboxes」，`docs.e2b.dev/billing` 的方案對照表也是「Concurrent sandboxes | 10 | 100 - 1,100」。舊紀錄寫的 20 其實是同表的**另一列**「Concurrent builds | 20」（建置數，不是可同時執行的沙箱數）；`sources[].evidence` 也照抄了 20，所以靠「來源有寫」檢查不出來。已把 builds 與 sandboxes 的差別寫進摘要與 `access_risk`。
+  - **Pro 底座 US$0 → US$150/月＋用量**。舊摘要寫「升級付費方案（Pro 底座 US$0加用量）」，定價頁 Pro 卡逐字「$150 /month (+usage costs)」，官方試算「Pro Plan Base $150 … Total Monthly $316」（100 並發）。US$100 額度耗盡後「免費」不會延續，這一點現在寫清楚了。
+  - 兩個來源的 `evidence` 與 `accessed_at` 都改成本次重讀值，`verification_scope` 寫明這是一次**更正**而不是刷新。
+- **`lovable-sweden-2026`（扣款風險）**：條款逐字「Eligible students get Lovable Pro at no cost from 1 September 2026 to 31 December 2026」「If your workspace already has one, the discounted subscription is charged to it from 1 January 2027 unless you cancel before that date.」「If it does not, you will not be charged.」；活動首頁仍寫「Your account is still available after December 31 … continue working … on the free plan」。兩份官方頁對「1/1 之後會怎樣」並存，維持條件式並把衝突留在摘要，不任選一版。資格另含「18 歲以上」與「瑞典大學／學院在學、持學生 email」。
+- **`nvidia-build-free`**：官方 FAQ（JSON 格式的 help-center 檔）逐字「All models on build.nvidia.com are free to prototype with.」「The free tier runs on rate limits - up to 40 requests per minute (RPM) for most models, with no per-token billing. Your personal rate limit is shown in the top-right of the dashboard.」生產用途需 AI Enterprise 的既有主張未變。
+- **`blockrun-free-open-model-gateway`**：新增兩條官方自述——「Our free Mistral upstream is down — calls to nvidia/mistral-* still return 200, answered by a healthy free model.」與「NVIDIA retired every free Llama in November 2026.」。後者是 **BlockRun 對 NVIDIA 的說法**，NVIDIA 官方頁沒有這句，所以只寫在摘要並標明來源身分，不寫進額度欄位、不改模型清單。
+- **`agentset-free-thousand-pages-tenk-monthly-retrievals`**：Free 卡逐字「$0 USD」「Forever Free」「1,000 pages / 10,000 retrievals」「Not included: Connectors / Custom integrations」；比較表「Retrievals per month 10,000」但頁數只寫「Pages included 1,000」，加購列才是「Additional page per month」。因此「檢索＝每月」成立、「頁數週期」仍未知，`unknowns` 改寫成這個精確說法。
+- **`beautiful-ai-student-pro-first-year`**：教育頁逐字「Beautiful.ai for students, one year free!」「This offer is available for new student subscribers only and valid for 12 months from activation.」「Verified students (with a .edu email) are eligible」。台灣學生若無 .edu 信箱，需走說明中心的替代文件，這句仍留在摘要。
+- **`aspn-youth-sports-tech-hackathon-2026`**：12:38 截止後重讀，頁面仍逐字「(延長至 2026 年 11 月 16 日 中午12點)」與橫幅「活動延長報名至11/16 (一)」，全頁無「已結束」「額滿」，也沒有第二次延期；報名鈕由 JS 載入無法從靜態 HTML 判斷。維持 `applications_closed`，並把「按鈕狀態不可知」寫進 scope。
+
+### 新機會：11 個候選全部與既有 ID 重複，A=0
+
+兩個 subagent 各讀了 6 與 5 個候選（全部實際開啟官方頁、逐字引文、台灣視角）：
+
+| 候選 | 既有 ID（未新增） |
+|---|---|
+| 青年AI實戰養成班（商業署） | `aocai-youth-ai-training-2026` |
+| 中華電信×Google AI Plus 首年 0 元 | `cht-google-ai-plus-first-year-free-2026` |
+| 臺北市 SITI AI 主題式研發 | `taipei-industry-incentive-ai-rd-batch2-2026` |
+| 商業署多店升級第 3 梯 | `taiwan-multi-store-ai-upgrade-tier3-2026` |
+| 中企署深科技跨域研發 116 年度 | `moea-sme-deep-tech-cross-domain-rd-grant-116` |
+| 服務業 AI 企業專班 | `aocai-enterprise-ai-training-subsidy-2026` |
+| Rime Free（每月 US$50） | `rime-starter-fifty-model-pool`、`rime-stt-nov19-free-window` |
+| Modal for Builders | `modal-for-builders-compute-credits-2026` |
+| Google AI 方案每月 Cloud credits | `google-ai-developer-monthly-cloud` |
+| ChatGPT 訂閱附 API 額度 | `openai-chatgpt-subscriber-api-credits` |
+| Vercel Token Pass $30→$150 | `vercel-token-pass-thirty-for-eighty-credit` |
+
+被否決、未收錄的新線索（附理由）：LG **K-EXAONE Showroom 從台灣 egress 直接 302 到 `err/general-geo-blocked`**（「This service is not accessible from your current location.」，與既有 `taiwan: No` 判定一致，可作補強證據）；OpenAI ChatGPT 訂閱 API 額度的**國家 cohort 未含台灣之證明**（官方只寫「Availability also depends on the enabled cohort and country」）；JetBrains Junie Lite（10-02，早於視窗）、Anthropic Claude Max/Ultra API 額度（10-07，早於視窗）、Neon Agent Plan（2025-09）、LiveKit／Parallel／Cartesia／Braintrust／Daytona／Steel／LlamaParse（Wayback 10 月快照已存在，非新方案）、Hyperbrowser／Reducto（無可解析的視窗前快照，new 未證實）、阿里雲 Model Studio（長期方案，9/8 調整早於視窗）、Qoder CN（僅社群貼文）。
+
+### 本輪品質檢查（**無程式變更**，附理由）
+
+- 掃過三類可機械偵測的不一致：`行業可行動但期限已過`（1 筆，ASPn，已處理）、`title` 與 `summary`／`quota_details` 的同一單位數字互相矛盾（0 筆）、`verification_scope` 首個日期早於 `verified_at`（18 筆，全是合法引用舊公告日，非錯誤）。
+- **不新增驗證規則**：本輪唯一的資料錯誤是「把同一張表的 builds 20 讀成 sandboxes 20」。這種錯誤要靠人工比對廠商**另一份文件**（billing 對照表）才看得出來，任何字串規則都只能退化成「數字不一致就報」，而 repo 內大量散文（「20 人」「20 分鐘」「20%」）會被誤攔——2026-11-16 早班已兩次踩到這個取捨。
+- **已知但本輪不改**：`app.js` 關鍵字是全子字串比對，所以搜「Rime」會同時命中 `crimea`、`prime`、`experiments`（28 筆）。改成拉丁字母詞界比對會讓「Ver」無法即時篩選「Vercel」，屬 UX 取捨而非缺陷；README 已寫明關鍵字只比對卡片可見字串。
+
+### 來源衝突與工作經驗
+
+- **同一廠商兩份文件要互為驗證**：E2B 的錯不是「來源沒寫」，而是「讀錯同一張表的列」。此後遇到「A 數字」與「B 數字」型方案（並發／建置、seat／workspace、requests／RPM），兩份文件都要對一次。
+- **subagent 的「新機會」要先去重再談價值**：本輪 11 個候選 100% 重複。這不是浪費——它同時證明既有收錄沒有漏掉這批窗口內的重要變動，也把「哪幾筆該更新」變成清單（其中 5 筆已於 11-14～11-16 由前幾輪更新到同一個結論）。
+- **台灣 egress 的實測可以推翻行銷文案**：K-EXAONE 的 Showroom 從桃園 HiNet 出口直接被導到 geo-blocked 頁，而 `docs.exaone.ai` 回 200、`api.exaone.ai` 回 401——「API 邊緣可達」不等於「可註冊」，與既有 `taiwan: No` 判定一致。
+- **Wayback 快照是「新不新」的判準**：11 個候選裡有 7 個靠 2026-09～10 的快照證明「早就存在」，比任何部落格的「new」標籤可靠。
+
+### 驗證與發布前證據
+
+- `python3 tests/validate.py`：PASS 1,123 筆（S/A/B/C/D = 178/196/131/279/122，未評級 217）；`node --check app.js`、`node tests/filters.cjs`（含額度細節、關鍵字、追查失敗與「期限已過仍可行動」三條）、`git diff --check` 均通過。
+- `git diff` 檢查：`data/offers.json` 只有 7 筆 `verified_at`／`next_review_at`／`verification_scope` 變更（無新增、無刪除 ID、無狀態變更——ASPn 的 `applications_closed` 是上一輪判的，本輪只補截止後的重讀證據）；`data/policy-history.json` 追加 2 筆（E2B 更正、Lovable 扣款條款重核），不改寫舊紀錄。
+- 本機靜態站（`python3 -m http.server`＋headless Chromium，1280×900 與 390×844）：全庫 1,123、免費方案 731、台灣條件適用 193、開發者 622、本輪更新 7；搜尋「E2B」第一張卡標題已是「並發上限10」，摘要顯示「Hobby並發上限10個沙箱（Concurrent builds才是20；Pro為100–1,100）」「底座US$150/月＋用量（官方試算100並發合計約US$316/月）」；搜尋「客語」2 筆；console error 0；手機 `scrollWidth` 390＝`clientWidth` 390，無水平溢出。
+
+### 未解證據缺口
+
+- E2B：US$100 額度的有效期限官方仍未載（pricing 與 billing 兩頁都沒有）；Hobby 的 `Concurrent builds 20` 與 `concurrent sandboxes 10` 在實務上如何互動（建置中是否佔用沙箱名額）未載；台灣發卡升級未測。
+- Agentset：1,000 頁額度是否每月重置仍未載；Connectors 對 Free 完全不可用（需 Pro 每 Connector US$100）。
+- BlockRun：官方稱 NVIDIA 已撤下全部免費 Llama，但 NVIDIA Build 頁面未見此公告；9 個免費模型的實際速率上限仍未公布。
+- Lovable：條款（1/1 起自動扣款）與 FAQ（期滿可轉免費）並存，官方未收斂；台灣留學生個案未核。
+- ASPn：12:00 後報名鈕是否仍可按無法由靜態頁判定（JS 載入），錄取名單 11/18 才通知。
+- Kaggle Solar Filament：報告通道 12:59 已過、平台提交到 19:59:59；`deadline_at` 仍取較早的 12:59，下一輪 19:59 後才能整筆改判。
+
+### 下一輪優先（最多 5 項）
+
+1. `kaggle-solar-filament-segmentation-2026`（今日 19:59:59 平台截止後）：改判 `applications_closed`，並確認報告通道 12:59 與平台 19:59 的關係是否改變；來源 Kaggle GetCompetition API＋Overview。
+2. `ugreen-ai-nas-hackathon-2026`（15:45）、`tw-labor-pretraining-ai-smart-application-tnnu-03`（16:00，12:12 讀值已 44 人／名額 34）：今日截止後改判；來源 Devpost updates、台灣就業通。
+3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`（每日追蹤）：再讀 `dgservice` 餘額（12:16 為 2.2%／NT$129,593），見額滿或低於 1% 即改狀態與標題。
+4. `e2b-startups-20k-publicity`：同一個 E2B 帳號體系，`Concurrent builds` 與併發的差異也要在該筆寫清楚；另查 US$100 與新創 US$20K 額度是否有到期日條款（pricing／billing／startups terms）。
+5. `google-ai-professional-certificate-tw-pro-3mo`（11/17）：條款 11-06 已過、行銷頁仍寫 2027-01-01；確認是否改版或下架，仍衝突就維持 `terms_conflict`。

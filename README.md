@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,123 筆**（906 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 12:16 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **21 筆**既有案例，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,100 筆**既有紀錄未完成本輪複核。會改變行動的三筆：新竹市 AI 工具補助餘額 3 小時內由 NT$192,051（3.3%）降到 NT$129,593（2.2%），改為每日追蹤；Google AI Professional Certificate 的 Google One 條款以 Wayback 同日兩筆存檔定位，確認 2026-11-06 當天由「2027-01-01」改寫成「November 6, 2026」而行銷頁未同步，維持 `terms_conflict`；ASPN 運動科技黑客松 12:00 截止後改判 `applications_closed`。另有 13 筆穩定免費／教育方案逐字重讀後條件不變，並把重複收錄的 `satfaq-ai-trial-index` 併入同一活動的免費試用紀錄。新增經濟部 AI 新秀計畫學習獎勵金（非在職者最高 NT$20 萬）與臺灣客語語音資料庫授權（四縣／海陸各 300 小時辨識語料）。
+資料集目前有 **1,123 筆**（906 項機會、50 項政策、167 筆觀察線索），更新時間 **2026-11-16 12:38 Asia/Taipei**（不代表全庫複核；筆數包含保留的重複／歷史紀錄）。本輪成功局部複核 **7 筆**既有案例，新增機會 **0 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,116 筆**既有紀錄未完成本輪複核。最有價值的一筆是修正：`e2b-hobby-free-hundred-dollar-credits` 原寫「最高 20 並發」，官方定價卡與計費文件 2026-11-16 皆為 **10 concurrent sandboxes**（20 是 concurrent *builds*），Pro 底座也由「US$0」更正為 **US$150/月＋用量**；並發上限砍半會直接改變读者的容量規畫。另外兩筆與金額／續費有關：`lovable-sweden-2026` 重讀條款後確認 2027-01-01 起「已有付款方式者自動扣折扣價」與 FAQ「期滿可轉免費方案」兩說並存未收斂；`nvidia-build-free` 逐字核到 FAQ「All models … free to prototype with」「up to 40 requests per minute (RPM) … with no per-token billing」。`blockrun-free-open-model-gateway` 新增官方自述「免費 Mistral 上游中斷、改派其他免費模型」，`agentset-…-monthly-retrievals` 確認 Free 為「Forever Free」且只有檢索列標 per month（頁數週期仍未知），`beautiful-ai-student-pro-first-year` 確認「限新學生訂閱者、啟用起 12 個月」與 .edu 字面要求。`aspn-youth-sports-tech-hackathon-2026` 於 12:38 截止後重讀，頁面仍無「已結束／額滿」與第二次延期，維持 `applications_closed`。
 
 ## 使用方式
 
