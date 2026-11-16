@@ -5247,3 +5247,55 @@ R 的 20 個 ID：`google-ai-pro-ultra-monthly-cloud-credits-ai-studio`、`exa-s
 5. **`aliyun-model-studio-new-user-quota`／QwenCloud**：查「付款資訊」解鎖是否需實際扣款、台灣發卡是否被接受，以及兩個入口是否共用帳號池。
 
 ---
+
+## 2026-11-17 01:06–01:30（Asia/Taipei）｜N=1,138 · R=9 · A=0 · U=1,129 · attempted=0
+
+### 開場狀態
+
+01:05 開場，`tools/round_lock.py status` 無人持鎖，01:06:48 取得鎖。HEAD `aa461d6`、工作樹乾淨、`origin/main` 同點。Pages 仍是 main 根目錄的 legacy build，repo 內沒有 workflows。嚴格逾期 0、7 日內到期 9（3 筆冷卻）。`stepfun-stepaudio3-music-gen-preview-nov8` 與 `taoyuan-ai-productivity-online-courses-115` 的截止都在 11/17 稍晚，且 6 小時前才核過，本輪不在截止前重讀。
+
+本環境的 subagent 不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash，實際用 3 個 `task` 代理只回報、不改檔。RecheckClosing 與 NewOffers 有交卷；EvidenceLag 到結案前仍在寫報告，其 8 筆沒有整批寫回。主 agent 自己重讀後才寫資料。
+
+### 計數
+
+N=1,138；R=9；A=0（機會 0、政策 0、觀察 0）；U=1,129；attempted=0。
+
+R 的 9 個 ID：`aocai-working-free-ai-courses-2026`、`vercel-ai-gateway-parallel-decisions-free-window`、`gemini-code-assist-retired`、`google-ai-professional-certificate-tw-pro-3mo`、`craft-education-lifetime-fifteen-ai-credits`、`rosalind-academic`、`taiwan-nsp-youth-ai-training-subsidy-2026`、`mozilla-foundation-human-scale-ai-incubator-2026`、`ntu-hua-nan-fintech-ai-hackathon-2026`。
+
+### 會影響決策的更正
+
+- **`aocai-working-free-ai-courses-2026`**：總覽由 23 班降為「共 22 班」，已無開課日 2026-11-16 與 2026-11-17。11/26 台北班仍「招生中」、報名截止 2026/11/19、預計 100 人、遴選通過免費；11/27 臺中班仍「已額滿」。
+- **`vercel-ai-gateway-parallel-decisions-free-window`**：模型頁 Price 為 Free，inputCost／outputCost 為 0，context 32K，每次最多 100 題。changelog 仍只寫 free through November 23, 2026，未寫時區。定價文件（last_updated 2026-09-08）說免費層逐模型限流、超限回 429，但沒有數字，也沒寫此促銷。markdown 替代頁不含標價。
+- **`gemini-code-assist-retired`**：狀態維持 closed。`docs/resources/quota-and-pricing.md` 仍列 Individual 1,000 requests/日與 generous free tier，與 README「No free tier」及 2026-06-18 淘汰公告並存。不要依配額文件重新申請。
+- **`rosalind-academic`**：仍限美國大學實驗室。新增確認：Only US accounts qualify；境外開申請頁可能被導回 ChatGPT；不提供 Zero Data Retention。
+- **`craft-education-lifetime-fifteen-ai-credits`**：15 credits 是一次性，重驗不重置；裝置端模型免費且不限量；Max 模型選了會要求升級 Plus。
+- **`google-ai-professional-certificate-tw-pro-3mo`**：矛盾未解。台灣頁仍寫 2027-01-01，條款（Last updated July 31, 2025）仍寫 November 6, 2026，地區清單仍含 Taiwan。維持 terms_conflict。
+- **`mozilla-foundation-human-scale-ai-incubator-2026`**、**`ntu-hua-nan-fintech-ai-hackathon-2026`**：截止與資格未變，申請仍開放。Mozilla FAQ Last updated November 16, 2026。
+- **`taiwan-nsp-youth-ai-training-subsidy-2026`**：不另立新 ID。研究代理以為資料庫沒有「尖兵」，但既有紀錄已含 116 年起訓練費內含最高新臺幣 8,000 元 AI 工具訂閱補助。本輪只確認首頁仍公告 115/11/30 停用，並改到青年職訓網。
+
+### 未納入
+
+Base44 定價頁有 Cyber Monday「30% Off／Code: BASE30」橫幅，同時寫 Final Hours 與 Sale ends in 14 days，結束日不是日曆日期，未建卡。Dify 教育頁與文件的畢業保留措辭本輪已讀到對齊，但未寫回 `dify-education-200-total`。Blaxel 定價頁寫 Up to $200 in free credits，部落格（dateModified 2025-12-03）仍說加付款方式或首購後才湊到 $200，兩說未在本輪寫回。
+
+### 品質改善
+
+本輪沒有改程式。檢查過：免費專區仍由設定費與月費判定；`terms_conflict` 不在已截止集合，Google 證照卡仍會出現，狀態藥丸是「官方條款有差異」，這是既有設計而不是本輪新錯。去重教訓寫在下面，不值得為一次研究代理的搜尋方式改驗證器。
+
+### 未解證據缺口
+
+- Vercel：11/23 的時區、是否含當日、期後價格、Free AI Gateway Credit 徽章是否另扣額度、台灣帳號。
+- Gemini CLI：配額文件的 1,000 requests/日是否會被實際拒絕，未登入。
+- Google 證照：結帳頁能否仍兌換，未登入。
+- Rosalind：12 個月後的費率只寫在個別 accepted offer。
+- 新尖兵：AI 工具訂閱補助的指定課程與工具清單仍未公布；學習獎勵金月數上限仍只見於新聞稿。
+- Dify：台灣校域是否受理，本輪未寫回。
+
+### 下一輪優先（最多 5 項）
+
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-17 11:59:59 後確認 preview 是否退役、付費 model ID 與是否須先儲值。來源：StepFun 模型頁與定價頁。
+2. `taoyuan-ai-productivity-online-courses-115`：2026-11-17 截止後改狀態。來源：桃園市課程頁。
+3. `aocai-working-free-ai-courses-2026`：2026-11-19 前確認 11/26 台北班是否仍受理或額滿。來源：https://serv.gcis.nat.gov.tw/AOCAI/courses/working 與工研院班頁。
+4. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
+5. `dify-education-200-total` 與 `blaxel-starting-credit-payment-bonus`：把本輪已讀但未寫回的畢業保留對齊、以及定價頁 Up to $200 與部落格付款加碼的並存寫進原 ID。來源：https://www.dify.ai/education 、https://docs.dify.ai/en/cloud/use-dify/workspace/subscription-management 、https://blaxel.ai/pricing 。
+
+---
