@@ -5616,3 +5616,53 @@ R 的 18 個 ID：`qnx-global-hackathon-2026`、`atlassian-codegeist-2026-develo
 3. `ant-ling-ling-3-2-flash-free-two-weeks`：2026-11-20 再讀定價頁，若 2 週免費句被改寫才改狀態。來源：https://developer.ant-ling.com/en/docs/models/price/ 。
 4. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：2026-11-22 23:59 前確認 M11W3 是否如期結束、有無 M11W4。來源：https://autoclaw.z.ai/blog/news/M11W3/ 。
 5. `byteplus-modelark-free-inference-500k`：冷卻後用可執行 JavaScript 的渲染重讀額度頁。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
+
+---
+
+## 2026-11-19 19:05–2026-11-19 19:30 Asia/Taipei｜N=1,145 · R=8 · A=0 · U=1,137 · attempted=0
+
+### 開場狀態
+
+19:05 開場。Asia/Taipei。HEAD `861c5a9` 與 origin/main 同點，工作樹乾淨，無開放 PR。`tools/round_lock.py status` 無人持鎖，19:05 取得鎖。起始 1,145 筆。嚴格逾期 0、7 日內到期 8（6 筆冷卻）。`aocai-working-free-ai-courses-2026` 與 `rime-stt-nov19-free-window` 的交接動作要等 23:59 之後，17:16 才核過，本輪不重讀。`byteplus-modelark-free-inference-500k` 仍在追查失敗冷卻。
+
+本環境不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入以主 agent 自己打開的官方頁為準。代理回報的未重讀頁不刷新 `verified_at`。
+
+### 計數
+
+N=1,145；R=8；A=0（機會 0、政策 0、觀察 0）；U=1,137；attempted=0。結束仍 1,145 筆。觀察線索 171 減 1、機會 924 加 1，因為 `openai-academic-researchers-waitlist` 由 watchlist 改為 opportunity，不是新 ID。
+
+R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-free-trial-hybrid-ai-two-thousand-points`、`shift-asia-prototype-twenty-companies`、`aocai-youth-ai-training-2026`、`tw-moe-aicup-2026-vlm-solar-inspection`、`parallel-mcp-keyless-free-search-fetch-decisions`、`openai-academic-researchers-waitlist`、`couchbase-activate-starter-kit-current-availability-watch`。
+
+### 會影響決策的更正
+
+- **`aocai-youth-ai-training-2026`**：專區頁仍把成大班標成 2026-11-30 開課。成大頁寫 1 班已於 2026-10-01 開訓，2 班 2026-12-21 開訓、報名至 2026-12-15。實踐台北班已額滿，期間改為至 2026-12-24。台中班改為至 2027-01-15。清華文件須於 2026-11-27 前寄出或親送。中華科大第一梯仍至 2026-11-30 17:00。已讀四頁都寫課程免費。狀態改 `terms_conflict`。
+- **`tw-moe-aicup-2026-vlm-solar-inspection`**：同一頁並存 11/30 延長公告、11/16 報名時間表與倒數 00。不把任一說當成報名已關或仍開。總獎勵是新臺幣 300,000 元含國網 GPU，不是另加。go.aicup.tw 要求登入，未送出。
+- **`openai-academic-researchers-waitlist`**：11/16 公告寫 11/23 先到先得 50,000 名、每案 3 席 Plus、12 個月、不含 API。說明中心仍寫申請關閉。比較表排除中國與香港，台灣不在排除名單。不是新 ID。
+- **`parallel-mcp-keyless-free-search-fetch-decisions`**：免金鑰免費工具加入 `image_search` 的 fast 模式。advanced 找圖與 `web_research` 仍要登入。
+- **`couchbase-activate-starter-kit-current-availability-watch`**：申請頁 301 到定價頁。條款 PDF 仍寫 US$12,750 與 while supplies last。定價頁 403，不當成結束。
+- **`google-gear-get-certified-special-edition-paa-2026`、`satfaq-free-trial-hybrid-ai-two-thousand-points`、`shift-asia-prototype-twenty-companies`**：主張未變。GEAR 仍至 2026-12-09、僅公司信箱。さっとFAQ 兩種 2,000 點分支仍在。SHIFT ASIA 仍 20 社、0 円。
+
+### 未納入
+
+沒有新增 ID。代理提到的 iPAS 考試、數發部訓用平臺錄取名單、台中去年企業 AI 學院，都不是仍可申請的新方案。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是多班次計畫不能把最早的子截止寫進 `deadline_at`，否則驗證會把整筆改成已截止。青年班的 11/27 與 11/30 因此留在摘要，不寫進 `deadline_at`。
+
+### 未解證據缺口
+
+- 成大：專區 11/30 與課程頁 12/21 哪一個可報名。
+- 清華：回傳地址那句不完整。
+- AI CUP：三種報名時程哪一個是系統狀態。
+- OpenAI：11/23 是否準時開放；台灣院校能否通過驗證。
+- Couchbase：301 之後有沒有新的申請入口。
+- Parallel：匿名速率仍無數字。
+
+### 下一輪優先（最多 5 項）
+
+1. `aocai-working-free-ai-courses-2026`：2026-11-19 23:59 後把 deadline_at 改到已核的 12/02 班 2026-11-27 12:30，不要把整個計畫標成已截止。來源：https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585 。
+2. `rime-stt-nov19-free-window`：2026-11-20 確認免費窗是否已從定價頁移除。來源：https://www.rime.ai/pricing 。
+3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後確認申請是否開放、說明中心是否仍寫關閉。來源：https://openai.com/index/expanding-chatgpt-for-academic-researchers/ 與 https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers 。
+4. `aocai-youth-ai-training-2026`：2026-11-27 前再讀清華文件截止與成大開課日衝突有沒有改寫。來源：https://ncku-ihq-gif.github.io/ncku-ai-class/ 與 https://exten.site.nthu.edu.tw/p/412-1213-23213.php 。
+5. `tw-moe-aicup-2026-vlm-solar-inspection`：2026-11-20 再讀賽事頁，看 11/30 公告、11/16 時間表與倒數是否收斂。來源：https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699 。
