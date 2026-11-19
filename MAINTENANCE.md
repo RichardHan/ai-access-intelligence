@@ -5482,3 +5482,68 @@ R 的 13 個 ID：`ntpc-uko-microsoft-ai-cert-free-2026`、`taiwan-mobile-free-a
 3. `ntpc-uko-microsoft-ai-cert-free-2026`：2026-11-18 23:59 取消截止前後，確認 PL-900 表單是否仍可送出、有無額滿句。來源：https://tibame.tw/UfMB0 與 PL-900 課頁。
 4. `byteplus-modelark-free-inference-500k`：換渲染路線重讀免費額度頁，確認 500k 與 Free Tokens Only 是否仍在。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
 5. `antigravity-free`：2026-11-18 三款第三方模型移除後，確認免費欄還列哪些模型。來源：https://antigravity.google/docs/plans 。
+
+---
+
+## 2026-11-19 17:06–2026-11-19 17:16 Asia/Taipei｜N=1,141 · R=11 · A=1 · U=1,130 · attempted=1
+
+### 開場狀態
+
+17:05 開場。Asia/Taipei。HEAD `50fa4e1` 比 `origin/main` 超前 1，該 commit 是 2026-11-17 04:24 的複核，Pages 最後成功部署仍停在 `44f484b`。工作樹乾淨。`.round-lock.json` 的 pid 7701 已死，17:06 接管。同一目錄另有三個維護流程在跑，但自 2026-11-17 04:24 後沒有寫檔。
+
+本環境不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入時它們仍未交卷；下列更正以主 agent 自己打開的官方頁為準。未採用未交卷的轉述。
+
+### 計數
+
+N=1,141；R=11；A=1（機會 1、政策 0、觀察 0）；U=1,130；attempted=1。結束 1,142 筆。
+
+R 的 11 個 ID：`stepfun-stepaudio3-music-gen-preview-nov8`、`taoyuan-ai-productivity-online-courses-115`、`rime-stt-nov19-free-window`、`aocai-working-free-ai-courses-2026`、`ntpc-uko-microsoft-ai-cert-free-2026`、`antigravity-free`、`hsinchu-city-ai-youth-digital-tool-subsidy-2026`、`mozilla-foundation-human-scale-ai-incubator-2026`、`vercel-ai-gateway-parallel-decisions-free-window`、`iteracompute-free-qwen-3-8-27b-monthly-30m`、`devin-startups-credits-match`。
+
+attempted：`byteplus-modelark-free-inference-500k`。只記追查失敗，不刷新 `verified_at`。
+
+新增：`keenable-academic-monthly-100k-credits`。
+
+### 會影響決策的更正
+
+- **`stepfun-stepaudio3-music-gen-preview-nov8`**：定價頁把限時免費截止從 2026-11-17 11:59:59 改為 2026-11-23 11:59:59 AM（UTC+8），新價自同日 12:00:00 PM 生效。兩支 preview 仍標 Free (limited time)。不是已經結束。
+- **`taoyuan-ai-productivity-online-courses-115`**：課程頁標題下逐字「報名已額滿」，並已公告 1117 Teams 連結。狀態改 `applications_closed`。
+- **`antigravity-free`**：個人方案仍 US$0/month。免費欄現列 Gemini 3.8 Flash，以及 Claude Sonnet 4.6、Claude Opus 4.6、GPT-OSS-120b；三者註腳仍寫 2026-11-18 移除，但勾選還在。Gemini 4 Hydrogen 不在個人方案清單。`deadline_at` 從模型移除日改回空值，否則驗證會把仍有效的免費方案判成已過期。狀態改 `terms_conflict`。
+- **`hsinchu-city-ai-youth-digital-tool-subsidy-2026`**：餘額由 $129,593(2.2%) 降為 $115,837(2.0%)。購買期限仍至 115/10/31，受理仍至 115/11/30 或經費用罄。現在新訂閱仍不符合。
+- **`iteracompute-free-qwen-3-8-27b-monthly-30m`**：截止仍是 2026-11-24 00:00 PT。截止前信箱驗證可領每月 30M。截止後只留給截止前正淨儲值戶與有效方案用戶，其後新儲值不再授予。免卡句本輪未重現。
+- **`aocai-working-free-ai-courses-2026`**：11/26 台北班 2026-11-19 仍標招生中、無額滿。12/02 班報名仍至 2026/11/27 12:30、費用 0。11/27 臺中班仍額滿。
+- **`ntpc-uko-microsoft-ai-cert-free-2026`**：PL-900 第二梯 11/21–22 仍列在課頁。取消截止 11/18 23:59 已過。表單靜態 HTML 沒有關閉句，也沒有可填欄位。未登入、未送出。
+- **`rime-stt-nov19-free-window`**：2026-11-19 定價頁仍寫免費至 November 19, 2026。時區未列，不當成已經結束。
+- **`mozilla-foundation-human-scale-ai-incubator-2026`**：截止仍 2026-11-20 23:59 PST。7 席、3 席預選、最高 US$500,000 未變。
+- **`vercel-ai-gateway-parallel-decisions-free-window`**：仍免費至 November 23, 2026。時區未寫。
+- **`devin-startups-credits-match`**：FAQ 寫 US$15,000 與配對額度用完前留在帳戶。不是無條件 US$65,000。
+
+### 新增
+
+- `keenable-academic-monthly-100k-credits`：學生、教師與學術研究者每月 100,000 credits，另加標準 100K welcome pack，限非商業、須申請。與既有新創 US$5,000 及人人可領的每月 10 萬次請求分開。台灣未列。來源 https://keenable.ai/edu 。
+
+### 未納入
+
+研究代理結案前沒有交出具官方正文的新候選。Devin 新創頁的 US$15,000 是既有紀錄的條件更新，不另立 ID。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是 `deadline_at` 若拿來記子事件（Antigravity 的模型移除日），日期一過，`tests/validate.py` 會要求整筆方案改成已截止。這次改資料，不新增欄位。
+
+### 未解證據缺口
+
+- BytePlus：額度頁正文三次仍是外殼。站內搜尋標籤有 Free 500K tokens per model，不能當成規則已重核。
+- Antigravity：11/18 註腳已過，三個第三方模型仍列在免費欄。實際選單未登入。
+- StepFun：免費 preview 是否豁免先儲值；官方把截止寫成 AM。
+- 新竹市：V4-7 PDF 的兩個月句本輪未重讀；餘額何時用罄。
+- 新北 PL-900：靜態表單沒有欄位，剩餘名額與考試費負擔未核。
+- IteraCompute：免卡句本輪未重現。
+- Keenable 學術：credits 與 requests 的換算、.edu.tw 是否接受。
+- Rime：November 19 的時區未列。
+
+### 下一輪優先（最多 5 項）
+
+1. `aocai-working-free-ai-courses-2026`：2026-11-19 23:59 後把 deadline_at 改到已核的 12/02 班 2026-11-27 12:30，不要把整個計畫標成已截止。來源：https://college.itri.org.tw/Lesson/LessonData/7571A149-3346-4FAE-B5AF-DCADB2DBDAC3 與 https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585 。
+2. `rime-stt-nov19-free-window`：2026-11-20 確認免費窗是否已從定價頁移除，並把狀態改為已結束或改寫後續費率。來源：https://www.rime.ai/pricing 。
+3. `byteplus-modelark-free-inference-500k`：改用可執行 JavaScript 的渲染重讀額度頁，確認 500k 與 Free Tokens Only。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
+4. `antigravity-free`：確認註腳已過的三個第三方模型是否仍能在免費選單選到。來源：https://antigravity.google/pricing 與 https://antigravity.google/docs/models 。
+5. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 11:59 前再讀一次，確認沒有再展延，並核對 preview 是否開始退役。來源：https://platform.stepfun.ai/docs/en/guides/pricing/details.md 。
