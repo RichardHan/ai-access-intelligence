@@ -5547,3 +5547,72 @@ attempted：`byteplus-modelark-free-inference-500k`。只記追查失敗，不�
 3. `byteplus-modelark-free-inference-500k`：改用可執行 JavaScript 的渲染重讀額度頁，確認 500k 與 Free Tokens Only。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
 4. `antigravity-free`：確認註腳已過的三個第三方模型是否仍能在免費選單選到。來源：https://antigravity.google/pricing 與 https://antigravity.google/docs/models 。
 5. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 11:59 前再讀一次，確認沒有再展延，並核對 preview 是否開始退役。來源：https://platform.stepfun.ai/docs/en/guides/pricing/details.md 。
+
+## 2026-11-19 18:06–2026-11-19 18:26 Asia/Taipei｜N=1,142 · R=18 · A=3 · U=1,124 · attempted=0
+
+### 開場狀態
+
+18:05 開場。Asia/Taipei。HEAD `13ea7dd` 與 origin/main 同點，工作樹乾淨，無開放 PR。Pages 是 main 根目錄 legacy build，狀態 built。`tools/round_lock.py status` 無人持鎖，18:06 取得鎖。起始 1,142 筆。嚴格逾期 14、7 日內到期 8（其中 4 筆冷卻）、retry 冷卻 1。上一輪 17:16 才核過的 `aocai-working-free-ai-courses-2026`、`rime-stt-nov19-free-window`、`antigravity-free`、`stepfun-stepaudio3-music-gen-preview-nov8` 不重讀；`byteplus-modelark-free-inference-500k` 一小時內才追查失敗，維持冷卻。
+
+本環境不能指定 gpt-6.1-terra 或 Gemini 3.8 Flash。實際派出 3 個 `task` 代理只回報、不改檔。寫入以主 agent 自己打開的官方頁為準。未採用未交卷的轉述。
+
+### 計數
+
+N=1,142；R=18；A=3（機會 2、政策 0、觀察 1）；U=1,124；attempted=0。結束 1,145 筆。
+
+R 的 18 個 ID：`qnx-global-hackathon-2026`、`atlassian-codegeist-2026-developer-hackathon`、`ntu-hua-nan-fintech-ai-hackathon-2026`、`taiwan-multi-store-ai-upgrade-tier3-2026`、`cht-gemini-shorts-contest-2026`、`autoclaw-weekly-perk-november-nine-hundred-million-tokens`、`heygen-voice-turbo-free-api-until-2026-11-30`、`ant-ling-ling-3-2-flash-free-two-weeks`、`loom-classroom-education-seventyfive-off-business-ai`、`kaggle-google-agent-harness-pele-2027`、`kaggle-google-quantum-circuit-optimization-2026`、`kaggle-neurips-2026-smart-buildings-competition`、`river-inference-25-credit`、`cleanapis-free-500k-tokens-month`、`promptlayer-free-observability-2500-requests`、`perplexity-watch`、`nebius-token-factory-signup-one-dollar`、`amd-developer-credits`。
+
+新增：`together-ternary-bonsai-27b-free-tokens`、`moea-aimfg-ai-learning-platform-free-courses-115`、`watchlist-baichuan-signup-eighty-cny`。
+
+### 會影響決策的更正
+
+- **`qnx-global-hackathon-2026`**：首頁與 JSON-LD 仍寫 US$50,000。同一首頁與規則的具名現金獎加總 US$48,000。Community Choice 沒有現金金額。狀態改 `terms_conflict`。截止與排除清單未變，台灣仍未列排除。
+- **`amd-developer-credits`**：program 頁把 Token Lab 即時 API 列成第三條路徑，並寫 DeepLearning.AI 一個月會員。US$100／US$50 未在此頁重現，沿用較早證據。不是中國站 Token Factory。
+- **`moea-aimfg-ai-learning-platform-free-courses-115`**：2026-10-02 公布欄寫全程免費、10 題測驗換完訓證書。註冊頁 2026-11-19 HTTP 500。狀態 `needs_verification`。不是 NT$12 萬人才券。
+
+- **`atlassian-codegeist-2026-developer-hackathon`**：卡片摘要補上規則已有的第二名 US$8,000×3、第三名 US$5,000×3。日程頁開始仍是 9:15am PDT，規則仍是 9:00am Pacific Time。截止仍是 2026-12-22 12:00pm PST。
+- **`ntu-hua-nan-fintech-ai-hackathon-2026`**：仍報名中，至 2026-11-23，限臺大一般生，總獎金 NT$180,000。Luma 寫每隊有專屬 AWS 環境，額度未公布。同一頁同時寫 12/1 17:30 與 12/1 21:00 至 12/4 21:00。46 Going 不是名額上限。
+- **`loom-classroom-education-seventyfive-off-business-ai`**：授權 FAQ 仍列 Classroom 75% off list price。教育支援頁寫 up to 75% 與 up to 50%。不是固定 75%。Business + AI 月繳仍 US$24。
+- **`ant-ling-ling-3-2-flash-free-two-weeks`**：推算的 2 週窗口落到 2026-11-19，但定價頁、changelog、FAQ、billing guide 都仍是 2026-11-05 版，2 週免費句還在。不改成已結束。每日 50 萬與每月 ¥10 券仍並存。
+- **`autoclaw-weekly-perk-november-nine-hundred-million-tokens`**：M11W3 的 100M、11/22 23:59（UTC+8）未變。blog 把已過期的 M10W4 標成 2026-11-19 並置頂，正文仍是 10/26–11/01，且 40M 與文末 100M 自相矛盾。不是新一期。
+- **`river-inference-25-credit`**：`signup_bonus_enabled` 仍 false。auth config 另讀到 `topup_min_usd` 10。這是執行期設定，不是公開最低儲值承諾，也不是結束公告。
+- **`cleanapis-free-500k-tokens-month`**：Free 仍 0.5M、免卡。方案卡 60 req/min 與比較表 80 仍並存。退款頁新增技術故障例外，定價頁 FAQ 仍寫 all paid plans。
+- **`cht-gemini-shorts-contest-2026`**：徵件仍至 2026-11-30 18:00。補上最佳觀看獎機型，以及活動辦法的 10% 扣繳句。這是活動辦法，不是法律意見。
+- **`taiwan-multi-store-ai-upgrade-tier3-2026`**：公告 807 仍至 11/30 17:00。列表第 1 頁至 11/18 沒有提前截止。不能據此說經費未用罄。
+- **`perplexity-watch`**：比較表仍 3/day，帳戶文仍 five per day。定價頁本次未重讀，US$20 不刷新為本次已核。
+- **`nebius-token-factory-signup-one-dollar`**：billing 仍強制、須銀行卡，全文無 US$1。promo code 不能支付未結清發票。
+- **`heygen-voice-turbo-free-api-until-2026-11-30`**：仍免費至 2026-11-30，Free 輸出仍禁商用。台灣資格仍無明文。
+- **`kaggle-neurips-2026-smart-buildings-competition`**：書面 2027-01-03 與 API 2026-12-03T23:59:59Z 仍並存。維持每日追蹤到 12 月初。
+- **`kaggle-google-agent-harness-pele-2027`**：API 截止未變。規則得獎授權寫 Apache 2.0，提交要求仍寫 Apache-2.0 or MIT。
+- **`kaggle-google-quantum-circuit-optimization-2026`**：總池與排除清單未變。API 入賽截止仍 2027-01-13T23:59:00Z。
+
+遠截止且條件未變的競賽，`review_cadence` 由 daily 改 weekly，避免每天擠進逾期桶。NeurIPS 的 12/3 衝突維持 daily。
+
+### 新增
+
+- `together-ternary-bonsai-27b-free-tokens`：目錄把輸入與輸出標 Free。credits 文件仍寫沒有免費試用，首次至少 US$15 才能建立 API key。不是免卡方案。
+- `watchlist-baichuan-signup-eighty-cny`：定價頁仍寫 2024-05-22 起新註冊贈 ¥80。同頁有合作諮詢入口。未註冊，不當成可領。
+
+### 品質改善
+
+本輪沒有改程式。看到的問題是 daily cadence 讓數週後才截止的競賽每天佔滿逾期桶。已在資料裡把條件穩定者改成 weekly，不改 `tools/queue.py`，避免蓋掉真正需要每日追的衝突。
+
+### 未解證據缺口
+
+- QNX：US$2,000 差額沒有官方對帳句。
+- 臺大黑客松：AWS 額度金額，以及 17:30 與 21:00 哪一個是環境真正可寫入的時間。
+- Ant Ling：2 週免費的精確時點；頁面未改寫不等於已結束。
+- AutoClaw：未登入，不知道 100M 是否已發完。
+- River：`topup_min_usd` 10 未出現在公開定價頁。
+- Perplexity：定價頁本次未重讀。
+- Together：Free 模型在餘額為零時是否仍可呼叫，未實測。
+- 百川：自行註冊是否仍自動入帳 ¥80。
+- BytePlus：額度頁正文仍未重核。
+
+### 下一輪優先（最多 5 項）
+
+1. `aocai-working-free-ai-courses-2026`：2026-11-19 23:59 後把 deadline_at 改到已核的 12/02 班 2026-11-27 12:30，不要把整個計畫標成已截止。來源：https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585 。
+2. `rime-stt-nov19-free-window`：2026-11-20 確認免費窗是否已從定價頁移除。來源：https://www.rime.ai/pricing 。
+3. `ant-ling-ling-3-2-flash-free-two-weeks`：2026-11-20 再讀定價頁，若 2 週免費句被改寫才改狀態。來源：https://developer.ant-ling.com/en/docs/models/price/ 。
+4. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：2026-11-22 23:59 前確認 M11W3 是否如期結束、有無 M11W4。來源：https://autoclaw.z.ai/blog/news/M11W3/ 。
+5. `byteplus-modelark-free-inference-500k`：冷卻後用可執行 JavaScript 的渲染重讀額度頁。來源：https://docs.byteplus.com/en/docs/modelark/free-inference-quota 。
