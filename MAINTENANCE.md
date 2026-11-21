@@ -5726,3 +5726,30 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
 4. `antigravity-free`：2026-11-30 核對 Claude 4.6 與 GPT-OSS 移除狀況與免費選單更新。
 5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
+
+---
+
+## 2026-11-21 14:05–2026-11-21 14:06 Asia/Taipei｜N=1,146 · R=2 · A=0 · U=1,144 · attempted=0
+
+基準：可行動 1,045、嚴格逾期 69、7 日內到期 7、12 小時內已核 7。無開放 PR，持鎖進行維護。優先處理逾期與即將截止之台灣青年補助與培訓活動。
+
+### 局部複核既有紀錄（2 筆）
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：直讀新竹市數位申辦平台（https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323 ），剩餘補助經費降至 $101,565 (1.7%)；受理截止日維持 115 年 11 月 30 日或經費用罄止；可補助與排除 AI 軟體規範確認。
+- `taiwan-mobile-free-ai-life-course-2026q4`：直讀台灣大哥大官方活動頁（https://www.taiwanmobile.com/content/event/consumer-ai/index.html ），2026 第四季 AI 智慧生活課程「職場變形記」持續受理報名，11/21（台北文創/高雄三多）與 12/19（台中向上/高雄三多）門市實體課程免費。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 更新新竹市青年數位工具補助標題與經費消耗狀態（剩餘 1.7%），提醒讀者經費即將用罄。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+2. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
