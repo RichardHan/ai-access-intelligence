@@ -5857,3 +5857,29 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
 4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+
+---
+
+## 2026-11-21 19:06–2026-11-21 19:08 Asia/Taipei｜N=1,146 · R=1 · A=0 · U=1,145 · attempted=0
+
+基準：可行動 1,044、嚴格逾期 65、7 日內到期 6、12 小時內已核 12。無開放 PR，持鎖進行維護。優先處理逾期之公辦免學費失待業者 AI 職業培育方案。
+
+### 局部複核既有紀錄（1 筆）
+- `taipei-tvdi-free-ai-vocational-training-116h1`：直讀臺北市職能發展學院官方招生公告頁（https://www.tvdi.gov.taipei/News_Content.aspx?n=A0A874C46637EF1F&sms=78D644F2755ACCAA&s=817CC914A319B1B3 ），116 年度上半年失待業者 AI 職前訓練（AI 媒體專才×行銷自動化 520 小時、AI 新媒體運營影音實戰 480 小時）培育期間學雜費、材料費、勞工保險費等由學院全額負擔條款確認有效；郵寄掛號報名截止日維持 115/12/02（郵戳為憑），現場報名為 115/11/30–12/01，甄試預訂 115/12/15；檢視自辦招生訊息列表未見延期、額滿或停開公告。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 局部複核逾期公辦免費職業訓練機會，核對官方公告與簡章條款，確認失待業者免學雜材料費資格與重要甄試報名日程。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- 現場報名實際剩餘名額與報名人數需待 11/30 現場受理階段。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+2. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+5. `taipei-tvdi-free-ai-vocational-training-116h1`：2026-11-28 追蹤 11/30–12/01 現場報名前夕是否有異動或補充說明。
