@@ -5805,3 +5805,29 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
 5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
+
+---
+
+## 2026-11-21 17:05–2026-11-21 17:07 Asia/Taipei｜N=1,146 · R=1 · A=0 · U=1,145 · attempted=0
+
+基準：可行動 1,044、嚴格逾期 66、7 日內到期 6、12 小時內已核 10。無開放 PR，持鎖進行維護。優先處理即將於 11/23 到期之音訊生成 API 預覽方案。
+
+### 局部複核既有紀錄（1 筆）
+- `stepfun-stepaudio3-music-gen-preview-nov8`：直讀官方計費說明（https://platform.stepfun.ai/docs/en/guides/pricing/details.md ），StepAudio 3 系列新費率生效時點維持 2026-11-23 12:00:00 PM (UTC+8)，限時免費預覽維持有效至 2026-11-23 11:59:59 AM (UTC+8)；正式收費費率（音樂 US$2.40/小時起、語音 US$14/1M 字元）確認。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 複核即將到期之 StepAudio 3 免費預覽方案，更新官方計費文檔佐證與即將截止時程。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+2. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
