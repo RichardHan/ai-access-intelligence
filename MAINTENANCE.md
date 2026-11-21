@@ -5699,3 +5699,30 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `antigravity-free`：2026-11-30 核對 Claude 4.6 與 GPT-OSS 移除狀況與免費選單更新。
 4. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
 5. `isaacus-api-new-user-hundred-credit`：持續追蹤台灣付款方式相容性與超額扣款機制。
+
+---
+
+## 2026-11-21 13:05–2026-11-21 13:07 Asia/Taipei｜N=1,146 · R=2 · A=0 · U=1,144 · attempted=0
+
+基準：可行動 1,045、嚴格逾期 70、7 日內到期 7、12 小時內已核 5。無開放 PR，持鎖進行維護。優先處理逾期與近期截止之高價值與條款衝突案例。
+
+### 局部複核既有紀錄（2 筆）
+- `cyleague-cyber-navi-trial`：直讀官方服務頁（https://www.cyleague.jp/service/cyber-navi/ ），確認 2026年10月1日〜11月30日 法人限定試用活動仍有效，期間將通常 14 日試用延長至 30 日、上限 40 件；申請截止日 2026-11-30 確認。
+- `aocai-youth-ai-training-2026`：直讀成功大學青年班官方網站（https://ncku-ihq-gif.github.io/ncku-ai-class/ ），成大 2 班報名截止仍為 2026/12/15、開訓日期為 2026/12/21，招生名額 38 名；與專區總覽 11/30 開課標示維持矛盾。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 局部複核 2 筆既有到期案例並更新官方佐證。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- `aocai-youth-ai-training-2026`：專區總覽與成大官網開課日矛盾維持未解。
+
+### 下一輪優先（最多 5 項）
+1. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+2. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+3. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+4. `antigravity-free`：2026-11-30 核對 Claude 4.6 與 GPT-OSS 移除狀況與免費選單更新。
+5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
