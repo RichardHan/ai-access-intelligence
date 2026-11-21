@@ -5666,3 +5666,36 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後確認申請是否開放、說明中心是否仍寫關閉。來源：https://openai.com/index/expanding-chatgpt-for-academic-researchers/ 與 https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers 。
 4. `aocai-youth-ai-training-2026`：2026-11-27 前再讀清華文件截止與成大開課日衝突有沒有改寫。來源：https://ncku-ihq-gif.github.io/ncku-ai-class/ 與 https://exten.site.nthu.edu.tw/p/412-1213-23213.php 。
 5. `tw-moe-aicup-2026-vlm-solar-inspection`：2026-11-20 再讀賽事頁，看 11/30 公告、11/16 時間表與倒數是否收斂。來源：https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699 。
+
+---
+
+## 2026-11-21 12:05–2026-11-21 12:08 Asia/Taipei｜N=1,146 · R=5 · A=1 · U=1,140 · attempted=0
+
+基準：可行動 1,046、嚴格逾期 24、7 日內到期 6、12 小時內已核 0。本輪處理工作樹既有未提交內容並實讀複核逾期與條款衝突案例。無開放 PR，未違反任何硬紅線。
+
+### 局部複核既有紀錄（5 筆）
+- `cht-google-ai-plus-first-year-free-2026`：直讀官方活動頁（https://www.cht.com.tw/home/campaign/googleone/index.html ），精采 5G 799-999 搭 400GB 享首年 0 元、期滿恢復原價，Hami Point 100 點（限 11/30 前申辦）與 5GB 流量確認；卡片未標續租金額，付費年約解約補貼款文字與首年卡區分。
+- `aocai-working-free-ai-courses-2026`：直讀 12/02 批發 MLOps 班（ievents 3585，https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585 ），報名期間 2026/10/14 12:00 ~ 2026/11/27 12:30、費用 0、政府補助遴選通過者免費；原 11/19 台北班截止日已過，依仍開放的最新梯次將機器可讀 deadline_at 調整為 2026-11-27T12:30:00+08:00，不逕判全計畫截止。
+- `rime-stt-nov19-free-window`：直讀官方定價頁（https://www.rime.ai/pricing ），STT 30 天全方案免費體驗期已於 2026-11-19 結束，狀態標記為 expired；11/20 起正式費率為 US$0.002/min (Flex) 及 US$0.0016/min (Scale)；帳號既有每月 US$50 額度（免綁卡）仍存在。
+- `antigravity-free`：直讀官方定價頁（https://antigravity.google/pricing ），個人方案仍為 US$0/month；免費模型包含 Gemini 3.8 Flash，以及 Claude 4.6 與 GPT-OSS-120b；三者註腳 4 之移除期限文字已由原先 11/18 改為「Will be removed on November 30, 2026.」。
+- `openai-academic-researchers-waitlist`：直讀 OpenAI 說明中心文章 20001406（https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers ），官方仍明確標示「New applications for ChatGPT for Academic Researchers are currently closed. New signups join an informational waitlist」；維持 terms_conflict 狀態，等待 11/23 公告之正式開放窗口。
+
+### 新增紀錄（1 筆）
+- `isaacus-api-new-user-hundred-credit`：直讀官方定價頁（https://www.isaacus.com/pricing ），API 新用戶加入付款方式後立即贈送 US$100 額度，須於兩個月內兌用；按輸入 tokens 計價；台灣帳號資格、超額扣款與稅費未核。
+
+### 品質改善
+- 修正多梯次培訓課程 deadline_at 過期導致驗證失敗之問題，動態切換至仍開放報名之下一梯次截止時間。
+- 標記已過期的限時免費窗口為 expired，維護全庫歷史真實性與卡片狀態對齊。
+- 重新執行 tools/prioritize.py 確保 S–D 分層、評分與 priority_note 文案與最新 status 一致。
+
+### 未解證據缺口
+- `tw-moe-aicup-2026-vlm-solar-inspection`：賽事頁目前回傳 403，維持三種時程矛盾之舊紀錄。
+- `mozilla-foundation-human-scale-ai-incubator-2026`：官方頁回傳 403，等候後續開放重試。
+- `openai-academic-researchers-waitlist`：11/23 是否準時開放先到先得登記。
+
+### 下一輪優先（最多 5 項）
+1. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+2. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+3. `antigravity-free`：2026-11-30 核對 Claude 4.6 與 GPT-OSS 移除狀況與免費選單更新。
+4. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
+5. `isaacus-api-new-user-hundred-credit`：持續追蹤台灣付款方式相容性與超額扣款機制。
