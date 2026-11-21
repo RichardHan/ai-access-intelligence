@@ -5831,3 +5831,29 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
 4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+
+---
+
+## 2026-11-21 18:05–2026-11-21 18:07 Asia/Taipei｜N=1,146 · R=1 · A=0 · U=1,145 · attempted=0
+
+基準：可行動 1,044、嚴格逾期 65、7 日內到期 6、12 小時內已核 11。無開放 PR，持鎖進行維護。優先處理最久未核之免綁卡開發者高額度 API 方案。
+
+### 局部複核既有紀錄（1 筆）
+- `nanonets-50-credits-no-card`：直讀官方定價頁（https://nanonets.com/pricing ），Starter 方案維持 Free，免綁卡註冊即贈 US$50 起始額度，含 Data extraction AI、API access、Email/雲端硬碟整合與最多 3 位使用者；按 block 複雜度扣點機制（Simple US$0.02、Standard US$0.10、Complex US$0.30/次）確認有效。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 局部複核免綁卡之高額度 API 機會，實讀定價細節，確認額度規模與單次呼叫扣抵費率。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+2. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
