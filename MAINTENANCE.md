@@ -5779,3 +5779,29 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
 4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
 5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
+
+---
+
+## 2026-11-21 16:05–2026-11-21 16:07 Asia/Taipei｜N=1,146 · R=1 · A=0 · U=1,145 · attempted=0
+
+基準：可行動 1,045、嚴格逾期 67、7 日內到期 7、12 小時內已核 9。無開放 PR，持鎖進行維護。優先處理台北時間 15:59 剛截止之大額無稀釋補助徵件。
+
+### 局部複核既有紀錄（1 筆）
+- `mozilla-foundation-human-scale-ai-incubator-2026`：直讀官方 FAQ（https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/call-for-proposals/faqs/ ），截止時間 Friday, November 20, 2026 at 11:59 PM PST（換算台北時間 11/21 15:59）已過，官方明文不接受逾期且無展延；狀態由 active 更新為 applications_closed，轉入歷史紀錄。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 依官方截止時限（台北 11/21 15:59）即時更新狀態為 applications_closed，避免前端卡片繼續宣稱可送件。
+- 執行 tools/prioritize.py 保持優先度評分一致（關閉項目降為 D 級歷史）。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+2. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
