@@ -5753,3 +5753,29 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
 5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
+
+---
+
+## 2026-11-21 15:05–2026-11-21 15:07 Asia/Taipei｜N=1,146 · R=1 · A=0 · U=1,145 · attempted=0
+
+基準：可行動 1,045、嚴格逾期 67、7 日內到期 7、12 小時內已核 9。無開放 PR，持鎖進行維護。優先處理逾期之青年培訓活動。
+
+### 局部複核既有紀錄（1 筆）
+- `ntpc-uko-microsoft-ai-cert-free-2026`：直讀新北市青年局課程頁（https://www.youth.ntpc.gov.tw/youth/ch/app/course/view?module=course&id=181&serno=df416949-4771-4ca0-ad05-683e7c9c7eeb ），PL-900 第二梯開訓日為 11/21–22（青職基地），取消報名截止為 11/18 23:59；正取保證金 1,000 元完訓應試全額退款預定 115/12/15 前；Google 表單連結仍維持登入填寫要求。
+
+### 新增紀錄（0 筆）
+- 本輪無新增案例。
+
+### 品質改善
+- 複核新北有課培訓活動時程，確認 PL-900 第二梯開課與考試退費條款。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `mozilla-foundation-human-scale-ai-incubator-2026`：2026-11-21 15:59 太平洋時間截止點後重讀官方徵件頁。
+2. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 申請是否正式開放。
+3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
+4. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+5. `cht-google-ai-plus-first-year-free-2026`：2026-11-30 查核 Hami Point 100 點早鳥申辦截止。
