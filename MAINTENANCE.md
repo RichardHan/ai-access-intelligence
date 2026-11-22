@@ -6322,3 +6322,51 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 前追蹤 12/02 批發 MLOps 台北班額滿狀態。
+
+
+## 2026-11-23 05:06–2026-11-23 05:20 Asia/Taipei｜N=1,161 · R=20 · A=2 · U=1,141 · attempted=0
+
+基準：起始既有紀錄 1,161 筆（941 項機會、50 項政策、170 筆觀察線索）。遵循反集中原則，避開 12 小時冷卻期內項目，挑選佇列排序第 4 至 23 項共 20 筆既有紀錄分兩組完成實讀複核；另由第三路發掘並實讀 2 筆國科會 116 年度科研專案完成建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `lets-go2-ai-ocr-launch-six-hundred-pages`：實讀 PR TIMES 新聞稿與官網說明，確認 AI-OCR 將於 2026-12-10 上線，2026-10-13 至 2026-12-28 登記者贈 1 年期每年 600 頁額度（價值 33,000 日圓），限日本法人/個人事業主。
+- `nextwave-ai-legaltech-hackathon-2026`：實讀東吳大學法學院公告與簡章，第一屆 NextWave AI 法律科技黑客松徵件截止至 2026-11-30 23:59，總獎金 NT$46,000，入圍組享 AWS 與律果科技 AI 資源。
+- `fireworks-glimmer-sft`：實讀 Fireworks AI 官方公告，Muse Glimmer 30B LoRA SFT 微調限時免費至 2026-12-01 16:00 (Asia/Taipei)，推論維持原價。
+- `kaggle-neurips-2026-smart-buildings-competition`：實讀 Kaggle 賽事頁面，NeurIPS 智慧建築大賽總獎金 $40,000，Entry & Team Merger 截止為 2026-12-03T23:59:59Z，提供參賽者每週 GPU/TPU 額度。
+- `synthesia-basic-monthly-ten-min-five-hundred-no-download`：實讀 Synthesia 定價與條款，Free tier 維持每月 3 分鐘不可下載額度，Syren 500 AI credits 促銷確認於 2026-11-30 23:59 BST 截止。
+- `upstage-file-search-beta-free`：實讀 Upstage Console 定價頁，File Search 標示為 Beta，Beta 期間儲存、處理與搜尋完全免費。
+- `xai-grok-free-limited-chat-agent-build`：實讀 xAI 官方頁面，Grok 平台對一般用戶提供 $0/mo 之有限對話、自訂 agent 與 Grok Build 體驗，免綁卡。
+- `lamatic-starter-free-monthly-daily-requests`：實讀 Lamatic.ai 定價頁，Starter 方案維持免費，含每月 3,000 次 API requests 與每日 100 次 requests 上限。
+- `runpod-startup`：實讀 RunPod 官方新創專案頁面，Starter（$1,000）與 Venture（$5,000）額度維持有效 1 年，限未公開募資之早期新創。
+- `evidently-ai-startups-expert-discount`：實讀 Evidently AI 定價與新創方案頁，合格新創享 Expert 方案前 6 個月最高 90% 折扣，開源核心維持 Apache 2.0 免費。
+- `fal-builder-redirect-unresolved`：實讀 fal.ai 官方路由，舊 /builder 與 /grants 仍 HTTP 307/308 重定向至 /startup-program，限定歐洲與亞洲早期獲投新創申請 $1,000–$5,000。
+- `sarashina-free-beta-japan-only`：實讀 Sarashina 遊樂場與條款，sarashina3.2 等 6 款模型免費 Beta 測試中，條款第 3 條明訂僅限日本國內居住者與日本法人使用。
+- `lamatic-startup-program-up-to-5000`：實讀 Lamatic.ai 新創頁，Launch（$1,000）與 Seed（$5,000）額度有效 12 個月，限公司網域信箱申請。
+- `postman-free-ai-credits-context-graph`：實讀 Postman 定價頁，Free 卡片標註 100 AI credits 與比較表標註每月 50 credits 之衝突持續存在，維持 terms_conflict。
+- `modal-qualified-grants`：實讀 Modal 定價頁，全用戶享 Starter $30/mo 免費運算與 1 TiB egress；學術補助最高 $10,000，新創享專屬一次性額度。
+- `upstash-qstash-workflow-free`：實讀 Upstash 定價頁，QStash Free 維持每日 1,000 次 messages/steps 硬上限，無超額扣款風險。
+- `base44-startup-partner-bootstrapped-separated`：實讀 Base44 新創頁，Bootstrapped 免費抵免 $480、Funded 免費抵免 $960，metadata 之 $1,000 標註與年費減免衝突持續存在。
+- `ishou-university-campus-m365-copilot-firefly`：實讀義守大學圖資處授權清單與首頁文宣，首頁宣稱全校 Copilot 免費，但圖資處清單未列 Copilot 進階授權，維持衝突標記。
+- `bolt-free-monthly-million-daily-threehundredk`：實讀 Bolt.new 定價頁，Free 方案維持每月 100 萬 tokens、每日 30 萬 tokens 上限與 bolt.host 託管額度。
+- `n8n-cloud-fourteen-day-thousand-executions-ai-trial`：實讀 n8n Cloud 定價頁，14 天免費試用含 1,000 次 executions，免信用卡且期滿自動停止無扣款風險。
+
+### 新增紀錄（2 筆）
+- `nstc-tech-and-private-univ-practical-rnd-116`：國科會 116 年度「技專校院與私立大學校院實務型研究專案計畫」補助案，產學鏈結投入實務研究與場域驗證（TRL 4 以上），一般型每年上限 NT$100 萬元、跨域實作型每年上限 NT$500 萬元，主動增核研究主持費與學生實習實作費，受理至 2027-01-20。
+- `nstc-humanities-social-sciences-excellence-grant-116`：國科會人文處 116 年度「人文及社會科學研究卓越計畫」補助案，鼓勵中堅學者探索前瞻跨領域核心議題，每件每年上限 NT$500 萬元（3 年最高 NT$1,500 萬元），主持費月支 NT$30,000 元（3 年共 NT$108 萬元），每年擇優補助至多 10 案，受理至 2027-01-29。
+
+### 品質改善
+- 實讀最新官方公告與公文簡章，消除東吳大學法律科技黑客松、Lets-go2 AI-OCR 日本活動、Fireworks Muse Glimmer 微調期限、Kaggle NeurIPS 智慧建築大賽獎金時程等截止資訊缺口。
+- 持續追蹤 Postman 額度標示矛盾、Base44 金額文字衝突與義守大學 Copilot 授權宣傳矛盾，維持精確分類標籤。
+- 透過 `tools/prioritize.py` 完成全庫優先度評分計算，新增 2 筆國科會專案評定為 S 級，全庫 S 級擴展至 192 筆。
+
+### 未解證據缺口
+- `postman-free-ai-credits-context-graph`：Free 卡片 100 credits 與比較表 50 credits/mo 之官方衝突仍未修正。
+- `base44-startup-partner-bootstrapped-separated`：metadata 宣稱之 up to $1,000 credits 與方案減免 $480/$960 文字衝突持續。
+- `ishou-university-campus-m365-copilot-firefly`：校方招生/首頁文宣與圖資處正式授權軟體清單不一致持續。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 前追蹤 12/02 批發 MLOps 台北班額滿狀態。
