@@ -5980,3 +5980,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 開放申請後的名額消耗與申請表單狀態。
 4. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
 5. `synthesia-basic-monthly-ten-min-five-hundred-no-download`：2026-11-30 追蹤 1,000 Syren 試用點數到期後的免費額度政策。
+
+## 2026-11-22 17:06–2026-11-22 17:16 Asia/Taipei｜N=1,147 · R=20 · A=2 · U=1,127 · attempted=0
+
+基準：起始可行動 1,043、嚴格逾期 48、7 日內到期 121。依 Phase 1 派工三路 Subagent 完成 20 筆逾期案例實讀複核與 2 筆新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `fal-flux3-max-five-daily-sandbox`：實讀模型頁與促銷頁，確認免費次數依介面動態呈現非固定每日 5 次；官方許可商用且無強制浮水印；促銷頁出現 40% 折扣至 12/7 與端點頁 11/22 截止衝突。
+- `fastino-glideis1-ten-credit-payment-verification`：實讀條款與文檔，證實 API 推論強制要求綁定有效付款方式（code: card_required），未綁卡無法調用。
+- `wistron-compute-donation-third-cohort-2027h1`：實讀官網與簡章，確認第三屆 H100 算力捐贈申請受理中，截止日為 2026-12-13 23:59:00+08:00，線上說明會於 11/25 舉行。
+- `ncu-nstc-robotics-talent-training-2026`：實讀報名表單與簡章，確認國科會全額補助免費參訓，限額 20 名應屆/待業碩博士生，報名截止 2026-12-04 17:00:00+08:00。
+- `yuanta-securities-gemini-enterprise-six-months-2026`：實讀元大活動頁，確認開戶交易送 6 個月 Gemini Enterprise 活動有效至 2026-12-31，早鳥 200 名加開戶抽 20 名。
+- `moe-library-aihub-seat-trial-free-paid-ai`：實讀弘光科大圖書館專頁，確認 AIHub 席位體驗進行中，嚴格限該校教職員工生預約。
+- `novai-free-flash-models-two-dollar-signup-credit`：實讀透明度頁與條款，$2 贈額與 5 款免費 Flash 模型在線，最低加值與卡片支援條款衝突未解。
+- `gmi-a16z-first25-two-k-spend-five-k-credit`：實讀專屬頁與條款，a16z 前 25 家首月消費達 $2,000 解鎖 $5,000 額度維持在線，90 天有效。
+- `neo4j-startup-aura-twentyk-application-unavailable`：實讀新創頁與申請表單，Aura $20K 額度維持，Marketo 表單實際在線可提交，unavailable 屬備援隱藏文字。
+- `volcengine-ark-1111-token-giveaway-watch`：實讀促銷與規則文檔，年度促銷至 2026-11-30 23:59:59，限中國大陸實名認證用戶，台灣受限。
+- `claude-oss-six-months-ultra`：實讀 Anthropic 開源方案頁與條款，開源維護者 6 個月免費 Claude Ultra 持續開放申請，配額 1 萬名。
+- `maritaca-s5-free-limited-launch`：實讀官方 GitHub 倉庫 PR #246 commit ef6e469，官方已於 2026-11-18 將 S5-free 退役並刪除免費章節，狀態轉為 expired，排程降頻。
+- `zcode-daily-300m-glm53-flash-claim-watch`：實讀官方活動通知與更新日誌，宣稱之每日 300M 缺乏官方支持，原付費會員限時活動已於 10/07 截止。
+- `token-harbor-free-rolling-7day-allowance`：實讀定價與 FAQ 頁面，Free 方案 $0、免卡、7 日滾動價值制額度維持有效，支援 MiMo 與 DeepSeek 模型。
+- `gonkarouter-new-user-million-tokens`：實讀定價頁，新用戶贈送 100 萬 tokens 免卡有效，即時 Token Rate 浮動調降至 $0.0049/1M。
+- `hetzner-inference-experimental-free`：實讀官方實驗文檔，推論 API 處於實驗階段完全免費，支援 Qwen3.6-35B 與 Qwen3.8-27B，不得用於生產。
+- `daytona-startup-amount-conflict`：實讀新創頁與定價表，新創申請頁 $100k/$10k 與定價頁 $50k 額度矛盾未解。
+- `duck-ai-free-chat`：實讀幫助頁面，免帳號免卡，支援 Claude Haiku 5.5、GPT-6 Luna、GPT-5.4 mini 等 6 款免費模型對話。
+- `sambanova-access-policy`：實讀速率頁與方案表，Llama-3.3 與 DeepSeek 已下架，目前支援 gpt-oss-120b 與 gemma-4-31B-it，免卡與儲值矛盾未解。
+- `qoder-lite`：實讀定價文檔與活動頁，釐清 Lite 為 $10/月付費方案，新戶 BOGO 活動進行中（首月買一贈一送 1,000 bonus credits）。
+
+### 新增紀錄（2 筆）
+- `openrouter-inclusionai-ling-32-flash-free`：OpenRouter 上線 inclusionAI Ling 3.2 Flash (free) 全新免費端點，提供 100 萬 Token 上下文與多模態輸入（最高 200 張圖片），支援混合思考推理，輸入輸出皆 $0，台灣免綁卡直接可用。
+- `openrouter-particle-ai-particle-1-free`：OpenRouter 上線 Particle AI Particle-1 (free) 免費端點，基於 DeepSeek V4.1 Flash 微調之 Token 高效代碼代理模型，100 萬 Token 上下文，專為終端與程式碼編輯優化，輸入輸出皆 $0，台灣免綁卡直接可用。
+
+### 品質改善
+- 追蹤 MariTalk 官方代碼提交，及時將已退役之 S5-free 方案標記為 expired。
+- 核實並更新 GonkaRouter 最新浮動費率至 $0.0049/1M tokens。
+- 釐清 Qoder Lite 與 Free 方案之定價層次，避免付費方案誤列免費。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 2 筆 OpenRouter 免費模型均評為 S 級）。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 查核免費視窗是否結束並記錄期後計費方式。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 開放申請後的名額消耗與表單狀態。
+4. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
+5. `synthesia-basic-monthly-ten-min-five-hundred-no-download`：2026-11-30 追蹤 1,000 Syren 試用點數到期後的免費額度政策。
