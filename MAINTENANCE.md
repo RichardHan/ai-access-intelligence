@@ -5889,3 +5889,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 - 全庫 1,146 筆，局部複核 2 筆，新增 0 筆，未複核 1,144 筆，追查失敗 0 筆。
 - `taiwan-adi-ai-compute-115` 補登 2026-10-30 日期；`tw-moda-aipower-compute-grant` 保留 ID、原來源與政策歷史，退出可行動專區。公告與入口所列日期一致，系統時間的時區未標示。 [數產署公告](https://moda.gov.tw/ADI/news/events/20432)、[平台申請須知](https://aipower.dginfra.gov.tw/front/index)
 - 下一輪沿用上一輪的五項排程；此補助有新梯次公告時，更新主紀錄。
+
+## 2026-11-22 15:20–2026-11-22 15:26 Asia/Taipei｜N=1,146 · R=20 · A=0 · U=1,126 · attempted=0
+
+基準：起始可行動 1,043、嚴格逾期 85、7 日內到期 121。依 Phase 1 派工四路 Subagent 完成 20 筆逾期案例實讀複核。
+
+### 局部複核既有紀錄（20 筆）
+- `tw-moe-aicup-2026-vlm-solar-inspection`：實讀 aidea 賽事時程陣列，確認延長報名截止至 2026-11-30 23:59:59+08:00，競賽至 2027-01-13。限中華民國在學學生具獎金資格，社會人士可參賽但不具實質獎勵；時程衝突已統一，狀態解除 terms_conflict 改為 conditional。
+- `ant-ling-ling-3-2-flash-free-two-weeks`：實讀官方定價與變更日誌，11/05 上線之前兩週免費預覽已於 2026-11-19 屆期，正式轉為常態計費（$0.30/$0.90 per M tokens），狀態轉為 expired，排程降頻。
+- `meta-muse-free`：實讀 Meta 官方說明，多步驟代理功能 Meta Muse 僅於美加日星澳五國階段性開放，台灣直連遇地區排隊/限制，taiwan 由 Unknown 更正為 No。
+- `did-mobile-fourteen-day-twelve-credit-trial-scope-watch`：實讀官方訂閱說明，D-ID Mobile 於台灣 App Store/Google Play 正常上架，14天試用綁定商店訂閱、含約 12 點額度，到期前需手動取消，taiwan 更新為 Yes，狀態由 needs_verification 改為 conditional。
+- `lets-go2-ai-ocr-launch-six-hundred-pages`：實讀活動頁，2026-12-28 前新約享首年 600 枚免費，補登明確 closes_at=2026-12-28。
+- `nextwave-ai-legaltech-hackathon-2026`：實讀法創黑客松官網，確認大專生跨域競賽報名截止為 2026-11-30 23:59:00+08:00，補登 closes_at。
+- `google-buildhybridai-2026-firebase-ai-logic`：實讀 Devpost 競賽條款，確認截止時間為 2026-12-01 06:00 (台北時間)，台灣在合規參賽清單中。
+- `byteplus-modelark-free-inference-500k`：實讀 BytePlus availability 文檔，Taiwan 明確列於支援地區，500k token 免費推論額度維持有效。
+- `digitalocean-secret-ai-startup-100-2026`：實讀 Secret 促銷頁，US$100 額度仍有效，需 Secret Premium 會員並具備 AI-native 新創資格。
+- `realads-once-fifty-no-watermark`：實讀官方 FAQ 與條款，50 credits 免信用卡贈點有效，FAQ 明載免費方案生成無浮水印且可用於商用。
+- `kilo-auto-free-hosted-models`：實讀 Kilo free models 文檔，auto-free 動態路由提供 StepFun、DeepSeek、Qwen3 等免費輪替模型。
+- `recraft-free-daily-credits`：實讀 Recraft 計費文檔，Free 方案每日自動刷新 credits，限個人非商用。
+- `entire-agents-trial-credit-paused`：實讀 Entire 計費文檔，新帳戶 $100 試用額度因需求維持暫停，狀態維持 paused。
+- `openrouter-baidu-ernie-55-flash-preview-free`：實讀 OpenRouter 模型頁，baidu/ernie-5.5-flash-preview:free 端點有效，1M 上下文，20 RPM / 50 RPD。
+- `aion-labs-free-daily-api-allowance`：實讀 Aion Labs 定價與速率頁，Free Tier 每日硬上限 20,000 TPD (Tokens Per Day) 維持有效。
+- `opencode-accountless-free-models`：實讀 OpenCode 官網與文檔，內建免帳號模型（DeepSeek V4.1 Flash、Beam 等）持續提供。
+- `perch-starter-free-monthly-twenty-k-hosted-cli`：實讀 Perch 方案說明，Starter 方案免信用卡每月 20,000 PT 額度持續有效。
+- `articul8-bivia-early-adopter-billion-tokens`：實讀 Articul8 官網，前 10,000 名早期採用者 10 億 tokens 免費活動仍開放註冊，額滿為止。
+- `openai-academic-researchers-waitlist`：實讀 OpenAI 研究者方案公告，2026-11-23 開放 5 萬個 ChatGPT Plus 贊助額度（先到先得制，提供 12 個月 Plus），解除 terms_conflict 改為 application_based。
+- `aocai-working-free-ai-courses-2026`：實讀招生頁，12/02 台北班與 12/14 台中班均確認開設，審查通過全額補助。
+
+### 新增紀錄（0 筆）
+- 本輪研究候選（如 Google AI Pro/Ultra 額度、產投方案 AI 課程等）經去重比對資料庫已收錄或屬既有政策，未重複建檔。
+
+### 品質改善
+- 程式化修復 20 筆過期排程，將已到期之限時預覽活動（Ant Ling 3.2 Flash）及時轉為 expired。
+- 補齊 3 筆活動之精確 closes_at 時間戳（教育部 AI CUP、東吳法創黑客松、Go2 AI-OCR）。
+- 釐清並解除 3 筆記錄之狀態衝突（AICUP、D-ID Mobile、OpenAI 研究者方案）。
+- 執行 tools/prioritize.py 保持優先度評分一致。
+
+### 未解證據缺口
+- `grammarly-student-annual-half-first-period`：grammarly.com/student 原網址返回 404，需改查學生專屬驗證平台（SheerID/UNiDAYS）。
+- `maximo-platform-new-account-five-credit`：免費模型池確認存在，但固定 US$5 額度措辭未獲最新官方頁面直接佐證。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+2. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 開放申請後的名額消耗與申請表單狀態。
+3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
+4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
+5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
