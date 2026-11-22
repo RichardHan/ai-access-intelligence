@@ -6419,3 +6419,52 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `wistron-compute-donation-third-cohort-2027h1`：2026-11-25 10:30 線上說明會釋出之評選細節與配額確認。
+
+
+## 2026-11-23 07:06–2026-11-23 07:20 Asia/Taipei｜N=1,165 · R=20 · A=2 · U=1,145 · attempted=0
+
+基準：起始既有紀錄 1,165 筆（945 項機會、50 項政策、170 筆觀察線索）。遵循反集中原則，避開 12 小時冷卻期內即將到期項目，挑選佇列排序之 20 筆可行動既有紀錄分兩組完成實讀複核；另由第三路發掘並實讀 2 筆國科會 116 年度科研專案完成建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`：實讀官方定價與算力配額頁，Qwen-3.8-27B 每月 3,000 萬 Token 免費配額維持至 2026-11-24 16:00:00+08:00（00:00 PT），期滿前有儲值者保留免費層。
+- `antigravity-free`：實讀官方定價頁與方案文件，個人方案維持免費，提供 Gemini 3.8 Flash，第三方模型註腳標記將於 2026-11-30 移除。
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：實讀新竹市數位申辦平台，剩餘補助經費降至 101,565 元（1.7%），購買日期已於 10/31 截止，僅受理既有購買憑證核銷至 115/11/30 或經費用罄止。
+- `aocai-youth-ai-training-2026`：實讀商業發展署青年專區與各大專院校課程頁，專區列 26 班，全額免費培訓並設最高 50,000 元學習獎勵金，實踐台北班額滿、台中班報名中，中華科大第一梯至 11/30 截止。
+- `google-vids-omni-free-sixty-seconds-monthly`：實讀 Google Workspace 說明頁與部落格，每月免費 45 秒（3 支 15 秒）vs 60 秒 vs 50 支官方額度矛盾持續，維持 terms_conflict。
+- `adobe-firefly-twelve-month-model-promotion`：實讀 Adobe 促銷頁與方案標價，Firefly Pro 以上方案享首年 12 個月不限額度，台灣黑五折扣持續至 12/6。
+- `nousresearch-portal-free-models`：實讀 Nous Portal 方案頁與模型目錄，Free 方案維持 US$0 免綁卡，Free Models 提供 5 款免費模型，目錄總數擴充至 354 款。
+- `chatgpt-dots`：實讀 OpenAI 官方文件，dots 支援 GPT-6.1 Terra，11/18 起企業 workspace 轉為預設開啟並正式計費，台灣在支援清單。
+- `taipei-industry-incentive-ai-rd-batch2-2026`：實讀臺北市產發局公告與新聞清單，第 2 梯次主題式研發補助徵件至 115/11/30 止，每案補助 200 萬元。
+- `featherless-chat-twentyfive-unlimited-human-interactive`：實讀 Featherless 定價與條款頁，Chat 方案月費維持 25 美元，提供目錄全部 40,000+ 模型互動式不限 token，4 並行單位與 32K context。
+- `xiaomi-mimo-tts-limited-free-api`：實讀小米 MiMo 開放平台定價與語音文檔，mimo-v2.5-tts 等三款語音模型維持限時免費，海外首次儲值贈送 $0.72 促銷有效（40 天效期）。
+- `aihubmix-one-dollar-daily-free-model-pool`：實讀 AIHubMix 免費模型目錄與條款，目錄於 2026-11-22 更新，維持 76 款免費模型，首儲 $1 永久解鎖每日 100 次/100 萬 tokens。
+- `codeai-hour-of-ai-2026`：實讀 Hour of AI 官網與 FAQ，活動為全年常態免費教育資源，CSEdWeek 焦點週訂於 2026 年 12 月 7–11 日。
+- `runable-free-daily-fifteen-hundred-monthly-cap`：實讀 Runable 定價頁與 FAQ，Free 方案維持每日發放 1,500 免費 credits，每月發放上限 15,000 點，每日重置不遞延。
+- `crawl4ai-cloud-monthly-thousand-no-card`：實讀 Crawl4AI 官網、定價頁與 API 端點，官網標註 Free 每月 1,000 credits 免信用卡，但 API limits 回傳 2500，條款矛盾持續存在。
+- `google-students-tw-plus`：實讀 Google 台灣官方部落格與學生優惠入口，台灣大專學生享 1 年免費 Google AI Plus 至 2026-12-31，但台灣頁面 FAQ 仍標註「美國大學生」，條款衝突持續。
+- `felo-standard-free-new-user-daily-two-hundred-campaign`：實讀 Felo 定價頁原始碼 i18n payload，Standard 方案免信用卡，新用戶限時活動每日贈送 200 點，無截止日標記。
+- `mango-inference-community`：實讀 Mango Inference 平台與定價頁，官方已撤下「$10 in free credits」及 11/11 期限橫幅，全站已無註冊送 US$10 額度標示；模型卡片仍保留 -30% 劃線特價。
+- `nebius-startup`：實讀 Nebius Startups 專頁與條款，新創方案維持募資 $5M 以上核准 VC 夥伴投資門檻，成立未滿 5 年，未符條件者進 waitlist。
+- `superwhisper-education-nonprofit-forty-percent`：實讀 Superwhisper 官方方案與定價文檔，學生/教師/非營利享 40% 購買折扣，需購前以機構信箱申請，新用戶享 3,000 字 Pro 免費試用。
+
+### 新增紀錄（2 筆）
+- `nstc-popular-science-ai-tech-grant-116`：國科會 116 年度「科普活動計畫」補助案，主題二特設「前瞻關鍵科技與 AI 智慧應用普及」，專案全額補助科普推廣業務費、主持費、專任/兼任研究人力經費（含博士生費用增核）與活動耗材展演費用，執行至多 1 年，受理至 2027-01-07。
+- `nstc-popular-science-production-broadcasting-grant-116`：國科會 116 年度「科普產品製播推廣產學合作計畫」補助案，大專校院與影視企業跨領域產學合作製播 AI 及半導體科普影視/動畫並產出至少 2 種衍生推廣品，每案最高補助新臺幣 1,000 萬元（國科會至多 70%），受理至 2026-12-18。
+
+### 品質改善
+- 追蹤確認 Mango Inference 官方正式撤下 US$10 註冊額度與 11/11 期限橫幅，但模型卡片仍留 -30% 劃線折扣，即時更新紀錄文字與範圍。
+- 實讀新竹市數位申辦平台，精準更新經費水位降至 101,565 元（1.7%），並確認購買期已於 10/31 截止，僅受理核銷。
+- 執行 `tools/prioritize.py` 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級，全庫 S 級增至 196 筆）。
+
+### 未解證據缺口
+- `google-vids-omni-free-sixty-seconds-monthly`：45 秒 vs 60 秒 vs 50 支額度矛盾未解。
+- `crawl4ai-cloud-monthly-thousand-no-card`：定價頁 1,000 點 vs API 2,500 點內部矛盾未解。
+- `google-students-tw-plus`：台灣公告 1 年免費 vs 台灣學生頁 FAQ 美國大學生衝突未解。
+- `mango-inference-community`：官方撤下 $10 贈額後模型卡片仍殘留 -30% 標籤，新用戶額度待釐清。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `wistron-compute-donation-third-cohort-2027h1`：2026-11-25 10:30 線上說明會釋出之評選細節與配額確認。
