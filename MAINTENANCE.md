@@ -6026,3 +6026,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 開放申請後的名額消耗與表單狀態。
 4. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
 5. `synthesia-basic-monthly-ten-min-five-hundred-no-download`：2026-11-30 追蹤 1,000 Syren 試用點數到期後的免費額度政策。
+
+## 2026-11-22 18:06–2026-11-22 18:20 Asia/Taipei｜N=1,149 · R=20 · A=2 · U=1,129 · attempted=0
+
+基準：起始可行動 1,044、嚴格逾期 28。依三路 Subagent 派工完成 20 筆既有紀錄實讀複核與 2 筆新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：實讀官方公告與活動條款，10,000 credits 贈額維持至 2026-11-22 23:59:00+08:00 截止，正常在線。
+- `stepfun-stepaudio3-music-gen-preview-nov8`：實讀定價公告與開發者文檔，免費預覽維持至 2026-11-23 11:59:59+08:00，12:00 起依每音訊小時 $2.40/$4.80 計費。
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`：實讀官方定價與算力配額頁，Qwen-3.8-27B 每月 3,000 萬 Token 免費配額維持至 2026-11-24 16:00:00+08:00。
+- `taipei-industry-incentive-ai-rd-batch2-2026`：實讀台北產發局公告與徵件系統，第二梯次申請受理至 2026-11-30 23:59:59+08:00，線上表單正常運行。
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：實讀新竹市政府青年數位工具補助進度，經費剩餘 101,565 元 (1.7%)，受理至 11/30 或經費用罄止。
+- `aocai-youth-ai-training-2026`：實讀實踐大學官方頁與商業發展署入口，100% 全額免費，台中班 12/01 開訓報名中，官方文件一致，解除 terms_conflict 轉為 active。
+- `google-students-tw-plus`：實讀 Google 台灣學生優惠頁與 SheerID 驗證入口，大專生 1 年免費 Google AI Plus 活動維持至 2026-12-31。
+- `antigravity-free`：實讀官方 2026-11-22 最新文件與公告，免費層僅提供 Gemini 3.8 Flash，第三方模型延至 11/30 移除，Hydrogen/Orchestrator 明列限付費，文件口徑一致，解除 terms_conflict 轉為 active。
+- `google-vids-omni-free-sixty-seconds-monthly`：實讀 Google Workspace 說明頁與部落格，官方文件對於每月免費 45 秒 vs 60 秒 vs 50 支衝突持續，維持 conditional。
+- `adobe-firefly-twelve-month-model-promotion`：實讀 Adobe 促銷頁與條款，確認為付費 Pro 以上方案加值促銷，台灣付費帳號可用，維持 conditional。
+- `chatgpt-dots`：實讀 OpenAI 說明文件，Enterprise/Edu 於 11/18 轉預設開啟計費，支援 GPT-6.1 Terra，台灣在支援清單。
+- `xiaomi-mimo-tts-limited-free-api`：實讀小米雲端定價文檔，pay-as-you-go 更新至 11/18，TTS 三款模型維持限時免費調用。
+- `aihubmix-one-dollar-daily-free-model-pool`：實讀 AIHubMix 模型目錄與條款，更新至 11/21，維持 76 款免費模型池，一次儲值 $1 永久解鎖。
+- `crawl4ai-cloud-monthly-thousand-no-card`：實讀 Crawl4AI 定價與限制文檔，每月 1,000 credits 免卡有效，API limits 2,500 內部矛盾持續。
+- `nousresearch-portal-free-models`：實讀 Nous Portal 方案與模型目錄，Free 方案 US$0 免綁卡，免費目錄現為 5 款模型，Hermes 需付費方案。
+- `featherless-chat-twentyfive-unlimited-human-interactive`：實讀 Featherless 定價與計畫文檔，Chat 方案為 $25/月個人互動對話，嚴格禁止 API/代理自動化。
+- `codeai-hour-of-ai-2026`：實讀 Hour of AI 官網與 FAQ，全年常駐教育實作活動，11/16 新活動已上線，12/07-11 為 CSEdWeek。
+- `runable-free-daily-fifteen-hundred-monthly-cap`：實讀 Runable 定價與 FAQ，每日 1,500 點免費額度，每日重置不遞延，每月上限 15,000 點維持一致。
+- `felo-standard-free-new-user-daily-two-hundred-campaign`：實讀 Felo 定價頁，新用戶每日 200 點限時活動在線，常態包含無限制高速搜尋與每日 3 次檔案分析。
+- `mango-inference-community`：實讀社群貼文與服務條款，條款於 11/17 更新，限企業商務用途，新戶贈送推廣額度 6 個月有效。
+
+### 新增紀錄（2 筆）
+- `openrouter-nvidia-nemotron-35-super-vl-free`：OpenRouter 上架 NVIDIA Nemotron 3.5 Super VL (free) 100 萬 Token 多模態免費端點，支援文字、圖像、截圖與影片輸入，最高 131K 輸出，輸入輸出皆 $0，台灣免綁卡直接可用。
+- `openrouter-recursive-flint-v10-free`：OpenRouter 上架 Recursive Flint v1.0 (free) 256K Token 代碼智能體推理免費端點，40B MoE 架構專為代碼代理最佳化，強制思維鏈推理，輸入輸出皆 $0，台灣免綁卡直接可用。
+
+### 品質改善
+- 官方文件統一口徑，解除 `antigravity-free` 與 `aocai-youth-ai-training-2026` 之 terms_conflict 爭議狀態轉為 active。
+- AutoClaw（今晚 23:59 截止）與 StepAudio3（明日 11:59 截止）即期追蹤與排程對齊。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 2 筆 OpenRouter 免費模型均評為 S 級）。
+
+### 未解證據缺口
+- `google-vids-omni-free-sixty-seconds-monthly` 官方文件 45 秒 vs 60 秒 vs 50 支衝突持續。
+- `crawl4ai-cloud-monthly-thousand-no-card` 1,000 vs 2,500 額度內部矛盾持續。
+
+### 下一輪優先（最多 5 項）
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：2026-11-22 23:59 截止後確認是否推出新週福利或標記 expired。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+4. `lg-exaone-25-api-free-noncommercial`：佇列逾期首位，複核 EXAONE 2.5 非商業免費用量與最新條款。
+5. `google-maps-demo-key-ai-studio-free-daily`：佇列逾期第二位，核實 AI Studio Demo Key 每日配額與存取規則。
