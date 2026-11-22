@@ -6370,3 +6370,52 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 前追蹤 12/02 批發 MLOps 台北班額滿狀態。
+
+
+## 2026-11-23 06:06–2026-11-23 06:15 Asia/Taipei｜N=1,163 · R=20 · A=2 · U=1,143 · attempted=0
+
+基準：起始既有紀錄 1,163 筆（943 項機會、50 項政策、170 筆觀察線索）。遵循反集中原則，避開 12 小時冷卻期內即將到期項目，挑選佇列排序最久未核之 20 筆既有紀錄分兩組完成實讀複核；另由第三路發掘並實讀 2 筆國科會 116 年度科研專案完成建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `fal-flux3-max-five-daily-sandbox`：實讀官方模型頁 llms.txt、landing 頁 /flux-3-max、pricing.md 與 sandbox 頁面，landing 頁更新 40% 折扣至 12/7（$0.102/秒），與 llms.txt 載 50% 折扣至 11/22 UTC（$0.085/秒）文字衝突；sandbox 維持伺服器動態輸出 6 free generations today。
+- `ncu-nstc-robotics-talent-training-2026`：實讀中央大學報名表單與 TAMI 簡章 PDF，報名開放中，截止日至 115 年 12 月 4 日 17:00，國科會全額補助免費參訓。
+- `volcengine-ark-1111-token-giveaway-watch`：實讀火山引擎 11.11 活動頁與規則文檔，付費大促至 2026-11-30 23:59:59 且明載限大陸用戶，免費 tokens 用畢須實名認證。
+- `wistron-compute-donation-third-cohort-2027h1`：實讀 Garage+ 緯創算力專頁與申請公告 PDF，第 3 屆線上申請受理至 2026-12-13 23:59，11/25 舉辦線上說明會，每案核配 5,000–33,000 GPU 小時 H100。
+- `yuanta-securities-gemini-enterprise-six-months-2026`：實讀元大證券活動頁，活動期間 2026/11/02~2026/12/31 正式進行中，全新戶早鳥交易任 3 筆優先前 200 名贈 Gemini Enterprise 6 個月。
+- `make-startup-partner-six-month-bootstrap-three-month-credits`：實讀 Tally 表單與行銷頁，Tally 表單維持夥伴 6 個月/480k vs 自籌 3 個月/240k 分級，與行銷頁全員 6 個月/500k 點矛盾持續存在。
+- `jetbrains-ai-free`：實讀 JetBrains 授權文件與服務地區清單，AI Free 每 30 天提供 3 AI credits 自動重置，服務地區明列 Taiwan。
+- `smelearning-strongest-ai-king-line-points-2026`：實讀公告頁與 AI 專區，公告本文載 LINE POINTS 250 點與站內彈窗載 5 張咖啡即享券兩種官方說法並存，衝突標記持續。
+- `claude-subscriber-api-credits`：實讀 Anthropic 支援文檔與地區政策，Max $100/mo、Ultra $200/mo、Team 每席 $20/$100 額度，領取免綁卡，支援地區明列 Taiwan。
+- `serpapi-free-monthly-250-searches`：實讀 SerpApi 定價表與服務條款，Free 方案維持每月 250 次成功搜尋、每小時 50 次，僅計成功次數，搜尋資料保留 31 天。
+- `corti-startup-up-to-five-k-twelve-months`：實讀 Corti 新創頁與加速協議，新創方案提供最高 US$5,000 API 抵用額（效期 12 個月），協議明定免綁付款方式且額度用罄自動暫停服務。
+- `textrazor-free-daily-five-hundred-analysis`：實讀 TextRazor 定價頁與註冊表單，Free 方案每日 500 次 requests，註冊表單國別明列 Taiwan 且無信用卡/付款欄位，更新 setup_cost_usd 為 0。
+- `gladia-startup-studio`：實讀 Gladia 新創頁與條款，Startup Studio 提供 $3,000 credits（VC 推薦 $3,500），12 個月無每月上限，台灣未在制裁排除名單。
+- `ovh-startup-region-product-scope`：實讀 OVH 歐洲方案頁與產品清單，Start 方案提供 €10,000 credits（12 個月），GPU 抵用限定 RTX5000、V100、V100s，排除其他高階 GPU。
+- `sarvam-creator-monthly-posting`：實讀 Sarvam AI 創作者方案頁與條款，無最低訂閱門檻，發布配音影片可每月刷新 credits，核定額度依個案審核。
+- `workato-free-once-fiftyk-shared-credits`：實讀 Workato 定價與文檔，Free 方案為 $0/月且免信用卡，提供一次性 50,000 credits（one-time grant），非每月重置。
+- `sentry-education-year-monthly-twenty-seer`：實讀 Sentry 教育頁與 Seer 文檔，教育方案免費 1 年，每月提供 $20 Seer AI 額度，需透過 GitHub Student Developer Pack 啟用。
+- `koyeb-startup-up-to-thirtyk-compute`：實讀 Koyeb 新創公告與定價頁，新創方案宣傳最高 $30k compute credits，但官方公告新用戶須綁卡訂閱付費方案（Pro $29/mo 起）。
+- `amp-hobby-free-grant-transition-watch`：實讀 Amp Code 定價與公告，Hobby 方案免費自備金鑰無 token 費用，Amp Free（$10/day）維持暫停新申請狀態。
+- `core-today-free-300`：實讀 Core Today 定價與條款，Free 方案免綁卡每月提供 300 credits 與 1GB 儲存，次月重置且不結轉。
+
+### 新增紀錄（2 筆）
+- `nstc-recruiting-research-scholars-grant-116`：國科會 116 年度「補助延攬研究學者暨執行專題研究計畫」，專款全額補助研究學者待遇（研究費/薪津）及專題研究計畫研究經費（業務費、研究設備費、差旅費等），自 2027-08-01 起執行，受理至 2026-12-24。
+- `nstc-women-in-science-tech-grant-116`：國科會 116 年度「鼓勵女性從事科學及技術研究專案計畫」，支持 2024-08-01 至 2027-07-31 間未執行國科會專題計畫之女性科研人員重返前瞻研究，專題研究計畫經費全額補助 1 至 3 年，受理至 2027-01-07。
+
+### 品質改善
+- 實讀最新官方公告與表單，查明 TextRazor 註冊表單確無信用卡欄位，將 setup_cost_usd 由未知修正為 0。
+- 追蹤 fal FLUX 3 Max 促銷更新，發現前台 landing 頁 40% 折扣排程（至 12/7）與底層 llms.txt 之 50% 折扣排程（至 11/22 UTC）存在官方未調和衝突。
+- 完整核實中央大學國科會機器人人才培訓（12/04 截止）、緯創第 3 屆算力捐贈（12/13 截止）及元大證券開戶交易贈 Gemini Enterprise 官方細節。
+- 執行 `tools/prioritize.py` 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級，全庫 S 級增至 194 筆）。
+
+### 未解證據缺口
+- `fal-flux3-max-five-daily-sandbox`：landing 頁 40% 折扣至 12/7 vs llms.txt 50% 折扣至 11/22 衝突未解。
+- `make-startup-partner-six-month-bootstrap-three-month-credits`：行銷頁全員 6 個月 vs Tally 自籌 3 個月衝突未解。
+- `smelearning-strongest-ai-king-line-points-2026`：公告本文 LINE POINTS vs 彈窗咖啡券衝突未解。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `wistron-compute-donation-third-cohort-2027h1`：2026-11-25 10:30 線上說明會釋出之評選細節與配額確認。
