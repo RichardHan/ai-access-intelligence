@@ -1,11 +1,11 @@
 'use strict';
 
-const $=s=>document.querySelector(s);
+const $ = selector => document.querySelector(selector);
 const PAGE_SIZE = 24;
-let dataset = { offers: [] };
-let visibleLimit = PAGE_SIZE;
+let dataset = null;
+let filteredOffers = [];
+let visibleCount = 0;
 let activePreset = 'all';
-let recentOnly = false;
 let applyingPreset = false;
 let eventsBound = false;
 let searchTimer;
@@ -108,15 +108,11 @@ const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED'
 // 「新創與開發者」因此仍列出 39 筆已截止或已併入他筆的紀錄（含 copilot-free 等重複紀錄），
 // 「美國與地區限定」列出 15 筆（該專區共 57 筆）。專區清單必須與 index.html 的 view 選項同步。
 const ACTIONABLE_VIEWS = new Set(['free', 'quota', 'unlimited', 'regional', 'value', 'developer', 'beta']);
-// 「台灣條件適用」是頁面上第一個捷徑按鈕，但它走的是 taiwan:'Yes' 這個一般篩選，不經 viewMatches，
-// 因此上表的排除規則涵蓋不到它：2026-11-09 統計 106 筆 taiwan=Yes 中仍有 10 筆已截止／已關閉／重複合併
-// （例如 moda-service-robot-virtual-scene-subsidy-2026、taiwan-ai-rap-pilot、taiwan-adi-ai-compute-115），
-// 卡片標題自己寫著「已截止」。可行動捷徑一律排除，全庫搜尋仍找得到。
-const OPEN_ONLY_PRESETS = new Set(['taiwan']);
+const UNAVAILABLE_STATUSES = new Set([...CLOSED_STATUSES, 'paused']);
 
 function presetMatches(o, preset, filters) {
-  if (!matches(o, filters ?? presetFilters(preset))) return false;
-  return !(OPEN_ONLY_PRESETS.has(preset) && CLOSED_STATUSES.has(o.status));
+  if (preset === 'taiwan' && UNAVAILABLE_STATUSES.has(o.status)) return false;
+  return matches(o, filters ?? presetFilters(preset));
 }
 
 // The 用量 filter and the 無限專區 read the schema-enforced quota_classification.
@@ -191,7 +187,7 @@ const SEARCH_FIELDS = [
   'quota_classification_note', 'usable_duration', 'cancellation', 'access_risk',
   'plan_variants', 'regional_variants', 'offer_validity', 'terms_compliance', 'tos_status',
   'legal_and_terms_note', 'deadline_at', 'expires_at', 'expiry', 'duplicate_of',
-  'announcement_at'
+  'announcement_at', 'valuation_scenario'
 ];
 
 function collectSearchValues(value, parts) {
@@ -225,7 +221,7 @@ function matches(o, f = {}) {
     && (!f.verification || o.verification === f.verification)
     && (!f.view || viewMatches(o, f.view))
     // 免費、無限、高額度與 Beta 專區都是可行動的入口：已截止紀錄退出，但仍可在全部紀錄搜尋。
-    && !(ACTIONABLE_VIEWS.has(f.view) && CLOSED_STATUSES.has(o.status))
+    && !(ACTIONABLE_VIEWS.has(f.view) && UNAVAILABLE_STATUSES.has(o.status))
     && (!f.tier || o.priority_tier === f.tier);
 }
 
@@ -236,6 +232,12 @@ function tierRank(tier) {
 function byPriority(a, b) {
   return tierRank(a.priority_tier) - tierRank(b.priority_tier)
     || ((b.priority_score ?? -1) - (a.priority_score ?? -1));
+}
+
+function bySetupCost(a, b) {
+  const left = a.setup_cost_usd ?? Infinity;
+  const right = b.setup_cost_usd ?? Infinity;
+  return left === right ? 0 : left - right;
 }
 
 function statusInfo(offer) {
@@ -317,11 +319,12 @@ function groupSources(sources) {
 // 精確截止時間只存在於 expires_at／deadline_at／expiry 三個欄位（2026-11-09 統計 17 筆），
 // 「有效期間」則是自由文字（例：「促銷免費至 2026-11-19（FAQ 已明列年份；頁面未公布精確時區）」），
 // 卡片先前只渲染後者，於是 Amazon ARA 的台北 11/12 15:59、DataCamp 的今日 12:59 這類
-// 讀者真正要趕的時間點只藏在段落文字裡。逐欄位列出，並標明是台北時間或來源未列時刻。
+// 讀者真正要趕的時間點只藏在段落文字裡。逐欄位列出，並標明是換算後的台北時間或紀錄的日期精度。
 function deadlineInfo(offer) {
   const stamp = value => {
     const raw = String(value);
-    return /T\d{2}:\d{2}/.test(raw) ? `${dateLabel(raw, true)}（台北時間）` : `${raw}（來源未列時刻）`;
+    if (/^\d{4}-\d{2}$/.test(raw)) return `${raw}（僅記年月）`;
+    return /T\d{2}:\d{2}/i.test(raw) ? `${dateLabel(raw, true)}（台北時間）` : `${raw}（僅記日期）`;
   };
   const parts = [];
   if (offer.deadline_at) parts.push(`申請截止 ${stamp(offer.deadline_at)}`);
@@ -491,6 +494,7 @@ function createDetails(offer) {
   if (offer.vpn_research?.eligibility_note) addRow(grid, '地區與網路限制', offer.vpn_research.eligibility_note);
   addRow(grid, '優先度依據', offer.priority_note);
   addRow(grid, '可用效益／成本比', `${money(offer.usable_benefit_usd)}／${offer.benefit_cost_ratio == null ? '不適用或證據不足' : offer.benefit_cost_ratio}`);
+  if (offer.valuation_scenario) addRow(grid, '估值依據', offer.valuation_scenario);
   addRow(grid, '法律／監管核實', offer.legal_status === 'restriction_found'
     ? '已找到官方限制來源，請核對下列證據與適用範圍。'
     : offer.legal_status === 'no_restriction_found'
@@ -665,43 +669,50 @@ function updatePresetButtons() {
   });
 }
 
-function render(reset = true) {
-  if (reset) visibleLimit = PAGE_SIZE;
+function render() {
+  if (!dataset) return;
   const form = $('#filters');
   const filters = form ? Object.fromEntries(new FormData(form)) : {};
-  const recentIds = latestResearchIds();
-  const items = dataset.offers.filter(offer => (!recentOnly || recentIds.has(offer.id))
+  const recentIds = activePreset === 'recent' ? latestResearchIds() : null;
+  filteredOffers = dataset.offers.filter(offer => (!recentIds || recentIds.has(offer.id))
     && presetMatches(offer, activePreset, filters));
-  if (filters.sort === 'priority') items.sort(byPriority);
-  if (filters.sort === 'fresh') items.sort((a, b) => String(b.verified_at || '').localeCompare(String(a.verified_at || '')));
-  if (filters.sort === 'deadline') items.sort(byDeadline);
-  if (filters.sort === 'cost') items.sort((a, b) => {
-    const costA = a.setup_cost_usd ?? Infinity;
-    const costB = b.setup_cost_usd ?? Infinity;
-    return costA === costB ? 0 : costA - costB;
-  });
-  const visible = items.slice(0, visibleLimit);
-  const count = $('#count');
-  if (count) count.textContent = `${recentOnly ? '本輪更新 · ' : ''}符合 ${items.length} 筆，已顯示 ${visible.length} 筆 · 全庫 ${dataset.offers.length} 筆`;
-  const cards = $('#cards');
-  if (cards) {
-    cards.replaceChildren(...visible.map(createCard));
-    if (!items.length) {
-      const empty = text('div', '', 'empty-state');
-      empty.append(text('h3', '目前沒有符合的紀錄'), text('p', '調整關鍵字或清除篩選，再探索其他機會。'));
-      const resetButton = text('button', '清除所有篩選', 'button-reset');
-      resetButton.type = 'button';
-      resetButton.addEventListener('click', () => applyPreset('all'));
-      empty.append(resetButton);
-      cards.append(empty);
-    }
+  if (filters.sort === 'priority') filteredOffers.sort(byPriority);
+  if (filters.sort === 'fresh') {
+    const verified = offer => Date.parse(offer.verified_at) || 0;
+    filteredOffers.sort((a, b) => verified(b) - verified(a));
   }
+  if (filters.sort === 'deadline') filteredOffers.sort(byDeadline);
+  if (filters.sort === 'cost') filteredOffers.sort(bySetupCost);
+
+  visibleCount = 0;
+  const cards = $('#cards');
+  cards?.replaceChildren();
+  if (cards && !filteredOffers.length) {
+    const empty = text('div', '', 'empty-state');
+    empty.append(text('h3', '目前沒有符合的紀錄'), text('p', '調整關鍵字或清除篩選，再探索其他機會。'));
+    const resetButton = text('button', '清除所有篩選', 'button-reset');
+    resetButton.type = 'button';
+    resetButton.addEventListener('click', () => applyPreset('all'));
+    empty.append(resetButton);
+    cards.append(empty);
+  }
+  showNextPage();
+  updatePresetButtons();
+}
+
+function showNextPage() {
+  if (!dataset) return;
+  const page = filteredOffers.slice(visibleCount, visibleCount + PAGE_SIZE);
+  $('#cards')?.append(...page.map(createCard));
+  visibleCount += page.length;
+  const count = $('#count');
+  if (count) count.textContent = `${activePreset === 'recent' ? '本輪更新 · ' : ''}符合 ${filteredOffers.length} 筆，已顯示 ${visibleCount} 筆 · 全庫 ${dataset.offers.length} 筆`;
   const more = $('#load-more');
   if (more) {
-    more.hidden = visible.length >= items.length;
-    more.textContent = `再顯示 ${Math.min(PAGE_SIZE, items.length - visible.length)} 筆`;
+    const remaining = filteredOffers.length - visibleCount;
+    more.hidden = remaining === 0;
+    more.textContent = `再顯示 ${Math.min(PAGE_SIZE, remaining)} 筆`;
   }
-  updatePresetButtons();
 }
 
 // 免費方案的判定規則全在 viewMatches('free')：設定費與每月費用皆為 0 一律列入、每月費用
@@ -722,7 +733,6 @@ function applyPreset(preset) {
   form?.reset();
   applyingPreset = false;
   activePreset = preset;
-  recentOnly = preset === 'recent';
   const values = presetFilters(preset);
   for (const [name, value] of Object.entries(values)) {
     const control = form?.elements.namedItem(name);
@@ -736,11 +746,11 @@ function applyPreset(preset) {
 // 的 85 筆，讀者在同一頁看到兩個「台灣條件適用」卻差 11 筆。改由 presetMatches('taiwan') 計算，
 // 並在說明列拆出 S 級機會數，讓數字對得起來，也不把政策／觀察線索算成可領取的機會。
 function overviewMetrics(offers) {
-  const taiwanCount = offers.filter(offer => presetMatches(offer, 'taiwan')).length;
-  const sTierCount = offers.filter(offer => offer.priority_tier === 'S').length;
+  const taiwanOffers = offers.filter(offer => presetMatches(offer, 'taiwan'));
+  const sTierCount = taiwanOffers.filter(offer => offer.priority_tier === 'S').length;
   return [
     [offers.filter(o => o.record_type === 'opportunity').length, '福利研究', '免費、試用與折扣機會'],
-    [taiwanCount, '台灣條件適用', `含 S 級機會 ${sTierCount} 筆，其餘為政策與觀察線索`],
+    [taiwanOffers.length, '台灣條件適用', `含 S 級機會 ${sTierCount} 筆，其餘為政策與觀察線索`],
     [offers.filter(o => o.record_type === 'policy').length, '政策追蹤', '條款、方案與存取變動'],
     [offers.filter(o => o.record_type === 'watchlist').length, '觀察線索', '等待更多可靠證據']
   ];
@@ -777,24 +787,30 @@ function bindEvents() {
   if (eventsBound) return;
   eventsBound = true;
   const form = $('#filters');
-  const onFilterChange = () => {
+  const onFilterChange = (name) => {
     clearTimeout(searchTimer);
-    if (!recentOnly) activePreset = null;
+    const preset = presetFilters(activePreset);
+    if (name !== 'sort' && (activePreset === 'all' || Object.hasOwn(preset, name))) {
+      activePreset = null;
+    }
     render();
   };
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    onFilterChange('q');
+  });
   form?.addEventListener('change', event => {
-    if (event.target.name !== 'q') onFilterChange();
+    if (event.target.name !== 'q') onFilterChange(event.target.name);
   });
   form?.addEventListener('input', event => {
     if (event.target.name !== 'q') return;
     clearTimeout(searchTimer);
-    searchTimer = setTimeout(onFilterChange, 160);
+    searchTimer = setTimeout(() => onFilterChange('q'), 160);
   });
   form?.addEventListener('reset', () => {
     if (applyingPreset) return;
     clearTimeout(searchTimer);
     activePreset = 'all';
-    recentOnly = false;
     setTimeout(() => render(), 0);
   });
   document.querySelectorAll('[data-preset]').forEach(button => {
@@ -807,28 +823,28 @@ function bindEvents() {
     more.type = 'button';
     $('#cards').after(more);
   }
-  more?.addEventListener('click', () => {
-    visibleLimit += PAGE_SIZE;
-    render(false);
-  });
-  if (typeof window !== 'undefined' && window.matchMedia('(max-width: 760px)').matches) {
-    const shell = $('.filter-shell');
-    if (shell) shell.open = false;
+  more?.addEventListener('click', showNextPage);
+  const shell = $('.filter-shell');
+  if (shell) {
+    const mobile = window.matchMedia('(max-width: 760px)');
+    const syncLayout = () => { shell.open = !mobile.matches; };
+    syncLayout();
+    mobile.addEventListener('change', syncLayout);
   }
 }
 
 async function init() {
+  bindEvents();
   const cards = $('#cards');
   cards?.setAttribute('aria-busy', 'true');
   if ($('#count')) $('#count').textContent = '正在讀取研究資料…';
   try {
-    const response = await fetch(`data/offers.json?v=${Date.now()}`);
+    const response = await fetch('data/offers.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const loaded = await response.json();
     if (!Array.isArray(loaded.offers)) throw new Error('Invalid research dataset');
     dataset = loaded;
     renderOverview();
-    bindEvents();
     render();
   } catch (_) {
     if ($('#count')) $('#count').textContent = '資料暫時無法讀取';

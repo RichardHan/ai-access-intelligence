@@ -31,7 +31,9 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "offers.json"
-DATE_ONLY = re.compile(r"\d{4}-\d{2}-\d{2}")
+STAMP = re.compile(
+    r"\d{4}-\d{2}-\d{2}(?:[Tt ]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:[Zz]|[+-]\d{2}:?\d{2})?)?"
+)
 
 TZ_TPE = datetime.timezone(datetime.timedelta(hours=8))
 CLOSED = {"expired", "expired_unverified", "closed", "applications_closed",
@@ -46,35 +48,25 @@ URGENT_HOURS = 24
 
 
 def parse_stamp(value, end_of_day=False):
-    """解析 schedule 用的時間欄位；只有日期者，日期即代表當天仍可動作。
+    """Latest recorded time in Taipei local time; date-only deadlines last all day.
 
-    `expiry.date` 允許只寫到月份（例如 `2028-06`）。只到月份的值不解析——不猜月末日，
-    與 `tests/validate.py` 的 close_points() 同一原則。日期區間取最後一個完整日期，
-    代表「最晚仍可動作」；帶註記的寫法（`2026-11-10（Asia/Taipei）`）同理。
+    Older source metadata can contain ranges or annotations. A year and month
+    alone do not identify a day, so they have no comparable instant.
     """
-    if not isinstance(value, str) or not value.strip():
+    if not isinstance(value, str):
         return None
-    raw = value.strip()
-    # 只有日期的值必須先走下面的日期分支。`datetime.fromisoformat('2026-11-10')` 會「成功」並回傳
-    # 當日 00:00，於是 `end_of_day` 形同無效：2026-11-10 實測 `deadline_at: 2026-11-10`（台北青年
-    # AI 補助，期限就是當天）被算成當天 00:00 結束，`close_points()` 把「已過」的時點濾掉後，這筆
-    # 紀錄在期限當天反而掉出 closing 桶，也沒有 24 小時緊急豁免，只能靠 next_review_at 碰巧排到。
-    # 帶時刻（含 `2026-11-10（Asia/Taipei）` 這種只有日期加註記）才走 ISO 快路徑。
-    if re.search(r"\d{1,2}:\d{2}", raw):
+    stamps = []
+    for raw in STAMP.findall(value):
         try:
-            stamp = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
-            if stamp.tzinfo is not None:
-                stamp = stamp.astimezone(TZ_TPE).replace(tzinfo=None)
-            return stamp
+            stamp = datetime.datetime.fromisoformat(raw.upper().replace("Z", "+00:00"))
         except ValueError:
-            pass
-    found = DATE_ONLY.findall(raw)
-    if not found:
-        return None
-    stamp = datetime.datetime.strptime(found[-1], "%Y-%m-%d")
-    if end_of_day:
-        return stamp.replace(hour=23, minute=59, second=59)
-    return stamp
+            continue
+        if stamp.tzinfo is not None:
+            stamp = stamp.astimezone(TZ_TPE).replace(tzinfo=None)
+        elif len(raw) == 10 and end_of_day:
+            stamp = stamp.replace(hour=23, minute=59, second=59)
+        stamps.append(stamp)
+    return max(stamps, default=None)
 
 
 def close_points(record):
@@ -148,10 +140,8 @@ def classify(record, now, cooldown, window):
     elif in_window:
         # 冷卻中的非緊急紀錄不重排；24 小時內到期者不受冷卻限制。
         bucket = None if (fresh and not urgent) else "closing"
-    elif failed is not None and not fresh:
-        bucket = "retry"
-    elif not fresh:
-        bucket = "rotation"
+    elif not fresh and (due is not None or record.get("review_cadence") != "on_new_signal"):
+        bucket = "retry" if failed is not None else "rotation"
     return {"bucket": bucket, "closed": False, "due": due, "soonest": soonest,
             "verified": verified, "failed": failed, "fresh": fresh,
             "urgent": urgent, "in_window": in_window}
@@ -286,7 +276,8 @@ def self_test():
         # 已截止者永不排入，即使 next_review_at 已過。
         {"id": "closed-overdue", "status": "expired", "next_review_at": iso(days=-1), "verified_at": iso(days=-30)},
         # 沒有 next_review_at 的 on_new_signal 仍可因截止點排入。
-        {"id": "signal-closing", "status": "conditional", "next_review_at": None, "verified_at": iso(days=-2),
+        {"id": "signal-only", "status": "conditional", "review_cadence": "on_new_signal", "verified_at": iso(days=-20)},
+        {"id": "signal-closing", "status": "conditional", "review_cadence": "on_new_signal", "next_review_at": None, "verified_at": iso(days=-2),
          "expiry": {"date": (now + datetime.timedelta(days=2)).strftime("%Y-%m-%d")}},
         # 輪替必須先看排程再看新舊：較新核過但排程較近的 weekly，要排在更舊卻排到 20 天後的 monthly 前面。
         {"id": "rotation-weekly-sooner", "status": "conditional", "next_review_at": iso(days=4), "verified_at": iso(days=-1)},
@@ -313,6 +304,10 @@ def self_test():
         {"id": "retry-closed", "status": "expired", "next_review_at": iso(days=10), "verified_at": iso(days=-30),
          "last_review_attempt_at": iso(hours=-20)},
     ]
+    assert parse_stamp("2026-12-07T23:59:00Z") == datetime.datetime(2026, 12, 8, 7, 59)
+    assert parse_stamp("2026-12-07T23:59:00-05:00") == datetime.datetime(2026, 12, 8, 12, 59)
+    assert parse_stamp("2026-12-07T23:59:00Z/2026-12-08T07:40:00+08:00") == datetime.datetime(2026, 12, 8, 7, 59)
+    assert parse_stamp("2026-99-99", end_of_day=True) is None
     assert parse_stamp("2026-11-10", end_of_day=True) == datetime.datetime(2026, 11, 10, 23, 59, 59), \
         "只有日期的期限要算到當日 23:59:59（與 tests/validate.py 的 close_stamp 一致）"
     assert parse_stamp("2026-11-10") == datetime.datetime(2026, 11, 10), \
@@ -330,6 +325,7 @@ def self_test():
     assert buckets["closing-yesterday-dateonly"] != "closing", "期限日期已過者不得再由 closing 桶排入"
     assert "rotation-old" in ids, "未到期的可行動紀錄必須進輪替補位"
     assert "closed-overdue" not in ids, "已截止紀錄不得進佇列"
+    assert "signal-only" not in ids, "有新線索才複核的紀錄不參與例行輪替"
     assert "signal-closing" in ids, "on_new_signal 有截止點時仍要排入"
     assert ids.index("rotation-weekly-sooner") < ids.index("rotation-monthly-older"), \
         "輪替要先比 next_review_at：排程較近者優先，不能只看 verified_at"

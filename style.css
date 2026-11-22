@@ -83,7 +83,7 @@ img, svg { max-width: 100%; }
 .workspace { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 36px; align-items: start; }
 .filters-sidebar { min-width: 0; position: sticky; top: 24px; }
 .filter-shell { border: 1px solid var(--line); border-radius: 6px; background: #efefe8; padding: 20px; }
-.filter-toggle { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; font-weight: 700; list-style: none; margin-bottom: 23px; }
+.filter-toggle { cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; font-weight: 700; list-style: none; margin-bottom: 23px; }
 .filter-toggle::-webkit-details-marker { display: none; }
 .filter-toggle-hint { display: none; }
 #filters { display: grid; gap: 17px; }
@@ -205,10 +205,6 @@ img, svg { max-width: 100%; }
 .site-footer .footer-note { margin-top: 2px; }
 .footer-github { text-decoration: none; white-space: nowrap; font-size: 10px; margin-top: 3px; }
 .footer-github span { margin-left: 6px; }
-@media (min-width: 761px) {
-  .filter-toggle { pointer-events: none; }
-  .filter-shell:not([open]) > #filters { display: grid; }
-}
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 56px); }
   .hero { gap: 40px; padding-block: 48px; }

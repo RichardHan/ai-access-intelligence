@@ -1,13 +1,36 @@
-import json,pathlib,math,datetime
+import datetime
+import json
+import math
+import pathlib
+import re
+import sys
+
 import jsonschema
-p=pathlib.Path(__file__).resolve().parents[1]
+
+p = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(p))
+from tools import prioritize
+from tools.queue import TZ_TPE, close_points, parse_stamp
+
 def unique_keys(pairs):
  result={}
  for key,value in pairs:
   if key in result: raise ValueError(f'duplicate JSON key: {key}')
   result[key]=value
  return result
-d=json.loads((p/'data/offers.json').read_text(),object_pairs_hook=unique_keys);jsonschema.validate(d,json.loads((p/'schema.json').read_text(),object_pairs_hook=unique_keys))
+# jsonschema's date-time checker is an optional extra. Use Python's calendar
+# validation with the offset-bearing timestamp syntax defined in schema.json.
+formats = jsonschema.FormatChecker()
+
+@formats.checks("date-time", raises=ValueError)
+def valid_timestamp(value):
+    if not isinstance(value, str):
+        return True
+    return datetime.datetime.fromisoformat(value.upper().replace("Z", "+00:00")).tzinfo is not None
+
+d = json.loads((p/'data/offers.json').read_text(), object_pairs_hook=unique_keys)
+schema = json.loads((p/'schema.json').read_text(), object_pairs_hook=unique_keys)
+jsonschema.validate(d, schema, format_checker=formats)
 history=json.loads((p/'data/policy-history.json').read_text(),object_pairs_hook=unique_keys)
 # 資料檔的序列化格式是版面契約，不是實作細節：`json.dump()` 預設縮排是 1 空格、這兩個檔案是 2 空格，
 # 任何臨時腳本漏掉 `indent=2` 都會把整份檔案重寫一遍。2026-11-11 本輪實際踩到：改一筆紀錄的腳本
@@ -51,33 +74,17 @@ assert not (set(reviewed)&set(new) or set(reviewed)&set(attempted) or set(new)&s
 assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
 assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
 assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
-assert run['completed_at']>=run['started_at'], 'completed_at precedes started_at'
+assert parse_stamp(run['completed_at'])>=parse_stamp(run['started_at']), 'completed_at precedes started_at'
 # A timestamp is a claim about when a page was actually read or the batch actually finished.
 # Parallel research reported times ahead of the real clock (2026-11-09 批次先寫 completed_at 02:40、
 # 13 筆 verified_at 在 02:08–02:34，而該批次 commit 是 01:46)，發布後網站就顯示還沒發生的
 # 「資料更新」。檢查在建置／push 前執行，所以領先的分鐘數只有在此時才看得到；容差 5 分鐘吸收
 # 寫入者與檢查者之間的正常時鐘差。
-STAMP_RE=__import__('re').compile(r'(\d{4}-\d{2}-\d{2})(?:[T ](\d{2}:\d{2}(?::\d{2})?))?')
-def latest_stamp(value):
- if not isinstance(value,str): return None
- found=[]
- for day,clock in STAMP_RE.findall(value):
-  try: found.append(datetime.datetime.fromisoformat(day+('T'+clock if clock else 'T00:00')))
-  except ValueError: pass
- return max(found) if found else None
-TZ_TPE=datetime.timezone(datetime.timedelta(hours=8))
 NOW=datetime.datetime.now(TZ_TPE).replace(tzinfo=None)
 TOLERANCE=datetime.timedelta(minutes=5)
-CLOCK_RE=__import__('re').compile(r'\d{1,2}:\d{2}')
-def close_stamp(value):
- '''最後仍可動作的時點。只寫日期的期限代表「當天仍可動作」，因此取當日 23:59:59；
- 若照 latest_stamp 讀成當日 00:00，最後一天還整天可申請的紀錄會被誤判為「期限已過」而要求關閉
- （2026-11-09 的台北青年 AI 補助與新竹市補助都是只寫日期的期限）。'''
- stamp=latest_stamp(value)
- if stamp is None or not isinstance(value,str): return stamp
- return stamp if CLOCK_RE.search(value) else stamp.replace(hour=23,minute=59,second=59)
+CLOCK_RE=re.compile(r'\d{1,2}:\d{2}')
 def assert_not_future(value,label):
- stamp=latest_stamp(value)
+ stamp=parse_stamp(value)
  assert stamp is None or stamp-NOW<=TOLERANCE, f'{label} is in the future ({value}); use the real clock'
 assert_not_future(d['updated_at'],'updated_at')
 assert_not_future(run['completed_at'],'last_research_run.completed_at')
@@ -86,12 +93,12 @@ assert_not_future(run['started_at'],'last_research_run.started_at')
 FIELDS=['verified_at','discovered_at','announcement_at','last_review_attempt_at','last_attempted_at']
 for o in d['offers']:
  for field in FIELDS: assert_not_future(o.get(field),f'{field} in {o["id"]}')
- for s in o['sources']: assert_not_future(s.get('accessed_at') or s.get('accessed_time_range'),f'accessed_at in {o["id"]}')
+ for s in o['sources']: assert_not_future(s.get('accessed_at') or s.get('accessed_time_range') or s.get('accessed_date'),f'accessed_at in {o["id"]}')
  # A record cannot be verified after the batch that reports it finished.
- assert not o.get('verified_at') or latest_stamp(o['verified_at'])<=latest_stamp(d['updated_at']), f'verified_at after batch completion in {o["id"]}'
+ assert not o.get('verified_at') or parse_stamp(o['verified_at'])<=parse_stamp(d['updated_at']), f'verified_at after batch completion in {o["id"]}'
 offers_by_id={o['id']:o for o in d['offers']}
-for rid in reviewed:assert offers_by_id[rid].get('verified_at') and offers_by_id[rid]['verified_at']>=run['started_at'], f'stale verified_at for reviewed ID: {rid}'
-for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]['verified_at']>=run['started_at'], f'stale verified_at for new ID: {nid}'
+for rid in reviewed:assert offers_by_id[rid].get('verified_at') and parse_stamp(offers_by_id[rid]['verified_at'])>=parse_stamp(run['started_at']), f'stale verified_at for reviewed ID: {rid}'
+for nid in new:assert offers_by_id[nid].get('verified_at') and parse_stamp(offers_by_id[nid]['verified_at'])>=parse_stamp(run['started_at']), f'stale verified_at for new ID: {nid}'
 # 反向的漂移：批次期間被刷新 `verified_at`、卻沒有列進本批次的紀錄。上面兩條只檢查「列進來的
 # 時間夠新」，沒有任何一條檢查「沒列進來的不准變新」；把一筆沒重讀的紀錄 `verified_at` 改成今天，
 # README 的複核筆數、首頁 scope 與 `last_research_run` 全部照舊通過，卡片卻宣稱今天核過。
@@ -99,37 +106,34 @@ for nid in new:assert offers_by_id[nid].get('verified_at') and offers_by_id[nid]
 # 只看批次窗口內（>= started_at）的時間，因為同一天可能有好幾個批次，當天早班的紀錄不屬於本輪。
 _batch_claim=set(reviewed)|set(new)|set(attempted)
 for o in d['offers']:
- if o.get('verified_at') and latest_stamp(o['verified_at'])>=latest_stamp(run['started_at']) and o['id'] not in _batch_claim:
+ if o.get('verified_at') and parse_stamp(o['verified_at'])>=parse_stamp(run['started_at']) and o['id'] not in _batch_claim:
   raise AssertionError(f'{o["id"]} has verified_at {o["verified_at"]} inside this batch window but is not in reviewed_ids/new_ids/attempted_failed_ids: report it or keep the older verified_at')
-run_day=run['started_at'][:10]
+run_day=parse_stamp(run['started_at']).date().isoformat()
 # 存取時間是自由文字（ISO、ISO 區間、甚至「2026-10-25（Asia/Taipei）」這種帶註記的寫法）。
 # 舊版用 `raw.split('/')[-1][:10]` 取日期，遇到帶註記的值會取到「Taipei）」這種片段，
 # 與 run_day 做字串比較時因為首字元 'T' 大於 '2' 而恆為真：2026-11-10 實測 adobe-firefly-assistant
 # 的舊來源「2026-10-25（Asia/Taipei）」被算成「本批次查核」，於是同一 URL 當天出現兩筆就
 # 誤報重複；反過來，一筆只有舊自由文字日期的紀錄也能通過下面的「本批次至少一個查閱時間」。
 # 一律抽出字串裡最後一個 YYYY-MM-DD 再比較。
-import re as _re
-DATE_ONLY=_re.compile(r'\d{4}-\d{2}-\d{2}')
 def accessed_day(source):
- raw=str(source.get('accessed_at') or source.get('accessed_time_range') or '')
- found=DATE_ONLY.findall(raw)
- return found[-1] if found else ''
+ stamp=parse_stamp(source.get('accessed_at') or source.get('accessed_time_range') or source.get('accessed_date'))
+ return stamp.date().isoformat() if stamp else ''
 # 金額經 shell 展開後失去數字（US$110,000 → US,000）不會讓 JSON 失效，卻會讓證據變成
 # 「總獎金池 US,000」，卡片其餘欄位照樣顯示一個看似合理的金額。2026-11-16 全庫掃到 6 筆
 # 紀錄的 7 個欄位（含來源 scope/evidence），另有 vmake 摘要的「US$制」。舊版只檢查本批次
 # 6 個欄位，因此毀損字串可以長存於未複核紀錄；資料修完後改為掃全庫所有字串欄位，避免
 # 下一個臨時腳本再把同樣的缺字寫回來。
-BROKEN_USD=_re.compile(r'(?:\bUS|\$)\s*,\d{3}')
-BROKEN_CURRENCY=_re.compile(r'US\$(?=[\u4e00-\u9fff])')
+BROKEN_USD=re.compile(r'(?:\bUS|\$)\s*,\d{3}')
+BROKEN_CURRENCY=re.compile(r'US\$(?=[\u4e00-\u9fff])')
 # 同一種毀損還有更嚴重的變體：`$` 與緊接的數字一起消失，留下「US0,000」「US5K」「US/月」
 # 「US00」。它比「US,000」更難察覺——「US0,000」看起來就是零，卡片照樣把方案顯示成免費。
 # 2026-11-16 全庫掃到 7 筆（langsmith 的 US$25K–<US$10M／US$10,000 兩處、e2b 的 US$20,000、
 # brave 的 US$5 與 US$5/1,000、turso 的 US$0/月、vespa 的 US$300、llamaparse 的 US$0／月），
 # 其中 6 筆是前幾輪批次寫入時留下的。下面三條把「貨幣代碼後直接接數字或斜線單位」視為缺字：
 # `US, UK` 這類清單與 `US/Canada` 不會命中，`ASUS` 也因前一字為字母而排除。
-BROKEN_USD_DIGITS=_re.compile(r'(?<![A-Za-z])US(?=\d|,\d)')
-BROKEN_USD_SLASH=_re.compile(r'(?<![A-Za-z])US/(?=[\d\u4e00-\u9fff])')
-BROKEN_NT_DIGITS=_re.compile(r'(?<![A-Za-z])NT(?=\d|,\d)')
+BROKEN_USD_DIGITS=re.compile(r'(?<![A-Za-z])US(?=\d|,\d)')
+BROKEN_USD_SLASH=re.compile(r'(?<![A-Za-z])US/(?=[\d\u4e00-\u9fff])')
+BROKEN_NT_DIGITS=re.compile(r'(?<![A-Za-z])NT(?=\d|,\d)')
 def _record_strings(value,path=''):
  if isinstance(value,str):
   yield path,value
@@ -153,8 +157,8 @@ for _o in d['offers']:
 # 的狀態、哪些是現在的事實。散文日期可以留，但「今日／明天／剩下 N 天」這種指涉必須換成絕對日期，
 # 因為卡片與排序都只用機器可讀欄位，句子裡的相對時間沒有任何東西會校正它。
 # 只掃紀錄自己主張、卡片看得到的欄位；`sources[].evidence` 是當時查閱的引文，保留原文語境，不在此列。
-_RELATIVE_TIME=_re.compile(r'今日|今天|明天|後天|昨日|昨天|本週|這週')
-_REL_DAYS=_re.compile(r'(?:僅剩|剩下|還剩|剩)\s*[\d一二三四五六七八九十]+\s*天')
+_RELATIVE_TIME=re.compile(r'今日|今天|明天|後天|昨日|昨天|本週|這週')
+_REL_DAYS=re.compile(r'(?:僅剩|剩下|還剩|剩)\s*[\d一二三四五六七八九十]+\s*天')
 def _reader_strings(value,path=''):
  if isinstance(value,str):
   yield path,value
@@ -199,9 +203,9 @@ for rid in reviewed+new:
  assert isinstance(_scope_text,str) and _scope_text.strip(), f'missing verification_scope for a batch record: {rid}'
  assert run_day in _scope_text, f'verification_scope does not state this batch date ({run_day}) — the card would show 核實 {run_day} next to a scope from an older read: {rid}'
 for aid in attempted:
- assert offers_by_id[aid].get('last_review_attempt_at') and offers_by_id[aid]['last_review_attempt_at']>=run['started_at'], f'stale last_review_attempt_at for attempted ID: {aid}'
+ assert offers_by_id[aid].get('last_review_attempt_at') and parse_stamp(offers_by_id[aid]['last_review_attempt_at'])>=parse_stamp(run['started_at']), f'stale last_review_attempt_at for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
- assert not offers_by_id[aid].get('verified_at') or offers_by_id[aid]['verified_at']<run['started_at'], f'verified_at refreshed for failed attempted ID: {aid}'
+ assert not offers_by_id[aid].get('verified_at') or parse_stamp(offers_by_id[aid]['verified_at'])<parse_stamp(run['started_at']), f'verified_at refreshed for failed attempted ID: {aid}'
 # 追查失敗只留時間、沒留原因，等於把「那天為什麼讀不到」丟掉：下一輪無法判斷要換哪條路線，
 # 讀者在卡片上只看到一個沒有說明的時間。上面的檢查只涵蓋本批次，因此 2026-11-09 仍累積了
 # 4 筆歷史缺漏（qoder-lite、seoul-aihub-khdp-closed-september、kakao-plus-young-adult-promo-unverified、
@@ -220,7 +224,7 @@ assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
 # on_new_signal 依定義沒有固定日期，維持例外。
 MAX_RETRY_AFTER_FAILURE=datetime.timedelta(days=14)
 for o in d['offers']:
- attempt=latest_stamp(o.get('last_review_attempt_at')); verified=latest_stamp(o.get('verified_at')); nxt=latest_stamp(o.get('next_review_at'))
+ attempt=parse_stamp(o.get('last_review_attempt_at')); verified=parse_stamp(o.get('verified_at')); nxt=parse_stamp(o.get('next_review_at'))
  if attempt is None or o.get('status') in dead or o.get('review_cadence')=='on_new_signal': continue
  if verified is not None and verified>=attempt: continue
  assert nxt is not None and nxt-attempt<=MAX_RETRY_AFTER_FAILURE, f'latest evidence is a failed attempt ({o["last_review_attempt_at"]}) but next review is {o["next_review_at"]}: retry within 14 days instead of a full cycle in {o["id"]}'
@@ -246,13 +250,6 @@ MAX_CADENCE_GAP={'daily':3,'weekly':10,'biweekly':20}
 # chatgpt-teachers-us（2028-06）與 claude-teachers-us（2027-06-30）仍是可行動狀態：一旦
 # expiry.date 過去而狀態沒改，卡片會照樣宣稱可領取／報名，兩條規則都攔不到。expiry.date
 # 只解析完整日期；像 2028-06 這種只到月份的寫法不解析（不猜月末日），expiry.text 是散文也不解析。
-def close_points(record):
- points = [('deadline_at', record.get('deadline_at'), close_stamp(record.get('deadline_at'))),
-           ('expires_at', record.get('expires_at'), close_stamp(record.get('expires_at')))]
- expiry = record.get('expiry')
- if isinstance(expiry, dict) and isinstance(expiry.get('date'), str):
-  points.append(('expiry.date', expiry['date'], close_stamp(expiry['date'])))
- return [point for point in points if point[2] is not None]
 # 反向：期限已過而狀態仍非已截止，卡片就會繼續宣稱可以領取／報名。AOCAI 服務業 AI 課程
 # 2026-11-09 就是這樣：報名表已回「活動已結束」、活動頁改列 11/08 23:59，但紀錄沒有
 # deadline_at，只有摘要裡的文字，因此上面那條排程規則看不到它，卡片整天寫著「報名表仍開放」。
@@ -276,8 +273,8 @@ if _passed_deadlines:
 # 只認「申請窗口關閉」的明確字樣（截止／報名至／受理至／申請至）：像 fal-flux3 的「折扣至 11/22–23」、
 # qoder 的「每日額度至 10:00」、mem0 的「舊戶過渡至 11/25」都是方案內的子期限，回填成整筆的
 # deadline_at 會讓卡片宣稱錯誤的截止日，所以「至」不列入本規則。
-_DEADLINE_WORD=__import__('re').compile(r'截止|報名至|受理至|申請至')
-_TITLE_DATE=__import__('re').compile(r'(20\d\d)-(\d{1,2})-(\d{1,2})|(?<!\d)(\d{1,2})/(\d{1,2})(?!\d)')
+_DEADLINE_WORD=re.compile(r'截止|報名至|受理至|申請至')
+_TITLE_DATE=re.compile(r'(20\d\d)-(\d{1,2})-(\d{1,2})|(?<!\d)(\d{1,2})/(\d{1,2})(?!\d)')
 for o in d['offers']:
  if o.get('status') in dead or not _DEADLINE_WORD.search(o.get('title') or ''): continue
  if not any(1<=int(m.group(2) or m.group(4))<=12 and 1<=int(m.group(3) or m.group(5))<=31
@@ -302,13 +299,13 @@ for o in d['offers']:
  if o.get('next_review_at') is None and cadence!='on_new_signal':
   raise AssertionError(f'missing next_review_at for {cadence} cadence — the record can never enter the review queue: {o["id"]}')
  if cadence in MAX_CADENCE_GAP and o.get('verified_at') and o.get('next_review_at'):
-  gap=(datetime.datetime.fromisoformat(o['next_review_at'])-datetime.datetime.fromisoformat(o['verified_at'])).days
+  gap=(parse_stamp(o['next_review_at'])-parse_stamp(o['verified_at'])).days
   assert gap<=MAX_CADENCE_GAP[cadence], f'{cadence} cadence but next review {gap} days out (fix the label or the schedule): {o["id"]}'
  # 讀者只能在截止前動作，所以還有未來截止／到期時點的紀錄，下次複核必須排在該時點之前。
  # 2026-11-09 發現 StepFun 免費 preview 到 11/17 11:59:59，next_review_at 卻是 11/18 12:00：
  # 整個免費期沒有任何複核，若官方提前結束或展延，網站要到活動結束後才更新。
  if o.get('status') not in dead and o.get('next_review_at'):
-  scheduled=latest_stamp(o['next_review_at'])
+  scheduled=parse_stamp(o['next_review_at'])
   for field,raw,closes in close_points(o):
    if closes>NOW and scheduled and scheduled>closes:
     raise AssertionError(f'next review {o["next_review_at"]} falls after {field} {raw} in {o["id"]}: schedule the review while the offer is still actionable')
@@ -318,7 +315,7 @@ for o in d['offers']:
  # 讀者看到的是官方給的截止時鐘；台北青年 AI 補助原始條文只寫「最遲應於11月10日前提出申請」
  # 「以送達本局之日為準」，23:59 是當日邊界推定，寫成 timestamp 後卡片就變成
  # 「申請截止 2026/11/10 23:59（台北時間）」，可能讓讀者以為當日 23:59 前寄達即可。
- # 只寫日期時前端會標「（來源未列時刻）」，這種精度才是來源真的有的。
+ # 只寫日期時前端會標「（僅記日期）」，這種精度才是來源真的有的。
  for field in ('deadline_at','expires_at'):
   value=o.get(field)
   if isinstance(value,str) and CLOCK_RE.search(value):
@@ -387,6 +384,8 @@ for o in d['offers']:
  elif o.get('status')=='duplicate_merged':
   raise AssertionError(f'duplicate_merged without duplicate_of in {o["id"]}')
  if o['record_type']=='opportunity':
+  expected_score = prioritize.score(o)
+  assert o['priority_score'] == expected_score and o['priority_tier'] == prioritize.tier_of(o, expected_score), f'stale priority score or tier in {o["id"]}: run tools/prioritize.py'
   assert o['priority_tier'] in tiers and math.isfinite(o['priority_score']) and o['priority_note']
   # 卡片藥丸與「優先度依據」必須說同一件事。缺少 status 的紀錄在 app.js 顯示「狀態待釐清」，
   # 但 tools/prioritize.py 的 note_of() 曾把缺值寫成「條件式」（2026-11-09 統計 22 筆機會），
@@ -411,7 +410,7 @@ for o in d['offers']:
 # 一邊說台灣不適用、一邊說未確認；而 `taiwan` 還驅動 S 級判定與「台灣條件適用」篩選，所以錯的是說明文字
 # 那一邊，人眼看不出來。只檢查明確寫了 Yes／No／Unknown 前綴的說明（全庫 217 筆），沒寫前綴的自由敘述
 # 不在此列——強迫每筆都加前綴會變成重寫既有內容，而不是修正矛盾。
-TAIWAN_NOTE_PREFIX=__import__('re').compile(r'^\s*(Yes|No|Unknown|Conditional|Partial)\s*[：:]')
+TAIWAN_NOTE_PREFIX=re.compile(r'^\s*(Yes|No|Unknown|Conditional|Partial)\s*[：:]')
 for _o in d['offers']:
  _note=(_o.get('eligibility') or {}).get('taiwan_note') or ''
  _m=TAIWAN_NOTE_PREFIX.match(_note)
@@ -430,11 +429,10 @@ for _o in d['offers']:
 # `sourceStamp()` 相同的解析順序：accessed_at → accessed_time_range → accessed_date → 證據文字開頭的
 # 「YYYY-MM-DD … 實讀／重讀」。只取字串裡最後一個日期（區間取結束、帶註記也能取到），再比日曆日，
 # 避免時區與格式差異造成假陽性。
-_READ_VERB=__import__('re').compile(r'^\s*(\d{4}-\d{2}-\d{2})(?:[ ,，]*(?:[0-9]{1,2}[:：][0-9]{2}(?:[:：][0-9]{2})?)?)?[^\n]{0,30}?(?:實讀|重讀|查閱|讀取|複核|瀏覽|檢視)')
+_READ_VERB=re.compile(r'^\s*(\d{4}-\d{2}-\d{2})(?:[ ,，]*(?:[0-9]{1,2}[:：][0-9]{2}(?:[:：][0-9]{2})?)?)?[^\n]{0,30}?(?:實讀|重讀|查閱|讀取|複核|瀏覽|檢視)')
 def _evidence_day(source):
- raw=str(source.get('accessed_at') or source.get('accessed_time_range') or source.get('accessed_date') or '')
- days=DATE_ONLY.findall(raw)
- if days: return days[-1]
+ day = accessed_day(source)
+ if day: return day
  _m=_READ_VERB.match(str(source.get('evidence') or ''))
  return _m.group(1) if _m else ''
 _EVIDENCE_LAG=7
@@ -443,7 +441,7 @@ for _o in d['offers']:
  _days=[_d for _d in (_evidence_day(_s) for _s in _o.get('sources',[])) if _d]
  if not _days or not _o.get('verified_at'): continue
  try:
-  _vd=datetime.date.fromisoformat(_o['verified_at'][:10]); _newest=max(_days)
+  _vd=parse_stamp(_o['verified_at']).date(); _newest=max(_days)
   _lag=(_vd-datetime.date.fromisoformat(_newest)).days
  except ValueError: continue
  if _lag>_EVIDENCE_LAG: _lagged.append((_lag,_o['id']))
@@ -464,21 +462,22 @@ assert _evidence_day({'evidence':'2026-10-23 日本時間上線，額度 100 點
 # （由 offers.json 算出來的 overview）仍然是對的——兩個入口互相矛盾。2026-11-10 對照前五個 commit
 # 尚未漂移，但那只是因為每輪都有人手動改。下面的檢查只把「README 寫的」對回「資料算的」，
 # 不改寫 README；新增摘要文字時不必調整格式，但動到這四個數字就要一起改。
-import re as _re
 _readme=(p/'README.md').read_text()
 def _readme_count(pattern,label):
- m=_re.search(pattern,_readme)
- assert m, f'README headline is missing the {label} sentence; keep the documented format so this check can read it'
- return [int(x.replace(',','')) for x in m.groups()]
+ matches=list(re.finditer(pattern,_readme))
+ assert len(matches)==1, f'expected one README {label} summary, found {len(matches)}'
+ return [int(x.replace(',','')) for x in matches[0].groups()]
+_updated = parse_stamp(d['updated_at']).strftime('%Y-%m-%d %H:%M Asia/Taipei')
+assert f'更新時間 **{_updated}**' in _readme, 'README update time disagrees with the dataset'
+_failed, = _readme_count(r'整筆追查失敗 \*\*([\d,]+) 筆\*\*','failed count')
+assert _failed == len(attempted), 'README failed count disagrees with attempted_failed_ids'
 _h_total,_h_opp,_h_pol,_h_watch=_readme_count(r'有 \*\*([\d,]+) 筆\*\*（([\d,]+) 項機會、([\d,]+) 項政策、([\d,]+) 筆觀察線索）','dataset size')
 _kinds={k:sum(1 for o in d['offers'] if o.get('record_type')==k) for k in ('opportunity','policy','watchlist')}
 assert (_h_total,_h_opp,_h_pol,_h_watch)==(len(ids),_kinds['opportunity'],_kinds['policy'],_kinds['watchlist']), \
  f'README dataset size disagrees with data: README {_h_total} ({_h_opp}/{_h_pol}/{_h_watch}) vs data {len(ids)} ({_kinds["opportunity"]}/{_kinds["policy"]}/{_kinds["watchlist"]})'
 _h_reviewed,= _readme_count(r'本輪成功局部複核 \*\*([\d,]+) 筆\*\*','reviewed count')
 assert _h_reviewed==len(reviewed), f'README reviewed count {_h_reviewed} != last_research_run.reviewed_ids ({len(reviewed)})'
-_m=_re.search(r'新增機會 \*\*([\d,]+) 筆\*\*、政策 \*\*([\d,]+) 筆\*\*、觀察線索 \*\*([\d,]+) 筆\*\*',_readme)
-assert _m, 'README headline is missing the 新增機會／政策／觀察線索 sentence'
-_h_new=tuple(int(x.replace(',','')) for x in _m.groups())
+_h_new=tuple(_readme_count(r'新增機會 \*\*([\d,]+) 筆\*\*、政策 \*\*([\d,]+) 筆\*\*、觀察線索 \*\*([\d,]+) 筆\*\*','new-record counts'))
 _nk=tuple(sum(1 for i in new if offers_by_id[i].get('record_type')==k) for k in ('opportunity','policy','watchlist'))
 assert _h_new==_nk and sum(_h_new)==len(new), f'README new-record counts {_h_new} disagree with new_ids record types {_nk} ({len(new)} IDs)'
 _h_unreviewed,= _readme_count(r'其餘 \*\*([\d,]+) 筆\*\*既有紀錄未完成本輪複核','unreviewed count')
@@ -490,19 +489,19 @@ assert _h_unreviewed==run['unreviewed_existing_count'], f'README unreviewed coun
 # 不規定句子的其餘寫法。日期比對抓不到同日兩輪的漂移，筆數才是真正的防線。
 _scope=d['scope']
 assert isinstance(_scope,str) and _scope.strip(), 'top-level scope (the homepage research-range sentence) is empty'
-_m=_re.search(r'複核\s*\*{0,2}([\d,]+)\s*筆',_scope)
+_m=re.search(r'複核\s*\*{0,2}([\d,]+)\s*筆',_scope)
 assert _m, 'top-level scope must state how many existing records this batch reviewed (e.g.「局部複核 12 筆」) so the homepage cannot show a stale count'
 _scope_reviewed=int(_m.group(1).replace(',',''))
 assert _scope_reviewed==len(reviewed), f'top-level scope says it reviewed {_scope_reviewed} records but last_research_run.reviewed_ids has {len(reviewed)} — update the homepage sentence with the batch'
-assert run['started_at'][:10] in _scope, f'top-level scope does not mention this batch date {run["started_at"][:10]} — the homepage is showing an older round'
+assert run_day in _scope, f'top-level scope does not mention this batch date {run["started_at"][:10]} — the homepage is showing an older round'
 # 同日兩輪若都是複核 20 筆，日期與筆數無法攔住沿用上一輪摘要。
 # 首頁摘要須包含完整批次時間窗（台北時間），避免 09:05 批次仍顯示 08:05。
-_scope_start=datetime.datetime.fromisoformat(run['started_at']).astimezone(TZ_TPE)
-_scope_end=datetime.datetime.fromisoformat(run['completed_at']).astimezone(TZ_TPE)
+_scope_start=parse_stamp(run['started_at'])
+_scope_end=parse_stamp(run['completed_at'])
 _scope_window=f"{_scope_start:%Y-%m-%d %H:%M}–{_scope_end:%Y-%m-%d %H:%M} Asia/Taipei"
 assert _scope_window in _scope, f'top-level scope must contain this batch window ({_scope_window}) — same-day counts alone cannot detect a stale round'
-_m=_re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
-if _m: assert int(_m.group(1).replace(',',''))<=len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
+_m=re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
+if _m: assert int(_m.group(1).replace(',',''))==len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
 # scope 只描述「這一輪做了什麼」。`tools/prioritize.py` 舊版會在每次執行時把
 # 「YYYY-MM-DD 加入優先度評分與 S–D 分層」追加到 scope 尾端（條件是字串不含該句，而 scope 每輪
 # 都會被改寫，所以等於每輪都追加），首頁於是宣稱本輪新增了 2026-10-24 就上線的評分機制。

@@ -1,4 +1,18 @@
-const fs=require('fs'),vm=require('vm'),assert=require('assert');const source=fs.readFileSync(__dirname+'/../app.js','utf8').replace('const $=s=>document.querySelector(s);','const $=s=>null;');const ctx={};vm.createContext(ctx);vm.runInContext(source,ctx);const d=JSON.parse(fs.readFileSync(__dirname+'/../data/offers.json'));const f=ctx.matches;for(const o of d.offers) assert(f(o,{}));const unknown=d.offers.find(o=>o.setup_cost_usd===null);assert(!f(unknown,{cost:'0'}));const free=d.offers.find(o=>o.id==='work-codex-free');assert(f(free,{cost:'0',view:'free'}));// 設定時間門檻含等於：正好 15 分鐘的紀錄（含 work-codex-free）必須出現在「15 分鐘」篩選內，
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert');
+const source = fs.readFileSync(__dirname + '/../app.js', 'utf8');
+const ctx = vm.createContext({});
+vm.runInContext(source, ctx);
+const d = JSON.parse(fs.readFileSync(__dirname + '/../data/offers.json', 'utf8'));
+const f = ctx.matches;
+
+for (const offer of d.offers) assert(f(offer, {}));
+const unknown = d.offers.find(offer => offer.setup_cost_usd === null);
+assert(!f(unknown, {cost: '0'}));
+const free = d.offers.find(offer => offer.id === 'work-codex-free');
+assert(f(free, {cost: '0', view: 'free'}));
+// 設定時間門檻含等於：正好 15 分鐘的紀錄（含 work-codex-free）必須出現在「15 分鐘」篩選內，
 // 但 16 分鐘不行。舊版用嚴格小於，109 筆最省力方案被濾掉。
 assert(f(free,{effort:'15'}));assert(f(free,{effort:'30'}));assert(!f({...free,effort_minutes_max:16},{effort:'15'}));assert(!f(free,{effort:'5'}));assert(!f(free,{taiwan:'Yes'}));assert(!f(free,{usage:'TEMPORARILY UNLIMITED'}));assert(f(free,{verification:'Official'}));
 // 免費專區由 schema 管制的費用欄位判定，不能只靠人工 views 標記：零設定費＋零每月費用一律列入，
@@ -31,6 +45,9 @@ assert.strictEqual(ctx.statusInfo({status:'legacy_closed_new_path_conditional'})
 assert.strictEqual(ctx.statusInfo({status:'legacy_closed_new_path_conditional'}).tone,'conditional');
 assert.strictEqual(ctx.statusInfo({status:'conditional'}).tone,'conditional');
 assert.strictEqual(ctx.statusInfo({status:'application_based'}).tone,'conditional');
+const pausedOffer = {...free, status:'paused', taiwan:'Yes'};
+assert(!ctx.presetMatches(pausedOffer, 'free') && !ctx.presetMatches(pausedOffer, 'taiwan'));
+assert(f(pausedOffer, {}), 'paused records remain searchable in the full dataset');
 const css=fs.readFileSync(__dirname+'/../style.css','utf8');
 assert(css.includes('.status-conditional'),'missing .status-conditional in style.css');
 assert.strictEqual(ctx.statusInfo({status:'quota_and_taiwan_eligibility_unverified'}).label,'額度與台灣資格待核');
@@ -48,9 +65,12 @@ class Element {
   get childElementCount() { return this.children.length; }
   setAttribute(key,value) { this[key]=value; }
 }
-ctx.document={createElement:tag=>new Element(tag)};
+ctx.document = {createElement: tag => new Element(tag), querySelector: () => null};
 const dup=d.offers.find(o=>o.status==='duplicate_merged');
 assert(dup&&dup.duplicate_of,'dataset has a merged duplicate with duplicate_of');
+const estimated = ctx.createDetails({eligibility:{}, sources:[], valuation_scenario:'按實際月用量估算'});
+const valuation = estimated.children.find(n => n.tagName === 'dl').children.find(row => row.children[0].textContent === '估值依據');
+assert.strictEqual(valuation.children[1].textContent, '按實際月用量估算');
 const dupDetails=ctx.createDetails(dup);
 const dupRow=dupDetails.children.find(n=>n.tagName==='dl').children.find(r=>r.children[0].textContent==='重複收錄處理');
 assert(dupRow&&dupRow.children[1].textContent.includes(dup.duplicate_of),'merged duplicate details must name the canonical id');
@@ -138,7 +158,7 @@ assert.strictEqual(nullCadenceUnscheduledRow.children[1].textContent,'未指定�
 
 // 精確截止時間存在 expires_at／deadline_at／expiry，但卡片先前只渲染自由文字的「有效期間」，
 // 讀者要趕的台北 11/12 15:59、今日 12:59 只藏在段落裡。以下為規格值：有這三個欄位就必須出現
-// 「截止與期限」列，且帶時刻者標明台北時間、只有日期者標明來源未列時刻；沒有欄位就不得出現。
+// 「截止與期限」列，且帶時刻者標明台北時間、只有日期者標明僅記日期；沒有欄位就不得出現。
 function deadlineRow(offer) {
   const details = ctx.createDetails({ eligibility: {}, sources: [], ...offer });
   return details.children.find(node => node.tagName === 'dl').children.find(row => row.children[0].textContent === '截止與期限');
@@ -160,11 +180,11 @@ const datacamp = deadlineRow(d.offers.find(o => o.id === 'datacamp-free-access-w
 assert(datacamp.children[1].textContent.startsWith('方案或免費期結束 '), 'expires_at must render under 方案或免費期結束');
 assert(datacamp.children[1].textContent.includes('台北時間'), 'expires_at with a clock time must be labelled as Taipei time');
 const rime = deadlineRow(d.offers.find(o => o.id === 'rime-stt-nov19-free-window'));
-assert.strictEqual(rime.children[1].textContent, '方案或免費期結束 2026-11-19（來源未列時刻）');
+assert.strictEqual(rime.children[1].textContent, '方案或免費期結束 2026-11-19（僅記日期）');
 const teachers = deadlineRow(d.offers.find(o => o.id === 'claude-teachers-us'));
-assert.strictEqual(teachers.children[1].textContent, '期限 2028-07-30（來源未列時刻）');
+assert.strictEqual(teachers.children[1].textContent, '期限 2028-07-30（僅記日期）');
 const bothFields = deadlineRow({ deadline_at: '2026-12-01', expires_at: '2026-12-01T23:59:00+09:00' });
-assert.strictEqual(bothFields.children[1].textContent, '申請截止 2026-12-01（來源未列時刻）；方案或免費期結束 2026/12/01 22:59（台北時間）');
+assert.strictEqual(bothFields.children[1].textContent, '申請截止 2026-12-01（僅記日期）；方案或免費期結束 2026/12/01 22:59（台北時間）');
 assert(!deadlineRow(withoutPinnedDates({ expires_at: '2026-11-19' })), 'an offer without pinned dates must not show the row');
 
 const sortItems = [
@@ -173,14 +193,9 @@ const sortItems = [
   { id: 'unknown-2', setup_cost_usd: null },
   { id: 'paid-1', setup_cost_usd: 5 }
 ];
-const costComp = (a, b) => {
-  const costA = a.setup_cost_usd ?? Infinity;
-  const costB = b.setup_cost_usd ?? Infinity;
-  return costA === costB ? 0 : costA - costB;
-};
-assert.strictEqual(costComp({setup_cost_usd: null}, {setup_cost_usd: null}), 0);
-assert(!Number.isNaN(costComp({setup_cost_usd: null}, {setup_cost_usd: null})));
-sortItems.sort(costComp);
+assert.strictEqual(ctx.bySetupCost({setup_cost_usd: null}, {setup_cost_usd: null}), 0);
+assert(!Number.isNaN(ctx.bySetupCost({setup_cost_usd: null}, {setup_cost_usd: null})));
+sortItems.sort(ctx.bySetupCost);
 assert.strictEqual(sortItems[0].id, 'free-1');
 assert.strictEqual(sortItems[1].id, 'paid-1');
 assert(sortItems[2].setup_cost_usd === null && sortItems[3].setup_cost_usd === null);
@@ -261,10 +276,11 @@ assert(earlierBlock.children.some(node => node.textContent.includes('舊證據')
 const unlimitedByQuota=d.offers.filter(o=>o.quota_classification==='OFFICIALLY UNLIMITED'||o.quota_classification==='TEMPORARILY UNLIMITED');
 assert(unlimitedByQuota.length>=4,'expected records classified as officially or temporarily unlimited');
 const deadStatuses=['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'];
+const unavailableStatuses = new Set([...deadStatuses, 'paused']);
 for(const o of unlimitedByQuota){
   assert(f(o,{usage:o.quota_classification}),'usage filter must match quota_classification: '+o.id);
   // 專區只收可行動的紀錄；已截止者由下一段單獨驗證退出專區但仍在全庫。
-  if(!deadStatuses.includes(o.status)) assert(f(o,{view:'unlimited'}),'unlimited preset must derive from quota_classification: '+o.id);
+  if(!unavailableStatuses.has(o.status)) assert(f(o,{view:'unlimited'}),'unlimited preset must derive from quota_classification: '+o.id);
 }
 const freeTextUsage=d.offers.find(o=>o.id==='taiwan-moe-moocs-eighteen-free-ai-courses');
 assert(freeTextUsage&&freeTextUsage.usage_type!=='Unlimited'&&freeTextUsage.quota_classification==='OFFICIALLY UNLIMITED');
@@ -343,7 +359,7 @@ assert(sortSelect,'sort select missing from index.html');
 assert(/<option value="deadline">/.test(sortSelect[1]),'sort select must expose the deadline order');
 assert(css.includes('.deadline-pill'),'missing .deadline-pill in style.css');
 console.log('PASS: overdue/near deadlines are visible on the card face and sortable, and closed records claim no remaining days.');
-for(const o of unlimitedByQuota.filter(x=>!['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'].includes(x.status))){
+for(const o of unlimitedByQuota.filter(x=>!unavailableStatuses.has(x.status))){
   assert(f(o,{view:'unlimited'}),'open unlimited record must appear in the preset: '+o.id);
 }
 console.log('PASS: closed records leave the unlimited preset but remain searchable; open unlimited records still appear.');
@@ -419,15 +435,14 @@ console.log('PASS: free preset derives from viewMatches only ('+freeIds.length+'
 // 但 schema 的 HIGH-QUOTA 類別有 127 筆、69 筆沒標；view=beta 15 筆，BETA-ACCESS 有 50 筆、
 // 35 筆沒標）。兩個下拉標籤與類別一一對應，改由 categories 判定；已截止紀錄退出可行動專區，
 // 但仍留在全庫搜尋。以下為規格值，不是現況快照。
-const closedSet=new Set(['expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged']);
 const hqAll=d.offers.filter(o=>(o.categories||[]).includes('HIGH-QUOTA'));
 const betaAll=d.offers.filter(o=>(o.categories||[]).includes('BETA-ACCESS'));
 assert(hqAll.length>100,'HIGH-QUOTA category unexpectedly small: '+hqAll.length);
 assert(betaAll.length>30,'BETA-ACCESS category unexpectedly small: '+betaAll.length);
-for(const o of hqAll) assert.strictEqual(f(o,{view:'quota'}),!closedSet.has(o.status),'HIGH-QUOTA record must appear in the quota preset unless it is closed: '+o.id);
-for(const o of betaAll) assert.strictEqual(f(o,{view:'beta'}),!closedSet.has(o.status),'BETA-ACCESS record must appear in the beta preset unless it is closed: '+o.id);
+for(const o of hqAll) assert.strictEqual(f(o,{view:'quota'}),!unavailableStatuses.has(o.status),'HIGH-QUOTA record must appear in the quota preset unless it is closed: '+o.id);
+for(const o of betaAll) assert.strictEqual(f(o,{view:'beta'}),!unavailableStatuses.has(o.status),'BETA-ACCESS record must appear in the beta preset unless it is closed: '+o.id);
 const quotaPreset=d.offers.filter(o=>f(o,{view:'quota'}));
-assert.strictEqual(quotaPreset.length,hqAll.filter(o=>!closedSet.has(o.status)).length,'quota preset must equal open HIGH-QUOTA records');
+assert.strictEqual(quotaPreset.length,hqAll.filter(o=>!unavailableStatuses.has(o.status)).length,'quota preset must equal open HIGH-QUOTA records');
 assert(quotaPreset.length>100,'quota preset unexpectedly small: '+quotaPreset.length);
 // 反向案例：有明確限制但不屬 HIGH-QUOTA 的紀錄不得因人工標記或額度分類而進入高額度專區。
 const limitedOnly=d.offers.find(o=>o.quota_classification==='HIGH BUT LIMITED'&&!(o.categories||[]).includes('HIGH-QUOTA'));
@@ -436,7 +451,7 @@ assert(!f(limitedOnly,{view:'quota'}),'HIGH BUT LIMITED alone must not mean 高�
 assert(!f({...free,categories:['FREE'],views:['quota']},{view:'quota'}),'a manual quota tag alone must not enter the quota preset');
 assert(!f({...free,categories:['FREE'],views:['beta']},{view:'beta'}),'a manual beta tag alone must not enter the beta preset');
 // 已截止的 BETA-ACCESS／HIGH-QUOTA 紀錄退出專區，但仍須能從全部紀錄找到。
-const closedQuota=hqAll.find(o=>closedSet.has(o.status));
+const closedQuota=hqAll.find(o=>unavailableStatuses.has(o.status));
 assert(closedQuota,'dataset should hold a closed HIGH-QUOTA record to guard against');
 assert(!f(closedQuota,{view:'quota'})&&f(closedQuota,{}),'closed quota record must leave the preset but stay searchable: '+closedQuota.id);
 const viewSelect=/<select name="view">([\s\S]*?)<\/select>/.exec(fs.readFileSync(__dirname+'/../index.html','utf8'));
@@ -450,16 +465,16 @@ console.log('PASS: quota ('+quotaPreset.length+') and beta presets derive from s
 // 仍列 38 筆已截止或已併入他筆的紀錄（含 copilot-free、lovable-student-discount 等重複紀錄），
 // 「美國與地區限定」57 筆中有 15 筆已截止。以下為規格值：對 index.html 每個選項逐一斷言。
 for(const v of viewValues){
-  const leaked=d.offers.filter(o=>closedSet.has(o.status)&&f(o,{view:v}));
+  const leaked=d.offers.filter(o=>unavailableStatuses.has(o.status)&&f(o,{view:v}));
   assert.strictEqual(leaked.length,0,'closed or merged records must leave the 機會專區 option "'+v+'": '+leaked.map(o=>o.id).join(','));
 }
 const mergedDev=d.offers.find(o=>o.status==='duplicate_merged'&&(o.views||[]).includes('developer'));
 assert(mergedDev,'dataset should hold a merged duplicate tagged developer to guard against');
 assert(!f(mergedDev,{view:'developer'}),'merged duplicate must not appear in the developer preset: '+mergedDev.id);
 assert(f(mergedDev,{}),'merged duplicate must stay findable in the full list: '+mergedDev.id);
-const openDev=d.offers.find(o=>!closedSet.has(o.status)&&(o.views||[]).includes('developer'));
+const openDev=d.offers.find(o=>!unavailableStatuses.has(o.status)&&(o.views||[]).includes('developer'));
 assert(openDev&&f(openDev,{view:'developer'}),'an open developer record must stay in the preset');
-const closedRegional=d.offers.find(o=>closedSet.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&o.taiwan!=='Yes');
+const closedRegional=d.offers.find(o=>unavailableStatuses.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&o.taiwan!=='Yes');
 assert(closedRegional,'dataset should hold a closed region-locked record to guard against');
 assert(!f(closedRegional,{view:'regional'}),'closed regional record must leave the regional preset: '+closedRegional.id);
 assert(f(closedRegional,{taiwan:closedRegional.taiwan}),'non-view filters must still reach closed records');
@@ -473,12 +488,12 @@ console.log('PASS: every 機會專區 option excludes closed and merged records;
 // 改讀 schema 的 REGION-LOCKED 類別並排除台灣已符合資格者。以下為規格值，不是現況快照。
 const regionLocked=d.offers.filter(o=>(o.categories||[]).includes('REGION-LOCKED'));
 assert(regionLocked.length>40,'REGION-LOCKED category unexpectedly small: '+regionLocked.length);
-for(const o of regionLocked) assert.strictEqual(f(o,{view:'regional'}),o.taiwan!=='Yes'&&!closedSet.has(o.status),'REGION-LOCKED record must appear in 美國與地區限定 unless Taiwan qualifies or it is closed: '+o.id);
+for(const o of regionLocked) assert.strictEqual(f(o,{view:'regional'}),o.taiwan!=='Yes'&&!unavailableStatuses.has(o.status),'REGION-LOCKED record must appear in 美國與地區限定 unless Taiwan qualifies or it is closed: '+o.id);
 const twRegionalTagged=d.offers.find(o=>o.taiwan==='Yes'&&(o.views||[]).includes('regional'));
 assert(twRegionalTagged,'dataset should hold a Taiwan-qualifying record tagged regional to guard against');
 assert(!f(twRegionalTagged,{view:'regional'}),'a Taiwan-qualifying record must not appear in 美國與地區限定: '+twRegionalTagged.id);
 assert(f(twRegionalTagged,{}),'it must stay findable without the view filter: '+twRegionalTagged.id);
-const regionGain=d.offers.find(o=>o.taiwan!=='Yes'&&!closedSet.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&!(o.views||[]).includes('regional'));
+const regionGain=d.offers.find(o=>o.taiwan!=='Yes'&&!unavailableStatuses.has(o.status)&&(o.categories||[]).includes('REGION-LOCKED')&&!(o.views||[]).includes('regional'));
 assert(regionGain,'dataset should hold an open region-locked record without the manual regional tag to guard against');
 assert(f(regionGain,{view:'regional'}),'a region-locked record must not depend on a manual tag: '+regionGain.id);
 console.log('PASS: regional preset = REGION-LOCKED and Taiwan not eligible ('+d.offers.filter(o=>f(o,{view:'regional'})).length+' open records).');
@@ -487,19 +502,19 @@ console.log('PASS: regional preset = REGION-LOCKED and Taiwan not eligible ('+d.
 // 所以上面那段排除規則涵蓋不到它：2026-11-09 統計 106 筆 taiwan=Yes 中有 10 筆已截止／已關閉／重複合併，
 // 卡片標題自己寫著「已截止」（例如 moda-service-robot-virtual-scene-subsidy-2026、taiwan-ai-rap-pilot）。
 // presetMatches() 讓這個捷徑與其他可行動專區一致；全庫搜尋仍找得到，一般 taiwan 篩選不受影響。
-const closedTW=d.offers.find(o=>closedSet.has(o.status)&&o.taiwan==='Yes');
+const closedTW=d.offers.find(o=>unavailableStatuses.has(o.status)&&o.taiwan==='Yes');
 assert(closedTW,'dataset should hold a closed taiwan=Yes record to guard against');
 assert(!ctx.presetMatches(closedTW,'taiwan'),'closed taiwan record must leave the 台灣條件適用 preset: '+closedTW.id);
 assert(ctx.presetMatches(closedTW,'all'),'closed taiwan record must stay findable without the preset');
 assert(ctx.presetMatches(closedTW,null),'closed taiwan record must stay findable once the preset is released');
 assert(f(closedTW,{taiwan:'Yes'}),'the plain taiwan filter must still reach closed records');
-const openTW=d.offers.find(o=>!closedSet.has(o.status)&&o.taiwan==='Yes');
+const openTW=d.offers.find(o=>!unavailableStatuses.has(o.status)&&o.taiwan==='Yes');
 assert(openTW&&ctx.presetMatches(openTW,'taiwan'),'an open taiwan record must stay in the 台灣條件適用 preset');
 const presetTW=d.offers.filter(o=>ctx.presetMatches(o,'taiwan'));
-assert.strictEqual(presetTW.filter(o=>closedSet.has(o.status)).length,0,'closed records leak into the 台灣條件適用 preset');
+assert.strictEqual(presetTW.filter(o=>unavailableStatuses.has(o.status)).length,0,'closed records leak into the 台灣條件適用 preset');
 const rawTW=d.offers.filter(o=>o.taiwan==='Yes').length;
 assert(presetTW.length<rawTW,'preset must be narrower than the raw taiwan filter: '+presetTW.length+'/'+rawTW);
-assert.strictEqual(presetTW.length,rawTW-d.offers.filter(o=>o.taiwan==='Yes'&&closedSet.has(o.status)).length,'preset must equal open taiwan=Yes records');
+assert.strictEqual(presetTW.length,rawTW-d.offers.filter(o=>o.taiwan==='Yes'&&unavailableStatuses.has(o.status)).length,'preset must equal open taiwan=Yes records');
 assert(!ctx.presetMatches(paidTrial,'free'),'presetMatches must still honour the preset filters');
 assert(ctx.presetMatches(zeroUntagged,'free'));
 assert(!ctx.presetMatches(paidTrial,'free',{view:'free'}),'an explicit filter set must still be respected');
@@ -514,7 +529,7 @@ const metrics=ctx.overviewMetrics(d.offers);
 const twMetric=metrics.find(m=>m[1]==='台灣條件適用');
 assert(twMetric,'overview must keep a 台灣條件適用 metric');
 assert.strictEqual(twMetric[0],presetTW.length,'overview 台灣條件適用 count must equal the preset count ('+twMetric[0]+' vs '+presetTW.length+')');
-const sTier=d.offers.filter(o=>o.priority_tier==='S').length;
+const sTier=presetTW.filter(o=>o.priority_tier==='S').length;
 assert(sTier<presetTW.length,'fixture must hold non-S open taiwan records so the split is exercised');
 assert(twMetric[2].includes('S 級機會 '+sTier+' 筆'),'metric note must expose the S-tier split: '+twMetric[2]);
 assert.strictEqual(metrics.find(m=>m[1]==='福利研究')[0],d.offers.filter(o=>o.record_type==='opportunity').length);
@@ -779,18 +794,17 @@ assert(zenml && f(zenml, { q: 'pipeline runs' }), 'zenml quota_note text must be
 console.log(`PASS: 額度細節 row and keyword search cover quota_details, quota, and quota_note (${withQuotaNote.length} quota_note records).`);
 
 // review-summary 區域在存在 attempted_failed_ids 時應正確包含「追查未成功」項目（且在無失敗時不顯示）。
-const runWithFailed = { ...d.last_research_run, attempted_failed_ids: ['test-failed-1'] };
-const statsWithFailed = [
-  [(runWithFailed.reviewed_ids || []).length, '本輪局部複核'],
-  [(runWithFailed.new_ids || []).length, '新增機會與線索'],
-  [runWithFailed.unreviewed_existing_count ?? '—', '既有紀錄尚未複核']
-];
-if ((runWithFailed.attempted_failed_ids || []).length > 0) {
-  statsWithFailed.push([runWithFailed.attempted_failed_ids.length, '追查未成功']);
+const summary = new Element('div');
+summary.replaceChildren = (...children) => { summary.children = children; };
+ctx.document.querySelector = selector => selector === '#review-summary' ? summary : null;
+for (const failed of [[], ['test-failed']]) {
+  ctx.fixture = { ...d, last_research_run: { ...d.last_research_run, attempted_failed_ids: failed } };
+  vm.runInContext('dataset = fixture; renderOverview()', ctx);
+  const stat = summary.children.find(row => row.children[1].textContent === '追查未成功');
+  assert.strictEqual(stat?.children[0].textContent, failed.length ? '1' : undefined);
 }
-assert.strictEqual(statsWithFailed.length, 4, 'stats with failed lookups must have 4 items');
-assert.strictEqual(statsWithFailed[3][1], '追查未成功', 'last item must be 追查未成功');
-console.log('PASS: review-summary includes 追查未成功 when attempted_failed_ids is non-empty.');
+ctx.document.querySelector = () => null;
+console.log('PASS: review summary renders the failed count only when present.');
 
 // 期限已過、狀態還沒更新：`soonestClose()` 只回傳未來的截止點，於是這種紀錄在卡片正面
 // 完全沒有期限列，卻仍留在免費／開發者／Beta 專區（2026-11-16 開場即遇到 Tencent Hy4 與

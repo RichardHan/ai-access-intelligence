@@ -5883,3 +5883,9 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 班截止與 12/14 班狀態。
 4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 5. `taipei-tvdi-free-ai-vocational-training-116h1`：2026-11-28 追蹤 11/30–12/01 現場報名前夕是否有異動或補充說明。
+
+## 2026-11-22 00:31–2026-11-22 00:31 Asia/Taipei｜數產署算力補助去重
+
+- 全庫 1,146 筆，局部複核 2 筆，新增 0 筆，未複核 1,144 筆，追查失敗 0 筆。
+- `taiwan-adi-ai-compute-115` 補登 2026-10-30 日期；`tw-moda-aipower-compute-grant` 保留 ID、原來源與政策歷史，退出可行動專區。公告與入口所列日期一致，系統時間的時區未標示。 [數產署公告](https://moda.gov.tw/ADI/news/events/20432)、[平台申請須知](https://aipower.dginfra.gov.tw/front/index)
+- 下一輪沿用上一輪的五項排程；此補助有新梯次公告時，更新主紀錄。

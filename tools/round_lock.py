@@ -22,6 +22,8 @@ pid／主機／開始時間／備註。判斷「有沒有人在跑」用 pid 是
 """
 import argparse
 import datetime
+import fcntl
+from contextlib import contextmanager
 import json
 import os
 import pathlib
@@ -39,18 +41,41 @@ def now_iso():
 
 
 def alive(pid):
+    if type(pid) is not int or pid <= 0:
+        return False
     try:
-        os.kill(int(pid), 0)
-    except (OSError, ValueError, TypeError):
+        os.kill(pid, 0)
+    except PermissionError:
+        return True
+    except (ProcessLookupError, OverflowError):
         return False
     return True
 
 
+@contextmanager
+def locked_directory(path):
+    # The directory inode is stable when the metadata is replaced or removed.
+    fd = os.open(path.parent, os.O_RDONLY)
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        yield
+    finally:
+        os.close(fd)
+
+
 def read_lock(path):
     try:
-        return json.loads(path.read_text())
-    except (OSError, ValueError):
+        current = json.loads(path.read_text())
+    except FileNotFoundError:
         return None
+    if (not isinstance(current, dict) or type(current.get("pid")) is not int
+            or current["pid"] <= 0 or not isinstance(current.get("host"), str)
+            or not current["host"]):
+        raise ValueError("invalid owner")
+    return current
+
+
+INVALID_LOCK = "invalid lock metadata; inspect the file and use release --force to clear it"
 
 
 def default_pid():
@@ -67,36 +92,59 @@ def acquire(path, pid=None, host=None, note="", stamp=None):
     pid = default_pid() if pid is None else int(pid)
     host = socket.gethostname() if host is None else host
     stamp = now_iso() if stamp is None else stamp
-    current = read_lock(path)
-    if current:
-        same_host = current.get("host") == host
-        if same_host and alive(current.get("pid")):
+    if pid <= 0:
+        return False, "owner pid must be positive"
+    with locked_directory(path):
+        try:
+            current = read_lock(path)
+        except ValueError:
+            return False, INVALID_LOCK
+        if current and current["host"] != host:
+            return False, f"lock is held on {current['host']}; check the owner before release --force"
+        if current and alive(current["pid"]):
             return False, (f"another round is running: pid {current['pid']} since "
                            f"{current.get('started_at')}（{current.get('note') or 'no note'}）")
-        stale = f"stale lock from pid {current.get('pid')}（{'同一台主機但程序已結束' if same_host else '不同主機'}）"
-    else:
-        stale = None
-    path.write_text(json.dumps({"pid": pid, "host": host, "started_at": stamp, "note": note},
-                               ensure_ascii=False, indent=2))
-    return True, (f"locked by pid {pid} at {stamp}" + (f"; took over {stale}" if stale else ""))
+        metadata = {"pid": pid, "host": host, "started_at": stamp, "note": note}
+        with tempfile.NamedTemporaryFile(mode="w", dir=path.parent, delete=False) as tmp:
+            try:
+                json.dump(metadata, tmp, ensure_ascii=False, indent=2)
+                tmp.flush()
+                os.replace(tmp.name, path)
+            finally:
+                pathlib.Path(tmp.name).unlink(missing_ok=True)
+        takeover = f"; took over stale lock from pid {current['pid']}" if current else ""
+        return True, f"locked by pid {pid} at {stamp}{takeover}"
 
 
 def release(path, pid=None, force=False):
     pid = default_pid() if pid is None else int(pid)
-    current = read_lock(path)
-    if not current:
-        return False, "no lock to release"
-    if not force and current.get("pid") != pid:
-        return False, f"lock is held by pid {current.get('pid')}, not {pid}; refusing to release (use --force if stale)"
-    path.unlink()
-    return True, "released"
+    with locked_directory(path):
+        if not force:
+            try:
+                current = read_lock(path)
+            except ValueError:
+                return False, INVALID_LOCK
+            if current and (current["host"] != socket.gethostname() or current["pid"] != pid):
+                return False, (f"lock is held by pid {current['pid']} on {current['host']}; "
+                               "refusing to release (use --force if stale)")
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            return False, "no lock to release"
+        return True, "released"
+
 
 def status(path):
-    current = read_lock(path)
-    if not current:
+    try:
+        current = read_lock(path)
+    except ValueError:
+        return INVALID_LOCK
+    if current is None:
         return "no round lock: nobody claimed this repo"
-    live = current.get("host") == socket.gethostname() and alive(current.get("pid"))
-    return (f"{'RUNNING' if live else 'STALE'}: pid {current.get('pid')} on {current.get('host')} "
+    state = "REMOTE"
+    if current["host"] == socket.gethostname():
+        state = "RUNNING" if alive(current["pid"]) else "STALE"
+    return (f"{state}: pid {current['pid']} on {current['host']} "
             f"since {current.get('started_at')}（{current.get('note') or 'no note'}）")
 
 
@@ -114,16 +162,18 @@ def self_test():
         assert not ok2, "活著的持有者不得被接管"
         assert f"pid {me}" in msg2, msg2
         assert "RUNNING" in status(path), status(path)
-        # 不同主機無法判斷對方死活，只能接管並講清楚
-        ok3, msg3 = acquire(path, pid=other, host="other-host", note="third")
-        assert ok3 and "took over" in msg3, msg3
-        assert json.loads(path.read_text())["pid"] == other, "接管後鎖應指向新的 pid"
-        # 只有持有者能釋放
-        ok4, msg4 = release(path, pid=me)
-        assert not ok4 and f"held by pid {other}" in msg4, msg4
-        ok5, msg5 = release(path, pid=other)
-        assert ok5, msg5
-        assert "no round lock" in status(path), "release 後應回到沒有鎖"
+        ok3, _ = acquire(path, pid=other, host="other-host", note="third")
+        assert not ok3 and read_lock(path)["pid"] == me
+        ok4, msg4 = release(path, pid=other)
+        assert not ok4 and f"held by pid {me}" in msg4, msg4
+        assert release(path, pid=me)[0]
+        acquire(path, pid=me, host="other-host")
+        assert status(path).startswith("REMOTE") and not release(path, pid=me)[0]
+        assert release(path, force=True)[0]
+        path.write_text("{")
+        assert not acquire(path, pid=me)[0] and not release(path, pid=me)[0]
+        assert status(path) == INVALID_LOCK
+        assert release(path, force=True)[0]
         # pid 已死＝殘留鎖，必須可以接管
         path.write_text(json.dumps({"pid": 999999, "host": socket.gethostname(),
                                     "started_at": "2026-11-11T11:00:00+08:00", "note": "dead"}))
@@ -151,11 +201,40 @@ def self_test():
         out_rel = subprocess.check_output([sys.executable, "-c", code, "rel"], text=True).strip()
         assert out_rel == "released", f"同父程序跨指令 release 應成功：{out_rel}"
         assert "no round lock" in status(path), "跨指令 release 後應回到沒有鎖"
+        # Slow the read inside each contender so that an unprotected read/modify/write
+        # would let several processes see the same empty or stale snapshot.
+        race_code = f"""
+import pathlib, sys, time
+sys.path.insert(0, {str(ROOT / 'tools')!r})
+import round_lock
+read = round_lock.read_lock
+def slow_read(path):
+    owner = read(path)
+    time.sleep(0.04)
+    return owner
+round_lock.read_lock = slow_read
+input()
+print(round_lock.acquire(pathlib.Path({str(path)!r}))[1])
+"""
+        for stale in (False, True):
+            if stale:
+                acquire(path, pid=999999)
+            children = [subprocess.Popen(
+                [sys.executable, "-c", race_code],
+                stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True,
+            ) for _ in range(8)]
+            for child in children:
+                child.stdin.write("\n")
+                child.stdin.flush()
+            results = [child.communicate(timeout=10)[0] for child in children]
+            assert all(child.returncode == 0 for child in children)
+            assert sum(msg.startswith("locked by pid") for msg in results) == 1, results
+            assert release(path, pid=me)[0]
         # --force 可清除殘留或不同 pid 的鎖
         acquire(path, pid=999999, host=socket.gethostname(), note="stale-force")
         ok8, msg8 = release(path, pid=me, force=True)
         assert ok8 and msg8 == "released", msg8
-    print("PASS: round lock (refuses a live holder, takes over a dead pid, tracks parent pid across CLI calls, only the owner or --force releases).")
+    print("PASS: round lock (one winner in concurrent acquisition and takeover, remote and invalid owners protected, parent pid tracked across CLI calls).")
 
 
 def main():
