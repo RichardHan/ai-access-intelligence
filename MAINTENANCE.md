@@ -6220,3 +6220,54 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `cities-deliver-rockefeller-openai-2026`：2026-11-29 截止前追蹤首輪提案遞件狀況。
+
+
+## 2026-11-23 03:06–2026-11-23 03:20 Asia/Taipei｜N=1,157 · R=20 · A=2 · U=1,137 · attempted=0
+
+基準：起始既有紀錄 1,157 筆（937 項機會、50 項政策、170 筆觀察線索）。嚴格遵循反集中原則，避開今日即將到期且已排定追蹤之 closing 案例，依兩路 Subagent 派工完成佇列最久未核之 20 筆既有紀錄實讀複核，並由第三路完成 2 筆台灣科研高額補助新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `loom-classroom-education-seventyfive-off-business-ai`：實讀官方教育頁，75% 具體折扣與 up to 75% 條款矛盾仍存，維持 terms_conflict。
+- `qnx-global-hackathon-2026`：實讀 Devpost 競賽官網與規則，核對 3 名佳作各 $1,000 共 $3,000，加上冠亞季軍各 $10k/$7.5k/$5k、領域獎 5 組各 $3k、區域獎 3 組各 $3k、早鳥與學生獎各 $500，精確吻合總獎金 $50,000，金額衝突化解，狀態自 terms_conflict 更正為 active。
+- `taiwan-multi-store-ai-upgrade-tier3-2026`：實讀商業發展署徵件官網，徵件受理至 2026-11-30 17:00 止，持續受理中。
+- `cleanapis-free-500k-tokens-month`：實讀 CleanAPIs 首頁與定價表，Free Plan 60 RPM 與比對表 80 RPM 速率矛盾仍存，維持 terms_conflict。
+- `perplexity-watch`：實讀 Perplexity 定價頁與說明文件，說明中心每日 3 次 Pro search 與定價頁每日 5 次之矛盾仍存。
+- `moea-aimfg-ai-learning-platform-free-courses-115`：實讀 aimfg.itri.org.tw，首頁 HTTP 200，報名登入端點仍回傳 HTTP 500 錯誤，維持 needs_verification。
+- `google-gear-get-certified-special-edition-paa-2026`：實讀 Google Cloud 挑戰官方說明，挑戰截止至 2026-12-09 23:59，持續有效。
+- `shift-asia-prototype-twenty-companies`：實讀 Shift Asia 官網活動頁，前 20 家企業免費原型試製活動持續有效。
+- `satfaq-free-trial-hybrid-ai-two-thousand-points`：實讀 SAT.FAQ 官網方案頁面，免費試用贈 2,000 點混合 AI 點數有效至 2027-03-31。
+- `parallel-mcp-keyless-free-search-fetch-decisions`：實讀 Parallel MCP GitHub 倉庫與文件，免金鑰搜尋與擷取功能正常維護。
+- `couchbase-activate-starter-kit-current-availability-watch`：實測轉址行為（301 轉至 pricing），條款 PDF 查驗價值 USD $12,750 與 12 個月效期條款有效，主站定價頁對外 403 阻擋，台灣資格維持 Unknown。
+- `cht-google-ai-plus-first-year-free-2026`：實讀中華電信活動頁與新聞稿，精采 5G 799-999 搭 Google AI Plus 400GB 首年 0 元、1399 搭 2TB 首年 0 元有效，11/30 前申辦加贈 Hami Point 100 點、開通贈 5GB 流量券。
+- `cht-gemini-shorts-contest-2026`：實讀中華電信 YouTube Shorts 創作大賽活動專頁，徵件截止至 2026-11-30 18:00，大獎為 Google Pixel 11 Pro 旗艦組合。
+- `royal-canin-ai-for-pets-2026`：實讀獎金獵人簡章頁，總獎金新台幣 100 萬元，早鳥截止 2026-12-02 17:00，初賽截止 2027-01-06 17:00。
+- `airweave-developer-free-ten-connections-fifty-queries`：實讀 Airweave 官網首頁與 quickstart，Developer Free 方案免信用卡有效，獨立 pricing 路徑 404 已整合至首頁。
+- `framer-student-basic-agent-credits`：實讀 Framer 學生優惠頁面，官網橫幅公告方案調整中、申請暫停受理（Applications will reopen soon），規格 Basic 1 年免費與每月 1,000 AI credits 說明仍存。
+- `simular-box-free-cloud-desktop-oauth`：實讀 Simular box 官網與 MCP 文件，核實免費提供一次性 5,000 credits（效期 90 天，約 50 小時 2vCPU/4GB 雲端桌面），連續閒置 14 天刪除桌面。
+- `deepgram-trial`：實讀 Deepgram 定價頁與併發文件，新戶 US$200 免費額度永久有效且免信用卡，PAYG 併發上限 150 條連線維持。
+- `fun-ai-camp-2027-nthu-taica`：實讀清華大學 Fun AI 營隊官網與公文，長庚大學 2027-01-25 至 01-28 舉辦，報名截止 2026-12-18 23:59，費用 NT$4,500（全程參與退 3,000 元）。
+- `intel-ai-pc-cloud-remote-instance`：實讀 Intel 開發者指南（plain curl 避開 403 阻擋），需企業或大學信箱，官方未公開費用與時數限制，台灣用戶核准政策未明，維持 needs_verification。
+
+### 新增紀錄（2 筆）
+- `nstc-engineering-advanced-equipment-rnd-116`：國科會工程處「116年度前瞻研究驅動之設備研發計畫」，聚焦次奈米矽基半導體、非矽基半導體及矽光耦合關鍵設備研發，2 年期最高補助 NT$5,000 萬至 NT$1 億元，第一階段構想書受理至 2026-12-28。
+- `nstc-engineering-mid-career-leap-grant-116`：國科會工程處「116年度工程科技中堅躍升研究計畫」，支持國內大專院校及學術研究機構工程領域中堅學者深耕長期系統性科研，每案每年最高補助 NT$1,000 萬元，4 年期最高補助 NT$4,000 萬元，受理至 2027-01-04。
+
+### 品質改善
+- 經嚴格細項試算，確認 QNX 全球黑客松 3 名佳作各 $1,000 總計 $3,000，加上所有名次與專項獎金後精確等於總獎金 $50,000，成功化解並更正先前誤判之金額衝突。
+- 發現並標記 Framer 學生優惠頁面最新官方異動（橫幅公告申請暫停受理待重開）。
+- 執行 `tools/prioritize.py` 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級）。
+
+### 未解證據缺口
+- `couchbase-activate-starter-kit-current-availability-watch`：主站定價頁對外部自動化請求回傳 HTTP 403 阻擋，台灣選單支援性維持未知。
+- `intel-ai-pc-cloud-remote-instance`：官方使用者指南未公開費用、時數限制與台灣適用性，維持 needs_verification。
+- `moea-aimfg-ai-learning-platform-free-courses-115`：註冊端點持續回傳 HTTP 500 伺服器錯誤。
+- `loom-classroom-education-seventyfive-off-business-ai`：75% vs up to 75% 條款文字矛盾。
+- `cleanapis-free-500k-tokens-month`：60 RPM vs 80 RPM 速率矛盾。
+- `perplexity-watch`：3 次 Pro search vs 5 次 Pro search 矛盾。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `cht-gemini-shorts-contest-2026`：2026-11-30 18:00 截止前追蹤中華電信 Shorts 大賽審核與收件進度。
