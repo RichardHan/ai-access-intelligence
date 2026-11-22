@@ -5935,3 +5935,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
 4. `hsinchu-city-ai-youth-digital-tool-subsidy-2026`：2026-11-28 追蹤經費是否提前用罄或如期於 11/30 截止。
 5. `cyleague-cyber-navi-trial`：2026-11-30 追蹤 30 天試用活動是否如期截止。
+
+## 2026-11-22 16:06–2026-11-22 16:25 Asia/Taipei｜N=1,146 · R=20 · A=1 · U=1,126 · attempted=0
+
+基準：起始可行動 1,042、嚴格逾期 67、7 日內到期 121。依 Phase 1 派工三路 Subagent 完成 20 筆逾期案例實讀複核與 1 筆新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `vercel-ai-gateway-parallel-decisions-free-window`：實讀 Vercel Changelog 與模型規格頁，確認 Parallel Decisions Fast 免費視窗維持至 2026-11-23 截止（明日即將到期），原廠標準定價為每千次 $1。
+- `fireworks-glimmer-sft`：實讀定價頁與 cookbook 腳本，Muse Glimmer 30B SFT 免費微調維持有效至 2026-12-01T00:00:00-08:00（台北時間 12/01 16:00），免綁卡限 LoRA SFT。
+- `kaggle-neurips-2026-smart-buildings-competition`：實讀賽事規則與 API，總獎金 US$40,000，台灣可參賽領獎；API 入賽截止（2026-12-03）與網頁說明（2027-01-03）矛盾，建議提早於 12/03 前接受規則。
+- `maximo-platform-new-account-five-credit`：實讀開發者 API 平台首頁與文檔，新註冊驗證信箱贈 US$5.00 API 試用額度依然有效，與消費者聊天網頁的免費用量池為不同方案。
+- `grammarly-student-annual-half-first-period`：實讀官方學生入口與 SheerID 條款，修正失效網址為 /students，SheerID 支援台灣（TW）學生年約五折（$72/年），首期有效到期自動續訂。
+- `vultr-match-ai-compute`：實讀官方 match 頁面，新客戶首存 $10–$100 等額回饋仍有效，按 50/50 比例於 12 個月內抵扣算力消費。
+- `vultr-new-customer-credit-codes-watch`：實讀 coupons 頁面與計費文檔，November 2026 促銷代碼清單在線（$100/$200/$250/$300），須綁有效信用卡或 PayPal。
+- `retool-nonprofit-monthly-coupon`：實讀非營利折扣與 AI 額度文件，合格非營利組織月度 $1,625 折扣券維持有效（折抵 25 個月費席位），含月度 AI credits。
+- `openlayer-basic-trial-twentyk-inference-logs`：實讀定價頁與條款，Basic 試用維持 20k requests/mo，條款規範評估服務試用期為 60 天。
+- `synthesia-basic-monthly-ten-min-five-hundred-no-download`：實讀知識庫與定價頁，Basic 方案維持免費（10 分鐘 + 500 點，帶浮水印不可下載）；Syren 試用點數將於 2026-11-30 23:59 BST 到期。
+- `kiro-startup-pro-plus-2026`：實讀新創計畫條款，早期新創最高 1 年 Pro+ 額度維持開放申請，須具公司網域信箱與對應之 AWS Account ID。
+- `claude-security-enterprise-two-month-credit`：實讀支援條款，Claude Enterprise 用戶每月最高 $25,000 Claude Security 額度維持有效至 2026-12-31 UTC，舊版於 11/25 退休。
+- `vast-startup-spend-match`：實讀新創計畫頁，維持 1:1 算力消費等額匹配機制，部落格宣傳之 $2,500 免費贈額舊文仍未下架。
+- `coderabbit-startup-annual-half-six-months`：實讀新創頁與定價表，VC/加速器投資新創享 Team 年約前 6 個月半價（折合 $24/席/月），超額審查另計費。
+- `github-copilot-student`：實讀 GitHub Docs，學生認證通過享 Copilot 100% 免費，包含無限程式碼補全與月度 AI Credits 配額，台灣學校支援。
+- `kimi-free-web-app`：實讀模型與定價頁，Free 方案 $0，支援 K2.5 模型體驗與基礎 Agent 任務，國際版支援台灣 +886 簡訊註冊但條款未保證境外地區。
+- `anthropic-ai-for-science-program-watch`：實讀計畫指南，常態開放申請，每月首個週一進行批次審查，通過者核發最高 $20,000 API 額度（效期 6 個月）。
+- `snowflake-ai-trial-2026`：實讀試用文檔，30 天試用帳戶內免費額度可扣抵 AI 功能，但 AI 功能預設停用，必須綁定信用卡始能啟用。
+- `minimax-design-h3-new-user-watch`：實讀 Design 訂閱頁，新用戶註冊贈 3 次 H3 試用與 2,000 點數，官方明訂自發放日起算僅 3 天有效。
+- `udio-free-music-credits`：實讀計費文檔與 UMG 條款，免費方案維持每日 10 點 + 每月 100 點備用池，UMG 合作後音訊全面禁用本機下載且限非商用。
+
+### 新增紀錄（1 筆）
+- `glif-new-user-50-bonus-credits`：Glif AI 新用戶註冊贈送 50 點 bonus credits（效期 30 天，免綁信用卡），可用於 100+ 種主流文字、圖像、音訊與影片模型之 AI 工作流建置。台灣直接可用，限定個人娛樂與非商業用途。
+
+### 品質改善
+- 修正 Grammarly 學生優惠 404 網址，更新為有效之官方 `/students` 入口，並新增 SheerID 促銷條款頁佐證。
+- 釐清 Maximo Platform 新用戶 5 美元 API 贈額與 Consumer 網頁方案之差異，解除證據缺口。
+- 揭露 Kaggle NeurIPS 2026 智慧建築競賽官方 API 與網頁 Timeline 之間相差 1 個月的入賽截止衝突。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 Glif AI 評為 S 級）。
+
+### 未解證據缺口
+- 無。
+
+### 下一輪優先（最多 5 項）
+1. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 查核免費視窗是否結束並記錄期後計費方式。
+2. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+3. `openai-academic-researchers-waitlist`：2026-11-23 09:00 後核對 5 萬名 Plus 開放申請後的名額消耗與申請表單狀態。
+4. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 後核對 12/02 台北班截止與名額狀態。
+5. `synthesia-basic-monthly-ten-min-five-hundred-no-download`：2026-11-30 追蹤 1,000 Syren 試用點數到期後的免費額度政策。
