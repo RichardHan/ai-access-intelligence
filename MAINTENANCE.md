@@ -6271,3 +6271,54 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `cht-gemini-shorts-contest-2026`：2026-11-30 18:00 截止前追蹤中華電信 Shorts 大賽審核與收件進度。
+
+
+## 2026-11-23 04:06–2026-11-23 04:20 Asia/Taipei｜N=1,159 · R=20 · A=2 · U=1,139 · attempted=0
+
+基準：起始既有紀錄 1,159 筆（939 項機會、50 項政策、170 筆觀察線索）。嚴格遵循反集中原則，避開 12 小時冷卻期內之即將到期項目，依兩路 Subagent 派工完成佇列最久未核之 20 筆既有紀錄實讀複核，並由第三路完成 2 筆國科會高額科研補助新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `aocai-working-free-ai-courses-2026`：實讀商業發展署與資策會 iEvents 報名頁，11/26 台北班已額滿且截止，12/02 批發 MLOps 台北班開放報名至 2026-11-27 12:30，政府補助通過者免費。
+- `openai-academic-researchers-waitlist`：實讀官方公告與表單頁，確認 2026-11-16 公告擴大至 20 萬人，2026-11-23 開放新一輪 5 萬名額（先到先得），每案 3 席 ChatGPT Plus 12 個月免費。
+- `tw-moe-aicup-2026-vlm-solar-inspection`：實讀教育部 AI CUP 官網與 AIdea 賽事專頁，太陽能板瑕疵檢測競賽報名受理至 2026-11-30 23:59:59 截止，總獎勵暫定 NT$30 萬元並提供國網 GPU 資源。
+- `meeting-ink-transformation-partners`：實讀 Meeting Ink 官網夥伴頁面，台灣企業 AI 轉型陪跑免費體驗方案持續開放洽詢。
+- `taiwan-commerce-single-store-ai-half-hundred-k`：實讀商業發展署公告與中小企業韌性網站，服務業單店 AI 導入最高補助五成、上限 NT$10 萬元，用滿 3 個月後核銷。
+- `boson-higgs-realtime-duplex-api-waitlist`：實讀 Boson AI 官網與候補名單表單，Higgs Realtime Duplex API 尚未正式上線與公開定價，僅開放 Waitlist 登記，維持 needs_verification。
+- `kiroween-2026-hackathon-4000-credits`：實讀 Devpost Kiroween 賽事頁面，參賽者可申請一次性 4,000 Kiro credits（≈US$160），徵件受理至 2026-12-02 04:00 (Asia/Taipei) 截止。
+- `videogen-model1-selected-project-credit-program`：實讀 VideoGen 官網與新聞發布，Model 1 早期存取總池 US$1,000,000 創作額度採專案申請制，額度分配依案件個別審定。
+- `perplexity-education`：實讀 Perplexity Help Center，Education Pro 專文已載明價格為 $10/月，但內文承諾 unlimited Pro Searches 與同文件比較表每週使用上限 (Weekly limits) 之矛盾仍存。
+- `cyleague-cyber-navi-trial`：實讀 CyLeague 服務官網，法人 30 天試用專案（上限 40 件諮詢）受理至 2026-11-30 截止，試用註冊端點受 CloudFront 403 阻擋。
+- `taiwan-mobile-free-ai-life-course-2026q4`：實讀台灣大哥大官方活動頁面及 Microsoft Forms 報名表單，2026-11-21 場次已結束，剩餘 2026-12-19 高雄三多直營門市實體課開放免費報名。
+- `nanonets-50-credits-no-card`：實讀 Nanonets 定價頁與服務條款，Starter 方案新戶贈送 US$50 額度，免綁信用卡且額度永不過期，含 API 存取權限。
+- `taipei-tvdi-free-ai-vocational-training-116h1`：實讀臺北市職能發展學院官方招生公告與簡章 PDF，失待業者 AI 職前訓練學雜費材料費全免，現場報名為 2026-11-30 至 2026-12-01，郵寄報名至 2026-12-02 截止。
+- `yotta-rudra-terms-amount-pending`：實讀 Yotta Rudra 官方網頁，Ignite 階段標示 $25,000 但分期加總為 $20,000 之 $5,000 算術缺口，以及條款沿用舊計畫 Shambho 名稱之矛盾均未解，維持 paused。
+- `mem0-hobby-memory-api`：實讀 Mem0 官方定價頁與文檔，首 30 天由官方負擔模型費用，2026-10-26 前註冊者免費期於 2026-11-25 屆滿，屆滿後需自帶 LLM 金鑰方可新增 memory。
+- `krafton-raon-1-mini-preview-free-api`：實讀 KRAFTON Raon 官方網站，Raon-1 mini 30B 模型採 Apache 2.0 開源，限時免費 API 申請開放年滿 14 歲用戶申請。
+- `tidb-starter-free-mysql-postgres-preview`：實讀 PingCAP TiDB Cloud 官方文檔，MySQL 前 5 實例免費（共 25GB/250M RUs），PostgreSQL 公開預覽前 10 實例免費（各 50GB/500M RUs），免信用卡且超額自動節流。
+- `cloudflare-ai-search-monthly-included-november-billing`：實讀 Cloudflare limits-pricing 文檔（2026-11-17 更新），計費起算日期正式明定為 2026-12-01，每帳戶每月內含 5M ingestion tokens、10 GB 儲存與 1,000 語意搜尋配額維持有效。
+- `articul8-bivia-early-adopter-billion-tokens`：實讀 Articul8 官網推廣頁與條款，前 10,000 名早鳥贈 10 億 tokens 免訂閱方案有效，條款明訂無自動續扣款。
+- `google-buildhybridai-2026-firebase-ai-logic`：實讀 Devpost 官方規章頁，總獎金 US$30,000 全額細項查明（大獎 $10k、亞軍 $7k、季軍 $4k、各平台獎 $3k），參賽人數增至 4,276 人，台北時間 2026-12-01 06:00 交件截止。
+
+### 新增紀錄（2 筆）
+- `nstc-excellent-young-scholar-grant-116`：國科會「116年度優秀年輕學者研究計畫」補助案，培育 45 歲以下具專題計畫主持人資格之青年學者深化研究，個別型計畫至多 4 年，每年最高補助 NT$500 萬元（4 年最高 NT$2,000 萬元），主持費每月 NT$25,000 元，受理至 2027-01-07。
+- `nstc-distinguished-research-fellow-grant-116`：國科會「116年度特約研究計畫」補助案，支持累獲國科會傑出研究獎二次且滿二年以上之頂尖學者進行長期前瞻科研，至多 3 年期，主持費每月 NT$40,000 元（3 年共 NT$144 萬元），累計滿 6 年頒發傑出特約研究員獎座，受理至 2027-01-07。
+
+### 品質改善
+- 追蹤確認 Cloudflare 官方 2026-11-17 最新定價文檔將 AI Search 計費起始日由 11 月正式延至 2026-12-01，消除歷史日期漂移。
+- 完整查明 Google #BuildHybridAI 黑客松全部 6 項獎金分配結構，消除 unknowns 缺口。
+- 查明 OpenAI 學術研究者擴大公告，確認 2026-11-23 新一輪開放 5 萬名額搶先機制。
+- 查明 Perplexity Education Pro 官方 Help Center 正式標記 $10/月 定價。
+- 執行 `tools/prioritize.py` 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級，全庫 S 級增至 190 筆）。
+
+### 未解證據缺口
+- `yotta-rudra-terms-amount-pending`：Ignite 階段 $25k 標示 vs $20k 加總算術缺口，以及條款舊名稱 Shambho 殘留未解。
+- `cyleague-cyber-navi-trial`：註冊端點受 CloudFront 403 阻擋，海外或台灣法人資格未知。
+- `perplexity-education`：unlimited Pro Searches vs Weekly limits 矛盾未解。
+- `boson-higgs-realtime-duplex-api-waitlist`：API 尚未提供公開端點與定價。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `aocai-working-free-ai-courses-2026`：2026-11-27 12:30 前追蹤 12/02 批發 MLOps 台北班額滿狀態。
