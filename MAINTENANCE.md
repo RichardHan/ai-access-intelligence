@@ -6171,3 +6171,52 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 前核對 qwen4-max 預覽退役狀況。
+
+
+## 2026-11-23 02:07–2026-11-23 02:20 Asia/Taipei｜N=1,155 · R=20 · A=2 · U=1,135 · attempted=0
+
+基準：起始可行動 1,048、嚴格逾期 0、7 天內到期 6 筆（其中 3 筆冷卻中）。落實反集中原則，避開 1 小時內剛核對且排定於今日中午及晚間檢核之 3 筆 closing 案例，依兩路 Subagent 派工完成佇列最久未核之 20 筆既有紀錄實讀複核，並由第三路完成 2 筆新機會建檔。
+
+### 局部複核既有紀錄（20 筆）
+- `e2e-explorer-free-versus-usage-discounts`：實讀官網 /startup-program，維持 308 跳轉業務表單，sitemap 與定價頁均無公開新創方案，額度僅存於歷史快照，needs_verification 維持。
+- `google-ai-professional-certificate-tw-pro-3mo`：實讀繁中推廣頁與 Google One 條款，確認行銷頁宣稱 2027-01-01 截止與條款頁標記 2026-11-06 截止之法律條款衝突持續（條款已過期 17 天）。
+- `beatapi-free-models-zero-balance`：實讀官方免費模型與計費 FAQ，確認 3 款免費模型、零餘額可用、未儲值 1 RPM 限制與 429 重試 60 秒機制有效。
+- `elfa-api-free-once-thousand-credits`：實讀定價頁與條款，確認 Starter 一次性贈 1,000 點、60 RPM、超額即停、受制裁清單未排除台灣。
+- `fgu-three-good-ai-innovation-contest-2026`：實讀佛光大學競賽官網，確認報名與作品上傳受理至 2026-11-30 截止，總獎金 46 萬元，免報名費進行中。
+- `microsoft-foundry-copilot-harness-free-runtime`：實讀 Foundry 官方部落格定價文檔，確認 Copilot harness 執行環境免費維持至 2026-12-01 前，12/01 起依每 vCPU-hour $0.0994 計費。
+- `routeway-free-models-two-hundred-daily-requests`：實讀 FAQ 與速率限制頁，確認 :free 模型每日 200 次免卡請求在線，FAQ 載 20 RPM 與限制頁載 5 RPM 之官方矛盾持續。
+- `scaleway-generative-apis-free-million-tokens-audio`：實讀 Generative APIs FAQ 與定價頁，確認首 100 萬 tokens 與 60 分鐘轉錄免費，超額自動計費，產品頁 beta 免費矛盾持續。
+- `zai-free-flash-api-models`：實讀定價文檔，確認僅指定 GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash 標為 Free，其餘 GLM-5.3 及 FlashX 均為付費模型。
+- `qoder-free-mechanisms`：實讀 100credits 與定價專頁，確認自 2026-11-19 10:00 起每日 100 點手領排除 Free 用戶（僅限 Pro 試用或付費用戶），Qoduck 已於 11/11 結束。
+- `google-gemini-academy-taiwan-educators-workshop-watch`：實讀 Grow with Google 台灣與 GrowOnAir 官方活動頁，確認公開頁仍保留 2025 年已結束之兩梯次，尚未釋出 2026 年新實體或直播梯次。
+- `genspark-free-and-standard-pools`：實讀說明中心與服務條款，確認 Free 每日 100 積分設有未公開終身累計上限、2026-09-18 前舊訂戶無限權益維持至 2026-12-31 截止。
+- `plaud-preview-one-time-work-credits`：實讀技術支援專文，確認 Preview 贈點活動至 2026-12-31 截止，Starter 600、Pro 2,400、Unlimited 6,000 點為一次性贈與、效期 3 個月不自動補充。
+- `google-antigravity-scientists-highest-tier-six-months`：實讀 Google 官方部落格與申請表單，確認 1 萬名科學家最高用量等級 6 個月免費專案之 Google 表單正常開放受件中。
+- `cities-deliver-rockefeller-openai-2026`：實讀官方專案徵案主頁，確認洛克斐勒與 OpenAI 基金會聯合資助 50 萬至 200 萬美元方案第一輪提案受理至 2026-11-29 截止。
+- `taiwan-nsp-youth-ai-training-subsidy-2026`：實讀勞動部勞動力發展署新聞發布與計畫官網，確認 15–29 歲青年參訓最高補助 10 萬元、就業返還 1 萬自付額與月發 8,000 元獎勵金政策有效。
+- `atlassian-codegeist-2026-developer-hackathon`：實讀 Atlassian Forge 定價與大會索引，確認 Codegeist 2026 總獎金 US$120,000、截止為台北時間 2026-12-23 04:00、需以 Forge 開發。
+- `heygen-voice-turbo-free-api-until-2026-11-30`：實讀 API 開發者文檔與服務條款，確認 Voice Turbo Free 免費期維持至 2026-11-30 截止，Free 方案產出依條款 §4 嚴格禁止商業用途。
+- `kaggle-google-agent-harness-pele-2027`：實讀 Kaggle 競賽主頁與規則，確認 PELE 總獎金 US$400,000、截止為台北時間 2027-01-06 07:59，程式碼 Apache 2.0 條款衝突持續。
+- `kaggle-google-quantum-circuit-optimization-2026`：實讀 Kaggle 獎項頁面與 Google 開源公告，確認量子電路編譯競賽總獎金 US$150,000、主榜首獎 $50,000，組隊截止 2027-01-14、交件截止 2027-01-21。
+
+### 新增紀錄（2 筆）
+- `nstc-engineering-photonic-ai-datacenter-grant-116`：國科會工程處「116年度學門主題式計畫補助案」，聚焦次世代AI資料中心電源轉換與矽光子整合研發，單一整合型計畫每年最高補助 700 萬至 800 萬元，3 年期最高補助 2,100 萬至 2,400 萬元，受理至 2027-01-07。
+- `nstc-seed-young-scholars-program-116`：國科會「116年度青穗學者計畫補助案」，支持 45 歲以下青年科研學者與新進博士進行前瞻探索、跨領域與技術落地應用，每期最長 4 年，總期程最長 8 年，未具 PI 資格之博士可直接線上申請，受理至 2027-01-07。
+
+### 品質改善
+- 及時追蹤 Qoder 官方 2026-11-19 最新公告，將每日 100 點贈額之資格限縮（排除完全免費 Free 用戶、改限 Pro 試用與付費方案）完整反映於標題、摘要與歷史檔。
+- 揭露 Google AI Professional Certificate 條款頁已於 2026-11-06 過期，警示與行銷宣傳之重大日期衝突。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級）。
+
+### 未解證據缺口
+- `google-ai-professional-certificate-tw-pro-3mo` 行銷頁 2027-01-01 截止 vs 條款頁 2026-11-06 截止之法律衝突持續。
+- `routeway-free-models-two-hundred-daily-requests` FAQ 20 RPM vs 速率限制頁 5 RPM 衝突持續。
+- `scaleway-generative-apis-free-million-tokens-audio` 產品頁首 100 萬 tokens 免費 vs 頁尾 FAQ beta 完全免費文字衝突持續。
+- `genspark-free-and-standard-pools` 官方始終未揭露終身累計免費上限具體數值。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `cities-deliver-rockefeller-openai-2026`：2026-11-29 截止前追蹤首輪提案遞件狀況。
