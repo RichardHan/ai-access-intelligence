@@ -6072,3 +6072,51 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 4. `lg-exaone-25-api-free-noncommercial`：佇列逾期首位，複核 EXAONE 2.5 非商業免費用量與最新條款。
 5. `google-maps-demo-key-ai-studio-free-daily`：佇列逾期第二位，核實 AI Studio Demo Key 每日配額與存取規則。
+
+## 2026-11-22 19:06–2026-11-22 19:16 Asia/Taipei｜N=1,151 · R=20 · A=2 · U=1,131 · attempted=0
+
+基準：起始可行動 1,046、嚴格逾期 8。依三路 Subagent 派工完成 20 筆既有紀錄實讀複核與 2 筆新機會建檔。全庫嚴格逾期降為 0 筆。
+
+### 局部複核既有紀錄（20 筆）
+- `ntu-hua-nan-fintech-ai-hackathon-2026`：實讀臺大創創中心公告與 Luma 報名頁，明日 11/23 截止，名額未滿，限臺大在學一般生，總獎金 NT$18 萬。
+- `nutn-national-ai-project-competition-2026`：實讀南大數位系官網 11/21 最新通知，報名維持至 2026-12-01 23:59:59 截止，初審 12/11，決賽 12/19，總獎金 NT$45 萬。
+- `moe-ilink-aiea-winter-2026-teacher-workshops`：實讀 iLink 官網與報名表單，確認教育部全額補助免費無學費，11 月場次額滿，12/04 與 12/05 逢甲場次仍開放報名，解除 needs_verification 轉為 active。
+- `ntpc-uko-microsoft-ai-cert-free-2026`：實讀新北市青年局課頁與表單，本年度所有培訓梯次已於 11/22 完訓結訓，報名與取消皆已截止，進入補考與退保證金階段，狀態轉為 expired。
+- `kaggle-google-gemma-4-developer-agent-competition`：實讀 Kaggle 官方 Timeline 與 Rules，Entry 截止為 2026-11-26 07:59+08:00，最終提交 2026-12-03 07:59+08:00，總獎金 US$110,000。
+- `alibaba-model-studio-token-plan-personal-new-user-discount`：實讀阿里雲 Model Studio 文檔，個人版新戶五折至 11/30 23:59:59，qwen4-max 預覽至 11/25 24:00 後退役下線。
+- `moea-ai-xinxiu-training-stipend-116`：實讀官方申請須知，專業培訓+企業實習津貼上限 NT$20 萬，非在職者參訓，執行至 116-05-31。
+- `lg-exaone-25-api-free-noncommercial`：實讀 EXAONE 官方 ToS §2.1 與 Changelog，新聞宣稱可開發服務與 ToS 嚴格非商用衝突持續，條款生效日仍為 11/9。
+- `google-maps-demo-key-ai-studio-free-daily`：實讀 Google Developers Blog 與禁制區域清單，AI Studio Demo Key 每日 100 次免卡在線，台灣不在禁制清單。
+- `kimi-file-extraction-storage-api-temporarily-free`：實讀 Moonshot Chat 定價與 Limits 文件，檔案抽取儲存維持 temporarily free，仍需最低儲值 $1 啟用 API。
+- `speechify-api-free-monthly-500k`：實讀 Speechify 定價頁，Free 方案 $0/月免信用卡，每月 500K 字元，明列含 Commercial use 商用授權。
+- `voyage-free-tokens-batch-excluded`：實讀 Voyage 定價文檔與 ToS，定價正文與表格/舊模型清單內部矛盾持續，Batch API 明確排除免費額度。
+- `devin-free-light-agent-quota`：實讀 Devin Desktop 模型文件，Free 提供 SWE-2 Flash，SWE-2 免費至 11/30，SWE-2 Flash 免費至 12/04 18:00 UTC。
+- `sloyd-guest-daily-plus-separated-pools`：實讀 Sloyd 定價頁與 ToS，Guest 卡片 1 次 vs 表格 3 次，Plus 無限與 50 credits 分池，定價個人 vs ToS §6 商用多重矛盾未解。
+- `lucid-education-free-ai-beta`：實讀 Lucid 教育與 AI Beta 頁面，教育方案免費，AI Beta 向所有方案開放，註明未來可能轉為付費且無固定額度承諾。
+- `autodesk-flow-studio-education`：實讀 Autodesk 官方定價指南，Education 方案每月 2,100 點免費，限 18+ 大專生與教師 SheerID 認證，嚴禁商用。
+- `tactiq-free-monthly-ten-transcripts-five-ai`：實讀 Tactiq 定價 FAQ 與幫助中心，定價稱每次動作 1 點 vs 幫助中心稱每場會議共用 1 點矛盾持續，超額逐字稿鎖定 preview。
+- `goodmem-cloud-fourteen-day-no-card-trial`：實讀 GoodMem 官網與服務條款，14天免卡試用，宣傳自動微調與條款 §4.4 不微調矛盾，限定企業實體且期滿刪除資料。
+- `serpkite-free-search-api-credits`：實讀 SerpKite 定價與帳務文檔，新戶 2,500 點受制於當月公共預算餘額（可能降至 250），每月 1,000 點綁定說法不一。
+- `airtable-free-plan-monthly-ai-credits`：實讀 Airtable AI billing 文檔，Free 每位 Editor 月贈 500 credits，加購資格與重置週期在同一文檔內表述矛盾持續。
+
+### 新增紀錄（2 筆）
+- `adi-ai-computing-power-platform-grant`：數發部數位產業署「115年AI算力平台」，提供國內數位經濟企業免費 GPU 容器訓練與 API 推論資源（核定後一期 3 個月），全線上以工商憑證申辦。
+- `moea-sme-ai-innovation-application-mentorship-115`：經濟部中企署「115年度中小微企業AI創新應用輔導計畫」，提供中小微企業 AI 轉型輔導、技術診斷與海外商機鏈結資源。
+
+### 品質改善
+- 新北有課 UKO 微軟證照培訓梯次今日結訓，及時標記為 expired。
+- 教育部 iLink 冬季教師工作坊全額補助確認無學費，解除 needs_verification 轉為 active。
+- 全庫嚴格逾期降為 0 筆。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 2 筆台灣政府算力/輔導專案均評為 S 級）。
+
+### 未解證據缺口
+- `lg-exaone-25-api-free-noncommercial` 官方新聞可商用 vs ToS 嚴格非商用衝突持續。
+- `sloyd-guest-daily-plus-separated-pools` 官網定價 vs 條款商用與額度多處矛盾未解。
+- `airtable-free-plan-monthly-ai-credits` 同一說明頁之 Free 方案加購資格與重置週期內部矛盾持續。
+
+### 下一輪優先（最多 5 項）
+1. `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：2026-11-22 23:59 截止後確認是否推出新週福利或轉為 expired。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 報名截止後核對表單關閉與名額狀況。
+3. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
+4. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 前核對 qwen4-max 預覽退役狀況。
+5. `kaggle-google-gemma-4-developer-agent-competition`：2026-11-26 07:59 入賽截止後確認 Entry 鎖定狀態。
