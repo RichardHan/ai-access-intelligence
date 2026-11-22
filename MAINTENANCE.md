@@ -6120,3 +6120,54 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 後核對是否如期結束免費並切換為付費計價。
 4. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 前核對 qwen4-max 預覽退役狀況。
 5. `kaggle-google-gemma-4-developer-agent-competition`：2026-11-26 07:59 入賽截止後確認 Entry 鎖定狀態。
+
+
+## 2026-11-23 01:07–2026-11-23 01:31 Asia/Taipei｜N=1,153 · R=20 · A=2 · U=1,133 · attempted=0
+
+基準：起始可行動 1,047、嚴格逾期 1、7天內到期 5（其中 2 筆冷卻中）。依三路 Subagent 派工完成 20 筆既有紀錄實讀複核與 2 筆新機會建檔。全庫嚴格逾期降為 0 筆。
+
+### 局部複核既有紀錄（20 筆）
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`：實讀官方部落格 M11W4 公告，確認活動期間為 2026-11-23 00:00 至 11/29 23:59（UTC+8），登入贈額調整為 50M Tokens（5,000 credits），前期 M11W3 已於 11/22 23:59 截止，展期至 11/29。
+- `stepfun-stepaudio3-music-gen-preview-nov8`：實讀官方定價文件，確認 StepAudio 3 限時免費預覽於今日 2026-11-23 11:59:59 AM（UTC+8）截止，12:00:00 PM 生效正式收費標準。
+- `ntu-hua-nan-fintech-ai-hackathon-2026`：實讀 Luma 官方頁面與臺大創創中心公告，確認報名今日（2026-11-23）截止，表單開放 Request to Join 審核報名中，未額滿。
+- `vercel-ai-gateway-parallel-decisions-free-window`：實讀 Vercel Changelog 與 AI Gateway 模型定價頁，確認 Parallel Decisions Fast 免費試用窗口於今日 2026-11-23 截止（through November 23, 2026），模型頁現標價仍為 Free。
+- `mistral-free-api-policy`：實讀 docs.mistral.ai 與 help.mistral.ai，確認 Free mode 不含 API 存取與說明中心提供基礎額度之矛盾持續，預付儲值不提升 Tier。
+- `krea-bots-beta-thousand-credits`：實讀 krea.ai/bots-beta 官方頁面，確認原宣稱之「Join waitlist · Get $1000」贈額文案已被全面移除，目前僅剩純候補登記，優惠已結束，狀態轉為 expired。
+- `langwatch-developer-free-fiftyk-terms-conflict`：實讀定價頁、文件與 2026-09-22 條款，確認 Developer 方案永久免費 50k events/月與條款 14 天試用停權及非自動化矛盾持續。
+- `respan-free-hundred-k-logs-terms-conflict`：實讀定價頁與 2026-10-27 服務條款，確認 Free 100k logs 未標示重置週期、條款禁止非核准商業與自動化存取之矛盾持續。
+- `miro-nonprofit-thirty-percent-all-paid-plans-ai`：實讀 miro.com/npo 與定價頁，確認非營利 30% 折扣持續，定價頁更新 MCP 配額（Starter 每日 500 次、Business 每日 2,000 次），折扣計算表述矛盾持續。
+- `n8n-startup-fifty-percent-business-self-hosted`：實讀 n8n 官方定價頁與新創專頁，確認舊網址 /startups/ 404 已由 /pricing/startup-plan/ 接管，新創（<20人、融資<€5M）自託管 Business 年繳享 50% 折扣為 333€/月，解除 terms_conflict 轉為 verified。
+- `callmissed-free-1000-credits-payment-verification`：實讀定價頁與條款，確認註冊贈送 1,000 點數（不限期）有效，呼叫 API 與上線必須通過國際信用卡或 UPI 支付方式驗證。
+- `dahl-inference-100m-signup-tokens`：實讀 tokens 文件與條款，確認註冊贈 1 億 tokens 於 7 天無請求自動失效、新 Key 需從帳戶池手動分配配額、儲值僅收加密貨幣。
+- `amd-radeon-token-factory-free-api`：實讀介紹、指南與速率限制頁，確認中國站免費 OpenAI/Anthropic Messages 相容 API 在線，雙層限制 30 RPM/Key 與 20 RPM/帳戶，每日重置。
+- `moa-agri-ai-module-diffusion-116`：實讀農業部官方公告，確認 116 年度智慧農業技術模組整合擴散應用輔導受理至 115 年 12 月 15 日 17:00 截止，今日為第二場說明會。
+- `composio-startups`：實讀 startups 專頁與平台定價頁，確認軟體新創（融資<US$5M）享 6 個月免費 Pro（期滿轉標準 Pro $29/月），免加速器門檻。
+- `olostep-trial-five-hundred-successful-web-requests`：實讀定價頁與 FAQ，確認免卡 500 次網頁擷取有效，定價頁 Trial vs FAQ 每月 500 次之週期表述矛盾持續，llm_extract 單次扣 10 credits。
+- `sensenova-token-plan-free-public-beta`：實讀官方 token-plan 頁面，確認商湯 6.8 Flash Lite 與 U1 Fast 公開測試期 $0/月免費方案持續中，最多 20 組 API keys。
+- `kimi-api-free-voucher-cn-locked`：實讀官方權益與帳號說明，確認新用戶 15 元券嚴格限大陸手機號且實名認證，排除 Kimi K3，帳號不支持注銷。
+- `cpc-moeai-elite-free-ai-course-115`：實讀 CPC 課程與商城頁面，確認產發署 AI 輔導團在職菁英培訓 0 元全額補助在線，第四梯次（2027/01/14 開班）報名受理至 2027/01/13。
+- `sail-startups-up-to-ten-k-shared-inference-sailboxes`：實讀 startups 專頁與條款，確認新創申請最高 US$10,000 推論與 Sailboxes 共享額度有效，限企業內部用途，審核不保證獲批滿額。
+
+### 新增紀錄（2 筆）
+- `nstc-industry-academia-cooperation-grant-116-1`：國科會「116年度第1期產學合作研究計畫補助案」，大專校院與企業合作進行先導實用研發，依審查核給人力設備耗材補助，企業配合款至少25萬且達25%，線上受理至 2027-01-13。
+- `nstc-general-research-project-grant-116`：國科會「116年度專題研究計畫補助案」，大專校院與科研專任人員專題研究與AI研發經費補助（主持費、人力費、設備業務費），明定使用AI應落實查證，線上受理至 2027-01-07。
+
+### 品質改善
+- 追蹤 AutoClaw M11W4 官方部落格公告，及時展期並修正額度至 50M tokens。
+- 核實 Krea Bots 官網已移除 $1,000 贈額承諾，及時標記為 expired。
+- 修正 n8n 新創專頁 404 失效網址至官方最新入口 `/pricing/startup-plan/`，解除條款衝突。
+- 全庫嚴格逾期降為 0 筆。
+- 執行 tools/prioritize.py 保持優先度評分一致（新增 2 筆國科會補助案均評為 S 級）。
+
+### 未解證據缺口
+- `mistral-free-api-policy` 官方文檔（無 API）與說明中心（有 API）矛盾持續。
+- `langwatch-developer-free-fiftyk-terms-conflict` 定價永久免費 vs 條款 14 天停權試用衝突持續。
+- `respan-free-hundred-k-logs-terms-conflict` 免費 100k logs 重置週期未標註且與 ToS 自動化存取禁令衝突。
+- `olostep-trial-five-hundred-successful-web-requests` 定價頁 Trial vs FAQ 每月 500 次之週期表述矛盾持續。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對是否如期下線 preview 模型並切換為正式付費。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 報名截止後核對 Luma 表單關閉狀態與名額消耗。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
+5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 前核對 qwen4-max 預覽退役狀況。
