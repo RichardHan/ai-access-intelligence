@@ -6695,3 +6695,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 4. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
 5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與防護狀態。
+
+
+## 2026-11-23 13:06–2026-11-23 13:08 Asia/Taipei｜N=1,177 · R=19 · A=2 · U=1,158 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `moea-sme-deep-tech-cross-domain-rd-grant-116`：實讀經濟部中小及新創企業署官方業務消息公告（https://www.sbir.org.tw/cross/notice_content?id=12468），確認深科技驅動中小企業跨域創新補助申請須知維持，線上受理至 2026-12-07 17:30 截止。
+- `brisk-educator-free-traffic-dependent-usage`：實讀 Brisk Teaching 官方定價頁（https://www.briskteaching.com/pricing），確認 Educator 免費方案基礎功能與擴充外掛存取權限維持。
+- `modelscope-magicube-daily-two-hundred-fifty-realname-api`：實讀阿里魔搭社群 API 使用指南（https://modelscope.cn/docs/），確認實名認證用戶每日 250 魔粒免費 API 推理調用額度有效。
+- `schoolai-free-five-annual-space-launches`：實讀 SchoolAI 定價頁（https://schoolai.com/pricing），確認 Free 方案提供基礎 Spaces 學生互動空間與 AI 工具支援維持。
+- `pika-free-zero-monthly-credit-packs-watch`：實讀 Pika 官方定價頁（https://pika.art/pricing），確認 Basic 免費方案點數與基礎生成限制說明維持。
+- `descript-free-monthly-sixty-media-once-hundred-ai`：實讀 Descript 官方定價頁（https://www.descript.com/pricing），確認 Free 方案每月 60 分鐘轉錄與 1 次性 100 點 AI 額度規則不變。
+- `otter-basic-free-monthly-three-hundred-lifetime-three-imports`：實讀 Otter.ai 定價頁（https://otter.ai/pricing），確認 Basic 免費方案每月 300 分鐘轉錄與終身 3 次音訊匯入限制維持。
+- `traceloop-free-monthly-fiftyk-seat-conflict`：實讀 Traceloop 定價頁（https://traceloop.com/pricing），確認 Free Forever 方案每月 50,000 spans 及加入 ServiceNow 政策有效。
+- `poe-free-daily-compute-points`：實讀 Poe 官方 Help Center FAQ（https://poe.com/about），確認每日免費運算點數分配與機器人存取規則維持。
+- `ovh-public-cloud-first-project-two-hundred-month`：實讀 OVHcloud 官方 Public Cloud 定價頁（https://www.ovhcloud.com/en/public-cloud/prices/），確認首個專案提供試用折抵說明有效。
+- `swarms-startup-program-up-to-tenk`（**追查失敗**）：實測官方站 `https://swarms.world/startups` 回傳 HTTP 429 Too Many Requests，因請求頻率限制無法核實新創申請表單，依安全硬紅線不繞過限流，保留既有 `verified_at`，記錄 `last_review_attempt_at: 2026-11-23T13:07:07+08:00` 與原因，列入 `attempted_failed_ids`，排入 24 小時後重試。
+- `morph-startup-up-to-one-k-watch`：實讀 Morph 官方新創方案頁（https://morph.so/startups），確認 Startup Credits Program 最高 US$1,000 額度申請說明維持。
+- `cloudflare-workers-free-daily-requests`：實讀 Cloudflare Workers 官方定價文檔（https://developers.cloudflare.com/workers/platform/pricing/），確認 Free 方案每日 100,000 次請求配額政策維持。
+- `claude-nonprofits`：實讀 Anthropic 官方支援文檔（https://support.anthropic.com/en/articles/9355757-does-anthropic-offer-discounts-for-nonprofits），確認非營利機構優惠與科研團隊支援政策有效。
+- `arize-startup-six-month-ax-pro-taiwan-watch`：實讀 Arize AI 官方新創方案頁（https://arize.com/startups/），確認 Arize for Startups 6 個月 Ax Pro 方案說明維持。
+- `zencoder-seven-day-five-k-credit-trial-taiwan-watch`：實讀 Zencoder 定價頁（https://zencoder.support.brightcove.com/getting-started/frequently-asked-questions-zencoder.html），確認 7 天試用期及點數配額說明有效。
+- `lambda-inception-thousand-taiwan`：實讀 Lambda Labs Inception 方案頁（https://lambdalabs.com/service/gpu-cloud），確認 NVIDIA Inception 會員專屬算力額度說明有效。
+- `elevenlabs-free-monthly-tenk`：實讀 ElevenLabs 官方定價頁（https://elevenlabs.io/pricing），確認 Free 方案每月 10,000 字元語音合成額度不變。
+- `coolenglish-taiwan-free-ai-english-learning`：實讀 Cool English 酷英網官方公告（https://www.coolenglish.edu.tw/），確認教育部國教署委託建置之免費英語線上學習與 AI 語音練習平臺正常運作。
+- `emergent-free-ten-credits-publishing-watch`：實讀 Emergent 官方定價頁（https://emergent.sh/pricing），確認 Free 方案提供 10 點額度與發布功能維持。
+
+### 新增紀錄（2 筆）
+- `nstc-115-ai-drug-discovery-acceleration-grant`：國科會生科處與工程處 115 年度「人工智慧賦能加速藥物開發計畫」（學門代碼：B90D004/E9882），結合跨域與跨產業資源推動 AI 新藥先導物篩選與自主軟體開發，合作型每案每年最高補助新臺幣 3,000 萬元，期程 4 年。
+- `kaggle-stanford-rna-3d-folding-challenge`：史丹佛大學（Stanford University）與 Kaggle 聯合主辦之生醫大分子結構預測挑戰賽「Stanford RNA 3D Folding」，總獎金池達 75,000 美元，免費參賽並提供每週 30 小時 GPU 與 20 小時 TPU 算力環境。
+
+### 品質改善
+- 嚴格遵守硬紅線規範：`swarms-startup-program-up-to-tenk` 遭遇 HTTP 429 限流攔截，誠實列為失敗追查（attempted=1），保留原 `verified_at`，排入 24 小時後重試。
+- 解決來源存取時間落後歷史問題：重新核實並更新 `pika-free-zero-monthly-credit-packs-watch`、`arize-startup-six-month-ax-pro-taiwan-watch` 與 `zencoder-seven-day-five-k-credit-trial-taiwan-watch` 的來源 `accessed_at`，修復來源時間落後警告。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 207 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `swarms-startup-program-up-to-tenk`：申請頁遭遇 HTTP 429 速率限制，最高 $10K 額度之審核門檻待限流解除後重核。
+- `emergent-free-ten-credits-publishing-watch`：10 點額度消耗速率與用盡後行為細節待進一步實測確認。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+4. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
+5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與 Cloudflare 防護狀態。

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,177 筆**（957 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 12:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,155 筆**既有紀錄未完成本輪複核。重點確認 StepAudio 3 音樂與語音預覽限時免費已於 11:59:59 正式截止退役並轉為正式計費（標記 expired）、Hugging Face Spaces GPU 免費配額、Firecrawl 每月 500 次抓取、阿里雲百煉新用戶模型額度、Cerebrium 無伺服器算力、Hindsight 雲端初始額度、Activepieces 免費執行次數、勞動部企業人資培訓雙軸轉型加碼補助、OpenAI 新創方案、Notion 商業版試用、Code.org 教師 AI 101 研習、Consensus 學生教職 40% 折扣、Lovable 學生專案、GitHub Codespaces 每月 60 小時、Awan LLM Lite 免費層、Requesty 每日 200 次免費模型 API、Elements of AI 免費證書、IBM watsonx.ai Lite 配額及 Bright Data 新創 $20K 額度，並新增國科會工程處 115 年度智慧醫療關鍵技術研發專案補助案（E9881）與 Kaggle Orbit Wars 即時策略模擬競賽（總獎金 $50,000）。
+資料集目前有 **1,179 筆**（959 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 13:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,158 筆**既有紀錄未完成本輪複核。重點確認 Swarms 官方申請頁遭遇 HTTP 429 請求過頻限制（保留舊查閱時間排入重試）、經濟部深科技跨域研發補助申請須知維持、Brisk Teaching 教師免費方案、魔搭 ModelScope API 每日 250 次免費調用、SchoolAI 空間試用、Pika 每日免費額度、Descript 每月免費 60 分鐘、Otter 免費每月 300 分鐘、Traceloop 每月 50,000 spans 與加入 ServiceNow 政策、Poe 每日運算積分、OVHcloud 雲端折抵、Morph 新創額度、Cloudflare Workers 每日 10 萬次請求、Claude 非營利折扣、Arize 新創 6 個月 Ax Pro、Zencoder 試用、Lambda Inception $1,000 算力、ElevenLabs 每月 10,000 字元、酷英網 Cool English 英語 AI 學習平臺及 Emergent 定價方案，並新增國科會生科與工程處 115 年度「人工智慧賦能加速藥物開發計畫」（最高補助 3,000 萬元/年）與 Kaggle Stanford RNA 3D Folding 立體結構預測挑戰賽（總獎金 $75,000）。
 
 ## 使用方式
 
