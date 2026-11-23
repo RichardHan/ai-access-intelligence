@@ -6784,3 +6784,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測定價頁連線與防護狀態。
 5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
+
+
+## 2026-11-23 15:06–2026-11-23 15:28 Asia/Taipei｜N=1,181 · R=20 · A=2 · U=1,161 · attempted=0
+
+### 複核紀錄（20 筆成功，0 筆失敗）
+- `ntu-hua-nan-fintech-ai-hackathon-2026`：實讀臺大創新週官網與 Luma 報名頁面，確認截止當日開放至今日，已有 57 人確認報名，總獎金 NT$18 萬。
+- `vercel-ai-gateway-parallel-decisions-free-window`：實讀 Vercel Changelog 與 AI Gateway 模型定價頁，確認 Parallel Decisions Fast 免費窗口至今日 2026-11-23 標價仍為 Free。
+- `claude-duet-preview`：實讀 Claude 官方支援說明，確認 Duet 預覽期間免額外收費，贈送之 limit resets（Pro 3 次、Max/Ultra 1 次）於 2026-12-15 到期。
+- `robinhood-luna-token-promotion-december`：實讀 Robinhood Help Center GPT Luna Promotion 條款，確認促銷至 2026-12-31 23:59 ET，代付 GPT-6 Luna token 費用。
+- `websearchapi-monthly-two-thousand-search-credits`：實讀 WebSearchAPI.ai 定價頁與文件，確認免卡每月 2,000 search credits 方案維持。
+- `meshy-free-monthly-hundred-download-conflict`：實讀 Meshy Help Center 方案說明，確認 Free 方案每月 100 點及 10 次無貼圖 Meshy 6 Lite 下載維持；主定價頁目前受 Cloudflare 403 阻擋。
+- `coreweave-aria-limited-free`：實讀 CoreWeave Forge 定價與 ARIA 文檔，確認 ARIA 目前限時免費促銷維持。
+- `codebuddy-monthly-activity-welcome-separated`：實讀 CodeBuddy 官方訂閱與積分文檔，確認 Free 100 點/月、迎新 250 點、每日活躍 30 點維持。
+- `inkeep-cloud-thirty-day-content-sandbox-demo`：實讀 Inkeep Cloud 定價 FAQ，確認通話後提供 30 天自有內容免卡免帳號沙箱機制維持。
+- `biel-business-fourteen-day-no-card-trial`：實讀 Biel.ai 定價頁與 2026-11-09 服務條款，確認 14 天免信用卡 Business 功能試用維持。
+- `biel-noncommercial-open-source-fivehundred-pages-twok-interactions`：實讀 Biel.ai 開源申請頁與定價頁，確認 500 索引頁與每月 2,000 次互動開源方案維持。
+- `posthog-ai-observability-free-monthly-hundred-k-events`：實讀 PostHog AI Observability 定價頁，確認每月 10 萬事件免費層維持，達上限自動停止接收用量，修正退訂欄位之硬停承諾。
+- `descript-education-nonprofit-hobbyist-discount`：實讀 Descript 非營利/教育支援頁面，確認 Hobbyist 5 折（月繳 $12、年繳 $8/月）與 3 席上限維持。
+- `crusoe-serverless-intro-five`：實讀 Crusoe Serverless 速率限制與開戶文件，確認 $5 介紹額度橫幅維持。
+- `lightning-starter-five-plus-card`：實讀 Lightning AI 定價與計費 FAQ，確認免卡 5 點、加卡 25 點與免費 CPU Studio 機制維持。
+- `hanzo-startup-tier-one-vc-up-to-hundred-fifty-k`：實讀 Hanzo Startups 計畫頁與服務條款，確認最高 US$150,000 額度與 Tier-1 VC 資格維持。
+- `confident-ai-free-five-weekly-runs-gbmonth`：實讀 Confident AI 定價頁，確認 Free Forever 每週 5 次測試與 1 GB-month trace spans 維持。
+- `anyscale-startup-twenty-k-byoc`：實讀 Anyscale 官方頁面，確認原始 /startup 網址已 308 轉向至首頁；公開定價頁提供新戶 $100 點數與 KubeRay $500 試用點數。
+- `agenta-hobby-daily-seventy-five-ten-days`：實讀 Agenta 定價與計費文檔，確認 Hobby 500 註冊點數與每日 75 點（每月最多 10 日）機制維持。
+- `miro-education-monthly-team-hundred-ai`：實讀 Miro 教育白板專頁，確認學生 10 席、教師 100 席及每團隊每月 100 Miro AI 點數維持；Zendesk 說明頁受 Cloudflare 403 阻擋。
+
+### 新增紀錄（2 筆）
+- `moda-adi-ai-innovation-agent-service-grant`：數位發展部數位產業署「AI 創新服務研發補助計畫」（聚焦單一場景之 AI 創新應用補助上限 500 萬元，跨流程跨組織之 AI Agent 整合服務補助上限 2,000 萬元）。
+- `drivendata-k12-ai-literacy-speech-modeling-competition`：DrivenData × K-12 AI Infrastructure Foundation「Where the Wild Features Are」兒童語音與識字預測 AI 挑戰賽（總獎金 US$50,000，取前 4 名，首獎 US$20,000，2027/01/19 截止）。
+
+### 品質改善
+- 嚴格落實程式化查核與去重：及時在派工探勘結果中識別既有收錄（避免重複新增中堅躍升計畫），換用數產署全新 AI Agent 研發補助案。
+- 修復多筆記錄之細部時間與文字矛盾：修正 Claude Duet 預覽重置效期（至 2026-12-15）、PostHog cancellation 欄位更新為官方硬停說明。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 211 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `meshy-free-monthly-hundred-download-conflict`：官方主定價頁遭遇 Cloudflare 403 驗證阻擋，依賴 Help Center 說明頁面覆核。
+- `miro-education-monthly-team-hundred-ai`：Zendesk 說明頁遭 Cloudflare 403 阻擋，主要資格條件由教育白板主頁覆核。
+- `anyscale-startup-twenty-k-byoc`：/startup 專頁已轉向首頁，原 $20K 計畫存續性待進一步官方公告釐清。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名正式關閉與名單審核狀況。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測試驗連線與 Cloudflare 防護狀態。
+5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,181 筆**（961 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 14:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,160 筆**既有紀錄未完成本輪複核。重點確認 Microsoft Data Days 官方部落格遭遇 HTTP 403 攔截（保留舊查閱時間排入重試）、Pokee 開發者計畫早期存取額度、遠傳 5G 帳單折抵、Pixel 11 Pro 贈送 6 個月 Google AI Pro、中央大學 Uedu 跨校 AI 教學平臺、國道智慧創意競賽、毓秀獎數位內容競賽、Oracle Agentic AI Foundations 免費證照、Kaggle Enveda 質譜競賽、monday.com 非營利方案、Pitch 終身 AI 點數、Xtensio 一次性點數、Google Flow 每日點數、Mindee 14 天試用、Upstage 一次性額度、Google TPU 研究雲配額、Venice 每日文字圖像生成、Fibery 教育非營利半價、Freshservice Agent Studio 試用及 Augment Code 3 萬點試用，並新增國科會前瞻處「邁向新世代前瞻人工智慧研究專案計畫」（最高 500 萬元/年）與 Kaggle ARC Prize 通用人工智慧抽象推理競賽（總獎金池 $1,100,000）。
+資料集目前有 **1,183 筆**（963 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 15:28 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,161 筆**既有紀錄未完成本輪複核。重點確認臺大×華南金融科技黑客松今日截止（現有 57 人確認）、Vercel AI Gateway Parallel Decisions Fast 限免今日到期、Claude Duet 預覽重置額度效期至 12/15、Robinhood Luna token 代付至年底、WebSearchAPI 每月 2,000 點、Meshy Free 每月 100 點（主定價頁 Cloudflare 403 阻擋）、CoreWeave ARIA 限時免費、CodeBuddy 活躍加贈 30 點、Inkeep Cloud 30 天免卡沙箱、Biel 14 天 Business 試用與開源 2,000 次互動、PostHog AI Observability 每月 10 萬事件免費硬停、Descript 教育與非營利半價、Crusoe Serverless $5 介紹額度、Lightning AI 5+25 點數、Hanzo 新創最高 $150K、Confident AI 每週 5 次測試、Anyscale 新創頁轉向與新版點數、Agenta 每日 75 點及 Miro 教育白板 100 AI 點數，並新增數位發展部數產署「AI 創新服務研發補助計畫」（AI Agent 整合最高補助 2,000 萬元）與 DrivenData × K-12 AI 兒童語音與識字預測 AI 挑戰賽（總獎金 $50,000）。
 
 ## 使用方式
 
