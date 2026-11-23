@@ -7011,3 +7011,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
 4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追蹤 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
 5. `akamai-cloud-rise-startup-credits`：24 小時後重測連線與 HTTP 403 防護狀態。
+
+
+## 2026-11-24 01:06–2026-11-24 01:15 Asia/Taipei｜N=1,191 · R=12 · A=2 · U=1,179 · attempted=0
+
+起點 `336fb61`，工作樹乾淨，無開啟 PR、維護鎖或未完成部署。佇列含 2 筆到期複核、14 筆七天內截止與 6 筆最近追查未解決。三組去重後共 22 筆，含冷卻中。前輪剛查的穩定方案留在輪替；本輪優先處理截止異常、付款、補助餘額與最早可重試的來源缺口。
+
+### 既有紀錄複核
+
+- `ntu-hua-nan-fintech-ai-hackathon-2026`｜01:08:13 台北。臺大華南黑客松公告報名期已過，Luma 按鈕仍顯示；移除沒有原文支持的 23:59:59，保留 11/23 日期並標待確認。 [來源 1](https://tec.ntu.edu.tw/innovation-week) [來源 2](https://luma.com/hccyc199)
+- `vercel-ai-gateway-parallel-decisions-free-window`｜01:11:49 台北。Vercel 仍顯示 Free，期後計價和截止時區待核；已移除台北 23:59:59 推定與可行動免費標記。 [來源 1](https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free) [來源 2](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [來源 3](https://vercel.com/docs/ai-gateway/pricing)
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`｜01:08:26 台北。IteraCompute 台北 11/24 16:00 切換。預付須在截止前完成且淨額為正；有效方案是另一條資格，未把截止前公告當成截止後實測。 [來源 1](https://iteracompute.com/free/) [來源 2](https://iteracompute.com/models/auto/) [來源 3](https://platform.iteracompute.com/free-tier-terms/)
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`｜01:11:49 台北。將 AutoClaw 詳情內過期的 M11W3 100M／11/22 改為 M11W4 50M／11/29，並將前期保留在歷史。 [來源 1](https://autoclaw.z.ai/en/blog/news/M11W4/)
+- `nextwave-ai-legaltech-hackathon-2026`｜01:08:49 台北。NextWave 更正前輪核實範圍中未獲簡章支持的主辦、免收費、入圍數與資源主張；表單需登入。 [來源 1](https://aiscuclub.github.io/nextweave2026/NextWave_AI%E6%B3%95%E5%89%B5%E9%BB%91%E5%AE%A2%E6%9D%BE_%E7%B0%A1%E7%AB%A0.pdf)
+- `heygen-voice-turbo-free-api-until-2026-11-30`｜01:08:34 台北。HeyGen 確認 Turbo Free 日期、每分鐘限制與 Free 方案輸出授權邊界；切換時區仍未公布。 [來源 1](https://developers.heygen.com/docs/voices/heygen-voice-speech) [來源 2](https://www.heygen.com/terms) [來源 3](https://www.heygen.com/voice-terms)
+- `aicu-evaluation-ap`｜01:08:41 台北。AICU 改讀可讀的官方 FAQ，確認換算率與購買點數效期兩處衝突，補首頁列出的新金鑰綁卡要求。 [來源 1](https://api.aicu.ai/) [來源 2](https://api.aicu.ai/docs/api-reference/) [來源 3](https://api.aicu.ai/terms) [來源 4](https://api.aicu.ai/faq)
+- `turboscribe-free-daily-three-thirty-minute-files`｜01:08:12 台北。TurboScribe 定價與首頁恢復可讀，核對每天 3 份、每份 30 分鐘與免卡；保留先前 403 追查欄位供追溯。 [來源 1](https://turboscribe.ai/pricing) [來源 2](https://turboscribe.ai/) [來源 3](https://turboscribe.ai/terms)
+- `alibaba-model-studio-token-plan-personal-new-user-discount`｜01:08:24 台北。阿里雲五折門檻改寫為同人所有關聯帳號均未購個人版，夜間折扣是再減 60%，並明列可到期停續。 [來源 1](https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview) [來源 2](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview) [來源 3](https://www.alibabacloud.com/help/en/model-studio/token-plan-faq)
+- `tw-moe-aicup-2026-vlm-solar-inspection`｜01:08:12 台北。AI CUP 延長公告、舊時程及倒數顯示並存，標為官方公開資訊有差異；30 萬元暫定獎勵包含 GPU。 [來源 1](https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699) [來源 2](https://go.aicup.tw/)
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`｜01:08:41 台北。新竹市補助餘額由前值 1.7% 更新為 NT$50,453（0.8%），修正摘要資格為設籍、16–40 歲。 [來源 1](https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323)
+- `cht-gemini-shorts-contest-2026`｜01:11:49 台北。中華電信 Shorts 明確區分送件前影片不公開、通過審核後才公開，並按限時活動逐日追蹤。 [來源 1](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html)
+
+### 新增及去重
+
+- `tw-itsa-generative-ai-web-design-contest-2027`｜01:08:23 台北。新增成大主辦 ITSA 生成式 AI 網頁設計試辦賽，台灣大學部或專科部在學生可組隊，12/4 17:00 截止。 [來源 1](https://itsaaicontest.itsa.org.tw/) [來源 2](https://itsaaicontest.itsa.org.tw/role.php) [來源 3](https://proj.moe.edu.tw/itsa/News_Content.aspx?n=2308&s=24666&sms=12739)
+- `nvidia-dli-university-ambassador-free-campus-workshops`｜01:08:52 台北。新增 NVIDIA DLI 校園大使，適用合資格受邀台灣教師的免費講師認證與校內實作坊；指定考試費用待核。 [來源 1](https://www.nvidia.com/en-us/training/educator-programs/university-ambassador-program/) [來源 2](https://www.nvidia.com/en-us/learn/certified-instructor-program/) [來源 3](https://www.nvidia.com/zh-tw/training/educator-programs/)
+- ITSA 以主辦方 2027 名稱收錄。NVIDIA DLI 既有 `nvidia-dli-teaching-kits-approved-course-codes` 是教學套件自學課程碼，大使的受邀認證和帶課規則另有官方條件。`nutn-national-ai-project-competition-2026` 已存在，略過。
+- 台積電 CareerHack 留交接。主辦首頁寫線上報名，連出的說明要求寄送 DOCX，附件讀取回 403，公開頁的「關閉」是導覽按鈕。 [主辦頁](https://www.tsmc.com/static/english/careers/Careerhack/index.html) [主辦連出的申請說明](https://zh.surveymonkey.com/r/CareerHack2027)
+
+### 資料修正與證據缺口
+
+- 由基準與實際紀錄差異計算批次統計。保留既有 ID、發現時間和全部 2,860 筆歷史，追加 13 筆事件。以來源釐清的資格、時間與狀態修正資料，優先度用既有工具重算。
+- 整筆複核有官方證據，因此來源局部失敗不計 attempted。保留 NextWave 表單登入限制、IteraCompute 條款替代網域、新竹原 PDF 403、AICU 舊 FAQ 逾時，以及 NVIDIA 繁中子頁 404 的缺口。這些失敗入口未獲本輪新存取時間。
+- 三個研究子代理走各自的限額；執行環境使用可用預設模型。方案實際申請、扣費、帳戶資格及領取入口只記到公開來源支持的範圍。
+
+### 本機驗證
+
+- `make check` 和 `make check-ui` 通過。另用 Chrome 390px／1280px 檢查本輪更新筆數、新卡片與來源連結、新竹市資格及餘額、臺大狀態，以及 Vercel 可搜尋且不出現在免費專區。
+
+### 下一輪優先
+
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`｜台北 11/24 16:00 後，用 [Auto 免費頁](https://iteracompute.com/free/) 與 [模型頁](https://iteracompute.com/models/auto/) 核對公開規則是否已切換；區分一般免費窗與保留資格。
+- `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後查 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) 和 [公告](https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free)，核對有無正式期後單價或延長。
+- `aocai-working-free-ai-courses-2026`｜11/24 09:00 後追蹤前輪交班的 12/2 台北 MLOps 班是否額滿及 11/27 12:30 報名期限。
+- `ntu-hua-nan-fintech-ai-hackathon-2026`｜只在 [主辦頁](https://tec.ntu.edu.tw/innovation-week) 或 [Luma](https://luma.com/hccyc199) 出現延長、停止或最新報名通知時回查；公告期已過的案件改為新訊號觸發。
+- `akamai-cloud-rise-startup-credits`｜前輪 403，冷卻後優先尋找 [Akamai 官方入口](https://www.akamai.com/cloud/start-ups/rise) 的其他官方公告或條款路徑。
