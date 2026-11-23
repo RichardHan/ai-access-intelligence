@@ -6514,3 +6514,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
+
+## 2026-11-23 09:06–2026-11-23 09:20 Asia/Taipei｜N=1,169 · R=20 · A=2 · U=1,149 · attempted=0
+
+### 複核紀錄（20 筆）
+- `voyage-free-tokens-batch-excluded`：實讀 Voyage 定價文檔（2026-09-29 版）與 ToS（2026-10-29 版），初始 200M/50M tokens 免費額度維持，定價正文與表格/舊模型清單內部矛盾持續未修正，Batch API 明確排除於免費額度之外。
+- `github-student-developer-pack`：實讀 GitHub Education 學生頁、Copilot 學生說明與 Codespaces 計費文檔，GitHub Pro、每月 180 Codespaces 小時與 20GB 儲存維持，Copilot Student 限每月身分重評且採 auto model selection。
+- `cloudflare-startup-tier3`：實讀 Cloudflare for Startups 官網與 Workers AI Changelog，Tier 3 額度為 $10,000，確認自 Dec 1 起新加入新創之 Workers AI 完全不納入 credits（既有新創至 Dec 1 前適用 Tier 3 $2,500 上限，AI Gateway 暫不納入 credits）。
+- `tavily-startups`：實讀 Tavily for Startups 頁與條款，100,000 API credits（6 個月效期）維持，資格明確要求為 Early-stage, VC backed startups，未通過者贈 10k credits。
+- `cloudflare-workers-ai-free`：實讀 Cloudflare Workers AI 定價頁與 Limits 文件，每日 10,000 Neurons 免費額度與 00:00 UTC（台灣時間 08:00）重置機制有效，文字生成預設 300 RPM。
+- `weaviate-cloud-free`：實讀 Weaviate Cloud 定價頁與叢集指南，100,000 objects 永久免費沙盒叢集（1GB RAM/10GB 磁碟、Embeddings 2,000 次/日、Query Agent 1,000 次/月），閒置 7 天暫停、30 天刪除。
+- `groq-free`：實讀 Groq 速率限制文件與服務協議，速率頁已拆出獨立 Free Plan Limits 標籤頁（gpt-oss-120b 為 30 RPM/1K RPD/8K TPM），協議明定免費服務排除 SLA 承諾與賠償責任。
+- `zoommate-basic-free-workplace-tier`：實讀 Zoom 產品頁與官方部落格，ZoomMate Basic 免費層維持每月 3 場主持會議摘要、20 次 AI queries、3 次 My Notes、10 檔/3 會議 agentic search、10 次工作流。
+- `openrouter-free-threshold`：實讀 OpenRouter limits 文件與模型 API，未購點 50 RPD / 滿 $10 升 1,000 RPD 規則維持，當前 :free 模型清單為 11 款（含 ling-3.2-flash、ernie-5.5-flash、nemotron 系列等）。
+- `apple-foundation-models-on-device-free-inference`：實讀 Apple Newsroom 與 Support 文件（2026-11-05 版本），相容硬體（A17 Pro / M1 以上）本機推論維持 free of cost，與雲端伺服器端每日額度及未來付費擴充明確區隔。
+- `openai-agents-api-public-beta-no-harness-fee`：實讀 OpenAI Agents API 公告、Overview 與支援國家名單，公開 Beta 免收 harness 費，依模型與工具呼叫照價計費，支援國家包含 Taiwan。
+- `tinyfish-startup-monthly-refresh`：實讀 Tinyfish Startups 官方方案與 FAQ，Tier 1 每月 $100 錢包額度持續 6 個月（不結轉），審核制每週批次處理。
+- `codex-banked-reset-policy`：實讀 OpenAI 官方 How resets work in Codex 全文，banked、automatic 與 paid resets 三類規則維持，手動兌用需剩餘低於 80%，助手自動使用需剩餘低於 10%。
+- `codex-students-credits`：實讀 OpenAI 官方 Codex for Students 頁面與條款，美加大學在學且居住美加（排除台灣），SheerID 驗證，US$100（2,500 credits）效期 12 個月。
+- `quillbot-free-basic-writing-daily-chat`：實讀 QuillBot Help Center 官方比較說明，Free 改寫 125 字、摘要 1,200 字、2 種模式、每日有限 AI Chat，每日具體次數仍未公開。
+- `gitlab-education-ai-credit-exclusion`：實讀 GitLab Education 申請頁、Credits 文件與 Community Programs 條款，Ultimate 免費一年，但社群訂閱明確不配發 included credits，官方教育宣傳與計費條款矛盾持續。
+- `google-cloud-free-trial-300-90d`：實讀 Google Cloud 官方 Free Cloud Features、Free Trial 條款，US$300 額度 / 90 天效期，20+ Always Free 產品（e2-micro 等僅限美區）。
+- `mem-free-plus-agent-boundary`：實讀 Mem 官方定價頁與停運公告，官方確認於 2026-11-16 宣布停止營運，全面關閉新付費訂閱並暫停收費，2026-12-18 筆記轉為唯讀，2027-01-15 正式關閉服務，狀態更新為 sunset_announced。
+- `tenbin-free-standard-trial-separate`：實讀 GMO 天秤 AI 企業 FAQ 與個人 FAQ，個人 Free 每日 80 credits 每日 0 時重置，Standard 方案 14 天需信用卡試用，法人與個人帳號分離。
+- `tripo-studio-free-200-monthly`：實讀 Tripo 官方資費與點數說明文件，每月 200 免費 credits、免綁卡、H2.5 格式匯出，免費商用產出須署名且 IP 歸屬 Tripo。
+
+### 新增紀錄（2 筆）
+- `nstc-science-vanguard-research-program-116`：國科會 116 年度「卓越領航研究計畫」補助案，聚焦自然科學、前瞻 AI 智慧運算與跨領域尖端研發，每案年平均補助新臺幣 500 萬至 1,500 萬元（至多 4 年總額最高 6,000 萬元），線上受理至 2026-12-14 止。
+- `kaggle-santa-2026-elf-calculator-competition`：Kaggle 年度節慶演算法競賽「Santa 2026 - The Elf Calculator」，編寫暫存器算術指令程序生成目標數，總獎金池 US$50,000，參賽免費提供每週 30 小時 GPU 與 20 小時 TPU 算力環境，2027-01-28 截止。
+
+### 品質改善
+- 敏銳捕捉 Mem 停運退場訊號（2026-11-16 公告、2026-12-18 唯讀、2027-01-15 下線），將 `mem-free-plus-agent-boundary` 狀態更新為 `sunset_announced`，退場歷史寫入 `policy-history.json`。
+- 實讀 OpenRouter 模型 API，確認目前可用之 `:free` 模型清單更新至 11 款，校正舊記錄之 13 款數據。
+- 納入國科會 116 卓越領航研究計畫（最高 6,000 萬元）與 Kaggle Santa 2026 演算法運算競賽（總獎金 $50,000、免費 GPU/TPU 算力）。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 200 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `voyage-free-tokens-batch-excluded`：定價正文與表格/舊模型免費資格之內部矛盾官方尚未修正。
+- `gitlab-education-ai-credit-exclusion`：教育方案宣傳文字與計費手冊之 AI credits 配發矛盾未解。
+- `quillbot-free-basic-writing-daily-chat`：每日 AI Chat 具體次數官方未公開。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對正式切換付費之 API 反應與模型清單。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
