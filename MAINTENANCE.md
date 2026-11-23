@@ -7056,3 +7056,40 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 - `aocai-working-free-ai-courses-2026`｜11/24 09:00 後追蹤前輪交班的 12/2 台北 MLOps 班是否額滿及 11/27 12:30 報名期限。
 - `ntu-hua-nan-fintech-ai-hackathon-2026`｜只在 [主辦頁](https://tec.ntu.edu.tw/innovation-week) 或 [Luma](https://luma.com/hccyc199) 出現延長、停止或最新報名通知時回查；公告期已過的案件改為新訊號觸發。
 - `akamai-cloud-rise-startup-credits`｜前輪 403，冷卻後優先尋找 [Akamai 官方入口](https://www.akamai.com/cloud/start-ups/rise) 的其他官方公告或條款路徑。
+
+
+## 2026-11-24 02:06–2026-11-24 02:13 Asia/Taipei｜N=1,193 · R=8 · A=2 · U=1,185 · attempted=1
+
+以 `7942ce6` 為基準，`main` 與遠端同步、工作樹乾淨，無開放 PR 或本 repo 的既有維護鎖。開場佇列有 0 筆嚴格逾期、14 筆七日內截止（8 筆在冷卻中）、4 筆最近一次追查失敗（3 筆在冷卻中），去重 18 筆近期風險。本輪選四筆仍可能申請的近期徵案及競賽、一筆追查缺口，並採付款或授權有明確待解疑點的較舊紀錄。Tripo Studio 因讀到新版條款和現有卡片矛盾，納入同輪修正。其餘前輪案例依各自回查時間。三個研究子代理分別查高風險案件、來源缺口及台灣新機會，均用工作階段可用的預設模型。主代理讀取採用的官方依據並整合。
+
+### 複核與修正
+
+- `cities-deliver-rockefeller-openai-2026`｜第一輪至台北 11/30 12:59，正式條款列免申請費。合資格非營利組織間接成本依條款為補助總額 15%，11/4 FAQ 則以扣除顧問費與次級補助後的直接成本為基準。依徵案主頁，衝突時條款優先。預算表實際填法及台灣個案資格待核。 [徵案主頁](https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services/) [正式條款](https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-Terms-and-Conditions-Final.pdf) [更新 FAQ](https://www.rockefellerfoundation.org/wp-content/uploads/2026/11/Cities-Deliver-AI-Solutions-for-Public-Services-Additional-Updated-FAQs-Final.pdf)
+- `taiwan-multi-store-ai-upgrade-tier3-2026`｜第三梯公告至 11/30 17:00，每案上限 NT$300 萬。申請時須附至少一半預定輔導店家清冊，上傳時間依平台後台。網頁工具未取得執行單位 PDF，直接下載與文字擷取可讀。實際受理和剩餘預算仍待核。 [公告](https://www.aoc.gov.tw/showPublic/807) [執行單位須知](https://www.smebiz.org.tw/getfile.php?k=news&f=2&c=f422C5I63D&nid=259)
+- `taipei-industry-incentive-ai-rd-batch2-2026`｜徵件至 11/30，時刻未列。補助 NT$200 萬，總經費至少 NT$400 萬。一案原則適用計畫執行期間，先前誤寫成同年度。11/12 時段是說明會。 [正式徵件](https://www.industry-incentive.taipei/news_detail/497) [說明會](https://www.industry-incentive.taipei/news_detail/501)
+- `fgu-three-good-ai-innovation-contest-2026`｜主辦流程表開放日為 10/1，正式開放消息為 10/9，兩者皆列 11/30 截止。公開簡章與競賽頁未列報名費，改為未知並撤掉免費專區標記。 [主辦官網](https://3goodai.fgu.edu.tw/) [主辦消息](https://3goodai.fgu.edu.tw/News/Index) [參賽須知](https://www.cmgsh.tp.edu.tw/uploads/1794274276455CreR5WwT.pdf)
+- `wispr-flow-student-three-month-pro-annual-half`｜區分新 Pro 學生三個月促銷及部分受認可帳戶可領的免卡年度 Student。台灣校域、三個月促銷需卡及首筆扣款待核。 [學生促銷](https://wisprflow.ai/students) [支援中心](https://docs.wisprflow.ai/articles/1128761434)
+- `google-cloud-tts-monthly-free-characters`｜WaveNet 月度免費字元在產品頁為 100 萬、定價表為 400 萬，與 Standard 有相同 SKU。移除各語音配額可累加的暗示。Free Tier 總表指向產品定價，超量仍依帳單類型及適用的價目。 [產品頁](https://cloud.google.com/text-to-speech) [定價](https://cloud.google.com/text-to-speech/pricing) [免費計畫](https://docs.cloud.google.com/free/docs/free-cloud-features)
+- `tripo-studio-free-200-monthly` 與 `tripo-api-free-credits-index-mismatch`｜Studio 保留每月 200 credits、免卡。11/13 條款寫免費輸出預設公開及適用範圍可免署名商用，指南仍列署名和歸屬。依正式條款揭露公開風險與指南差異。API 仍需獨立預購，索引贈額待核。12/1 控制台改顯示 USD，API 成本與點數價值維持。 [Studio 指南](https://www.tripo3d.ai/product-doc/getting-started/pricing-credits) [使用條款](https://www.tripo3d.ai/terms) [API 計費](https://developers.tripo3d.ai/en/docs/billing)
+- `swarms-startup-program-up-to-tenk`｜當前申請入口追查未成功。未重讀先前 429 的 swarms.world，替代 www.swarms.ai 直連也回 429，網頁工具可讀同頁既有公開條件，官方文件未提供替代申請證據。保留原核實時間及 11/24 13:00 預定回查，新增失敗時間與原因。 [官方計畫頁](https://www.swarms.ai/programs/startups) [開發文件](https://docs.swarms.ai/docs/introduction/overview)
+
+### 新增與去重
+
+- `nthu-its-ai-certification-training-2027`｜清大正式學籍學生適用。課程及首考免收費，錄取者須先繳 NT$3,000 保證金，符合結業條件才退還，補考自付 NT$3,200。25 名含志工保留席，11/30 23:59 截止。與既有 Fun AI Camp 為不同梯次及活動。 [清大活動簡章](https://ccd.nthu.edu.tw/event/1317)
+- `ai-collective-taiwan-gemini-build-night-2026`｜12/17 台北實作活動免費入場，主辦審核報名。約 40–50 人為活動規模，報名截止與剩餘席位未公布。 [主辦活動頁](https://luma.com/aic-ta-12-17)
+- 台積電 2027 CareerHack 由名稱、ID、主辦與 URL 查無重複，仍留待追查。兩公開入口同列 12/27 截止，主辦頁寫線上填資料，連出報名說明寫填 DOCX 寄回，主辦附件直連 403。 [主辦頁](https://www.tsmc.com/static/english/careers/Careerhack/index.html) [報名說明](https://zh.surveymonkey.com/r/CareerHack2027)
+
+### 品質與驗證
+
+- 以 JSON 與基準差異計算批次。全庫 1,195 筆，新增 2 筆機會、0 筆政策、0 筆觀察線索。保留 2,873 筆歷史與既有 ID／首次收錄時間，追加 11 筆研究歷史。以既有優先度與前端規則呈現條件，不把登入頁當成實際收件證據。
+- `make check`、`make check-ui`、`git diff --check` 通過。Chrome 390px 與 1280px 本機核對本輪更新筆數、代表性卡片及來源、免費篩選、Swarms 失敗標記與資料雜湊。
+
+### 下一輪優先
+
+1. `aocai-working-free-ai-courses-2026`｜11/24 09:00 後核對台北 12/2 MLOps 班的額滿與 11/27 12:30 報名期限。 [課程報名](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585)
+2. `swarms-startup-program-up-to-tenk`｜11/24 13:00 起查其他官方公告或有效申請入口。只拿到舊條件時保留原核實時間。 [計畫頁](https://www.swarms.ai/programs/startups)
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`｜11/24 16:00 後核對規則切換，區分一般免費窗與淨額／方案保留資格。 [免費頁](https://iteracompute.com/free/) [模型頁](https://iteracompute.com/models/auto/)
+4. `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後核對延長或正式期後單價。 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [官方公告](https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free)
+5. `tripo-studio-free-200-monthly` 與 `google-cloud-tts-monthly-free-characters`｜依每日時點追查指南是否同步正式條款、WaveNet 是否補正用量說明。 [Studio 指南](https://www.tripo3d.ai/product-doc/getting-started/pricing-credits) [TTS 定價](https://cloud.google.com/text-to-speech/pricing)
+
+前輪的臺大華南黑客松依新訊號追查。Kaggle Notebook 與 Akamai RISE 保留資料中的 11/24 17:00／19:00 回查安排。

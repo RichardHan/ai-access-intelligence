@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T01:15:42+08:00",
-  "scope": "2026-11-24 01:06–2026-11-24 01:15 Asia/Taipei 局部複核 12 筆，新增 2 筆，整筆追查失敗 0 筆。修正新竹市青年補助資格及餘額、釐清臺大報名和 Vercel 計費疑義，並新增 ITSA 生成式 AI 網頁設計競賽及 NVIDIA DLI 校園大使。",
+  "updated_at": "2026-11-24T02:13:38+08:00",
+  "scope": "2026-11-24 02:06–2026-11-24 02:13 Asia/Taipei 局部複核 8 筆，新增 2 筆，整筆追查失敗 1 筆。修正多店升級與臺北研發補助門檻、佛光競賽費用、Cities Deliver 預算條款，以及 Wispr、Google TTS 和 Tripo 的官方差異。新增清大 ITS AI 培訓與台北 Gemini Build Night。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -3090,8 +3090,8 @@
       "priority_score": 19.8,
       "priority_tier": "S",
       "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻",
-      "last_review_attempt_at": "2026-11-23T13:07:07+08:00",
-      "last_review_attempt_reason": "官方站 https://swarms.world/startups 回傳 HTTP 429 Too Many Requests，請求過於頻繁暫時受限，保留既有 verified_at，排入下次重試"
+      "last_review_attempt_at": "2026-11-24T02:08:43+08:00",
+      "last_review_attempt_reason": "追查現行申請入口未取得可用證據。另一官方網域 www.swarms.ai/programs/startups 直連 HTTP 429，網頁工具可讀同頁舊有公開條件，未能確認當前入口。官方文件概覽未提供本計畫的替代申請證據。保留預定 13:00 回查。"
     },
     {
       "record_type": "opportunity",
@@ -19998,8 +19998,8 @@
     },
     {
       "id": "wispr-flow-student-three-month-pro-annual-half",
-      "title": "Wispr Flow 學生：新 Pro 用戶免費三個月，之後年繳教育價",
-      "summary": "學生新 Pro 用戶免費三個月；之後自動續訂教育價，價格頁標示每月平均 US$6、按年計費，取消可在帳戶管理。非模型 API 額度。",
+      "title": "Wispr Flow 學生：新 Pro 三個月促銷，學生方案與續訂依帳戶",
+      "summary": "學生頁宣傳新 Pro 學生免費三個月，之後以五折年繳自動續訂，頁面標示月均 US$6。支援中心另列部分受認可學生帳戶可領免卡 US$0 年度 Student，其餘合格帳戶可能只看到付費學生價。折扣、期限、續訂及實扣總額依帳戶與方案。台灣學校網域和三個月促銷需卡條件待確認。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -20020,40 +20020,46 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": null,
-      "usable_duration": "免費三個月",
-      "access_risk": "資格及費用可能變更；台灣個案與法律未核。",
-      "verified_at": "2026-11-08T19:11:38+08:00",
+      "cancellation": "學生頁稱可隨時取消。實際續訂或取消日期依帳戶及付款管道顯示。",
+      "usable_duration": "學生頁宣傳新 Pro 三個月，另有依帳戶資格提供的年度 Student 方案。",
+      "access_risk": "優惠須在正確的受認可帳戶啟用。付費 Pro 切換方案須核對帳戶與付款管道，以免同時有兩筆訂閱。",
+      "verified_at": "2026-11-24T02:08:43+08:00",
       "discovered_at": "2026-10-29T05:07:39+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T19:11:03+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:08:43+08:00",
       "eligibility": {
         "service_availability": "官方公開頁可讀；實際台灣帳戶服務未測。",
-        "account_eligibility": "限新 Pro 學生；可用學生信箱或提交學籍證明；非美國居民至少16歲，未滿18歲可能需監護人同意。免費期後自動續訂，結帳金額須確認。",
+        "account_eligibility": "學生促銷列三個月限新 Pro 學生。支援中心說明認可學校網域及 .edu 等資格條件，未識別時可遞交在學證明供個別審核。受認可也未必可領 US$0 年度 Student。",
         "billing_country": "台灣帳單、付款及稅費未核。",
         "identity_residency": "台灣個案、身分或所在地資格未核。",
-        "terms_restrictions": "限新 Pro 學生；可用學生信箱或提交學籍證明；非美國居民至少16歲，未滿18歲可能需監護人同意。免費期後自動續訂，結帳金額須確認。",
+        "terms_restrictions": "學生頁與客服文件列不同方案。價格、期限和續訂依個別方案，付費訂閱切換須依原付款管道。非美國居民年齡限制見服務條款。",
         "taiwan_note": "Unknown：官方頁未確認個別台灣申請資格；未申請或付款。"
       },
       "unknowns": [
-        "學生Pro是否需卡、首次扣款金額與半價持續期限",
-        "台灣學校信箱及文件是否接受",
-        "台灣個別資格、付款及法律限制未核"
+        "三個月新 Pro 優惠是否需卡、首筆扣款與折扣期限",
+        "台灣學生帳戶的網域認可或文件審核結果",
+        "台灣付款與稅費"
       ],
       "sources": [
         {
           "url": "https://wisprflow.ai/students",
-          "scope": "學生三個月Pro、之後五折年繳與驗證方式",
-          "evidence": "頁面列「Glow is free for students. Get 3 months of Pro for finals. Auto renews at 50% off. Cancel anytime.」與「Flow Pro for Students $6/mo billed annually」；以 .edu 信箱自動啟用，無 .edu 者可提交學生證、在學證明、繳費收據或學生儀表板截圖予客服；「The 3 months of Pro is for students new to Flow Pro」。未列國家限制。",
-          "accessed_at": "2026-11-08T19:11:38+08:00"
+          "scope": "新 Pro 學生促銷與年繳標價",
+          "evidence": "學生頁列三個月 Pro、期後五折自動續訂及月均 US$6 年繳，三個月限新 Pro 學生。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         },
         {
           "url": "https://wisprflow.ai/terms-of-service",
           "scope": "年齡與付費條款",
           "evidence": "非美國居民至少16歲；付費方案自動續訂。",
           "accessed_at": "2026-10-29T05:07:39+08:00"
+        },
+        {
+          "url": "https://docs.wisprflow.ai/articles/1128761434",
+          "scope": "認可校域、個別帳戶免費年度 Student 及續訂",
+          "evidence": "只有部分受認可帳戶有免卡 US$0 年度 Student。其他受認可帳戶使用付費學生價格，各方案的價格、期限和續訂不盡相同。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -20063,7 +20069,8 @@
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "verification_scope": "本輪僅重讀學生頁與條款所列資格、價格與續訂敘述；未登入、未申請、未核台灣學校信箱或付款。"
+      "verification_scope": "2026-11-24 02:08 台北實讀。核對學生促銷及支援文件，區分三個月 Pro 與部分帳戶的免卡年度 Student。台灣校域與首扣未核。",
+      "cost_note": "月均 US$6 是學生頁的年繳促銷標示。免卡 US$0 年度 Student 僅適用部分受認可帳戶，個別價格及續訂依帳戶顯示。"
     },
     {
       "id": "arcade-free-monthly-two-k-tools-auto-upgrade-risk",
@@ -43916,8 +43923,8 @@
     },
     {
       "id": "tripo-studio-free-200-monthly",
-      "title": "Tripo Studio：免費每月200 credits，輸出權利有限",
-      "summary": "官方資費文件（頁首標示 October 2026）寫「The Free plan includes 200 credits per month with no credit card required.」；每帳期重置，標準 HD 生成每次 15 credits，免費僅 H2.5 模型可匯出，Image Generation 免費方案無額度；Smart Mesh P2.0 及 Smart UV 各 2 次試用。免費商用須標示來源且 IP 歸 Tripo（條款 §5.2.1）；失敗生成不扣點。API 為獨立付費產品。",
+      "title": "Tripo Studio：免費每月 200 credits，免費輸出預設公開",
+      "summary": "Studio 指南列每月免費 200 credits、免綁卡、只可匯出 H2.5，圖片生成無免費額度。指南仍列使用免費輸出須署名、IP 歸 Tripo。11/13 正式使用條款 §5.2.1 則寫免費輸出預設公開，在適用範圍可供公眾免署名商用。須查適用條款及第三方權利。API 點數另購。",
       "categories": [
         "FREE"
       ],
@@ -43940,34 +43947,39 @@
       "valuation_scenario": "若僅做無額外處理的HD試作，200/15約13次為理論上限，非13個可用成品保證；免費比值不適用。",
       "cancellation": "未核自動續費；未登入或啟用。",
       "usable_duration": "每帳期200credits",
-      "access_risk": "資格、額度或政策可能改變；試用耗盡及效期後可能失去存取。",
-      "verified_at": "2026-11-23T09:15:00+08:00",
+      "access_risk": "免費輸出預設公開。隱私、署名、商用與權利歸屬須核對正式版本和適用補充條款，第三方權利仍須處理。",
+      "verified_at": "2026-11-24T02:08:43+08:00",
       "discovered_at": "2026-10-24T13:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-11-30T19:09:13+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:08:43+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
         "account_eligibility": "一般帳戶；台灣完整條款未核。",
         "billing_country": "未核",
         "identity_residency": "未核",
-        "terms_restrictions": "不得偽造身分或以VPN換IP繞過資格；未註冊或啟用。",
+        "terms_restrictions": "依 11/13 條款 §5.2.1，免費輸出預設公開。對可處分的權利，在法律許可範圍內允許公眾免署名商用。第三方權利、法定 AI 標示與適用的補充條款仍須遵守。Studio 指南仍有不同授權敘述。",
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
-        "台灣帳戶資格",
-        "付款國家及居住條件",
-        "實際可用額度及效期（資費文件標示 2026 年 10 月，之後是否調整未核）"
+        "台灣帳戶資格與實際可用額度",
+        "指南何時與 11/13 正式條款一致，是否另有適用的補充條款"
       ],
       "sources": [
         {
           "url": "https://www.tripo3d.ai/product-doc/getting-started/pricing-credits",
-          "scope": "本次局部查閱；僅支持列明主張",
-          "evidence": "Free每月200 credits、免卡；免費方案商用需署名，權利有限。；較早紀錄：[較早] 免費額度、匯出限制與商用歸屬：2026-10-25直接查閱：Free $0/月、每月200點免信用卡；3D匯出僅限H2.5；商用須署名且IP歸Tripo；失敗生成不扣點。",
+          "scope": "Studio 免費配額及與使用條款不同的授權說明",
+          "evidence": "2026 年 10 月 Studio 指南列每月 200 credits 無須信用卡、H2.5 匯出，授權表寫 With attribution 與 IP belongs to Tripo。指南連至正式條款。",
           "accessed_time_range": "2026-10-30T19:05:26+08:00–2026-10-30T19:09:13+08:00",
-          "accessed_at": "2026-11-23T09:15:00+08:00"
+          "accessed_at": "2026-11-24T02:08:43+08:00"
+        },
+        {
+          "url": "https://www.tripo3d.ai/terms",
+          "scope": "2026-11-13 使用條款 §5.2.1 的公開與授權範圍",
+          "evidence": "§5.2.1 規定 Free Outputs 預設公開，對使用者可以處分的相關權利，在法律許可範圍內放棄權利或給予同範圍公眾授權，包含商用且免署名。第三方權利及法律義務仍適用。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -43976,17 +43988,17 @@
         "additional_cost_usd": null,
         "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
       },
-      "priority_score": 19.8,
-      "priority_tier": "A",
-      "priority_note": "官方來源·已核實列明主張·免費·台灣未標記·≤20分鐘",
+      "priority_score": 17.1,
+      "priority_tier": "B",
+      "priority_note": "官方來源·官方條款有差異·免費·台灣未標記·≤20分鐘",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-23 09:10 實讀 Tripo 官方資費與點數說明文件：每月 200 免費 credits、免綁卡、H2.5 格式匯出，免費商用產出須署名且 IP 歸屬 Tripo。",
-      "status": "active_verified"
+      "verification_scope": "2026-11-24 02:08 台北實讀。新訊號複核：比對 11/13 使用條款與 Studio 指南，核對免費輸出公開與授權差異，確認 200 credits 及免卡仍列示。",
+      "status": "terms_conflict"
     },
     {
       "id": "tripo-api-free-credits-index-mismatch",
-      "title": "Tripo API：純預付、無官方免費贈額；索引數字疑為Studio(web app)方案混用",
-      "summary": "官方 API 定價與計費文件皆為 pay-before-you-go（1 credit = US$0.01，自 US$1 起購買），全文無新戶免費 credits；Help Center 也明示 API credits 須另行購買、Studio 的月配額不能用來呼叫 API。索引摘要的「300 credits／2 週」與「2,000 免費 credits」在任何官方頁都對不上：購買頁有「US$100 → 10,000 + 2,000 credits」的付費加贈，較可能是被誤讀成新戶贈額。現行數字是 Tripo Studio（web app）Free 方案 200 credits／月、免卡，但方案表另列三項限制：Image Generation「No free quota」、3D 匯出只到 H2.5、輸出需標註出處且 IP 歸 Tripo（非商業）。方案列也已無 Starter 一級。",
+      "title": "Tripo API：採預付點數，新戶免費贈額仍待核",
+      "summary": "Tripo 開發者定價列預購 API 點數，1 credit 為 US$0.01。Help Center 明列 Studio 點數與 API 分池，Studio 的月額度不能用於 API。300 credits／2 週及 2,000 免費 credits 的索引說法未取得官方公開正文支持。官方文件公告 2026-12-01 起控制台以美元顯示價格及餘額，既有點數價值與 API 成本維持，API 欄位仍傳回 credits。Studio 免費輸出授權另見 Studio 紀錄。",
       "categories": [],
       "views": [],
       "setup_cost_usd": null,
@@ -44007,13 +44019,13 @@
       "valuation_scenario": "僅在已有實際需求且符合資格時抵用；未估宣傳額為保證價值。免費分母為0時效益成本比不適用。",
       "cancellation": "未核自動續費；未登入或啟用。",
       "usable_duration": "未公布",
-      "access_risk": "資格、額度或政策可能改變；試用耗盡及效期後可能失去存取。",
-      "verified_at": "2026-11-10T19:27:34+08:00",
+      "access_risk": "公開價目顯示 API 額度須獨立預購。個別帳戶的新戶餘額、較早索引主張及台灣付款條件待核。",
+      "verified_at": "2026-11-24T02:08:43+08:00",
       "discovered_at": "2026-10-24T13:00:41+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T10:27:44+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:08:43+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開來源可讀，未驗台灣帳戶",
@@ -44024,10 +44036,9 @@
         "taiwan_note": "未取得台灣及個人完整資格證據，Unknown不等於不可用。"
       },
       "unknowns": [
-        "台灣帳戶資格與付款國家／居住條件",
-        "帳戶實際起始餘額（需登入，未操作）",
-        "索引數字（300 credits／2 週、2,000）的原始來源頁，疑為 Studio 舊方案或第三方彙整",
-        "Studio Free 的 200 credits 是否可用於 API（Help Center 明示不行，但 docs 未同步聲明）"
+        "台灣帳戶資格、付款國家及居住條件",
+        "帳戶實際起始餘額",
+        "300 credits／2 週、2,000 免費 credits 的索引主張出處"
       ],
       "sources": [
         {
@@ -44038,21 +44049,21 @@
         },
         {
           "url": "https://developers.tripo3d.ai/en/docs/billing",
-          "scope": "credits 凍結／扣除與返還，無免費贈額（2026-11-09 重讀）",
-          "evidence": "「Task creation | Freeze the required credits from the available balance」；「Task fails | Frozen credits are returned to the available balance」。｜較早紀錄：任務先凍結點數，成功正式扣除，失敗返還；正文無免費贈額項目。",
-          "accessed_at": "2026-11-09T10:27:44+08:00"
+          "scope": "API 扣點與 2026-12-01 控制台顯示調整",
+          "evidence": "公告控制台改以 US$0.01／credit 顯示美元價格與餘額。API 欄位仍以 credits 傳回，餘額價值、儲值權益與 API 成本維持。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         },
         {
           "url": "https://developers.tripo3d.ai/en/pricing",
-          "scope": "現行 API 價目：1 credit = US$0.01、自 US$1 起購買、無免費贈額（2026-11-09 重讀）",
-          "evidence": "「Simple, transparent pay-as-you-go pricing. Purchase credits and use them across all API operations. / 1 credit = $0.01 USD」；頁面僅有購買入口與價目表。",
-          "accessed_at": "2026-11-10T19:27:34+08:00"
+          "scope": "開發者 API 點數定價",
+          "evidence": "官方定價寫需購買點數用於 API 操作，1 credit 為 US$0.01。公開頁未列新戶贈額。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         },
         {
           "url": "https://www.tripo3d.ai/help/api-plugins/tripo-studiotripo-api",
-          "scope": "關鍵分流：API credits 與 Studio credits 分離，API credits 須另購且不按月重置（2026-11-09 新增來源）",
-          "evidence": "「Tripo API uses a separate credit system. API credits must be purchased independently on the API platform, and purchased API credits are valid long-term and do not reset monthly.」；「even if you have an active Tripo Studio paid subscription, you cannot use Studio credits to call the Tripo API.」",
-          "accessed_at": "2026-11-09T10:27:44+08:00"
+          "scope": "Studio 與 API 額度分池",
+          "evidence": "官方說明 API 點數須獨立購買，Studio 訂閱內點數不能用於 API。",
+          "accessed_at": "2026-11-24T02:08:43+08:00"
         },
         {
           "url": "https://www.tripo3d.ai/help/credit/how-do-credits-work",
@@ -44076,7 +44087,7 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
-      "verification_scope": "2026-11-10 19:5x 重讀 API 定價頁、開發者定價頁、Studio 定價與額度文件：確認 API 為純預付、無新戶贈額；Studio Free 為 200 credits／月並有標註出處、IP 歸 Tripo、無圖片生成免費額度等限制。未註冊、未登入。",
+      "verification_scope": "2026-11-24 02:08 台北實讀。核對公開 API 定價、計費顯示遷移及 Studio 分池。實際新戶餘額與索引出處待核。",
       "legal_status": "not_verified",
       "status": "unverified"
     },
@@ -71752,7 +71763,7 @@
     {
       "id": "taipei-industry-incentive-ai-rd-batch2-2026",
       "title": "臺北市產業發展獎勵補助：AI創新應用主題式研發，11/30截止",
-      "summary": "2026-11-11 07:08–07:09 重讀：公告 497 仍未更新（民國115年10月21日發布），徵件期間「自115年11月2日（一）起至115年11月30日（一）止」，未載時刻、無延長公告；每案補助200萬元（總經費至少400萬元）、預計15案、執行期12/1起12個月。新聞列表首頁最新為 2026-11-05 的 11/12 說明會公告，未見額滿、延長或提前截止。說明會 11/12 14:00–16:00（13:30 報到）於臺北創新實驗室，需以 surveycake 表單先行報名。",
+      "summary": "臺北市產發局第 2 梯主題式 AI 研發補助公告列 2026-11-02 至 11-30 線上徵件，每案 NT$200 萬、計畫總經費至少 NT$400 萬，預計 15 案、得不足額。限在臺北市登記滿一年的合資格公司或商業。公告未列截止時刻。11/12 說明會已列於另一則消息。",
       "record_type": "policy",
       "status": "application_based",
       "verification": "Official",
@@ -71778,50 +71789,48 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "不適用（補助申請非訂閱）；公告未載撤回機制。",
-      "cost_note": "申請免費、無報名費；補助為事後核撥，撥款分期、憑證要求與稅務處理須依申請須知，本輪未讀。",
+      "cost_note": "公告明列每案補助 NT$200 萬及總經費至少 NT$400 萬。報名費、撥款分期、憑證與稅務細節待確認。",
       "usable_duration": "受理2026-11-02至2026-11-30（截止時刻未載明）；計畫執行期2026-12-01至2027-11-30。",
-      "access_risk": "須為台北市登記滿1年之公司、商業或外國公司在台登記地；單純採購現成AI服務不符。公告未載截止時刻與剩餘名額。",
-      "verified_at": "2026-11-23T07:15:00+08:00",
+      "access_risk": "公司、商業或外國公司所在地須在臺北市登記滿 1 年。只採購或導入現成 AI 且無實質研發及創新者不符。公開公告未列截止時刻。",
+      "verified_at": "2026-11-24T02:09:31+08:00",
       "discovered_at": "2026-11-08T13:20:00+08:00",
       "announcement_at": "2026-10-21",
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-27T09:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:09:31+08:00",
       "deadline_at": "2026-11-30",
       "eligibility": {
         "service_availability": "台北市政府產業發展局線上申請系統送件（industry-incentive.taipei/application/）。",
         "account_eligibility": "於台北市完成登記之公司、商業，或所在地登記於本市之外國公司，且設立登記滿1年以上。",
         "billing_country": "須為台北市登記事業；補助以新臺幣核撥。",
         "identity_residency": "以公司登記地為準，非個人申請；未列國籍限制。",
-        "terms_restrictions": "同年度以申請一計畫為原則（含執行中政府補助案）；須自主核心技術、合法訓練資料、資安防護與模型偏見檢核；單純採購或導入現成AI服務不予補助。",
+        "terms_restrictions": "獎勵補助計畫執行期間內以申請一計畫為原則，包含執行中政府相關補助型計畫。計畫須有自主核心技術、模型優化、領域整合或創新流程，另須合法使用訓練資料、落實資安與偏見檢核。",
         "taiwan_note": "Yes：明文以「本市完成登記」為資格，台北市登記企業直接適用；非個人可申請。"
       },
       "unknowns": [
-        "截止時刻（僅列日期）與是否延長",
-        "撥款分期、核銷憑證與稅務處理",
-        "能否與中央或其他政府補助並行執行的細節",
-        "審查評分與通過率",
-        "說明會是否已額滿或提供線上場",
+        "截止時刻與登入後當下的送件狀態",
+        "申請費、撥款分期、核銷憑證與稅務細節",
+        "並行政府補助的個案認定、審查通過率",
         "適用法律與監管未核"
       ],
-      "verification_scope": "2026-11-23 07:12 實讀臺北市產發局公告與新聞清單：第 2 梯次主題式研發補助徵件至 115/11/30 止，每案補助 200 萬元，目前未見延長或停收公告。",
+      "verification_scope": "2026-11-24 02:09 台北實讀。核對公告 497、說明會 501 與最新消息首頁。徵件與說明會時間各自適用，截止時刻及送件實測未核。",
       "sources": [
         {
           "url": "https://www.industry-incentive.taipei/news_detail/497",
-          "scope": "徵件時程、補助金額與名額、計畫期程",
-          "evidence": "2026-11-23 07:12 實讀確認：第 2 梯次主題式 AI 研發補助徵件至 115 年 11 月 30 日止，每案補助 200 萬元。",
-          "accessed_at": "2026-11-23T07:15:00+08:00"
+          "scope": "正式徵件公告的資格、金額、時程及一案原則",
+          "evidence": "正式公告第五至九點列 11/2 至 11/30、NT$200 萬、總經費至少 NT$400 萬、預計 15 案、臺北市登記滿一年及線上送件。第十點的計算範圍是計畫執行期間。",
+          "accessed_at": "2026-11-24T02:08:05+08:00"
         },
         {
           "url": "https://www.industry-incentive.taipei/news/1",
-          "scope": "是否有延長／額滿／提前截止公告（最新為 2026-11-05 說明會公告）",
-          "evidence": "2026-11-23 07:12 實讀確認：第 2 梯次主題式 AI 研發補助徵件至 115 年 11 月 30 日止，每案補助 200 萬元。",
-          "accessed_at": "2026-11-23T07:15:00+08:00"
+          "scope": "公開最新消息首頁",
+          "evidence": "所查首頁並列 11/05 說明會消息與 10/21 正式徵件公告，未見本梯變更期限。",
+          "accessed_at": "2026-11-24T02:09:31+08:00"
         },
         {
           "url": "https://www.industry-incentive.taipei/news_detail/501",
-          "scope": "11/12 說明會時間、地點、報名連結",
-          "evidence": "2026-11-23 07:12 實讀確認：第 2 梯次主題式 AI 研發補助徵件至 115 年 11 月 30 日止，每案補助 200 萬元。",
-          "accessed_at": "2026-11-23T07:15:00+08:00"
+          "scope": "已過說明會與徵件日期",
+          "evidence": "11/12 14:00–16:00 是說明會。說明會頁轉指正式公告 497，另列徵件期限 11/30 與每案 NT$200 萬。",
+          "accessed_at": "2026-11-24T02:08:05+08:00"
         }
       ],
       "priority_score": null,
@@ -74243,9 +74252,9 @@
     },
     {
       "id": "google-cloud-tts-monthly-free-characters",
-      "title": "Google Cloud TTS：每月 WaveNet／Standard 各 400 萬字元、Chirp 3 HD／Neural2 各 100 萬字元免費",
+      "title": "Google Cloud TTS：按語音提供每月免費字元，WaveNet 額度官頁有差異",
       "record_type": "opportunity",
-      "status": "conditional",
+      "status": "terms_conflict",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
@@ -74272,55 +74281,60 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cost_note": "免費額度內的合成不計費，但官方要求先啟用 Cloud Billing（綁卡），超量自動按量扣款；WaveNet 超量每百萬字元 US$4、Studio 每百萬字元 US$160、Chirp 3 HD 每百萬字元 US$30。",
-      "summary": "Google Cloud Text-to-Speech 定價頁每月免費用量：WaveNet 與 Standard 各 0–400 萬字元、Studio／Chirp 3: HD／Neural2／Polyglot(Preview) 各 0–100 萬字元；超量分別為每百萬字元 US$4／US$160／US$30。Gemini-TTS 全系列（含 Gemini 3.8 Flash TTS Preview 至 2026-12-31 的優惠價）在「Free usage limit」欄一律標 Not available，不計入免費額度。使用前提是啟用計費（官方原文「You must enable billing to use Text-to-Speech」），超量會自動扣款，因此不是免卡即可使用的方案。同一份定價頁有免費額度欄，但 Google Cloud Free Tier 官方清單頁（free-cloud-features）僅列 Speech-to-Text 60 分鐘／月、未列 TTS，兩處清單不一致，尚待釐清。",
+      "cost_note": "須啟用 Cloud Billing，台灣自助帳單列 TWD 與信用卡／簽帳卡。定價表的超量價每百萬字元為 Standard／WaveNet US$4、Neural2／Polyglot US$16、Chirp 3 HD US$30、Studio US$160。付費帳單超量自動計費。",
+      "summary": "Standard 定價表列每月免費 400 萬字元。WaveNet 在定價表列 400 萬、產品概覽列 100 萬，與 Standard 使用相同 SKU，實際額度與是否共用待確認。Studio、Chirp 3 HD、Neural2 及 Polyglot Preview 定價各列 100 萬字元級距，後兩者共用 SKU，不推定能累加。Gemini-TTS 的免費用量欄未提供額度。須啟用 Cloud Billing，付費帳單超量自動按量計費。",
       "cancellation": "無訂閱可取消；停用需刪除專案或關閉該 API 的計費，免費額度以帳單帳戶每月計算。",
-      "usable_duration": "每月重置（官方未寫結束日；Free Tier 條款保留提前 30 天變更或取消用量上限的權利）。",
-      "access_risk": "需綁卡並啟用計費；超量自動扣款不另行詢問；語音與字元計算方式（SSML 標記、空白與換行皆計入）容易低估用量。",
+      "usable_duration": "定價以每月用量計算。TTS 產品定價頁未列本項免費級距的結束日。",
+      "access_risk": "付費帳單超量自動扣款。WaveNet 跨頁額度數字有差異，Standard 與 WaveNet 及 Neural2 與 Polyglot 各對應相同 SKU，實際共用方式待確認。",
       "eligibility": {
         "service_availability": "Text-to-Speech 為 Google Cloud 全域 API，定價頁未列國別封鎖；另有 asia-east1（台灣）區域可用。",
         "account_eligibility": "需 Google Cloud 專案與已啟用計費的 Cloud Billing 帳戶；未設學籍、公司階段或新客限制。",
         "billing_country": "Google Cloud 帳單幣別清單列「Taiwan | TWD | credit/debit card」，台灣可用信用卡／簽帳卡付款；個別發卡行與 3-D Secure 通過率未實測。",
         "identity_residency": "頁面未列居住地、國籍或身分限制；仍受 Google Cloud 通用條款與出口／制裁規範，本輪未逐條核對。",
-        "terms_restrictions": "以送出的字元數計費，SSML 標籤（<mark> 除外）、空白與換行皆計入；超量自動計費；官方保留變更或取消免費額度的權利，惟須提前 30 天通知。",
-        "taiwan_note": "Taiwan 為官方列名帳單國家（TWD）且服務無地區封鎖，屬條件式適用；但免費額度是否適用 Free Trial（不可開立發票）帳單類型未經證實。"
+        "terms_restrictions": "字元計費納入空白、換行及 SSML 標記（<mark> 除外）。付費帳單超過計價表的適用額度會自動扣款。",
+        "taiwan_note": "Yes。自助帳單清單列台灣、TWD 與信用卡／簽帳卡。Free Trial 的 TTS 月額度套用方式仍待確認。"
       },
       "unknowns": [
-        "每月免費字元是否適用 Free Trial 帳單帳戶（該額度未列於 Free Tier 官方清單）",
-        "台灣新帳戶啟用計費是否需要地址或稅籍資料",
-        "zh-TW 各語音（Chirp 3 HD／Neural2／WaveNet）實際可用性與音質未測",
-        "Gemini-TTS 是否日後恢復免費額度"
+        "WaveNet 免費額度以官網哪個數字入帳，以及相同 SKU 的免費額度如何共用",
+        "Free Trial 帳單如何套用 TTS 每月免費字元級距",
+        "台灣個別帳戶的帳單資格與付款體驗"
       ],
       "sources": [
         {
           "url": "https://cloud.google.com/text-to-speech/pricing",
-          "scope": "每月免費字元額度、超量單價、須啟用計費、Gemini-TTS 無免費額度",
-          "evidence": "「WaveNet voices … 0 to 4 million characters … US$0.000004 per character (US$4 per 1 million characters)」；「Chirp 3: HD voices … 0 to 1 million characters … US$30 per 1 million characters」；「Gemini 3.8 Flash TTS (Preview)** through December 31, 2026 … Not available」；「You must enable billing to use Text-to-Speech, and will be automatically charged if your usage exceeds the number of free characters allowed per month.」",
-          "accessed_at": "2026-11-09T02:17:00+08:00"
+          "scope": "定價表的月額度、同 SKU 及超額費用",
+          "evidence": "表列 WaveNet 與 Standard 同 SKU 9D01-5995-B545、各列 400 萬級距。Neural2 與 Polyglot 同 SKU FEBD-04B6-769B 並列 100 萬級距。需要啟用計費，超過適用免費字元自動計費。Gemini-TTS 免費欄為 Not available。",
+          "accessed_at": "2026-11-24T02:08:42+08:00"
         },
         {
           "url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
-          "scope": "免費額度的法律地位（無結束日、30 天變更通知）與 Free Tier 清單未列 TTS",
-          "evidence": "「The Free Tier has no end date, but Google reserves the right to change the offering, including changing or eliminating usage limits, with 30 days' advance notice.」；同頁免費清單只有「Speech-to-Text 60 minutes per month」，全文檢索不到 Text-to-Speech 條目",
-          "accessed_at": "2026-11-09T02:17:00+08:00"
+          "scope": "Free Tier 概覽及 Free Trial 帳單",
+          "evidence": "總表指示未列產品應查個別定價。Free Trial 帳單一般不收費，付費帳單依適用限額計費。",
+          "accessed_at": "2026-11-24T02:08:42+08:00"
         },
         {
           "url": "https://docs.cloud.google.com/billing/docs/resources/currency",
-          "scope": "台灣帳單幣別與付款方式",
-          "evidence": "「Taiwan – Dollar (NT$) TWD」列於帳單幣別表，付款方式為信用卡／簽帳卡",
-          "accessed_at": "2026-11-09T02:17:00+08:00"
+          "scope": "台灣自助帳單幣別和付款",
+          "evidence": "官方幣別表列 Taiwan、TWD、credit/debit card。",
+          "accessed_at": "2026-11-24T02:08:42+08:00"
+        },
+        {
+          "url": "https://cloud.google.com/text-to-speech",
+          "scope": "服務概覽的 WaveNet 與 Standard 月額度及新客試用",
+          "evidence": "產品概覽列 WaveNet 每月 100 萬、Standard 400 萬，並稱合資格新客可用 Google Cloud 最高 US$300 試用點數試用 TTS。",
+          "accessed_at": "2026-11-24T02:08:42+08:00"
         }
       ],
-      "verified_at": "2026-11-09T02:17:00+08:00",
+      "verified_at": "2026-11-24T02:08:42+08:00",
       "discovered_at": "2026-11-09T02:11:00+08:00",
       "announcement_at": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T02:17:00+08:00",
-      "verification_scope": "2026-11-09 02:17 實讀 Google Cloud TTS 定價頁、Free Tier 說明與帳單幣別表：免費字元數、超量單價、須啟用計費、Gemini-TTS 無免費額度、台灣帳單國別。未建立專案、未綁卡、未合成語音。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:08:42+08:00",
+      "verification_scope": "2026-11-24 02:08 台北實讀。核對產品概覽、定價表、Free Tier 指引與台灣帳單。WaveNet 官頁數字及同 SKU 實際共用仍待釐清。",
       "priority": null,
       "priority_score": 25.4,
       "priority_tier": "S",
-      "priority_note": "官方來源·需符合條件·免費·台灣Yes·≤15分鐘",
+      "priority_note": "官方來源·官方條款有差異·免費·台灣Yes·≤15分鐘",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
@@ -82612,7 +82626,7 @@
     {
       "id": "taiwan-multi-store-ai-upgrade-tier3-2026",
       "title": "商業服務業多店升級AI補助：第3梯受理至11/30 17:00，每案上限NT$300萬",
-      "summary": "商業署公告 807 於 2026-11-19 重讀仍寫第3梯受理至 115年11月30日（一）下午5時，線上送件入口仍是 smebiz.org.tw/apply_aicase。訊息公告列表第 1 頁最新為 2026/11/18 全國卓越商圈獎得獎名單、2026/11/11 活絡商圈須知，2026/11/02 才是本案。這三則之間沒有提前截止或額滿公告。列表第 1 頁不是全部歷史，不能據此宣稱經費尚未用罄。",
+      "summary": "商業發展署第 3 梯公告至 2026-11-30 17:00，每案上限 NT$300 萬且不得超過總經費 50%。送件須附至少半數預定受輔導店家清冊，時間依申請平台後台認定。經費用罄可公告提前截止。已讀公開登入頁，實際送件狀態與剩餘經費待確認。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -82641,13 +82655,13 @@
       "valuation_scenario": null,
       "cancellation": "核定後依契約執行；經費依輔導量能與帶動家數由審查會議核定，抽查不合格或與提案內容重大不符者不予結案並追回已撥款；受輔導店家不得重複受本計畫個案補助或單店補助。",
       "usable_duration": "第3梯受理 2026-11-02 至 2026-11-30 17:00（經費用罄得提前截止）；計畫期程以 8 個月為原則，自核定公告日起執行。",
-      "access_risk": "不是全額補助：須自籌至少與補助同額，且實收資本額不得低於自籌款；一個提案業者最多 1 案；資服業與硬體業不得提案；導入方案不得使用中國大陸廠牌資通產品；未達帶動家數會按比例減價驗收。",
+      "access_risk": "補助款不得高於自籌款，自籌款不得高於實收資本額。申請時須備至少半數預定受輔導店家清冊。導入方案須符合申請須知的資通產品限制。未達帶動家數按規定減價驗收。",
       "eligibility": {
         "service_availability": "台灣境內商業服務業；公告日 2026-11-02，第3梯受理至 115/11/30 17:00，經費用罄得公告提前截止或不辦理後續梯次。",
         "account_eligibility": "須為依法公司／商業／有限合夥登記，或無上述登記而有稅籍登記之營利事業，且營業狀況非歇業／停業；資訊服務業（J582／J62／J63）與硬體設備業者可為合作廠商成員，不得擔任提案業者。",
         "billing_country": "補助款撥入提案業者帳戶；須線上申請並檢附納稅、財務報表與受國際經貿情勢影響之證明。申請本身免費，但須自籌且不低於補助款。",
         "identity_residency": "限台灣登記之營利事業；排除陸資來臺投資事業、外國營利事業在臺分公司與本國企業分公司。",
-        "terms_restrictions": "每案補助 ≤ 全案總經費 50%、≤ NT$300萬；補助款≦自籌款≦實收資本額；每家 1 案；受輔導店家不得重複受本計畫個案或單店補助；須帶動至少 20–50 家店家、提供 3 個月以上使用證明與教育訓練佐證；導入方案不得使用中國大陸廠牌資通產品或服務；結案時須提供去識別化數據。",
+        "terms_restrictions": "每案補助 ≤ 全案總經費 50%、≤ NT$300萬；補助款≦自籌款≦實收資本額；每家 1 案；受輔導店家不得重複受本計畫個案或單店補助；須帶動至少 20–50 家店家、提供 3 個月以上使用證明與教育訓練佐證；導入方案不得使用中國大陸廠牌資通產品或服務；結案時須提供去識別化數據。 申請階段須提交至少 50% 預定受輔導店家清冊並敘明類型。上傳截止時間以平台後台為準。",
         "taiwan_note": "Yes（限台灣登記且符合行業之營利事業；個人、非營利組織與外商在臺分公司不符，資服業只能當合作廠商）。"
       },
       "unknowns": [
@@ -82659,27 +82673,27 @@
       "sources": [
         {
           "url": "https://www.aoc.gov.tw/showPublic/807",
-          "scope": "第3梯受理期間",
-          "evidence": "2026-11-19 重讀：第3梯次自公告日起至115年11月30日（一）下午5時止。申請平台仍列 https://www.smebiz.org.tw/apply_aicase。",
-          "accessed_at": "2026-11-23T03:08:00+08:00"
+          "scope": "第三梯公告時限與線上送件入口",
+          "evidence": "公告 807 列受理至 115 年 11 月 30 日下午 5 時，線上送件走指定申請平台。",
+          "accessed_at": "2026-11-24T02:08:54+08:00"
         },
         {
           "url": "https://www.smebiz.org.tw/getfile.php?k=news&f=2&c=f422C5I63D&nid=259",
-          "scope": "申請須知 PDF（多店升級，115年11月第三梯）：金額、自籌、資格、績效與排除條款",
-          "evidence": "2026-11-14 14:08 重新下載（HTTP 200，application/pdf，67 頁）：全文仍含「導入之解決方案無使用中國大陸廠牌資通產品或服務。」等排除條款，與 11-10 讀值同一版本（第三梯 115 年 11 月）｜較早紀錄：「第三梯：自115年11月2日(一)起至115年11月30日(一)下午5時止。」「補助款不得超過全案總經費之50%；可申請補助額度依提案之受輔導店家規模評估，實際補助金額依審查結果核定之，每案補助經費上限新臺幣300萬元。」「補助款≦自籌款≦實收資本額」「非屬陸資來臺投資事業」「非為外國營利事業在臺設立之分公司」「導入之解決方案無使用中國大陸廠牌資通產品或服務」「需協助至少20至50家受輔導店家導入至少1項AI工具，且須提供AI工具使用3個月以上流量證明」「以8個月為原則，自核定公告日起開始執行」「如本計畫經費用罄，本署得公告提前截止受理」。",
-          "accessed_at": "2026-11-23T03:08:00+08:00"
+          "scope": "第三梯須知金額、自籌、預定店家清冊、平台收件時鐘",
+          "evidence": "執行單位 67 頁 PDF 第 5 至 9 頁列補助不逾總經費一半及新臺幣 300 萬，上傳前須提出 50% 預定受輔導店家清冊，逾時以網站後台認定。",
+          "accessed_at": "2026-11-24T02:09:31+08:00"
         },
         {
           "url": "https://www.smebiz.org.tw/apply_aicase",
-          "scope": "線上申請平台（公告指定的送件入口；未登入）",
-          "evidence": "2026-11-14 14:08 直取（HTTP 200）：頁面仍為「提升商業服務業營運效能強化韌性計畫 個案補助-多店升級」登入頁（公司統編／密碼／驗證碼／申請新帳號），未登入無法確認送件狀態｜較早紀錄：公告第三點指定提案資料上傳至 https://www.smebiz.org.tw/apply_aicase；本輪未登入、未送件，故未核平台當下可送件狀態。",
-          "accessed_at": "2026-11-23T03:08:00+08:00"
+          "scope": "公開申請入口",
+          "evidence": "指定入口顯示公司統編、密碼及驗證碼登入。登入後能否送件未測。",
+          "accessed_at": "2026-11-24T02:08:54+08:00"
         },
         {
           "url": "https://www.aoc.gov.tw/publicList/2",
-          "scope": "公告列表第1頁",
-          "evidence": "2026-11-19 讀列表第 1 頁：2026/11/18 卓越商圈獎、2026/11/11 活絡商圈、2026/11/02 本案。未見提前截止或額滿。",
-          "accessed_at": "2026-11-23T03:08:00+08:00"
+          "scope": "主管機關訊息公告首頁",
+          "evidence": "首頁最新列 11/23 與 11/20 的其他公告，仍列 11/02 第三梯公告。所查首頁未見本梯提前截止公文。",
+          "accessed_at": "2026-11-24T02:08:54+08:00"
         },
         {
           "url": "https://www.aoc.gov.tw/publicList/1",
@@ -82688,14 +82702,14 @@
           "accessed_at": "2026-11-23T03:08:00+08:00"
         }
       ],
-      "source_access_notes": "aoc.gov.tw/showPublicAttach/561 直接抓取回 403，改由官方執行單位同版 PDF（smebiz getfile）取得須知全文並以 pypdf 擷取文字。",
-      "review_cadence": "weekly",
-      "verified_at": "2026-11-23T03:08:00+08:00",
+      "source_access_notes": "執行單位 PDF 在網頁讀取工具未取得正文，直接下載並抽取第 5 至 9 頁可讀。申請入口只查及公開登入頁。",
+      "review_cadence": "daily",
+      "verified_at": "2026-11-24T02:09:31+08:00",
       "discovered_at": "2026-11-10T12:33:00+08:00",
       "announcement_at": "2026-11-02",
       "deadline_at": "2026-11-30T17:00:00+08:00",
-      "next_review_at": "2026-11-30T17:00:00+08:00",
-      "verification_scope": "於 2026-11-23 03:08 (Asia/Taipei) 實測商業發展署徵件官網（HTTP 200）。徵件截至 2026-11-30 17:00 止，持續受理中。",
+      "next_review_at": "2026-11-25T02:09:31+08:00",
+      "verification_scope": "2026-11-24 02:09 台北實讀。核對第三梯時限、補助上限、自籌、清冊及平台後台收件規則。公告首頁與公開登入頁無法確認剩餘經費及實際送件。",
       "priority_score": 18.8,
       "priority_tier": "S",
       "priority_note": "官方來源·申請審核制·零設定費·台灣Yes·時間未知·有資格門檻",
@@ -86974,59 +86988,58 @@
     },
     {
       "id": "fgu-three-good-ai-innovation-contest-2026",
-      "title": "佛光大學 2026「三好 AI 創新應用競賽」：高中職／大專／社會組免報名費，總獎金新臺幣 46 萬元（11/30 截止）",
-      "summary": "佛光大學辦理 2026「三好 AI 創新應用競賽」（結合「做好事、說好話、存好心」與「給人信心、給人歡喜、給人希望、給人方便」精神），並獲林燈文教公益基金會、林孝信文化基金會及中興保全文教基金會贊助增設特別獎，總獎金新臺幣 46 萬元。分為高中職組（國內公私立高中職學生，1–5 人、須至少 1 位指導教師，A 類 AI 數位內容創作類）、大專組（國內大專院校含碩博士在學學生，1–5 人，A 類內容創作類與 B 類應用實作類）及社會組（教師、行政人員、社會人士，可跨校跨機構 1–5 人，B 類 AI 數位應用實作類）。4 個組類各取冠軍 NT$50,000、亞軍 NT$20,000、季軍 NT$10,000、最佳三好創新獎 NT$5,000、最佳四給精神獎 NT$5,000（各 1 隊），另跨組獨立評選「林燈 AI 公益特別獎」（冠亞季軍各 1 隊：5 萬／2 萬／1 萬元）及「林燈 AI 公益潛力獎」（4 隊各 5,000 元）。免報名費，線上報名及完整作品（含作品說明書、3 分鐘匿名展示影片、切結書）上傳至 2026-11-30 截止，12/16 公告得獎、12/23 頒獎。",
+      "title": "佛光大學 2026「三好 AI 創新應用競賽」：高中職／大專／社會組，總獎金 NT$46 萬，11/30 截止",
+      "summary": "佛光大學競賽接受已完成的 AI 數位作品。高中職、大專及社會組每隊 1–5 人，高中職組須有指導教師。總獎金 NT$46 萬，含跨組的林燈 AI 公益獎項。報名與上傳至 2026-11-30，須提交作品說明、3 分鐘匿名展示影片及切結書。主辦流程表列 10/1 起，正式開放消息列 10/9 起。報名費及精確截止時刻待確認。",
       "record_type": "opportunity",
       "status": "active",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
-        "FREE",
         "VALUE-DEAL",
         "QUALIFICATION"
       ],
       "views": [
-        "free",
         "student"
       ],
       "regions": [
         "TW"
       ],
-      "setup_cost_usd": 0,
+      "setup_cost_usd": null,
       "recurring_cost_usd": 0,
       "effort_minutes_max": 180,
       "effort_basis": "分析者估計：需完成可實際觀看／聆聽／操作之 AI 數位作品、撰寫作品說明書、錄製 3 分鐘匿名介紹影片並完成線上報名上傳。",
       "taiwan": "Yes",
       "usage_type": "AI 創新應用競賽獎金（總獎金 NT$460,000，冠軍 NT$50,000）",
       "quota_classification": "HIGH BUT LIMITED",
-      "quota_details": "免報名費；總獎金新臺幣 46 萬元（4 個組別類別各取冠軍 5 萬、亞軍 2 萬、季軍 1 萬、最佳三好創新獎 5 千、最佳四給精神獎 5 千；另跨組評選林燈 AI 公益特別獎 5 萬／2 萬／1 萬各 1 隊及公益潛力獎 5 千共 4 隊）。同一團隊（含個別組員）及同一作品僅限報名 1 個組別類別。",
+      "quota_details": "總獎金新臺幣 46 萬元（4 個組別類別各取冠軍 5 萬、亞軍 2 萬、季軍 1 萬、最佳三好創新獎 5 千、最佳四給精神獎 5 千；另跨組評選林燈 AI 公益特別獎 5 萬／2 萬／1 萬各 1 隊及公益潛力獎 5 千共 4 隊）。同一團隊（含個別組員）及同一作品僅限報名 1 個組別類別。",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": "屬競賽獎金（單隊最高可獲組別冠軍 NT$50,000 及跨組特別獎），非保證取得之固定算力折抵，故不換算固定美元節省金額。",
       "deadline_at": "2026-11-30",
-      "verified_at": "2026-11-23T02:16:00+08:00",
+      "verified_at": "2026-11-24T02:09:19+08:00",
       "discovered_at": "2026-11-14T12:13:00+08:00",
-      "announcement_at": "2026-10-01",
+      "announcement_at": "2026-09-24",
       "previous_limit": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-30T09:00:00+08:00",
-      "verification_scope": "2026-11-23 02:10 實讀佛光大學競賽官網，確認報名與作品上傳受理至 2026-11-30 截止，總獎金 46 萬元，免報名費進行中。",
-      "usable_duration": "第一階段線上報名及完整作品上傳：2026-10-01 至 2026-11-30（官網僅列日期、未載明截止時刻）；第二階段評選 2026-12-01 至 12-15；得獎公告 2026-12-16；成果展示暨頒獎典禮 2026-12-23。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:09:19+08:00",
+      "verification_scope": "2026-11-24 02:09 台北實讀。核對兩組官網開放日、共同截止日、資格、作品要求與總獎金。公開頁及簡章未列報名費，登入後未查。",
+      "usable_duration": "報名與作品上傳截止 2026-11-30，主辦未列時刻。流程表與簡章列 10/1 起，正式開放消息列 10/9 起。12/16 公布得獎，12/23 成果展與頒獎。",
       "cancellation": "報名截止後不得更換或新增團隊成員及指導老師；違反原創性、一稿多投、冒用資料或未配合領獎程序者，主辦單位得取消資格並追回獎金與獎狀。",
-      "cost_note": "免報名費；參賽者自行選用 AI 工具創作（官方未提供免費 Token，工具費用自理）；得獎獎金依中華民國稅法扣繳稅款，且電匯手續費自獎金中扣除。",
+      "cost_note": "公開競賽頁與參賽須知未列報名費。自選 AI 工具的實際成本待確認，獎金依賽方規定扣繳。",
       "access_risk": "須於 2026-11-30 前提交已完成之數位作品與 3 分鐘匿名展示影片（影片中嚴禁出現人像、姓名、學校或單位名稱、Logo 及指導教師姓名，違者影響評選）；同一團隊或個別組員不得報名超過 1 件作品或跨報多組。",
       "eligibility": {
         "service_availability": "全國性競賽，官方網站與線上報名專區為 https://3goodai.fgu.edu.tw/ ，頒獎典禮於佛光大學雲五館一樓藍海區舉行。",
         "account_eligibility": "每隊 1–5 人：（1）高中職組：國內各公私立高中職學生，須指定至少 1 位指導教師；（2）大專組：國內各大專院校（含大學部、碩士班、博士班）在學學生；（3）社會組：教師、校務行政人員、社會人士，可跨校跨機構組隊。",
-        "billing_country": "免報名費；得獎團隊須推派隊長提供匯款帳戶領取新臺幣獎金（匯款手續費自款項扣除，並依中華民國稅法扣繳稅金）。",
+        "billing_country": "公開競賽頁與參賽須知未列報名費。獎金以新臺幣發放，依賽方規定扣繳相關稅費。",
         "identity_residency": "報名須上傳身分證正反面影本或外國國籍證明文件；高中職組與大專組另須上傳學生證正反面影本或在學證明。",
         "terms_restrictions": "作品須實際運用至少一項 AI 技術或工具並於說明書揭露用途；不得僅提交企畫書或未經創意加工之 AI 直接生成結果；已於國內外展覽或競賽得獎或公開發表之相同作品不得參賽；參賽團隊無償授權主辦單位將作品簡介及影片用於國內外非營利推廣。",
-        "taiwan_note": "是：台灣佛光大學主辦之全國性 AI 競賽，國內高中職生、大專院校碩博士生與社會人士皆可依組別免費報名。"
+        "taiwan_note": "Yes。國內高中職及大專在學學生可依組別報名，教師、行政人員及社會人士可依社會組規則報名。"
       },
       "unknowns": [
         "報名截止日 2026-11-30 當日之精確截止時刻（官網僅載 115.11.30，未標 17:00 或 23:59）",
+        "主辦的公開頁與參賽須知未列報名費",
         "報名專區登入後之單一檔案上傳大小上限與支援格式細節",
         "外國國籍參賽者在社會組之扣繳稅率與跨國匯款是否支援",
         "法律與監管限制未查核官方法規來源"
@@ -87034,20 +87047,38 @@
       "sources": [
         {
           "url": "https://3goodai.fgu.edu.tw/",
-          "scope": "2026-11-17 重讀截止日、獎金與組別",
-          "evidence": "2026-11-17 04:14 重讀：最新消息 2026/11/16 仍寫「報名及作品繳交截止：115/11/30」「總獎金46萬元」。競賽流程第一階段「線上報名及完整作品上傳 115.10.01 - 115.11.30」。高中職、大專、社會組資格與 1–5 人組隊未變。未送出報名。 較早紀錄：2026-11-14 12:13 實讀官網全文：「2026 三好AI創新應用競賽」「總獎金46萬元！報名及作品繳交截止：11月30日」；競賽流程表列第一階段線上報名及完整作品上傳「115.10.01 - 115.11.30」、得獎公告「115.12.16」、成果展示暨頒獎典禮「115年12月23日」；獎勵表列高中職組A類、大專組A/B類、社會組B類各取冠軍新臺幣 50,000 元、亞軍 20,000 元、季軍 10,000 元、最佳三好創新獎與最佳四給精神獎各 5,000 元，以及跨組「林燈 AI 公益特別獎」（冠 50,000、亞 20,000、季 10,000 元）與「林燈 AI 公益潛力獎」（4 隊各 5,000 元）；報名須上傳作品說明書、3 分鐘匿名作品介紹影片、參賽切結書、身分證或外國國籍證明文件。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "參賽組別、流程、獎項、匿名影片及文件要求",
+          "evidence": "主辦流程表列 10/1 至 11/30，分三組、每隊 1–5 人。獎項及匿名影片規則可讀。公開規則未列報名費。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
         },
         {
           "url": "https://ord.nfu.edu.tw/zh_tw/researchprojects/keyrdtalentproject/-%E7%A0%94%E7%99%BC%E8%99%95%E8%BD%89%E7%9F%A5-%E4%BD%9B%E5%85%89%E5%A4%A7%E5%AD%B8%E8%BE%A6%E7%90%862026-%E4%B8%89%E5%A5%BDAI%E5%89%B5%E6%96%B0%E6%87%89%E7%94%A8%E7%AB%B6%E8%B3%BD-%E7%8D%8E%E9%87%91%E7%B8%BD%E9%A1%8D%E9%81%94%E6%96%B0%E8%87%BA%E5%B9%A346%E8%90%AC%E5%85%83-%E5%A0%B1%E5%90%8D%E5%8F%8A%E4%BD%9C%E5%93%81%E7%B9%B3%E4%BA%A4%E8%87%B3115%E5%B9%B411%E6%9C%8830%E6%97%A5%E6%88%AA%E6%AD%A2-%E9%BC%93%E5%8B%B5%E5%B8%AB%E7%94%9F%E8%B8%B4%E8%BA%8D%E5%8F%83%E5%8A%A0-32564767",
           "scope": "佛光大學公文轉知：贊助基金會增設獎項、總獎金提升至 46 萬元與 115 年 11 月 30 日截止（2026-11-10 公告）",
           "evidence": "2026-11-14 12:13 實讀轉知公告：「本屆競賽另獲林燈文教公益基金會、林孝信文化基金會及中興保全文教基金會贊助新臺幣10萬元，增設『林燈AI公益特別獎』及『林燈AI公益潛力獎』，共計7個獲獎名額，獎金合計新臺幣100,000元。整體獎金總額提升至新臺幣46萬元」「本競賽報名及完整作品上傳截止日期為115年11月30日」。",
           "accessed_at": "2026-11-23T02:16:00+08:00"
+        },
+        {
+          "url": "https://3goodai.fgu.edu.tw/News/Index",
+          "scope": "主辦徵件消息與獎金",
+          "evidence": "9/24 預告和 10/9 正式開放消息列報名從 10/9 至 11/30。11/16 消息列總獎金 46 萬元及 11/30 截止。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
+        },
+        {
+          "url": "https://www.cmgsh.tp.edu.tw/uploads/1794274276455CreR5WwT.pdf",
+          "scope": "主辦參賽須知 PDF（學校轉載）",
+          "evidence": "參賽須知列資格、流程與上傳要求，未列報名費或精確截止時刻。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
+        },
+        {
+          "url": "https://3goodai.fgu.edu.tw/member/login",
+          "scope": "公開報名入口",
+          "evidence": "會員頁要求電子郵件、密碼與驗證碼。登入後狀態待確認。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
         }
       ],
-      "priority_score": 25.0,
+      "priority_score": 21.5,
       "priority_tier": "S",
-      "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知·有資格門檻"
+      "priority_note": "官方來源·方案仍列示·費用未知·台灣Yes·較費工/未知·有資格門檻"
     },
     {
       "id": "aspn-youth-sports-tech-hackathon-2026",
@@ -90544,8 +90575,8 @@
     },
     {
       "id": "cities-deliver-rockefeller-openai-2026",
-      "title": "Cities Deliver（洛克斐勒 × OpenAI 基金會）：城市公共服務 AI 方案，US$50萬–200萬、24個月，11/29截止",
-      "summary": "洛克斐勒基金會與 OpenAI 基金會共同承諾 US$50M 的 Cities Deliver 公開徵案，資助與城市政府合作、以 AI 改善公共服務的組織；Seed 為 US$500,000–<1M、Scale 為 US$1–2M，皆 24 個月、50% 起撥與 50% 期中里程碑後撥款，預計最多 50 個夥伴。申請者須為非營利（含大學實驗室／財稅贊助組織）或公益公司，特定營利公司可例外；必須有城市政府夥伴的意向書，個人、政府機關與國家級機構不得直接申請。全球徵案含亞洲，唯一硬排除為美國 OFAC 全面制裁國家／地區；台灣未被點名，且仍須符合當地法律與制裁審查，故台灣標 Unknown。Round 1 於 2026-11-29 23:59 ET（台北 11/30 12:59）截止。",
+      "title": "Cities Deliver（洛克斐勒 × OpenAI 基金會）：城市公共服務 AI 補助 US$50萬–200萬，台北 11/30 12:59 截止",
+      "summary": "Cities Deliver 資助與城市政府合作、以 AI 改善公共服務的組織。Seed 為 US$500,000 至未滿 US$1M，Scale 為 US$1–2M，皆為 24 個月，啟動與期中里程碑各撥 50%。第一輪須提交組織資料、政府夥伴意向書及短影片，截止為美東 2026-11-29 23:59（台北 11/30 12:59）。免申請費。正式條款與 11/4 FAQ 的間接成本計算基準不同，主辦頁明載以正式條款為準。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -90558,7 +90589,7 @@
         "value",
         "developer"
       ],
-      "setup_cost_usd": null,
+      "setup_cost_usd": 0,
       "recurring_cost_usd": null,
       "effort_minutes_max": null,
       "effort_basis": "未估：需備城市政府意向書、提案與短影片，工時依組織而異。",
@@ -90574,37 +90605,36 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "官方未列報名費或訂閱；獲選後依 grant agreement 與 24 個月期程。",
+      "cancellation": "正式規則免申請費，無需捐款或購買。獲選後依補助協議及 24 個月期程執行。",
       "usable_duration": "24 個月；2026-11-29 Round 1 截止、2027-03-01 Round 2 截止、2027-04 公布。",
       "access_risk": "個人、政府機關、國家級機構與多邊組織不得直接申請；必須有城市政府夥伴 LOI；提案與溝通以英文為主；OFAC／制裁與當地法律審查；台灣無明文。不得為申請而付款給政府官員。",
-      "verified_at": "2026-11-23T02:16:00+08:00",
+      "verified_at": "2026-11-24T02:09:19+08:00",
       "discovered_at": "2026-11-16T03:12:00+08:00",
       "announcement_at": "2026-10-14",
       "deadline_at": "2026-11-29T23:59:00-05:00",
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-29T20:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:09:19+08:00",
       "eligibility": {
         "service_availability": "全球公開徵案，2026-10-14 開放；非洲、中東北非、亞洲、拉美加勒比、歐洲、北美與大洋洲的城市均可參與。",
-        "account_eligibility": "Lead 須為非營利（含大學實驗室、財稅贊助組織）或公益公司；營利公司僅在慈善目的且利益附隨時例外；政府不得直接申請；每個專案須有城市政府夥伴意向書。",
-        "billing_country": "官方未列報名費；matching funds 不要求；補助金以美元計，稅費由申請者自負；未列信用卡要求。",
+        "account_eligibility": "限合資格組織。大學的實驗室、中心或其他單位須透過大學申請。政府不能直接申請，每案須有城市政府夥伴承諾，第一輪須附意向書。營利組織須符合第 2.D 節的附加條件。",
+        "billing_country": "正式規則明列申請或獲選不需繳費、捐款或購買。補助以美元計，可能適用的稅費依正式條款處理。",
         "identity_residency": "全球開放，但不得位於或於美國 OFAC 全面制裁國家／地區營運；申請者須依其營運地法律具受領資格。台灣未被點名，也未排除。",
-        "terms_restrictions": "專案須有慈善目的與 frontier AI 成分；不得用於選舉、遊說或 EU AI Act 第 5 條禁止行為；補助不得購買實體設備或直接付給城市政府；獲選輸出須以開放授權釋出；間接成本上限 15%（以直接成本計，非總額），營利組織不得列間接成本。",
+        "terms_restrictions": "專案須有慈善目的與 frontier AI 成分，受補助產出須開放授權。不得把補助直接撥給城市政府或購買實體設備。正式條款 §1.F 對合資格非營利組織列補助總額 15% 為間接成本上限。11/4 FAQ 改用扣除顧問費及次級補助後的直接成本 15%，並列營利組織不得回收間接成本。主辦頁指示兩者衝突時以正式條款為準。",
         "taiwan_note": "Unknown：全球徵案與亞洲區域文字未點名台灣；OFAC 全面制裁排除清單未含台灣，但無台灣專屬資格聲明，仍須符合當地法律、制裁與受領審查。"
       },
       "unknowns": [
         "台灣組織與台灣城市政府夥伴的個案受領資格",
-        "官方間接成本上限兩版 FAQ 文字衝突（總額 15% vs 直接成本 15%）",
-        "Terms and Conditions PDF 未逐條讀",
-        "城市定義（人口 5 萬、自有市政政府）對台灣都會區的適用"
+        "兩版公開資料對間接成本 15% 計算基準不同，第二輪實際預算填法待主辦確認",
+        "城市定義對台灣都會區的個案適用"
       ],
-      "verification_scope": "2026-11-23 02:16 實讀官方專案徵案主頁，確認洛克斐勒與 OpenAI 基金會聯合資助 50 萬至 200 萬美元方案第一輪提案受理至 2026-11-29 截止。",
+      "verification_scope": "2026-11-24 02:09 台北實讀。核對正式規則免申請費、第一輪美東時限及正式條款與 11/4 FAQ 的 15% 分母差異。台灣個案未核。",
       "sources": [
         {
           "url": "https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services",
           "label": "官方來源",
-          "scope": "金額、軌道、24 個月、截止日、申請資格與地區",
-          "evidence": "逐字「committing $50 million to Cities Deliver」「grants of $500,000 to $2 million」「All grants run 24 months, with 50% disbursed at the start and 50% upon a documented mid-term milestone」「November 29, 2026 … 11:59 pm U.S. Eastern Time」「Governments may not apply directly」「must have a city partner」。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "第一輪截止、補助區間、條款優先順序",
+          "evidence": "第一輪限 2026-11-29 美國東部 23:59。補助 US$500,000 至 US$2M，為期 24 個月。主辦明載 FAQ 與條款衝突時由條款優先。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
         },
         {
           "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-FAQs-Final.pdf",
@@ -90616,15 +90646,21 @@
         {
           "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/11/Cities-Deliver-AI-Solutions-for-Public-Services-Additional-Updated-FAQs-Final.pdf",
           "label": "官方來源",
-          "scope": "2026-11-04 更新：間接成本、法人型態、語言與合作夥伴",
-          "evidence": "逐字「Eligible organizations may request indirect costs of up to 15% of direct project costs … It is not a percentage of the total grant」「Organizations with 501(c)(3) status or an equivalency determination are preferred」「All other materials must be submitted in English」。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "11/4 更新 FAQ 的間接成本基準",
+          "evidence": "更新 FAQ 以扣除顧問費與次級補助後的直接成本作 15% 的基礎，並列營利組織不得回收間接成本。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
+        },
+        {
+          "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-Terms-and-Conditions-Final.pdf",
+          "scope": "正式規則申請費、合格組織與 §1.F 間接成本",
+          "evidence": "正式規則首頁列申請或獲選無須付費、捐款或購買。§1.F 對合格非營利組織以 total grant amount 為間接成本 15% 上限。§2.A 列大學單位須透過大學，以及第一輪政府夥伴意向書。",
+          "accessed_at": "2026-11-24T02:09:19+08:00"
         }
       ],
-      "priority_score": 13.8,
-      "priority_tier": "D",
-      "priority_note": "官方來源·申請審核制·費用未知·台灣未標記·時間未知·有資格門檻",
-      "cost_note": "官方頁未列報名費，matching funds 不要求，亦未列信用卡要求；補助金以美元計，稅費與簽證／受領成本由申請者自負。"
+      "priority_score": 14.3,
+      "priority_tier": "C",
+      "priority_note": "官方來源·申請審核制·零設定費·台灣未標記·時間未知·有資格門檻",
+      "cost_note": "正式規則列明申請與獲選均免費用、捐款或購買。組織提案成本與適用稅費另計。"
     },
     {
       "id": "moda-ngoempower-ai-data-training-2026",
@@ -97142,51 +97178,180 @@
       "priority_score": 17.1,
       "priority_tier": "S",
       "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "nthu-its-ai-certification-training-2027",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "announcement_at": null,
+      "discovered_at": "2026-11-24T02:07:49+08:00",
+      "verified_at": "2026-11-24T02:08:18+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:08:18+08:00",
+      "verification_scope": "2026-11-24 02:08 台北實讀。核對主辦課程公告與活動表的報名時程、校籍、25 名錄取、保證金、首次認證考試與自費補考。錄取和餘額待核。",
+      "sources": [
+        {
+          "url": "https://ccd.nthu.edu.tw/event/1317",
+          "scope": "主辦公開報名與課程資格、費用、名額和退費規則",
+          "evidence": "課程面向清大正式學籍在校生，排除交換生及在職專班，25 名含志工團保留 8 名。報名至 2026/11/30 23:59。首考免收新臺幣 3,200 元，須先繳 3,000 元保證金，補考自付 3,200 元。",
+          "accessed_at": "2026-11-24T02:07:49+08:00"
+        },
+        {
+          "url": "https://ccd.nthu.edu.tw/events",
+          "scope": "主辦活動清單",
+          "evidence": "清大職涯活動列同一 ITS AI 培訓班，報名期間 11/16 至 11/30，1/4 校內開課。",
+          "accessed_at": "2026-11-24T02:08:18+08:00"
+        }
+      ],
+      "priority_score": 17.6,
+      "priority_tier": "S",
+      "title": "清大 ITS AI 國際認證培訓班：課程與首考免收費，錄取須繳 NT$3,000 保證金",
+      "summary": "清大職涯發展組 2027/1/4–6 在校本部開設 18 小時中文實體課程，限正式學籍且課程期間仍在校者，排除交換生、在職專班及曾參加者。25 名含 Career 志工團保留 8 名。報名至 11/30 23:59。課程及 1/6 首考免收費，錄取須先繳 NT$3,000 保證金，退還有條件，1/8 補考自付 NT$3,200。",
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "student",
+        "education"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "deadline_at": "2026-11-30T23:59:00+08:00",
+      "cost_note": "課程及 1/6 首考免收費。錄取者須以 ATM 繳 NT$3,000 保證金，期末通過認證並完成出席與作業等要求才退還。1/8 補考自付 NT$3,200。",
+      "usable_duration": "報名 2026/11/16 至 11/30 23:59。課程 2027/1/4–6 每日 09:00–16:00，共 18 小時。1/6 首考、1/8 補考。",
+      "access_risk": "缺席、遲到、早退或未在 1/8 前取得認證，均可能失去保證金及結業資格。規定另要求作業、心得及問卷。",
+      "cancellation": "首堂課前第 5 天以前提出取消可退還。首堂課前 4 天至當天取消可退還，未來一年不得再報名該組數位能力課程。",
+      "eligibility": {
+        "service_availability": "清華大學校本部中文實體課，主辦公告列線上申請。",
+        "account_eligibility": "限清大正式學籍在校生，課程期間須維持學籍，排除交換生、在職專班和曾參加者。25 名含志工團保留 8 名。",
+        "billing_country": "依錄取通知繳新臺幣保證金，符合退還條件後由校方匯款。",
+        "identity_residency": "依清大在學資格及現場出席條件。",
+        "terms_restrictions": "資格確認後依名額分配／抽籤。結業及保證金退還包含全勤、通過認證、作業與心得問卷。",
+        "taiwan_note": "Yes。符合清華大學所列正式學籍與課程條件，才可申請此梯次。"
+      },
+      "unknowns": [
+        "即時報名數、剩餘名額及個別錄取",
+        "實際教室與錄取者的繳款期限待主辦通知"
+      ],
+      "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻",
+      "usage_type": "實體 AI 培訓與首場認證考試"
+    },
+    {
+      "id": "ai-collective-taiwan-gemini-build-night-2026",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "announcement_at": null,
+      "discovered_at": "2026-11-24T02:07:49+08:00",
+      "verified_at": "2026-11-24T02:07:49+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T02:07:49+08:00",
+      "verification_scope": "2026-11-24 02:07 台北實讀。核對主辦活動頁的免費入場、活動時地、名額規模、報名審核及實作內容。申請截止與剩餘席位未公布。",
+      "sources": [
+        {
+          "url": "https://luma.com/aic-ta-12-17",
+          "scope": "主辦方活動與報名規則",
+          "evidence": "主辦列 2026/12/17 18:30–22:00、台北 PicCollage 辦公室、Cost: Free，約 40–50 人。報名需主辦審核，歡迎各程度參加，須帶筆電。",
+          "accessed_at": "2026-11-24T02:07:49+08:00"
+        }
+      ],
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "title": "台北 Gemini Build Night：12/17 免費實作活動，報名需審核",
+      "summary": "The AI Collective Taiwan 於 2026/12/17 18:30–22:00 在台北 PicCollage 辦公室辦 Gemini 實作之夜，內容有 Google AI Studio／Gemini API 示範、原型實作與導師協助。開放各程度，須帶筆電。入場免費，主辦審核報名，活動規模約 40–50 人。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "developer",
+        "education"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "deadline_at": null,
+      "usable_duration": "2026/12/17 18:30–22:00 台北時間。公開頁未列報名截止日。",
+      "access_risk": "席位有限，送出報名後須由主辦核准。確切場地地址由報名頁依流程提供。",
+      "eligibility": {
+        "service_availability": "台北現場活動，主辦透過 Luma 開放提出報名請求。",
+        "account_eligibility": "歡迎各程度，無需 Gemini 經驗或既有團隊。報名由主辦審核。",
+        "billing_country": "主辦列活動免費。實作時的 API 費用或額度未列。",
+        "identity_residency": "須能到台北現場，公開活動頁未列其他身分限制。",
+        "terms_restrictions": "須帶已充電筆電，名額有限。",
+        "taiwan_note": "Yes。可到台北現場者可依公開流程報名，主辦核准後方能參加。"
+      },
+      "unknowns": [
+        "報名截止、剩餘席位及個別審核結果",
+        "實作帳戶或點數安排"
+      ],
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻",
+      "usage_type": "免費實體 AI 開發實作活動"
     }
   ],
-  "latest_research_at": "2026-11-24T01:15:42+08:00",
+  "latest_research_at": "2026-11-24T02:13:38+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T01:06:51+08:00",
-    "completed_at": "2026-11-24T01:15:42+08:00",
+    "started_at": "2026-11-24T02:06:04+08:00",
+    "completed_at": "2026-11-24T02:13:38+08:00",
     "reviewed_ids": [
-      "ntu-hua-nan-fintech-ai-hackathon-2026",
-      "vercel-ai-gateway-parallel-decisions-free-window",
-      "iteracompute-free-qwen-3-8-27b-monthly-30m",
-      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
-      "nextwave-ai-legaltech-hackathon-2026",
-      "heygen-voice-turbo-free-api-until-2026-11-30",
-      "aicu-evaluation-ap",
-      "turboscribe-free-daily-three-thirty-minute-files",
-      "alibaba-model-studio-token-plan-personal-new-user-discount",
-      "tw-moe-aicup-2026-vlm-solar-inspection",
-      "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
-      "cht-gemini-shorts-contest-2026"
+      "wispr-flow-student-three-month-pro-annual-half",
+      "tripo-studio-free-200-monthly",
+      "tripo-api-free-credits-index-mismatch",
+      "taipei-industry-incentive-ai-rd-batch2-2026",
+      "google-cloud-tts-monthly-free-characters",
+      "taiwan-multi-store-ai-upgrade-tier3-2026",
+      "fgu-three-good-ai-innovation-contest-2026",
+      "cities-deliver-rockefeller-openai-2026"
     ],
     "new_ids": [
-      "tw-itsa-generative-ai-web-design-contest-2027",
-      "nvidia-dli-university-ambassador-free-campus-workshops"
+      "nthu-its-ai-certification-training-2027",
+      "ai-collective-taiwan-gemini-build-night-2026"
     ],
-    "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1179
+    "attempted_failed_ids": [
+      "swarms-startup-program-up-to-tenk"
+    ],
+    "unreviewed_existing_count": 1185
   },
-  "generated_at": "2026-11-24T01:15:42+08:00",
+  "generated_at": "2026-11-24T02:13:38+08:00",
   "reviewed_ids": [
-    "ntu-hua-nan-fintech-ai-hackathon-2026",
-    "vercel-ai-gateway-parallel-decisions-free-window",
-    "iteracompute-free-qwen-3-8-27b-monthly-30m",
-    "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
-    "nextwave-ai-legaltech-hackathon-2026",
-    "heygen-voice-turbo-free-api-until-2026-11-30",
-    "aicu-evaluation-ap",
-    "turboscribe-free-daily-three-thirty-minute-files",
-    "alibaba-model-studio-token-plan-personal-new-user-discount",
-    "tw-moe-aicup-2026-vlm-solar-inspection",
-    "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
-    "cht-gemini-shorts-contest-2026"
+    "wispr-flow-student-three-month-pro-annual-half",
+    "tripo-studio-free-200-monthly",
+    "tripo-api-free-credits-index-mismatch",
+    "taipei-industry-incentive-ai-rd-batch2-2026",
+    "google-cloud-tts-monthly-free-characters",
+    "taiwan-multi-store-ai-upgrade-tier3-2026",
+    "fgu-three-good-ai-innovation-contest-2026",
+    "cities-deliver-rockefeller-openai-2026"
   ],
-  "attempted_failed_ids": [],
+  "attempted_failed_ids": [
+    "swarms-startup-program-up-to-tenk"
+  ],
   "new_ids": [
-    "tw-itsa-generative-ai-web-design-contest-2027",
-    "nvidia-dli-university-ambassador-free-campus-workshops"
+    "nthu-its-ai-certification-training-2027",
+    "ai-collective-taiwan-gemini-build-night-2026"
   ]
 }
