@@ -7093,3 +7093,35 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 5. `tripo-studio-free-200-monthly` 與 `google-cloud-tts-monthly-free-characters`｜依每日時點追查指南是否同步正式條款、WaveNet 是否補正用量說明。 [Studio 指南](https://www.tripo3d.ai/product-doc/getting-started/pricing-credits) [TTS 定價](https://cloud.google.com/text-to-speech/pricing)
 
 前輪的臺大華南黑客松依新訊號追查。Kaggle Notebook 與 Akamai RISE 保留資料中的 11/24 17:00／19:00 回查安排。
+
+
+## 2026-11-24 03:06–03:13 Asia/Taipei｜N=1,195 · R=5 · A=1 · U=1,190 · attempted=0
+
+起點 `0c636df`，`main` 與遠端同步、工作樹乾淨，無開放 PR 或進行中部署。先取得本 repo 的維護鎖。佇列有 0 筆嚴格逾期、15 筆七日內截止（13 筆冷卻中）及 4 筆上次追查未解，三組去重後為 19 筆。CyLeague 仍有可行動期限。較舊的 fal、Jenni、Camber、Warp 有加額、來源衝突、申請入口或價格缺口，依疑點複核。上一輪清單依原定時點追查。三組只讀子代理使用執行環境預設模型，主代理實讀採用的來源。
+
+### 既有紀錄複核
+
+- `cyleague-cyber-navi-trial`｜11/30 截止只公布日期，台灣法人個案待核。產品頁稱最多 40 件，正式公告明列 40 件會依實際諮詢而浮動。30 天免費試用可按條件跨月，期滿須另辦正式合約。先前 403 的表單本輪依冷卻與替代路徑策略略過。 [產品頁](https://www.cyleague.jp/service/cyber-navi/) [正式公告](https://www.cyleague.jp/topics/20260930_1/)
+- `fal-startup-europe-asia-spend-tiers`｜核准後起始 US$1,000。達到月消費門檻可聯繫加額，無須重送新創申請。另補消費封鎖需啟用且只阻止新請求。綁卡、自動加值、個別贈額效期與台灣公司個案仍未知。 [新創計畫](https://fal.ai/startup-program) [消費控管](https://fal.ai/docs/documentation/organizations/spending-controls) [一般條款](https://fal.ai/legal/terms-of-service)
+- `jenni-free-daily-ten-autocomplete-lifetime-workflows`｜補全改為美國太平洋時間午夜重置，一般新戶從 Free 開始。定價列 Chat、Edit、Ask Jenni 共用 5 次，計費文件分列一次性 3 次編輯及 5 次對話。定價頁只列 3 次 Reviews，文件列一次性。實際扣抵待核。 [定價](https://jenni.ai/pricing) [計費文件](https://docs.jenni.ai/docs/account/plans-and-billing/)
+- `camber-student-compute-agent-monthly`｜找到 Camber 自有學生入口，修正卡片仍寫入口未確認的敘述。GitHub Pack 維持在學免費與每月 40 運算小時、50 GB、50 則代理訊息。台灣個案、啟用、GPU 與超額未核。 [Camber 學生入口](https://www.cambercloud.com/github-student-pack) [GitHub Pack](https://education.github.com/pack) [學生資格](https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student)
+- `warp-factories-pricing-source-conflict`｜Start 零月租、執行按量收費。Scale 每隊每月 US$250，含 US$150 共用用量且不結轉。8/18 封測公告曾列 US$10,000，現行試點按團隊條件決定，金額及舊戶遷移待核。原帶查詢參數的定價頁由直連取得同一新價格。 [現行定價](https://www.warp.dev/pricing) [計費文件](https://docs.warp.dev/support-and-community/plans-and-billing/credits) [封測公告](https://www.warp.dev/blog/open-infrastructure-for-building-a-software-factory)
+
+### 新增與去重
+
+- `nccu-high-school-ai-entrepreneurship-camp-2026`｜政大全國高中職免費 AI 工作坊及探索營，11/30 台北 17:00 截止。三場可分報，每場 80 人。未滿 18 歲須由法定代理人簽署。三場全程出席才有 10 小時證明。以名稱、URL 及主辦範圍去重。公告中的表單要求登入，席次未知。簡章印的短網址與更新的主辦公告有差異，以公告入口為準。 [主辦公告](https://cicii.nccu.edu.tw/news-66.html) [活動辦法](https://drive.google.com/uc?export=download&id=1wPIBiXdvYhrJTR-ES_bSUBIU7rUFbymL)
+- 台積電 CareerHack 2027｜主頁寫代表線上填資料，連出的公開說明要求下載表格並寄回。校方轉知導向同一份說明，指定 DOCX 回 HTTP 403，費用和 12/27 確切時間不明。本輪留在交接。這是新候選，未列入既有紀錄整筆追查失敗。 [主辦頁](https://www.tsmc.com/static/english/careers/Careerhack/index.html) [主辦連出的說明](https://zh.surveymonkey.com/r/CareerHack2027) [陽明交大轉知](https://dee.nycu.edu.tw/news.php?locale=tw&news_id=893&pa=getItem)
+
+保留原有 ID、首次收錄時間與 2,884 筆政策歷史，追加 6 筆。以基準和本輪實質差異計算批次及 README，以現有評分規則重算本輪卡片。
+
+### 發布檢查
+
+- `make check`、`make check-ui` 與 Chrome 390px／1280px 本機核對通過。核對本輪更新卡片、政大截止與來源、台灣條件篩選、Jenni 衝突標示及 Warp 定價。公開驗證以本提交對應的 Pages 部署為起點，再比對線上兩份 JSON 雜湊和同一組介面項目。
+
+### 下一輪優先
+
+1. `aocai-working-free-ai-courses-2026`｜11/24 09:00 後核對 12/2 台北 MLOps 班是否額滿及 11/27 12:30 期限。 [課程報名](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585)
+2. `swarms-startup-program-up-to-tenk`｜11/24 13:00 起查官方替代公告或申請入口。 [計畫頁](https://www.swarms.ai/programs/startups)
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`｜11/24 16:00 後核對一般免費窗口終止與保留資格。 [免費頁](https://iteracompute.com/free/) [模型頁](https://iteracompute.com/models/auto/)
+4. `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後核對是否延長或已公布期後單價。 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+5. 11/25 起依 `next_review_at` 每日看政大是否公告額滿或換入口、CyLeague 是否換活動頁、Jenni 是否統一用量說明。CareerHack 有主辦正式補件連結或報名後續公告時再追。 [政大](https://cicii.nccu.edu.tw/news-66.html) [CyLeague](https://www.cyleague.jp/service/cyber-navi/) [Jenni 定價](https://jenni.ai/pricing) [台積電](https://www.tsmc.com/static/english/careers/Careerhack/index.html)
