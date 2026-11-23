@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,198 筆**（978 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-24 04:12 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **3 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,193 筆**既有紀錄未完成本輪複核。補列 Chroma Cloud 停運、Recall.ai 預付加值與 MagicSchool 免費方案使用範圍，新增臺大與數發部兩項免費培訓。
+資料集目前有 **1,200 筆**（980 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-24 06:13 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **5 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,193 筆**既有紀錄未完成本輪複核。更新 Google 配額與計費、南大競賽時程、Runloop 退場及兩筆供應商條款，新增東華與資策會免費培訓。
 
 ## 使用方式
 
@@ -64,7 +64,7 @@ PR 與主線推送另由 Frontend QA 執行 `make check` 與 `make check-ui`；C
 逐輪研究範圍、來源衝突、證據缺口與下次追查項目記在 [維護紀錄](MAINTENANCE.md)。
 
 1. 寫入資料前，在同一個 shell 執行 `python3 tools/round_lock.py acquire --pid "$$" --note "本輪範圍"`，成功後開始編輯。用 `status` 查看持有者，完成後執行 `python3 tools/round_lock.py release --pid "$$"`。
-2. 執行 `python3 tools/queue.py --limit 20` 取得候選清單。順序為逾期、七日內截止、追查失敗待重試、輪替補位。`--explain ID` 顯示個案排入原因，`--json` 輸出結構化結果。
+2. 執行 `python3 tools/queue.py --limit 20` 取得候選清單。順序為複核到期、七日內截止、追查失敗待重試、輪替補位。上次整筆追查失敗且有指定回查時間時，佇列會等到該時點；24 小時內即將截止的案例可提前。`--explain ID` 顯示個案排入原因，`--json` 輸出結構化結果。
 3. 複核時保留穩定 ID、來源與政策歷史。以實際查閱時間更新證據，並在 `verification_scope` 寫出查到的主張。需要檢查引用網址時，執行 `python3 tools/linkcheck.py --record ID`。
 4. 資料改動後重算優先度、更新 README 首段與批次摘要，再執行 `make check`。驗證輸出會另列引用網址相同的紀錄，以及核實日期比所有來源晚超過七天的紀錄，供人工複核。
 5. 新紀錄必須填入首次發現／收錄時間 `discovered_at`（日期或含時區的 ISO 時間戳）；後續複核保留原值，不可用 `verified_at` 或官方公告日覆寫。本次為 33 筆缺值舊紀錄依 Git 歷史首次出現時間補登，`discovered_at_source` 保存 `git:<commit SHA>` 供追溯；此時間代表最早可證明的 repo 收錄時間。

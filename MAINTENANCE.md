@@ -7157,3 +7157,33 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`｜11/24 16:00 後核對免費窗口切換及既有帳戶保留條件。 [免費頁](https://iteracompute.com/free/) [模型頁](https://iteracompute.com/models/auto/)
 4. `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後查是否公布期後單價或正式延長。 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
 5. Microsoft 11/25 04:30 起優先找獨立官方公告或可讀條款，前述 403 來源暫不重試。臺大及數發部依各自 `next_review_at` 檢查名額及表單，Chroma 有遷移或停運新訊號時複核。清大 Vibe Coding 可留到 12/7 首日核對入口與保證金。 [清大公告](https://ccd.nthu.edu.tw/event/1318)
+
+
+## 2026-11-24 06:06–2026-11-24 06:13 Asia/Taipei｜N=1,198 · R=5 · A=2 · U=1,193 · attempted=0
+
+起點 `bc81f08`。`main` 與遠端同步、工作樹乾淨、無開放 PR、進行中部署或其他維護鎖。本輪持有維護鎖。基準為 0 筆複核到期、19 筆七天內截止、4 筆最近整筆追查失敗，三組去重共 23 筆。IteraCompute、MLOps、Swarms、Kaggle、Akamai、Vercel 及 Microsoft 依上一輪指定時點回查。Google 競賽有近期交件與較早配額截止；南大作期限輪替補位；較舊的 Cursor、Runloop、XCrawl、Braintrust 依入口、帳務與資格缺口檢查。三組唯讀子代理使用執行環境預設模型，可用模型未提供 Gemini 3.8 Flash。主代理讀取採用的官方證據。
+
+### 局部複核及新機會
+
+- `google-buildhybridai-2026-firebase-ai-logic`｜進階模型配額最後申請為台北 11/26 02:00，須完成參賽註冊並經 Didit 驗證，核准帳戶使用四天。主交件為 12/1 06:00，台灣參賽者須滿 20 歲。規章第 9 節列六個獎項。Spark 有免卡免費層，連結 Blaze 後 Gemini Developer API 全部用量按量。配額餘額、個案核准與台灣獎金稅務待核。 [官方規章](https://firebasehybridaihackathon.devpost.com/rules) [配額表單](https://forms.gle/uPcDhaYW3iVo2AYw5) [Firebase 計費](https://firebase.google.com/docs/ai-logic/pricing)
+- `nutn-national-ai-project-competition-2026`｜一般報名更正至 12/1 23:59:59。一般初賽 12/11，Quantum AI 組初賽 12/5。參賽證明限通過初審進複審。一般表單 HTTP 401 須登入，可從主辦活動頁核對其他主張。報名費與 Quantum AI 組專屬收件期限待核。 [南大競賽官網](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308) [Quantum AI 組表單](https://forms.gle/mDfAggo9WCY9tADN8)
+- `runloop-once-fifty-agent-sandbox-pro-trial`｜官方公告服務逐步結束，11/14 台北 15:59 是既有客戶過渡支援截止。標為已公告終止並移出可行動專區。定價仍列 US$50 免卡試用，公開註冊入口兩種讀取路徑均回 503。正式停機時點、現有餘額與實際試用處置待核，後續依新訊號複核。 [退場文件](https://docs.runloop.ai/docs/transitions/overview) [定價](https://runloop.ai/pricing)
+- `xcrawl-new-account-thousand-credits`｜更正定價與條款入口。定價正文仍列免卡 1,000 點，但方案價格未隨正文輸出。現行條款列年齡要求及可能的身分／手機查核。原 .ai 條款網址在主代理的網頁及直讀路徑受阻，採可讀的 XCrawl .com 正文。文件扣點示例僅限各自請求。效期、台灣資格、付費金額與額度用盡處理待核。 [定價入口](https://www.xcrawl.ai/buy/) [官方條款](https://xcrawl.com/terms-of-service/) [快速入門](https://docs.xcrawl.com/doc/introduction/)
+- `braintrust-startup-pro-six-twelve`｜12/7 起 Loop 與 Patterns 扣共用點數。一般 Pro 100 點／月，超額 US$1／點，自帶金鑰仍扣平台點數且外部模型費另計。新創超額、付款、續訂和台灣資格待核。 [新創方案](https://www.braintrust.dev/startups) [計費文件](https://docs.braintrust.dev/admin/billing/braintrust-credits) [方案](https://docs.braintrust.dev/plans-and-limits)
+- `iii-edge-ai-adoption-workshop-2026`｜資策會台北免費工作坊，11/24 18:00 截止、120 名、審核制。詳情與場次地址列松山區，頁首標大安區。詳情與主辦議程列 09:30 報到、17:30 結束，系統場次及報名表列 09:00–17:00，保留差異。 [主辦頁](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [報名表](https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0)
+- `ndhu-ai-productivity-workshop-2026`｜東華大學校內免費實作，11/25 截止，主辦只公布日期。約 50 席、起飛生優先。兩份報名表可讀，餘額及實際錄取待核。 [主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php)
+
+以穩定 ID、標題別名、主辦、網址比對既有資料與政策歷史。留存原有 ID、首次收錄時間、來源歷史及 2,896 筆政策歷史，追加 7 筆。Cursor 舊學生優惠沿用既有範圍與複核時間。Campus Leads 有意願登記，台灣資格及 1 月確切重開日待核。長榮大學工作坊待核考照是否另收費及實際受理，淡江大學工作坊待核費用及教職員資格。 [Cursor Campus Leads](https://cursor.com/campus-leads) [長榮大學](https://eweb.cjcu.edu.tw/act/act.aspx?id=20322) [淡江大學](https://enroll.tku.edu.tw/course.aspx?cid=tk11501aiws18)
+
+### 工具與發布檢查
+
+- 佇列原先在冷卻結束後提前排入 Kaggle。現行佇列與 `--explain` 等到指定回查時點，距適用截止日 24 小時內可提前。測試涵蓋指定時刻前與當下、未指定日期的冷卻及緊急截止。
+- `make check`、`make check-ui` 及本機 390px／1280px Chrome 驗證通過。核對批次卡片、期限、官方來源、台灣與免費篩選、Runloop 歷史狀態及 JSON SHA-256。發布依對應 Git 提交的 Pages 工作流程狀態，完成後再比對公開資產及同一組介面。
+
+### 下一輪優先
+
+1. 今日 09:00 後核對在職免費 MLOps 班是否額滿與 11/27 12:30 期限。資策會工作坊 16:30 前後核對受理狀態，18:00 後依主辦證據處理收件結束。 [MLOps 報名](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0)
+2. 依指定時點換路徑追查 Swarms（11/24 13:00）、Kaggle Notebook（17:00）、Akamai RISE（19:00）及 Microsoft 考券（11/25 04:30）。Microsoft 優先找獨立官方公告。
+3. IteraCompute 11/24 16:00 後核對免費模式切換與舊戶保留；Vercel 11/24 20:30 後核對期後單價或延長。 [IteraCompute](https://iteracompute.com/free/) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+4. 11/25 起依 `next_review_at` 查東華額滿、Google 額外配額表單及南大 Quantum AI 組公告。Google 先追額外配額截止，主交件仍按 12/1 06:00。 [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Google 配額](https://forms.gle/uPcDhaYW3iVo2AYw5) [南大競賽](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308)
+5. Braintrust 12/7 後複核共用點數生效。Runloop 留待退場或餘額新訊號。若有適用資格新證據，可複核 Cursor Campus Leads 與上述兩個校園候選。 [Braintrust](https://docs.braintrust.dev/admin/billing/braintrust-credits)

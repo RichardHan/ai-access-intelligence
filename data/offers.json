@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T04:12:11+08:00",
-  "scope": "2026-11-24 04:06–2026-11-24 04:12 Asia/Taipei，局部複核 3 筆既有紀錄，新增 2 筆，整筆追查失敗 1 筆。補列 Chroma Cloud 停運與 Recall.ai 預付加值規則，新增臺大及數發部兩項免費培訓。",
+  "updated_at": "2026-11-24T06:13:59+08:00",
+  "scope": "2026-11-24 06:06–2026-11-24 06:13 Asia/Taipei，局部複核 5 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆。更新 Google 配額與計費、南大競賽時程、Runloop 退場及兩筆供應商條款，新增東華與資策會免費培訓。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -18716,7 +18716,7 @@
     {
       "id": "runloop-once-fifty-agent-sandbox-pro-trial",
       "title": "Runloop：AI代理沙盒一次50美元試用額度",
-      "summary": "官方價格頁提供免信用卡試用及一次US$50額度；試用最多3個運行中Devboxes、5 blueprints、10 snapshots及3 objects。這是代理執行沙盒而非模型token。Basic平台免費但算力另計；Pro為US$250/月加用量。",
+      "summary": "Runloop 官方已公告逐步結束服務，既有客戶過渡支援至台北 2026-11-14 15:59。定價頁仍列新戶免卡 US$50 沙盒運算試用，公開註冊入口回 503。現有試用標價作為歷史資訊，實際能否註冊或領取、正式停機及舊餘額處理仍待核。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -18737,27 +18737,28 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": "試用耗盡是否硬停、轉付費方式及取消程序未核；超過預購額度可能另行計費。",
-      "usable_duration": "US$50到期日未核；條款免費方案初始一期一個月不等於贈額必定30日到期。",
-      "access_risk": "Basic算力及儲存可能計費；100GB免費儲存頁面緊接首月免費，不推定永久。台灣資格未核。",
-      "verified_at": "2026-11-09T04:13:00+08:00",
+      "cancellation": "歷史定價 FAQ 列試用結束時不自動扣款，須自行選擇延續方案。退場後的既有餘額處置待核。",
+      "usable_duration": "公告的既有客戶過渡支援已於 11/13 23:59 PT 結束。正式停機日期與贈點有效期待核。",
+      "access_risk": "官方已宣布逐步結束服務，公開註冊頁回 503，定價頁仍保留歷史試用說明。",
+      "verified_at": "2026-11-24T06:09:08+08:00",
       "discovered_at": "2026-10-29T16:09:59+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T12:00:00+08:00",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
       "eligibility": {
-        "service_availability": "公開價格頁提供免費試用，未註冊或領取。",
-        "account_eligibility": "免卡試用；實際帳戶資格及單人重複申請限制未核。",
+        "service_availability": "官方已公告逐步結束服務，既有客戶過渡支援已截止。",
+        "account_eligibility": "定價 FAQ 保留歷史免卡試用條件；公開註冊入口回 503。",
         "billing_country": "台灣帳單、付費方式及超額設定未核。",
         "identity_residency": "台灣個人或企業資格未核。",
-        "terms_restrictions": "遵守服務條款；超過預購額度可能另行開帳，未假設自動升級或硬停。",
+        "terms_restrictions": "退場與資料移轉以官方轉移文件為準；既有授予、付費餘額或退款未核。",
         "taiwan_note": "Unknown：未取得台灣帳戶及付款具體資格證據。"
       },
       "unknowns": [
-        "試用額度到期、用盡後狀態與續費",
-        "台灣資格及帳單",
-        "適用法律及監管限制"
+        "服務全面停機時點",
+        "是否仍有可完成的新戶試用取得路徑",
+        "既有額度、付費餘額或未用服務的處理方式",
+        "台灣帳單及適用條件"
       ],
       "sources": [
         {
@@ -18777,16 +18778,30 @@
           "scope": "免費方案及超額條款",
           "evidence": "§6超過預購額度另行開帳；§12免費方案預設初始一期一個月，不證實贈額到期日。",
           "accessed_at": "2026-10-29T16:09:59+08:00"
+        },
+        {
+          "url": "https://docs.runloop.ai/docs/transitions/overview",
+          "label": "Runloop 官方轉移說明",
+          "scope": "服務逐步結束、既有客戶支援期限",
+          "evidence": "Runloop 公告逐步結束服務，既有客戶的過渡支援截至 11/13 23:59 PT（台北 11/14 15:59）。文件未提供服務全面停機時點。",
+          "accessed_at": "2026-11-24T06:09:08+08:00"
+        },
+        {
+          "url": "https://runloop.ai/pricing",
+          "label": "Runloop 定價與 FAQ",
+          "scope": "仍列示的歷史試用與計費",
+          "evidence": "定價頁仍列新戶 US$50 用量點數及免卡。FAQ 列達試用上限時自行選擇按量 Basic 或付費 Pro／Enterprise，試用結束不自動扣款。轉移文件已宣布逐步結束服務。",
+          "accessed_at": "2026-11-24T06:08:14+08:00"
         }
       ],
       "record_type": "opportunity",
-      "status": "conditional",
+      "status": "sunset_announced",
       "legal_status": "not_verified",
-      "priority_score": 15.8,
-      "priority_tier": "C",
-      "priority_note": "官方來源·需符合條件·零設定費·台灣未標記·時間未知·有資格門檻",
+      "priority_score": 13.1,
+      "priority_tier": "D",
+      "priority_note": "官方來源·已公告終止·零設定費·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "verification_scope": "2026-11-09 04:12 重讀定價頁：US$50 一次性、免卡、3/5/10/3 沙盒上限與 Pro US$250/月不變；試用轉付費 FAQ 答案仍未輸出。未註冊。"
+      "verification_scope": "2026-11-24 實讀官方轉移說明與定價 FAQ。Runloop 已宣布逐步結束服務並列既有客戶過渡支援截止，定價頁仍有歷史試用資訊，公開註冊入口回 503，未核正式停機時刻、可申領狀態及舊餘額處理。"
     },
     {
       "id": "taiwan-industrial-ai-tool-points-exhausted-2026",
@@ -35426,7 +35441,7 @@
     {
       "id": "braintrust-startup-pro-six-twelve",
       "title": "Braintrust新創：100K融資門檻，6/12月Pro",
-      "summary": "新客、Series A或以前；至少US$100K融資得6月Pro，合作VC合資格可12月，但官方另稱 benefits vary depending on funding sources, amount raised, and startup stage（達門檻不等於核准）。FAQ稱Pro access credits期滿不rollover；公開Pro為US$249/月，含每月US$100模型額度，超額另計，新創grant是否涵蓋超額未核。一般訂閱ToS要求續約前30天email取消；其是否套用新創grant未核。",
+      "summary": "Series A 或以前的新客，融資至少 US$100,000 可申請 6 個月 Pro，合資格合作 VC 投資者可申請 12 個月，按資格審核。一般 Pro US$249／月，含每月 100 個共用 Braintrust credits，超額 US$1／點。2026-12-07 起 Loop 與 Patterns 納入扣抵，即使自帶金鑰仍扣平台點數，模型供應商另算推論費。新創核准方案是否涵蓋超額待核。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -35442,7 +35457,7 @@
       "taiwan": "Unknown",
       "regions": [],
       "verification": "Official",
-      "usage_type": "Fixed credits",
+      "usage_type": "審核制 Pro 使用期間與一般 Pro 共用消耗點數",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
@@ -35450,21 +35465,21 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "一般付費訂閱ToS §2.3要求續約前30天email取消；trial §2.5在已告知轉付費而未取消時可扣款。兩者是否適用新創授予未核，依核准協議確認。",
-      "usable_duration": "合資格6或12個月Pro access；FAQ稱期滿credits不rollover。",
-      "access_risk": "新創grant僅明示Pro plan access，不代表超額或所有model credits免費；一般付費方案可能自動續約，但對新創核准方案適用性未明。",
-      "verified_at": "2026-11-09T04:13:00+08:00",
+      "usable_duration": "核准可有 6 或 12 個月 Pro。一般 Pro 每月點數重置，餘點不結轉。",
+      "access_risk": "一般 Pro 超額按量。使用自帶金鑰執行 Loop／Patterns，平台扣點及模型供應商推論費各自發生。新創核准方案的超額與自動續約仍以個別協議為準。",
+      "verified_at": "2026-11-24T06:10:04+08:00",
       "discovered_at": "2026-10-24T01:06:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T12:00:00+08:00",
+      "review_cadence": "event",
+      "next_review_at": "2026-12-07T09:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "Official public offer page accessible; no application/account redemption performed.",
         "account_eligibility": "New customer; Series A or earlier; ≥$100K funding for six months; qualifying partner-VC-backed startups eligible twelve months.",
         "billing_country": "Unknown: reviewed official pages do not specify Taiwan billing-country acceptance.",
         "identity_residency": "Unknown: reviewed pages do not specify Taiwan residency, phone verification, or identity requirements.",
-        "terms_restrictions": "資格需核准；FAQ稱Pro access credits cover對應6/12個月且期滿不rollover。一般ToS 2026-07-07 §2.3訂閱自動續約並要求提前30天email取消；§2.5 trial可在事先告知轉付費情況下收費。新創核准方案是否套用一般trial規則未核。",
+        "terms_restrictions": "新創資格需核准。一般 Pro 點數每月重置、不結轉。一般條款的超額、續訂及取消是否適用新創授予，須查核個別協議。",
         "taiwan_note": "Unknown: no explicit Taiwan support or exclusion found; deployment regions and global marketing are not account eligibility. Taiwan IP, signup, card and phone acceptance untested."
       },
       "unknowns": [
@@ -35491,6 +35506,27 @@
           "label": "官方來源",
           "scope": "批次所列公開主張，不是個人可領核驗",
           "evidence": "2026-10-25 11:45:58–11:52:15 Asia/Taipei直接讀取（Last Updated 2026-07-07）：§2.3付費訂閱自動續約，續約前30天須email support@braintrustdata.com取消；§2.5在trial已通知轉付費且未取消時可扣款。不購買付費版/取消trial資料可能失去或刪除。另簽agreement/MSA/order form優先，未確認此一般條款如何適用新創授予。"
+        },
+        {
+          "url": "https://www.braintrust.dev/startups",
+          "label": "Braintrust 官方新創計畫",
+          "scope": "新客、融資與六至十二個月 Pro 資格",
+          "evidence": "Series A 或以前的新客，至少 US$100,000 融資可申請六個月，合資格合作 VC 投資可申請十二個月。滾動審查，待遇依實際資格。",
+          "accessed_at": "2026-11-24T06:08:29+08:00"
+        },
+        {
+          "url": "https://docs.braintrust.dev/plans-and-limits",
+          "label": "Braintrust 官方方案與額度",
+          "scope": "一般 Pro 月費、點數與超額單價",
+          "evidence": "一般 Pro US$249／月及每月 100 個 Braintrust credits。每點代表 US$1 用量，超額 US$1／點。",
+          "accessed_at": "2026-11-24T06:09:25+08:00"
+        },
+        {
+          "url": "https://docs.braintrust.dev/admin/billing/braintrust-credits",
+          "label": "Braintrust 官方計費文件",
+          "scope": "12/7 生效與自行供應商金鑰的扣抵",
+          "evidence": "Loop 與 Patterns 自 2026-12-07 起使用共用點數。自帶金鑰時仍扣平台點數，模型供應商另收推論費。一般 Pro 未用點數不結轉，超額按月收取。",
+          "accessed_at": "2026-11-24T06:10:04+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -35505,7 +35541,8 @@
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·零設定費·台灣未標記·≤40分鐘·有資格門檻",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-09 04:11 重讀 /startups：US$100K 門檻、6／12 個月與滾動審核不變，並補記官方裁量句；FAQ 答案本次未輸出，故「credits 不 rollover」仍沿用舊證據。未申請。"
+      "verification_scope": "2026-11-24 實讀新創計畫、一般 Pro 方案與 Braintrust credits 文件，核對新客與融資門檻、100 點月額、12/7 服務適用範圍與超額。新創核准合約與台灣資格未核。",
+      "cost_note": "一般 Pro 的 100 點可抵每月內建推論等功能。12/7 起 Loop 和 Patterns 納入共用池。一般 Pro 超額按月收取，新創合約超額與綁卡安排待核。"
     },
     {
       "id": "dust-free-lifetime-not-programmatic",
@@ -73884,7 +73921,7 @@
     {
       "id": "xcrawl-new-account-thousand-credits",
       "title": "XCrawl：新帳號 1,000 免費 credits、免卡",
-      "summary": "網頁抓取 API 首頁列「No credit card required」「Start with 1,000 free credits」；官方文件示例顯示一次標準 scrape 計 1 credit，要求 JSON 結構化抽取時另加 4 credits（合計 5），search 示例一次 2 credits。官方未公布 credits 效期、SERP／crawl 的單位成本與付費價目，也沒有可讀的定價或條款頁（/pricing、/terms 皆 404），地區與資料使用條件同樣未載。",
+      "summary": "XCrawl 定價 FAQ 列新帳戶免信用卡可用 1,000 點。官方快速入門示例中，單頁 scrape 或 Crawl 各扣 1 點、JSON 結構化抽取合計 5 點、兩個 Search 結果合計 2 點。實際扣點可能涵蓋流量等項目。現行服務條款要求年滿 18 且符合所在地法定年齡，部分服務可要求身分或手機查核。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -73910,30 +73947,30 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-08T19:16:47+08:00",
+      "verified_at": "2026-11-24T06:10:12+08:00",
       "discovered_at": "2026-11-08T19:22:10+08:00",
       "announcement_at": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T19:00:00+08:00",
-      "verification_scope": "2026-11-08 19:1x 直接讀 xcrawl.ai 首頁與 docs.xcrawl.com 快速入門：確認 1,000 free credits、免卡、scrape 1 credit／JSON 抽取 5 credits；未註冊、未發請求；定價頁與條款頁回 404，效期與地區未知。",
+      "next_review_at": "2026-12-24T09:00:00+08:00",
+      "verification_scope": "2026-11-24 實讀官方定價 FAQ、快速入門、扣點文件及現行服務條款，核對免卡 1,000 點、示例與年齡／身分查核。付費方案金額、超額處置、台灣資格及額度效期仍未核。",
       "usable_duration": "未公布效期；credits 是否一次性補充亦未載。",
       "cancellation": null,
-      "cost_note": "新帳號 1,000 credits；付費價目未公開（無 pricing 頁），超額後是否停用或需加值未知。",
-      "access_risk": "缺少公開定價與服務條款，無法確認 credits 效期、超額處理與資料使用；首頁宣稱可繞過部分反機器人機制，取用第三方網站須自行確認對方條款。",
+      "cost_note": "1,000 點免卡；公開定價頁列月付與年付選項，已讀內容未顯示各方案金額。用盡後的停用或加值規則待核。",
+      "access_risk": "可能需要身分或電話核對。條款要求遵守第三方權利，並限制代理服務對未授權、敏感或受保護資料的蒐集。",
       "eligibility": {
         "service_availability": "公開註冊入口與 API 文件；服務本身未列地區。",
-        "account_eligibility": "新帳號可獲 1,000 credits；年齡與公司條件未載。",
+        "account_eligibility": "新戶免卡 1,000 點；個人須年滿 18 且符合所在地法定年齡，部分服務可要求身分或手機查核。",
         "billing_country": "無需信用卡即可開始；付費方式與稅別未載。",
         "identity_residency": "未列居住地或國別條件。",
-        "terms_restrictions": "未取得可讀條款（/terms 404），不得推定可轉售或可用於蒐集受限資料。",
+        "terms_restrictions": "帳戶供本人或所代表組織使用，不得共享帳密；使用須遵守第三方權利與服務資料限制。",
         "taiwan_note": "Unknown：頁面無台灣或排除名單，無法確認台灣帳戶可用性。"
       },
       "unknowns": [
-        "credits 效期與是否補充",
-        "付費價目與超額行為",
-        "服務條款、資料保留與地區限制",
-        "SERP／crawl／map 各 endpoint 的實際扣點",
-        "適用法律與監管限制未核"
+        "贈點效期與是否補充",
+        "各付費方案金額及額度用罄後的處置",
+        "資料保留期限、台灣帳戶及付款資格",
+        "SERP、Crawl、Map 與其他端點的完整通用費率",
+        "適用法律與監管未核"
       ],
       "sources": [
         {
@@ -73947,6 +73984,34 @@
           "scope": "credits 扣抵方式與 endpoint 行為",
           "evidence": "快速入門示例回應列「credits_used: 1」（標準 scrape）、JSON 抽取示例「credits_used: 5」且 credits_detail 為 base_cost 1／json_extract_cost 4；search 示例 total_credits_used 2。文件未列 credits 效期或價目。",
           "accessed_at": "2026-11-08T19:16:47+08:00"
+        },
+        {
+          "url": "https://www.xcrawl.ai/buy/",
+          "label": "XCrawl 官方定價",
+          "scope": "公開新戶點數與付費方案入口",
+          "evidence": "FAQ 列每個新帳戶可免卡獲 1,000 點。正文列月付、年付選項，這次可讀部分未顯示各方案金額。",
+          "accessed_at": "2026-11-24T06:08:29+08:00"
+        },
+        {
+          "url": "https://docs.xcrawl.com/doc/introduction/",
+          "label": "XCrawl 官方快速入門",
+          "scope": "扣點示例",
+          "evidence": "示例列單頁 scrape 1 點、結構化 JSON 抽取合計 5 點、單頁 Crawl 1 點及兩結果 Search 合計 2 點。示例不是完整費率表。",
+          "accessed_at": "2026-11-24T06:09:47+08:00"
+        },
+        {
+          "url": "https://docs.xcrawl.com/doc/developer-guides/credits/",
+          "label": "XCrawl 扣點文件",
+          "scope": "API 回應點數結構",
+          "evidence": "API 回應分列基礎、流量及 JSON 抽取成本，未列可通用的每項單價。",
+          "accessed_at": "2026-11-24T06:10:12+08:00"
+        },
+        {
+          "url": "https://xcrawl.com/terms-of-service/",
+          "label": "XCrawl 官方服務條款",
+          "scope": "帳戶資格、驗證及第三方權利",
+          "evidence": "個人須年滿 18 且符合所在地法定年齡，部分服務可要求驗證身分或手機。條款限本人或所代表組織使用並要求遵守第三方權利。",
+          "accessed_at": "2026-11-24T06:10:12+08:00"
         }
       ],
       "priority_score": 19.4,
@@ -87375,7 +87440,7 @@
     {
       "id": "nutn-national-ai-project-competition-2026",
       "title": "南大 2026 全國 AI 專題創意競賽：總獎金 NT$45 萬，報名至 12/1、決賽 12/19 頒獎",
-      "summary": "國立臺南大學理工學院與 AI 智慧技術與應用人才培訓據點辦理的 2026 全國 AI 專題創意競賽，分大會專題類（資電領域組、跨領域組、AI 職能培力組、Quantum AI 體驗應用組）、一般專題類與企業命題類（含 AI 微電影、企業出題 AI 應用組），總獎金 NT$450,000。全國大專校院（含碩博）與高中職在學學生及勞動部 115 年度 AI 職訓學員均可組隊，每隊 2 至 6 人並需 1 至 2 名指導老師，可跨校。報名與繳件至 2026-12-01 23:59，初賽 12/11、決賽與頒獎 12/19。",
+      "summary": "國立臺南大學理工學院辦理的全國 AI 專題創意競賽，總獎金 NT$450,000。台灣大專校院（含碩博）、高中職學生及勞動部 115 年度 AI 職訓學員可依組別資格組隊，每隊 2 至 6 人並需 1 至 2 名指導老師。一般報名及繳件至 2026-12-01 23:59:59，12/11 初賽。Quantum AI 組使用專用表單，12/5 初賽，本組收件時點待核。決賽 12/19，參賽證明限通過初審進入複審者。",
       "record_type": "opportunity",
       "status": "active",
       "verification": "Official",
@@ -87396,23 +87461,23 @@
       "regions": [
         "Taiwan"
       ],
-      "usage_type": "學生競賽獎金與參賽證明，非模型或 API 額度",
+      "usage_type": "競賽獎金與通過初審後符合資格的參賽證明",
       "quota_classification": "UNKNOWN",
       "limited_confirmed": true,
-      "deadline_at": "2026-12-01T23:59:00+08:00",
+      "deadline_at": "2026-12-01T23:59:59+08:00",
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "valuation_scenario": "官方公布總獎金 NT$450,000；各組別分配由頁面 JavaScript 動態載入，本輪未能讀取，故不把總池換算成個人可用效益。",
-      "verified_at": "2026-11-23T08:15:00+08:00",
+      "valuation_scenario": "主辦頁列總獎金 NT$450,000。獎金依組別及名次發放，個人可用效益未估算。",
+      "verified_at": "2026-11-24T06:09:29+08:00",
       "discovered_at": "2026-11-14T13:05:00+08:00",
       "announcement_at": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-29T09:00:00+08:00",
-      "verification_scope": "2026-11-23 08:11 實讀南大數位系官網（含 2026/11/21 最新通知）與南臺科大轉知頁：報名截止日為 115/12/01 23:59:59（2026-12-01），初賽 12/11，決賽 12/19，總獎金 NT$450,000。",
-      "usable_duration": "報名與繳件 115/09/01-115/12/01 23:59；初賽 115/12/11；決賽與頒獎 115/12/19。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T06:00:00+08:00",
+      "verification_scope": "2026-11-24 實讀國立臺南大學主辦頁時程、FAQ、參賽證明通知及 Quantum AI 組表單，核對一般收件時刻、組別初賽差異與證明核發。一般報名表需登入，費用未核。",
+      "usable_duration": "一般報名與繳件 2026-09-01 至 2026-12-01 23:59:59，初賽 12/11，決賽及頒獎 12/19。Quantum AI 組初賽 12/5、決賽 12/19，專屬報名截止待核。",
       "cancellation": "官網未載退費或撤件機制；主辦單位得視實際狀況調整獎項名額並保留修改活動權利。",
-      "cost_note": "官網未列報名費，報名須透過 Google 表單並上傳切結書、學生證正反面、作品說明書與影片連結文件；費用欄位留空待核。",
+      "cost_note": "主辦頁未列報名費，一般報名表須登入才能查看後續。費用仍未知。",
       "access_risk": "需團隊與指導老師共同報名、每人限報一隊、每隊最多兩類別；作品不得已進入商品化或量產階段，且禁用中國或中資開源模型與其 API／MCP 進行訓練與推論，違者取消資格並追回獎金。",
       "offer_validity": "nutn-ai-project-2026",
       "terms_compliance": "禁用來源自中國或中資的開源模型（如 DeepSeek 等）及其介接工具進行 AI 訓練與應用推論；抄襲、冒名、資料不實或作品已商品化者取消資格並追回獎金；參賽作品須無償授權主辦單位非營利宣傳使用。",
@@ -87425,11 +87490,11 @@
         "taiwan_note": "在台灣辦理、以我國學籍學生為對象，台灣學生可直接報名，決賽須到台南現場。"
       },
       "unknowns": [
-        "是否收取報名費（官網未列）",
-        "各參賽組別獎金細目（頁面由 JavaScript 動態生成，未能讀取）",
+        "報名費及付款方式",
+        "Quantum AI 組專屬報名截止",
         "決賽是否提供交通或住宿補助",
-        "企業命題類各命題之額外獎勵與權利歸屬",
-        "法律與監管未核"
+        "企業命題類的額外獎勵與權利條件",
+        "台灣法律與監管未核"
       ],
       "sources": [
         {
@@ -87445,6 +87510,20 @@
           "scope": "轉知公告：報名期間與官方活動網址",
           "evidence": "南臺科大資工系轉知公告載明「報名期間：自115年9月1日起至115年12月1日止」，並指向活動網站 phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308。",
           "accessed_at": "2026-11-23T08:15:00+08:00"
+        },
+        {
+          "url": "https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308",
+          "label": "臺南大學主辦頁",
+          "scope": "一般截止時分秒、資格、時程、參賽證明與總獎金",
+          "evidence": "日程表與 FAQ 均列 12/1 23:59:59。一般初賽 12/11，決賽及頒獎 12/19；11/4 通知僅通過初審並進入複審才能領參賽證明。官網列總獎金 NT$450,000。",
+          "accessed_at": "2026-11-24T06:09:29+08:00"
+        },
+        {
+          "url": "https://forms.gle/mDfAggo9WCY9tADN8",
+          "label": "主辦 Quantum AI 組專用表單",
+          "scope": "Quantum AI 組專用時程",
+          "evidence": "正文列 12/5 初賽、12/19 決賽，均在臺南大學榮譽校區。未列本組收件截止。",
+          "accessed_at": "2026-11-24T06:09:28+08:00"
         }
       ],
       "priority_score": 20.3,
@@ -88405,7 +88484,7 @@
     {
       "id": "google-buildhybridai-2026-firebase-ai-logic",
       "title": "Google #BuildHybridAI 2026（Devpost）：Firebase AI Logic 裝置端＋雲端混合推論，總獎金 US$30,000，台北 2026-12-01 06:00 交件截止",
-      "summary": "Google 主辦、Devpost 執行的線上黑客松，主題是用 Firebase AI Logic Hybrid Inference SDK 做出「本機模型可用時在裝置端跑、不可用時回退雲端」的生成式 AI 應用，至少要支援一個平台：Web（Chrome）或 Android 走 Gemini Nano 4，iOS 走 Apple Foundation Models，全部經 Firebase AI Logic 呼叫。總獎金 US$30,000，含 US$10,000 大獎與每個平台各 US$3,000 的最佳應用獎，優勝者可獲 Firebase 團隊專訪與官方部落格曝光。交件需含可運作的 demo app、公開 repo（GitHub 或 GitLab，須證明執行期實際呼叫 Firebase AI Logic）、demo 影片與文字說明；既有 app 若在賽期內顯著更新也可參賽。大會另安排 11/12 的線上 Build Session 與 Devpost Discord 支援。時間：2026-11-11 13:30 PT 開始、2026-11-30 14:00 PT（台北 2026-12-01 06:00）截止，評審 12/10–12/16，12/21 前公布。參賽免費，文字推論在 Firebase 免費使用額度內可 0 成本起步。",
+      "summary": "Google 主辦、Devpost 執行的線上黑客松。使用 Firebase AI Logic 建立支援裝置端與雲端混合推論的應用，至少支援 Web（Chrome）、Android 或 iOS 一種平台。交件須附可運作的專案、公開原始碼、影片和說明，台北 12/1 06:00 截止。參賽免費，台灣參賽者須滿 20 歲。可選的進階模型配額須另申請，最後一輪於台北 11/26 02:00 截止，需身分驗證且核准依名額。總獎金 US$30,000，分六個獎項。",
       "record_type": "opportunity",
       "status": "active",
       "verification": "Official",
@@ -88428,40 +88507,39 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "taiwan": "Yes",
-      "usage_type": "一次性競賽獎金（US$30,000 總獎金，含 US$10,000 大獎與每平台 US$3,000）",
+      "usage_type": "競賽獎金及可申請的四天臨時帳戶配額",
       "quota_classification": "HIGH BUT LIMITED",
-      "quota_classification_note": "官方只公布總額 US$30,000、US$10,000 大獎與三個平台各 US$3,000，其餘獎項分配與名額未逐項公布；參賽人數無上限（頁面顯示 2,110 位參與者）。",
-      "quota_details": "總獎金 US$30,000 in cash；Grand Prize US$10,000；每個平台（Web／Android／iOS）最佳應用各 US$3,000；優勝者獲 Firebase 團隊專訪與官方部落格文章；其餘獎項細節未公布。",
-      "usable_duration": "2026-11-11 13:30 PT 起至 2026-11-30 14:00 PT（台北 2026-12-01 06:00）交件；評審 2026-12-10 至 2026-12-16；2026-12-21 前公布優勝。",
-      "setup_cost_basis": "報名與參賽免費（規則逐字 NO PURCHASE NECESSARY）；需 Google 帳號與 Firebase 專案。",
-      "cost_note": "官方頁逐字「Start free: text inference with Firebase AI Logic is free within usage limits, and you can request a Google Account Quota for advanced features such as image generation」；超出免費額度的雲端推論與 Firebase 用量依 Firebase 計價，本輪未核實際金額。",
+      "quota_classification_note": "獎項各一個名額。額外臨時帳戶數有限，獲批後效期四天，數字用量未載。",
+      "quota_details": "大獎 US$10,000、第二名 US$7,000、第三名 US$4,000，iOS、Android、Web／Chrome 最佳應用各 US$3,000。官方規章列各獎一個名額。",
+      "usable_duration": "主交件 2026-11-30 14:00 PT（台北 2026-12-01 06:00）截止。最後一輪進階模型配額申請至 11/25 10:00 PT（台北 11/26 02:00），預定 11/27 PT 發放，有效四天。評審 12/10–12/16 PT，預定約 12/21 PT 公布。",
+      "setup_cost_basis": "運用免費層即可開始；競賽及主辦臨時配額申請均不需購買。",
+      "cost_note": "Spark 的 Gemini Developer API 免費層免付款方式，部分模型及功能有使用限制。連結 Cloud Billing 升級 Blaze 後，Gemini Developer API 全部用量按量計費，多數專案須預付。其他 Firebase 服務依各自免費使用範圍。規章列臨時配額外及逾四天窗口所生費用由使用者負擔。",
       "valuation_scenario": null,
       "cancellation": "不適用（免費報名）；規則載官方得修改或取消競賽，獎項由評審依評分標準裁量。",
-      "access_risk": "賽期僅約 19 天（11/11–11/30），要在期限內完成可運作 demo、公開 repo、影片與說明；Firebase AI Logic 需 App Check（可用 debug token）；裝置端 Gemini Nano 4／Apple Foundation Models 需支援的硬體與 OS；獎金只發給少數作品。",
-      "verified_at": "2026-11-23T04:15:00+08:00",
+      "access_risk": "額外配額表單要求已有 Devpost 參賽專案，參與者須完成註冊，並由 Didit 以政府證件與自拍驗證。帳戶數有限，未曾獲批的專案優先。Firebase AI Logic 需 App Check（交件可用 debug token）；裝置端功能有硬體及 OS 條件。",
+      "verified_at": "2026-11-24T06:09:29+08:00",
       "discovered_at": "2026-11-14T19:18:00+08:00",
       "announcement_at": "2026-11-11",
       "previous_limit": null,
       "deadline_at": "2026-12-01T06:00:00+08:00",
       "expires_at": null,
-      "review_cadence": "weekly",
-      "next_review_at": "2026-11-30T09:00:00+08:00",
-      "verification_scope": "於 2026-11-23 04:15 (Asia/Taipei) 實測 Devpost 官方規章頁（HTTP 200）。總獎金 US$30,000 全額細項查明（大獎 $10k、亞軍 $7k、季軍 $4k、各平台獎 $3k），參賽人數增至 4,276 人，台北時間 2026-12-01 06:00 交件截止。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T06:00:00+08:00",
+      "verification_scope": "2026-11-24 實讀 Devpost 規章、主辦配額表單與 Firebase 計費文件，核對台灣參賽年齡、交件及最後一輪配額截止、六個獎項、驗證要求及 Spark 與 Blaze 的計費差異。配額未申請。",
       "eligibility": {
-        "service_availability": "線上競賽（Devpost），全球可投稿；Firebase AI Logic 本身在多數國家可用，本輪未逐一核對 Firebase 服務地區清單。",
+        "service_availability": "Devpost 線上競賽，適用官方規章所列居住地、制裁及利益衝突條件。各項 Firebase 功能地區條件待核。",
         "account_eligibility": "需 Devpost 帳號並在賽期內完成提交；個人、團隊與組織皆可參賽；開發者需能建立 Firebase 專案並啟用 AI Logic（需 App Check）。",
         "billing_country": "無報名費；獎金以美元發放，得獎者須完成稅務與身分文件（規則由 Google 與 Devpost 處理，細節未核）。",
-        "identity_residency": "官方規則逐字：「be above the age of majority in the country, state, province or jurisdiction of residence (or at least twenty years old in Taiwan) at the time of entry」；排除地區逐字：「not be a resident of, and/or organizations domiciled in Brazil, Quebec, Crimea, Russia, Italy, Syria, Sudan, Belarus, Cuba, Iran, and North Korea and any other country designated by the United States Treasury's Office of Foreign Assets Control」，台灣不在排除名單。",
+        "identity_residency": "競賽規章明列台灣參賽者須年滿 20 歲。額外臨時帳戶配額另須 Didit 身分驗證。",
         "terms_restrictions": "既有 app 參賽須說明賽期內的更新內容；repo 必須公開並在程式碼中實際呼叫 Firebase AI Logic；提交需含 demo 影片與文字說明；違反官方規則或排除地區者失格。",
         "taiwan_note": "Yes：官方 Rules 以「at least twenty years old in Taiwan」明文把台灣列入適用範圍（不是排除名單），因此台灣參賽者需滿 20 歲；未核獎金匯入台灣的稅務處理與 Firebase 在台灣的完整服務條款。"
       },
       "unknowns": [
-        "US$30,000 中除大獎與三個平台獎以外的獎項分配與名額",
-        "Firebase AI Logic 免費額度的具體數字（官方只寫 free within usage limits）",
-        "得獎獎金匯入台灣的稅務與扣繳方式",
-        "iOS 端 Apple Foundation Models 的裝置與 OS 版本門檻",
-        "App Check 在生產環境的費用與配額",
-        "法律與監管限制未查核官方法規來源"
+        "額外配額的核准結果、餘額與按模型的數字上限",
+        "Spark 適用模型的個別免費額度及完整 Firebase 服務地區",
+        "台灣獎金稅務與扣繳",
+        "iOS 裝置與 OS 精確門檻、App Check 正式用量與費用",
+        "法律與監管限制未核"
       ],
       "sources": [
         {
@@ -88477,6 +88555,27 @@
           "scope": "主辦、參賽資格、排除地區（含台灣年齡門檻）、賽期、投稿方式",
           "evidence": "原文：「The Contest is sponsored by Google LLC」「ELIGIBILITY: To be eligible to enter the Contest, you must: (1) be above the age of majority in the country, state, province or jurisdiction of residence (or at least twenty years old in Taiwan) at the time of entry; (2) not be a resident of, and/or organizations domiciled in Brazil, Quebec, Crimea, Russia, Italy, Syria, Sudan, Belarus, Cuba, Iran, and North Korea」「Contest is void in Brazil, Quebec, Crimea, Russia, Italy, Syria, Sudan, Belarus, Cuba, Iran, and North Korea and where prohibited by law.」「The Contest begins at 1:30 P.M. Pacific Time (PT) ... on Nov 11, 2026 and ends at 2:00 P.M. PT on Nov 30, 2026」「Submission Period: Nov 11, 2026 (01:30 P.M. Pacific Time) – Nov 30, 2026 (2:00 P.M. Pacific Time)」「Winners Announced: On or around Dec 21, 2026」「NO PURCHASE NECESSARY TO ENTER OR WIN」。",
           "accessed_at": "2026-11-23T04:15:00+08:00"
+        },
+        {
+          "url": "https://firebasehybridaihackathon.devpost.com/rules",
+          "label": "Devpost 主辦規章",
+          "scope": "交件截止、台灣年齡、配額支線及獎項",
+          "evidence": "台灣參賽須年滿 20。交件於 11/30 14:00 PT 截止。最後一輪額外配額申請於 11/25 10:00 PT 截止，預定 11/27 PT 發放，有效四天，依 Google 核准。規章第 9 節列出六個獎項各一個名額。",
+          "accessed_at": "2026-11-24T06:07:37+08:00"
+        },
+        {
+          "url": "https://forms.gle/uPcDhaYW3iVo2AYw5",
+          "label": "主辦額外配額表單",
+          "scope": "額外配額入口、證件驗證與名額",
+          "evidence": "表單列臨時帳戶已設定配額、免信用卡、帳戶數有限，未獲過配額的專案優先。填表須已完成競賽註冊與建立專案，照片及自拍由 Didit 辦理身分驗證。",
+          "accessed_at": "2026-11-24T06:09:29+08:00"
+        },
+        {
+          "url": "https://firebase.google.com/docs/ai-logic/pricing",
+          "label": "Firebase 官方計費文件",
+          "scope": "Spark 免卡免費層與 Blaze 計費",
+          "evidence": "Spark 的 Gemini Developer API 免費層不需付款方式且只提供部分模型與功能。專案連結 Cloud Billing 後升級 Blaze，Gemini Developer API 全部用量按量計費，多數專案須預付。其他 Firebase 服務適用各自的免費使用範圍。",
+          "accessed_at": "2026-11-24T06:08:59+08:00"
         }
       ],
       "priority_note": "官方來源·方案仍列示·免費·台灣Yes·時間未知",
@@ -97676,24 +97775,179 @@
         }
       ],
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "ndhu-ai-productivity-workshop-2026",
+      "title": "東華大學 AI 生產力實戰工作坊｜12/5 免費校內培訓",
+      "summary": "國立東華大學深耕起飛計畫於 12/5 在花蓮校內辦理免費工作坊，練習 Gemini、Claude、NotebookLM、Notion AI 與 AI 工作流程。約 50 名，本校起飛生優先，一般生另有入口。11/25 截止，主辦公告未列時刻，11/30 前以電子郵件通知錄取者。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usage_type": "一次性實體培訓名額",
+      "quota_details": "約 50 席、起飛生優先。全程完成課程者可取得跨域學習時數 6 小時。",
+      "usable_duration": "校方公布 11/25 截止（時刻未公布）。活動為 12/5 08:40–18:10，地點為國立東華大學理工學院 PC1 電腦教室。",
+      "setup_cost_basis": "校方公告免費參加，現場備有餐食。",
+      "access_risk": "兩份表單都列本活動，是否有剩餘名額、是否錄取依校方通知。",
+      "cancellation": null,
+      "deadline_at": "2026-11-25",
+      "announcement_at": null,
+      "expires_at": null,
+      "verified_at": "2026-11-24T06:09:29+08:00",
+      "discovered_at": "2026-11-24T06:08:01+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T06:00:00+08:00",
+      "eligibility": {
+        "service_availability": "台灣花蓮校內實體課，須到場。",
+        "account_eligibility": "校方以本校同學為對象，依一般生、起飛生使用對應表單，起飛生優先。",
+        "billing_country": "免費單次課程。",
+        "identity_residency": "按校內學籍與起飛生身分處理。外校名額待主辦確認。",
+        "terms_restrictions": "錄取以校方郵件通知為準。完成全程才取得公告中的學習時數。",
+        "taiwan_note": "Yes：國立東華大學在學學生可依校內條件報名。"
+      },
+      "unknowns": [
+        "精確收件時間、即時剩餘席次及實際錄取",
+        "實作所需軟體帳戶與可用額度",
+        "法律與監管限制未核"
+      ],
+      "sources": [
+        {
+          "url": "https://icanfly.ndhu.edu.tw/p/404-1162-264042.php",
+          "label": "東華大學主辦公告",
+          "scope": "免費、適用對象、名額、截止與預定課程",
+          "evidence": "本校起飛生及有興趣同學約 50 名，起飛生優先。12/5 在理工學院 PC1 教室上課，11/25 止、11/30 前通知，免費且備有餐食。",
+          "accessed_at": "2026-11-24T06:09:22+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform",
+          "label": "東華一般生表單",
+          "scope": "一般生報名途徑",
+          "evidence": "表單正文列 12/5 AI 生產力實戰工作坊。",
+          "accessed_at": "2026-11-24T06:09:29+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform",
+          "label": "東華起飛生表單",
+          "scope": "起飛生報名途徑",
+          "evidence": "起飛生表單正文另列 12/5 工作坊。",
+          "accessed_at": "2026-11-24T06:09:29+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "verification_scope": "2026-11-24 實讀校方公告與兩份報名表，核對免費、校內對象、起飛生優先、約 50 席、日期及公告的日期式截止；席次、精確收件時間與個案資格未核。",
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "iii-edge-ai-adoption-workshop-2026",
+      "title": "資策會 AI 工具實作與企業導入工作坊｜11/24 18:00 截止",
+      "summary": "資策會在台北舉辦免費 AI 工具實作與企業導入效益工作坊，含 Edge AI 製造應用。適合製造業員工、企業在職人員與即將就業的應屆畢業生。2026-11-24 18:00 截止，限 120 人，收到審核確認才完成報名。詳情及場次地址皆列松山區民生東路四段 133 號 14 樓，頁首另標大安區。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usage_type": "一次性實體培訓名額",
+      "quota_details": "限 120 人，主辦審核。完成本次講座及指定線上培訓合計 15 小時可獲完訓證書。",
+      "usable_duration": "11/24 18:00 截止。活動 11/25，主辦詳情列 09:30 開始報到、17:30 結束，場次欄及報名表列 09:00–17:00。",
+      "setup_cost_basis": "主辦公告免費，報名表應付費用 NT$0。",
+      "access_risk": "詳情與場次列松山區民生東路四段 133 號 14 樓，頁首列大安區。場次時間也有兩種寫法，實際以主辦報名確認為準。",
+      "cancellation": null,
+      "deadline_at": "2026-11-24T18:00:00+08:00",
+      "announcement_at": null,
+      "expires_at": null,
+      "verified_at": "2026-11-24T06:09:28+08:00",
+      "discovered_at": "2026-11-24T06:09:12+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-24T16:30:00+08:00",
+      "eligibility": {
+        "service_availability": "台北實體工作坊，由資策會主辦、DIGITIMES 執行。",
+        "account_eligibility": "主辦列製造業員工、企業在職人員及即將就業的應屆畢業生為適合對象。須經主辦審核。",
+        "billing_country": "報名表列應付新台幣 0 元。",
+        "identity_residency": "公告列適合對象及聯絡資料，未另列國籍或戶籍條件。",
+        "terms_restrictions": "收到主辦確認才完成報名。主辦保留議程與流程變更權。",
+        "taiwan_note": "Yes：台灣製造業員工、企業在職人員及符合條件的應屆畢業生可報名等待審核。"
+      },
+      "unknowns": [
+        "即時名額、個案審核及正式報到通知",
+        "同頁時間及頁首區別差異的最終更正",
+        "課程工具帳戶及額度未核"
+      ],
+      "sources": [
+        {
+          "url": "https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0",
+          "label": "資策會主辦頁",
+          "scope": "日期、詳情地址、審核、費用、名額及報名截止",
+          "evidence": "報名欄列免費、120 人、11/24 18:00 截止。詳情列 11/25 09:30–17:30、松山區民生東路四段 133 號 14 樓。場次欄時間與頁首區別另有差異。",
+          "accessed_at": "2026-11-24T06:09:22+08:00"
+        },
+        {
+          "url": "https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0",
+          "label": "資策會報名表",
+          "scope": "應付費用與報名表場次時間",
+          "evidence": "公開表單應付費用 0，場次列 09:00–17:00。",
+          "accessed_at": "2026-11-24T06:09:28+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "verification_scope": "2026-11-24 實讀資策會活動頁與報名表，核對免費、120 名、審核、報名截止及主辦同頁的時地差異。個案錄取仍待核。",
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-24T04:12:11+08:00",
+  "latest_research_at": "2026-11-24T06:13:59+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T04:06:04+08:00",
-    "completed_at": "2026-11-24T04:12:11+08:00",
+    "started_at": "2026-11-24T06:06:10+08:00",
+    "completed_at": "2026-11-24T06:13:59+08:00",
     "reviewed_ids": [
-      "chroma-cloud-new-user-five-credit-terms-gap",
-      "magicschool-free-educator-generation-limited",
-      "recall-paygo-first-five-recording-hours"
+      "braintrust-startup-pro-six-twelve",
+      "google-buildhybridai-2026-firebase-ai-logic",
+      "nutn-national-ai-project-competition-2026",
+      "runloop-once-fifty-agent-sandbox-pro-trial",
+      "xcrawl-new-account-thousand-credits"
     ],
     "new_ids": [
-      "moda-civil-service-ai-agent-seminar-2026",
-      "ntu-rtc-local-ai-multimodal-workshop-2026"
+      "iii-edge-ai-adoption-workshop-2026",
+      "ndhu-ai-productivity-workshop-2026"
     ],
-    "attempted_failed_ids": [
-      "microsoft-data-days-2026-free-exam-vouchers"
-    ],
+    "attempted_failed_ids": [],
     "unreviewed_existing_count": 1193
   },
   "generated_at": "2026-11-24T02:13:38+08:00",

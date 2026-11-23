@@ -102,7 +102,7 @@ def failed_lookup(record):
     2026-11-10 統計 8 筆紀錄的最新證據是失敗（4 筆已截止、4 筆仍可行動，其中 2 筆當天以瀏覽器渲染結案）。這些紀錄的
     next_review_at 仍是原本的每月日期或人工調整後的日期（stitch 11/20、coze 11/23），
     所以佇列只有在輪替剛好排到它們時才會重讀——而重讀同一批 URL 正是最沒有產出的事。
-    tests/validate.py 已要求失敗後 14 天內重試，這裡把「重試」變成佇列裡獨立、優先於輪替的桶。
+    tests/validate.py 已要求失敗後 14 天內重試。到指定回查時間才排入，未指定者可在冷卻結束後優先於輪替。
     """
     attempt = parse_stamp(record.get("last_review_attempt_at"))
     if attempt is None:
@@ -122,7 +122,7 @@ def classify(record, now, cooldown, window):
     if record.get("status") in CLOSED:
         return {"bucket": None, "closed": True, "due": None, "soonest": None,
                 "verified": None, "failed": None, "fresh": False, "urgent": False,
-                "in_window": False}
+                "in_window": False, "retry_scheduled": False}
     due = parse_stamp(record.get("next_review_at"))
     verified = parse_stamp(record.get("verified_at"))
     closes = [point for point in close_points(record) if point[2] > now]
@@ -134,17 +134,19 @@ def classify(record, now, cooldown, window):
     fresh = touched is not None and now - touched < cooldown
     urgent = soonest is not None and soonest[2] - now <= datetime.timedelta(hours=URGENT_HOURS)
     in_window = soonest is not None and soonest[2] - now <= window
+    retry_scheduled = failed is not None and due is not None and now < due and not (in_window and urgent)
     bucket = None
-    if due is not None and due < now:
-        bucket = "overdue"
-    elif in_window:
-        # 冷卻中的非緊急紀錄不重排；24 小時內到期者不受冷卻限制。
-        bucket = None if (fresh and not urgent) else "closing"
-    elif not fresh and (due is not None or record.get("review_cadence") != "on_new_signal"):
-        bucket = "retry" if failed is not None else "rotation"
+    if not retry_scheduled:
+        if due is not None and due <= now:
+            bucket = "overdue"
+        elif in_window:
+            # 冷卻中的非緊急紀錄不重排；24 小時內到期者不受冷卻限制。
+            bucket = None if (fresh and not urgent) else "closing"
+        elif not fresh and (due is not None or record.get("review_cadence") != "on_new_signal"):
+            bucket = "retry" if failed is not None else "rotation"
     return {"bucket": bucket, "closed": False, "due": due, "soonest": soonest,
             "verified": verified, "failed": failed, "fresh": fresh,
-            "urgent": urgent, "in_window": in_window}
+            "urgent": urgent, "in_window": in_window, "retry_scheduled": retry_scheduled}
 
 
 def explain(records, ids, now=None, window_days=DEFAULT_WINDOW_DAYS,
@@ -167,6 +169,8 @@ def explain(records, ids, now=None, window_days=DEFAULT_WINDOW_DAYS,
             verdict = "已截止／已合併，不進佇列（保留歷史）"
         elif info["bucket"]:
             verdict = f"會排入 [{info['bucket']}]"
+        elif info["retry_scheduled"]:
+            verdict = f"尚未到追查時間（{record['next_review_at']}）"
         elif info["fresh"]:
             hours = (now - touched).total_seconds() / 3600 if touched else None
             verdict = ("冷卻中，不排入：" + (f"{hours:.1f} 小時前才打開官方頁" if hours is not None
@@ -195,16 +199,18 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
     closing_window = []  # 不看冷卻的「視窗內到期」總數，基準數字不能用排入數冒充
     cooled_in_window = 0
     cooled_retry = 0
+    scheduled_retry = 0
 
     for record in actionable:
         info = classify(record, now, cooldown, window)
-        if info["failed"] is not None and info["fresh"]:
+        if info["retry_scheduled"]:
+            scheduled_retry += 1
+        elif info["failed"] is not None and info["fresh"] and info["bucket"] is None:
             cooled_retry += 1
         if info["in_window"]:
             closing_window.append(("closing", record, info["due"], info["soonest"]))
         if info["bucket"] is None:
-            # 落在這裡只剩「冷卻中」與「排程未到且無截止點」兩種；視窗內者要計入冷卻數。
-            if info["in_window"] and info["fresh"] and not info["urgent"]:
+            if info["in_window"] and info["fresh"] and not info["retry_scheduled"]:
                 cooled_in_window += 1
             continue
         if info["bucket"] == "overdue":
@@ -227,7 +233,7 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
     queue = []
     for bucket, record, due, soonest in (overdue + closing + retry + rotation)[:limit]:
         if bucket == "overdue":
-            reason = f"next_review_at {record.get('next_review_at')} 已過"
+            reason = f"next_review_at {record.get('next_review_at')} 已到"
         elif bucket == "closing":
             reason = f"{soonest[0]} {soonest[1]} 將在 {window_days} 天內到期"
         elif bucket == "retry":
@@ -247,6 +253,7 @@ def build_queue(records, now=None, limit=DEFAULT_LIMIT, window_days=DEFAULT_WIND
         "closing_cooled": cooled_in_window,
         "retry": len(retry),
         "retry_cooled": cooled_retry,
+        "retry_scheduled": scheduled_retry,
         "rotation": len(rotation),
         "stale_24h": sum(1 for r in actionable
                          if (parse_stamp(r.get("verified_at")) or datetime.datetime.min)
@@ -290,13 +297,17 @@ def self_test():
         # 反向：昨天的日期期限已過，不得再算到期（仍有未來排程，所以只會落到輪替）。
         {"id": "closing-yesterday-dateonly", "status": "conditional", "next_review_at": iso(days=2), "verified_at": iso(days=-2),
          "deadline_at": (now - datetime.timedelta(days=1)).strftime("%Y-%m-%d")},
-        # 追查失敗要自己成一個桶：最新證據是「讀不到」的紀錄，排程卻還在 10 天後。
-        # 2026-11-10 的 stitch（11/20）與 coze（11/23）就是這樣被排到輪替的尾巴。
-        {"id": "retry-failed", "status": "active", "next_review_at": iso(days=10), "verified_at": iso(days=-5),
+        # 未指定回查時間，冷卻結束後優先於輪替。
+        {"id": "retry-failed", "status": "active", "verified_at": iso(days=-5),
          "last_review_attempt_at": iso(hours=-20), "last_review_attempt_reason": "頁面只回 JS 外殼"},
-        # 上一筆 20 小時前試過（冷卻已過，要排入）；這一筆 2 小時前才試，冷卻內不重排。
-        {"id": "retry-cooled", "status": "active", "next_review_at": iso(days=10), "verified_at": iso(days=-5),
+        {"id": "retry-cooled", "status": "active", "verified_at": iso(days=-5),
          "last_review_attempt_at": iso(hours=-2), "last_review_attempt_reason": "逾時"},
+        # 指定回查時間的紀錄先等待，即使冷卻已過或七天內有截止。
+        {"id": "retry-scheduled", "status": "active", "next_review_at": iso(hours=11),
+         "verified_at": iso(days=-5), "last_review_attempt_at": iso(hours=-20), "deadline_at": iso(days=5)},
+        # 24 小時內截止時，指定回查時間和冷卻都不阻擋排入。
+        {"id": "retry-urgent", "status": "active", "next_review_at": iso(hours=11),
+         "verified_at": iso(days=-5), "last_review_attempt_at": iso(hours=-2), "deadline_at": iso(hours=5)},
         # 失敗後已重新核實者不得再進 retry 桶（較新的成功蓋過較舊的失敗）。
         {"id": "retry-resolved", "status": "active", "next_review_at": iso(days=10), "verified_at": iso(hours=-3),
          "last_review_attempt_at": iso(hours=-30)},
@@ -335,8 +346,14 @@ def self_test():
     assert "retry-resolved" not in ids, "較新的成功核實蓋過較舊的失敗，不得再標成 retry"
     assert "retry-closed" not in ids, "已截止的紀錄即使追查失敗也不排入：讀者已不能行動"
     assert ids.index("retry-failed") < ids.index("rotation-old"), "retry 桶要先於一般輪替"
-    assert baseline["overdue"] == 1 and baseline["closing"] == 3, f"bucket 計數不符: {baseline}"
-    assert baseline["retry"] == 1 and baseline["retry_cooled"] == 1, f"retry 計數不符: {baseline}"
+    assert "retry-scheduled" not in ids, "指定回查時間未到，不能提前排入"
+    assert buckets["retry-urgent"] == "closing", "24 小時內截止可以提前回查"
+    assert baseline["overdue"] == 1 and baseline["closing"] == 4, f"bucket 計數不符: {baseline}"
+    assert baseline["retry"] == baseline["retry_cooled"] == baseline["retry_scheduled"] == 1, baseline
+    scheduled_rows, _ = explain(records, ["retry-scheduled"], now=now)
+    assert scheduled_rows[0]["verdict"].startswith("尚未到追查時間"), scheduled_rows
+    _, due_queue = build_queue(records, now=now + datetime.timedelta(hours=11), limit=20)
+    assert ("overdue", "retry-scheduled") in {(row[0], row[1]) for row in due_queue}
     # `--explain` 必須與 build_queue 說同一件事：手動挑的 ID 若在一小時前才核過，
     # 佇列會因冷卻濾掉它，explain 也要說「冷卻中」而不是「會排入」。
     rows, unknown = explain(records, ["closing-cooled", "rotation-old", "closed-overdue", "no-such-id"],
@@ -353,7 +370,7 @@ def self_test():
     assert cooled_row["cooldown_hours"] == 2.0, f"explain 要回報距上次查核小時數: {cooled_row}"
     # 兩份清單不得互相漏接：retry 的紀錄若同時符合 closing（期限先到），只能出現在 closing 一次。
     assert len(ids) == len(set(ids)), "同一個 ID 不得在佇列出現兩次"
-    print("PASS: queue rules (overdue wins, 12h cooldown, 24h urgency override, date-only deadlines last all day, failed lookups retried before rotation, closed excluded, rotation ordered by next_review_at).")
+    print("PASS: queue rules (due date, 12h cooldown, 24h urgency override, date-only deadlines, scheduled retries, closed excluded, rotation ordered by next_review_at).")
 
 
 def main():
@@ -398,7 +415,8 @@ def main():
     print(f"基準：全庫 {baseline['total']} 筆、可行動 {baseline['actionable']} 筆、"
           f"嚴格逾期 {baseline['overdue']} 筆、{args.window_days} 天內到期 {baseline['closing_window']} 筆"
           f"（其中 {baseline['closing_cooled']} 筆冷卻中未排入）、"
-          f"追查失敗待換路線 {baseline['retry']} 筆（另 {baseline['retry_cooled']} 筆冷卻中）、"
+          f"追查失敗待換路線 {baseline['retry']} 筆（另 {baseline['retry_cooled']} 筆冷卻中、"
+          f"{baseline['retry_scheduled']} 筆未到回查時間）、"
           f"24 小時未核 {baseline['stale_24h']} 筆、12 小時內已核 {baseline['reviewed_12h']} 筆")
     print(f"佇列（冷卻 {args.cooldown_hours}h、優先序 overdue→closing→retry→rotation）：")
     for bucket, record_id, reason, due, closes, verified in queue:
