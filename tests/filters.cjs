@@ -830,3 +830,35 @@ console.log('PASS: review summary renders the failed count only when present.');
   assert(fs.readFileSync(__dirname + '/../app.js', 'utf8').includes("'deadline-passed'"), 'card must render the passed-deadline pill');
   console.log('PASS: passed close points are flagged on actionable records and stay silent for closed records, future dates and month-only expiry.');
 }
+
+// New collection order is independent of verification, announcements, source order and tier.
+{
+  const samples = [
+    { id: 'missing', verified_at: '2099-01-01', announcement_at: '2099-01-01' },
+    { id: 'older-rechecked', discovered_at: '2026-10-01', verified_at: '2026-11-30', priority_tier: 'S' },
+    { id: 'new-first', discovered_at: '2026-11-23T13:08:00+08:00', verified_at: '2026-11-20' },
+    { id: 'new-second', discovered_at: '2026-11-23T05:08:00Z', verified_at: '2026-11-21' },
+    { id: 'bad-date', discovered_at: '2026-02-30' },
+    { id: 'date-only', discovered_at: '2026-11-23' },
+    { id: 'minute-stamp', discovered_at: '2026-11-23T01:01+08:00' },
+    { id: 'null-date', discovered_at: null },
+    { id: 'no-timezone', discovered_at: '2026-11-24T10:00:00' }
+  ];
+  assert.deepStrictEqual(samples.slice().sort(ctx.byAdded).map(o => o.id), [
+    'new-first', 'new-second', 'minute-stamp', 'date-only', 'older-rechecked',
+    'missing', 'bad-date', 'null-date', 'no-timezone'
+  ]);
+  assert.strictEqual(ctx.discoveryInstant({ discovered_at: '2026-11-23' }), Date.parse('2026-11-22T16:00:00Z'));
+  for (const o of d.offers) assert.notStrictEqual(ctx.discoveryInstant(o), null, `unusable collection date: ${o.id}`);
+  const addedCard = ctx.createCard(samples[1]);
+  const addedFoot = addedCard.children.find(n => n.className === 'card-foot');
+  assert.strictEqual(addedFoot.children.find(n => n.className === 'discovered-date').textContent, '新增 2026-10-01');
+  assert.strictEqual(addedFoot.children.find(n => n.className === 'verified-date').textContent, '核實 2026-11-30');
+  ctx.URLSearchParams = URLSearchParams;
+  for (const value of ['added', 'fresh', 'deadline', 'cost', '', 'priority']) {
+    assert.strictEqual(ctx.sortFromSearch(`?sort=${value}&q=unrelated`), value);
+  }
+  assert.strictEqual(ctx.sortFromSearch(''), 'priority');
+  assert.strictEqual(ctx.sortFromSearch('?sort=unknown'), 'priority');
+  console.log('PASS: newest collections stay separate from reviews, equal/missing dates are stable, Taipei dates and shareable sort values are supported.');
+}
