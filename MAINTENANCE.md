@@ -6651,3 +6651,47 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與防護狀態。
+
+
+## 2026-11-23 12:06–2026-11-23 12:08 Asia/Taipei｜N=1,175 · R=20 · A=2 · U=1,155 · attempted=0
+
+### 複核紀錄（20 筆成功，0 筆失敗）
+- `stepfun-stepaudio3-music-gen-preview-nov8`：實讀官方模型指南與定價通知，確認限時免費預覽於 2026-11-23 11:59:59 AM UTC+8 正式截止，正式版計費（Music $2.40/$4.80每小時、Gen $14/1M字元）於同日 12:00:00 PM 生效，預覽模型退役，狀態標記為 `expired`，退出每日排程改為 `monthly_or_new_signal`，評級轉為 D 級。
+- `huggingface-community-gpu-grant-watch`：實讀 Hugging Face Spaces GPU 文檔（https://huggingface.co/docs/hub/en/spaces-gpus），確認社群免費 GPU 申請與硬體規格說明維持。
+- `firecrawl-monthly-free-shared`：實讀 Firecrawl 官方定價頁（https://www.firecrawl.dev/pricing），確認 Free 方案每月 500 credits 與免信用卡條款不變。
+- `aliyun-model-studio-new-user-quota`：實讀阿里雲百煉 Model Studio 新用戶免費額度文檔（https://www.alibabacloud.com/help/en/model-studio/new-free-quota），確認新用戶各模型免費 Token 配額政策有效。
+- `cerebrium-thirty-trial-compute-credit`：實讀 Cerebrium 官方無伺服器計算文檔（https://cerebrium.ai/resources/serverless-computing），確認新用戶算力試用說明有效。
+- `hindsight-cloud-once-welcome-credit-amount-unknown`：實讀 Hindsight 官方組織設定文檔（https://docs.hindsight.vectorize.io/cloud/settings/），確認雲端版初始額度與帳戶設定說明正常。
+- `activepieces-free-reset-source-conflict`：實讀 Activepieces 定價頁（https://www.activepieces.com/pricing），確認 Free 方案每月執行次數與開源版本說明維持。
+- `wda-enterprise-hr-upgrade-training-subsidy-116`：實讀勞動部勞動力發展署官方公告（https://www.wda.gov.tw/News_Content.aspx?n=31&s=19198），確認企業人力資源提升計畫及雙軸轉型人才培訓補助政策持續受理。
+- `openai-startup-vc-referral-api-credit`：實讀 OpenAI for Startups 官方主頁（https://openai.com/business/why-openai/startups/），確認創投轉介新創 API 額度方案說明維持。
+- `notion-business-trial-standard-select-credits`：實讀 Notion 付費方案試用文檔（https://www.notion.com/help/paid-plan-trials），確認商業版試用與點數抵扣規則說明維持。
+- `codeai-ai-101-free-educator-course`：實讀 Code.org AI 101 教師專業學習課程頁面（https://code.org/en-US/professional-learning/artificial-intelligence-101），確認免費研習課程持續開放。
+- `consensus-student-faculty-forty-percent`：實讀 Consensus 學生與臨床人員折扣文檔（https://help.consensus.app/en/articles/10064359-how-to-get-a-student-or-clinician-discount），確認 40% 折扣申請說明維持。
+- `lovable-sweden-2026`：實讀 Lovable 瑞典返校優惠條款頁（https://back-to-school.lovable.app/terms），確認學生專案條款文檔正常開放。
+- `github-codespaces-personal-free-quota`：實讀 GitHub Codespaces 計費文檔（https://docs.github.com/en/billing/concepts/product-billing/github-codespaces），確認個人帳戶每月 60 小時核心免費配額政策維持。
+- `awan-lite-free-size-tier-daily`：實讀 Awan LLM 定價頁（https://www.awanllm.com/pricing），確認 Lite 方案永久免費、20 req/min 與小模型無限制存取規則維持。
+- `requesty-free-models-two-hundred-daily`：實讀 Requesty 免費模型頁面（https://www.requesty.ai/free-models），確認 Free Tier 每日 200 requests 免費 AI 模型呼叫持續提供。
+- `elements-of-ai-building-free-course-paid-certificate`：實讀 Elements of AI 官網（https://www.elementsofai.com/），確認 Building AI 免費學習課程持續開放。
+- `elements-of-ai-introduction-free-course-certificate`：實讀 Elements of AI 官網（https://www.elementsofai.com/），確認 Introduction to AI 免費入門課程及證書政策維持。
+- `ibm-watsonx-lite-free-tier`：實讀 IBM watsonx.ai 定價頁（https://www.ibm.com/products/watsonx-ai/pricing），確認 Lite 方案免費存取與月度資源配額政策維持。
+- `brightdata-ai-startup-up-to-twenty-k`：實讀 Bright Data AI Startups 方案頁（https://brightdata.com/ai/ai-startups-program），確認最高 US$20,000 額度申請管道維持。
+
+### 新增紀錄（2 筆）
+- `nstc-115-smart-healthcare-key-tech-grant`：國科會工程技術研究發展處配合「健康臺灣」政策推動之 115 年度「智慧醫療關鍵技術研發專案計畫」（學門代碼：E9881），聚焦在宅照護、在宅住院、AI 軟體輔助及健康生活評估四大主題，4 年期單一整合型研發全額補助。
+- `kaggle-orbit-wars-simulation-challenge`：Kaggle 官方舉辦之即時策略（RTS）AI 智能體競賽「Orbit Wars」，總獎金池達 50,000 美元，自主決策太空艦隊對戰，免費參賽並提供每週 30 小時 GPU 與 20 小時 TPU 算力環境。
+
+### 品質改善
+- 嚴格追蹤時限並切換生命週期狀態：精確確認 `stepfun-stepaudio3-music-gen-preview-nov8` 限時免費預覽於 2026-11-23 11:59:59 截止，自 12:00:00 起全面切換至正式付費計費，果斷將狀態轉為 `expired`，調降為 D 級歷史記錄，並退出每日高頻佇列。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 205 筆，A 級維持 200 筆，D 級增至 138 筆。
+
+### 未解證據缺口
+- `huggingface-community-gpu-grant-watch`：社群免費 GPU 實際獲准配發之硬體型號與使用時限依個案審核。
+- `activepieces-free-reset-source-conflict`：官方定價頁與文檔間對於免費執行任務次數之重置週期敘述未完全統一。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+4. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
+5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與防護狀態。

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,175 筆**（955 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 11:14 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,154 筆**既有紀錄未完成本輪複核。重點確認 StepAudio 3 音樂預覽限時免費仍在最後倒數（至 11:59:59 截止，12:00 新價生效）、Turboscribe 遭遇 Cloudflare 反爬蟲驗證攔截（保留舊查閱時間排入重試）、Supabase AWS Activate 新創 $300 額度、Context.dev 每月 1,000 credits、DigitalOcean Startups 核心方案排除 GPU、Parseur 每月 20 點 AI 擷取、Buzz 開源本機轉錄、Jan Desktop 本機 API、Vinci 新創 $10K 客服額度、Cerebras Early Access 與大使計畫、ChatPDF 每日免費額度、Mathpix Snip 教育加倍、Reclaim 教育五折與 Lite 免費排程、Vocol 繁中註冊贈 200 點、ScrapeGraphAI、Work/Codex 方案及 OCI AI 免費層，並新增 Kaggle NVIDIA Nemotron 模型推理挑戰賽（總獎金 $106,388）與國科會工程處 115 年度智慧機器人關鍵技術研發專案補助案（每案每年最高 2,000 萬元）。
+資料集目前有 **1,177 筆**（957 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 12:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,155 筆**既有紀錄未完成本輪複核。重點確認 StepAudio 3 音樂與語音預覽限時免費已於 11:59:59 正式截止退役並轉為正式計費（標記 expired）、Hugging Face Spaces GPU 免費配額、Firecrawl 每月 500 次抓取、阿里雲百煉新用戶模型額度、Cerebrium 無伺服器算力、Hindsight 雲端初始額度、Activepieces 免費執行次數、勞動部企業人資培訓雙軸轉型加碼補助、OpenAI 新創方案、Notion 商業版試用、Code.org 教師 AI 101 研習、Consensus 學生教職 40% 折扣、Lovable 學生專案、GitHub Codespaces 每月 60 小時、Awan LLM Lite 免費層、Requesty 每日 200 次免費模型 API、Elements of AI 免費證書、IBM watsonx.ai Lite 配額及 Bright Data 新創 $20K 額度，並新增國科會工程處 115 年度智慧醫療關鍵技術研發專案補助案（E9881）與 Kaggle Orbit Wars 即時策略模擬競賽（總獎金 $50,000）。
 
 ## 使用方式
 
