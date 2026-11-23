@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,179 筆**（959 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 13:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,158 筆**既有紀錄未完成本輪複核。重點確認 Swarms 官方申請頁遭遇 HTTP 429 請求過頻限制（保留舊查閱時間排入重試）、經濟部深科技跨域研發補助申請須知維持、Brisk Teaching 教師免費方案、魔搭 ModelScope API 每日 250 次免費調用、SchoolAI 空間試用、Pika 每日免費額度、Descript 每月免費 60 分鐘、Otter 免費每月 300 分鐘、Traceloop 每月 50,000 spans 與加入 ServiceNow 政策、Poe 每日運算積分、OVHcloud 雲端折抵、Morph 新創額度、Cloudflare Workers 每日 10 萬次請求、Claude 非營利折扣、Arize 新創 6 個月 Ax Pro、Zencoder 試用、Lambda Inception $1,000 算力、ElevenLabs 每月 10,000 字元、酷英網 Cool English 英語 AI 學習平臺及 Emergent 定價方案，並新增國科會生科與工程處 115 年度「人工智慧賦能加速藥物開發計畫」（最高補助 3,000 萬元/年）與 Kaggle Stanford RNA 3D Folding 立體結構預測挑戰賽（總獎金 $75,000）。
+資料集目前有 **1,181 筆**（961 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 14:08 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,160 筆**既有紀錄未完成本輪複核。重點確認 Microsoft Data Days 官方部落格遭遇 HTTP 403 攔截（保留舊查閱時間排入重試）、Pokee 開發者計畫早期存取額度、遠傳 5G 帳單折抵、Pixel 11 Pro 贈送 6 個月 Google AI Pro、中央大學 Uedu 跨校 AI 教學平臺、國道智慧創意競賽、毓秀獎數位內容競賽、Oracle Agentic AI Foundations 免費證照、Kaggle Enveda 質譜競賽、monday.com 非營利方案、Pitch 終身 AI 點數、Xtensio 一次性點數、Google Flow 每日點數、Mindee 14 天試用、Upstage 一次性額度、Google TPU 研究雲配額、Venice 每日文字圖像生成、Fibery 教育非營利半價、Freshservice Agent Studio 試用及 Augment Code 3 萬點試用，並新增國科會前瞻處「邁向新世代前瞻人工智慧研究專案計畫」（最高 500 萬元/年）與 Kaggle ARC Prize 通用人工智慧抽象推理競賽（總獎金池 $1,100,000）。
 
 ## 使用方式
 

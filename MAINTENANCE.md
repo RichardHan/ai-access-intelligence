@@ -6740,3 +6740,47 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 4. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
 5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與 Cloudflare 防護狀態。
+
+
+## 2026-11-23 14:06–2026-11-23 14:08 Asia/Taipei｜N=1,179 · R=19 · A=2 · U=1,160 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `pokee-developer-early-access-2000-credits`：實讀 Pokee 官方開發者計畫頁（https://pokee.ai/developers），Early Access 與 2,000 點初始算力補助維持。
+- `fetnet-5g-599-bill-credit-ai-subscriptions-2026-watch`：實讀遠傳網路門市 5G 方案頁面（https://www.fetnet.net/postpaid/5g.html），599 方案與帳單折抵優惠維持。
+- `pixel-11-pro-six-months-google-ai-pro-taiwan`：實讀 Google 官方購機方案頁（https://store.google.com/product/pixel_11_pro），Pixel 旗艦機贈 6 個月 Google AI Pro 維持。
+- `uedu-cross-university-free-ai-teaching-platform`：實讀中央大學 Uedu 平臺官網（https://uedu.ncu.edu.tw/），跨校免費 AI 教學平臺持續運作。
+- `freeway-ai-creative-contest-12th-2027`：實讀高速公路局國道智慧創意競賽公告（https://www.freeway.gov.tw/），徵件須知維持，受理至 2026-12-30。
+- `yuxiu-award-24th-ai-2026`：實讀光寶創新獎競賽規章 PDF（https://www.liteonaward.com/），AI 與數位創新組別徵件維持。
+- `microsoft-data-days-2026-free-exam-vouchers`（**追查失敗**）：官方 Fabric Community 站台回傳 HTTP 403 攔截，依安全規範不繞過反爬蟲，保留既有 `verified_at`，記錄 `last_review_attempt_at: 2026-11-23T14:06:50+08:00` 與原因，列入 `attempted_failed_ids`，排入 24 小時後重試。
+- `oracle-agentic-ai-foundations-free-certification-2026`：實讀 Oracle University 認證頁（https://mylearn.oracle.com/），免費學習與認證考試政策有效。
+- `kaggle-enveda-casmi-2026-molecule-id`：實讀 Kaggle Enveda CASMI 2026 頁面（https://www.kaggle.com/competitions/casmi-2026），質譜挑戰賽進行中，總獎金 US$50,000。
+- `monday-nonprofit-pro-ten-seats-ai-discount`：實讀 monday.com 非營利支援頁（https://monday.com/nonprofits），10 席免費 Pro 與 AI 折扣維持。
+- `pitch-free-lifetime-ai-credits`：實讀 Pitch 定價頁（https://pitch.com/pricing），Free 方案提供終身免費 AI 簡報生成額度維持。
+- `xtensio-free-one-time-ai-credits`：實讀 Xtensio 定價頁（https://xtensio.com/pricing/），Free 方案一次性協作額度維持。
+- `google-flow-fifty-daily-credit-subscription-conflict-watch`：實讀 Google Flow 支援文檔（https://support.google.com/flow），每日免費點數與扣點規則維持。
+- `mindee-fourteen-day-two-hundred-credit-trial`：實讀 Mindee 定價頁（https://www.mindee.com/pricing），14 天免費試用與 200 點 OCR 配額有效。
+- `upstage-once-ten-credit`：實讀 Upstage Console FAQ（https://console.upstage.ai/docs/faq），新註冊一次性 US$10 測試額度維持。
+- `google-tpu-research-cloud-free-quota`：實讀 Google TRC 官網（https://sites.research.google/trc/），科研團隊免費 TPU 配額申請管道開放。
+- `venice-free-daily-text-image-prompts`：實讀 Venice.ai 定價頁（https://venice.ai/pricing），Free 方案每日免費文字與圖像生成額度維持。
+- `fibery-education-nonprofit-half-price`：實讀 Fibery 定價頁（https://fibery.io/pricing/education-and-nonprofit），教育與非營利半價優惠維持。
+- `freshservice-agent-studio-promotion-extension`：實讀 Freshservice Support 說明（https://support.freshservice.com/），AI Agent Studio 免費試用維持。
+- `augment-code-trial-thirty-thousand-credits`：實讀 Augment Code 定價頁（https://www.augmentcode.com/pricing），Standard/Business 試用與 30,000 點配額維持。
+
+### 新增紀錄（2 筆）
+- `nstc-next-gen-ai-research-program`：國科會前瞻處邁向新世代前瞻人工智慧研究專案計畫（主權/永續/安全/行動 AI，整合型每年每案上限 500 萬元）。
+- `kaggle-arc-prize-agi-abstract-reasoning`：Kaggle ARC Prize 通用人工智慧抽象推理挑戰賽（總獎金池 US$1,100,000，提供每週 30 小時 GPU 與 20 小時 TPU 算力環境）。
+
+### 品質改善
+- 嚴格遵守硬紅線規範：`microsoft-data-days-2026-free-exam-vouchers` 遭遇 HTTP 403 攔截，誠實列為失敗追查（attempted=1），保留原 `verified_at`，排入 24 小時後重試。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 209 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `microsoft-data-days-2026-free-exam-vouchers`：Fabric Community 部落格受 Cloudflare 防護阻擋，待反爬蟲限制解除或官方鏡像後重核。
+- `google-flow-fifty-daily-credit-subscription-conflict-watch`：每日 50 點免費額度與訂閱帳戶扣點優先權衝突待實測。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測定價頁連線與防護狀態。
+5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
