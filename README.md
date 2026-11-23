@@ -13,6 +13,7 @@
 - 「免費方案」收錄設定費與月費皆為零的項目。費用缺值時須有明確免費標記；任一費用已知大於零即排除。可行動專區也排除暫停開放、已截止、疑似過期、公告終止與重複收錄的項目。
 - 「無限／暫時不限量」和免費額度選單都依據 `quota_classification`。點開「資格、限制與來源」可查看適用條件、證據、查閱時間與下次複核安排。
 - 預設按綜合優先度排序。選「截止日由近到遠」可先看有未來截止點的紀錄；60 天內到期的卡片會顯示倒數。每次載入 24 筆。
+- 想先看新收錄的項目，點「最新新增優先」或在「排序方式」選同名選項；也可直接開啟 [最新新增優先](https://richardhan.github.io/ai-access-intelligence/?sort=added#opportunities)。排序依首次發現／收錄時間 `discovered_at`，不受後續複核影響；「最近核實」則依 `verified_at`。同時刻維持原始順序，日期缺漏或無效時置後。排序會保留在網址中，可重新整理或分享；搜尋與其他篩選仍依目前畫面設定。
 
 - [完整研究資料](data/offers.json)
 - [政策歷史](data/policy-history.json)
@@ -56,6 +57,7 @@ make check
 ```
 
 已安裝 Google Chrome 的環境可再執行 `make check-ui`，以手機與桌面寬度檢查搜尋、篩選與載入更多。
+PR 與主線推送另由 Frontend QA 執行 `make check` 與 `make check-ui`；CI 使用固定版本的 Playwright 瀏覽器映像，不需在每輪下載瀏覽器。
 
 ## 維護
 
@@ -65,3 +67,4 @@ make check
 2. 執行 `python3 tools/queue.py --limit 20` 取得候選清單。順序為逾期、七日內截止、追查失敗待重試、輪替補位。`--explain ID` 顯示個案排入原因，`--json` 輸出結構化結果。
 3. 複核時保留穩定 ID、來源與政策歷史。以實際查閱時間更新證據，並在 `verification_scope` 寫出查到的主張。需要檢查引用網址時，執行 `python3 tools/linkcheck.py --record ID`。
 4. 資料改動後重算優先度、更新 README 首段與批次摘要，再執行 `make check`。驗證輸出會另列引用網址相同的紀錄，以及核實日期比所有來源晚超過七天的紀錄，供人工複核。
+5. 新紀錄必須填入首次發現／收錄時間 `discovered_at`（日期或含時區的 ISO 時間戳）；後續複核保留原值，不可用 `verified_at` 或官方公告日覆寫。本次為 33 筆缺值舊紀錄依 Git 歷史首次出現時間補登，`discovered_at_source` 保存 `git:<commit SHA>` 供追溯；此時間代表最早可證明的 repo 收錄時間。

@@ -99,7 +99,7 @@ function dateLabel(value, includeTime = false) {
   return new Intl.DateTimeFormat('zh-TW', {
     timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit',
     ...(includeTime ? { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' } : {})
-  }).format(date);
+  }).format(date).replace(/\s/g, ' ');
 }
 
 const UNLIMITED_QUOTA = new Set(['OFFICIALLY UNLIMITED', 'TEMPORARILY UNLIMITED']);
@@ -238,6 +238,45 @@ function bySetupCost(a, b) {
   const left = a.setup_cost_usd ?? Infinity;
   const right = b.setup_cost_usd ?? Infinity;
   return left === right ? 0 : left - right;
+}
+
+// 收錄時間與複核／官方公告時間分開；重讀舊資料不能把它變成新收錄。
+// 只有日期的舊值以台北當日 00:00 排序；缺值或無效日期留在最後，並維持原始順序。
+function discoveryInstant(offer) {
+  const raw = typeof offer.discovered_at === 'string' ? offer.discovered_at.trim() : '';
+  if (!/^\d{4}-\d{2}-\d{2}(?:[Tt]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:[Zz]|[+-]\d{2}:\d{2}))?$/.test(raw)) return null;
+  const day = Date.parse(`${raw.slice(0, 10)}T00:00:00Z`);
+  if (!Number.isFinite(day) || new Date(day).toISOString().slice(0, 10) !== raw.slice(0, 10)) return null;
+  const at = Date.parse(raw.length === 10 ? `${raw}T00:00:00+08:00` : raw);
+  return Number.isFinite(at) ? at : null;
+}
+
+function byAdded(a, b) {
+  const left = discoveryInstant(a);
+  const right = discoveryInstant(b);
+  if (left === right) return 0;
+  if (left === null) return 1;
+  if (right === null) return -1;
+  return right - left;
+}
+
+const SORT_VALUES = ['priority', '', 'added', 'fresh', 'deadline', 'cost'];
+function sortFromSearch(search) {
+  const value = new URLSearchParams(search).get('sort');
+  return SORT_VALUES.includes(value) ? value : 'priority';
+}
+
+function restoreSortFromUrl() {
+  const control = $('#filters')?.elements.namedItem('sort');
+  if (control) control.value = sortFromSearch(window.location.search);
+}
+
+function syncSortUrl(value) {
+  if (!SORT_VALUES.includes(value) || typeof window === 'undefined' || !window.history?.replaceState) return;
+  const url = new URL(window.location.href);
+  if (value === 'priority') url.searchParams.delete('sort');
+  else url.searchParams.set('sort', value);
+  if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url);
 }
 
 function statusInfo(offer) {
@@ -508,6 +547,10 @@ function createDetails(offer) {
   // 最久 930 天，例：salad-ssap-migration-credit-watch 公告 2024-04-24、核實 2026-11-10）。
   // 有值就照原文列（含時刻的 ISO 字串不換算，避免把只有年月的值推成某一天）；無值不補猜測。
   if (offer.announcement_at) addRow(grid, '官方公告日期', offer.announcement_at);
+  if (discoveryInstant(offer) !== null) {
+    const basis = offer.discovered_at_source?.startsWith('git:') ? '（依首次收錄紀錄補登）' : '';
+    addRow(grid, '首次收錄時間', `${dateLabel(offer.discovered_at, true)} Asia/Taipei${basis}`);
+  }
   addRow(grid, '核實時間', offer.verified_at ? `${dateLabel(offer.verified_at, true)} Asia/Taipei` : '未核實');
   const cadence = {
     daily: '每日', monthly: '每月輪替', weekly: '每週', biweekly: '雙週輪替',
@@ -638,6 +681,7 @@ function createCard(offer) {
     foot.append(text('span', `${closing.label} ${closing.text}${closing.days === 0 ? ' · 今天' : ` · 剩 ${closing.days} 天`}`, `deadline-pill${soon ? ' deadline-soon' : ''}`));
   }
   foot.append(text('span', status.label, `status-pill status-${status.tone}`));
+  if (discoveryInstant(offer) !== null) foot.append(text('span', `新增 ${dateLabel(offer.discovered_at)}`, 'discovered-date'));
   foot.append(text('span', `核實 ${dateLabel(offer.verified_at)}`, 'verified-date'));
   const failedAttempt = latestAttemptFailed(offer);
   if (failedAttempt) {
@@ -667,6 +711,10 @@ function updatePresetButtons() {
     button.classList.toggle('active', selected);
     button.setAttribute('aria-pressed', String(selected));
   });
+  const sort = $('#filters')?.elements.namedItem('sort')?.value;
+  document.querySelectorAll('[data-sort]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.sort === sort));
+  });
 }
 
 function render() {
@@ -677,12 +725,14 @@ function render() {
   filteredOffers = dataset.offers.filter(offer => (!recentIds || recentIds.has(offer.id))
     && presetMatches(offer, activePreset, filters));
   if (filters.sort === 'priority') filteredOffers.sort(byPriority);
+  if (filters.sort === 'added') filteredOffers.sort(byAdded);
   if (filters.sort === 'fresh') {
     const verified = offer => Date.parse(offer.verified_at) || 0;
     filteredOffers.sort((a, b) => verified(b) - verified(a));
   }
   if (filters.sort === 'deadline') filteredOffers.sort(byDeadline);
   if (filters.sort === 'cost') filteredOffers.sort(bySetupCost);
+  syncSortUrl(filters.sort);
 
   visibleCount = 0;
   const cards = $('#cards');
@@ -815,6 +865,18 @@ function bindEvents() {
   });
   document.querySelectorAll('[data-preset]').forEach(button => {
     button.addEventListener('click', () => applyPreset(button.dataset.preset));
+  });
+  document.querySelectorAll('[data-sort]').forEach(button => {
+    button.addEventListener('click', () => {
+      const control = form?.elements.namedItem('sort');
+      if (control) control.value = button.dataset.sort;
+      onFilterChange('sort');
+    });
+  });
+  restoreSortFromUrl();
+  window.addEventListener('popstate', () => {
+    restoreSortFromUrl();
+    render();
   });
   let more = $('#load-more');
   if (!more && $('#cards')) {
