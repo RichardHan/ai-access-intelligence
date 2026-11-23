@@ -6921,3 +6921,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追踪 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
 5. `kaggle-free-notebook-compute`：24 小時後重測連線與 Cloudflare reCAPTCHA 防護狀態。
+
+
+## 2026-11-23 18:06–2026-11-23 18:15 Asia/Taipei｜N=1,187 · R=20 · A=2 · U=1,167 · attempted=0
+
+### 複核紀錄（20 筆成功，0 筆失敗）
+- `make-ngo-program-twelve-month-pro-40k-ops`：實讀 Make.com 官方 NGO Program 頁面，確認合格非營利組織享有 12 個月 Pro 方案免費（每月 40,000 operations）政策維持。
+- `granola-students`：實讀 Granola 學生專頁、Tally 表單與定價頁，確認美英加在學學生享 12 個月 Business 方案免費試用維持。
+- `bruin-cloud-starter-free`：實讀 Bruin 官方定價與條款頁，確認 Bruin Cloud 試用包含 100 compute 點數與 50 個 pipeline tasks 架構維持。
+- `inworld-shared-credit-free-creator`：實讀 Inworld AI 定價與服務條款，確認 On-Demand 免費試音與推論點數機制維持。
+- `flutterflow-education-free-year`：實讀 FlutterFlow 官方定價頁，確認教育方案提供大學生與教師申請一年免費進階功能之政策維持。
+- `softr-free-five-ai-credits`：實讀 Softr 官方方案與定價頁，確認 Free 方案每月提供 5 點 AI 點數、無限制 App 與資料庫連線政策維持。
+- `hyper3d-rodin-free-preview-pay-per-result`：實讀 Hyper3D Rodin 定價頁面，確認 3D 生成提供免費低解析預覽、確認匯出才扣除點數之模式維持。
+- `rows-free-five-ai-tasks`：實讀 Rows 官方定價頁面，確認 Free 方案提供每月 5 次 AI Tasks 與試算表不限數量政策維持。
+- `click-managed-agents-free-sandbox-search`：實讀 Click 官方 API 定價頁，確認提供每月 1 小時沙箱與 100 次搜尋之免費額度維持。
+- `huawei-codearts-agent-experience-free-five-million-tokens`：實讀華為雲碼道 CodeArts 產品定價頁，確認體驗版每月提供 500 萬 tokens 與 50 席位規格維持。
+- `nutrient-data-extraction-free-five-thousand-credits-monthly`：實讀 Nutrient 官方 API 定價頁，確認 Data Extraction API Free 方案每月 5,000 點數維持。
+- `voicegain-signup-fifty-usd-stt-credit`：實讀 Voicegain 開發者頁面，確認註冊即享 US$50 語音 STT 額度、免信用卡政策維持。
+- `camb-ai-free-five-thousand-one-time-credits`：實讀 CAMB.AI 定價頁面，確認 Free 方案提供一次性 5,000 credits 體驗維持。
+- `supermemory-monthly-free-balance`：實讀 Supermemory 定價與條款頁，確認每月提供 USD$5 免費使用餘額之架構維持。
+- `ai-horde-community-free-queued-api`：實讀 AI Horde 使命說明與 API 條款，確認社群分散式志願算力文字與圖片生成免卡 API 維持。
+- `pollinations-classic-anonymous-free-api`：實讀 Pollinations 官方條款與文檔，確認免帳戶、依 IP 限速之免費文字與圖像多模態 API 維持。
+- `speechmatics-starting-hundred-not-recurring`：實讀 Speechmatics 定價、計費文件與條款，確認免卡註冊提供 US$100 一次性起始額度（非每月循環）維持。
+- `speaknotes-sixty-live-not-sandbox-unlimited`：實讀 SpeakNotes 開發者定價與條款頁，確認每月 60 分鐘真實處理額度、沙箱僅提供模擬輸出維持。
+- `agentmail-free-human-verified`：實讀 AgentMail 定價與知識庫，確認經人類認領後可建 3 個信箱及每日寄信限額架構維持。
+- `soniox-app-free-weekly-shared`：實讀 Soniox App 定價與說明中心，確認每週免費語音額度跨裝置共用架構維持。
+
+### 新增紀錄（2 筆）
+- `moea-sme-sbir-central-ai-smart-application-grant`：經濟部中企署「中央型SBIR」（AI 智慧應用研發補助，Phase 1 先期研究最高 150 萬元、Phase 2 細部研發最高 600 萬至 1,200 萬元，補助比例 50%，常態線上受理）。
+- `moc-tech-art-ai-creation-grant`：文化部「科技藝術創作發展補助」（鼓勵運用 AI 人工智慧、互動感測、XR 沉浸科技進行科技藝術與文化創新創作，每案最高補助新臺幣 5,000,000 元）。
+
+### 品質改善
+- 嚴格落實反集中與最久未核替換：選取自 2026-11-08/09 起逾兩週未核之 20 筆各類開源社群、音訊 AI 與開發工具，成功完成全數官方來源 100% 連線實讀。
+- 開拓中央部會 AI 研發與文化科技補助：補齊經濟部中企署中央型 SBIR 及文化部科技藝術 AI 創作要點，平衡地方與中央產業光譜。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 216 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `hyper3d-rodin-free-preview-pay-per-result`：低解析度預覽在各終端渲染時的浮水印政策與網格頂點限制細節待後續實測補充。
+- `agentmail-free-human-verified`：人類認領機制之第三方信箱認證冷卻時間與每日發送封數上限之動態閥值仍需持續追蹤。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與名單審核狀況。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
+4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追蹤 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
+5. `kaggle-free-notebook-compute`：24 小時後重測連線與 Cloudflare reCAPTCHA 防護狀態。
