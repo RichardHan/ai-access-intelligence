@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,185 筆**（965 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 16:28 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,163 筆**既有紀錄未完成本輪複核。重點確認 IteraCompute 3,000 萬 tokens 免費倒數在 24 小時內截止、Adobe Express 非營利 250 點生成額度、Roboflow Core Free 每月 10 點、Raycast 學生 5 折優惠、Arcade 代理工具免卡每月 2,000 次、Reflection Beam 公開 Beta 存取與時區重置衝突、Databricks Free Edition 非商用 AI 資料平台、Vercel Startups Flex Commit 最高 $30,000 額度、Zed Pro 14 天試用（$5 額度限 Luna）、Upstage 機構免費存取至 2027/3/31、Google AICore 開發者預覽本機推論、Parallel 綁卡組織每月 $5 額度、Linkup 工作信箱每月補足 $20、Lumenfall 免卡註冊送 $1 額度、ZenML Pro Starter 14 天試用、ElevenLabs 教授 12 個月 Pro 存取碼、ElevenReader 學生一年免費有聲閱讀、Fish Audio 學生語音點數、imagi 教師 25 點 Lovable（更新付費版至 $899）及 Whimsical 教育一年 Pro（一次性 10 點 AI），並新增數位發展部數產署「AI 人才與偏鄉數位提升共育計畫」（12 週免費培訓與證照最高補貼 4,000 元）與 Anthropic Claude Corps 國家級 AI 公益部署計畫（非營利獲全額資助進駐 AI Fellow 與 $2,500 Claude 點數）。
+資料集目前有 **1,187 筆**（967 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 17:15 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,166 筆**既有紀錄未完成本輪複核。重點確認 Kaggle 遭遇 reCAPTCHA 驗證頁面阻擋記錄追查失敗（保留原查驗時間排入重試）、商業發展署服務業 AI 培訓台北班報名至 11/27、Fish Audio 免費 TTS 模型維持 $0/M bytes、Composio 3 人 Free 方案 5 連線 25 技能、Braintrust Starter 免卡基礎追蹤評估、KakaoCloud 新創最高 3,500 萬韓元額度、Lovable 學生 5 折 Pro 優惠、Krater 學生首年 15% 折扣、Beam 隨用隨付無免費額度、SiliconFlow 註冊試用額度、AssemblyAI 語音試用方案、Chutes 隨用隨付機密推論、Browserless 無頭瀏覽器方案、Oumi 自主訓練平臺架構、Krisp 免卡 7 天會議試用、Paperpal 每日 5 次學術編輯、Sourcery 開源代碼免費審查、Julius 免費數據分析訊息額度、Requesty 新創 $1,000 額度及 Genially 教育版年分配 AI 點數，並新增經濟部商業發展署「商業服務業智慧轉型專區」（單店最高補助 10 萬元，補助 50%）與產業發展署「製造業 AI 轉型輔導 19+1 診斷與工具導入補助」（政府負擔 19 萬/自籌 1 萬，工具導入最高補助 10 萬元）。
 
 ## 使用方式
 

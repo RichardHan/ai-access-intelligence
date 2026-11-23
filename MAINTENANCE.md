@@ -6876,3 +6876,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測試驗連線與 Cloudflare 防護狀態。
 5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
+
+
+## 2026-11-23 17:06–2026-11-23 17:15 Asia/Taipei｜N=1,185 · R=19 · A=2 · U=1,166 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `aocai-working-free-ai-courses-2026`：實讀商業發展署培訓專區與資策會 iEvents 報名頁，確認 11/26 台北班額滿，12/02 批發 MLOps 台北班開放報名至 2026-11-27 12:30，通過遴選者全額免費。
+- `fish-audio-s21-pro-free-development-api`：實讀 Fish Audio 官方模型與定價文檔，確認 s2.1-pro-free 模型維持 $0.00 / M UTF-8 bytes，無月費按用量計費維持。
+- `composio-hobby`：實讀 Composio 定價與條款頁，確認 Free 方案（$0）支援最多 3 人團隊、5 個共享連線與 25 個技能維持。
+- `braintrust-starter-monthly-model`：實讀 Braintrust 定價頁與條款，確認 Starter 方案免綁卡（$0/月）涵蓋基礎 traces、evals 與 30 天數據保留維持。
+- `kakaocloud-rocket-launcher-startups`：實讀 KakaoCloud Rocket Launcher 計畫頁，確認新創企業享 Launch / Boost / Grow 最高 3,500 萬韓元雲端點數支援維持。
+- `lovable-student`：實讀 Lovable 學生方案頁，確認在學學生以教育信箱驗證享 Pro 方案 50% 折扣（$12.50/月），最長維持 12 個月維持。
+- `krater-student-fifteen-twenty-discount-conflict-watch`：實讀 Krater.ai 學生優惠頁，確認學生首年享任一方案 15% 折扣維持。
+- `beam-cloud-developer-paid-not-thirty-free`：實讀 Beam 定價與條款，確認採隨用隨付（pay-as-you-go）計費，無免費 30 美元額度條款維持。
+- `siliconflow-one-dollar-trial`：實讀 SiliconFlow 定價與條款頁，確認新用戶註冊驗證提供試用額度及 Hy4-preview 等模型服務維持。
+- `assemblyai-trial`：實讀 AssemblyAI 定價與 API 文檔，確認免綁卡試用額度涵蓋語音轉文字（STT-3.7）及語音合成（TTS-1）維持。
+- `chutes-paygo-confidential-inference`：實讀 Chutes 定價與條款頁，確認按 token 計費與 TEE 機密計算 GPU 部署隨用隨付架構維持。
+- `browserless-free-monthly-thousand-terms-conflict`：實讀 Browserless 定價與服務條款頁，確認託管無頭瀏覽器服務方案條款架構維持。
+- `oumi-free-credits-corporate-personal`：實讀 Oumi 定價頁面，確認自主模型訓練與 Agent 開發平臺之方案架構及免費用量規則維持。
+- `krisp-seven-day-no-card-meeting-ai-trial`：實讀 Krisp 定價與使用條款頁，確認免綁卡 7 天免費試用 AI 會議筆記與降噪助理維持。
+- `paperpal-free-five-ai-daily-two-hundred-corrections`：實讀 Paperpal 說明中心文章與 Cactus 使用條款，確認免費方案提供每日 5 次 AI 學術編輯額度維持。
+- `sourcery-oss-free-rolling-diff-budget`：實讀 Sourcery 定價與文件頁，確認對公開開源儲存庫（Open Source）提供免費代碼審查與安全掃描維持。
+- `julius-free-daily-twentyfive-welcome-seventyfive`：實讀 Julius AI 定價與條款頁，確認免費方案提供基礎數據分析與每日/註冊歡迎訊息額度維持。
+- `requesty-startup-thousand-six-month-gateway-waiver`：實讀 Requesty 新創計畫與條款頁，確認合格早期新創可申請 $1,000 美元 AI 額度與 6 個月網關費減免維持。
+- `genially-education-free-500-ai-credits-year`：實讀 Genially 教育方案與條款頁面，確認教育版 Free 方案提供基礎互動簡報製作功能與年分配 AI 點數維持。
+- `kaggle-free-notebook-compute`（查驗失敗）：官方 Kaggle 說明頁面（https://www.kaggle.com/docs/efficient-gpu-usage）連線時回傳 Cloudflare reCAPTCHA 驗證頁面（RecaptchaChallengePageUi），依安全與誠實規範不繞過反爬蟲機制，保留既有 verified_at（2026-11-08），排入下次重試。
+
+### 新增紀錄（2 筆）
+- `moea-cda-commercial-services-ai-smart-transformation-grant`：經濟部商業發展署「商業服務業智慧轉型專區」（單店採購上架專區之 AI 與雲端智慧軟體工具最高補助新臺幣 100,000 元，補助 50%，受理至 2027-10-20）。
+- `moea-ida-manufacturing-ai-19-plus-1-and-tool-adoption-subsidy`：經濟部產業發展署「製造業 AI 數位轉型輔導 19+1 方案」（法人專家進廠 AI 診斷由政府負擔 19 萬元、企業自籌 1 萬元；完成診斷銜接 AI 工具導入最高補助 10 萬元及人才培訓最高 12 萬元）。
+
+### 品質改善
+- 誠實反映反爬蟲驗證阻擋：Kaggle 說明頁遭遇 reCAPTCHA 攔截，依硬紅線絕不繞過或破解，誠實登記為追查失敗，維持舊查核戳記與 U 計數精確口徑。
+- 嚴格避開 NSTC 集中度：本輪新收錄涵蓋商業發展署商業服務業 AI 智慧轉型與產業發展署製造業 19+1 AI 診斷輔導雙軌政策，提升產業多樣性。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 214 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `kaggle-free-notebook-compute`：官方文件頁面受 Cloudflare reCAPTCHA 攔截，後續需待防護解除或由無阻擋環境進一步核實算力時數變動。
+- `krater-student-fifteen-twenty-discount-conflict-watch`：學生 15% 折扣頁面與主站特定行銷活動之折抵幅度差異仍需持續觀察。
+
+### 下一輪優先（最多 5 項）
+1. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與名單審核狀況。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追踪 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
+5. `kaggle-free-notebook-compute`：24 小時後重測連線與 Cloudflare reCAPTCHA 防護狀態。
