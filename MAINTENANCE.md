@@ -6966,3 +6966,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
 4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追蹤 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
 5. `kaggle-free-notebook-compute`：24 小時後重測連線與 Cloudflare reCAPTCHA 防護狀態。
+
+
+## 2026-11-23 19:06–2026-11-23 19:15 Asia/Taipei｜N=1,189 · R=19 · A=2 · U=1,170 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `openrouter-startup-referral-three-five-conflict`：實讀 OpenRouter 新創計畫與條款頁，確認合格新創享 US$3,000 公開或 US$5,000 合作夥伴點數機制維持。
+- `mux-video-free-ai-robots-units`：實讀 Mux 定價、新創計畫與條款頁，確認提供免費視訊基礎架構配額與新創點數方案維持。
+- `mixpanel-startups-first-year-free`：實讀 Mixpanel 新創計畫與文件頁，確認合格早期新創享有首年免費進階分析額度維持。
+- `you-api-signup-hundred-credit`：實讀 You.com 搜尋 API 文件、計費說明與條款，確認新用戶免卡註冊提供 US$100 免費額度維持。
+- `aws-educate-free-ai-learning`：實讀 AWS Educate 繁體中文頁面與學員條款，確認免綁卡、對任何個人開放免費雲端與 AI 技能培訓維持。
+- `gradium-phonon-31m-local-apache`：實讀 Hugging Face 模型卡與 Gradium 官網頁面，確認 Phonon 31M 本機語音模型採 Apache-2.0 開源協議、免授權費維持。
+- `greenaibox-startup-gpu-credits`：實讀 GREENAIBOX 新創方案頁面，確認合格 AI 新創享有 GPU 雲端運算點數補助維持。
+- `fin-startup-pack-free-year-ai-credits`：實讀 Fin 官方 Startup Pack 頁面，確認早期新創首年享 US$6,500 Fin AI 額度政策維持。
+- `runable-for-startups-five-thousand-credits`：實讀 Runable 新創計畫頁面，確認提供 US$5,000 點數補助與專屬入駐輔導政策維持。
+- `google-cloud-startups`：實讀 Google for Startups Cloud Program 頁面與條款，確認 Start 階層最高 US$2,000 與 Scale 階層點數框架維持。
+- `qdrant-startup-twenty-percent`：實讀 Qdrant 新創方案頁面，確認合格新創享受 Managed Cloud 20% 折扣與技術支援政策維持。
+- `codex-oss-six-months`：實讀 OpenAI 官方 Codex for Open Source 頁面與條款，確認合格開源維護者享有 6 個月 ChatGPT Pro 支援政策維持。
+- `aws-cloud-credit-for-research`：實讀 AWS 研究雲點數計畫頁面與 FAQ，確認學術研究計畫點數補助申請機制維持。
+- `aws-education-equity-initiative`：實讀 AWS 教育平權倡議計畫頁面，確認最高 US$10,000 點數補助與教育機構申請資格規範維持。
+- `revops-ai-for-startups`：實讀 RevOps.ai 新創方案頁面，確認合格新創最高享 US$25,000 AI Agent 點數補助政策維持。
+- `legionedge-startup-program`：實讀 LegionEdge 新創計畫頁面，確認提供最高 US$25,000 邊緣運算與推理點數政策維持。
+- `aistudios-free`：實讀 AI Studios 定價與條款頁，確認 Free 方案提供基礎影片生成與 AI 虛擬人體驗維持。
+- `uipath-community-free-agentic-plan`：實讀 UiPath 官方 Automation Cloud Community 方案文檔與合約條款，確認免費社群版自動化與 Agentic 功能架構維持。
+- `clickup-free-forever-500-once-ai-credits`：實讀 ClickUp 定價與說明中心，確認 Free Forever 方案包含一次性 500 AI 點數之政策維持。
+- `akamai-cloud-rise-startup-credits`（查驗失敗）：官方 Akamai 站台（https://www.akamai.com/cloud/start-ups/rise）連線時回傳 HTTP 403 Forbidden 遭防護攔截，依安全與誠實規範不繞過反爬蟲機制，保留既有 verified_at（2026-11-09），排入下次重試。
+
+### 新增紀錄（2 筆）
+- `moda-adi-digiplus-digital-service-innovation-subsidy`：數位發展部數位產業署「DIGITAL+ 數位創新補助平台」（數位服務創新補助計畫，每案最高補助新臺幣 15,000,000 元，補助比例 50%，限本國 J582/J62/J63 資服軟體業者申請）。
+- `nstc-college-student-research-grant`：國家科學及技術委員會「大專學生研究計畫」（每月 6,000 元研究助學金、8 個月共 48,000 元，耗材最高補助 20,000 元，研究創作獎頒發 20,000 元獎金與獎狀，支持大二以上學生投入 AI 與科研創新）。
+
+### 品質改善
+- 誠實反映 HTTP 403 阻擋：Akamai 頁面遭 403 攔截，恪遵硬紅線不偽造查驗戳記，登記為追查失敗，維持 U 計數與未核記錄真實性。
+- 補足中央級科研人才培育與資服旗艦補助：新增數產署最高 1,500 萬元數位服務創新補助及國科會大專學生研究助學金，涵蓋產業與學術梯隊。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 218 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `akamai-cloud-rise-startup-credits`：Akamai 官方入口受 HTTP 403 限制，後續需待防護規則放寬或由無阻擋環境重新核對申請窗口。
+- `fin-startup-pack-free-year-ai-credits`：Fin AI 額度在特定非美國註冊實體的發放門檻與審查時程需持續追蹤。
+
+### 下一輪優先（最多 5 項）
+1. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與名單審核狀況。
+2. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
+4. `aocai-working-free-ai-courses-2026`：2026-11-24 09:00 追蹤 12/02 批發 MLOps 台北班報名進度與額滿狀況（報名至 11/27 12:30）。
+5. `akamai-cloud-rise-startup-credits`：24 小時後重測連線與 HTTP 403 防護狀態。

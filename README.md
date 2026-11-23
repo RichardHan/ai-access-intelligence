@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,189 筆**（969 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 18:15 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,167 筆**既有紀錄未完成本輪複核。重點確認 Make.com 非營利 12 個月 Pro 方案（每月 4 萬 operations）、Granola 學生 12 個月 Business 方案、Bruin Cloud 試用 100 compute 點數、Inworld On-Demand 免費推論、FlutterFlow 大學生教師一年免費、Softr 免費方案每月 5 點 AI、Hyper3D Rodin 免費低解析預覽、Rows 試算表每月 5 次 AI Tasks、Click 代理 API 每月 1 小時沙箱與 100 次搜尋、華為雲碼道體驗版每月 500 萬 tokens、Nutrient 提取 API 每月 5,000 點、Voicegain 註冊贈送 $50 STT 額度、CAMB.AI 一次性 5,000 點、Supermemory 每月 $5 額度、AI Horde 社群志願算力 API、Pollinations 免帳戶多模態 API、Speechmatics 一次性 $100 起始額度、SpeakNotes 每月 60 分鐘即時轉錄、AgentMail 認領後 3 信箱及 Soniox App 每週跨裝置語音額度，並新增經濟部中企署「中央型 SBIR」（AI 智慧應用研發補助，最高 150 萬至 1,200 萬元）與文化部「科技藝術創作發展補助」（AI 與沉浸科技藝術創作，最高補助 500 萬元）。
+資料集目前有 **1,191 筆**（971 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 19:15 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,170 筆**既有紀錄未完成本輪複核。重點確認 Akamai 遭遇 HTTP 403 阻擋記錄追查失敗（保留原查核時間排入重試）、OpenRouter 新創最高 $5,000 點數、Mux 視訊基礎設施點數、Mixpanel 新創首年分析額度、You.com 搜尋 API 註冊 $100 免費額度、AWS Educate 免卡免費雲端培訓、Gradium Phonon 本機開源語音、GREENAIBOX 新創 GPU 雲端點數、Fin Startup Pack 首年 $6,500 AI 額度、Runable 新創 $5,000 額度、Google Cloud 新創最高 $2,000 額度、Qdrant 託管向量資料庫 8 折、Codex for OSS 六個月 ChatGPT Pro 支援、AWS 研究雲點數申請機制、AWS 教育平權最高 $10,000 額度、RevOps.ai 新創最高 $25,000 額度、LegionEdge 邊緣運算點數、AI Studios 免費虛擬人影片生成、UiPath Community 社群自動化與 Agentic 方案及 ClickUp 免費方案一次性 500 AI 點數，並新增數位發展部數產署「DIGITAL+ 數位創新補助平台」（數位服務創新最高補助 1,500 萬元）與國家科學及技術委員會「大專學生研究計畫」（每月 6,000 元助學金與 20,000 元創作獎）。
 
 ## 使用方式
 
