@@ -7125,3 +7125,35 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`｜11/24 16:00 後核對一般免費窗口終止與保留資格。 [免費頁](https://iteracompute.com/free/) [模型頁](https://iteracompute.com/models/auto/)
 4. `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後核對是否延長或已公布期後單價。 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
 5. 11/25 起依 `next_review_at` 每日看政大是否公告額滿或換入口、CyLeague 是否換活動頁、Jenni 是否統一用量說明。CareerHack 有主辦正式補件連結或報名後續公告時再追。 [政大](https://cicii.nccu.edu.tw/news-66.html) [CyLeague](https://www.cyleague.jp/service/cyber-navi/) [Jenni 定價](https://jenni.ai/pricing) [台積電](https://www.tsmc.com/static/english/careers/Careerhack/index.html)
+
+
+## 2026-11-24 04:06–2026-11-24 04:12 Asia/Taipei｜N=1,196 · R=3 · A=2 · U=1,193 · attempted=1
+
+起點 `25666e1`，`main` 與遠端同步，工作樹乾淨，無開放 PR、進行中的部署或其他維護鎖。開場佇列有 0 筆嚴格逾期、16 筆七天內到期（15 筆冷卻中）、4 筆最近追查失敗（3 筆冷卻中），去重後為 20 筆近期風險。三組唯讀子代理分別查高風險入口、較舊的用量／付款疑點及台灣新機會，使用環境預設模型。主代理實讀採用的來源。IteraCompute 01:08 已查且 16:00 後才能核對切換，保留原追查時點。
+
+### 既有紀錄
+
+- `chroma-cloud-new-user-five-credit-terms-gap`｜10/23 官方公告現有 Chroma Cloud 12/7 起唯讀、12/22 停讀，時刻與時區未列。改標已公告終止並退出可行動專區，保留原 ID。公開定價仍列 Starter 新戶一次 US$5，實際發放、未用額度處理與是否先綁卡待核。開源 ChromaDB 持續。 [停運公告](https://www.trychroma.com/cloud-wind-down) [加入 Replit 公告](https://www.trychroma.com/blog/chroma-joins-replit) [定價](https://www.trychroma.com/pricing)
+- `recall-paygo-first-five-recording-hours`｜PAYG 首 5 小時錄音免費。新增有效付款方式即開啟自動加值，首次加卡時餘額低於門檻會扣款。負餘額時正在進行的錄製持續到會議結束，補值前無法開新 bot 或建立 SDK 上傳。首領是否需卡、效期和台灣資格待核。 [定價](https://www.recall.ai/pricing) [計費文件](https://docs.recall.ai/docs/billing-faq)
+- `magicschool-free-educator-generation-limited`｜Free 有 Quizzes 及 Class Writing Feedback 的標準存取，Student Rooms 與 50 多項學生工具未納入。每年各 3 份的說明適用於指定 Enterprise 學區，個人 Free 用量及重置週期未核。補列無適用資料保護協議時也應避免使用會蒐集可識別學生資料的功能。帶參數的 FAQ 網頁工具未取到，以可讀的主 FAQ 核對。 [定價](https://www.magicschool.ai/pricing) [FAQ](https://www.magicschool.ai/faq) [學區說明](https://help.magicschool.ai/en/articles/15217058-learning-outcomes-module-end-of-preview-period-june-30-2026) [使用條款](https://www.magicschool.ai/privacy-security/terms-of-service)
+- `microsoft-data-days-2026-free-exam-vouchers`｜上次折抵券部落格受阻。本輪改讀全額與半額表單，以及 Get Certified 官方入口，直讀皆遇 HTTP 403，網頁工具無正式正文。未確認現在是否受理、餘券及最新條款。保留 11/14 核實時間，記錄 11/24 04:07 追查及 11/25 04:30 的短期回查。 [全額入口](https://aka.ms/dd/cert100) [半額入口](https://aka.ms/dd/cert50) [認證入口](https://aka.ms/dd/Cert)
+
+### 新增及證據缺口
+
+- `ntu-rtc-local-ai-multimodal-workshop-2026`｜臺大 12/4 免費實作，11/30 12:00 截止。主辦表單列他校師生與其他身分，自備指定設備者優先，可選借機。公告與表單對入選通知日期的寫法有出入，席次、借機數和個案錄取未知。 [主辦公告](https://www.dlc.ntu.edu.tw/2026/11/13/local-ai-workshop-05/) [主辦表單](https://forms.gle/4uaiyRFharpH9EwG9)
+- `moda-civil-service-ai-agent-seminar-2026`｜數發部 12/10 公務人員免費研討會，11/30 15:00 截止。每場實體原則 30 名、直播限 100 名，須經錄取。主辦簡章列 11/18、關山公所轉知列 11/16 開放，截止一致。政府短鏈直讀 403，讀到簡章與數發部所建的正式表單。 [主辦簡章](https://www.guanshan.gov.tw/files/Ilpwto7SAEqBQLh8qJDtynsaIeYItUInwxEqrxGT.pdf) [公所轉知](https://www.guanshan.gov.tw/news/detail/3607) [主辦表單](https://docs.google.com/forms/d/e/1FAIpQLSfj1KGCnrFgXuYMuhjHwncbaT9vVh1GcDIZNSXVwti-jADC8g/viewform?usp=send_form)
+
+兩筆以 ID、名稱、主辦範圍及 URL 去重。共 1,198 筆，其中兩筆新增皆為機會。以基準 JSON 與結案差異計數，保留所有既有 ID、首次收錄時間、來源歷史及 2,890 筆政策歷史，追加 6 筆。資料修正使用既有瀏覽器規則呈現。未送出表單、開戶或操作付款。
+
+### 發布檢查
+
+- `make check`、`make check-ui`、`git diff --check` 通過。Chrome 390px／1280px 本機核對本輪更新、兩筆台灣機會與來源、Chroma 退出免費專區、Recall.ai 扣款說明、Microsoft 追查標記，以及兩份 JSON 的回應雜湊。
+- 推送後以本提交對應的 Pages 部署狀態為準，再重驗公開 Chrome 介面及 JSON 雜湊。
+
+### 下一輪優先
+
+1. `aocai-working-free-ai-courses-2026`｜11/24 09:00 後核對 12/2 台北 MLOps 班及 11/27 12:30 期限，留意額滿。 [報名頁](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585)
+2. `swarms-startup-program-up-to-tenk`｜11/24 13:00 起查官方可讀替代資料。Kaggle Notebook 與 Akamai RISE 維持各自 11/24 17:00、19:00 的回查點。 [Swarms 計畫](https://www.swarms.ai/programs/startups)
+3. `iteracompute-free-qwen-3-8-27b-monthly-30m`｜11/24 16:00 後核對免費窗口切換及既有帳戶保留條件。 [免費頁](https://iteracompute.com/free/) [模型頁](https://iteracompute.com/models/auto/)
+4. `vercel-ai-gateway-parallel-decisions-free-window`｜11/24 20:30 後查是否公布期後單價或正式延長。 [模型標價](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+5. Microsoft 11/25 04:30 起優先找獨立官方公告或可讀條款，前述 403 來源暫不重試。臺大及數發部依各自 `next_review_at` 檢查名額及表單，Chroma 有遷移或停運新訊號時複核。清大 Vibe Coding 可留到 12/7 首日核對入口與保證金。 [清大公告](https://ccd.nthu.edu.tw/event/1318)

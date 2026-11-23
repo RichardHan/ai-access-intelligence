@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T03:13:16+08:00",
-  "scope": "2026-11-24 03:06–2026-11-24 03:13 Asia/Taipei，局部複核 5 筆既有紀錄，新增 1 筆，整筆追查失敗 0 筆。更新試用條件、用量與計費，新增政大高中職免費 AI 工作坊及探索營。",
+  "updated_at": "2026-11-24T04:12:11+08:00",
+  "scope": "2026-11-24 04:06–2026-11-24 04:12 Asia/Taipei，局部複核 3 筆既有紀錄，新增 2 筆，整筆追查失敗 1 筆。補列 Chroma Cloud 停運與 Recall.ai 預付加值規則，新增臺大及數發部兩項免費培訓。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -14806,10 +14806,10 @@
     },
     {
       "id": "chroma-cloud-new-user-five-credit-terms-gap",
-      "title": "Chroma Cloud：新戶US$5檢索資料庫額度，免費期限及綁卡待核",
-      "summary": "官方列新戶US$5 credits，定價頁把它綁在Starter（US$0/月＋用量；Team為US$250/月另含US$100 credits且明示不rollover）；Starter是零月租加按量費，不是每月US$5或永久免費向量庫。FAQ稱多數credits不失效，唯一明示失效者為Team的US$100；服務條款§11的30日上限屬「免費／試用／beta存取期間」，與credit效期分屬不同客體（此為推論，條款未指名Starter），綁卡要求仍未核。",
+      "title": "Chroma Cloud：12/7 停止寫入、12/22 停止讀取",
+      "summary": "Chroma 公告現有 Cloud 服務自 2026-12-07 起唯讀，2026-12-22 停止讀取。定價頁仍列 Starter 新戶一次 US$5、零月租加按量費，實際新戶受理及發放待核。停運限現有雲端服務，開源 ChromaDB 持續提供。",
       "record_type": "opportunity",
-      "status": "conditional",
+      "status": "sunset_announced",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
@@ -14832,12 +14832,12 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-09T10:27:44+08:00",
+      "verified_at": "2026-11-24T04:08:11+08:00",
       "discovered_at": "2026-10-30T18:09:58+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-10-23",
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T10:27:44+08:00",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
       "priority": "watch",
       "vpn_research": {
         "status": "not_verified",
@@ -14845,11 +14845,11 @@
         "eligibility_note": "不以跨區IP、偽造學籍或身分推定資格。"
       },
       "cancellation": "可透過服務程序終止帳戶；終止不免除已產生費用，費用原則不退款。免費額度用盡後是否預設硬停未核。",
-      "usable_duration": "新戶US$5非月額；定價多數credits不失效與條款§11免費／試用通常最多30日的適用關係未明。",
-      "access_risk": "Starter零月租仍按寫入、查詢、儲存、傳出及Sync計費；未證免卡或預設US$0硬上限。",
-      "verification_scope": "2026-11-09 重讀 trychroma 定價、條款與 Cloud 定價文件：US$5 綁 Starter、Team US$100 不 rollover、多數 credits 不失效、信用卡接受範圍、雙層 usage limit、§4.1／§11／§13.2。未核領額是否須綁卡、預設用量上限、台灣可用性、商用授權。",
+      "usable_duration": "12/7 起停止新增、修改與刪除資料，現有資料仍可讀取 15 日，12/22 停止提供讀取。公告未列切換時刻或時區。Starter 新戶額度非月額，未用額度停運後的處理待核。",
+      "access_risk": "需在停寫前切換寫入流程，在停讀前完成資料匯出及遷移。定價仍列寫入、查詢、儲存、傳出及 Sync 的按量費率，未核預設 US$0 硬上限。",
+      "verification_scope": "2026-11-24 台北時間局部核對停運公告、加入 Replit 公告、Starter 定價及條款 §11。核對停讀／停寫及開源專案適用範圍，現行開戶、US$5 實際發放、綁卡及剩餘額度處理仍待核。",
       "eligibility": {
-        "service_availability": "官方pricing FAQ列新戶US$5，Starter 10資料庫及10成員；非免費模型推論。",
+        "service_availability": "Chroma Cloud 已公告停運。公開定價仍列新戶 US$5，Starter 列 10 個資料庫及 10 位團隊成員。開源 ChromaDB 繼續依 Apache 2.0 提供。",
         "account_eligibility": "需真實帳戶資料；不得曾被停權，代表企業須有締約權；本輪未登入或領取。",
         "billing_country": "Starter接受信用卡；條款可要求付款資料，未證領US$5前免卡，未測台灣卡。",
         "identity_residency": "服務條款有制裁及出口限制，但未明列台灣帳戶可領；資料區域不可作資格證據。",
@@ -14857,11 +14857,10 @@
         "taiwan_note": "Unknown：未見台灣個別支持或核准證據；制裁條款不等於法律適用意見。"
       },
       "unknowns": [
-        "台灣註冊、付款及US$5實際發放",
-        "是否領額前必須綁卡、Chroma set usage limit 的預設值",
-        "§4.1／§11 是否把 Starter 免費方案視為 Trials and Betas（條款未指名方案）",
-        "免費額度正式商用資格",
-        "適用法律／監管未核"
+        "台灣資格、新戶實際受理及 US$5 發放",
+        "是否領額前必須綁卡、Chroma 設定的預設用量上限",
+        "停寫與停讀的精確時刻和時區、未用額度的處理",
+        "Starter 是否落入條款 §11 的免費／試用存取、正式商用條件及適用法律"
       ],
       "sources": [
         {
@@ -14881,11 +14880,47 @@
           "scope": "新戶 US$5 與寫入／查詢／儲存費率（2026-11-09 重讀）",
           "evidence": "「We offer $5 in credits to new users.」；「Chroma Cloud charges $2.50 per logical GiB written」；「$0.33 per GiB per month」儲存、查詢與網路費率照列。｜較早紀錄：FAQ：We offer $5 in credits to new users；寫入$2.50/logical GiB、儲存$0.33/GiB/month、查詢$0.0075/TiB、傳出$0.09/GiB；Sync另計。",
           "accessed_at": "2026-11-09T10:27:44+08:00"
+        },
+        {
+          "url": "https://www.trychroma.com/cloud-wind-down",
+          "label": "Chroma Cloud 停運時程",
+          "scope": "2026-10-23 公告，12/7 唯讀、12/22 停讀及開源適用範圍",
+          "evidence": "「December 7, 2026 — Writes disabled」「December 22, 2026 — Reads disabled」。停寫後現有資料可再讀 15 日，停運規則僅適用現有 Chroma Cloud。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://www.trychroma.com/blog/chroma-joins-replit",
+          "label": "Chroma 加入 Replit 公告",
+          "scope": "2026-10-23 公告，雲端遷移及開源持續",
+          "evidence": "官方公告已簽署加入 Replit 的協議，並連至現有 Chroma Cloud 的停運時程。開源專案持續開發。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://docs.trychroma.com/cloud/pricing.md",
+          "label": "Chroma Cloud 計價文件",
+          "scope": "新戶額度與用量計價",
+          "evidence": "「We offer $5 in credits to new users.」寫入、讀取與儲存按量計價。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://www.trychroma.com/pricing",
+          "label": "Chroma 定價",
+          "scope": "Starter 月租及限額處理",
+          "evidence": "Starter 為 US$0／月加用量。客戶或 Chroma 設定的用量上限可暫停服務，個別帳戶的預設值未列。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://www.trychroma.com/terms",
+          "label": "Chroma 服務條款",
+          "scope": "免費／試用存取與方案名稱的適用範圍",
+          "evidence": "2024-10-02 版本 §11 限免費／試用等存取供內部評估與測試，通常最長 30 天，未指名 Starter 或 US$5 額度。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
         }
       ],
-      "priority_score": 15.3,
-      "priority_tier": "C",
-      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知"
+      "priority_score": 12.6,
+      "priority_tier": "D",
+      "priority_note": "官方來源·已公告終止·費用未知·台灣未標記·時間未知",
+      "expires_at": "2026-12-22"
     },
     {
       "id": "quillbot-free-basic-writing-daily-chat",
@@ -17870,7 +17905,7 @@
     {
       "id": "recall-paygo-first-five-recording-hours",
       "title": "Recall.ai新戶：PAYG首5小時錄音免費，轉錄及儲存另計",
-      "summary": "註冊Pay As You Go後首5小時recording免費，不是每月5小時，也不能推定含內建AI轉錄。一般錄音後續US$0.50／小時；內建轉錄US$0.15／小時、錄音超7日儲存及特殊bot另有費率。免卡、贈額效期、用盡硬停未核。",
+      "summary": "Pay As You Go 新戶首 5 小時錄音免費，轉錄及逾 7 日的儲存另計。一般錄音後續 US$0.50／小時。PAYG 採預付餘額，加入有效付款方式會啟用自動加值，首次加卡時若餘額低於門檻便會扣款加值。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -17882,7 +17917,7 @@
         "free",
         "developer"
       ],
-      "setup_cost_usd": 0,
+      "setup_cost_usd": null,
       "recurring_cost_usd": null,
       "effort_minutes_max": null,
       "taiwan": "Unknown",
@@ -17893,20 +17928,20 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": "未核PAYG試用是否需卡／硬停；付費訂閱另受自動續訂與取消條款。不要推定自動免費到期。",
+      "cancellation": "計費文件另列一次性加值選項。付費訂閱另受續訂與取消條款。未核移除付款方式後的帳戶行為。",
       "usable_duration": "首5小時一次額度，日曆效期未公布。",
-      "access_risk": "免費明確只稱recording；轉錄、長期儲存及特定bot附加費不可當作免費。",
+      "access_risk": "PAYG 餘額低於 US$0 時，已開始的會議 bot 或 Desktop Recording SDK 錄製會持續到會議結束，補值前無法新開 bot 或建立 SDK 上傳。內建轉錄 US$0.15／小時，前 7 日後的儲存及特殊 bot 另外計費。",
       "eligibility": {
         "service_availability": "新註冊PAYG首5小時recording免費。",
         "account_eligibility": "條款至少18歲；未核重複領取與付款驗證。",
-        "billing_country": "免卡及台灣付款未知。",
+        "billing_country": "PAYG 採預付。加入有效付款方式即開啟自動加值。首 5 小時能否無卡使用、台灣付款資格及幣別未核。",
         "identity_residency": "未核台灣帳戶。",
         "terms_restrictions": "應遵守錄音、個資、授權與產品條款；嵌入式產品合約限制同新創紀錄。",
         "taiwan_note": "Unknown，未登入或建立會議bot。"
       },
       "unknowns": [
-        "免費額度日曆效期、需卡與用盡扣款／硬停",
-        "轉錄等附加項目是否另有試用額",
+        "首 5 小時用量能否先免卡取得、日曆效期與試用初始餘額設定",
+        "個別帳戶的實際加值門檻、轉錄等附加項目是否另有試用額",
         "台灣資格及個案錄音合法性"
       ],
       "sources": [
@@ -17922,19 +17957,35 @@
           "scope": "年齡及帳務",
           "evidence": "至少18歲；付費訂閱須有效付款方式並自動續訂；未提供此5小時試用的免卡／到期硬停保證。",
           "accessed_time_range": "2026-10-29T19:05:58+08:00–2026-10-29T19:12:33+08:00"
+        },
+        {
+          "url": "https://www.recall.ai/pricing",
+          "label": "Recall.ai PAYG 定價",
+          "scope": "首 5 小時、後續費率與附加費用",
+          "evidence": "第一個 5 小時的錄音免費。一般錄音為 US$0.50／小時，內建轉錄為 US$0.15／小時，錄音儲存前 7 日免費，特定 bot 有額外費率。",
+          "accessed_at": "2026-11-24T04:07:37+08:00"
+        },
+        {
+          "url": "https://docs.recall.ai/docs/billing-faq",
+          "label": "Recall.ai 計費文件",
+          "scope": "預付餘額、自動加值與負餘額",
+          "evidence": "「Auto-top-up is enabled automatically when you add a valid payment method.」首次新增付款方式時若餘額低於設定門檻會扣款加值。負餘額時，錄製中會議持續至結束，充值前停止新的 bot 或 SDK 上傳。",
+          "accessed_at": "2026-11-24T04:07:37+08:00"
         }
       ],
       "review_cadence": "monthly",
-      "verified_at": "2026-11-09T04:13:00+08:00",
+      "verified_at": "2026-11-24T04:07:37+08:00",
       "discovered_at": "2026-10-29T19:05:58+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "next_review_at": "2026-12-09T12:00:00+08:00",
-      "priority_score": 15.8,
+      "next_review_at": "2026-12-24T04:00:00+08:00",
+      "priority_score": 15.3,
       "priority_tier": "C",
-      "priority_note": "官方來源·需符合條件·零設定費·台灣未標記·時間未知",
+      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知",
       "valuation_scenario": null,
-      "verification_scope": "2026-11-09 04:13 重讀定價頁與 FAQ：首 5 小時免費、非每月、轉錄與儲存另計均不變；效期與用盡後硬停仍無官方字句。未註冊。"
+      "verification_scope": "2026-11-24 台北時間局部核對官方定價與支援文件，範圍含首 5 小時錄音、按量費率、自動加值與負餘額處理。首領綁卡、贈額效期及台灣資格仍待核。",
+      "setup_cost_basis": "定價明列首 5 小時錄音免費，使用前是否須先綁卡未公布。",
+      "cost_note": "PAYG 費用由預付餘額扣抵。加入有效付款方式會自動開啟加值。首次加卡時若餘額低於門檻，便會扣款加值。官方列 US$5 門檻及 US$20 加值為範例，實際帳戶設定未核。"
     },
     {
       "id": "krisp-seven-day-no-card-meeting-ai-trial",
@@ -19176,7 +19227,7 @@
     {
       "id": "magicschool-free-educator-generation-limited",
       "title": "MagicSchool Free：教育工作者免費生成工具",
-      "summary": "教師與學校工作人員可使用US$0 Free方案及80多項教師工具；免費生成有上限，數值與重置週期未核。Student Rooms及50多項學生工具不包含在Free方案。",
+      "summary": "MagicSchool Free 提供教育工作者 US$0 方案、80 多項教師工具，以及 Quizzes 和 Class Writing Feedback 的標準存取。Student Rooms 和 50 多項學生工具未列入 Free。帳戶會顯示生成餘量並自動重置，公開資料未列 Free 的數量及重置週期。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -19198,24 +19249,24 @@
       "savings_usd": null,
       "cancellation": "Free維持零訂閱費；付費訂閱自動續訂及取消、退款規則應另查，付費條款與FAQ細節有差異。",
       "usable_duration": "官方稱Forever Free；仍有生成上限，重置週期未核。",
-      "access_risk": "台灣學校及帳戶資格未核；未簽資料保護協議時不得提供可識別學生資料。",
-      "verified_at": "2026-11-08T19:11:38+08:00",
+      "access_risk": "台灣教育機構及個案資格待核。沒有適用資料保護協議或類似協議時，服務條款要求避免提交可識別學生資料及使用會收集該資料的功能。",
+      "verified_at": "2026-11-24T04:08:11+08:00",
       "discovered_at": "2026-10-29T13:08:05+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T19:11:03+08:00",
+      "next_review_at": "2026-12-24T04:00:00+08:00",
       "eligibility": {
         "service_availability": "公開Free方案；未實際申請。",
         "account_eligibility": "限教育機構教師或學校工作人員職務上的專業輔助；代表機構使用須有締約授權。",
         "billing_country": "免費方案零訂閱費；台灣付款地區與是否需卡未核。",
         "identity_residency": "須提供真實資料並達居住地締約年齡；台灣機構資格未核。",
-        "terms_restrictions": "不供一般個人用途；不得共用帳號或虛假身分。無適用資料保護協議時不得提供學生可識別資料。",
+        "terms_restrictions": "限專業教育用途。無適用資料保護協議或類似協議時，請勿提交可識別學生資料或使用會收集該資料的功能。",
         "taiwan_note": "Unknown：未取得台灣教育工作者或學校明確資格確認。"
       },
       "unknowns": [
         "台灣學校與帳戶資格、是否需卡",
-        "免費生成次數與重置週期",
+        "個人 Free 的標準工具額度、一般生成上限及重置週期。學區加購說明的每年各 3 份規則僅能確認適用於該文所述學區。",
         "付費方案取消與退款規則差異",
         "適用法律與監管限制"
       ],
@@ -19237,6 +19288,34 @@
           "scope": "教育用途、資料及帳戶條款",
           "evidence": "2026-01-30條款限教育機構職務專業用途；代表機構須有授權，無適用資料保護協議時不得提供學生可識別資料。",
           "accessed_at": "2026-10-29T13:08:05+08:00"
+        },
+        {
+          "url": "https://www.magicschool.ai/pricing",
+          "label": "MagicSchool 方案比較",
+          "scope": "Free 教師工具與標準工具的適用範圍",
+          "evidence": "Free 列 US$0、80 多項教師工具及「Standard Access」的 Quizzes 與 Class Writing Feedback。詳細表在 Free 欄排除 Student Rooms 與 50 多項學生工具。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://www.magicschool.ai/faq",
+          "label": "MagicSchool FAQ",
+          "scope": "Free 確有生成上限、顯示餘量及重置方式",
+          "evidence": "「Free includes standard generation limits.」儀表板顯示餘量，使用量依方案自動重置。未列 Free 的次數及週期。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://help.magicschool.ai/en/articles/15217058-learning-outcomes-module-end-of-preview-period-june-30-2026",
+          "label": "MagicSchool 學區加購說明",
+          "scope": "學區適用的工具額度與重置日",
+          "evidence": "2026-09-01 支援文件描述未購 Learning Outcomes Module 的學區，每教師兩種工具各 3 份，7/1 重置。文件對象是 Enterprise 學區，個人 Free 的額度仍未核。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
+        },
+        {
+          "url": "https://www.magicschool.ai/privacy-security/terms-of-service",
+          "label": "MagicSchool 服務條款",
+          "scope": "教育工作者與可識別學生資料",
+          "evidence": "沒有適用資料保護附約或類似協議時，條款要求教育工作者避免提供可識別學生資料，以及避免使用會收集該資料的功能。",
+          "accessed_at": "2026-11-24T04:08:11+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -19246,7 +19325,7 @@
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "verification_scope": "本輪僅重讀定價頁的方案分界與免費上限敘述；未登入、未申請，未核台灣學校資格與實際生成次數。"
+      "verification_scope": "2026-11-24 台北時間局部核對 Free 定價比較表、FAQ、學區加購說明及服務條款的學生資料規定。個人 Free 的功能額度、實際生成數值、綁卡及台灣資格未核。"
     },
     {
       "id": "jenni-free-daily-ten-autocomplete-lifetime-workflows",
@@ -88154,7 +88233,7 @@
       "deadline_at": "2026-12-10",
       "expires_at": null,
       "review_cadence": "event",
-      "next_review_at": "2026-11-24T14:00:00+08:00",
+      "next_review_at": "2026-11-25T04:30:00+08:00",
       "verification_scope": "2026-11-14 新增：17:10–17:13（台北）實讀三個 Microsoft 官方頁面：Fabric Community 官方部落格「Data Days | Certification Vouchers」（直接 HTTP 請求遭 Cloudflare 403，改以瀏覽器開啟同一官方網址取得全文）、aka.ms/dd/cert100 導向的官方條款頁（100% 折抵券完整 Rules and Restrictions）與 Microsoft Learn 的 DP-800 認證頁（SQL AI Developer Associate、120 分鐘、含繁體中文考試語言）。另比對 Microsoft Community Hub 上由社群成員整理的申請步驟。未註冊 Fabric Community 帳號、未申請折抵券、未報名考試；未核名額是否已發完、台灣考場與線上監考實務、DP-700／DP-600 的考試語言清單。",
       "eligibility": {
         "service_availability": "線上活動，折抵券可用於 Pearson VUE 考場或線上監考；官方條款未列地區封鎖，僅列排除國家。",
@@ -88207,8 +88286,8 @@
       "priority_score": 25.0,
       "priority_tier": "S",
       "priority_note": "官方來源·方案仍列示·免費·台灣Yes·較費工/未知·有資格門檻",
-      "last_review_attempt_at": "2026-11-23T14:06:50+08:00",
-      "last_review_attempt_reason": "官方 Fabric Community 站台 https://community.fabric.microsoft.com/blog/community_blog/data-days--certification-vouchers/5376271 回傳 HTTP 403 Forbidden 遭防護攔截，依安全規範不繞過反爬蟲機制，保留既有 verified_at，排入下次重試"
+      "last_review_attempt_at": "2026-11-24T04:07:23+08:00",
+      "last_review_attempt_reason": "官方全額／半額券短網址導向 Fabric 申請頁，Get Certified 導向官方部落格，直讀皆回 HTTP 403，網頁工具只提供頁面框架或無正文。當前受理、餘券與正式條款未核。"
     },
     {
       "id": "kaggle-google-agent-harness-pele-2027",
@@ -97445,24 +97524,177 @@
       "review_cadence": "daily",
       "next_review_at": "2026-11-25T09:00:00+08:00",
       "verification_scope": "2026-11-24 台北時間局部核對：官方公告及活動辦法的學籍、費用、名額、報名、證明與錄影規則。未登入或查得剩餘席次。"
+    },
+    {
+      "id": "ntu-rtc-local-ai-multimodal-workshop-2026",
+      "title": "臺大免費多模態 Local AI 工作坊：12/4 校本部實作",
+      "summary": "臺大蘋果區域培訓中心 Local AI 系列第 5 堂，12/4 在臺大校本部以中文實作語言模型、語音轉文字及影像辨識。免學費，11/30 12:00（台北）報名截止，須經錄取。建議具基本程式概念，自備合規 MacBook 者優先。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "taiwan": "Yes",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "quota_classification": "UNKNOWN",
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "discovered_at": "2026-11-24T04:08:12+08:00",
+      "verified_at": "2026-11-24T04:08:42+08:00",
+      "announcement_at": "2026-11-13",
+      "deadline_at": "2026-11-30T12:00:00+08:00",
+      "expires_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T04:00:00+08:00",
+      "priority_tier": "S",
+      "priority_score": 19.6,
+      "usage_type": "單堂實體工作坊與完課證書",
+      "usable_duration": "2026-12-04 09:30–12:30（台北），臺大校本部綜合教學館 401。完整參與可獲該堂完課證書。",
+      "setup_cost_basis": "主辦公告明列免費。依設備需求及借用結果，參加者可能需自備硬體並自行到場。",
+      "access_risk": "主辦列 Apple silicon MacBook、至少 16 GB、macOS 27 以上、Xcode 27 與 LM Studio。可在表單選借用，設備數量有限。",
+      "verification_scope": "2026-11-24 台北時間實讀臺大公告及官方報名表公開欄位。核對費用、活動及報名時間、設備、借用、表單身分選項與完課條件。剩餘席次和個案錄取未核。",
+      "eligibility": {
+        "service_availability": "臺大校本部實體課程，採中文授課。",
+        "account_eligibility": "表單可選臺大教師及學生、他校教師及學生或其他。建議具備基本程式設計概念。",
+        "billing_country": "報名及課程費用皆為零。個人交通或設備成本未估。",
+        "identity_residency": "未列國籍或戶籍門檻。表單接受他校師生及其他身分選項。",
+        "terms_restrictions": "自備指定設備者優先，借用設備有限，須收到錄取通知。需全程參與才發當堂證書。",
+        "taiwan_note": "Yes：依主辦公開表單，台灣他校師生與其他身分可填報，須經主辦錄取。"
+      },
+      "unknowns": [
+        "總席次、剩餘席次與借用設備數量",
+        "公告列 12/1 前通知，表單寫「11/30 (二)」，日期與星期對不上，實際通知以主辦寄發為準"
+      ],
+      "sources": [
+        {
+          "url": "https://www.dlc.ntu.edu.tw/2026/11/13/local-ai-workshop-05/",
+          "label": "臺大主辦公告",
+          "scope": "2026-11-13 公告，課程、期限、費用、設備與證書",
+          "evidence": "主辦列「費用: 免費」「11/30 日(一) 中午12:00 截止」，並列 12/4 09:30–12:30、設備與借機條件。",
+          "accessed_at": "2026-11-24T04:08:12+08:00"
+        },
+        {
+          "url": "https://forms.gle/4uaiyRFharpH9EwG9",
+          "label": "臺大主辦報名表",
+          "scope": "公開表單身分及借用選項",
+          "evidence": "表單列「他校老師」「他校學生」「其他」，可選自備或借用設備。通知欄寫 11/30（二），公告列 12/1（二）前。",
+          "accessed_at": "2026-11-24T04:08:42+08:00"
+        }
+      ],
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "moda-civil-service-ai-agent-seminar-2026",
+      "title": "數發部免費 AI Agent 研討會：台灣公務人員可報名實體或直播",
+      "summary": "數位發展部主辦、工研院執行，12/10 舉辦 AI 協作開發與可信任機關應用兩場研討會，台灣公務人員可選一場或兩場，現場及直播皆免研習費。11/30 15:00（台北）截止，須經錄取。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "taiwan": "Yes",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "discovered_at": "2026-11-24T04:08:44+08:00",
+      "verified_at": "2026-11-24T04:09:30+08:00",
+      "announcement_at": null,
+      "deadline_at": "2026-11-30T15:00:00+08:00",
+      "expires_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T04:00:00+08:00",
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "usage_type": "兩場可分報的實體講座和同步直播",
+      "limited_confirmed": true,
+      "quota_details": "每場實體以 30 人為原則，原則各機關每場 1 人並抽選。每場直播限 100 人，超額抽選。實體未錄取者可按線上名額優先改列。",
+      "usable_duration": "2026-12-10 10:00–11:30 及 14:00–15:30（台北）。地點為台北工研院 BR6 教室，另有同步直播，未提供錄影。",
+      "setup_cost_basis": "主辦簡章列研討會免費，交通與住宿自付。",
+      "cancellation": "無法參加者最遲 2026-12-07 以電子郵件取消。無故缺席可能影響機關後續錄取排序。",
+      "access_risk": "報名表收機關代碼、身分證字號等資料供學習時數及點名。現場沒有受理臨時報名，錄取依主辦通知。",
+      "verification_scope": "2026-11-24 台北時間實讀數發部簡章、關山鎮公所轉知及主辦表單公開欄位。核對公務人員資格、免費、期限、名額、分配、錄取與取消流程，剩餘名額和個案錄取未核。",
+      "eligibility": {
+        "service_availability": "台北工研院 BR6 實體及同步直播，沒有錄影。",
+        "account_eligibility": "主辦簡章列全體公務人員。報名可選一場或兩場、實體或線上。",
+        "billing_country": "研習免收費，交通與住宿不包含。",
+        "identity_residency": "表單要求機關代碼、機關名稱、職稱等資料。非公務人員不在公告所列對象。",
+        "terms_restrictions": "須報名並獲錄取。實體依機關分配及抽選，直播超額也抽選。",
+        "taiwan_note": "Yes：限符合主辦簡章資格的台灣公務人員。"
+      },
+      "unknowns": [
+        "實體與直播各場剩餘名額及個案錄取",
+        "公所轉知寫 11/16 開放，主辦簡章寫 11/18 開放，兩者均列 11/30 15:00 截止"
+      ],
+      "sources": [
+        {
+          "url": "https://www.guanshan.gov.tw/files/Ilpwto7SAEqBQLh8qJDtynsaIeYItUInwxEqrxGT.pdf",
+          "label": "數發部主辦簡章（PDF）",
+          "scope": "資格、費用、截止、兩場次、名額及取消規則",
+          "evidence": "簡章列「全體公務人員」「11 月 30 日下午 3 時止」「本次研討會免費」，並列每場實體原則 30 人、直播限 100 人。",
+          "accessed_at": "2026-11-24T04:09:30+08:00"
+        },
+        {
+          "url": "https://www.guanshan.gov.tw/news/detail/3607",
+          "label": "關山鎮公所 2026-11-20 轉知",
+          "scope": "公告日期及與主辦簡章的開始日差異",
+          "evidence": "公所公告 11/16 開放、11/30 15:00 截止。主辦簡章列 11/18 開放，截止時間一致。",
+          "accessed_at": "2026-11-24T04:09:19+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfj1KGCnrFgXuYMuhjHwncbaT9vVh1GcDIZNSXVwti-jADC8g/viewform?usp=send_form",
+          "label": "數發部主辦報名表",
+          "scope": "公開表單、機關資料及用途",
+          "evidence": "表單頁註明由 moda.gov.tw 建立。要求機關代碼，表單說明資料供登錄學習時數及後續點名。",
+          "accessed_at": "2026-11-24T04:09:19+08:00"
+        }
+      ],
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-24T03:13:16+08:00",
+  "latest_research_at": "2026-11-24T04:12:11+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T03:06:06+08:00",
-    "completed_at": "2026-11-24T03:13:16+08:00",
+    "started_at": "2026-11-24T04:06:04+08:00",
+    "completed_at": "2026-11-24T04:12:11+08:00",
     "reviewed_ids": [
-      "jenni-free-daily-ten-autocomplete-lifetime-workflows",
-      "cyleague-cyber-navi-trial",
-      "warp-factories-pricing-source-conflict",
-      "fal-startup-europe-asia-spend-tiers",
-      "camber-student-compute-agent-monthly"
+      "chroma-cloud-new-user-five-credit-terms-gap",
+      "magicschool-free-educator-generation-limited",
+      "recall-paygo-first-five-recording-hours"
     ],
     "new_ids": [
-      "nccu-high-school-ai-entrepreneurship-camp-2026"
+      "moda-civil-service-ai-agent-seminar-2026",
+      "ntu-rtc-local-ai-multimodal-workshop-2026"
     ],
-    "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1190
+    "attempted_failed_ids": [
+      "microsoft-data-days-2026-free-exam-vouchers"
+    ],
+    "unreviewed_existing_count": 1193
   },
   "generated_at": "2026-11-24T02:13:38+08:00",
   "reviewed_ids": [
