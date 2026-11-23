@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,171 筆**（951 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 09:20 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **20 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **0 筆**。其餘 **1,149 筆**既有紀錄未完成本輪複核。重點確認 Mem 官方宣布停運退場（2026-12-18 唯讀、2027-01-15 關閉，轉為 sunset_announced）、Voyage AI 定價正文與表格矛盾持續且 Batch API 排除免費額度、GitHub 學生包權益維持、Cloudflare 新創 Tier 3 自 12/1 起 Workers AI 確定排除、Weaviate Cloud 永久免費沙盒叢集（10 萬物件）、Groq 獨立 Free Plan 速率表無 SLA 承諾、ZoomMate Basic 免費層維持、OpenRouter 免費模型目錄（11 款）、Apple 本機推論零 API 費用，並新增國科會 116 年度卓越領航研究計畫（至多 4 年最高 6,000 萬元，12/14 截止）及 Kaggle Santa 2026 演算法運算競賽（總獎金 $50,000，每週免費 GPU/TPU 算力）。
+資料集目前有 **1,173 筆**（953 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 10:20 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,152 筆**既有紀錄未完成本輪複核。重點確認 AICU 源站連線持續逾時（HTTP 522 失敗保留舊查閱時間）、Traversaal Olive 新創 1 年免費條款衝突、Nebius 歐洲算力補助限定歐盟、Cloudflare 學生包免底費條件、Algolia 新創 $10K 額度維持、Reducto Standard 新版條款確認無美區限制、Cerebras API 無永久免費層、Rosalind 美國學術實驗室專用、Claude 與 Gemini API 免費層與 12/01 模型轉移、Assistant Cloud 402 硬停、Work/Codex Plus 共用額度與 GPT-6.2 最新估計，並去重合併經濟部深科技跨域補助案，新增 Kaggle Squares in Squares 幾何最佳化挑戰賽（總獎金 $50,000）及國科會自然處 116 年度空間資訊 GEO-AI 主題式研究計畫補助案。
 
 ## 使用方式
 

@@ -6560,3 +6560,48 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
+
+## 2026-11-23 10:06–2026-11-23 10:20 Asia/Taipei｜N=1,171 · R=19 · A=2 · U=1,152 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `traversaal-olive-startup-twelve-months`：實讀 Traversaal 官方 Startup Program 頁與條款，12 個月免費、每月 100 次 API、免信用卡、加速器團隊優先，條款授權條文以付費為前提之衝突持續。
+- `nebius-europe-compute-grants-watch`：實讀 Nebius AI Builder Compute Grants 招募頁與 Builder 頁，招募範圍限定 Europe 團隊、$10M 基金、三大評審標準，台灣確定不在合格範圍。
+- `aicu-evaluation-ap`（**追查失敗**）：實測 `ch.aicu.ai`、`/news`、`/faq` 持續回傳 HTTP 522 Cloudflare Connection Timed Out，源站斷線無法核實方案標價；僅條款頁 `api.aicu.ai/terms` 正常。依硬紅線規則不刷新 `verified_at`，記錄 `last_review_attempt_at: 2026-11-23T10:10:45+08:00` 及原因，列入 `attempted_failed_ids` 並安排 14 天內重試。
+- `cloudflare-students`：實讀 Cloudflare for Students 方案頁與部落格，美國年滿 18 歲學生、.edu 帳單信箱、需綁定信用卡、Workers Paid 月底費 $5/mo 豁免 12 個月、超額自付。
+- `algolia-startups`：實讀 Algolia 官方 Startup 頁與條款頁，Grow/Grow Plus 方案最高 US$10,000 額度、12 個月效期、募資小於 $15M、成立未滿 7 年、先前不得為付費客戶。
+- `reducto-standard-initial-credit-us-only`：實讀 Reducto 最新服務條款（2026-11-18 版）與定價頁，新戶 Standard 贈 $150（15,000 credits），條款 §1.2 載明服務全球可用（僅排除受美全面制裁管轄區），確認無美國限定條款。
+- `cerebras-trial`：實讀 Cerebras 官方定價頁與文檔 Rate Limits 頁，新帳號需綁定有效付款方式領取一次性 US$5 額度（30 天到期、不自動扣款），官方明確否認存在永久免費層。
+- `rosalind-academic`：實讀 OpenAI Help Center 官方說明，限美國大學研究實驗室由 PI 申請、最多 30 席 ChatGPT Business Standard 免費 12 個月、啟用需綁卡、明確不含 API 額度。
+- `diffbot-free-monthly-tenk-shared-api-credits`：實讀 Diffbot 定價頁與通用條款，Free 方案每月 10,000 共享 credits、1 thread、免信用卡、超額 429，通用條款仍保留付款方式要求之文字衝突。
+- `read-ai-free-monthly-five-shared-meeting-reports`：實讀 Read AI 官方 Plans & Pricing 與服務條款，Free 方案每月 5 份會議逐字稿及報告、單場上限 1 小時、免信用卡，條款 §4(b) 明訂用戶內容授權用於 AI/ML 模型訓練。
+- `claude-watch`：實讀 Claude 定價頁、入門指南與支援清單，Consumer Free 方案免綁卡，用量上限採 5 小時與每週雙軌動態限制，提供 Sonnet 與 Haiku，不含 Opus，支援台灣（Taiwan）。
+- `gemini-watch`：實讀 Google AI Studio / Gemini API 定價與可用地區，Free tier 免綁卡可用，支援台灣，Gemini 2.5 Flash 已標註棄用並將於 2026-12-01 自動轉至 Gemini 3.5 Flash-Lite。
+- `assistant-cloud-free-monthly-two-hundred-active-users`：實讀 Assistant Cloud 定價與 limits 文檔，Free 方案硬性限制為每月 200 MAU 及 500 個雲端生成標題，超額時新使用者首則訊息回傳 HTTP 402 硬停拒絕。
+- `claude-academy-free-ai-fluency-course-badge`：實讀 Claude Academy 官方課程頁，AI Fluency 課程免費開放，包含 14 個 lessons、1 個 quiz、時長約 4 小時，完成後可取得 completion badge。
+- `serper-once-2500-b2b-search`：實讀 Serper 官網與服務條款，免信用卡提供 2,500 次搜尋 API 查詢，額度用盡停止接收請求，條款明確限制僅限 B2B 商業服務。
+- `supabase-free-tier-vector`：實讀 Supabase 定價頁與 pgvector 延伸套件指南，Free 方案支援最多 2 個活躍專案、500MB 資料庫、5GB 流量，閒置 1 週自動暫停，pgvector 支援向量檢索。
+- `supermemory-startup-research-scale`：實讀 Supermemory 定價頁與條款，合格之早期新創與學術研究團隊可申請 Scale 方案（原價 $399/月）免費 3 個月，內含每月 $600 用量與專屬支援。
+- `deepgram-flux-tts-bonus`：實讀 Deepgram Flux TTS 促銷條款與定價，活動至 2026-12-31 23:59 PT，每專案上限 US$500，須為真實付費點數在 Flux TTS 上的消耗才獲 1:1 回饋，排除免費贈額。
+- `x-api-xai-spend-credit-rewards`：實讀 X API free-credits.md 與 pricing.md，首購贈點 US$20 與首筆自動儲值 1:1 配發最高 US$50（合計最高 US$70），xAI 累積消費回饋達標 10%–20%。
+- `work-codex-plus`：實讀 ChatGPT Work 與 Codex 定價文檔及支援清單，Plus 月費 $20，Work 與 Codex 共用用量與限制，5 小時估計表新增 GPT-6.2 Astra (6-50) 與 GPT-6.2 Sol (17-180)。
+
+### 新增紀錄（2 筆）
+- `kaggle-squares-in-squares-optimization-challenge`：Kaggle 官方發布之幾何排列最佳化挑戰賽「Squares in Squares」，1,000 組單位正方形最小容器排列挑戰，總獎金池達 50,000 美元，參賽免費提供每週 30 小時 GPU 與 20 小時 TPU v3-8 算力環境，2027-07-18 截止。
+- `nstc-natural-sciences-geo-ai-research-grant-116`：國科會自然科學及永續研究發展處 116 年度空間資訊科技學門主題式研究計畫，聚焦時空大數據與地理人工智慧（GEO-AI）跨域研發補助案，至多補助 3 年，2027-01-07 截止。
+
+### 品質改善
+- 執行嚴格去重檢驗：發現既有紀錄已存在 `moea-sme-deep-tech-cross-domain-rd-grant-116`，將前次重複收錄之 `moea-sme-deep-tech-cross-domain-ai-grant-116` 修正為 `status: "duplicate_merged"` 並建立 `duplicate_of` 參照，歷史變更記入 `policy-history.json`。
+- 嚴格落實硬紅線：`aicu-evaluation-ap` 因源站 522 連線逾時，誠實列為失敗追查（attempted=1），不刷新 `verified_at`，並在 14 天內重新排程追查。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 201 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `aicu-evaluation-ap`：`ch.aicu.ai` 站台持續回傳 HTTP 522 逾時，方案定價與 AP 換算率待源站恢復後複核。
+- `traversaal-olive-startup-twelve-months`：Startup 免費頁面與通用服務條款付費前提之矛盾未獲官方除外條文支持。
+- `read-ai-free-monthly-five-shared-meeting-reports`：免費版用戶會議內容依條款 §4(b) 授權用於 AI/ML 模型訓練之隱私邊界待釐清。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 11:59:59 免費預覽截止後核對正式切換付費之 API 反應與模型清單（首要追蹤）。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+5. `aicu-evaluation-ap`：14 天內再次重測源站 `ch.aicu.ai` 是否脫離 522 故障狀態。
