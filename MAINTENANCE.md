@@ -6605,3 +6605,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 5. `aicu-evaluation-ap`：14 天內再次重測源站 `ch.aicu.ai` 是否脫離 522 故障狀態。
+
+
+## 2026-11-23 11:06–2026-11-23 11:14 Asia/Taipei｜N=1,173 · R=19 · A=2 · U=1,154 · attempted=1
+
+### 複核紀錄（19 筆成功，1 筆失敗）
+- `stepfun-stepaudio3-music-gen-preview-nov8`：實讀官方定價指南（https://platform.stepfun.ai/docs/en/guides/pricing/details.md），確認限時免費預覽仍在最後倒數（至 2026-11-23 11:59:59 AM UTC+8 截止，新收費價格於 12:00:00 PM 生效），排入 12:05 複核模型退役與正式計費轉換。
+- `supabase-aws-activate-vc-three-hundred`：實讀 Supabase 官方 AWS Activate 申請頁（https://supabase.com/go/aws-activate-offer），確認專屬創投支持新創之 US$300 額度申請表單正常開放，維持條件式資格。
+- `context-free-monthly-thousand-shared`：實讀 Context.dev 官方定價頁（https://www.context.dev/pricing），確認 Free Tier 每月 1,000 credits 免費額度持續提供，免信用卡。
+- `digitalocean-startups-core-gpu-policy`：實讀 DigitalOcean Startups 官方主頁（https://www.digitalocean.com/startups），確認 Hatch 新創雲端方案 Core 排除 GPU 算力條款維持，目前新申請流程依政策列審。
+- `parseur-free-monthly-twenty-first-process-credits`：實讀 Parseur 官方定價頁（https://parseur.com/pricing），確認 Free 方案每月 20 點文件擷取點數與既有文件重處理免費政策不變。
+- `buzz-classic-open-source-local-transcription`：實讀 Buzz Captions 官方網站（https://buzzcaptions.com/），確認基於 Whisper 之本機開源離線語音轉錄工具開源維護中，無連線限制與使用費用。
+- `turboscribe-free-daily-three-thirty-minute-files`（**追查失敗**）：實測官方站 `https://turboscribe.ai/pricing` 遭遇 Cloudflare 反爬蟲驗證攔截（HTTP 403 `cf-mitigated: challenge`），依安全硬紅線不繞過反爬蟲機制，保留既有 `verified_at`，記錄 `last_review_attempt_at: 2026-11-23T11:09:04+08:00` 與原因，列入 `attempted_failed_ids` 並安排 24 小時後重試。
+- `jan-desktop-apache-local-chat-api`：實讀 Jan Desktop 官方文檔（https://docs.jan.ai/desktop），確認 Apache 授權開源本機 AI 對話與 OpenAI 相容本機 API 伺服器持續免費開放。
+- `vinci-startup-support-resolution-credit`：實讀 Vinci AI 官方新創方案頁（https://joinvinci.ai/startups-program），確認最高 US$10,000 新創客服 AI 額度申請入口正常開放。
+- `cerebras-early-access-builders`：實讀 Cerebras 官方早期存取方案頁（https://www.cerebras.ai/early-access），確認 Early Access Program for Builders 申請表單正常開放，贈額依個案選拔審核。
+- `cerebras-ambassador-community`：實讀 Cerebras 官方大使方案頁（https://www.cerebras.ai/ambassadors），確認 Ambassador Program 社群貢獻換取算力計劃持續推展。
+- `chatpdf-free-daily-two-documents`：實讀 ChatPDF 官網（https://www.chatpdf.com/），確認每日免費 2 份文件（每份最多 120 頁）、免登入基礎對話功能正常運作。
+- `mathpix-snip-free-monthly-ten-education-double`：實讀 Mathpix 官方定價頁（https://mathpix.com/pricing/snip），確認 Free 方案每月 10 頁 PDF 與 10 張圖像 Snip OCR 額度維持，教育信箱加倍。
+- `reclaim-education-half-price-twelve-months`：實讀 Reclaim.ai 官方教育定價頁（https://reclaim.ai/pricing/education-discount），確認學生與教職員 50% 折扣 12 個月申請審核管道正常開放。
+- `reclaim-lite-free-single-user-five-ai-agents`：實讀 Reclaim.ai 官方定價頁（https://reclaim.ai/pricing），確認 Lite 免費方案提供單人排程、5 項 AI agents 功能不變。
+- `vocol-new-account-two-hundred-vpoints-watch`：實讀 Vocol 繁體中文定價方案頁（https://www.vocol.ai/tw/plan-pricing），確認「註冊即贈200點，所有方案皆適用！」依然明確標示，而 helpvocol 獨立網域持續連線失敗，保留觀察分類。
+- `scrapegraph-free-credit-reset-conflict`：實讀 ScrapeGraphAI 官網（https://scrapegraphai.com/），確認 V2 API 方案提供免費測試額度，資料供模型訓練政策維持。
+- `work-codex-free`：實讀 ChatGPT / Codex 官方定價文檔（https://learn.chatgpt.com/docs/pricing），確認 Free 方案基礎模型存取與速率限制架構不變。
+- `work-codex-go`：實讀 ChatGPT / Codex 官方定價文檔（https://learn.chatgpt.com/docs/pricing），確認 Go 方案每月 US$8 定價與用量額度維持。
+- `oracle-ai-services-free-tier`：實讀 Oracle Cloud 官方生成式 AI 頁面（https://www.oracle.com/artificial-intelligence/generative-ai/），確認 OCI AI 服務之 Free Tier 基礎配額維持。
+
+### 新增紀錄（2 筆）
+- `kaggle-nvidia-nemotron-model-reasoning-challenge`：NVIDIA Research 於 Kaggle 主辦之 Nemotron 語言模型推理最佳化競賽，總獎金池達 106,388 美元，參賽者須針對 Nemotron-3-Nano-30B 模型進行 LoRA 參數高效微調，免費提供 GPU 及 TPU 雲端算力。
+- `nstc-115-smart-robotics-key-tech-grant`：國科會工程技術研究發展處配合行政院「智慧機器人產業推動方案」推動之 115 年度智慧機器人關鍵技術研發與場域應用專案計畫（學門代碼：E9848），補助具身智慧（Embodied AI）服務型機器人整合型研發，每案每年最高補助新臺幣 2,000 萬元，期程 4 年。
+
+### 品質改善
+- 緊密追蹤嚴格限時到期項目：確認 `stepfun-stepaudio3-music-gen-preview-nov8` 官方定價指南載明免費預覽於 2026-11-23 11:59:59 截止，新收費標準於 12:00:00 生效，提前完成倒數複核並排入 12:05 追查正式切換狀態。
+- 嚴格遵守硬紅線規範：`turboscribe-free-daily-three-thirty-minute-files` 遭遇 Cloudflare challenge 攔截，誠實列為失敗追查（attempted=1），保留原 `verified_at` 不造假，排入 24 小時後重試。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 203 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `turboscribe-free-daily-three-thirty-minute-files`：定價頁受 Cloudflare 防護阻擋，每日 3 份 30 分鐘額度政策需待反爬蟲限制解除或官方鏡像後重核。
+- `vocol-new-account-two-hundred-vpoints-watch`：`helpvocol.vocol.ai` 獨立網域持續連線失敗，免費點數詳細扣抵與效期條款待補齊。
+- `scrapegraph-free-credit-reset-conflict`：官方文檔與定價方案對免費用量是一次性 500 點或每月重置之敘述矛盾仍待釐清。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對正式切換付費之 API 反應與模型清單（首要追蹤）。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+5. `turboscribe-free-daily-three-thirty-minute-files`：24 小時後重測定價頁連線與防護狀態。

@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,173 筆**（953 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 10:20 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,152 筆**既有紀錄未完成本輪複核。重點確認 AICU 源站連線持續逾時（HTTP 522 失敗保留舊查閱時間）、Traversaal Olive 新創 1 年免費條款衝突、Nebius 歐洲算力補助限定歐盟、Cloudflare 學生包免底費條件、Algolia 新創 $10K 額度維持、Reducto Standard 新版條款確認無美區限制、Cerebras API 無永久免費層、Rosalind 美國學術實驗室專用、Claude 與 Gemini API 免費層與 12/01 模型轉移、Assistant Cloud 402 硬停、Work/Codex Plus 共用額度與 GPT-6.2 最新估計，並去重合併經濟部深科技跨域補助案，新增 Kaggle Squares in Squares 幾何最佳化挑戰賽（總獎金 $50,000）及國科會自然處 116 年度空間資訊 GEO-AI 主題式研究計畫補助案。
+資料集目前有 **1,175 筆**（955 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-23 11:14 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **19 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**；整筆追查失敗 **1 筆**。其餘 **1,154 筆**既有紀錄未完成本輪複核。重點確認 StepAudio 3 音樂預覽限時免費仍在最後倒數（至 11:59:59 截止，12:00 新價生效）、Turboscribe 遭遇 Cloudflare 反爬蟲驗證攔截（保留舊查閱時間排入重試）、Supabase AWS Activate 新創 $300 額度、Context.dev 每月 1,000 credits、DigitalOcean Startups 核心方案排除 GPU、Parseur 每月 20 點 AI 擷取、Buzz 開源本機轉錄、Jan Desktop 本機 API、Vinci 新創 $10K 客服額度、Cerebras Early Access 與大使計畫、ChatPDF 每日免費額度、Mathpix Snip 教育加倍、Reclaim 教育五折與 Lite 免費排程、Vocol 繁中註冊贈 200 點、ScrapeGraphAI、Work/Codex 方案及 OCI AI 免費層，並新增 Kaggle NVIDIA Nemotron 模型推理挑戰賽（總獎金 $106,388）與國科會工程處 115 年度智慧機器人關鍵技術研發專案補助案（每案每年最高 2,000 萬元）。
 
 ## 使用方式
 
