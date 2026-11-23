@@ -6468,3 +6468,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 免費窗口結束後核對定價頁是否切換付費。
 4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤配額消耗與展延公告。
 5. `wistron-compute-donation-third-cohort-2027h1`：2026-11-25 10:30 線上說明會釋出之評選細節與配額確認。
+
+## 2026-11-23 08:06–2026-11-23 08:20 Asia/Taipei｜N=1,167 · R=20 · A=2 · U=1,147 · attempted=0
+
+### 複核紀錄（20 筆）
+- `stepfun-stepaudio3-music-gen-preview-nov8`：實讀官方定價指南（details.md）與音樂 API 文件，確認無進一步展延公告，免費預覽時段維持至 2026-11-23 11:59:59 AM 截止，正式版計費於 12:00:00 PM 生效（無音訊輸入每小時 US$2.40、有音訊輸入每小時 US$4.80，gen 為每 1M 字元 US$14.00）。
+- `ntu-hua-nan-fintech-ai-hackathon-2026`：實讀 Luma 頁面與臺大創創中心公告，確認按鈕維持「Request to Join」審核報名中，未出現額滿標記或延期公告，報名期間載明至 2026-11-23 截止當日。
+- `vercel-ai-gateway-parallel-decisions-free-window`：實讀 Vercel 模型頁與原廠 Parallel 定價文件，模型目錄仍標示 Price: Free（免費窗口涵蓋至 2026-11-23 當日），原廠牌價為每 1,000 次 fast requests 收費 US$1.00。
+- `alibaba-model-studio-token-plan-personal-new-user-discount`：實讀阿里雲百煉文檔（2026-11-21 更新版），確認個人版新客五折優惠持續至 2026-11-30 23:59:59 (UTC+8)，qwen4-max-preview 預覽退役日維持 2026-11-25 24:00 未變。
+- `kaggle-google-gemma-4-developer-agent-competition`：實讀 Kaggle 官方規則與討論區，Entry 截止維持 2026-11-26 07:59+08:00，最終提交維持 2026-12-03 07:59+08:00，總獎金 $110,000；官方提醒因評測排隊長達 20–24 小時呼籲儘早交件。
+- `airtable-free-plan-monthly-ai-credits`：實讀 Airtable AI billing 文檔，Free 每位 Editor 月贈 500 credits，Omni 建置免費但 Canvas 操作耗點，加購途徑與重置週期之官方文檔內部矛盾持續存在。
+- `autodesk-flow-studio-education`：實讀 Autodesk 官方發布之 Flow Studio 定價指南文章，確認 Education 方案每月 2,100 點免費，限 18+ 大專生與教師認證，每年可續，嚴格限制非商業教育用途。
+- `devin-free-light-agent-quota`：實讀 Devin 官方模型文件，Free 方案可在 Desktop/CLI 免費使用 SWE-2 Flash Medium；SWE-2 全系列免費至 2026-11-30，SWE-2 Flash 變體免費至 2026-12-04 18:00 UTC，兩截止日並存。
+- `goodmem-cloud-fourteen-day-no-card-trial`：實讀 GoodMem 官網與服務條款，14 天免卡試用有效，但 Cloud 宣傳自動微調與服務條款 §4.4 明言不以客戶內容微調模型矛盾持續，限企業與商務用途，試用期滿未升級可刪除資料。
+- `google-maps-demo-key-ai-studio-free-daily`：實讀 Google 官方部落格、Demo Key 說明頁與禁止區域條款，AI Studio Demo Key 每日每 API 100 次免卡沙盒配額持續在線，禁止清單未列入台灣，個人 Gmail 帳戶適用（排除企業 Workspace）。
+- `kimi-file-extraction-storage-api-temporarily-free`：實讀 Moonshot/Kimi Chat 定價與 Limits 文件，檔案抽取與儲存 API 維持 temporarily free，仍需最低儲值 US$1 啟用 API；累計儲值滿 US$5 贈 US$5 抵用券；官網網址已 301 重定向至 platform.kimi.ai。
+- `lg-exaone-25-api-free-noncommercial`：實讀 LG AI Research 官方新聞稿 (seq=755)、Changelog 與 ToS §2.1，新聞稿宣稱任何企業與新創可免費用於服務開發，與服務條款 §2.1 嚴格限制非商用之衝突持續存在，條款生效日仍標示 November 9, 2026 (Current)。
+- `lucid-education-free-ai-beta`：實讀 Lucid 幫助中心教育帳號指南與 Lucid AI 功能文章（2026-11-17 更新），教育帳號個人免費，Lucid AI 維持 beta 且開放全方案，保留未來收費可能；AI 補充條款頁面持續受防護阻擋（HTTP 403）。
+- `moe-ilink-aiea-winter-2026-teacher-workshops`：實讀 iLink 官網與 Google 報名表單底層資料，教育部全額補助免費（代訂午餐 NT$120 自選自費），11 月場次均已額滿，12/04 與 12/05 逢甲場次（共 4 場）仍開放勾選參加。
+- `moea-ai-xinxiu-training-stipend-116`：實讀經濟部產業發展署官方申請須知網頁，專業培訓（4個月）+ 企業實習（4個月）學習獎勵金上限 NT$20 萬，限非在職者，執行期程至 116 年 5 月 31 日止。
+- `nutn-national-ai-project-competition-2026`：實讀南大數位系官網（含 2026/11/21 最新通知）與南臺科大轉知頁，報名截止日為 115/12/01 23:59:59（2026-12-01），初賽 12/11，決賽 12/19，總獎金 NT$450,000。
+- `serpkite-free-search-api-credits`：實讀 SerpKite 定價、帳務文檔與服務條款，新戶標示 2,500 點，但小字註明當月免費預算用罄後新戶降為 250 + 250 點；每月固定 1,000 點不受該預算影響；比較頁與帳務文檔對月贈點資格條件存在矛盾。
+- `sloyd-guest-daily-plus-separated-pools`：實讀 Sloyd 定價頁與 ToS，Guest 方案卡標示 1 次/日 vs 比較表三項目各標 1 次/日矛盾持續；Plus 宣稱 Unlimited generations 但進階功能走 50 點月額度分池；Web App 點數與 API 點數完全分開；定價頁個人授權 vs ToS §6 商用規範矛盾維持。
+- `speechify-api-free-monthly-500k`：實讀 Speechify 定價頁與 API Limits 文檔，Free 方案免信用卡每月 500K 字元（Simba 3.5 額度為 333K），標示「Commercial use · community support」，速率限制 3 concurrent / 1 RPS / burst 10。
+- `tactiq-free-monthly-ten-transcripts-five-ai`：實讀 Tactiq 官方定價頁與幫助中心文章，每月 10 份逐字稿與 5 AI credits 維持；定價 FAQ 稱每次動作扣 1 點 vs 幫助中心稱每場會議最多扣 1 點之扣點規則矛盾持續；超額逐字稿僅限預覽且次月重置不解鎖。
+
+### 新增紀錄（2 筆）
+- `nstc-smart-health-industry-academia-consortium-grant`：國科會「智慧健康產學聯盟計畫」補助案，以健康臺灣為願景發展 AI 語音助理、AI 醫護助理與照護場域環境型 Ambient AI 異常監測示警，由大專校院或醫療機構攜手企業聯盟申請，每案最高補助新臺幣 3,000 萬元（隨到隨審，主要驗證場域須在大南方地區或偏鄉，至多 2 年期分年核定）。
+- `moea-sme-deep-tech-cross-domain-ai-grant-116`：經濟部中小及新創企業署 116 年度「深科技驅動中小企業跨域創新計畫」企業跨域研發補助案，聚焦三大核心主軸「代理式AI與領域應用 (Agentic AI)」、「永續AI與災防管理 (Sustainable AI)」、「物理AI與服務 (Physical AI)」，至少 2 家中小企業共組聯盟，每案最高補助新臺幣 900 萬元（補助款上限 50% 且 ≦ 自籌款 ≦ 實收資本額，受理至 2026-12-07 17:30 止）。
+
+### 品質改善
+- 精確更新 StepAudio 3 預覽截止（2026-11-23 11:59:59）與正式費率（Gen 每 1M 字元 $14、Music 每輸出小時 $2.40/$4.80）。
+- 實讀 iLink Google 報名表單底層資料，釐清 11 月逢甲場次已全面標註額滿，僅 12/04 與 12/05 場次可選取報名。
+- 納入國科會智慧健康產學聯盟計畫（3,000 萬元）與中小企署深科技跨域創新補助（900 萬元，鎖定 Agentic AI / Physical AI），提升台灣產學研專案補助覆蓋度。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 198 筆，A 級維持 201 筆。
+
+### 未解證據缺口
+- `stepfun-stepaudio3-music-gen-preview-nov8`：待 2026-11-23 12:00:00 正式收費生效後觀察 API 呼叫端點之計費回傳行為。
+- `lucid-education-free-ai-beta`：AI 補充條款頁面（supplemental-AI-terms）受 HTTP 403 阻擋，條款詳情未直接讀取。
+- `serpkite-free-search-api-credits`：新戶公共預算消耗後自動降額之門檻與目前即時餘額未公開。
+
+### 下一輪優先（最多 5 項）
+1. `stepfun-stepaudio3-music-gen-preview-nov8`：2026-11-23 12:00 免費預覽截止後核對正式切換付費之 API 反應與模型清單。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與參賽審核狀態。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
+5. `alibaba-model-studio-token-plan-personal-new-user-discount`：2026-11-25 24:00 qwen4-max-preview 退役下線確認。
