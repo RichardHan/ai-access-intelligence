@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T06:13:59+08:00",
-  "scope": "2026-11-24 06:06–2026-11-24 06:13 Asia/Taipei，局部複核 5 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆。更新 Google 配額與計費、南大競賽時程、Runloop 退場及兩筆供應商條款，新增東華與資策會免費培訓。",
+  "updated_at": "2026-11-24T07:12:16+08:00",
+  "scope": "2026-11-24 07:07–2026-11-24 07:12 Asia/Taipei，局部複核 5 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆。更正 Mastra 免費層計價、Steel 扣款與 HaveTML 領取狀態，補強 Civo 條款衝突與 Nango 免卡證據，新增新北八里及五股免費 AI 課程。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -17757,8 +17757,8 @@
     },
     {
       "id": "steel-launch-once-thirty-ninety-days-proxy-deposit",
-      "title": "Steel Launch：免卡一次US$30瀏覽器額度、90天有效，代理另需押金",
-      "summary": "AI代理雲端瀏覽器Launch免卡、無月租，送一次US$30共享usage credits、90天有效；10並行、每次最多15分鐘、60RPM、最多3席及7天資料保留。Steel供應代理與CAPTCHA功能須先增加US$10付費餘額驗證，免費額度不算；不是免費代理池或模型tokens。",
+      "title": "Steel Launch：免卡 US$30／90 天，供應商代理另須付費驗證",
+      "summary": "Launch 免卡、月費 US$0，領取一次共用 US$30 點數，90 天有效。瀏覽器工作階段按秒向上取整。Steel 供應的代理與 CAPTCHA 須先達 US$10 付費點數的一次性驗證門檻。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -17782,28 +17782,29 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": "Launch無月租；超過額度依表計量，可top up或啟用auto top-up。未核帳戶預設扣款與硬停設定；不要把免卡註冊解讀成加卡後不可能扣款。",
-      "usable_duration": "一次US$30，90天有效；非每月發放。",
-      "access_risk": "代理及CAPTCHA先須US$10付費驗證；各服務共用US$30，不可把300瀏覽器小時、3GB代理、10,000 CAPTCHA、6,000工具呼叫同時相加。",
+      "cancellation": "點數歸零或觸及已設定的支出上限時拒絕新工作階段，已開始的工作階段繼續。自動加值啟用後依設定扣款。",
+      "usable_duration": "贈額 US$30 自取得起 90 天有效。另購點數自購買起一年有效。",
+      "access_risk": "US$10 驗證點數可抵用，驗證後無須維持該餘額。不同服務共用同一點數池。/scrape 按次收費，另計瀏覽器時間及適用的 Steel 代理流量。",
       "eligibility": {
-        "service_availability": "Launch價格頁列免信用卡；每次15分鐘、10並行、60RPM、最多3席。",
+        "service_availability": "Launch 免卡，最多 3 席。每組織合計 10 個並行工作階段、每次最多 15 分鐘、每分鐘可新建 60 個，資料保留 7 天。",
         "account_eligibility": "須建立workspace；新舊戶重領資格及年齡未核。",
-        "billing_country": "普通Launch免卡；代理與CAPTCHA需US$10 paid balance；台灣付款及退款未核。",
+        "billing_country": "一般 Launch 免卡。Steel 代理及 CAPTCHA 需一次達 US$10 付費點數以驗證。台灣付款及退款未核。",
         "identity_residency": "未找到台灣帳戶／居住資格明列。",
-        "terms_restrictions": "credits跨瀏覽器時間、代理頻寬、CAPTCHA、Browser Tools共用；瀏覽器時間逐分鐘向上計費；本文未取得完整服務條款。",
+        "terms_restrictions": "US$30 共用於瀏覽器時間、Steel 代理流量、CAPTCHA 與適用的 Quick actions。瀏覽器每個工作階段按秒向上取整。完整條款未核。",
         "taiwan_note": "Unknown：頁面可讀不等台灣資格確認。"
       },
       "unknowns": [
         "台灣註冊及付款資格",
-        "Launch額度用盡且未加卡時實際硬停機制、auto top-up預設",
+        "個別帳戶自動加值設定及退款",
         "完整服務條款、用途及個案資料權利"
       ],
       "sources": [
         {
           "url": "https://steel.dev/pricing",
-          "scope": "免卡一次額度、方案限制",
-          "evidence": "Launch $0 per month + usage；Included usage $30 of credits, one time；No credit card needed；10 concurrent、15-minute sessions、3 seats；比較表60RPM、7日retention。",
-          "accessed_time_range": "2026-10-29T19:05:58+08:00–2026-10-29T19:12:33+08:00"
+          "scope": "公開 Launch 定價與席次",
+          "evidence": "月費零、用量另計；US$30 一次、免卡、最多三席。60 次的範圍以 Limits 文件為準。｜較早紀錄（前次查閱 2026-10-29T19:05:58+08:00–2026-10-29T19:12:33+08:00；免卡一次額度、方案限制）：Launch $0 per month + usage；Included usage $30 of credits, one time；No credit card needed；10 concurrent、15-minute sessions、3 seats；比較表60RPM、7日retention。",
+          "accessed_time_range": "2026-10-29T19:05:58+08:00–2026-10-29T19:12:33+08:00",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
         },
         {
           "url": "https://docs.steel.dev/overview/pricinglimits",
@@ -17811,19 +17812,37 @@
           "evidence": "「Launch includes $30 in one-time free usage credits, valid for 90 days」「Usage credits are applied to metered Steel usage, including browser hours, proxy bandwidth, CAPTCHA solves, and Browser Tools usage」「Verify your Launch account with a $10 deposit … Free credits do not count. The deposit goes toward usage, not an extra fee」。",
           "accessed_time_range": "2026-10-29T19:05:58+08:00–2026-10-29T19:12:33+08:00",
           "accessed_at": "2026-11-09T05:10:00+08:00"
+        },
+        {
+          "url": "https://steel.dev/docs/platform/pricing",
+          "scope": "官方新版定價（原 pricinglimits 轉址）",
+          "evidence": "一次 US$30、90 天。瀏覽器按秒向上取整。/scrape 收每次費用及工作階段瀏覽器與適用代理用量。一次達 US$10 付費點數後開通指定功能，點數可抵用。文件標示 11/12 reviewed，方案生效日期未列。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://steel.dev/docs/platform/billing-and-usage",
+          "scope": "官方計費文件，付費點數與餘額行為",
+          "evidence": "另購點數一年到期。餘額歸零或達支出上限時拒絕新工作階段，已開始者持續。自動加值依設定扣款。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://steel.dev/docs/platform/limits",
+          "scope": "官方組織級用量限制",
+          "evidence": "10 並行、每次 15 分鐘、每分鐘建立 60 個工作階段、保留 7 天，組織各專案合計。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
         }
       ],
       "review_cadence": "monthly",
-      "verified_at": "2026-11-09T05:10:00+08:00",
+      "verified_at": "2026-11-24T07:09:02+08:00",
       "discovered_at": "2026-10-29T19:05:58+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "next_review_at": "2026-12-09T12:00:00+08:00",
+      "next_review_at": "2026-12-24T09:00:00+08:00",
       "priority_score": 16.3,
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "verification_scope": "2026-11-09 05:10 重讀 docs pricing-limits（Last Edit 2026-10-23）：Launch 一次 US$30／90 天、代理與 CAPTCHA 需先存 US$10 付費餘額（免費額度不計）、共用池、10 並行／15 分鐘／60 RPM／3 席／7 天保留均逐字對上。未註冊。"
+      "verification_scope": "2026-11-24 實讀官方來源，核對贈額、效期、計量粒度、驗證付款門檻及餘額歸零。台灣資格及退款待核。"
     },
     {
       "id": "recall-startups-first-tenk-half-price-recording",
@@ -19568,7 +19587,7 @@
     {
       "id": "nango-free-integrations",
       "title": "Nango Free：API 與 MCP 整合每月免費額度",
-      "summary": "免費層提供10個連線、每月10小時整合運算與10GB傳輸，硬上限每月重置；適合 AI agent 的 API/MCP 認證、工具及同步，不含模型推論額度。外部 API 可能另收費。",
+      "summary": "官方產品頁列可免卡免費開始。Free 提供 10 個連線、每月 10 小時整合運算與 10 GB 傳輸，硬上限每月重置。可用於 API／MCP 認證、工具及同步。外部 API 可能另收費。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -19577,7 +19596,7 @@
         "developer",
         "free"
       ],
-      "setup_cost_usd": null,
+      "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "effort_minutes_max": null,
       "taiwan": "Unknown",
@@ -19591,49 +19610,60 @@
       "savings_usd": null,
       "cancellation": "免費層硬上限；另選收費訂閱依訂單自動續訂，須於週期結束前取消。帳戶終止依訂單聯絡客服。",
       "usable_duration": "免費層上限每月重置，未列公開結束日期",
-      "access_risk": "台灣帳戶資格、是否需信用卡及外部 API 費用未核；收費訂閱自動續訂。",
-      "verified_at": "2026-11-09T04:13:00+08:00",
+      "access_risk": "台灣帳戶資格、付費方式及外部 API 費用待核。另選收費訂閱有自動續訂條款。",
+      "verified_at": "2026-11-24T07:09:20+08:00",
       "discovered_at": "2026-10-29T10:07:21+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T12:00:00+08:00",
+      "next_review_at": "2026-12-24T09:00:00+08:00",
       "eligibility": {
-        "service_availability": "官方定價列免費層，未實際註冊；台灣帳戶是否可建立未核。",
+        "service_availability": "定價列 Free 及每月硬上限。官方產品頁列免卡起用，台灣帳戶未實測。",
         "account_eligibility": "個人須滿18歲且未被停權；代表公司接受條款須有授權。",
-        "billing_country": "免費層是否要求付款方式及台灣帳單資格未核；Pay-as-you-go 每月50美元，非免費層。",
+        "billing_country": "免費開始免卡。Pay-as-you-go 月費 US$50，台灣付費帳單資格待核。",
         "identity_residency": "條款限制美國禁止交易的地區及受制裁者；列舉地區未含台灣，但非台灣個案核准證明。",
         "terms_restrictions": "須提供真實資訊；不得冒用身分或轉售、轉讓存取權。每個外部 API key或access token計一連線；整合運算每次向上取整至秒，傳輸計出口。",
-        "taiwan_note": "Unknown：條款列舉的受限制地區未列台灣，但台灣註冊、個案資格及付款方式未核。"
+        "taiwan_note": "Unknown：條款列舉的受限制地區未列台灣，實際台灣帳戶及付費資格待核。"
       },
       "unknowns": [
-        "台灣帳戶及付款方式資格",
-        "免費層是否需信用卡",
-        "外部API及OAuth審核的費用與限制",
+        "台灣帳戶及付費方式資格",
+        "外部 API 及 OAuth 審核的費用與限制",
         "適用法律及監管限制"
       ],
       "sources": [
         {
           "url": "https://nango.dev/pricing",
-          "scope": "免費層 10 連線／每月 10 小時／每月 10GB 與計量定義（2026-11-09 重讀）；較早範圍：免費額度、計量、重置及付費方案",
-          "evidence": "「Free limits 10 / 10 hours / mo / 10GB / mo」；「Hard-capped limits, reset monthly」；「Pay-as-you-go $50 /mo」「$50 in credits, each month」；「1 Connection = 1 API key or access token of the external API」；「Each run is rounded up to the nearest second.」；「We only measure egress. Ingress transfers are free.」；較早紀錄：免費層10連線、10小時運算及10GB傳輸，硬上限每月重置；Pay-as-you-go每月50美元。",
-          "accessed_at": "2026-11-09T04:12:00+08:00"
+          "scope": "Free 硬上限、計量及付費對照",
+          "evidence": "每月 US$0、10 個連線／10 小時／10 GB，硬上限每月重置。傳輸列出口，付費方案月費 US$50。｜較早紀錄（前次查閱 2026-11-09T04:12:00+08:00；免費層 10 連線／每月 10 小時／每月 10GB 與計量定義（2026-11-09 重讀）；較早範圍：免費額度、計量、重置及付費方案）：「Free limits 10 / 10 hours / mo / 10GB / mo」；「Hard-capped limits, reset monthly」；「Pay-as-you-go $50 /mo」「$50 in credits, each month」；「1 Connection = 1 API key or access token of the external API」；「Each run is rounded up to the nearest second.」；「We only measure egress. Ingress transfers are free.」；較早紀錄：免費層10連線、10小時運算及10GB傳輸，硬上限每月重置；Pay-as-you-go每月50美元。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
         },
         {
           "url": "https://nango.dev/terms",
           "scope": "資格、真實資訊、轉讓及續訂條款",
           "evidence": "條款生效日2023-12-07；個人至少18歲，受制裁限制，禁止虛假身分及轉讓存取，收費訂閱自動續訂。非美國法律合規未保證。",
           "accessed_at": "2026-10-29T10:07:21+08:00"
+        },
+        {
+          "url": "https://nango.dev/platform/data-sync/",
+          "scope": "官方 Data Sync 起用付款要求",
+          "evidence": "產品頁明列「Free to start, no credit card.」",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:20+08:00"
+        },
+        {
+          "url": "https://nango.dev/platform/request-proxy/",
+          "scope": "官方 Request Proxy 起用付款要求",
+          "evidence": "產品頁同樣列免卡免費開始。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:20+08:00"
         }
       ],
       "record_type": "opportunity",
       "status": "conditional",
       "legal_status": "not_verified",
-      "priority_score": 15.8,
+      "priority_score": 16.3,
       "priority_tier": "C",
-      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知·有資格門檻",
+      "priority_note": "官方來源·需符合條件·免費·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "verification_scope": "2026-11-09 04:12 重讀定價頁與 FAQ：免費層數字、硬上限與月重置不變；頁面仍未寫免費層是否需信用卡。未註冊。"
+      "verification_scope": "2026-11-24 實讀官方來源，核對免費層計量、重置與官方免卡起用說明。台灣帳戶未測。"
     },
     {
       "id": "kiro-startup-pro-plus-2026",
@@ -20260,8 +20290,8 @@
     },
     {
       "id": "mastra-starter-monthly-hundred-k-events-twentyfour-cpu",
-      "title": "Mastra Starter：每月 100K 觀測事件及 24 CPU 小時",
-      "summary": "Starter平台費每月$0，含100K觀測events、24 CPU小時、10GB egress；超額分別每100K $10、每CPU小時$0.35、每GB $0.10。模型Gateway另按市價加5.5%，非免費模型token。",
+      "title": "Mastra Platform Free：每月 10 萬觀測事件、40 vCPU 小時",
+      "summary": "原免費 Starter 已改名 Free，月費 US$0。每工作區每月含 10 萬觀測事件、40 vCPU 小時、360 GB 小時記憶體、10 GB 共用出口流量及 5 個連線。另有月費 US$25 的 Starter，包含一個 Small 專案。超額與 Gateway 用量另計。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -20271,44 +20301,45 @@
         "free"
       ],
       "setup_cost_usd": null,
-      "recurring_cost_usd": null,
+      "recurring_cost_usd": 0,
       "effort_minutes_max": null,
       "taiwan": "Unknown",
       "regions": [],
       "verification": "Official",
-      "usage_type": null,
+      "usage_type": "代理部署與觀測月度用量",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "cancellation": null,
-      "usable_duration": "按月",
-      "access_risk": "資格及費用可能變更；台灣個案與法律未核。",
-      "verified_at": "2026-11-09T04:13:00+08:00",
+      "usable_duration": "平台按工作區按月列價，Free trace 保留 15 天。",
+      "access_risk": "Free 平台可產生超額費。付款方式、帳戶實際超額處理及設定支出上限的條件待核。",
+      "verified_at": "2026-11-24T07:09:02+08:00",
       "discovered_at": "2026-10-29T05:07:39+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-11-10",
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T12:00:00+08:00",
+      "next_review_at": "2026-12-24T09:00:00+08:00",
       "eligibility": {
-        "service_availability": "官方公開頁可讀；實際台灣帳戶服務未測。",
-        "account_eligibility": "需年滿18歲；背景cron、keep-alive可能消耗CPU；Always-On另計。未充值帳戶超額處理及硬性支出上限未核。",
+        "service_availability": "現行定價列 Free，每工作區每月 US$0。11/10 公告稱舊免費 Starter 帳戶留在 Free。",
+        "account_eligibility": "舊條款證據列年滿 18 歲。本輪核對定價、改版公告及 Gateway 計費。",
         "billing_country": "台灣帳單、付款及稅費未核。",
         "identity_residency": "台灣個案、身分或所在地資格未核。",
-        "terms_restrictions": "需年滿18歲；背景cron、keep-alive可能消耗CPU；Always-On另計。未充值帳戶超額處理及硬性支出上限未核。",
+        "terms_restrictions": "平台額度與 Gateway 預付模型費分開，Gateway 自帶金鑰由模型供應商計費。",
         "taiwan_note": "Unknown：官方頁未確認個別台灣申請資格；未申請或付款。"
       },
       "unknowns": [
-        "註冊免卡與否、超額處理及台灣服務區域",
-        "台灣個別資格、付款及法律限制未核"
+        "現行註冊及使用 Free 是否免卡、平台超額處理與硬性支出上限",
+        "台灣帳戶及付款資格",
+        "Gateway 處理費優惠是否展延"
       ],
       "sources": [
         {
           "url": "https://mastra.ai/pricing",
-          "scope": "Starter 含 100K events、24 CPU 小時、10GB egress、15 天保留；加值與超額另計（2026-11-09 重讀）；較早範圍：Starter額度及超額",
-          "evidence": "「Starter Free for everyone $0/ month」；「Observability events100K events+ $10/100K」；「CPU time24 CPU hours+ $0.35/hr」；「Data Egress 10GBthen $0.10/GB」；「Data retention15 days」；「Persistent Server (24/7 Uptime)$100/project」；「Compute HoursPostgres 5 hoursthen $0.50/hr」；「Memory Token Usage 100,000then $10/1M」；「Retrieval Storage 250MBthen $20/GB」；「Bring your own key ![Not included]」；「Input / Output Tokens Market Rate + 5.5%」；較早紀錄：Starter每月100K events、24 CPU小時、10GB egress；模型Gateway按市價加5.5%。",
-          "accessed_at": "2026-11-09T04:11:00+08:00"
+          "scope": "Mastra Platform 現行免費層、Starter、超額與 trace 保留",
+          "evidence": "Free US$0、每工作區月用量 100K 觀測事件、40 vCPU 小時、360 GB 小時記憶體、10 GB 共用出口、5 連線。Starter US$25 含一個 Small 專案。｜較早紀錄（前次查閱 2026-11-09T04:11:00+08:00；Starter 含 100K events、24 CPU 小時、10GB egress、15 天保留；加值與超額另計（2026-11-09 重讀）；較早範圍：Starter額度及超額）：「Starter Free for everyone $0/ month」；「Observability events100K events+ $10/100K」；「CPU time24 CPU hours+ $0.35/hr」；「Data Egress 10GBthen $0.10/GB」；「Data retention15 days」；「Persistent Server (24/7 Uptime)$100/project」；「Compute HoursPostgres 5 hoursthen $0.50/hr」；「Memory Token Usage 100,000then $10/1M」；「Retrieval Storage 250MBthen $20/GB」；「Bring your own key ![Not included]」；「Input / Output Tokens Market Rate + 5.5%」；較早紀錄：Starter每月100K events、24 CPU小時、10GB egress；模型Gateway按市價加5.5%。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
         },
         {
           "url": "https://mastra.ai/blog/mastra-platform-pricing",
@@ -20321,17 +20352,29 @@
           "scope": "資格及重置",
           "evidence": "帳戶需18歲；一般配額按曆月重置，官方不保證其他國家可用。",
           "accessed_at": "2026-10-29T05:07:39+08:00"
+        },
+        {
+          "url": "https://mastra.ai/blog/mastra-platform-starter-plan",
+          "scope": "2026-11-10 官方方案改版與舊戶轉換公告",
+          "evidence": "舊免費 Starter 繼續在 Free，現 Starter 每月 US$25。公告與現行定價同列 Free 10 GB 及 Starter 25 GB 共用出口。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://mastra.ai/docs/mastra-platform/gateway/usage-and-limits",
+          "scope": "官方 Gateway 計費、BYOK 與處理費優惠",
+          "evidence": "Gateway 依各模型預付，BYOK 由供應商計費。以 Mastra 點數付款的推論處理費 3%，上市優惠免至 2026-12-31。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
         }
       ],
       "record_type": "opportunity",
       "status": "conditional",
       "legal_status": "not_verified",
-      "priority_score": 15.3,
+      "priority_score": 15.8,
       "priority_tier": "C",
       "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知·有資格門檻",
       "valuation_scenario": null,
-      "cost_note": "Starter 平台費 US$0/月，但不是整體免費：Persistent Server（24/7 uptime）US$100/project、Postgres 運算 5 小時後 US$0.50/hr、Memory token 逾 10 萬 US$10/1M、Retrieval storage 逾 250MB US$20/GB、資料保留 15 天、Starter 不含 BYOK；Gateway 模型 token 按市價加 5.5%。",
-      "verification_scope": "2026-11-09 04:11 重讀定價頁：Starter 數字與費率與原紀錄一致，另補記 US$100/project 常駐伺服器、Postgres 5 小時後計費、memory/retrieval 超額與 15 天保留。未註冊、未付款。"
+      "cost_note": "Free 超額為每 10 萬觀測事件 US$10、每 vCPU 小時或每 GB 小時記憶體各 US$0.25、每 GB 出口流量 US$0.10、每連線 US$0.50。Gateway 依各模型預付計費，其 3% 處理費優惠免至 2026/12/31。",
+      "verification_scope": "2026-11-24 實讀官方來源，核對改名、月費、平台超額與 Gateway 處理費政策。台灣、綁卡及平台實際扣款待核。"
     },
     {
       "id": "temporal-startup-six-k-one-year-active-funded",
@@ -51831,8 +51874,8 @@
     },
     {
       "id": "civo-new-user-250-credit-watch",
-      "title": "Civo新戶 US$250 雲端額度：綁卡與期限待核",
-      "summary": "Civo新用戶US$250雲端額度，可用於Civo各項雲端服務。需綁定經驗證之信用卡/簽帳卡，不支援虛擬卡與預付卡。官方各文件對額度有效期存在矛盾（註冊頁寫次月月底、FAQ一處寫21天內開卡且1個月有效，另一處寫次月底，服務條款附表寫31天）。重要提醒：執行個體停止仍計費，且額度用盡不會自動關機，超額由綁定卡片扣款。",
+      "title": "Civo 新戶 US$250 雲端額度：需綁卡，官方期限有差異",
+      "summary": "新戶需加合格付款卡才可領 US$250。新舊註冊頁列三個月內加卡、發放次月底失效；FAQ 列 21 天內加卡，效期同頁兩說；服務條款附表列 31 個日曆天。停機資源仍計費，有效額度抵用後的欠款會嘗試扣卡。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -51859,16 +51902,16 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "US$250 一次性 introductory credit；官方文件對「綁卡窗口＋效期」並存四種說法（FAQ 21 天內綁卡且領用後1個月／FAQ 發放次月底／註冊頁 3 個月內綁卡且發放次月底／條款附表 31 天），無官方仲裁。",
-      "access_risk": "官方頁面/FAQ/條款對綁卡窗口及credit有效期有差異；台灣付款及領取資格未核實，超額依標準費率扣卡",
-      "verified_at": "2026-11-09T09:13:23+08:00",
+      "access_risk": "停止資源仍計費，點數用盡不會自動停用資源。官方的加卡期限與點數效期需個案確認，台灣卡片驗證與實際出帳待核。",
+      "verified_at": "2026-11-24T07:09:02+08:00",
       "discovered_at": "2026-10-25T02:48:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T09:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T09:00:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "官方註冊頁與FAQ仍宣傳US$250新戶credit；可抵Civo雲端服務，額度使用窗口與領取期限互相矛盾。",
+        "service_availability": "新舊入口都列 US$250 可抵 Civo 服務。公開條款對綁卡及效期仍有差異。",
         "account_eligibility": "新戶帳戶並需新增有效信用卡/簽帳卡；FAQ與註冊頁對綁卡時限不同。",
         "billing_country": "需有效卡；官方未列出台灣可用付款方式/帳單國家清單，卡片資格未知。",
         "identity_residency": "需符合新戶資格；不能重複註冊領取。台灣身分/居住資格未明。",
@@ -51880,7 +51923,7 @@
         "台灣發行之信用卡是否全數通過 Stripe 驗證",
         "台灣個別帳戶顯示的額度實際到期日與卡片驗證結果"
       ],
-      "verification_scope": "2026-11-09 09:06–09:13 主 agent 重讀下列官方頁；僅核列明主張，未登入、未申請、未付款。",
+      "verification_scope": "2026-11-24 實讀官方來源，核對新舊入口、FAQ、服務條款與計費文件。各文件差異未解，未驗證個別帳戶。",
       "sources": [
         {
           "url": "https://www.civo.com/pricing",
@@ -51889,28 +51932,37 @@
         },
         {
           "url": "https://www.civo.com/signup/customer/new",
-          "scope": "本次核新戶優惠；註冊頁條款與卡片要求",
-          "evidence": "新戶US$250，需綁卡；註冊後三個月內綁卡、領取次月底到期，不可轉讓或換現；與FAQ及條款效期矛盾。｜較早紀錄：2026-10-25查閱：需綁卡，3個月內開卡，額度次月月底到期，可用於各項服務。",
-          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00"
+          "scope": "原官方註冊入口優惠條款",
+          "evidence": "仍列三個月內加卡、發放次月底失效，與現行入口一致。｜較早紀錄（前次查閱 2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00；本次核新戶優惠；註冊頁條款與卡片要求）：新戶US$250，需綁卡；註冊後三個月內綁卡、領取次月底到期，不可轉讓或換現；與FAQ及條款效期矛盾。｜較早紀錄：2026-10-25查閱：需綁卡，3個月內開卡，額度次月月底到期，可用於各項服務。",
+          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
         },
         {
           "url": "https://www.civo.com/docs/faq",
-          "scope": "新戶 US$250 領取窗口、效期四種說法與卡別限制（2026-11-09 重讀）",
-          "evidence": "「In order to claim your $250 free credit, you must add a valid credit/debit card to your account within 21 days of signing up to Civo.」；「This is valid for a month from the date it was applied.」；同頁另一段「The introductory credit is valid until the end of the month following its application to your account.」；「We do not support using a \"virtual\" or pre-paid card as a payment type.」；「Once you have completed these steps… any outstanding dues will need to be settled before the deletion」｜較早紀錄：同頁並列21天內綁卡、發放後一個月及發放次月底等說法；警示及配額並非硬性費用上限。｜較早紀錄：2026-10-25查閱：FAQ內文21天/1個月與次月底兩種描述並存。",
+          "scope": "官方 FAQ 的綁卡時限、卡別及兩種效期",
+          "evidence": "加有效信用卡／簽帳卡限註冊後 21 天。發放後一個月與次月底兩說並存，虛擬卡及預付卡不適用。｜較早紀錄（前次查閱 2026-11-09T09:13:23+08:00；新戶 US$250 領取窗口、效期四種說法與卡別限制（2026-11-09 重讀））：「In order to claim your $250 free credit, you must add a valid credit/debit card to your account within 21 days of signing up to Civo.」；「This is valid for a month from the date it was applied.」；同頁另一段「The introductory credit is valid until the end of the month following its application to your account.」；「We do not support using a \"virtual\" or pre-paid card as a payment type.」；「Once you have completed these steps… any outstanding dues will need to be settled before the deletion」｜較早紀錄：同頁並列21天內綁卡、發放後一個月及發放次月底等說法；警示及配額並非硬性費用上限。｜較早紀錄：2026-10-25查閱：FAQ內文21天/1個月與次月底兩種描述並存。",
           "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00",
-          "accessed_at": "2026-11-09T09:13:23+08:00"
+          "accessed_at": "2026-11-24T07:08:22+08:00"
         },
         {
           "url": "https://www.civo.com/legal/terms",
-          "scope": "本次核條款附表；服務條款附表規則",
-          "evidence": "Schedule 1 §7列US$250、31個日曆天、每客戶一次，到期後標準費率；與其他頁面不同。｜較早紀錄：2026-10-25查閱：Schedule 1 §7標明試用31天與後續標準費率。",
-          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00"
+          "scope": "官方服務條款附表 1 第 7 節",
+          "evidence": "US$250、31 個日曆天、每客戶一次，期後按標準費率。｜較早紀錄（前次查閱 2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00；本次核條款附表；服務條款附表規則）：Schedule 1 §7列US$250、31個日曆天、每客戶一次，到期後標準費率；與其他頁面不同。｜較早紀錄：2026-10-25查閱：Schedule 1 §7標明試用31天與後續標準費率。",
+          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
         },
         {
           "url": "https://www.civo.com/docs/account/billing",
-          "scope": "本次核停止資源及扣款風險；停止機器計費與不支援預付卡",
-          "evidence": "停止的資源仍與運行時同樣計費；不自動停止資源，帳單先抵未過期點數，不足再扣卡；虛擬及預付卡不接受。｜較早紀錄：2026-10-25查閱：不支援虛擬/預付卡；機器停止仍收取資源費；無自動關機保護。",
-          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00"
+          "scope": "官方計費文件，停止資源與餘款扣卡",
+          "evidence": "停止的執行個體或叢集同樣計費；額度抵用後若仍有欠款，會嘗試從已存付款卡扣取。｜較早紀錄（前次查閱 2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00；本次核停止資源及扣款風險；停止機器計費與不支援預付卡）：停止的資源仍與運行時同樣計費；不自動停止資源，帳單先抵未過期點數，不足再扣卡；虛擬及預付卡不接受。｜較早紀錄：2026-10-25查閱：不支援虛擬/預付卡；機器停止仍收取資源費；無自動關機保護。",
+          "accessed_time_range": "2026-10-30T10:06:13+08:00–2026-10-30T10:07:31+08:00",
+          "accessed_at": "2026-11-24T07:08:22+08:00"
+        },
+        {
+          "url": "https://dashboard.civo.com/signup",
+          "scope": "現行官方註冊入口及優惠條款",
+          "evidence": "US$250 須添加付款卡；註冊後三個月內加卡，發放次月月底到期。無固定公開申請截止日。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -51919,7 +51971,7 @@
         "additional_cost_usd": null,
         "eligibility_note": "未推薦使用VPN、假地址、假身分或跨區方式；台灣資格未核"
       },
-      "status": "conditional",
+      "status": "terms_conflict",
       "legal_status": "not_verified",
       "priority_score": null,
       "priority_tier": null,
@@ -75385,9 +75437,9 @@
     },
     {
       "id": "havetml-founder-pro-free-twelve-months",
-      "title": "HaveTML 前 500 名帳號：Pro 免費 12 個月（原價 US$6/月）",
+      "title": "HaveTML Founder Pro：目前領取入口待確認",
       "record_type": "opportunity",
-      "status": "conditional",
+      "status": "expired_unverified",
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
@@ -75398,64 +75450,69 @@
         "free",
         "developer"
       ],
-      "setup_cost_usd": 0,
-      "recurring_cost_usd": 0,
-      "cost_note": "Free 方案 $0、免卡；前 500 名帳號可領 Pro 12 個月 $0（原價 US$6/月或 US$60/年），官方明寫「No card and no trial」。名額用完或官方終止即結束，之後 Pro 回到 US$6/月。",
-      "effort_minutes_max": 5,
-      "effort_basis": "分析者估計：註冊並在方案頁領取，不需付款資料",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "cost_note": "目前定價列一般 Pro US$6／月或 US$60／年，按鈕標示 Coming soon。一般 Free 免卡，公開定價列每檔 100 MB。",
+      "effort_minutes_max": null,
+      "effort_basis": null,
       "taiwan": "Unknown",
       "regions": [],
-      "usage_type": "12 個月 Pro 授權（名額制）；Free 發佈 artifact 不限數量",
-      "quota_classification": "NO FIXED CAP PUBLISHED",
+      "usage_type": "歷史 Pro 授權（名額制）",
+      "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "quota_details": "官方：「The first 500 accounts get Pro free for 12 months」「One grant per account. It is not transferable, and it is not a Team seat.」「The offer ends when 500 grants have been claimed, or when HaveTML ends it — whichever comes first.」Free 方案：「Unlimited artifacts with permanent links」「MCP connector and REST API for your agents」；付費層才是密碼保護、連結到期與協作者邀請。",
-      "usable_benefit_usd": 60,
+      "quota_details": "條款列前 500 個申領帳號，每帳號一份、不可轉讓，額滿或官方終止即結束。剩餘名額未知。",
+      "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
-      "savings_usd": 60,
-      "valuation_scenario": "以官方 Pro 年價 US$60 計（前 500 名 12 個月 $0）；不含 Team 或其他加值。",
-      "usable_duration": "Pro 免費期自領取日起 12 個月；名額制，滿 500 或官方終止即結束（無固定日期）。",
-      "cancellation": "無需取消（$0、無卡、無試用轉訂閱）；12 個月後如續用 Pro 才需付款。取消訂閱時既有公開連結與 artifact 不會刪除。",
-      "access_risk": "名額可能已滿且無公開計數；MCP／REST API 在 Free 亦免費，Pro 的差異是密碼保護、連結到期與協作者；Team 方案另為 US$20/月；營運主體註冊地未核。",
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "usable_duration": "條款先列領取日起 12 個月，另有既得帳戶維持免費的文字。12 個月後適用範圍待官方釐清。",
+      "cancellation": "一般付費方案可透過 Stripe 帳單入口取消。Founder 既得帳戶的期滿待遇與收費規則待確認。",
+      "access_risk": "現行頁面缺少 Founder 領取入口及名額計數。一般 Free 仍有 MCP 與 REST API。",
       "eligibility": {
-        "service_availability": "網頁服務（havetml.com），用於發佈 HTML／Markdown／JSON 並以 MCP／REST 供代理使用。",
-        "account_eligibility": "註冊帳號即可；Pro 名額為每帳號一份、不可轉讓、非 Team 席次。",
-        "billing_country": "免卡；付費（名額後）以 Stripe 計價 USD。",
+        "service_availability": "目前定價連到一般 Free 入口，Pro 標示 Coming soon。",
+        "account_eligibility": "歷史 Founder 條款限首 500 個申領帳號，每帳號一份。現行申領辦法未列。",
+        "billing_country": "一般 Free 免卡。現行 Founder 入口及後續收費待核。",
         "identity_residency": "條款未列國別限制或居住條件。",
-        "terms_restrictions": "一份 grant 僅限一帳號；不得轉讓；不得以多重帳號重複領取。",
+        "terms_restrictions": "Founder grant 不得轉讓，且不含 Team 席次。",
         "taiwan_note": "Unknown：官方 pricing 與條款未列台灣或任何國別清單；未實測註冊。"
       },
       "unknowns": [
-        "前 500 名是否已額滿（官方無公開計數）",
-        "Pro 12 個月期滿後是否自動轉為付費（條款未寫自動續訂）",
-        "營運主體與資料保存地點",
-        "Free 的 artifact 儲存上限（storage tiers 標為 Coming soon）"
+        "現在是否仍可領取、剩餘名額與正式終止日",
+        "既得帳戶 12 個月後的費用與權限",
+        "台灣帳戶資格、營運主體與資料保存地點"
       ],
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
         "eligibility_note": "換 IP 不授予帳號、學籍或地區資格；本輪未操作跨區或 VPN。"
       },
-      "verified_at": "2026-11-09T05:15:00+08:00",
+      "verified_at": "2026-11-24T07:09:02+08:00",
       "discovered_at": "2026-11-09T05:15:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T12:00:00+08:00",
-      "verification_scope": "2026-11-09 05:15 實讀官方 pricing 頁與 FAQ：前 500 名 Pro 12 個月 $0、免卡、Free 功能範圍與 Team 價格。未註冊、未領取。",
-      "offer_validity": "officially_advertised",
-      "terms_compliance": "conditional_on_first_500_grants_and_no_resale",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
+      "verification_scope": "2026-11-24 實讀官方來源，核對現行定價入口及歷史條款。當前名額與既得帳戶期滿條件未明。",
+      "offer_validity": "條款仍列舊優惠，公開定價已撤下領取入口。實際受理待確認。",
+      "terms_compliance": "歷史條款限首 500 個有效申領帳號，每帳號一份且不可轉讓。",
       "sources": [
         {
           "url": "https://havetml.com/pricing",
-          "scope": "前 500 名 Pro 12 個月、免卡、Free 功能與 Team 價格（2026-11-09 05:15 讀取）",
-          "evidence": "「The first 500 accounts get Pro free for 12 months.」「No credit card required」「Pro $0 Normally $6/mo or $60/yr」「The first 500 accounts to claim it get Pro free for 12 months. Once the 500 places are claimed, Pro is $6/mo (or $60/yr) for everyone who signs up after.」「No card and no trial.」",
-          "accessed_at": "2026-11-09T05:15:00+08:00"
+          "scope": "現行方案、入口、價格與檔案上限",
+          "evidence": "Pro 標 Coming soon、US$6／月或 US$60／年。Free 有免卡起用入口、每檔 100 MB、MCP 與 REST API。現行定價未列 Founder。｜較早紀錄（前次查閱 2026-11-09T05:15:00+08:00；前 500 名 Pro 12 個月、免卡、Free 功能與 Team 價格（2026-11-09 05:15 讀取））：「The first 500 accounts get Pro free for 12 months.」「No credit card required」「Pro $0 Normally $6/mo or $60/yr」「The first 500 accounts to claim it get Pro free for 12 months. Once the 500 places are claimed, Pro is $6/mo (or $60/yr) for everyone who signs up after.」「No card and no trial.」",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://havetml.com/terms",
+          "scope": "官方條款（標示 2026-09-03 更新）",
+          "evidence": "條款列首 500 帳號自申領起免費 12 個月，領滿或官方終止即結束。條款同段另寫既得帳戶維持免費，未交代與 12 個月期限如何並行。",
+          "accessed_time_range": "2026-11-24T07:07:26+08:00/2026-11-24T07:09:02+08:00"
         }
       ],
-      "priority_score": 19.4,
-      "priority_tier": "A",
-      "priority_note": "官方來源·需符合條件·免費·台灣未標記·≤5分鐘",
-      "summary": "把 HTML／Markdown／JSON 發佈成永久連結、並供代理以 MCP／REST 使用的工具：Free $0、免卡、artifact 不限數量；前 500 名帳號可領 Pro 12 個月 $0（原價 US$6/月或 US$60/年），Pro 才有密碼保護、連結到期與協作者邀請。官方明寫「No card and no trial」，名額滿或官方終止即結束；無公開剩餘名額，台灣資格未實測。"
+      "priority_score": 14.1,
+      "priority_tier": "D",
+      "priority_note": "官方來源·疑似過期・待確認·費用未知·台灣未標記·時間未知",
+      "summary": "官方條款仍載首 500 個帳號可領 12 個月 Pro，現行定價頁已移除 Founder 入口，Pro 標示 Coming soon。額滿、正式結束及既得帳戶期滿條件均未證實。"
     },
     {
       "id": "huggingface-classrooms-free-hosting",
@@ -97930,42 +97987,185 @@
       "priority_score": 20.8,
       "verification_scope": "2026-11-24 實讀資策會活動頁與報名表，核對免費、120 名、審核、報名截止及主辦同頁的時地差異。個案錄取仍待核。",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "ntpc-digital-academy-wugu-generative-ai-2026",
+      "title": "新北市數位學院五股班：生成式 AI 實務應用",
+      "summary": "新北市政府資訊中心於 12/9 09:00–11:00 在五股勞工中心 3 樓 301 教室辦理免費實體課程，內容含文案與圖片生成實作。招生 25 人，報名至台北時間 12/06 00:00，錄取依通知。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan",
+        "New Taipei City"
+      ],
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usage_type": "免費實體 AI 課程，招生 25 人",
+      "verified_at": "2026-11-24T07:09:02+08:00",
+      "discovered_at": "2026-11-24T07:09:02+08:00",
+      "deadline_at": "2026-12-06T00:00:00+08:00",
+      "usable_duration": "12/9 09:00–11:00（台北時間）。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T09:00:00+08:00",
+      "access_risk": "招生人數是課程名額上限。剩餘席次及正備取依主辦通知，報到需核對身分及自備可上網裝置。",
+      "eligibility": {
+        "service_availability": "主辦公開課程頁顯示可報名，課程編號 D11512007，在五股勞工中心 3 樓 301 教室實地上課。",
+        "account_eligibility": "可使用免帳密報名、新北卡或 Google 登入。每季享有 6 次正取上課權利，實際正備取依通知。",
+        "billing_country": "官方詳頁列報名費及其他費用各 NT$0。",
+        "identity_residency": "報名須如實提交資料，報到須出示載有姓名、身分證與生日資料的證件。個別證件及設籍條件待確認。",
+        "terms_restrictions": "須自備可上網手機或平板等裝置。正取取消應於報名截止前或開課前三個工作天辦理。未滿 12 歲另有主辦程序。",
+        "taiwan_note": "Yes：新北市政府在五股開辦實體課程，須符合主辦報到查驗及錄取條件。"
+      },
+      "unknowns": [
+        "實際剩餘名額與個案錄取結果",
+        "無本地身分證者可用的替代身分文件及是否有個別設籍要求"
+      ],
+      "verification_scope": "2026-11-24 實讀主辦課程詳頁、當期總覽及報名規則，核對費用、班別、地點、招生人數、截止時刻和報到條件。",
+      "sources": [
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses/detail/22358",
+          "scope": "官方課程詳頁、價格、班別與報名狀態",
+          "evidence": "D11512007。詳頁表列「報名費用：0」「其他費用：0」「招生人數：25」，顯示「立即報名」。12/9 09:00–11:00，五股勞工中心 3 樓 301 教室。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12",
+          "scope": "官方課程總覽列明報名截止時分",
+          "evidence": "五股班報名期間 2026-11-19 18:00 至 2026-12-06 00:00（台北時間）。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/latestNew/detail/131",
+          "scope": "2026-09-15 發布的數位學院報名與上課規則",
+          "evidence": "列免帳密、新北卡或 Google 登入、每季 6 次正取、身分查驗、自備裝置與候補方式。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        }
+      ],
+      "priority_score": 20.8,
+      "priority_tier": "S",
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻",
+      "savings_usd": null,
+      "valuation_scenario": null
+    },
+    {
+      "id": "ntpc-digital-academy-bali-ai-agent-2026",
+      "title": "新北市數位學院八里班：AI Agent 新世代數位助理",
+      "summary": "新北市政府資訊中心於 12/16 09:00–11:00 在八里下庄市場活動中心 4 樓第一教室辦理免費實體課程，內容含個人助理、資料蒐集、旅遊規劃及自動化練習。招生 25 人，報名至台北時間 12/13 00:00，錄取依通知。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan",
+        "New Taipei City"
+      ],
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "usage_type": "免費實體 AI 課程，招生 25 人",
+      "verified_at": "2026-11-24T07:09:02+08:00",
+      "discovered_at": "2026-11-24T07:09:02+08:00",
+      "deadline_at": "2026-12-13T00:00:00+08:00",
+      "usable_duration": "12/16 09:00–11:00（台北時間）。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-25T09:00:00+08:00",
+      "access_risk": "招生人數是課程名額上限。剩餘席次及正備取依主辦通知，報到需核對身分及自備可上網裝置。",
+      "eligibility": {
+        "service_availability": "主辦公開課程頁顯示可報名，課程編號 D11512016，在八里下庄市場活動中心 4 樓第一教室實地上課。",
+        "account_eligibility": "可使用免帳密報名、新北卡或 Google 登入。每季享有 6 次正取上課權利，實際正備取依通知。",
+        "billing_country": "官方詳頁列報名費及其他費用各 NT$0。",
+        "identity_residency": "報名須如實提交資料，報到須出示載有姓名、身分證與生日資料的證件。個別證件及設籍條件待確認。",
+        "terms_restrictions": "須自備可上網手機或平板等裝置。正取取消應於報名截止前或開課前三個工作天辦理。未滿 12 歲另有主辦程序。",
+        "taiwan_note": "Yes：新北市政府在八里開辦實體課程，須符合主辦報到查驗及錄取條件。"
+      },
+      "unknowns": [
+        "實際剩餘名額與個案錄取結果",
+        "無本地身分證者可用的替代身分文件及是否有個別設籍要求"
+      ],
+      "verification_scope": "2026-11-24 實讀主辦課程詳頁、當期總覽及報名規則，核對費用、班別、地點、招生人數、截止時刻和報到條件。",
+      "sources": [
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses/detail/22367",
+          "scope": "官方課程詳頁、價格、班別與報名狀態",
+          "evidence": "D11512016。詳頁表列「報名費用：0」「其他費用：0」「招生人數：25」，顯示「立即報名」。12/16 09:00–11:00，八里下庄市場活動中心 4 樓第一教室。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12",
+          "scope": "官方課程總覽列明報名截止時分",
+          "evidence": "八里班報名期間 2026-11-19 18:00 至 2026-12-13 00:00（台北時間）。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/latestNew/detail/131",
+          "scope": "2026-09-15 發布的數位學院報名與上課規則",
+          "evidence": "列免帳密、新北卡或 Google 登入、每季 6 次正取、身分查驗、自備裝置與候補方式。",
+          "accessed_at": "2026-11-24T07:09:02+08:00"
+        }
+      ],
+      "priority_score": 20.8,
+      "priority_tier": "S",
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻",
+      "savings_usd": null,
+      "valuation_scenario": null
     }
   ],
-  "latest_research_at": "2026-11-24T06:13:59+08:00",
+  "latest_research_at": "2026-11-24T07:12:16+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T06:06:10+08:00",
-    "completed_at": "2026-11-24T06:13:59+08:00",
+    "started_at": "2026-11-24T07:07:26+08:00",
+    "completed_at": "2026-11-24T07:12:16+08:00",
     "reviewed_ids": [
-      "braintrust-startup-pro-six-twelve",
-      "google-buildhybridai-2026-firebase-ai-logic",
-      "nutn-national-ai-project-competition-2026",
-      "runloop-once-fifty-agent-sandbox-pro-trial",
-      "xcrawl-new-account-thousand-credits"
+      "civo-new-user-250-credit-watch",
+      "havetml-founder-pro-free-twelve-months",
+      "mastra-starter-monthly-hundred-k-events-twentyfour-cpu",
+      "nango-free-integrations",
+      "steel-launch-once-thirty-ninety-days-proxy-deposit"
     ],
     "new_ids": [
-      "iii-edge-ai-adoption-workshop-2026",
-      "ndhu-ai-productivity-workshop-2026"
+      "ntpc-digital-academy-bali-ai-agent-2026",
+      "ntpc-digital-academy-wugu-generative-ai-2026"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1193
+    "unreviewed_existing_count": 1195
   },
-  "generated_at": "2026-11-24T02:13:38+08:00",
+  "generated_at": "2026-11-24T07:12:16+08:00",
   "reviewed_ids": [
-    "wispr-flow-student-three-month-pro-annual-half",
-    "tripo-studio-free-200-monthly",
-    "tripo-api-free-credits-index-mismatch",
-    "taipei-industry-incentive-ai-rd-batch2-2026",
-    "google-cloud-tts-monthly-free-characters",
-    "taiwan-multi-store-ai-upgrade-tier3-2026",
-    "fgu-three-good-ai-innovation-contest-2026",
-    "cities-deliver-rockefeller-openai-2026"
+    "civo-new-user-250-credit-watch",
+    "havetml-founder-pro-free-twelve-months",
+    "mastra-starter-monthly-hundred-k-events-twentyfour-cpu",
+    "nango-free-integrations",
+    "steel-launch-once-thirty-ninety-days-proxy-deposit"
   ],
-  "attempted_failed_ids": [
-    "swarms-startup-program-up-to-tenk"
-  ],
+  "attempted_failed_ids": [],
   "new_ids": [
-    "nthu-its-ai-certification-training-2027",
-    "ai-collective-taiwan-gemini-build-night-2026"
+    "ntpc-digital-academy-bali-ai-agent-2026",
+    "ntpc-digital-academy-wugu-generative-ai-2026"
   ]
 }

@@ -74,6 +74,11 @@ assert not (set(reviewed)&set(new) or set(reviewed)&set(attempted) or set(new)&s
 assert (set(reviewed)|set(new)|set(attempted))<=set(ids), 'unknown batch ID'
 assert run['unreviewed_existing_count']==len(ids)-len(new)-len(reviewed), 'incorrect unreviewed count'
 assert d['updated_at']==d['latest_research_at']==run['completed_at'], 'inconsistent batch timestamps'
+if 'generated_at' in d:
+ assert d['generated_at']==run['completed_at'], 'legacy generated_at disagrees with the current batch'
+for field in ('reviewed_ids', 'new_ids', 'attempted_failed_ids'):
+ if field in d:
+  assert d[field]==run[field], f'legacy {field} disagrees with last_research_run'
 assert parse_stamp(run['completed_at'])>=parse_stamp(run['started_at']), 'completed_at precedes started_at'
 # A timestamp is a claim about when a page was actually read or the batch actually finished.
 # Parallel research reported times ahead of the real clock (2026-11-09 批次先寫 completed_at 02:40、

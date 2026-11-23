@@ -7187,3 +7187,39 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. IteraCompute 11/24 16:00 後核對免費模式切換與舊戶保留；Vercel 11/24 20:30 後核對期後單價或延長。 [IteraCompute](https://iteracompute.com/free/) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
 4. 11/25 起依 `next_review_at` 查東華額滿、Google 額外配額表單及南大 Quantum AI 組公告。Google 先追額外配額截止，主交件仍按 12/1 06:00。 [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Google 配額](https://forms.gle/uPcDhaYW3iVo2AYw5) [南大競賽](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308)
 5. Braintrust 12/7 後複核共用點數生效。Runloop 留待退場或餘額新訊號。若有適用資格新證據，可複核 Cursor Campus Leads 與上述兩個校園候選。 [Braintrust](https://docs.braintrust.dev/admin/billing/braintrust-credits)
+
+
+## 2026-11-24 07:07–2026-11-24 07:12 Asia/Taipei｜N=1,200 · R=5 · A=2 · U=1,195 · attempted=0
+
+起點 `e3792bf`。main 與遠端一致，工作樹乾淨，無開放 PR 或進行中的 Pages 部署，研究及寫入期間持有維護鎖。既有種類為 980 筆機會、50 筆政策、170 筆觀察線索。 開場有 0 筆可行動紀錄已到複核時間、21 筆七天內截止及 4 筆最近整筆追查失敗，三組去重共 25 筆。其中 18 筆近期截止案例在佇列冷卻內，4 筆上次失敗均未到回查時間。資策會與 IteraCompute 雖因 24 小時內到期排入，仍依上一輪的 16:30 及 16:00 後安排，才能觀察受理或免費窗口變化。MLOps 在 09:00 後回查。三組唯讀子代理分查費用與領取風險、舊資料輪替、新機會與去重。Gemini 3.8 Flash 未提供，子代理沿用執行環境預設模型。主代理重讀採用的官方來源。
+
+### 局部複核
+
+- `mastra-starter-monthly-hundred-k-events-twentyfour-cpu`｜11/10 公告確認舊免費 Starter 帳戶轉續 Free，現行 Starter 月費 US$25。Free 每月 10 萬觀測事件、40 vCPU 小時、360 GB 小時記憶體、10 GB 共用出口及 5 連線。Gateway 依模型預付，3% 處理費免至 12/31。7/17 舊制留在歷史，不再當成現行價格。平台免卡、超額實際扣抵與台灣資格待核。 [現行定價](https://mastra.ai/pricing) [改版公告](https://mastra.ai/blog/mastra-platform-starter-plan) [Gateway 文件](https://mastra.ai/docs/mastra-platform/gateway/usage-and-limits)
+- `steel-launch-once-thirty-ninety-days-proxy-deposit`｜免卡 US$30 共用贈額及 90 天效期仍列示。舊文件轉至新版，改按每工作階段的秒數向上取整。每分鐘 60 次限定組織工作階段建立。US$10 付費點數是一回驗證門檻，可抵用且無須一直保有該餘額。點數歸零拒絕新工作階段，已開始者繼續。台灣卡、退款與個別自動加值設定待核。 [新版定價](https://steel.dev/docs/platform/pricing) [用量限制](https://steel.dev/docs/platform/limits) [計費文件](https://steel.dev/docs/platform/billing-and-usage)
+- `havetml-founder-pro-free-twelve-months`｜現行定價撤下 Founder 入口，Pro 標示 Coming soon。9/3 條款仍列首 500 名、12 個月，並有既得帳戶維持免費的文字。標為疑似過期待確認，從可行動專區移出，撤下現行可領估值。名額、正式結束日及既得帳戶期滿待遇待核。 [現行定價](https://havetml.com/pricing) [官方條款](https://havetml.com/terms)
+- `civo-new-user-250-credit-watch`｜現行與舊註冊入口同列三個月內加卡及次月底失效，FAQ 有 21 天內加卡與兩種效期，服務條款附表列 31 個日曆天。標記官方條款有差異。網頁工具取不到的 FAQ 和計費文件已從官方原站直讀，確認已停止的資源仍計費，抵用後的餘款會嘗試扣卡。個別帳戶效期及台灣卡待核。 [現行入口](https://dashboard.civo.com/signup) [FAQ](https://www.civo.com/docs/faq) [服務條款](https://www.civo.com/legal/terms) [計費文件](https://www.civo.com/docs/account/billing)
+- `nango-free-integrations`｜兩個官方產品頁明列免卡免費開始。Free 每月硬上限 10 連線、10 小時整合運算及 10 GB 傳輸。台灣帳戶、付費方式及外部 API 費用仍待核。 [定價](https://nango.dev/pricing) [Data Sync](https://nango.dev/platform/data-sync/) [Request Proxy](https://nango.dev/platform/request-proxy/)
+
+FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新卡片或刷新核實時間。FalkorDB 定價頁逾時，官方 Free Tier 文件可讀。Dust 的正式條款入口無可讀正文，舊查閱時間保留。定價列程式化 US$0.01／點，額度管理文件把超額後付限於 Enterprise 並列 Business 預購。兩者如何適用仍無定論。 [FalkorDB 免費文件](https://docs.falkordb.com/cloud/tiers/free.md) [Dust 定價](https://dust.tt/home/pricing) [Dust 額度管理](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/credit-management)
+
+### 新增與去重
+
+- `ntpc-digital-academy-wugu-generative-ai-2026`｜五股 12/9 免費生成式 AI 文案及圖像實作，12/6 台北 00:00 截止，限 25 名。 [五股班](https://ezlearn.ntpc.gov.tw/courses/detail/22358)
+- `ntpc-digital-academy-bali-ai-agent-2026`｜八里 12/16 免費 AI 助理實作，12/13 台北 00:00 截止，限 25 名。 [八里班](https://ezlearn.ntpc.gov.tw/courses/detail/22367)
+
+兩班課程編號、教材範圍、時間及地點均不同。以 ID、課程編號、主辦、網址及政策歷史比對；已有的教育局線上影音另屬不同單位及形式。詳頁由官方原站直讀，當期總覽核對時刻。主辦允許免帳密、新北卡或 Google 登入，報到要驗證身分並自備裝置，剩餘席次及個案錄取待核。長榮工作坊顯示免費，但已有 54 人報名、44 人核准（上限 48），其公開頁未說明考照是否另收費，登入後受理狀態未知。淡江頁的活動對象列學生，說明另提教職員，費用未列。這兩筆暫緩收錄。 [新北課程總覽](https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12) [新北報名規則](https://ezlearn.ntpc.gov.tw/latestNew/detail/131) [長榮活動](https://eweb.cjcu.edu.tw/act/act.aspx?id=20322) [淡江活動](https://enroll.tku.edu.tw/course.aspx?cid=tk11501aiws18)
+
+### 資料品質與發布驗證
+
+- 公開 JSON 的頂層相容批次欄位仍停在 02:13 批次，和首頁使用的 `last_research_run` 不一致。本輪將現有相容欄位同步到同一批次，驗證器會檢查已存在的欄位是否一致。批次計數以基準 JSON 和結案差異產生，保留所有既有 ID 與首次收錄時間，政策歷史只追加。
+- `make check`、`make check-ui`、`git diff --check` 與 Chrome 390px／1280px 本機檢查通過。另在暫存複本將頂層 `new_ids` 改成空清單，驗證器確實拒絕批次不一致。
+- 發布以本提交對應的 Pages 已部署狀態與公開資產 SHA-256 為判據，在 Chrome 390px／1280px 核對本輪更新、免費專區、HaveTML 歷史狀態及兩筆新班的時間和來源。
+
+### 下一輪優先
+
+1. 11/24 09:00 後核對 `aocai-working-free-ai-courses-2026` 的 12/2 台北班及額滿狀態。16:30 起核對 `iii-edge-ai-adoption-workshop-2026`，到 18:00 截止後用主辦證據處理收件狀態。 [MLOps](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0)
+2. 依排定時點追查 `swarms-startup-program-up-to-tenk`（11/24 13:00）、`kaggle-free-notebook-compute`（17:00）、Akamai RISE（19:00）及 `microsoft-data-days-2026-free-exam-vouchers`（11/25 04:30）。沿用上一輪的替代來源策略。
+3. 11/24 16:00 後查 `iteracompute-free-qwen-3-8-27b-monthly-30m` 免費窗口及舊戶資格，20:30 後查 `vercel-ai-gateway-parallel-decisions-free-window` 是否延長或公布期後價格。 [IteraCompute](https://iteracompute.com/free/) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+4. 11/25 09:00 起查 Civo 個別效期有無新的官方說明，並看新北兩班是否額滿或更換報名入口。HaveTML 有新領取入口或公告再追。 [Civo](https://www.civo.com/docs/faq) [新北課程總覽](https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12) [HaveTML](https://havetml.com/pricing)
+5. 依原排程複核東華、Google 額外配額、南大 Quantum AI 組。淡江費用或長榮考照與受理規則有主辦新證據時再評估收錄。
