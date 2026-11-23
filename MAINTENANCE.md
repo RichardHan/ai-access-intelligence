@@ -6830,3 +6830,49 @@ R 的 8 個 ID：`google-gear-get-certified-special-edition-paa-2026`、`satfaq-
 3. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數與剩餘配額。
 4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測試驗連線與 Cloudflare 防護狀態。
 5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
+
+
+## 2026-11-23 16:06–2026-11-23 16:28 Asia/Taipei｜N=1,183 · R=20 · A=2 · U=1,163 · attempted=0
+
+### 複核紀錄（20 筆成功，0 筆失敗）
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`：實讀 IteraCompute 定價條款與 Auto 模型頁，確認促銷於 2026-11-24 16:00 CST 截止前仍提供 30M tokens/月，倒數現況持續生效。
+- `adobe-express-nonprofit-annual-250-generative`：實讀 Adobe 台灣與全球非營利頁面，確認最多 50 份授權、一年免費、免信用卡及每月 250 生成點政策維持。
+- `roboflow-core-free-tier`：實讀 Roboflow 定價與點數說明頁，確認 Free 方案每月 10 共享點數與 Serverless API 定價維持。
+- `raycast-student-pro-discount`：實讀 Raycast FAQ、學生表單與計費手冊，確認 Pro 方案學生 5 折優惠（US$5/月）政策維持。
+- `arcade-free-monthly-two-k-tools-auto-upgrade-risk`：實讀 Arcade 定價與條款，確認 Free 方案免信用卡每月 2,000 tool calls 及超額自動升級條款維持。
+- `reflection-beam-beta-reset-conflict`：實讀 Reflection AI 定價條款與開發者速率限制頁，確認公開 Beta 免費存取及兩文件每日重置時區衝突維持。
+- `databricks-free-edition-noncommercial`：實讀 Databricks Free Edition 上手指南與限制文檔，確認永久免費、禁止商用與 Serverless 配額限制維持。
+- `vercel-startups-flex-commit-2026`：實讀 Vercel Startups 方案頁，確認 Flex Commit 最高 US$30,000 額度、1 年期限與 AI Gateway 50% 月度限額維持。
+- `zed-delta-shared-fourteen-day-trial`：實讀 Zed 定價與計費文件，確認 Pro 14 天免卡試用、US$5 額度（限 GPT-6 Luna、與 Delta 共池）及期滿轉 Free 維持。
+- `upstage-aws-institution-2027`：實讀 Upstage x AWS 活動專頁，確認教育、大學醫院與 NPO 免費存取 Solar Pro 4 與 Document Parse 有效期至 2027-03-31 維持。
+- `google-aicore-developer-preview`：實讀 Google AICore Developer Preview 指南與條款，確認支援 Android 裝置本機推論、免加入群組與配額繞過設定維持。
+- `parallel-monthly-five-card-allowance`：實讀 Parallel 部落格與定價頁，確認綁卡組織每月自動享有 US$5 免費額度維持。
+- `linkup-professional-monthly-twenty-refill`：實讀 Linkup 定價與文件，確認工作信箱註冊贈送 US$20、合格帳戶每月補回 US$20 維持。
+- `lumenfall-signup-one-dollar-no-card-media-api`：實讀 Lumenfall 定價與條款，確認免卡註冊一次性贈送 US$1 影像/影片 API 額度與內容授權條款維持。
+- `zenml-pro-starter-fourteen-day-no-card-business-trial`：實讀 ZenML 定價與 2026-11-05 服務條款，確認 Pro Starter 14 天免卡試用（100 pipeline runs/月）維持。
+- `elevenlabs-impact-professors-pro`：實讀 ElevenLabs 官方教育計畫頁，確認認證大專院校教授享 12 個月免費 Pro 存取碼及學生 Creator 代碼申請機制維持。
+- `elevenreader-student-free-year`：實讀 ElevenReader 學生方案頁，確認在學學生驗證學校信箱享 1 年免費無限有聲閱讀，期滿自動續約維持。
+- `fish-audio-student-voice-credits`：實讀 Fish Audio 學生方案專頁，確認 .edu 信箱驗證可領取免費語音 AI 點數，支援 Drama 3 與 83 種語言維持。
+- `imagi-free-teacher-lovable-twentyfive-thirty-days`：實讀 imagi 定價與 FAQ，確認免費教師享 25 點 Lovable 點數（30天有效）維持，付費方案更新為 US$899/年。
+- `whimsical-education-year-pro-once-ten-ai`：實讀 Whimsical 定價與 AI 條款，確認教育方案享一年免費 Pro、一次性 10 點 AI 額度政策維持。
+
+### 新增紀錄（2 筆）
+- `moda-adi-ai-talent-rural-coeducation-program`：數位發展部數位產業署「AI人才與偏鄉數位提升共育計畫」（112–115年大專畢業未就業青年享12週免費實務培育與指定國際證照最高補貼新臺幣4,000元）。
+- `anthropic-claude-corps-fellowship-and-nonprofit-credits`：Anthropic 官方國家級公益計畫「Claude Corps」（非營利組織獲全額資助進駐全職12個月AI Fellow與$2,500 Claude點數，獲選個人享年薪$85,000及全額福利）。
+
+### 品質改善
+- 聚焦倒數限時促銷：高頻查證 IteraCompute 30M 免費方案倒數狀況（距 11/24 16:00 截止不足 24 小時），精準保留即將過期排程。
+- 修復付費方案價格變更：及時追蹤 imagi 定價調整，將 Edu Pro (Teacher) 原記錄之 $500 更新為最新官方定價 $899。
+- 嚴格避開 NSTC 集中度：本輪新機會擴展至數產署青年實務共育方案及 Anthropic 官方公益 Fellowship 計畫。
+- 執行 `tools/prioritize.py`，全庫 S 級擴充至 212 筆，A 級維持 200 筆。
+
+### 未解證據缺口
+- `reflection-beam-beta-reset-conflict`：官方 Beta 法律條款與開發者文件內部重置時區（12:00 AM PT vs 00:00 UTC）衝突仍待官方統一文檔。
+- `arcade-free-monthly-two-k-tools-auto-upgrade-risk`：超額自動升級條款與免信用卡註冊承諾之防呆阻斷細節待進一步實測確認。
+
+### 下一輪優先（最多 5 項）
+1. `iteracompute-free-qwen-3-8-27b-monthly-30m`：2026-11-24 16:00 截止前追蹤促銷倒數，截止後確認免費用戶 Auto 存取是否終止並改為 expired 狀態。
+2. `ntu-hua-nan-fintech-ai-hackathon-2026`：2026-11-23 23:59 截止後確認 Luma 報名關閉與名單審核狀況。
+3. `vercel-ai-gateway-parallel-decisions-free-window`：2026-11-23 23:59 截止後確認模型頁標價是否切換為 US$1.00/1k requests。
+4. `microsoft-data-days-2026-free-exam-vouchers`：24 小時後重測試驗連線與 Cloudflare 防護狀態。
+5. `swarms-startup-program-up-to-tenk`：24 小時後重測試驗頁面解除 429 限流之連線狀況。
