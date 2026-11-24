@@ -7330,3 +7330,36 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 2. 11/25 09:00 起查 12/2 台北 MLOps 的實體選項、CoreWeave 費率適用順序、陽明交大班號 165782。工研院 AOCAI 班在 12/4 截止前追蹤報名狀態。 [MLOps 表單](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [工研院 AI Agent](https://college.itri.org.tw/Lesson/LessonData/4665A6CA-82A0-4A6C-B2F7-28B2B11A6B9C)
 3. 依既有 `next_review_at` 查 OpenAI 學術研究者、Civo 效期、新北兩班、東華、Google 額外配額、南大 Quantum AI 組、AW#34、DevFest 與上一輪三個學習活動。新店市圖有可穩定讀取的班別連結時，再核 AI 場的獨立收件資訊。
 4. 11/25 起查臺大 Google 班的地點、通知與收件狀態。Anara Resolve 12/1 追正式金鑰開放及台灣資格，Orq、Bruin、ASUS、台智雲及 Recall.ai 依排程或官方新訊號輪替。 [臺大教發中心](https://www.dlc.ntu.edu.tw/2026/11/15/google-ai-05/) [Anara 官方規格](https://docs.anara.com/api/openapi)
+
+
+## 2026-11-24 11:06–2026-11-24 11:14 Asia/Taipei｜N=1,210 · R=6 · A=3 · U=1,204 · attempted=0
+
+基準 `2ccb13e`，main 與遠端一致，工作樹乾淨，無開放 PR、進行中部署或既有維護鎖。基準為 990 筆機會、50 筆政策、170 筆觀察線索。0 筆可行動紀錄逾複核時點，23 筆七日內有截止點，其中 21 筆仍在冷卻期。4 筆上次整筆追查失敗且未到回查時間。三組去重 27 筆，加上官方條件差異及暫時不限量標記後去重 69 筆。全庫有 27 筆至少一個已過的截止點，包含歷史與多截止點紀錄。
+
+持鎖執行。三位唯讀研究子代理完成，採 GPT-6.2 Sol（high），環境未提供指定的 Gemini 3.8 Flash。優先查今天截止及會影響付款、資格或用量的官方差異。依 12 小時冷卻與交接時間留待下午追查其餘近期個案。
+
+### 既有紀錄局部複核
+
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`｜補訂閱池先扣、共享資格切換、續購不重置與訂閱期滿規則。台北 16:00 切換公告仍在，期後實際狀態待核。 [免費說明](https://iteracompute.com/free/) [Auto 模型](https://iteracompute.com/models/auto/)
+- `kapwing-free-ten-ai-credits`｜現行說明列一次性 10 點，較早發布紀錄列 50 點。匯出次數與時長口徑仍不同，官方上傳大小各列 2 GB 或 250 MB。 [定價](https://www.kapwing.com/pricing) [點數說明](https://www.kapwing.com/help/how-do-kapwing-credits-work/) [發布紀錄](https://www.kapwing.com/help/release-notes-august-2026-2/) [免費方案說明](https://www.kapwing.com/help/is-kapwing-free/)
+- `dify-education-200-total`｜200 點限定內建模型，用完可自備供應商 API 金鑰。支援範圍為文件與社群。教育頁與帳務文件仍以不同口徑描述離校後資格。 [教育頁](https://www.dify.ai/education) [帳務文件](https://docs.dify.ai/en/cloud/use-dify/workspace/subscription-management#dify-for-education)
+- `blaxel-starting-credit-payment-bonus`｜產品頁稱最高 US$200 免卡，較早計費文章列加付款方式或首購才補到 US$200。實際初始贈額、台灣資格及 beta 結束日待核。 [儲存頁](https://blaxel.ai/platform/storage) [Batch Jobs](https://blaxel.ai/platform/batch-jobs) [計費文章](https://blaxel.ai/blog/stop-paying-for-idle-how-we-built-per-second-metering-for-blaxel-sandboxes)
+- `vizard-free-monthly-sixty-video-credits`｜定價列每月 60 點。說明中心列上傳分鐘續發及結轉，官方比較表 Free 欄不結轉。補 Flash、Clipping API、MCP Connector 及剪輯/轉錄的按分鐘扣點。Free 的 Agent 共享池待核。 [定價](https://vizard.ai/pricing) [續發說明](https://help.vizard.ai/en/articles/8767574-how-does-the-pricing-plan-work) [影片計量](https://help.vizard.ai/en/articles/12017624-how-credits-are-used-for-ai-processing) [Agent 計量](https://help.vizard.ai/en/articles/17883937-how-credit-works-in-vizard-agent)
+- `together-research-invite-grants`｜研究補助仍邀請制。詳細帳務文件列一般組織首購 US$15、後續 US$5，客服只列 US$5。移除免費分類，研究案豁免與適用金額待核。 [研究補助](https://www.together.ai/research-credits-program-request) [帳務文件](https://docs.together.ai/docs/billing-credits) [客服 FAQ](https://support.together.ai/articles/1862638756-changes-to-free-tier-and-billing-july-2025)
+
+### 新增及去重
+
+- `ntpclib-xindian-senior-ai-workshop-2026`｜上一輪的新店線索已有可讀深連結。12/9 免費實作場資格不限，以樂齡族為主要教學對象。公開頁顯示報名中、未額滿，固定截止待核。12/23 手作場另有獨立場次。 [新北市圖](<https://atpass.ntpclib.gov.tw/activities/detail?cntId=7747dc459be14a5c8de2fec198b3c400&svcId=8e109e8bb57a4b44b21e31c34db87dba>)
+- `taipei-ywca-her-way-ai-intro-2026`｜12/16 免費 AI 入門課，非會員可報，50 人額滿為止，場地待通知。 [台北 YWCA](https://newcourse.ywca-taipei.org.tw/course/6ABC88884E648)
+- `taiwan-sd-ai-annual-meeting-2026`｜12/19 臺大免費年會。原站 `sellEndAt` 換算台北 08:00，公開議程 08:30 報到。側欄 00:00–09:00 與 UTC 時段一致，實際票數待核。 [主辦與票券頁](https://aiarttw.com/activity/2026sd)
+
+按主辦、別稱、日期、梯次、網址與表單識別碼核對兩份 JSON 及交接，三個場次未有正式同場紀錄。保留所有穩定 ID、首次收錄時間與 2,936 筆政策歷史，按本輪證據追加 9 筆。
+
+### 證據缺口與下一輪
+
+1. `iii-edge-ai-adoption-workshop-2026` 的網頁擷取逾時，主辦表單以唯讀 GET 讀到場次、應付費用及下一步。原有費用、時地差異與截止資料一致，維持原核實時間。11/24 16:30 起追公開受理及 18:00 截止後狀態。 [主辦頁](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [公開表單](https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0)
+2. 11/24 依既定時點回查 Swarms（13:00）、IteraCompute（15:30 預查、16:00 切換後共享資格與舊戶實際狀態）、Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30 後延長或期後價）。Microsoft 考券 11/25 04:30 起改查官方替代來源。 [IteraCompute](https://iteracompute.com/free/) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+3. 11/25 起依原排程查 AOCAI MLOps、CoreWeave 費率、陽明交大班號 165782、臺大 Google 班與其他上一輪交接項目。追本輪新增三場受理或額滿，並留意 SD 年會最終議程。 [資策會 MLOps](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [CoreWeave](https://coreweave.com/forge-pricing/post-training) [勞動部班級](https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782)
+4. 依更新後的 `next_review_at` 再查本輪付款、結轉及教育資格差異。PromptLayer 定價頁的 Free 超額破折號與 FAQ 仍並存，本輪預查未找到能釐清適用費率的證據，維持既有核實紀錄。 [PromptLayer 定價](https://www.promptlayer.com/pricing/)
+
+資料與發布使用 `make check`、`make check-ui`、本輪卡片桌面與手機核對，再以成功的 Frontend QA、Pages 部署和公開檔案雜湊判定正式發布。
