@@ -7258,3 +7258,37 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 3. 11/25 09:00 起查 OpenAI 學術專案剩餘名額或停止受理公告，留意官方教育比較更新。另查 OpenAI API 超額範例、AWS 抵用金效期及 Viktor 驗卡範圍有無明確說明。 [學術 FAQ](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [API 資料共享](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai) [AWS FAQ](https://aws.amazon.com/free/free-tier-faqs/) [Viktor](https://viktor.com/help/category/credits/starter-credits-and-card-check)
 4. 依排程查 AW#34 首輪是否更改、DevFest 報名與工作坊名額，以及東華額滿、Google 額外配額和南大 Quantum AI 組。 [AW#34](https://appworks.tw/accelerator/) [DevFest](https://devfest-taipei.gdg.tw/2026/) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Google 配額](https://forms.gle/uPcDhaYW3iVo2AYw5) [南大競賽](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308)
 5. 依上輪交接追 Civo 個別效期與新北兩班餘額。長榮及淡江等主辦有新的考照費、受理或費用證據再納入。 [Civo](https://www.civo.com/docs/faq) [新北課程總覽](https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12)
+
+
+## 2026-11-24 09:06–2026-11-24 09:14 Asia/Taipei｜N=1,204 · R=4 · A=4 · U=1,200 · attempted=0
+
+基準 `22e784c`。本機 main 與遠端一致，工作樹乾淨，無開放 PR、進行中部署或既有維護鎖。研究與整合持鎖。基準為 984 筆機會、50 筆政策、170 筆觀察線索。開場有 1 筆可行動紀錄已到複核時間、21 筆七日內截止、4 筆最近整筆追查失敗且未到回查時間，三組去重 25 筆。全庫曾填列且已經過至少一個結束點的紀錄有 27 筆，含歷史紀錄。本輪優先處理到期的 AOCAI，另挑三筆上次核實在 11/9 的付款、費率及同一工作流的定價差異。三位 Orca Codex 研究子代理完成各自的唯讀分工，採已啟動的 Codex 工作階段預設模型。主代理實讀採用的官方依據。
+
+### 局部複核
+
+- `aocai-working-free-ai-courses-2026`｜總覽列 11/26 台北與 11/27 台中班額滿。12/2 台北 MLOps 詳頁仍列混成及 11/27 12:30 截止，報名表只列線上課程及應付 NT$0。實體是否額滿、是否候補與實際錄取待核。預計招生 100 人，報名系統上限 200。12/14 班總覽、詳細地址與場次表指臺中，iEvents 頁首仍列臺北。 [在職總覽](https://serv.gcis.nat.gov.tw/AOCAI/courses/working) [12/2 活動](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585) [12/2 報名表](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [12/14 活動](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3588)
+- `coreweave-distillation-private-preview`｜官方定價稱私測工作流免收費，產品頁同時列底層服務按標準費率，仍有私測入口。移出免費專區，標記官方說法有差異並改每日複核。帳戶計費、台灣資格及私測截止待核。 [Forge 定價](https://coreweave.com/forge-pricing/post-training) [產品頁](https://coreweave.com/products/coreweave-forge/model-distillation) [文件](https://docs.coreweave.com/model-distillation)
+- `brightdata-ai-mcp-monthly-fivek-shared`｜補上啟用自動加值後的門檻與整筆扣款，核對 1–14 個工作天的預授權釋放。免費月池與條款第 4.1 節的試用後付款規則如何銜接、台灣卡及個案核驗仍待核。 [免費層](https://docs.brightdata.com/general/account/billing-and-pricing/free-tier) [驗卡](https://docs.brightdata.com/general/account/billing-and-pricing/payment-verification) [MSA](https://brightdata.com/license)
+- `landingai-ade-explore-credits-watch`｜贈點開戶後 90 天效期，付費按量點數含自動購點自購入起一年。Explore 預設關閉自動購點，Team 預設開啟。Gen2 解析與擷取按工作量分開扣點。免費 Parse 確切速率及台灣資格待核。 [方案](https://docs.landing.ai/ade/ade-pricing) [自動購點](https://docs.landing.ai/ade/auto-recharge) [Gen2 計價](https://landing.ai/blog/ade-pricing-gen1-vs-gen2-sample-projects)
+
+### 新增與去重
+
+- `nycu-mol-semiconductor-ai-pretraining-165782-2026`｜陽明交大與勞動部第 06 期，11/27 10:00 截止，甄選 40 人。官方班級欄列一般自付 NT$12,500，合資格者檢具證明可免繳。簡章也列百分比，和分項金額無法精確對應，採官方分項。按班號、分署、承辦校與期別和既有南大職前班區分。 [勞動部班級](https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782) [陽明交大班別](https://base.stem.lasercenter.nycu.edu.tw/about/class-pre-training)
+- `ntnu-emi-ai-engineering-math-workshop-2026`｜12/3 中文線上免費分享，以工程數學及 Claude AI 為例，正式表單列 11/29 截止，主要邀請高教教師和博士生。校方行事曆列的其他對象能否受理待核。 [臺師大活動](https://pr.ntnu.edu.tw/chirpy/ntnu_event.php?event=10782&redirect=true) [報名表](https://forms.gle/68q8EsRqhZwEMpn6A)
+- `tw-jcmit-medical-ai-conference-2026`｜12/19 臺北智慧醫療 AI Agent 研討會，一般民眾免費聽會，12/14 截止。錄取論文發表費每篇 NT$1,500，會員大會限會員。 [大會官網](https://jcmit2026.medinfo.org.tw/) [報名表](https://forms.gle/xuE47kVz1JTRSHjq9)
+- `nthu-taica-intro-ai-public-mooc-2026`｜課號 458 公開免費自學，12/31 為報名與授課結束日。學習履歷可免費申請，線上成績單不受理。以公開入口及學習權益與已收錄的 TAICA 跨校學分學程區分。 [清華磨課師](https://mooc.nthu.edu.tw/course/info/458)
+
+按穩定 ID、別稱、主辦、活動期別、班號及網址查 offers、政策歷史及交接。Gemini Build Night 與台灣大哥大 12/19 課程已收錄。北大財務 AI 班的付費折扣與兩種截止寫法留待有受理證據再評估；空大工作坊未找到主辦費用。 [北大課程](https://dce.ntpu.edu.tw/list.php?p=3380) [空大活動](https://www2.nou.edu.tw/nepac/Document/Detail?docid=64816&pid=4850&uid=4850)
+
+### 證據與品質
+
+- 資策會活動詳頁、職前訓練網、清大磨課師與兩份 Google 表單的網頁擷取未能讀取正文，改直讀公開原站。LandingAI Markdown 擷取失敗，以官方 HTML 核對相關段落。只在本輪有實讀的來源記錄查閱時間。各表單僅檢視公開內容。
+- 由基準與現行 JSON 的 ID 差異、時間戳及種類計算批次與 README。保留所有既有 ID、首次收錄時間和 2,919 筆政策歷史，追加 8 筆。品質修正集中在參訓選項、費用歸屬及免費篩選所用的資料欄位。
+- 本機 `make check`、`make check-ui` 及桌面／手機四種寬度批次檢查通過。正式發布以本次提交對應的 Pages 工作流程成功、公開資產 SHA-256 相符及公開介面通過檢查為判據。
+
+### 下一輪優先
+
+1. 11/24 按既定時點回查 Swarms（13:00）、IteraCompute（16:00 後模式與舊戶保留）、資策會 Edge AI（16:30 起受理、18:00 收件截止）、Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30 後是否延長或公布期後價）。Microsoft 考券 11/25 04:30 起找官方替代來源。 [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+2. 11/25 09:00 起查 12/2 台北 MLOps 班是否恢復實體選項或改列額滿；CoreWeave 是否發布適用優先順序或正式費率；陽明交大班號 165782 收件與甄試異動。 [MLOps 報名](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [CoreWeave 定價](https://coreweave.com/forge-pricing/post-training) [陽明交大](https://base.stem.lasercenter.nycu.edu.tw/about/class-pre-training)
+3. 沿用 08 時批次交接，依各筆 `next_review_at` 查 OpenAI 學術研究者、Civo 效期、新北兩班、東華、Google 額外配額、南大 Quantum AI 組、AW#34、DevFest。12/1 BizBoost 班有新訊號時補官方收件日；12/14 AOCAI 班繼續保留地點欄差異。 [OpenAI 學術 FAQ](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [在職總覽](https://serv.gcis.nat.gov.tw/AOCAI/courses/working)
+4. 追蹤本輪新增三個學習活動的表單受理、額滿及較窄資格；清大課程優先查期別起始欄，Bright Data 與 LandingAI 依次月日期輪替。

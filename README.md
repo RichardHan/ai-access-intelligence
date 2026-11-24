@@ -4,7 +4,7 @@
 
 線上網站：[AI Access Intelligence · AI 超值福利研究](https://richardhan.github.io/ai-access-intelligence/)
 
-資料集目前有 **1,204 筆**（984 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-24 08:14 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **7 筆**既有紀錄，新增機會 **2 筆**、政策 **0 筆**、觀察線索 **0 筆**。整筆追查失敗 **0 筆**。其餘 **1,195 筆**既有紀錄未完成本輪複核。更新 OpenAI 學術研究者申請、OpenAI API 與 Amazon Polly 計費、Viktor 驗卡、AgentMail 與 Novita 新創條件、Tana 學生折扣，新增 AppWorks AW#34及 DevFest Taipei 2026。
+資料集目前有 **1,208 筆**（988 項機會、50 項政策、170 筆觀察線索），更新時間 **2026-11-24 09:14 Asia/Taipei**（含歷史與重複紀錄）。本輪成功局部複核 **4 筆**既有紀錄，新增機會 **4 筆**、政策 **0 筆**、觀察線索 **0 筆**。整筆追查失敗 **0 筆**。其餘 **1,200 筆**既有紀錄未完成本輪複核。更新 AOCAI 報名選項、CoreWeave 私測計費差異、Bright Data 自動加值與 LandingAI 點數效期，新增 JCMIT、臺師大 EMI、清大 TAICA 自學及陽明交大職前班。
 
 ## 使用方式
 
