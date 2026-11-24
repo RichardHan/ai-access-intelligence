@@ -7292,3 +7292,41 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 2. 11/25 09:00 起查 12/2 台北 MLOps 班是否恢復實體選項或改列額滿；CoreWeave 是否發布適用優先順序或正式費率；陽明交大班號 165782 收件與甄試異動。 [MLOps 報名](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [CoreWeave 定價](https://coreweave.com/forge-pricing/post-training) [陽明交大](https://base.stem.lasercenter.nycu.edu.tw/about/class-pre-training)
 3. 沿用 08 時批次交接，依各筆 `next_review_at` 查 OpenAI 學術研究者、Civo 效期、新北兩班、東華、Google 額外配額、南大 Quantum AI 組、AW#34、DevFest。12/1 BizBoost 班有新訊號時補官方收件日；12/14 AOCAI 班繼續保留地點欄差異。 [OpenAI 學術 FAQ](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [在職總覽](https://serv.gcis.nat.gov.tw/AOCAI/courses/working)
 4. 追蹤本輪新增三個學習活動的表單受理、額滿及較窄資格；清大課程優先查期別起始欄，Bright Data 與 LandingAI 依次月日期輪替。
+
+
+## 2026-11-24 10:06–2026-11-24 10:18 Asia/Taipei｜N=1,208 · R=7 · A=2 · U=1,201 · attempted=0
+
+起點 `601eb2e`。main、HEAD 與遠端一致，工作樹乾淨，無開放 PR 或進行中的 Pages 部署。本輪持有維護鎖。基準為 988 筆機會、50 筆政策、170 筆觀察線索。有 0 筆可行動紀錄已到複核時點、23 筆七日內截止，含 21 筆在冷卻期。另有 4 筆上次整筆追查失敗並待指定時段。上述三組去重 27 筆；加上可行動的官方說法差異及暫時不限量後去重 82 筆。全庫曾記載且已過至少一個截止點者 27 筆，含歷史及多截止點紀錄。
+
+近截止預篩未發現 IteraCompute 延長或資策會 Edge AI 停止收件的新公告，沿用指定時段。AOCAI 的工研院梯次是既有計畫新訊號。其餘挑選較久未核的付款、額度、申請及來源差異。三位唯讀研究子代理均完成，使用環境提供的 GPT-6.2 Sol（high），Gemini 3.8 Flash 未提供。主代理重讀本輪採用的關鍵官方來源。
+
+### 局部複核
+
+- `orq-gateway-free-monthly-million-byok-meters`｜補錄 PAYG 每分鐘 100 請求、未加帳務每日 50 請求，並把 €0.01 限定為使用工具的超額 agent run。FAQ 明列 Orq 點數加值收 4.5%。 未使用工具的超額執行及台灣帳務仍待核。 [Orq.ai 定價](https://orq.ai/pricing)
+- `anara-free-daily-shared-research-usage`｜釐清 Free 每人每日共享、單檔 20 MiB，並補上精選與自訂 MCP 的方案門檻。 外部助手連回工作區時，Free 的個別工具權限仍待核。 [工作區用量](https://docs.anara.com/guides/usage-and-credits) [檔案限制](https://docs.anara.com/guides/file-types) [MCP 連接](https://docs.anara.com/guides/mcp-servers)
+- `bruin-startup-backed-two-years`｜補 YC Deals、一般新創表單與機構融資條件，區分新創 FAQ 的無自動扣款與一般 Team 超額按量。 YC 登入後兌換、台灣帳務及個別合約待核。 [新創方案](https://getbruin.com/startups/) [一般定價](https://getbruin.com/pricing/) [條款](https://getbruin.com/terms-of-service/)
+- `asus-google-ai-plan-three-month-bundle`｜把正式條款的 2027-09-10 16:00（台北）兌換截止寫入可排序欄位，並區分 ASUS 400 GB 與 Google One 公開 2 TB Plus 定價。 活動期末仍有 8/9 與 8/10 的寫法差異，台灣實際續費待核。 [ASUS 台灣活動](https://www.asus.com/tw/content/asus-googleai/) [正式條款](https://www.asus.com/support/faq/1057238/) [Google One 公開定價](https://one.google.com/about/plans?gl=TW&hl=zh-TW)
+- `twai-cloud-free-trial`｜補上平台公告的 H100 免費試用排除，並記錄新聞稿末段 15 天附註。現行中英文產品頁均列最長 60 天。 實際分配及個案轉付費待核。 [現行試用](https://www.twcloud.ai/ai-cloud/freetrials/) [獨立新聞稿](https://www.twcloud.ai/news/freetrials/) [H100 平台入口](https://www.twcloud.ai/news/login-server-selection/)
+- `recall-startups-first-tenk-half-price-recording`｜補上新創報名表必填的公司信箱、個人 LinkedIn、公司及產品階段、團隊人數等資料。 表單選項不代表核准門檻。 [新創方案](https://www.recall.ai/startups) [官方申請表](https://docs.google.com/forms/d/e/1FAIpQLSeTKOU6zLfrzFEJEdmpkOm2RhE8I07DmclqKl0NjQM5jHbYuQ/viewform)
+- `aocai-working-free-ai-courses-2026`｜補同計畫工研院台北餐飲 AI Agent 班，12/4 截止，經遴選免學費。維持 11/27 12:30 的較早 MLOps 截止點。 工研院班的即時受理和席次待核。 [工研院班級](https://college.itri.org.tw/Lesson/LessonData/4665A6CA-82A0-4A6C-B2F7-28B2B11A6B9C)
+
+### 新增與去重
+
+- `ntu-google-ai-cross-disciplinary-workshop-2026`｜臺大與 Google 合作的 12/10 免費中文實作課，於 12/4 台北中午截止。須自備筆電與 Google 帳號。 校外錄取、席次待核，通知日期與同校頁面地點差異已並列。 [主辦課頁](https://www.dlc.ntu.edu.tw/2026/11/15/google-ai-05/) [AI 資訊網](https://aiinsight.ntu.edu.tw/zh-TW/events/14) [主辦表單](https://docs.google.com/forms/d/e/1FAIpQLSeYhoF_VrOPaVa69_mmDUi8ok8X_FgmijRGnQdVq6H9Au97iA/viewform)
+- `anara-api-resolve-free-monthly-5000`｜新增獨立的預發布 Resolve API，每工作區每曆月前 5,000 呼叫免費，超額 US$0.10／千次，Search 另計。 一般 Free 帳戶的正式金鑰與台灣資格待核。 [Resolve](https://docs.anara.com/api/resolve) [API 計費](https://docs.anara.com/api/billing) [OpenAPI](https://docs.anara.com/api/openapi)
+
+以兩份 JSON 的 ID、別稱、主辦、梯次、表單與網址核對。臺大 Google 合作課與既有 Local AI 課不同；Anara Resolve 的曆月 API 池與既有 Anara Free 每日工作區不同。工研院班歸入 AOCAI。新店市圖 12/9 樂齡 AI 班由研究子代理讀到免費及活動時段，主代理的擷取及直讀回到入口首頁，暫緩收錄。 [新店市圖活動入口](https://atpass.ntpclib.gov.tw/)
+
+### 資料品質與發布判據
+
+- ASUS 正式兌換時點進入期限排序。Orq、Bruin、Anara 與台智雲的卡片界定計量、階段和適用範圍。保留所有既有 ID 與首次收錄時間，政策歷史原有 2,927 筆並追加 9 筆。
+- 瀏覽器擷取未能取得臺大、Recall.ai 與 Bruin 的完整表單時，以公開原站直讀。YC Deals 導向登入頁，實際個案資格待核。Google One 公開價在兩種擷取方式有不同幣別版本，ASUS 個案續費欄維持未知。迄本輪無整筆追查失敗的既有紀錄。
+- 本機 `make check`、`make check-ui` 通過。Chrome 390px 與 1280px 分別比對本輪更新清單、每張卡片的核實範圍及引用、關鍵費用與截止欄位、免費篩選和版面。
+- 以提交對應的 Frontend QA 和 Pages 工作流程成功、公開檔案與提交內容一致、公開介面通過批次與卡片檢查為發布判據。
+
+### 下一輪優先
+
+1. 11/24 依既定時點回查 Swarms（13:00）、IteraCompute（16:00 後的模式與舊戶保留）、資策會 Edge AI（16:30 起核受理、18:00 截止後核實狀態）、Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30 後是否延長或公布期後價）。Microsoft 考券 11/25 04:30 起找官方替代來源。 [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+2. 11/25 09:00 起查 12/2 台北 MLOps 的實體選項、CoreWeave 費率適用順序、陽明交大班號 165782。工研院 AOCAI 班在 12/4 截止前追蹤報名狀態。 [MLOps 表單](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [工研院 AI Agent](https://college.itri.org.tw/Lesson/LessonData/4665A6CA-82A0-4A6C-B2F7-28B2B11A6B9C)
+3. 依既有 `next_review_at` 查 OpenAI 學術研究者、Civo 效期、新北兩班、東華、Google 額外配額、南大 Quantum AI 組、AW#34、DevFest 與上一輪三個學習活動。新店市圖有可穩定讀取的班別連結時，再核 AI 場的獨立收件資訊。
+4. 11/25 起查臺大 Google 班的地點、通知與收件狀態。Anara Resolve 12/1 追正式金鑰開放及台灣資格，Orq、Bruin、ASUS、台智雲及 Recall.ai 依排程或官方新訊號輪替。 [臺大教發中心](https://www.dlc.ntu.edu.tw/2026/11/15/google-ai-05/) [Anara 官方規格](https://docs.anara.com/api/openapi)
