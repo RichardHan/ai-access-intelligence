@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T18:14:45+08:00",
-  "scope": "2026-11-24 18:06–2026-11-24 18:14 Asia/Taipei。局部複核 4 筆既有紀錄，新增 3 筆，整筆追查失敗 0 筆，其餘 1,220 筆既有紀錄未完成本輪複核。確認資策會報名截止，補政大表單登入條件、Vocal Separator 付款與留存、Deepnote 教育 AI 方案差異，新增三項台灣課程。",
+  "updated_at": "2026-11-24T19:14:05+08:00",
+  "scope": "2026-11-24 19:06–2026-11-24 19:14 Asia/Taipei。局部複核 6 筆既有紀錄，新增 2 筆，整筆追查失敗 1 筆，其餘 1,221 筆既有紀錄未完成本輪複核。更新 n8n 年繳額度與付費規則、東華報名證據、Miro 取消、CyLeague 試用起算、清大保證金和 Microsoft 考試語言，新增2 項台灣機會。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -38617,16 +38617,16 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "試用結束不自動轉付費；繼續使用須另行申請。正式Starter每年JPY600,000未稅、年繳；正式合約續訂、提前解約與退款未核。",
-      "usable_duration": "2026/10/8–11/30 完成申請者自使用開始日起 30 天。按時完成程序後，12 月或之後開始或持續試用也適用。",
+      "usable_duration": "2026/10/1–7 申請自 10/8 起算 30 天，10/8–11/30 申請自使用開始日起 30 天。按期完成申請，12 月或之後開始或持續試用也適用。",
       "access_risk": "須符合活動的法人資格。台灣法人、企業信箱、日本法人番號及電話要求待核。部分功能受限，例如安全資料卡登錄。",
-      "verified_at": "2026-11-24T03:09:10+08:00",
+      "verified_at": "2026-11-24T19:08:54+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": "2026-09-30T15:30:00+09:00",
       "previous_limit": null,
       "review_cadence": "daily",
       "next_review_at": "2026-11-25T09:00:00+08:00",
       "priority": "watch",
-      "verification_scope": "2026-11-24 台北時間局部核對：產品頁和公司公告的法人試用日期、費用、30 天、40 件口徑、功能限制和跨月條件。台灣法人與表單要求待核，未重試先前回 403 的入口。",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對公司公告及產品頁的兩段起算日期與 40 件口徑。申請入口回 403，台灣法人與付款欄位待核。",
       "eligibility": {
         "service_availability": "服務2026/10/8開始，現行活動10/1–11/30申請。",
         "account_eligibility": "法人試用；個人不屬本活動明列對象。",
@@ -38639,14 +38639,15 @@
         "台灣法人、日本法人番號、企業信箱、+886 電話與試用付款資料要求，仍缺表單證據",
         "11/30 的精確截止時間與時區",
         "完整服務條款及個別輸入、回答量對實際諮詢件數的影響",
-        "較早查閱中，申請入口及應用網域回 HTTP 403，無法判斷台灣地區限制"
+        "2026-11-24 申請入口仍回 HTTP 403，台灣法人適用與表單欄位待查。"
       ],
       "sources": [
         {
           "url": "https://www.cyleague.jp/service/cyber-navi/",
-          "scope": "限時法人試用日期、頁面 40 件說法及功能限制｜較早範圍：活動期間、法人門檻、30 天／40 件、方案價（2026-11-16 重讀）",
-          "evidence": "產品頁列 2026/10/1–11/30，法人試用由 14 天延長到 30 天，並寫「最大40件」。試用限制安全資料卡登錄等功能。｜較早紀錄（2026-11-23T04:13:00+08:00）：2026-11-21 實讀：2026年10月1日〜11月30日 お申し込み分限定 30日間試用キャンペーン，通常14日間の試用期間を30日間に延長し、最大40件までお試しいただけます。",
-          "accessed_at": "2026-11-24T03:09:10+08:00"
+          "scope": "法人試用及 40 件口徑",
+          "evidence": "產品頁列 10/1–11/30 申請、30 天試用、最多 40 件，提前申請者由 10/8 起算。",
+          "accessed_at": "2026-11-24T19:08:54+08:00",
+          "label": "CyLeague 產品頁"
         },
         {
           "url": "https://prtimes.jp/main/html/rd/p/000000024.000152916.html",
@@ -38666,6 +38667,13 @@
           "scope": "2026-09-30 主辦公告，費用、浮動件數、跨月試用與續用",
           "evidence": "公告列試用免費，40 件為估計，依輸入及回答量上下浮動。按期完成程序後可於 12 月或之後開始或持續試用，試用不自動轉有償合約。",
           "accessed_at": "2026-11-24T03:09:10+08:00"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000024.000152916.html",
+          "label": "CyLeague 2026-09-30 公司供稿",
+          "scope": "兩段試用起算、件數浮動、跨月及試用期後",
+          "evidence": "10/1–7 申請自 10/8 起 30 天，10/8–11/30 申請自使用日起 30 天。40 件為浮動估計。按期完成手續可跨月開始或試用，續用須另申請。",
+          "accessed_at": "2026-11-24T19:08:54+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -38682,7 +38690,9 @@
       "deadline_at": "2026-11-30",
       "expires_at": null,
       "cost_note": null,
-      "quota_details": "一般試用由 14 天／20 件擴為 30 天／40 件。產品頁寫最多 40 件，正式公告將每法人 40 件列為估計值，實際件數可能上下浮動。"
+      "quota_details": "一般試用由 14 天／20 件擴為 30 天／40 件。產品頁寫最多 40 件，正式公告將每法人 40 件列為估計值，實際件數可能上下浮動。",
+      "last_review_attempt_at": "2026-11-24T19:07:41+08:00",
+      "last_review_attempt_reason": "試用申請入口回 HTTP 403。產品頁及公司公告可讀，台灣法人與表單欄位未核。"
     },
     {
       "id": "muse-referral-tokens-unverified",
@@ -77636,7 +77646,7 @@
     {
       "id": "akamai-cloud-rise-startup-credits",
       "title": "Akamai Cloud Rise：新創首年最高US$120,000雲端額度，需公司網域與信用卡",
-      "summary": "Akamai Cloud（前 Linode）Rise 為三年新創計畫：首年發放 US$500 至 US$120,000 雲端 credits（依審核，非保證上限），第二、三年改為折扣而非 credits；未用額度不逐月或跨年結轉，超過每月上限當月按量收費。資格為成立未滿 7 年的營利公司、有員工／實際用戶／初期營收／VC 募資任一、規劃以 Akamai Cloud 為主要基礎設施，既有客戶不符；申請前須以公司網域 email 建立新帳號並綁有效信用卡（需為商業帳戶），審核約 1–2 週，代理商與託管商不適用。頁面未列國別清單。",
+      "summary": "Akamai Cloud（前 Linode）Rise 為三年新創計畫：首年發放 US$500 至 US$120,000 雲端 credits（依審核，非保證上限），第二、三年改為折扣而非 credits；未用額度不逐月或跨年結轉，超過每月上限當月按量收費。資格為成立未滿 7 年的營利公司、有員工／實際用戶／初期營收／VC 募資任一、規劃以 Akamai Cloud 為主要基礎設施，既有客戶不符；申請前須以公司網域 email 建立新帳號並綁有效信用卡（需為商業帳戶），審核約 1–2 週，代理商與託管商不適用。頁面未列國別清單。 Akamai Cloud 計費 FAQ 說明，服務留在帳戶上時，關機或閒置仍可能計費。",
       "status": "application_based",
       "categories": [
         "FREE",
@@ -77664,12 +77674,12 @@
       },
       "credit_card_required": true,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T19:00:00+08:00",
+      "next_review_at": "2026-11-25T19:00:00+08:00",
       "verification_scope": "2026-11-09 以 Wayback 2026-10-09 官方頁快照讀取 akamai.com/cloud/start-ups/rise（live 直取 403）：US$500–120,000 首年 credits、三年計畫、未滿 7 年、新客限定、需公司網域與信用卡、月度不結轉、超額收費、審核 1–2 週。未確認 live 頁現況、未申請、未核台灣實體與帳單。",
       "usable_duration": "首年 credits（每月上限，未用不結轉）；第 2–3 年為折扣。",
-      "cancellation": "無訂閱費；停止使用即停止計費。帳號關閉與剩餘 credits 處理未公布。",
+      "cancellation": "依 Akamai Cloud 計費 FAQ，保留的服務閒置或關機仍會計費。刪除服務可停止該服務新增費用，已累積費用仍會出帳。暫停的資料庫叢集另有免計費例外。Rise 關戶後的剩餘抵用額處理待核。",
       "cost_note": "申請免費；credits 本身 US$0，但申請前必須綁有效信用卡並建立商業帳號。超過每月 credit 上限的用量當月按標準費率收費；第 2–3 年僅折扣。",
-      "access_risk": "既有客戶不符；代理商、託管商、MSP 與系統整合商不適用；公司在台但網域與帳單國家不符時可能被拒。",
+      "access_risk": "既有客戶、代理商、託管商、MSP 與系統整合商列為不適用。台灣公司網域及帳單條件、現行申請狀態待核。",
       "eligibility": {
         "service_availability": "Akamai Cloud 全球服務；計畫頁未列可用國家清單。",
         "account_eligibility": "成立未滿 7 年營利公司、新客戶、需公司網域 email 與商業帳號；審核制。",
@@ -77681,7 +77691,7 @@
       "unknowns": [
         "每月 credit 上限與級距",
         "台灣公司＋網域＋信用卡能否通過審核",
-        "live 頁是否已改版（本輪僅讀 2026-10-09 快照）",
+        "Rise 即時方案頁、官方新創目錄及日文方案頁於 2026-11-24 直讀回 HTTP 403，尚無可核實的現行受理、額度與資格條件。",
         "稅務與發票處理"
       ],
       "sources": [
@@ -77696,6 +77706,13 @@
           "scope": "本輪實際讀取的快照來源（live 403 時的替代）",
           "evidence": "2026-10-09 官方頁快照，內容同右列引文。",
           "accessed_at": "2026-11-09T11:38:32+08:00"
+        },
+        {
+          "url": "https://techdocs.akamai.com/cloud-computing/docs/billing-faqs",
+          "label": "Akamai Cloud 計費 FAQ",
+          "scope": "保留資源、關機、刪除與已產生費用的一般計費規則",
+          "evidence": "帳戶上的資源即使閒置或關機仍會計費。刪除服務可停止新增費用，當期已累積的費用仍會出帳。FAQ 另列已暫停的資料庫叢集免計費例外。",
+          "accessed_at": "2026-11-24T19:08:59+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -77712,8 +77729,8 @@
       "priority_score": 18.6,
       "priority_tier": "B",
       "priority_note": "官方來源·申請審核制·免費·台灣未標記·≤45分鐘·有資格門檻",
-      "last_review_attempt_at": "2026-11-23T19:15:00+08:00",
-      "last_review_attempt_reason": "官方 Akamai 站台 https://www.akamai.com/cloud/start-ups/rise 回傳 HTTP 403 Forbidden 遭防護攔截，依安全與誠實規範不繞過反爬蟲機制，保留既有 verified_at，排入下次重試"
+      "last_review_attempt_at": "2026-11-24T19:07:41+08:00",
+      "last_review_attempt_reason": "Rise 即時方案、官方新創目錄及日文方案頁皆回 HTTP 403。搜尋索引為較舊內容。另讀到一般雲端計費 FAQ，僅修正停止計費說明。"
     },
     {
       "id": "greenaibox-startup-gpu-credits",
@@ -89033,7 +89050,7 @@
       "valuation_scenario": "官方條款逐字「The fair market value of this exam voucher is $165USD」，以 100% 折抵券計可省 US$165 考試費；50% 券折算約 US$82.5，未計入。",
       "cancellation": "不適用（免費折抵券、無付款）；官方載折抵券不得延長兌換或應考期限，未於期限內使用即被收回。",
       "access_risk": "名額有限且先到先得、活動可隨時結束；折抵券以 Fabric Community 站內私人訊息發送，無法登入該帳號即收不到；須先看兩場場次並在練習評量拿 85% 才符合資格；考前 72 小時內取消或改期可能喪失折抵券。",
-      "verified_at": "2026-11-14T17:13:20+08:00",
+      "verified_at": "2026-11-24T19:10:04+08:00",
       "discovered_at": "2026-11-14T17:09:40+08:00",
       "announcement_at": null,
       "previous_limit": null,
@@ -89041,23 +89058,23 @@
       "expires_at": null,
       "review_cadence": "event",
       "next_review_at": "2026-11-25T04:30:00+08:00",
-      "verification_scope": "2026-11-14 新增：17:10–17:13（台北）實讀三個 Microsoft 官方頁面：Fabric Community 官方部落格「Data Days | Certification Vouchers」（直接 HTTP 請求遭 Cloudflare 403，改以瀏覽器開啟同一官方網址取得全文）、aka.ms/dd/cert100 導向的官方條款頁（100% 折抵券完整 Rules and Restrictions）與 Microsoft Learn 的 DP-800 認證頁（SQL AI Developer Associate、120 分鐘、含繁體中文考試語言）。另比對 Microsoft Community Hub 上由社群成員整理的申請步驟。未註冊 Fabric Community 帳號、未申請折抵券、未報名考試；未核名額是否已發完、台灣考場與線上監考實務、DP-700／DP-600 的考試語言清單。",
+      "verification_scope": "2026-11-24 台北時間局部複核。只核對 Microsoft Learn 的 DP-700／DP-600 語言與報考帳號建議。Fabric 折抵券受理及名額未能重核，保留原活動來源日期及排程。",
       "eligibility": {
         "service_availability": "線上活動，折抵券可用於 Pearson VUE 考場或線上監考；官方條款未列地區封鎖，僅列排除國家。",
         "account_eligibility": "需免費的 Microsoft Fabric Community 帳號，並完成：填表、觀看兩場 Data Days 場次、在對應考試的練習評量取得 85% 以上、同意於指定日期前應考；每人限一張。",
         "billing_country": "無付款流程；考試稅費由得券者自負，官方未列各國考試定價。",
         "identity_residency": "官方條款載「This exam offer is not valid and void to applicants residing in Belarus, Cuba, Iran, North Korea, Russia, Syria, Region of Crimea, and where prohibited」，台灣不在排除名單；另要求滿 14 歲。",
         "terms_restrictions": "一人一張、不得轉讓或轉售、不得兌換現金、不得展延；僅適用表列考試代碼；公務人員須先確認雇主允許參加；考前 72 小時內取消或改期可能沒收折抵券。",
-        "taiwan_note": "Yes：官方條款只排除白俄羅斯、古巴、伊朗、北韓、俄羅斯、敘利亞、克里米亞與當地禁止者，台灣不在排除名單，且 DP-800 考試語言含繁體中文；考場與線上監考的實際可用性未逐一核對。"
+        "taiwan_note": "Yes：先前查閱的折抵券條款未將台灣列為排除地區。DP-800 和 DP-700 列繁體中文，DP-600 的中文選項為簡體。台灣考場、線上監考及可預約時段待核。"
       },
       "unknowns": [
         "折抵券總名額與是否已發完（官方只寫 supplies are limited）",
         "兩場 Data Days 場次是否需指定場次或可任選 on-demand 內容",
         "練習評量 85% 的驗證方式與是否自動核對",
-        "DP-700／DP-600 的考試語言清單與台灣考場可用性",
+        "台灣考場、線上監考與個別場次的可預約語言及時段",
         "各國考試定價與折抵後的稅費",
         "50% 折抵券的完整條款（本輪只讀 100% 券條款）",
-        "是否需以個人 MSA 帳號報考（官方建議但非強制）",
+        "Microsoft Learn 強烈建議個人帳號，組織帳號離開機構後可能失去考試紀錄。活動申請帳號與考試帳號是否必須一致待核。",
         "法律與監管限制未查核官方法規來源"
       ],
       "sources": [
@@ -89088,6 +89105,20 @@
           "scope": "由 Get Certified 頁進入申請的實際步驟與領券管道（社群成員撰寫，非官方公告）",
           "evidence": "2026-11-02 由社群成員 symoiz 發表：「During Data Days 2026, Microsoft is giving out exam vouchers that cover 100% or 50% of the exam fee. Each person can request one voucher, and supplies are limited」「Your voucher code arrives as a private message on the Fabric Community, not by email」「Vouchers cannot be extended」，並逐步說明由 Data Days 的 Get Certified 區塊進入 Review exam voucher offers 後填表。此部落格文章本身不是 Microsoft 官方公告，僅作流程佐證。",
           "accessed_at": "2026-11-14T17:10:55+08:00"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/",
+          "label": "Microsoft Learn DP-700",
+          "scope": "DP-700 語言與報考帳號",
+          "evidence": "DP-700 列有繁體中文。官方強烈建議以個人 Microsoft 帳號報考，並指出離開組織後 AAD 帳號的考試紀錄會遺失。",
+          "accessed_at": "2026-11-24T19:10:04+08:00"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/",
+          "label": "Microsoft Learn DP-600",
+          "scope": "DP-600 語言與報考帳號",
+          "evidence": "DP-600 列簡體中文，未列繁體中文。官方同樣強烈建議使用個人 Microsoft 帳號。",
+          "accessed_at": "2026-11-24T19:10:04+08:00"
         }
       ],
       "priority_score": 25.0,
@@ -90776,7 +90807,7 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "未操作付費訂閱或取消流程；折扣可在帳戶有效期間持續，但官方可隨時重驗資格、修改或終止計畫。",
+      "cancellation": "一般 Starter／Business 訂閱自動續期，需於續期日前取消，於已付期末生效。未用期間不退款，未付的加購席次可於取消時立即扣款。非營利專案可重驗折扣資格，個別合約例外待核。",
       "usable_duration": "折扣未公告固定截止日；Starter/Business AI點數每月依方案續約日重置，年繳亦同、不結轉。",
       "access_risk": "須先通過非營利審核取得 promo code 才能享折扣；不可與 volume discount 或其他產品級促銷併用、不適用既往購買；須同意 Miro 使用名稱/標誌並配合案例或推薦。折扣不增加 AI 額度，額度耗盡 AI 動作暫停，管理員可另購點數包。",
       "cost_note": "需要付費訂閱，非免費方案；一般年繳牌價Starter US$8/成員/月、Business US$20/成員/月。NPO折扣30%，但官方合併年繳說法44%與約50%不同；不把算術折後價格當實際報價。設定費、稅費、折扣適用加購包與台灣付款未核。",
@@ -90793,10 +90824,10 @@
         "官方Help年繳合併折扣44%，活動FAQ約50%且沿用舊方案名；實付價與促銷碼有效性未測。",
         "設定費、台灣幣別稅費/發票/付款方式、Enterprise報價與AI加購包是否適用折扣未核。",
         "一般付費方案表含AI，但未登入核准後的NPO帳戶確認個別功能配置。",
-        "一般訂閱取消/續費條款及法律監管限制本輪未核。"
+        "非營利個案合約是否有取消或續費例外、法律及監管限制待核。"
       ],
-      "verification_scope": "2026-11-23 01:10 實讀 miro.com/npo 與定價頁，確認非營利 30% 折扣持續，定價頁更新 MCP 配額（Starter 每日 500 次、Business 每日 2,000 次），折扣計算表述矛盾持續。",
-      "verified_at": "2026-11-23T01:10:14+08:00",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對一般付費方案續訂、取消、退款與加購席次帳務，以及兩個非營利年繳口徑。台灣實付、非營利個案例外及加購折扣待核。",
+      "verified_at": "2026-11-24T19:09:26+08:00",
       "discovered_at": "2026-11-15T12:11:08+08:00",
       "announcement_at": null,
       "review_cadence": "weekly",
@@ -90835,6 +90866,34 @@
           "scope": "Starter/Business 牌價與隨方案標示的 AI 點數（必要費用）",
           "evidence": "Starter US$8/成員/月（年繳）含 25 AI credits/成員/月；Business US$20/成員/月（年繳）含 50 AI credits/成員/月；信用卡可月繳或年繳、無席次下限；Free US$0 僅列 Explore AI 未列點數。",
           "accessed_at": "2026-11-23T01:10:14+08:00"
+        },
+        {
+          "url": "https://miro.com/pricing/",
+          "label": "Miro 定價",
+          "scope": "一般付費方案續期時間",
+          "evidence": "Starter／Business 付費訂閱自動續期，應於續期日前取消，取消於已付期間結束時生效。",
+          "accessed_at": "2026-11-24T19:09:13+08:00"
+        },
+        {
+          "url": "https://help.miro.com/hc/en-us/articles/360011986179-Cancel-your-Miro-subscription",
+          "label": "Miro 取消說明",
+          "scope": "Starter／Business 取消、退款與加購席次",
+          "evidence": "剩餘訂閱時間不退款。若加購席次尚未付款，取消時立即收取尚欠費用。",
+          "accessed_at": "2026-11-24T19:09:13+08:00"
+        },
+        {
+          "url": "https://help.miro.com/hc/en-us/articles/360026839633-Miro-for-non-profits",
+          "label": "Miro 非營利說明",
+          "scope": "30% 折扣、Starter／Business 年繳合併口徑",
+          "evidence": "合格非營利組織享 30%，與 Starter／Business 一般年繳折扣合併為 44%。",
+          "accessed_at": "2026-11-24T19:09:26+08:00"
+        },
+        {
+          "url": "https://miro.com/npo/",
+          "label": "Miro 非營利活動頁",
+          "scope": "30% 折扣、舊方案年繳 FAQ",
+          "evidence": "同列 30% 折扣，年繳 FAQ 提到舊 Team／Consultant 方案合計約 50%。",
+          "accessed_at": "2026-11-24T19:09:26+08:00"
         }
       ]
     },
@@ -90922,8 +90981,8 @@
     },
     {
       "id": "n8n-startup-fifty-percent-business-self-hosted",
-      "title": "n8n Start-up 方案：Business 訂閱五折、每月 40,000 次執行（自架）",
-      "summary": "n8n 官方新創專頁已正式遷移至 /pricing/startup-plan/，解決舊入口 /startups/ 404 問題。新創方案提供早期團隊（員工少於 20 人、總融資低於 500 萬歐元）自託管 Business 方案 50% 折扣，年繳費用為 333€/月（對比原牌價 667€/月，年省約 4,000 歐元）。方案含 40,000 次工作流執行（不限步驟）、6 個共享專案、SSO/SAML、環境分離與管理員角色等完整 Business 功能。有效期限 1 年，符合資格可續期。",
+      "title": "n8n 新創自架 Business 五折｜年繳 480,000 次執行",
+      "summary": "早期新創須員工少於 20 人、總融資低於 €5M。自架 Business 新創定價為 €333／月按年繳，年繳共 480,000 次正式環境執行，可在合約年度內不均分使用；月繳 40,000 次／月不結轉。方案含不限步驟、6 個共享專案、SSO/SAML 與環境分離。折扣一年，仍符合兩項門檻可延長。訂閱自動續期，持續超額可能收費。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -90941,37 +91000,35 @@
       "effort_minutes_max": null,
       "taiwan": "Unknown",
       "regions": [],
-      "usage_type": "付費訂閱折扣（自架 Business 方案，每月 40,000 次執行）",
+      "usage_type": "自架 Business 付費折扣，按實例合計正式環境工作流程執行",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-23T01:10:47+08:00",
+      "verified_at": "2026-11-24T19:10:04+08:00",
       "discovered_at": "2026-11-15T17:16:01+08:00",
       "announcement_at": null,
       "review_cadence": "weekly",
       "next_review_at": "2026-11-30T09:00:00+08:00",
-      "verification_scope": "2026-11-23 01:10 實讀 n8n 官方定價頁與新創專頁，確認舊網址 /startups/ 404 已由 /pricing/startup-plan/ 接管，新創（<20人、融資<€5M）自託管 Business 年繳享 50% 折扣為 333€/月。",
-      "usable_duration": "方案頁：一年，仍符合資格可更久；FAQ摘要：1 year or until ineligible；FAQ正文：一年或不符門檻、whichever is longer。保留差異，不保證失去資格仍可續用。",
-      "cancellation": "月繳可隨時取消；自架實例Settings→Usage and Plan→Manage Plan，在Business Plan區依指示取消。年繳中途取消/退款、預設續費與折扣期後價格未核。",
-      "cost_note": "付費折扣而非免費：官方Start-up頁宣稱五折，列€333/月、按年付款，不能把此列價再打五折；月繳實價未核。美元欄位null是未換匯，不是0。自架主機與第三方模型成本不保證包含；稅、續費/折扣失效價格、超額執行價格未核。",
-      "access_risk": "僅自架，不含managed Cloud，需自行提供環境並以授權key啟用；只有論壇支援，專屬支援屬Enterprise。40,000次執行不是免費AI tokens；追加執行須聯絡sales，超額價格及停用行為未核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對新創定價與 FAQ 的折扣期、月繳與年繳用量口徑、超額、Paddle 取消與自助續訂。台灣付款及超額費率待核。",
+      "usable_duration": "新創 FAQ 與定價頁均列一年，仍滿足兩項資格可延長。",
+      "cancellation": "Paddle 取消於當前已付月期或年期結束時生效，未用期間不按比例退款。14 天免費試用內取消免收費。自助條款載未取消會自動續期。",
+      "cost_note": "新創定價 €333／月按年繳，已包含新創折扣。月繳實價、超額費率、折扣結束後實付、稅費及台灣卡片接受性待查。",
+      "access_risk": "須自行託管並啟用授權。正式環境流程超額後仍可執行，持續超額可能計費。第三方模型及託管資源可能另計，專屬支援限 Enterprise。",
       "eligibility": {
         "service_availability": "官方現列self-service Business Start-up付費訂閱折扣；僅self-hosted，不含managed Cloud，與既有Cloud14天試用不同。",
         "account_eligibility": "新創須同時符合「員工少於 20 人」與「總募資少於 500 萬歐元」；未列產業、成立年限或註冊地條件。需以信用卡訂閱並於實例啟用授權碼。",
-        "billing_country": "官方寫信用卡月繳或年繳；方案頁目前讀值€333/月按年付款。台灣付款接受性、帳單幣別、稅費及預設續費未核。",
+        "billing_country": "Paddle 承辦新創方案訂閱，按月或年繳。官網列年繳 €333／月，台灣付款方式、稅費與帳單幣別待核。",
         "identity_residency": "官方未列地區白名單，也未寫台灣排除；台灣實體是否符合員工與募資門檻須自行判定，官方是否查核未載明。",
-        "terms_restrictions": "須同時少於20員工與總募資少於€500萬；一年/資格失效/可延長的官方措辭不一。授權key供實例啟用，不含專屬支援。完整商業授權、反轉售/轉讓、多帳戶與AI服務條款未核；不把Community自架授權推定適用此付費Business方案。",
+        "terms_restrictions": "須同時少於 20 人及總融資低於 €5M。一年後仍符合兩項可延長。以授權金鑰啟用自架實例，專屬支援限 Enterprise。",
         "taiwan_note": "Unknown：官方未正面保證台灣組織或台灣付款可用，亦未排除；未實測註冊、結帳或授權啟用，故不宣稱 Yes。"
       },
       "unknowns": [
         "台灣組織資格、信用卡接受性、帳單幣別與稅費",
-        "月繳實價、年繳中途取消/退款、預設自動續費及折扣期後價格",
-        "一年/直到不合資格/whichever is longer與仍符資格可延長的措辭差異",
-        "AI模型費用/點數是否另計；40,000次workflow非AI tokens，超額價格與行為未核",
-        "完整Business商業授權、帳號/授權轉讓及適用法律監管未核"
+        "月繳實價、確切超額費率與折扣到期後的價格",
+        "第三方模型費用及額度、完整商業授權、帳號或授權轉讓及法規"
       ],
       "sources": [
         {
@@ -90985,11 +91042,47 @@
           "scope": "五折幅度、列價、內含功能清單與資格敘述",
           "evidence": "meta description「Get 50% off the Business plan and get access to everything you need to scale your start-up with AI and automation.」；「333€/mo, billed annually」「40Kworkflow executionswith unlimited steps」；區塊標示 Self-hosted、「The Business plan is currently available only for self-hosted deployments.」；內含 6 shared project、SSO／SAML／LDAP、Admin roles、Version control、Different environments、Scaling options、Global variables、30 days of insights、Forum support；FAQ「You can use the startup discounted plan for one year, or longer if you still meet the requirements.」；「Dedicated support is only available for enterprise customers.」",
           "accessed_at": "2026-11-23T01:10:47+08:00"
+        },
+        {
+          "url": "https://n8n.io/pricing/startup-plan/",
+          "label": "n8n 新創定價",
+          "scope": "年繳列價、新創資格、折扣期與自架範圍",
+          "evidence": "頁面列 €333／月按年繳，自託管。少於 20 名員工且總融資低於 €5M，可使用一年，仍符合門檻可延長。",
+          "accessed_at": "2026-11-24T19:09:13+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/n-8-n-business-plan-for-startups-info-faq",
+          "label": "n8n 新創 FAQ",
+          "scope": "折扣期、兩種額度與付款商",
+          "evidence": "2026/11/16 更新。兩項門檻皆符合可延長，列 40,000 次／月或 480,000 次／年。Paddle 處理新創方案計費。",
+          "accessed_at": "2026-11-24T19:08:54+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/understanding-your-business-plan-usage-emails",
+          "label": "n8n Business 用量說明",
+          "scope": "年繳額度池、執行計數及超額",
+          "evidence": "年繳在合約年度內有 480,000 次共用池，可不均分使用。月繳每個帳單月 40,000 次、不結轉。所有使用同一授權金鑰的實例共用。超額不會立即停止工作流程，持續超額未升級可能收費。",
+          "accessed_at": "2026-11-24T19:08:55+08:00"
+        },
+        {
+          "url": "https://support.n8n.io/article/managing-your-business-plan-subscription-in-the-paddle-portal",
+          "label": "n8n Business 付款與取消",
+          "scope": "月繳或年繳期末取消與試用",
+          "evidence": "2026/11/16 更新。取消後可用至原已付帳期終止，剩餘期間不按比例退款。14 天免費試用內取消不收費。",
+          "accessed_at": "2026-11-24T19:08:54+08:00"
+        },
+        {
+          "url": "https://n8n.io/legal/self-serve-terms/",
+          "label": "n8n 自助方案條款",
+          "scope": "第 1.4 與 1.6 節的自動續訂及超額政策",
+          "evidence": "除非收到取消通知，訂閱自動續期。非封頂方案的適用超額費依軟體告知和定價表計收。",
+          "accessed_at": "2026-11-24T19:10:04+08:00"
         }
       ],
       "priority_score": 13.8,
       "priority_tier": "D",
-      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知·有資格門檻"
+      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·時間未知·有資格門檻",
+      "quota_details": "年繳每合約年度 480,000 次，可不均分；月繳 40,000 次／帳單月，不結轉。所有啟用同一授權的實例共用額度。"
     },
     {
       "id": "n8n-nonprofit-cloud-thirty-percent-coupon",
@@ -98194,16 +98287,17 @@
       "effort_minutes_max": null,
       "announcement_at": null,
       "discovered_at": "2026-11-24T02:07:49+08:00",
-      "verified_at": "2026-11-24T02:08:18+08:00",
+      "verified_at": "2026-11-24T19:10:04+08:00",
       "review_cadence": "daily",
       "next_review_at": "2026-11-25T02:08:18+08:00",
-      "verification_scope": "2026-11-24 02:08 台北實讀。核對主辦課程公告與活動表的報名時程、校籍、25 名錄取、保證金、首次認證考試與自費補考。錄取和餘額待核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對主辦公告的助教免繳例外、分配方式、一般正取逾期繳款及原報名日期。現有名額及個別繳款日期待查。",
       "sources": [
         {
           "url": "https://ccd.nthu.edu.tw/event/1317",
-          "scope": "主辦公開報名與課程資格、費用、名額和退費規則",
-          "evidence": "課程面向清大正式學籍在校生，排除交換生及在職專班，25 名含志工團保留 8 名。報名至 2026/11/30 23:59。首考免收新臺幣 3,200 元，須先繳 3,000 元保證金，補考自付 3,200 元。",
-          "accessed_at": "2026-11-24T02:07:49+08:00"
+          "scope": "時程、校籍、選拔、保證金例外、首考及補考",
+          "evidence": "報名至 11/30 23:59，25 名含志工團保留 8 名。首考免收 NT$3,200，通常先繳 NT$3,000 保證金，逾期備取遞補。助教經書審與面試後可免繳。補考自付 NT$3,200。",
+          "accessed_at": "2026-11-24T19:10:04+08:00",
+          "label": "清大職涯發展組公告"
         },
         {
           "url": "https://ccd.nthu.edu.tw/events",
@@ -98214,8 +98308,8 @@
       ],
       "priority_score": 17.6,
       "priority_tier": "S",
-      "title": "清大 ITS AI 國際認證培訓班：課程與首考免收費，錄取須繳 NT$3,000 保證金",
-      "summary": "清大職涯發展組 2027/1/4–6 在校本部開設 18 小時中文實體課程，限正式學籍且課程期間仍在校者，排除交換生、在職專班及曾參加者。25 名含 Career 志工團保留 8 名。報名至 11/30 23:59。課程及 1/6 首考免收費，錄取須先繳 NT$3,000 保證金，退還有條件，1/8 補考自付 NT$3,200。",
+      "title": "清大 ITS AI 國際認證培訓班｜首考免收費與 NT$3,000 保證金規則",
+      "summary": "清大職涯發展組 2027/1/4–6 在校本部開設 18 小時中文實體課程，限正式學籍且課程期間仍在校者，排除交換生、在職專班及曾參加者。25 名含 Career 志工團保留 8 名。報名至 11/30 23:59。課程及 1/6 首考免收費，錄取須先繳 NT$3,000 保證金，退還有條件，1/8 補考自付 NT$3,200。 助教經書審及面試錄取可免繳保證金。一般正取逾期未繳由備取遞補。",
       "categories": [
         "QUALIFICATION",
         "VALUE-DEAL"
@@ -98230,7 +98324,7 @@
       "setup_cost_usd": null,
       "recurring_cost_usd": 0,
       "deadline_at": "2026-11-30T23:59:00+08:00",
-      "cost_note": "課程及 1/6 首考免收費。錄取者須以 ATM 繳 NT$3,000 保證金，期末通過認證並完成出席與作業等要求才退還。1/8 補考自付 NT$3,200。",
+      "cost_note": "課程及 1/6 首考免收費。錄取者須以 ATM 繳 NT$3,000 保證金，期末通過認證並完成出席與作業等要求才退還。1/8 補考自付 NT$3,200。 經甄選擔任助教者免繳保證金。",
       "usable_duration": "報名 2026/11/16 至 11/30 23:59。課程 2027/1/4–6 每日 09:00–16:00，共 18 小時。1/6 首考、1/8 補考。",
       "access_risk": "缺席、遲到、早退或未在 1/8 前取得認證，均可能失去保證金及結業資格。規定另要求作業、心得及問卷。",
       "cancellation": "首堂課前第 5 天以前提出取消可退還。首堂課前 4 天至當天取消可退還，未來一年不得再報名該組數位能力課程。",
@@ -98239,7 +98333,7 @@
         "account_eligibility": "限清大正式學籍在校生，課程期間須維持學籍，排除交換生、在職專班和曾參加者。25 名含志工團保留 8 名。",
         "billing_country": "依錄取通知繳新臺幣保證金，符合退還條件後由校方匯款。",
         "identity_residency": "依清大在學資格及現場出席條件。",
-        "terms_restrictions": "資格確認後依名額分配／抽籤。結業及保證金退還包含全勤、通過認證、作業與心得問卷。",
+        "terms_restrictions": "資格確認後依名額分配／抽籤。結業及保證金退還包含全勤、通過認證、作業與心得問卷。 報名超過 25 人時，原則每院至少一名後按比例分配，其餘依公告抽籤。一般正取未依通知期限繳交保證金，由備取遞補。",
         "taiwan_note": "Yes。符合清華大學所列正式學籍與課程條件，才可申請此梯次。"
       },
       "unknowns": [
@@ -98583,12 +98677,12 @@
       "quota_details": "約 50 席、起飛生優先。全程完成課程者可取得跨域學習時數 6 小時。",
       "usable_duration": "校方公布 11/25 截止（時刻未公布）。活動為 12/5 08:40–18:10，地點為國立東華大學理工學院 PC1 電腦教室。",
       "setup_cost_basis": "校方公告免費參加，現場備有餐食。",
-      "access_risk": "兩份表單都列本活動，是否有剩餘名額、是否錄取依校方通知。",
+      "access_risk": "一般生與起飛生表單均仍列本活動為可選項。精確停收時間、剩餘名額與實際收件待核，錄取依校方通知。",
       "cancellation": null,
       "deadline_at": "2026-11-25",
       "announcement_at": null,
       "expires_at": null,
-      "verified_at": "2026-11-24T06:09:29+08:00",
+      "verified_at": "2026-11-24T19:09:13+08:00",
       "discovered_at": "2026-11-24T06:08:01+08:00",
       "review_cadence": "daily",
       "next_review_at": "2026-11-25T06:00:00+08:00",
@@ -98609,28 +98703,28 @@
         {
           "url": "https://icanfly.ndhu.edu.tw/p/404-1162-264042.php",
           "label": "東華大學主辦公告",
-          "scope": "免費、適用對象、名額、截止與預定課程",
-          "evidence": "本校起飛生及有興趣同學約 50 名，起飛生優先。12/5 在理工學院 PC1 教室上課，11/25 止、11/30 前通知，免費且備有餐食。",
-          "accessed_at": "2026-11-24T06:08:01+08:00"
+          "scope": "入場資格、免費、席次、報名日與錄取通知",
+          "evidence": "校內約 50 名，起飛生優先。公告寫 11/25 止、11/30 前通知，12/5 校內課程免費並備餐。",
+          "accessed_at": "2026-11-24T19:08:53+08:00"
         },
         {
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform",
           "label": "東華一般生表單",
-          "scope": "一般生報名途徑",
-          "evidence": "表單正文列 12/5 AI 生產力實戰工作坊。",
-          "accessed_at": "2026-11-24T06:09:29+08:00"
+          "scope": "公開可選場次",
+          "evidence": "課程名稱選單含「AI 生產力實戰工作坊(12/5)」。表單說未顯示的場次已停止受理。",
+          "accessed_at": "2026-11-24T19:09:12+08:00"
         },
         {
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform",
           "label": "東華起飛生表單",
-          "scope": "起飛生報名途徑",
-          "evidence": "起飛生表單正文另列 12/5 工作坊。",
-          "accessed_at": "2026-11-24T06:09:29+08:00"
+          "scope": "公開可選場次",
+          "evidence": "課程名稱選單含「AI 生產力實戰工作坊(12/5)」。表單說未顯示的場次已停止受理。",
+          "accessed_at": "2026-11-24T19:09:13+08:00"
         }
       ],
       "priority_tier": "S",
       "priority_score": 20.8,
-      "verification_scope": "2026-11-24 實讀校方公告與兩份報名表，核對免費、校內對象、起飛生優先、約 50 席、日期及公告的日期式截止；席次、精確收件時間與個案資格未核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對校方公告及兩份公開表單的可選場次。精確停收時刻、剩餘名額及個別錄取待查。",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
     },
     {
@@ -100690,37 +100784,193 @@
       "priority_tier": "S",
       "priority_score": 20.8,
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "nthu-ai-agent-vibe-coding-fullstack-2027",
+      "title": "清大 AI Agent 與 Vibe Coding 全端實作｜免學費、保證金 NT$3,000",
+      "summary": "清大職涯發展組 2027/3/8–5/17 校本部實體課，共 10 堂、30 小時。限符合條件的清大在校生 30 名，初學者可報名。公告列 2026/12/7 00:00 起至 12/21 23:59。學費免收，一般錄取人員須繳 NT$3,000 保證金，符合出席與成果等條件退還。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "announcement_at": null,
+      "expires_at": null,
+      "discovered_at": "2026-11-24T19:09:48+08:00",
+      "verified_at": "2026-11-24T19:09:48+08:00",
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "priority_tier": "S",
+      "priority_score": 18.8,
+      "sources": [
+        {
+          "url": "https://ccd.nthu.edu.tw/event/1318",
+          "label": "清大職涯發展組課程公告",
+          "scope": "報名起訖、正式學籍、30 名、課程與保證金條件",
+          "evidence": "報名為 12/7 00:00 至 12/21 23:59，限符合條件的在校生 30 名。10 堂實體課，學費免收，錄取後有 NT$3,000 保證金及結業退還條件。",
+          "accessed_at": "2026-11-24T19:09:48+08:00"
+        },
+        {
+          "url": "https://ccd.nthu.edu.tw/regi/1318",
+          "label": "清大報名入口",
+          "scope": "公開入口與登入要求",
+          "evidence": "公開連結導向清大職涯發展組登入頁。登入後表單、受理及名額未查。",
+          "accessed_at": "2026-11-24T19:09:48+08:00"
+        }
+      ],
+      "categories": [
+        "QUALIFICATION",
+        "VALUE-DEAL"
+      ],
+      "views": [
+        "student",
+        "education",
+        "developer"
+      ],
+      "usage_type": "實體 AI Agent、自動化與全端開發培訓",
+      "quota_details": "30 名，超額時按學院比例分配及抽籤，並設候補。",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "cost_note": "課程學費免收。一般錄取者以 ATM 繳 NT$3,000 保證金，助教經甄選錄取者免繳。第三方工具費用待查。",
+      "usable_duration": "預定 2026/12/7 00:00–12/21 23:59 報名。2027/3/8 至 5/17 的指定週一 13:20–16:20 上課，共 10 次。",
+      "access_risk": "查閱時尚未到公告開放日，活動頁按鈕顯示報名截止，報名入口導向登入。退還保證金須完成兩次成果報告、指定作業、600 字心得與問卷，缺席不得達三次，遲到與早退列計。",
+      "cancellation": "首堂課 5 天前提出取消可退還保證金。課前 4 天至首堂當天取消可退還，並有一年不得報名該組數位能力課程限制。",
+      "deadline_at": "2026-12-21T23:59:00+08:00",
+      "next_review_at": "2026-12-07T09:00:00+08:00",
+      "review_cadence": "event",
+      "eligibility": {
+        "service_availability": "清大校本部中文實體課，教室另行通知。",
+        "account_eligibility": "限具正式學籍的清大在校生，課程期間仍須在校，排除交換生及在職專班。無寫程式背景亦可報名。",
+        "billing_country": "依校方錄取通知繳交新臺幣保證金，符合條件由校方匯款退還。",
+        "identity_residency": "須符合清大學籍條件並到場。",
+        "terms_restrictions": "超額依公告的學院分配及抽籤方式處理；現場成果報告日不得缺席。",
+        "taiwan_note": "Yes：符合校方正式學籍與出席條件的清大學生可依公告參加。"
+      },
+      "unknowns": [
+        "開放日實際受理、選拔結果、剩餘席次與教室",
+        "實作工具需自備帳號、付費或 API 額度的規則",
+        "個別繳款與退還日期"
+      ],
+      "verification_scope": "2026-11-24 台北時間實讀主辦公告、公開報名入口。僅核對預定時程、校籍、名額、保證金與登入要求。",
+      "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "gai-code-with-ai-reading-group-22-2026",
+      "title": "台北 Code With AI 讀書會 #22｜入選者全額補助",
+      "summary": "Generative AI 年會製作委員會 12/9 19:30–21:30 在台北古亭辦理同儕讀書會，面向已有 AI 自動化或生產力實作經驗的非工程師。主辦要求 11/25 前送作品集，預計錄取 20 名。AIT 美國創新中心全額補助入選者的讀書會費用。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "announcement_at": null,
+      "expires_at": null,
+      "discovered_at": "2026-11-24T19:09:49+08:00",
+      "verified_at": "2026-11-24T19:09:49+08:00",
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "sources": [
+        {
+          "url": "https://blindegg.kktix.cc/events/dec2026-codewithai",
+          "label": "主辦 KKTIX 活動頁",
+          "scope": "日期、地址、對象、作品集截止措辭與票種",
+          "evidence": "主辦要求「請於 11/25 前遞交你的 Vibe Coding 作品集」，預計錄取 20 名，票種標示免費。12/9 19:30–21:30 在台北慧邦科技。KKTIX 的售票期間另外列到活動當日。",
+          "accessed_at": "2026-11-24T19:09:48+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/1l_u_27yQyqnE2enT8T8CVXjGJLXQWcQ7lwTz4loQMb8/viewform?edit_requested=true&pli=1",
+          "label": "主辦全額獎學金表單",
+          "scope": "申請欄位、對象、作品與全額費用補助",
+          "evidence": "公開頁列 12/9 場次與作品集問題，說明獲選後由 AIT 美國創新中心全額補助讀書會費用。",
+          "accessed_at": "2026-11-24T19:09:49+08:00"
+        }
+      ],
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "usage_type": "一次性同儕實作交流名額與費用全額補助",
+      "quota_details": "預計錄取 20 名。可公開分享、成果可供他人使用或具利他價值的專案優先。",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "cost_note": "入選的獎學金票費為零，補助涵蓋讀書會費用。交通、設備與個人工具費用未列。",
+      "usable_duration": "主辦寫「11/25 前」送作品集，未說明是否包含 11/25 或精確時間。活動為 2026/12/9 19:30–21:30，KKTIX 票務期間另列至活動當日。",
+      "access_risk": "公開申請欄位可讀，取票流程和提交後受理待查。須攜帶可寫程式的設備，以進行中專案或程式碼參與同儕討論。",
+      "cancellation": null,
+      "deadline_at": null,
+      "next_review_at": "2026-11-25T00:15:00+08:00",
+      "review_cadence": "daily",
+      "eligibility": {
+        "service_availability": "台北市中正區慧邦科技 9 樓實體活動。",
+        "account_eligibility": "獎學金面向已嘗試用 AI 自動化的非工程師，須送作品集。工程師可依公告另申請志工票。",
+        "billing_country": "入選後主辦所述費用由 AIT 美國創新中心全額補助。",
+        "identity_residency": "需能到台北現場。主辦公開文字未另限國籍或居住地。",
+        "terms_restrictions": "主辦依作品集審核，須備妥可寫程式的設備。活動形式是同儕交流。",
+        "taiwan_note": "Yes：在台灣可到場且符合主辦對象及作品條件者可申請。"
+      },
+      "unknowns": [
+        "「11/25 前」是否包含 11/25、精確停收時刻與實際受理",
+        "個別核准、剩餘名額及取票步驟",
+        "臨時取消與遞補規則"
+      ],
+      "verification_scope": "2026-11-24 台北時間實讀主辦活動與公開申請表，核對場次、資格、名額、免費條件及期限措辭。KKTIX 取票入口未能核實。",
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-24T18:14:45+08:00",
+  "latest_research_at": "2026-11-24T19:14:05+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T18:06:45+08:00",
-    "completed_at": "2026-11-24T18:14:45+08:00",
+    "started_at": "2026-11-24T19:06:07+08:00",
+    "completed_at": "2026-11-24T19:14:05+08:00",
     "reviewed_ids": [
-      "deepnote-education-basic-unlimited",
-      "vocal-separator-free-two-jobs-daily",
-      "nccu-high-school-ai-entrepreneurship-camp-2026",
-      "iii-edge-ai-adoption-workshop-2026"
+      "cyleague-cyber-navi-trial",
+      "microsoft-data-days-2026-free-exam-vouchers",
+      "miro-nonprofit-thirty-percent-all-paid-plans-ai",
+      "n8n-startup-fifty-percent-business-self-hosted",
+      "nthu-its-ai-certification-training-2027",
+      "ndhu-ai-productivity-workshop-2026"
     ],
     "new_ids": [
-      "ntpu-generative-ai-intro-cohort-2-2027",
-      "ntu-koolib-ai-academic-english-workshops-2026",
-      "ntcu-adl-highschool-math-ai-workshop-2026"
+      "nthu-ai-agent-vibe-coding-fullstack-2027",
+      "gai-code-with-ai-reading-group-22-2026"
     ],
-    "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1220
+    "attempted_failed_ids": [
+      "akamai-cloud-rise-startup-credits"
+    ],
+    "unreviewed_existing_count": 1221
   },
-  "generated_at": "2026-11-24T18:14:45+08:00",
+  "generated_at": "2026-11-24T19:14:05+08:00",
   "reviewed_ids": [
-    "deepnote-education-basic-unlimited",
-    "vocal-separator-free-two-jobs-daily",
-    "nccu-high-school-ai-entrepreneurship-camp-2026",
-    "iii-edge-ai-adoption-workshop-2026"
+    "cyleague-cyber-navi-trial",
+    "microsoft-data-days-2026-free-exam-vouchers",
+    "miro-nonprofit-thirty-percent-all-paid-plans-ai",
+    "n8n-startup-fifty-percent-business-self-hosted",
+    "nthu-its-ai-certification-training-2027",
+    "ndhu-ai-productivity-workshop-2026"
   ],
-  "attempted_failed_ids": [],
+  "attempted_failed_ids": [
+    "akamai-cloud-rise-startup-credits"
+  ],
   "new_ids": [
-    "ntpu-generative-ai-intro-cohort-2-2027",
-    "ntu-koolib-ai-academic-english-workshops-2026",
-    "ntcu-adl-highschool-math-ai-workshop-2026"
+    "nthu-ai-agent-vibe-coding-fullstack-2027",
+    "gai-code-with-ai-reading-group-22-2026"
   ]
 }

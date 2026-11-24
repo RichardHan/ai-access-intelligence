@@ -7603,3 +7603,36 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 保留既有 ID、首次收錄時間、來源網址及 2,998 筆政策歷史，追加 7 筆。批次驗證現要求每筆成功複核或新增至少有一個來源查閱時間落在實際批次時間窗。這可攔截同一日早班讀取時間被拿來支持晚班的情況。
 
 發布驗證涵蓋 `make check`、`make check-ui`、`git diff --check`、錯置來源時間的隔離反例，以及本輪卡片的 390px／1280px Chrome 實查。正式發布以本輪提交的 Frontend QA 和 Pages 成功、公開資產與 Git 內容一致及公開站卡片核對為判據。
+
+
+## 2026-11-24 19:06–2026-11-24 19:14 Asia/Taipei｜N=1,227 · R=6 · A=2 · U=1,221 · attempted=1
+
+起點 7bccd11。主線與遠端一致，工作樹乾淨，無開放 PR，前一版 Frontend QA 與 Pages 成功。複核前取得維護鎖。可行動 1,111 筆，已到複核時點 1 筆，已過至少一個截止點 29 筆（含歷史），距截止七日內 24 筆，其中 18 筆冷卻。高風險 53 筆為可行動紀錄中已到複核點、七日內截止、最新追查失敗、暫時不限量或 ID 含 conflict 的聯集。
+
+三位研究代理使用 GPT-6.2 Sol（high），分查急件、較舊的證據缺口與台灣新機會。環境未提供 Gemini 3.8 Flash，主代理使用會話配置並重讀採用來源。優先處理已到回查點的 Akamai、東華報名及已有新證據的付款和資格案件。Firebase 的配額時間及規則與早班一致，保留原核實時間與排程。Vercel 尚未到 20:30 回查點。前輪四筆複核與三筆新案沿用原時點。兩筆新案按主辦、日期、場次識別碼、主題及正規化網址去重。
+
+### 實質變更與新增
+
+- akamai-cloud-rise-startup-credits｜Rise 申請頁及替代頁皆回 403。保留方案原核實時間。官方計費 FAQ 說明閒置或關機仍可能出帳，刪除後已累積費用仍須支付。 [Akamai Cloud 計費 FAQ](https://techdocs.akamai.com/cloud-computing/docs/billing-faqs)
+- ndhu-ai-productivity-workshop-2026｜東華兩份表單的選單均列 12/5 工作坊。報名依公告 11/25 止，精確時刻與剩餘席次待核。 [東華大學主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [東華一般生表單](https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform) [東華起飛生表單](https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform)
+- cyleague-cyber-navi-trial｜補齊 10/1–7 先行申請者從 10/8 起算，10/8–11/30 申請者從啟用起算。保留 40 件口徑差異。 [CyLeague 產品頁](https://www.cyleague.jp/service/cyber-navi/) [CyLeague 2026-09-30 公司供稿](https://prtimes.jp/main/html/rd/p/000000024.000152916.html)
+- n8n-startup-fifty-percent-business-self-hosted｜新創 FAQ 與定價統一為一年後仍符合資格可延長。年繳 480,000 次可在年度內不均分使用，另補續訂、期末取消與超額風險。 [n8n 新創定價](https://n8n.io/pricing/startup-plan/) [n8n 新創 FAQ](https://support.n8n.io/article/n-8-n-business-plan-for-startups-info-faq) [n8n Business 用量說明](https://support.n8n.io/article/understanding-your-business-plan-usage-emails) [n8n Business 付款與取消](https://support.n8n.io/article/managing-your-business-plan-subscription-in-the-paddle-portal) [n8n 自助方案條款](https://n8n.io/legal/self-serve-terms/)
+- miro-nonprofit-thirty-percent-all-paid-plans-ai｜補一般 Starter／Business 訂閱自動續期、期末取消、未用期間不退款與未付加購席次的扣款規則。保留非營利年繳口徑差異。 [Miro 定價](https://miro.com/pricing/) [Miro 取消說明](https://help.miro.com/hc/en-us/articles/360011986179-Cancel-your-Miro-subscription) [Miro 非營利說明](https://help.miro.com/hc/en-us/articles/360026839633-Miro-for-non-profits) [Miro 非營利活動頁](https://miro.com/npo/)
+- microsoft-data-days-2026-free-exam-vouchers｜DP-700 的官方考試清單含繁體中文，DP-600 的中文選項為簡體。保留折抵券現行供應、規章及台灣考位缺口。 [Microsoft Learn DP-700](https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/) [Microsoft Learn DP-600](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)
+- nthu-its-ai-certification-training-2027｜補清大 ITS AI 培訓助教免保證金條件與一般正取未按時繳交的遞補規則。 [清大職涯發展組公告](https://ccd.nthu.edu.tw/event/1317)
+- nthu-ai-agent-vibe-coding-fullstack-2027｜新收錄清大場次 1318。核對預定報名窗口、校籍、30 名、保證金與退還條件。 [清大職涯發展組課程公告](https://ccd.nthu.edu.tw/event/1318) [清大報名入口](https://ccd.nthu.edu.tw/regi/1318)
+- gai-code-with-ai-reading-group-22-2026｜新收錄 Code With AI 讀書會第 22 場，核對作品集申請、約 20 名及入選全額費用補助。精確截止時刻未列。 [主辦 KKTIX 活動頁](https://blindegg.kktix.cc/events/dec2026-codewithai) [主辦全額獎學金表單](https://docs.google.com/forms/d/1l_u_27yQyqnE2enT8T8CVXjGJLXQWcQ7lwTz4loQMb8/viewform?edit_requested=true&pli=1)
+
+### 下一輪
+
+- 先按 11/24 20:30 原排程查 Vercel Parallel 免費標記與帳戶費率證據。11/25 00:15 查 Code With AI 表單是否停收及「11/25 前」的邊界。KKTIX 售票與獎學金申請各有時程。 [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [讀書會主辦](https://blindegg.kktix.cc/events/dec2026-codewithai)
+- 11/25 02:08 查清大 ITS 認證班餘額及正式錄取通知。04:30 依原排程查 Microsoft Fabric 折抵券名額與 100%／50% 條款，官方主站正文仍有讀取缺口。06:00 查東華兩個場次選項是否隱藏、Firebase 最後一輪配額申請（台北 11/26 02:00 截止）。09:00 查 CyLeague 申請條件與台灣法人缺口。另保留臺大閱讀場 11/25 12:00 與 17:00 交接。 [清大 ITS](https://ccd.nthu.edu.tw/event/1317) [Microsoft](https://community.fabric.microsoft.com/blog/community_blog/data-days--certification-vouchers/5376271) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [CyLeague](https://www.cyleague.jp/service/cyber-navi/) [臺大場次](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05)
+- 11/25 19:00 回查 Rise 現行受理、抵用額與台灣實體，優先找能直接讀取的有日期官方更新。現有即時方案、新創目錄與日文頁皆回 403。11/25 仍追 Fireworks 訓練差異，11/26 00:00 後查阿里雲預覽停用。 [Akamai Rise](https://www.akamai.com/cloud/start-ups/rise) [Fireworks](https://fireworks.ai/pricing) [阿里雲](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)
+- n8n 和 Miro 依 11/30 09:00 原排程追實付、台灣付款及個別例外。清大 AI Agent 新班 12/7 09:00 查延後或登入受理、名額和工具費用。 [n8n 定價](https://n8n.io/pricing/startup-plan/) [Miro 非營利條款](https://help.miro.com/hc/en-us/articles/360026839633-Miro-for-non-profits) [清大 AI Agent](https://ccd.nthu.edu.tw/event/1318)
+- 臺大「無法代理的未來」論壇有 12/3 17:00 報名表線索，費用、席次與受理待核，留交接。空大 AI 教材工作坊的公開表單轉關閉頁，公告原寫 11/25 12:00，暫不收錄。 [臺大論壇](https://aiinsight.ntu.edu.tw/zh-TW/events/18) [臺大表單](https://form.jotform.com/262839125614460) [空大公告](https://www2.nou.edu.tw/nepac/Document/Detail?docid=64816&pid=4850&uid=4850)
+
+### 品質與發布
+
+保留既有 ID、首次收錄時間、原來源網址與 3,005 筆歷史，追加 9 筆。資料品質修正聚焦在可能影響付款的計費、取消和配額說明。Akamai 的一般計費證據附在卡片，Rise 方案核實時間沿用既有資料，整筆列入追查失敗。
+
+本機 make check、make check-ui、git diff --check 和 390px／1280px 卡片逐筆驗證通過。正式發布核對涵蓋同一提交的 Frontend QA 和 Pages、公開資產位元組與公開站卡片行為。
