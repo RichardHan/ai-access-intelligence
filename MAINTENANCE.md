@@ -7223,3 +7223,38 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 3. 11/24 16:00 後查 `iteracompute-free-qwen-3-8-27b-monthly-30m` 免費窗口及舊戶資格，20:30 後查 `vercel-ai-gateway-parallel-decisions-free-window` 是否延長或公布期後價格。 [IteraCompute](https://iteracompute.com/free/) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
 4. 11/25 09:00 起查 Civo 個別效期有無新的官方說明，並看新北兩班是否額滿或更換報名入口。HaveTML 有新領取入口或公告再追。 [Civo](https://www.civo.com/docs/faq) [新北課程總覽](https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12) [HaveTML](https://havetml.com/pricing)
 5. 依原排程複核東華、Google 額外配額、南大 Quantum AI 組。淡江費用或長榮考照與受理規則有主辦新證據時再評估收錄。
+
+
+## 2026-11-24 08:06–2026-11-24 08:14 Asia/Taipei｜N=1,202 · R=7 · A=2 · U=1,195 · attempted=0
+
+起點 `9deeacf`。當時 main 與遠端同步，工作樹乾淨，無開放 PR、執行中的部署或既有維護鎖。本輪持鎖。基準 982 筆機會、50 筆政策、170 筆觀察線索。可行動紀錄中 0 筆已到複核時點、21 筆七日內截止、4 筆上次整筆追查失敗，三組去重 25 筆。近期截止有 20 筆落在冷卻時段，其中 18 筆依佇列規則未排入。沿用上輪指定回查時段，優先採用 OpenAI 申請的新官方訊號，並補位複核較久未核的付款、資格與扣量風險。三組唯讀子代理使用 GPT-6.2 Sol（high），環境未提供 Gemini 3.8 Flash。主代理重讀本輪採用的官方證據。
+
+### 既有案例
+
+- `openai-academic-researchers-waitlist`｜專案 FAQ 確認 11/23 開放，公告列先到先得 50,000 份。自助方案最多 3 席 Plus、最長 12 個月，最多兩名合格協作者可跨校，自開通起算且共用期滿日。教育比較仍寫關閉候補及 Pro。申請入口導向登入，剩餘名額、台灣院校審核、付款方式及期滿計費待核。另把舊歷史誤引的 API 表單標為獨立計畫，其最高 US$1,000 API 額度與此案分開。 [專案 FAQ](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [擴大公告](https://openai.com/index/expanding-chatgpt-for-academic-researchers/) [教育比較](https://learn.chatgpt.com/docs/enterprise/education-plans) [申請入口](https://chatgpt.com/academic-researchers/apply)
+- `openai-api-data-sharing-daily-complimentary-tokens`｜日額維持，官方同節的例子同時出現僅收超額及跨線請求整筆計費。補上正餘額要求、一般新戶預付首購最低 US$5、預設自動加值，並分別記錄用量層級的累計購買門檻與優惠資格提示。台灣 API 服務列名，個別組織資格及扣費待核。 [資料共享說明](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai) [預付帳務](https://help.openai.com/en/articles/8264644-setting-up-and-managing-prepaid-api-billing) [用量層級](https://developers.openai.com/api/docs/guides/rate-limits)
+- `amazon-polly-free-tier-monthly-characters`｜AWS 的 Free／Paid plan 均可為 Polly 使用合格抵用金。Polly 固定字元月額對現行新客的資格待核，官方 FAQ 同時有 6 與 12 個月的抵用金到期說法。移除把 500 萬字元約算成 23 小時的文字，官方例算基於 100 萬字元。 [Polly 定價](https://aws.amazon.com/polly/pricing/) [AI 服務目錄](https://aws.amazon.com/free/ai/) [Free Tier FAQ](https://aws.amazon.com/free/free-tier-faqs/)
+- `viktor-free-hundred-credit-workspace`｜定價免卡宣傳與驗卡說明並列。部分工作區須由管理員驗卡，US$1 預授權會撤銷，不會啟動付費方案。官方說明一次性上限 40,000 點，用完暫停。舊 Markdown 路徑由子代理確認不可讀，現行 HTML 計費文件可用。台灣卡、驗卡觸發與個案核給待核。 [定價](https://viktor.com/pricing) [驗卡](https://viktor.com/help/category/credits/starter-credits-and-card-check) [點數文件](https://viktor.com/docs/plans-and-credits)
+- `agentmail-startup-three-months`｜三個月專案申請免卡，期滿標價 US$200／月。定價 Markdown 另連一個月 Launch Offer 表單，HTML 未列。表單可直讀，確切收件期限、轉付費授權及台灣資格待核。 [新創](https://www.agentmail.to/startups) [定價](https://www.agentmail.to/pricing) [條款](https://www.agentmail.to/legal/terms) [一個月表單](https://tally.so/r/QKrxj8)
+- `novita-startup-matched-split-credits`｜兩池各至 US$5,000，部分須配比消費。一般條款列依約定門檻自動加值、通常不退費，列例外及 30 天申請期。新創帳戶的帳務安排與台灣資格待核。 [方案](https://startups.novita.ai/) [條款](https://novita.ai/legal/terms-of-service)
+- `tana-outliner-free-monthly-five-hundred-shared`｜Free 仍是每月共用 500 點。學生折扣每 12 個月重驗，客服政策另列發票起 48 小時內取消並申請退款，與一般條款的當期費用不退文字並列。台灣個案及教育／NGO 其他類別的折扣期限待核。 [定價](https://outliner.tana.inc/pricing) [帳務](https://outliner.tana.inc/help/billing-and-account) [條款](https://outliner.tana.inc/terms)
+
+### 新增與去重
+
+- `appworks-accelerator-aw34`｜台灣及海外新創可申請三個月免費加速器。首輪 11/29、最終 12/27，日期皆未列時刻。入選不收費、股權或代幣。主辦列合作夥伴雲端與 AI 額度，個案金額及效期待核。表單直讀 HTTP 200，未提交。 [主辦](https://appworks.tw/accelerator/) [FAQ](https://appworks.tw/accelerator-faq/)
+- `gdg-devfest-taipei-2026`｜12/13 國立臺灣大學免費技術大會，有限席次，已公布 AI 議程與公開 RSVP。主辦議程為 08:30 報到、17:30 閉幕，平台標頭為 08:00–17:00。實際票額、工作坊另報名與截止時間待核。 [大會](https://devfest-taipei.gdg.tw/2026/) [RSVP 與議程](https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taipei-2026/)
+
+新增 2 筆（機會 2、政策 0、觀察線索 0）。以 ID、名稱別名、主辦、梯次與網址比對資料和歷史。工研院 AI 風險預警屬既有 AOCAI 計畫班別。長榮雖列報名免費，公開頁無法確認擠額後仍受理，考照費也待核。淡江 AI 影音班無可核費用。Google 額外配額及 Kaggle 競賽預篩未見時點之外的新訊號。這些篩檢未刷新既有紀錄。 [工研院課程](https://college.itri.org.tw/Lesson/LessonData/DC66E044-459A-42CC-BDB1-A2EB68C3FD9D) [長榮](https://eweb.cjcu.edu.tw/act/act.aspx?id=20322) [淡江](https://enroll.tku.edu.tw/course.aspx?cid=ASGX20261201)
+
+### 品質改善與發布判據
+
+- 本輪修正直接影響申請或扣款的資料。保留所有既有 ID、首次收錄時間及 2,910 筆政策歷史，追加 9 筆。README 與批次統計依基準 JSON 和結案差異產生。遇到同一網址提供 HTML 與 Markdown 不同正文，記錄回傳版本及各自指向的表單。
+- 本機 `make check`、`make check-ui`、`git diff --check` 通過。另用 Chrome 在 360／390／768／1280 px 查驗批次範圍、9 張更新卡、來源與期限、台灣與免費專區，檢查頁面溢位與執行錯誤。發布待對應提交的 Pages 成功後，比對公開檔案與同一組瀏覽器檢查。
+
+### 下一輪優先
+
+1. 今日依交接原時點追 `aocai-working-free-ai-courses-2026`（09:00 後 MLOps 12/2 台北班及額滿狀態）、`iteracompute-free-qwen-3-8-27b-monthly-30m`（16:00 後免費模式切換）、`iii-edge-ai-adoption-workshop-2026`（16:30 起受理及 18:00 收件截止）、Vercel（20:30 後延長或期後價）。 [MLOps](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585) [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+2. 依既定回查時間換路線處理 Swarms（11/24 13:00）、Kaggle Notebook（17:00）、Akamai RISE（19:00）及 Microsoft 考券（11/25 04:30）。Microsoft 優先找獨立官方公告。
+3. 11/25 09:00 起查 OpenAI 學術專案剩餘名額或停止受理公告，留意官方教育比較更新。另查 OpenAI API 超額範例、AWS 抵用金效期及 Viktor 驗卡範圍有無明確說明。 [學術 FAQ](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [API 資料共享](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai) [AWS FAQ](https://aws.amazon.com/free/free-tier-faqs/) [Viktor](https://viktor.com/help/category/credits/starter-credits-and-card-check)
+4. 依排程查 AW#34 首輪是否更改、DevFest 報名與工作坊名額，以及東華額滿、Google 額外配額和南大 Quantum AI 組。 [AW#34](https://appworks.tw/accelerator/) [DevFest](https://devfest-taipei.gdg.tw/2026/) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Google 配額](https://forms.gle/uPcDhaYW3iVo2AYw5) [南大競賽](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308)
+5. 依上輪交接追 Civo 個別效期與新北兩班餘額。長榮及淡江等主辦有新的考照費、受理或費用證據再納入。 [Civo](https://www.civo.com/docs/faq) [新北課程總覽](https://ezlearn.ntpc.gov.tw/courses?college=5&page=1&perPages=12)
