@@ -7697,3 +7697,26 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 依基準與本輪 JSON 差異核算批次與 README，保留既有 ID、首次收錄時間和來源網址。政策歷史保留 3,024 筆並追加 9 筆。品質改善採資料層修正，沿用既有介面、schema 和驗證工具。本機檢查包括 `make check`、`make check-ui`、卡片及來源在 390px／1280px 的檢查。發布核對以同一提交的 Frontend QA、GitHub Pages 部署、公開資產逐位元比對及公開站卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 03:05–2026-11-25 03:13 Asia/Taipei｜N=1,233 · R=3 · A=1 · U=1,230 · attempted=0
+
+基準 `4d2f392`。主線與遠端一致，工作樹乾淨，沒有開放 PR 或既有維護鎖，前版 Frontend QA 與 Pages 成功。本輪持鎖。佇列有 1,116 筆可行動，0 筆已到複核點，27 筆七日內截止（其中 17 筆在冷卻期）。全庫有 30 筆至少一個截止點已過（含歷史）。佇列高風險 55 筆，為可行動紀錄中排入逾期、七日內截止、最近追查失敗、暫時不限量或 ID 含 conflict 的聯集。
+
+三位唯讀研究代理以 GPT-6.2 Sol high 分查臨近截止、計費與台灣新案。主代理複讀採用的官方來源。東華已進截止日，數發部接近 04:00 複核點，Microsoft 有 12/1 費率變更且舊卡片把兩種帳務品項混用。其餘尚未到複核點的近期案件依原時程。Gemini 3.8 Flash 未提供，主代理沿用會話配置。
+
+### 證據與變更
+
+- `ndhu-ai-productivity-workshop-2026`｜補 10/28 校園公告與單一場次填報方式。一般生及起飛生兩份表單仍列 12/5 場次，保留 11/25 日期級截止。網頁讀取器逾時或無法開啟表單，直接讀取官方 HTML 成功。海報列 18:00 結束，主辦議程列 18:10，依主辦頁安排並保留差異。精確停收時刻、實際收件、剩額與錄取未知。 [官方海報](https://announce.ndhu.edu.tw/message_8/1793156287/AI%E6%B5%B7%E5%A0%B1.jpg) [校園公告](https://announce.ndhu.edu.tw/mail_display.php?timestamp=1793156287) [主辦頁](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [一般生表單](https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform) [起飛生表單](https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform)
+- `moda-civil-service-ai-agent-seminar-2026`｜簡章與公開表單支持兩場可複選、全體公務人員可報名。表單只有一個出席方式欄，混搭方式待查。補 12/4 前預計通知、直播連結前兩天寄出及實體／直播均需簽到退。保留開始日 11/18 與 11/16 的差異，兩處截止同為 11/30 15:00。簡章及表單未列核發時數，也未驗證收件、餘額或個案錄取。 [主辦簡章](https://www.guanshan.gov.tw/files/Ilpwto7SAEqBQLh8qJDtynsaIeYItUInwxEqrxGT.pdf) [公所轉知](https://www.guanshan.gov.tw/news/detail/3607) [表單](https://docs.google.com/forms/d/e/1FAIpQLSfj1KGCnrFgXuYMuhjHwncbaT9vVh1GcDIZNSXVwti-jADC8g/viewform?usp=send_form)
+- `microsoft-foundry-copilot-harness-free-runtime`｜公告 12/1 前只免 harness 執行環境費。自 12/1 起沙箱按量計費，官方公布 US$0.0994/vCPU-hour、US$0.0118/GiB-hour 且明示地區與協議差異。官方指南指出它仍是 prompt agent。零售 API 的 Hosted agents 區域價僅供對照，移除實際區價與停止呼叫即停止計費的說法；整體固定費用留 null。12/1 為方案轉付費日期，精確時區、區價、計費項目、帳戶與閒置計費待查。 [公告](https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/) [使用指南](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/use-tools-skills-copilot-harness) [區域](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/limits-quotas-regions) [Azure 定價](https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/) [零售 API](https://prices.azure.com/api/retail/prices)
+- `certitraining-ai-video-workflow-webinar-2026-12-29`｜按主辦、主題、日期、場次與網址去重後新增 12/29 免費 Teams 直播。主辦保留篩選，確切期限、剩額和實際收件待核。直接 HTTP 403，公開網頁讀取器可讀單場及主辦總覽。 [單場活動](https://www.accupass.com/event/2611091712551466889504) [主辦課程總覽](https://www.accupass.com/event/2507171906465763701550)
+
+### 下一輪
+
+- 東華 11/25 18:00 查兩份表單的正式場次選單與停收公告。若已確認停收，保留歷史並退出每日追蹤。Microsoft 11/26 03:30 起按限時窗口重查，優先找專屬計費項目、實際區價及切換時區。數發部 11/26 04:00 查表單、混搭出席、核發時數及更新通知。 [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Foundry 公告](https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/) [數發部表單](https://docs.google.com/forms/d/e/1FAIpQLSfj1KGCnrFgXuYMuhjHwncbaT9vVh1GcDIZNSXVwti-jADC8g/viewform?usp=send_form)
+- 11/25 04:30 查 Microsoft Fabric 折抵券。06:00 查 Firebase 最後一輪配額（台北 11/26 02:00 截止）。09:00 延續 Code With AI 作品集、CyLeague、政大和前幾輪交接，12:00 與 17:00 核臺大閱讀場。其餘近期限案依各筆原排程，含 Gemma 競賽、桃園職訓、境內外計費與 Azure/Akamai 等。 [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [臺大場次](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05)
+- 11/26 09:00 查全域科技票券截止與收件。Gamma 12/9 已查到主辦的 LINE 社群會員免費條件，社群頁可讀，入社規則、非會員費、剩餘票與收件沒有公開證據，本輪保留交接線索。AI 簡單學 12/1 入門講座先查場次和實際售票。DevFest Taoyuan、鳥巢 SD AI 年會、長榮 Google AI 工作坊及工研院 OMO 課已收錄。 [全域科技](https://www.accupass.com/event/2611091712551466889504) [直心健康活動](https://www.accupass.com/event/2607290735458465803630) [AI 簡單學場次](https://www.accupass.com/event/2611220448431990581999)
+
+### 品質與發布
+
+比較基準和寫入後的資料計算批次、類型與 README 統計。保留既有 ID、首次收錄時間與來源網址。政策歷史保留 3,033 筆並追加 4 筆。本輪以資料欄位改善卡片上的費用與資格說明。發布門檻為本機資料及瀏覽器測試、同一提交的 Frontend QA 與 Pages 成功，以及公開資產和本輪卡片核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)

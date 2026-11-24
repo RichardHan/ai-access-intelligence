@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T02:13:37+08:00",
-  "scope": "2026-11-25 02:06–2026-11-25 02:13 Asia/Taipei 局部複核 7 筆、新增 2 筆，整筆追查失敗 0 筆，其餘 1,224 筆既有紀錄未完成本輪複核。補清大補考報名、佛光競賽上傳與授權條件、Tripo 計費與授權差異、Google TTS 停用和 Wispr 學生切換。新增臺大 AI 安全論壇及雲科大機器人工作坊。",
+  "updated_at": "2026-11-25T03:13:04+08:00",
+  "scope": "2026-11-25 03:05–2026-11-25 03:13 Asia/Taipei 局部複核 3 筆、新增 1 筆，整筆追查失敗 0 筆，其餘 1,230 筆既有紀錄未完成本輪複核。補東華表單與數發部出席規則，修正 Microsoft Copilot harness 費率口徑。新增全域科技 AI 影音線上分享會。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -76646,12 +76646,11 @@
       "verification": "Official",
       "legal_status": "not_verified",
       "views": [
-        "free",
         "developer",
         "beta"
       ],
-      "setup_cost_usd": 0,
-      "recurring_cost_usd": 0,
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
       "effort_minutes_max": 60,
       "taiwan": "Unknown",
       "regions": [],
@@ -76662,14 +76661,14 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "usable_duration": "harness 執行環境免費至 2026-12-01，之後按用量計費；公開預覽結束日未公布。",
-      "cancellation": "無訂閱；停止呼叫即停止產生 harness 費用，但模型與工具用量另計。",
+      "usable_duration": "Copilot harness 執行環境於 2026-12-01 前免費，官方列該日起依沙箱用量計費，未公布生效時區或時刻。公開預覽結束日未公布。",
+      "cancellation": "官方使用指南說平台可閒置、恢復或替換沙箱。停止呼叫與停止計費的關係待核。",
       "access_risk": "免費只涵蓋 harness 執行環境：模型推論與工具另計，Azure 模型部署本身也可能收費；公開預覽無 SLA，建立後不支援切換 harness。",
-      "verified_at": "2026-11-23T02:16:00+08:00",
+      "verified_at": "2026-11-25T03:09:09+08:00",
       "discovered_at": "2026-11-09T07:14:38+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-10-28",
       "previous_limit": null,
-      "review_cadence": "biweekly",
+      "review_cadence": "daily",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
@@ -76680,23 +76679,22 @@
         "此預覽是否需要申請或白名單開通",
         "免費期間是否另有未公布的速率上限",
         "台灣帳戶的實際計費、發票與資料落地",
-        "harness 沙箱是否即零售價目表的 Hosted vCPU Usage／Hosted Memory Usage：價目表沒有名為 Harness 的項目，對應關係未由官方文件明示"
+        "Copilot harness 區域實價、所用計費項目及閒置或停止呼叫時的計費規則"
       ],
       "id": "microsoft-foundry-copilot-harness-free-runtime",
       "title": "Foundry Copilot harness：12/1 前執行環境免費",
       "status": "conditional",
       "categories": [
-        "FREE",
         "BETA-ACCESS"
       ],
       "effort_basis": "分析者估計：需 Azure 訂閱、Foundry 專案、模型部署與 azd 或入口設定",
       "quota_details": "官方只寫 harness runtime 在 2026-12-01 前免費，未公布呼叫數或工作階段上限；同頁限制：skills 最多 50 個頂層引用、BYOM 與 Foundry Memory 不支援、strict 函式 schema 不支援、store:false 與 previous_response_id 不支援。",
-      "cost_note": "harness 執行環境 2026-12-01 前 US$0；12-01 起沙箱運算 US$0.0994/vCPU-hour、記憶體 US$0.0118/GiB-hour，這是官方部落格的標題數字、屬美國區基線。Azure 零售價目表已列 Foundry Agents 的 Hosted vCPU Usage／Hosted Memory Usage：East US、West US 3 等美國區為 US$0.0994／US$0.0118；harness 支援區中的 Japan East 與 Korea Central 為 US$0.10934／US$0.01298，Southeast Asia 為 US$0.11928／US$0.01416，因此台灣讀者若部署在日本東、韓國中部或東南亞，實際單價高於部落格數字。模型推論、另行計費的工具與連接服務從第一天起照價。",
-      "deadline_at": "2026-12-01",
-      "next_review_at": "2026-11-30T09:00:00+08:00",
+      "cost_note": "官方公告列 2026-12-01 起沙箱運算 US$0.0994/vCPU-hour、記憶體 US$0.0118/GiB-hour，並說費率依地區與協議而異。Azure 零售價目表的 Hosted agents 區域價格列在來源供對照，Copilot harness 的實際區域費率及對應計費項目待官方確認。",
+      "deadline_at": null,
+      "next_review_at": "2026-11-26T03:30:00+08:00",
       "eligibility": {
         "service_availability": "需 Azure 訂閱、Foundry 專案與已部署的相容模型；harness 支援區為 22 區（含日本東、韓國中部、東南亞、美歐多區），未列台灣。",
-        "account_eligibility": "任何可建立 Azure 訂閱的組織或個人；官方未寫此預覽需要白名單或申請。",
+        "account_eligibility": "需在支援區建立新 prompt agent，使用相容模型與具 Foundry User 專案角色的身分。公開指南未列白名單要求。",
         "billing_country": "未查核 Azure 台灣計費與發票；模型與工具依所選服務計價。",
         "identity_residency": "未見居住地或身分限制；資料處理依所選區域與 Azure 條款。",
         "terms_restrictions": "公開預覽無 SLA、不建議生產；建立後不支援切換 harness；不支援 BYOM、Foundry Memory 與部分 Responses API 參數。",
@@ -76705,29 +76703,47 @@
       "sources": [
         {
           "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
-          "scope": "2026-11-17 重讀 harness 免費窗口與 12/1 費率",
-          "evidence": "2026-11-17 04:15 重讀定價段：Billing begins December 1, 2026。Harness runtime usage is free before December 1。Starting December 1, sandbox compute and memory are billed at USD $0.0994 per vCPU-hour and $0.0118 per GiB-hour。model inference and separately billed tools remain charged。文章 modified 2026-10-29。 較早紀錄：逐字未變：「Billing for the Copilot harness in Foundry Agent Service begins December 1, 2026, with consumption-based pricing. Harness runtime usage is free before December 1; model inference and separately billed tools and connected services remain subject to their applicable charges. Starting December 1, sandbox compute and memory are billed at USD $0.0994 per vCPU-hour and $0.0118 per GiB-hour, respectively.」發文日 October 28th, 2026，頁面 dateModified 2026-10-29T19:18:21+00:00，與 2026-11-10 重讀相同。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "免費窗、12/1 沙箱計費、公告費率與變因",
+          "evidence": "文章於 2026-10-28 發布，HTML 更新時間為 2026-11-22 22:02 UTC。公告列 12/1 開始按量計費，運算 US$0.0994/vCPU-hour、記憶體 US$0.0118/GiB-hour，並列費率可依地域與協議變動。模型推論、另行計費工具與連接服務均依各自費率。",
+          "accessed_at": "2026-11-25T03:08:06+08:00",
+          "label": "Microsoft Foundry 10/28 公告"
         },
         {
           "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/limits-quotas-regions",
-          "scope": "harness 支援區（未列台灣）與預覽限制（2026-11-14 重讀）",
-          "evidence": "「The Copilot harness is available in a subset of the regions that support prompt agents. Networking, tool, and service support can be narrower than for prompt agents generally.」支援區逐字仍為 Australia East, Brazil South, Canada Central, Canada East, Central US, East US, France Central, Germany West Central, Italy North, Japan East, Korea Central, North Central US, Norway East, Poland Central, Southeast Asia, South India, Spain Central, Sweden Central, UK South, West Europe, West US, and West US 3（22 區，未列台灣）；「Bring your own model (BYOM) | Not supported」「Foundry Memory | Not supported」。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "核對 Copilot harness 支援區與支援限制",
+          "evidence": "harness 適用於部分 prompt agents 區域。所列 22 區含日本東、韓國中部與東南亞，未列台灣。BYOM 與 Foundry Memory 均不支援。",
+          "accessed_at": "2026-11-25T03:08:06+08:00",
+          "label": "Microsoft Learn 限制與區域"
         },
         {
           "url": "https://prices.azure.com/api/retail/prices",
           "label": "Azure 零售價目表 API",
-          "scope": "12/01 起沙箱運算與記憶體費率是否已進官方價目表，及各區金額（2026-11-14 查詢）",
-          "evidence": "查詢 serviceName eq 'Foundry Tools' and productName eq 'Foundry Agents' 回 156 筆，其中 Hosted vCPU Usage 為 1 Hour 計價：eastus、eastus2、westus、westus3、northcentralus、southcentralus、westcentralus 為 US$0.0994；japaneast、koreacentral、japanwest、canadacentral、francecentral、germanywestcentral、italynorth、uksouth、swedencentral、spaincentral、norwayeast、polandcentral、southindia、uaenorth、switzerlandnorth、switzerlandwest 為 US$0.10934；southeastasia、eastasia、brazilsouth 為 US$0.11928。Hosted Memory Usage 對應為 US$0.0118（美國區）、US$0.01298（日本東、韓國中部等）、US$0.01416（東南亞、東亞、巴西）。價目表無名為 Harness 的計費項目。",
-          "accessed_at": "2026-11-23T02:16:00+08:00"
+          "scope": "Foundry Agents Hosted SKU 費率對照",
+          "evidence": "查詢 Foundry Tools／Foundry Agents 回 156 項，未見名稱含 Harness 的計費項目。Hosted vCPU Usage／Hosted Memory Usage 的每小時牌價，East US 分別 US$0.0994／US$0.0118，日本東及韓國中部 US$0.10934／US$0.01298，東南亞 US$0.11928／US$0.01416。這些 Hosted 條目起算日分別是 2026-02-01 UTC 及 2026-11-01 UTC，對應 harness 的關係待核。",
+          "accessed_at": "2026-11-25T03:08:07+08:00"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/use-tools-skills-copilot-harness",
+          "label": "Microsoft Learn Copilot harness 使用指南",
+          "scope": "prompt agent 類型、專案角色、建立與沙箱管理",
+          "evidence": "保留 prompt agent 類型，需支援區專案、相容模型、有 Foundry User 專案角色的身分及新 prompt agent。平台可閒置、恢復或替換沙箱。",
+          "accessed_at": "2026-11-25T03:09:09+08:00"
+        },
+        {
+          "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
+          "label": "Azure Foundry Agent Service 定價",
+          "scope": "公開計價表中的 Hosted agents 類別",
+          "evidence": "公開價目表將 vCPU 與記憶體按量費率列在 Hosted agents 下，並將此類 agent 說明為以外部框架建置及放在代管容器中的 agent。頁面未個別列出 Copilot harness 區域價。",
+          "accessed_at": "2026-11-25T03:09:09+08:00"
         }
       ],
-      "summary": "2026-10-28 進入公開預覽的受管 agent harness：Microsoft 代跑 agent 迴圈與沙箱，支援 skills、Foundry 與 MCP 工具、檔案與 shell、子代理。harness 執行環境在 2026-12-01 前不收費；12-01 起沙箱運算按 US$0.0994/vCPU-hour 與 US$0.0118/GiB-hour 計價，模型推論與另行計費的工具從第一天起照價。支援區不含台灣，台灣開發者須部署在日本東、韓國中部或東南亞等區；預覽無 SLA、不建議生產。",
-      "priority_score": 17.3,
-      "priority_tier": "B",
-      "priority_note": "官方來源·需符合條件·免費·台灣未標記·較費工/未知",
-      "verification_scope": "2026-11-23 02:10 實讀 Foundry 官方部落格定價文檔，確認 Copilot harness 執行環境免費維持至 2026-12-01 前，12/01 起依每 vCPU-hour $0.0994 計費。"
+      "summary": "Microsoft Foundry 的 Copilot harness 於 2026-12-01 前免執行環境費，模型推論、另行計費的工具和連接服務各自收費。12/1 起沙箱按量計費，公告費率 US$0.0994/vCPU-hour、US$0.0118/GiB-hour，依部署地區與協議而異。台灣未列為部署區，亞洲支援區含日本東、韓國中部、東南亞。",
+      "priority_score": 13.3,
+      "priority_tier": "D",
+      "priority_note": "官方來源·需符合條件·費用未知·台灣未標記·較費工/未知",
+      "verification_scope": "2026-11-25 台北時間局部複核 Microsoft 公告、區域文件、使用指南、Azure 定價與零售 API。核對執行環境免費窗、沙箱公布費率與按區收費變因、部署角色及 SKU 證據邊界。區域實際費率、開通、切換時區及個案帳務未核。",
+      "expires_at": "2026-12-01",
+      "setup_cost_basis": "公告的免費項目為 Copilot harness 執行環境。模型推論、另行計費的工具與連接服務依各自費率。"
     },
     {
       "record_type": "opportunity",
@@ -98802,25 +98818,25 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "discovered_at": "2026-11-24T04:08:44+08:00",
-      "verified_at": "2026-11-24T04:09:30+08:00",
+      "verified_at": "2026-11-25T03:09:29+08:00",
       "announcement_at": null,
       "deadline_at": "2026-11-30T15:00:00+08:00",
       "expires_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T04:00:00+08:00",
+      "next_review_at": "2026-11-26T04:00:00+08:00",
       "priority_tier": "S",
       "priority_score": 20.8,
       "usage_type": "兩場可分報的實體講座和同步直播",
       "limited_confirmed": true,
       "quota_details": "每場實體以 30 人為原則，原則各機關每場 1 人並抽選。每場直播限 100 人，超額抽選。實體未錄取者可按線上名額優先改列。",
-      "usable_duration": "2026-12-10 10:00–11:30 及 14:00–15:30（台北）。地點為台北工研院 BR6 教室，另有同步直播，未提供錄影。",
+      "usable_duration": "2026-12-10 10:00–11:30 及 14:00–15:30（台北）。地點為台北工研院 BR6 教室，另有同步直播，未提供錄影。主辦預計 12/4 前電郵通知錄取，直播連結於活動前兩天電郵發送。",
       "setup_cost_basis": "主辦簡章列研討會免費，交通與住宿自付。",
       "cancellation": "無法參加者最遲 2026-12-07 以電子郵件取消。無故缺席可能影響機關後續錄取排序。",
-      "access_risk": "報名表收機關代碼、身分證字號等資料供學習時數及點名。現場沒有受理臨時報名，錄取依主辦通知。",
-      "verification_scope": "2026-11-24 台北時間實讀數發部簡章、關山鎮公所轉知及主辦表單公開欄位。核對公務人員資格、免費、期限、名額、分配、錄取與取消流程，剩餘名額和個案錄取未核。",
+      "access_risk": "報名表收機關代碼、身分證字號等資料供登錄學習時數及點名。現場無臨時報名。實體及直播皆須分別簽到及簽退，錄取依主辦通知。",
+      "verification_scope": "2026-11-25 台北時間局部複核數發部簡章、公所轉知及公開表單，核對資格、費用、截止、兩場複選、出席方式、通知與簽到退。實際收件、剩餘名額、各場核發時數及個案錄取待查。",
       "eligibility": {
         "service_availability": "台北工研院 BR6 實體及同步直播，沒有錄影。",
-        "account_eligibility": "主辦簡章列全體公務人員。報名可選一場或兩場、實體或線上。",
+        "account_eligibility": "全體公務人員可報一場或兩場。公開表單可複選兩場，另有單一出席方式欄供選實體或直播。",
         "billing_country": "研習免收費，交通與住宿不包含。",
         "identity_residency": "表單要求機關代碼、機關名稱、職稱等資料。非公務人員不在公告所列對象。",
         "terms_restrictions": "須報名並獲錄取。實體依機關分配及抽選，直播超額也抽選。",
@@ -98828,29 +98844,30 @@
       },
       "unknowns": [
         "實體與直播各場剩餘名額及個案錄取",
-        "公所轉知寫 11/16 開放，主辦簡章寫 11/18 開放，兩者均列 11/30 15:00 截止"
+        "公所轉知寫 11/16 開放，主辦簡章寫 11/18 開放，兩者均列 11/30 15:00 截止",
+        "兩場分別選擇不同出席方式的申請方法、各場實際核發的學習時數及表單即時收件"
       ],
       "sources": [
         {
           "url": "https://www.guanshan.gov.tw/files/Ilpwto7SAEqBQLh8qJDtynsaIeYItUInwxEqrxGT.pdf",
           "label": "數發部主辦簡章（PDF）",
-          "scope": "資格、費用、截止、兩場次、名額及取消規則",
-          "evidence": "簡章列「全體公務人員」「11 月 30 日下午 3 時止」「本次研討會免費」，並列每場實體原則 30 人、直播限 100 人。",
-          "accessed_at": "2026-11-24T04:09:30+08:00"
+          "scope": "資格、費用、截止、場次、簽到退與通知",
+          "evidence": "兩場可擇一或均參加，實體與直播皆免研習費。11/18 起至 11/30 15:00 止。預計 12/4 前電郵通知錄取，活動前兩天寄直播連結。實體及直播均須完成簽到退。",
+          "accessed_at": "2026-11-25T03:08:06+08:00"
         },
         {
           "url": "https://www.guanshan.gov.tw/news/detail/3607",
           "label": "關山鎮公所 2026-11-20 轉知",
-          "scope": "公告日期及與主辦簡章的開始日差異",
-          "evidence": "公所公告 11/16 開放、11/30 15:00 截止。主辦簡章列 11/18 開放，截止時間一致。",
-          "accessed_at": "2026-11-24T04:09:19+08:00"
+          "scope": "公所轉知與主辦簡章的開始日差異",
+          "evidence": "公所轉知列 11/16 至 11/30 15:00。主辦簡章列 11/18 開放，截止時間一致。",
+          "accessed_at": "2026-11-25T03:09:29+08:00"
         },
         {
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSfj1KGCnrFgXuYMuhjHwncbaT9vVh1GcDIZNSXVwti-jADC8g/viewform?usp=send_form",
           "label": "數發部主辦報名表",
-          "scope": "公開表單、機關資料及用途",
-          "evidence": "表單頁註明由 moda.gov.tw 建立。要求機關代碼，表單說明資料供登錄學習時數及後續點名。",
-          "accessed_at": "2026-11-24T04:09:19+08:00"
+          "scope": "公務機關資料、可選場次與出席方式",
+          "evidence": "公開表單列上午、下午兩場可複選，另有一個實體或線上出席欄。表單說明機關等資料用於資格審核、學習時數登錄及點名。",
+          "accessed_at": "2026-11-25T03:08:06+08:00"
         }
       ],
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
@@ -98858,7 +98875,7 @@
     {
       "id": "ndhu-ai-productivity-workshop-2026",
       "title": "東華大學 AI 生產力實戰工作坊｜12/5 免費校內培訓",
-      "summary": "國立東華大學深耕起飛計畫於 12/5 在花蓮校內辦理免費工作坊，練習 Gemini、Claude、NotebookLM、Notion AI 與 AI 工作流程。約 50 名，本校起飛生優先，一般生另有入口。11/25 截止，主辦公告未列時刻，11/30 前以電子郵件通知錄取者。",
+      "summary": "國立東華大學深耕起飛計畫於 12/5 在花蓮校內辦理免費工作坊，練習 Gemini、Claude、NotebookLM、Notion AI 與 AI 工作流程。預計 50 人，起飛生優先，一般生另有入口，每份表單一次報一場。11/25 截止，校方未公布時刻，預計 11/30 前電郵通知錄取者。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -98884,56 +98901,71 @@
       "limited_confirmed": true,
       "usage_type": "一次性實體培訓名額",
       "quota_details": "約 50 席、起飛生優先。全程完成課程者可取得跨域學習時數 6 小時。",
-      "usable_duration": "校方公布 11/25 截止（時刻未公布）。活動為 12/5 08:40–18:10，地點為國立東華大學理工學院 PC1 電腦教室。",
+      "usable_duration": "校方公布 11/25 截止（時刻未公布）。12/5 地點為東華理工學院 PC1 電腦教室，官網議程 08:40–18:10，海報列 08:40–18:00 並指以官網為準。",
       "setup_cost_basis": "校方公告免費參加，現場備有餐食。",
-      "access_risk": "一般生與起飛生表單均仍列本活動為可選項。精確停收時間、剩餘名額與實際收件待核，錄取依校方通知。",
+      "access_risk": "11/25 03:08 台北時間，兩份公開表單的課程選單都列 12/5 工作坊。精確停收時間、剩餘席次、實際收件和錄取待核。",
       "cancellation": null,
       "deadline_at": "2026-11-25",
-      "announcement_at": null,
+      "announcement_at": "2026-10-28",
       "expires_at": null,
-      "verified_at": "2026-11-24T19:09:13+08:00",
+      "verified_at": "2026-11-25T03:12:40+08:00",
       "discovered_at": "2026-11-24T06:08:01+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T06:00:00+08:00",
+      "next_review_at": "2026-11-25T18:00:00+08:00",
       "eligibility": {
         "service_availability": "台灣花蓮校內實體課，須到場。",
         "account_eligibility": "校方以本校同學為對象，依一般生、起飛生使用對應表單，起飛生優先。",
         "billing_country": "免費單次課程。",
         "identity_residency": "按校內學籍與起飛生身分處理。外校名額待主辦確認。",
-        "terms_restrictions": "錄取以校方郵件通知為準。完成全程才取得公告中的學習時數。",
+        "terms_restrictions": "每份表單一次只報一場。表單說依報名時間通知，超額時起飛生優先。結果以校方電郵通知為準，完成全程才取得學習時數。",
         "taiwan_note": "Yes：國立東華大學在學學生可依校內條件報名。"
       },
       "unknowns": [
         "精確收件時間、即時剩餘席次及實際錄取",
         "實作所需軟體帳戶與可用額度",
-        "法律與監管限制未核"
+        "法律與監管限制未核",
+        "海報提按到課比例給時數，主辦頁列全程完成給 6 小時，部分出席核給規則待查。"
       ],
       "sources": [
         {
           "url": "https://icanfly.ndhu.edu.tw/p/404-1162-264042.php",
           "label": "東華大學主辦公告",
-          "scope": "入場資格、免費、席次、報名日與錄取通知",
-          "evidence": "校內約 50 名，起飛生優先。公告寫 11/25 止、11/30 前通知，12/5 校內課程免費並備餐。",
-          "accessed_at": "2026-11-24T19:08:53+08:00"
+          "scope": "免費、名額、活動日期、報名期限與錄取通知",
+          "evidence": "工作坊在 12/5 舉辦，校內約 50 人，起飛生優先。免費並備餐，完成課程計跨域學習 6 小時。報名至 11/25，11/30 前通知錄取者。",
+          "accessed_at": "2026-11-25T03:08:06+08:00"
         },
         {
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform",
           "label": "東華一般生表單",
-          "scope": "公開可選場次",
-          "evidence": "課程名稱選單含「AI 生產力實戰工作坊(12/5)」。表單說未顯示的場次已停止受理。",
-          "accessed_at": "2026-11-24T19:09:12+08:00"
+          "scope": "公開課程選單與每份表單的報名場次",
+          "evidence": "公開課程名稱選單有 12/5 工作坊。表單說明一次報名一場，未顯示的場次已停止受理。可見選項仍待實際收件確認。",
+          "accessed_at": "2026-11-25T03:08:06+08:00"
         },
         {
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform",
           "label": "東華起飛生表單",
-          "scope": "公開可選場次",
-          "evidence": "課程名稱選單含「AI 生產力實戰工作坊(12/5)」。表單說未顯示的場次已停止受理。",
-          "accessed_at": "2026-11-24T19:09:13+08:00"
+          "scope": "公開課程選單與每份表單的報名場次",
+          "evidence": "公開課程名稱選單有 12/5 工作坊。表單說明一次報名一場，未顯示的場次已停止受理。可見選項仍待實際收件確認。",
+          "accessed_at": "2026-11-25T03:08:06+08:00"
+        },
+        {
+          "url": "https://announce.ndhu.edu.tw/mail_display.php?timestamp=1793156287",
+          "label": "東華大學學務處 10/28 校園公告",
+          "scope": "公告日、對象與報名期限",
+          "evidence": "2026-10-28 10:58 發布，對象為全校學生。公告列即日起至 11/25 止，連回計畫主辦頁。",
+          "accessed_at": "2026-11-25T03:09:57+08:00"
+        },
+        {
+          "url": "https://announce.ndhu.edu.tw/message_8/1793156287/AI%E6%B5%B7%E5%A0%B1.jpg",
+          "label": "東華大學活動海報",
+          "scope": "與主辦議程不同的活動結束時間及時數用語",
+          "evidence": "海報列 08:40–18:00，提到跨域時數依到課比例給予，並指以起飛官網公告為準。主辦議程列 18:10 結束。",
+          "accessed_at": "2026-11-25T03:12:40+08:00"
         }
       ],
       "priority_tier": "S",
       "priority_score": 20.8,
-      "verification_scope": "2026-11-24 台北時間局部複核。核對校方公告及兩份公開表單的可選場次。精確停收時刻、剩餘名額及個別錄取待查。",
+      "verification_scope": "2026-11-25 台北時間局部複核校方公告、最早刊登日、海報時段差異與兩份公開報名表的課程選項。核對免費、校內資格、名額、日期及通知流程，精確停收時刻、剩餘名額和個案錄取待查。",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
     },
     {
@@ -101466,41 +101498,104 @@
       "priority_score": 19.6,
       "priority_tier": "S",
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "certitraining-ai-video-workflow-webinar-2026-12-29",
+      "title": "全域科技 12/29 免費 AI 影音生成工作流線上分享會",
+      "summary": "全域科技 12/29 19:00–20:00（台北時間）在 Teams 免費直播，18:50 開放入場。分享包含文字企劃、圖片生成、影片製作、配音及字幕，無程式背景可參加。名額有限，主辦保留篩選權，報名期限和實際收件待核。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "taiwan": "Yes",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "usage_type": "一次性免費線上講座",
+      "quota_details": "主辦說名額有限並保留篩選權，未公布名額數字或剩額。",
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "discovered_at": "2026-11-25T03:09:57+08:00",
+      "announcement_at": null,
+      "deadline_at": null,
+      "expires_at": "2026-12-29T20:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
+      "usable_duration": "12/29 19:00–20:00（台北時間）單場直播，18:50 開放進場。主辦預告 YouTube 精華影片，完整回放待查。",
+      "setup_cost_basis": "主辦活動頁及系列目錄明示該場分享會免費。",
+      "cancellation": null,
+      "access_risk": "主辦保留篩選與調整活動的權利，預計在活動前三天寄通知信。公開活動正文未顯示即時票券狀態。",
+      "verification_scope": "2026-11-25 台北時間局部核對主辦的單場活動頁及課程總覽，確認免費、日期、直播平台、入場時間與篩選條件。精確報名期限、剩餘席次及實際收件待核。",
+      "eligibility": {
+        "service_availability": "Microsoft Teams 線上直播，可用手機、平板或電腦觀看。",
+        "account_eligibility": "非資訊背景可參加，主辦保留篩選權。使用主辦的 ACCUPASS 活動頁確認安排。",
+        "billing_country": "本場活動免費。示範工具帳號或另行使用費用待查。",
+        "identity_residency": "公開活動說明未列居住地或學籍限制。",
+        "terms_restrictions": "活動內容及時程可能調整，依主辦通知。",
+        "taiwan_note": "Yes：主辦提供台北時間的線上直播，台灣使用者須符合主辦報名與篩選條件。"
+      },
+      "unknowns": [
+        "報名截止、剩餘名額與實際收件狀態",
+        "Teams 個別帳戶需求、示範工具費用及完整回放"
+      ],
+      "sources": [
+        {
+          "url": "https://www.accupass.com/event/2611091712551466889504",
+          "label": "全域科技主辦活動頁",
+          "scope": "費用、直播時段、活動內容與參加條件",
+          "evidence": "單場活動頁標免費。12/29 19:00–20:00 GMT+8，Teams 18:50 開放進場。FAQ 說非資訊背景可參加。名額有限並保留篩選，預計於課程前三天寄信。",
+          "accessed_at": "2026-11-25T03:09:28+08:00"
+        },
+        {
+          "url": "https://www.accupass.com/event/2507171906465763701550",
+          "label": "全域科技課程總覽",
+          "scope": "確認 12/29 是系列中獨立場次",
+          "evidence": "研討會目錄列 2026/12/29 免費影音生成線上分享會，詳情連至這一場的活動頁。",
+          "accessed_at": "2026-11-25T03:09:57+08:00"
+        }
+      ],
+      "verified_at": "2026-11-25T03:09:57+08:00",
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知"
     }
   ],
-  "latest_research_at": "2026-11-25T02:13:37+08:00",
+  "latest_research_at": "2026-11-25T03:13:04+08:00",
   "last_research_run": {
-    "started_at": "2026-11-25T02:06:19+08:00",
-    "completed_at": "2026-11-25T02:13:37+08:00",
+    "started_at": "2026-11-25T03:05:58+08:00",
+    "completed_at": "2026-11-25T03:13:04+08:00",
     "reviewed_ids": [
-      "ai-collective-taiwan-gemini-build-night-2026",
-      "nthu-its-ai-certification-training-2027",
-      "google-cloud-tts-monthly-free-characters",
-      "wispr-flow-student-three-month-pro-annual-half",
-      "tripo-studio-free-200-monthly",
-      "tripo-api-free-credits-index-mismatch",
-      "fgu-three-good-ai-innovation-contest-2026"
+      "microsoft-foundry-copilot-harness-free-runtime",
+      "moda-civil-service-ai-agent-seminar-2026",
+      "ndhu-ai-productivity-workshop-2026"
     ],
     "new_ids": [
-      "tacc-ntu-advanced-ai-safety-forum-2026",
-      "advantech-yuntech-robotics-one-day-workshop-2026"
+      "certitraining-ai-video-workflow-webinar-2026-12-29"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1224
+    "unreviewed_existing_count": 1230
   },
-  "generated_at": "2026-11-25T02:13:37+08:00",
+  "generated_at": "2026-11-25T03:13:04+08:00",
   "reviewed_ids": [
-    "ai-collective-taiwan-gemini-build-night-2026",
-    "nthu-its-ai-certification-training-2027",
-    "google-cloud-tts-monthly-free-characters",
-    "wispr-flow-student-three-month-pro-annual-half",
-    "tripo-studio-free-200-monthly",
-    "tripo-api-free-credits-index-mismatch",
-    "fgu-three-good-ai-innovation-contest-2026"
+    "microsoft-foundry-copilot-harness-free-runtime",
+    "moda-civil-service-ai-agent-seminar-2026",
+    "ndhu-ai-productivity-workshop-2026"
   ],
   "attempted_failed_ids": [],
   "new_ids": [
-    "tacc-ntu-advanced-ai-safety-forum-2026",
-    "advantech-yuntech-robotics-one-day-workshop-2026"
+    "certitraining-ai-video-workflow-webinar-2026-12-29"
   ]
 }
