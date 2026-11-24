@@ -7513,3 +7513,33 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 保留所有既有 ID、首次收錄時間、來源網址及 2,971 筆政策歷史，追加 13 筆。驗證器現會攔截漏列本輪失敗追查的資料，以及落在批次時間窗之外的失敗時間。隔離測試涵蓋兩種無效資料與前批歷史相容性。
 
 發布前 `make check`、`make check-ui`、`git diff --check` 與 390px／1280px Chrome 批次檢查通過。逐張核對本輪卡片與來源、資策會截止，以及三張新增卡片的免費篩選。正式發布以同一提交的 Frontend QA 和 Pages 成功、公開檔案雜湊一致及公開站瀏覽器實查為判據。
+
+## 2026-11-24 16:06–2026-11-24 16:12 Asia/Taipei｜N=1,222 · R=6 · A=0 · U=1,216 · attempted=0
+
+起點 `e80b562`。主線與遠端一致，工作樹乾淨，無開放 PR；前次 Frontend QA 與 Pages 皆成功。維護鎖在研究前取得。基準為 1,003 筆機會、50 筆政策、169 筆觀察線索。可行動 1,108 筆，逾複核時點 1 筆，七日內到期 25 筆（16 筆冷卻中），3 筆先前追查失敗仍待其回查時點。高風險 56 筆，取可行動紀錄中已到複核時點、七日內截止、最新追查失敗、暫時不限量和 ID 含 conflict 的聯集。全庫 28 筆至少一個截止點已過，含歷史紀錄。
+
+三位唯讀研究代理沿用執行環境的 GPT-6.2 Sol，分查限時案例、帳務與教育證據缺口及台灣新機會。主代理重讀採用的官方來源。重讀資策會入口時仍見原本的額滿和場次並存情況，保留前輪時間。五筆台灣候選經主辦、標題、日期、網址及班號比對均已收錄：`ndhu-ai-productivity-workshop-2026`、`ntu-rtc-local-ai-multimodal-workshop-2026`、`aocai-working-free-ai-courses-2026` 的工研院班號 2326100096、`ntpclib-xindian-senior-ai-workshop-2026`、`ntu-google-ai-cross-disciplinary-workshop-2026`。
+
+### 證據與實質變更
+
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`｜原信箱驗證免費促銷已到官方截止，退出可行動專區。截止前有正淨儲值或現持有效方案仍可依條款使用共享 Auto。帳戶實際切換待核。 [官方來源 1](https://iteracompute.com/free/) [官方來源 2](https://iteracompute.com/models/auto/) [官方來源 3](https://platform.iteracompute.com/free-tier-terms/)
+- `fireworks-glimmer-sft`｜核對免卡 LoRA SFT 啟動截止與另付費的評估，記錄 DPO／RL 公告與操作文件差異並改為每日複核。修正過時倒數與錯誤模型發布日期。 [官方來源 1](https://fireworks.ai/pricing) [官方來源 2](https://docs.fireworks.ai/fine-tuning/training-api/cookbook/muse-glimmer.md) [官方來源 3](https://fireworks.ai/blog/train-muse-glimmer-for-free) [官方來源 4](https://docs.fireworks.ai/fine-tuning/training-api/serverless.md) [官方來源 5](https://fireworks.ai/blog/meta-muse-glimmer-30b)
+- `neon-databricks-startup-combined-cap`｜補共用表單分項上限、付款方式、Neon 付費方案及 LinkedIn 驗證。撤下免費篩選標記，設定費金額與自籌級帳務列未知。 [官方來源 1](https://neon.com/startups) [官方來源 2](https://www.databricks.com/product/startups) [官方來源 3](https://sites.google.com/databricks.com/startup-program-apply)
+- `nomic-individual-work-email-twenty-trial`｜補試用停用與自行升級、付費自動補充、試用餘額轉入和刪除條款；個案訂單及台灣資格保留未知。 [官方來源 1](https://www.nomic.ai/individual) [官方來源 2](https://docs.nomic.ai/models-and-pricing/plans) [官方來源 3](https://www.nomic.ai/terms-of-service/individual)
+- `dust-free-lifetime-not-programmatic`｜補 Business 預買最低量、有效期限與共享自動化上限，區分程式化單價與 Enterprise 超額 PAYG。 [官方來源 1](https://dust.tt/home/pricing) [官方來源 2](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/credit-management)
+- `huggingface-classrooms-free-hosting`｜補一般 Spaces 的運算方案與組織 ZeroGPU 資格，保留 Classroom 例外與專屬上限未知。 [官方來源 1](https://huggingface.co/classrooms) [官方來源 2](https://huggingface.co/docs/hub/spaces-overview) [官方來源 3](https://huggingface.co/docs/hub/spaces-zerogpu)
+
+Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布公告、定價及產品文件。Hugging Face 教室 FAQ 未讀到正文，一般運算與組織條件只適用官方指南列出的範圍。Databricks 申請頁可從原始 HTML 讀到嵌入表單；送件與個案核准均待查。
+
+### 下一輪
+
+- 資策會 `iii-edge-ai-adoption-workshop-2026` 依原定 16:30 追查 iEvent、候補及受理情況，18:00 後核對延期或停止收件。 [iEvent](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [執行單位報名](https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0)
+- 依原排程查 Kaggle Notebook 17:00、Akamai RISE 19:00、Vercel 20:30。阿里雲 11/26 00:00 後追 qwen4-max-preview 停用與正式模型額度。 [Kaggle](https://www.kaggle.com/docs/notebooks) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [阿里雲](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)
+- 11/25 每日追 Fireworks 的 DPO／RL 適用入口與定價差異。SFT 仍以 12/1 台北 16:00 啟動時點為準。 [Fireworks 定價](https://fireworks.ai/pricing) [官方訓練指南](https://docs.fireworks.ai/fine-tuning/training-api/serverless.md)
+- Neon 自籌 US$1,000 組的付款條件、Hugging Face 教室是否有運算方案例外，按下次複核時點或官方新公告回查。IteraCompute 原新戶促銷已結束，待新訊號再追實際帳戶切換與台灣適用。 [Neon](https://neon.com/startups) [Hugging Face](https://huggingface.co/classrooms) [IteraCompute](https://iteracompute.com/free/)
+
+### 品質與發布
+
+原有 2,984 筆政策歷史逐筆保留，追加 6 筆。保留既有 ID、首次發現時間與來源網址。移除 Fireworks 摘要的固定倒數，讀者可直接用既有期限排序與動態日期查找。
+
+發布前 `make check`、`make check-ui`、`git diff --check` 及 390px／1280px Chrome 批次檢查通過。逐張確認本輪卡片與官方來源，驗證 IteraCompute 與 Neon／Databricks 退出免費專區，Fireworks 仍顯示免費 SFT 與截止時間。以本輪提交的 CI、Pages 部署、公開檔案雜湊與瀏覽器核對確認發布。
