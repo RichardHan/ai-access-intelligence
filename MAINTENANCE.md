@@ -7399,3 +7399,35 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 ### 資料品質與發布判據
 
 逐筆比對基準與最終 JSON，保留所有既有 ID、首次收錄時間及引用網址。政策歷史原有 2,945 筆，追加 10 筆。使用 `make check`、`make check-ui` 及桌面和手機的批次卡片驗證。正式發布以提交對應的 Frontend QA 與 Pages 部署成功、公開資產逐檔比對與公開介面實查為判據。
+
+
+## 2026-11-24 13:06–2026-11-24 13:12 Asia/Taipei｜N=1,216 · R=4 · A=2 · U=1,212 · attempted=0
+
+起點 `002be58`。main 與遠端一致，工作樹乾淨，無開放 PR 或進行中的部署。本輪持有維護鎖。基準有 996 筆機會、50 筆政策、170 筆觀察線索。可行動紀錄 1,102 筆，其中 1 筆逾複核時點、25 筆七日內截止（23 筆在冷卻期）。4 筆的上一筆追查失敗，其中 3 筆未到回查時間。另有 4 筆暫時不限量、23 筆 ID 含 conflict。上述五類去重為 56 筆，為本輪可程式重現的風險索引。全庫 27 筆含至少一個已過的截止點，包含歷史與多截止點。
+
+優先處理逾回查點的 Swarms，補輪替 Qodo、Backboard、Nscale 的帳單、資格與模型差異。三位唯讀研究子代理使用 GPT-6.2 Sol（high），環境未提供 Gemini 3.8 Flash。主代理採本會話既有配置，逐筆重讀已採用的證據。IteraCompute 與資策會 Edge AI 於中午已預查，依後續原時點續查。
+
+### 既有紀錄局部複核
+
+- `swarms-startup-program-up-to-tenk`｜官網連至通用預約目錄，三個分級入口回 404。保留方案列示的三級金額與全球資格，實際收件待核。官網直連回 429，方案正文透過網頁擷取讀取，並交叉核對預約端。 [官方方案](https://www.swarms.ai/programs/startups) [通用預約目錄](https://cal.com/swarms)
+- `backboard-free-credit-current-plan-conflict-watch`｜官方 FAQ 與帳務文件互證新戶 US$5、30 天，FAQ 與產品頁列免卡。Free 月費 US$0。沿用原 ID，將觀察線索改列機會。實際入帳、抵扣、期後用量與台灣帳務待核。定價路由仍導向舊公告。 [FAQ](https://docs.backboard.io/faq) [帳務文件](https://docs.backboard.io/concepts/billing) [產品頁](https://backboard.io/products/api)
+- `qodo-fourteen-day-unlimited-trial`｜兩頁一致列 14 天免卡不限試用。定價頁列 Pro Team 2,000 點、US$0.015／點，首頁 FAQ 列 2,500 點、US$0.012／點。保留一般條款資料授權與 FAQ 聲明的適用範圍差異。 [定價](https://www.qodo.ai/pricing/) [首頁](https://www.qodo.ai/) [一般條款](https://www.qodo.ai/terms/) [商業條款](https://www.qodo.ai/business-terms-of-service/)
+- `nscale-signup-five-current-docs-conflict`｜補 8/6 官方文章的新戶 US$5 措辭。現行 Quickstart 仍僅列可能符合促銷，一般預付至少 US$5。另補 12/11 兩款模型退出 Serverless、Mistral 指定款轉專用部署，時區及時刻待核。 [產品文章](https://www.nscale.com/blog/what-is-serverless-inference) [Quickstart](https://docs.nscale.com/docs/getting-started/quickstart.md) [模型變更](https://docs.nscale.com/docs/ai-services/models)
+
+### 新增及去重
+
+- `fju-ai-knowledge-workflow-34208-2026`｜12/9 輔大免費場，限本校學生。12/3 12:00 截止，50 人，課程含 Gemini 與 NotebookLM。公開報名頁以直接 GET 讀取。公告發文與系統起始日分別記錄。 [校方公告](https://www.net.fju.edu.tw/main/04v2/s_news.php?id=aZHrvZ1EcZA&keyword=&part=0&sel=1) [報名系統](https://activity.dsa.fju.edu.tw/Activity.jsp?activityID=34208)
+- `gdg-devfest-taoyuan-2026-google-adk-workshop`｜12/5 桃園在地 GDG 免費場，公開 RSVP，工作坊需自備筆電。議程提及 credit，贈額供應商、數量、單位與適用條件待核。 [活動與議程](https://gdg.community.dev/events/details/google-gdg-taoyuan-presents-devfest-taoyuan-2026/)
+
+以名稱、地區、日期、活動編號及來源比對 offers、政策歷史、近期交接。保留既有全部 ID、首次收錄時間、來源網址與 2,955 筆政策歷史，追加 6 筆。
+
+### 證據缺口與下一輪
+
+1. 11/24 依原時點回查 IteraCompute（15:30、16:00 切換後核共享資格和舊戶）、資策會 Edge AI（16:30、18:00 後查收件），以及 Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30）。Microsoft 考券 11/25 04:30 起改查官方替代來源。 [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+2. 11/25 依排程追 Swarms 是否修復分級入口、Qodo 是否收斂兩組費率及是否有明確試用資料說明。查輔大、桃園是否額滿。Backboard 按月追抵扣適用範圍；Nscale 12/10 起追 12/11 模型遷移及新戶贈額的官方口徑。 [Swarms](https://www.swarms.ai/programs/startups) [Qodo](https://www.qodo.ai/pricing/) [Nscale 模型](https://docs.nscale.com/docs/ai-services/models)
+3. AI21 公開定價仍列 7 天、用量文件仍列 3 個月。本輪查找補充說明，未發現能解決期限差異的證據，保留原卡片及核實時間，依原排程回查。 [AI21 定價](https://www.ai21.com/pricing/) [用量文件](https://docs.ai21.com/docs/usage-cost)
+4. 前輪交接仍可依既定時間接續。11/25 起追 AOCAI MLOps、CoreWeave、陽明交大 165782、桃園職訓同班訓期、Kaggle 終件規則與其他在途例外。 [勞動部班級](https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782) [Kaggle 競賽](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview)
+
+### 發布判據
+
+本機 `make check`、`make check-ui` 與 Chrome 390px／1280px 批次檢查通過。逐張核對本輪卡片、來源、截止及免費篩選。正式發布以提交對應的 Frontend QA 與 Pages 部署成功，以及公開資產與提交一致、公開頁卡片實查為判據。
