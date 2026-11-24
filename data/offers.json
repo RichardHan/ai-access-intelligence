@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T19:14:05+08:00",
-  "scope": "2026-11-24 19:06–2026-11-24 19:14 Asia/Taipei。局部複核 6 筆既有紀錄，新增 2 筆，整筆追查失敗 1 筆，其餘 1,221 筆既有紀錄未完成本輪複核。更新 n8n 年繳額度與付費規則、東華報名證據、Miro 取消、CyLeague 試用起算、清大保證金和 Microsoft 考試語言，新增2 項台灣機會。",
+  "updated_at": "2026-11-25T01:14:09+08:00",
+  "scope": "2026-11-25 01:05–2026-11-25 01:14 Asia/Taipei 局部複核 8 筆、新增 2 筆，整筆追查失敗 0 筆，其餘 1,221 筆既有紀錄未完成本輪複核。確認 Vercel 限時免費已結束，補 AICU 綁卡與試用、台灣限時活動申請及新竹補助餘額，收錄臺大與資策會技術活動。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -26935,7 +26935,7 @@
     {
       "id": "aicu-evaluation-ap",
       "title": "AICU：首次使用標示 US$10 等值 AP，新金鑰綁卡、換算與效期待核",
-      "summary": "AICU 首頁及 API 文件列首次呼叫贈 US$10 等值 AP，首頁行事曆另列正式期新金鑰須綁卡。首頁與文件列每美元 10,000 AP，FAQ 列 15,000 AP。購買 AP 的效期，條款寫 180 日，FAQ 寫 90 日。免費點數限個人非商業評估、每人或組織一次，效期依帳戶顯示。台灣帳戶、卡片與實際使用費用未核。",
+      "summary": "AICU 首次呼叫標示贈 US$10 等值 AP。首頁另列試用金鑰 14 日及正式期新金鑰須綁卡。只有免費點數時，語音合成需綁卡，綁卡本身不扣款。首頁與文件列每美元 10,000 AP，FAQ 列 15,000 AP。購買 AP 效期分見條款 180 日、FAQ 90 日，免費點數期限依帳戶。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -26958,19 +26958,19 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": null,
-      "usable_duration": "免費AP依個別dashboard到期日；非購買AP的180日",
+      "usable_duration": "首頁試用金鑰 14 日。免費點數以帳戶顯示期限為準，購買 AP 效期在條款與 FAQ 分別列 180 日及 90 日。",
       "access_risk": "第三方處理及請求最長保留 90 日；免費點數輸出可能含 AICU 廣告或短句標記；違規使用可按公開價請款（上限為前 12 個月實付兩倍）或停權。",
-      "verified_at": "2026-11-24T01:08:41+08:00",
+      "verified_at": "2026-11-25T01:10:42+08:00",
       "discovered_at": "2026-10-23T13:07:00+08:00",
       "announcement_at": "2026-10-15",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "依方案與模型範圍",
         "account_eligibility": "自然人至少18歲或合法成立之法人／組織；免費credits每人／組織一次，禁多帳戶重領與分享／販售API key。",
-        "billing_country": "首頁行事曆寫正式期新金鑰須綁卡；台灣帳單國別、卡片與實際最低付款未核。",
+        "billing_country": "首頁列正式期新金鑰須綁卡，10/15 公告另說僅有免費額度時語音合成須綁卡。綁卡本身不扣款。台灣卡片、帳單國別與最低付款待核。",
         "identity_residency": "未知",
         "terms_restrictions": "免費AP僅個人非商業評估，禁止商用生產、轉售、假帳戶；商業使用需可聯繫帳戶及合法付款方式，語音複製須明確同意。",
         "taiwan_note": "Unknown；帳戶、模型與條款資格未全部核實"
@@ -27030,6 +27030,43 @@
           "scope": "與首頁、條款相異的 AP 數字",
           "evidence": "條款連出的 FAQ 仍列 15,000 AP = US$1，購買 AP 有效 90 日。無公開更新日。",
           "accessed_at": "2026-11-24T01:08:41+08:00"
+        },
+        {
+          "url": "https://api.aicu.ai/",
+          "label": "AICU 首頁",
+          "scope": "首次呼叫贈點、金鑰與 AP 換算",
+          "evidence": "首頁稱首次呼叫贈 US$10 等值 AP、試用金鑰 14 日。正式期行事曆寫新金鑰須綁卡，並列每美元 10,000 AP。",
+          "accessed_at": "2026-11-25T01:08:11+08:00"
+        },
+        {
+          "url": "https://api.aicu.ai/docs/api-reference/",
+          "label": "AICU API 文件",
+          "scope": "預付 AP、用量扣抵及自動儲值",
+          "evidence": "列每美元 10,000 AP、成功請求扣抵、錯誤與快取免費。餘額歸零停止，除非預先啟用自動儲值。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://api.aicu.ai/news",
+          "label": "AICU 官方更新",
+          "scope": "只有免費額度時 TTS 綁卡與收費",
+          "evidence": "10/15 語音公告寫僅有免費額度須先綁卡才能用語音合成。綁卡不扣款，另購 AP 或啟用自動儲值才會付款。",
+          "accessed_at": "2026-11-25T01:10:42+08:00",
+          "announcement_at": "2026-10-15"
+        },
+        {
+          "url": "https://api.aicu.ai/faq",
+          "label": "AICU FAQ",
+          "scope": "與首頁、條款不一致的 AP 口徑",
+          "evidence": "FAQ 仍列每美元 15,000 AP，購買點數 90 日效期。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://api.aicu.ai/terms",
+          "label": "AICU 使用條款",
+          "scope": "付費及免費點數的到期條件",
+          "evidence": "現行條款寫購買 AP 為 180 天，免費點數到期日以帳戶顯示。免費點數只供個人非商業評估。",
+          "accessed_at": "2026-11-25T01:08:11+08:00",
+          "effective_at": "2026-10-22"
         }
       ],
       "record_type": "opportunity",
@@ -27044,10 +27081,10 @@
       "priority_tier": "B",
       "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·≤15分鐘",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-24 01:08:41 台北時間，局部核對：官方首頁、API 文件、FAQ、條款核對首次使用贈點、綁卡說明及兩組不同的 AP 換算與購買效期。ch.aicu.ai/faq 逾時，改讀條款連出的 FAQ。",
+      "verification_scope": "2026-11-25 台北時間局部複核，核對首次贈點、綁卡與預付扣款、試用金鑰期限。對讀首頁、API 文件、FAQ、公告與條款。帳戶結帳與台灣卡片未核。",
       "last_review_attempt_at": "2026-11-23T10:10:45+08:00",
       "last_review_attempt_reason": "ch.aicu.ai 源站連線逾時（HTTP 522 Cloudflare Connection Timed Out），主方案頁與 FAQ 無法存取；僅條款頁 api.aicu.ai/terms 正常讀取。",
-      "cost_note": "US$10 為官方列示的贈送 AP 標價；官網列新金鑰須綁卡。不同官方頁的點數換算與購買效期有差異，台灣卡片與實際最低付款未核。"
+      "cost_note": "首次使用贈 US$10 等值 AP，點數折算未統一。官方語音公告寫綁卡本身不扣款，購買 AP 或啟用自動儲值才會付款。台灣卡片、最低付款和實際費用待核。"
     },
     {
       "id": "cursor-students-policy",
@@ -72444,15 +72481,15 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-24T14:09:20+08:00",
+      "verified_at": "2026-11-25T01:08:51+08:00",
       "discovered_at": "2026-11-08T13:20:00+08:00",
       "announcement_at": "2026-10-21",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
-      "verification_scope": "2026-11-24 14:09:20 台北時間，局部核對：讀官方發布 FAQ 和產品回顧，核對免卡、公告日及免費期。精確時刻、時區、期後處理和台灣個案待核。",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核，重讀官方發布問答與語音文件，核對限時免費、免卡、共享容量及付費型號區別。台灣個案、期後與合約範圍以既有證據和缺口為準。",
       "usable_duration": "免費至2026-11-30（頁面僅給日期，未給時鐘時間與時區）；官方稱變更前會通知。付費Turbo（heygen-voice-1-turbo）另計費。",
       "cancellation": "API 文件說明免費期內的 Free 模型請求不會自動轉向付費模型。11/30 後的模型回應、是否延長或扣款方式待官方說明。",
-      "cost_note": "Turbo Free請求免費且免信用卡，無須 credit 餘額；付費Turbo與預設模型仍按一般費率計費。無公開的總量上限，限制為每member 30 req/min與全體共用容量。",
+      "cost_note": "指定 heygen-voice-1-turbo-free 時，請求免費、免信用卡且無需 credit 餘額。預設與付費 Turbo 另計，免費請求不會自動轉付費。口徑限本次活動及共用容量。",
       "access_risk": "共用容量可能隨時回429；無SLA、無TTFA保證；professional clone不可用；zh-HK 等區域標籤會被拒，須送基底碼 zh。商用授權已被主條款排除：ToS §4「License to your Content (For Users in the Free Plan)」逐字「you are granted a limited, non-exclusive, non-transferable, revocable license to your User Output solely for personal, non-commercial, and internal evaluation purposes」，並明列「may not be sold, sublicensed, redistributed, monetized, or used in connection with commercial activities, advertising, client work, revenue-generating product or any other services」。Voice 補充條款只說不擴大 Free 方案權利，適用者就是主條款 §4；要商用須付費方案。",
       "eligibility": {
         "service_availability": "API 文件僅列模型與限制，未列可用國家或排除清單；端點公開可讀。ToS 與 Voice 補充條款亦無國別白名單。",
@@ -72467,7 +72504,8 @@
         "文件提到 socket 超過「free quota」會以 1008 關閉，但未公布該配額數值",
         "2026-11-30 後是否改為付費或延長",
         "免費層輸入資料保留與訓練條款",
-        "「client work」與「internal evaluation」的界線由 HeyGen 個案判定，官方未給白名單情境"
+        "「client work」與「internal evaluation」的界線由 HeyGen 個案判定，官方未給白名單情境",
+        "11/30 免費結束的精確時刻與時區"
       ],
       "sources": [
         {
@@ -72516,6 +72554,20 @@
           "scope": "產品公告日及免費窗",
           "evidence": "官方回顧寫 Voice Turbo 於 10/21 公告，免費共享容量至 11/30。",
           "accessed_at": "2026-11-24T14:09:20+08:00"
+        },
+        {
+          "url": "https://www.heygen.com/blog/heygen-voice-turbo",
+          "label": "HeyGen 發布問答",
+          "scope": "免費期間與免信用卡",
+          "evidence": "公告仍列免費至 2026-11-30，申用免費型號免卡。共享容量用盡會回 429。",
+          "accessed_at": "2026-11-25T01:08:51+08:00"
+        },
+        {
+          "url": "https://developers.heygen.com/docs/voices/heygen-voice-speech",
+          "label": "HeyGen 語音 API 文件",
+          "scope": "免費型號、餘額與付費路徑",
+          "evidence": "指定 heygen-voice-1-turbo-free 才走公告免費型號，不需 credit 餘額。預設與付費 Turbo 另計，免費型號不會自動轉付費。",
+          "accessed_at": "2026-11-25T01:08:51+08:00"
         }
       ],
       "priority_score": 22.1,
@@ -73004,20 +73056,20 @@
       "legal_status": "not_verified",
       "priority": "watch",
       "discovered_at": "2026-11-08T16:17:50+08:00",
-      "verified_at": "2026-11-24T14:07:52+08:00",
+      "verified_at": "2026-11-25T01:10:41+08:00",
       "record_type": "opportunity",
       "id": "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
-      "title": "新竹市 AI 領航青年數位工具補助：11/30 截止，11/24 餘額 0.4%",
+      "title": "新竹市 AI 領航青年數位工具補助：11/30 截止，11/25 餘額 0.4%",
       "usage_type": "AI subscription reimbursement",
       "effort_basis": "分析者估計：備齊身分證、官方收據、臺幣換算與繳款憑證、信用卡末四碼、存摺封面與親筆切結書後線上送件；不含 12 週審核。",
       "cost_note": "先購後核銷。一般青年補助 50%、最高新臺幣 3,000 元；特定對象與語言認證者 90%、最高新臺幣 6,000 元。以臺幣帳單為準。購買期已於 10/31 結束。API、點數、token、預付儲值、集合式平台或代購排除。",
       "usable_duration": "一次性核銷；受理至 115/11/30 或經費用罄，兩者先到者為準（頁面僅給日期，未給時鐘時間）。",
-      "access_risk": "市府於 11/24 顯示剩餘補助新臺幣 24,784 元（0.4%），額滿或用罄停止收件。月費制須在購買後 1 個月內、年費制 2 個月內提交，並受 11/30 總期限限制。補正限 10 個工作天，審核約 12 週。",
+      "access_risk": "市府於 11/25 顯示剩餘補助新臺幣 24,784 元（0.4%），額滿或用罄停止收件。月費制須在購買後 1 個月內、年費制 2 個月內提交，並受 11/30 總期限限制。補正限 10 個工作天，審核約 12 週。",
       "cancellation": "補助為事後核銷，不代為取消底層 AI 訂閱；已核銷之訂閱週期不得退款重複申請。",
       "status": "limited_availability",
       "deadline_at": "2026-11-30",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
       "eligibility": {
         "service_availability": "新竹市數位申辦平台（服務編號 1323）可公開讀取並有線上申辦入口；未實際送件。",
         "account_eligibility": "設籍新竹市、16 歲（含）至 40 歲（含）（民國 74/4/3–99/4/2 出生），自 115/8/14 起適用；一般青年 50%／上限 NT$3,000，特定對象（低收／中低收、獨立負擔家計、身心障礙、原住民、新住民、就業服務法第 24 條第 1 項各款）與文化語言保存者（原住民族語、臺灣台語、客語認證）90%／上限 NT$6,000。版本差異已解開：原計畫 115/4/1 公告訂定（竹市青年字第1150000731號）為18 歲、弱勢僅低收／中低收、總經費 70 萬元；青年發展中心 115/8/14 修正公告加碼 500 萬元、改為 16 歲並擴大 90% 對象，70 萬＋500 萬＝現行頁 570 萬元。勞工及青年處 115/5/8 公告仍是修正前版本、未同步下架。",
@@ -73027,13 +73079,14 @@
         "taiwan_note": "Yes，但限設籍新竹市且符合年齡與購買期間者；與臺北市青年 AI 工具補助為不同計畫，不得互換或重複申請。"
       },
       "unknowns": [
-        "0.4% 是 11/24 14:07 公開頁讀值，經費用罄時間及實際送件狀態待核。",
+        "0.4% 為 11/25 01:10 的公開頁讀值，經費用罄時間及實際送件狀態待核。",
         "V4-7 PDF §陸「購買後兩個月內」與 §捌「月費制一個月內/年費制兩個月內」哪一句為準；10/31 購買的年費制兩個月期限也超過 11/30 受理截止",
         "勞工及青年處 115-05-08 公告仍寫 18–40 歲，與 8/14 修正後的 16–40 歲並存；以 1323 與 V4-7 為現行，舊公告未撤下",
-        "審核約 12 週後的撥款時程與稅務列計"
+        "審核約 12 週後的撥款時程與稅務列計",
+        "申辦頁的購買憑證段列法定代理人，切結書說明另列父母或配偶。個案代付資格需以市府審核為準。"
       ],
-      "summary": "補助設籍新竹市、16 至 40 歲（含）的青年。一般補助 50%、上限新臺幣 3,000 元，特定對象與語言認證者 90%、上限新臺幣 6,000 元。限 4/2–10/31 合資格購買憑證，現在新購無法申請。11/24 市府平台顯示剩餘新臺幣 24,784 元（0.4%）。最晚 11/30，額滿或經費用罄即停止受理。",
-      "verification_scope": "2026-11-24 14:07:52 台北時間，局部核對：讀市府申辦服務 1323 的餘額、受理期、購買期、代付證明及申辦入口。僅確認公開頁，實際送件未測。",
+      "summary": "補助設籍新竹市、16 至 40 歲（含）的青年。一般補助 50%、上限新臺幣 3,000 元，特定對象與語言認證者 90%、上限新臺幣 6,000 元。限 4/2–10/31 合資格購買憑證，現在新購無法申請。11/25 市府平台顯示剩餘新臺幣 24,784 元（0.4%）。最晚 11/30，額滿或經費用罄即停止受理。",
+      "verification_scope": "2026-11-25 台北時間局部複核，重讀市府即時公開餘額、購買及受理期間、代付證明與申辦入口。實際受理與代理付款個案待核。",
       "sources": [
         {
           "url": "https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323",
@@ -73086,6 +73139,13 @@
           "scope": "公告 PDF 的送件期限衝突與匯費",
           "evidence": "2026-11-23 07:10 實讀確認：數位申辦平台顯示剩餘補助經費為 $101,565（1.7%），受理至 115/11/30 或經費用罄止。",
           "accessed_at": "2026-11-23T07:15:00+08:00"
+        },
+        {
+          "url": "https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323",
+          "label": "新竹市府服務 1323",
+          "scope": "餘額、受理期、購買期和代付文字",
+          "evidence": "餘額新臺幣 24,784 元（0.4%），11/30 或額滿／用罄止。購買期截至 10/31。購買人資訊段列法定代理人，切結書說明另列父母或配偶。",
+          "accessed_at": "2026-11-25T01:10:41+08:00"
         }
       ],
       "priority_score": 17.8,
@@ -86087,14 +86147,14 @@
       "valuation_scenario": null,
       "cancellation": "審核前以不公開（Unlisted）送件並勿散布連結；審核通過後須將同一作品改為公開。通過後不得替換、重傳、刪除或改回非公開。",
       "usable_duration": "徵件 2026-11-04 12:00–2026-11-30 18:00；最佳觀看獎與旗艦大獎觀看數統計截止 2026-12-14 14:00，得獎公告 2026-12-23 14:00。",
-      "access_risk": "限「報名時已年滿 18 歲且具有中華民國國籍之自然人」，非本國籍者不符；每人最多 3 件作品、週週抽僅能中 1 次；獎項不得折現或轉讓；中獎價值超過 NT$20,001 需先扣繳 10% 機會中獎稅（非境內居住者 20%）。未使用指定圖樣、比例或 Hashtag 即不符資格。",
-      "verified_at": "2026-11-24T14:10:09+08:00",
-      "verification_scope": "2026-11-24 14:10:09 台北時間，局部核對：重讀主辦活動辦法，確認官方指定圖樣兩檔可取得、標籤及送審順序。未核個別表單或審查時間。",
+      "access_risk": "限「報名時已年滿 18 歲且具有中華民國國籍之自然人」，非本國籍者不符；每人最多 3 件作品、週週抽僅能中 1 次；獎項不得折現或轉讓；中獎價值超過 NT$20,001 需先扣繳 10% 機會中獎稅（非境內居住者 20%）。未使用指定圖樣、比例或 Hashtag 即不符資格。 報名前先以不公開連結送審，通知通過後再將同一作品改公開。通過後不得替換、重傳、刪除或改為非公開。",
+      "verified_at": "2026-11-25T01:10:41+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核，重讀主辦活動辦法的格式、作品公開順序、授權與徵件日，核對官方報名入口可達。未取得實際登入後或送出結果。",
       "discovered_at": "2026-11-11T07:25:00+08:00",
       "announcement_at": "2026-11-04",
       "previous_limit": "未收錄",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
       "deadline_at": "2026-11-30T18:00:00+08:00",
       "eligibility": {
         "service_availability": "全台活動，報名與作品上傳皆線上（活動網站＋本人 YouTube 帳號）；主辦單位為中華電信，執行單位李奧貝納。",
@@ -86105,7 +86165,7 @@
         "taiwan_note": "Yes：限具中華民國國籍者，台灣使用者為主要適用對象；外籍人士不符。"
       },
       "unknowns": [
-        "報名表實際欄位與審核所需時間（未送出）",
+        "活動平台入口可達，個別表單呈現、實際送件與審核所需時間待核",
         "使用免費 Gemini 層是否符合「至少一種 Google AI 生成工具」的查驗標準",
         "觀看數統計是否計入 Shorts 以外的播放來源"
       ],
@@ -86130,6 +86190,20 @@
           "scope": "官方 PNG",
           "evidence": "官方活動頁的反白圖樣，唯讀下載確認回傳有效 PNG。",
           "accessed_at": "2026-11-24T14:10:09+08:00"
+        },
+        {
+          "url": "https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html",
+          "label": "中華電信活動辦法",
+          "scope": "投稿規格、公開順序及期限",
+          "evidence": "11/30 18:00 截止。原創短片限 9:16、1080×1920、3 分鐘內 MP4。先用本人 YouTube 不公開連結報名，收到通過通知才把同一支改公開。審核通過後不得更換、重傳、刪除或再轉非公開。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://festival.cht.com.tw/gemini",
+          "label": "中華電信報名入口",
+          "scope": "官方活動平台公開入口",
+          "evidence": "主辦活動連到中華電信活動平台，公開入口可達。未填資料、啟動驗證或送件。",
+          "accessed_at": "2026-11-25T01:10:41+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -88127,16 +88201,16 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": "以官方第一名獎金 NT$20,000 按 1 美元兌 32 新臺幣折算之潛在獎金；佳作與最佳簡報獎金額更低，且須通過初賽與決賽評選。",
-      "verified_at": "2026-11-24T14:10:09+08:00",
+      "verified_at": "2026-11-25T01:10:28+08:00",
       "discovered_at": "2026-11-14T13:05:00+08:00",
       "announcement_at": "2026-10-15",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
-      "verification_scope": "2026-11-24 14:10:09 台北時間，局部核對：讀主辦簡章與公開網站內的報名公告，核對日期、資格、獎池及主辦。表單 401 未核內容。",
-      "usable_duration": "報名與初賽繳件至 2026-11-30 23:59；決賽 2026-12-27。",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核，讀主辦簡章、提案下載頁及 ODT 內容，核對首投限制、附件與隊伍時程。Google 表單 401，實際送件未核。",
+      "usable_duration": "11/30 23:59 報名與初賽繳件截止。12/6 19:00–21:00 各隊派代表參加線上工作坊。12/25 23:59 前交決賽簡報與成品，12/27 在東吳城中校區決賽。",
       "cancellation": "簡章未列退費或取消報名機制；主辦單位保留修改簡章與最終解釋權。",
       "cost_note": "簡章未載明報名費；報名需填寫線上表單並上傳學生身分證明，費用欄位留空待核。",
-      "access_risk": "主辦公開網站連到 Google 表單，未登入讀取回 401，實際受理及存取限制待核。作品須為團隊原創，智慧財產權歸參賽隊伍。",
+      "access_risk": "提案書要求線上提交 Word 與 PDF，附學生證或當學期在學證明，以及全體隊員親簽文件。公開 Google 報名表回 401，實際受理及帳號限制待核。",
       "offer_validity": "nextwave-2026-brief",
       "terms_compliance": "參賽者同意主辦單位蒐集及利用個人資料；作品智慧財產權歸參賽隊伍所有；未盡事宜由主辦單位保留修改與最終解釋權。",
       "eligibility": {
@@ -88144,7 +88218,7 @@
         "account_eligibility": "全國大專校院在學學生（大學及碩、博士生），需滿 18 歲，可跨校跨系組隊，每隊 2 至 5 人。",
         "billing_country": "簡章未列報名費與付款方式；報名透過線上表單並檢附在學證明。",
         "identity_residency": "簡章寫明限中華民國境內大專校院在學學生，且不限國籍；境外學校學生不符資格。",
-        "terms_restrictions": "不得以同一作品重複報名其他競賽之規定未載；主辦單位保留議程與規則調整權。",
+        "terms_restrictions": "主辦提案範本明列首次投稿，作品不得曾投稿其他競賽或活動。一稿多投可撤銷資格或追回獎項。作品智財權歸參賽隊伍。",
         "taiwan_note": "以台灣大專校院在學學生為對象，個案表單存取及實際受理待核，決賽須到台北現場。"
       },
       "unknowns": [
@@ -88175,6 +88249,27 @@
           "scope": "10/15 報名公告原始文字",
           "evidence": "公開網站程式資產含 2026/10/15 正式開放線上報名的公告。以純文字讀取。",
           "accessed_at": "2026-11-24T14:10:09+08:00"
+        },
+        {
+          "url": "https://aiscuclub.github.io/nextweave2026/NextWave_AI%E6%B3%95%E5%89%B5%E9%BB%91%E5%AE%A2%E6%9D%BE_%E7%B0%A1%E7%AB%A0.pdf",
+          "label": "NextWave 競賽簡章",
+          "scope": "初賽、工作坊和決賽繳件條件",
+          "evidence": "11/30 23:59 前交企劃書、學生身分證明及動機。12/6 19:00–21:00 線上工作坊各隊須派代表簽到。12/25 23:59 前交決賽簡報及展示成品。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://aiscuclub.github.io/nextweave2026/proposal.html",
+          "label": "NextWave 提案下載頁",
+          "scope": "主辦提案書下載",
+          "evidence": "主辦頁提供 2026 年 NextWave 競賽提案書 ODT 下載。",
+          "accessed_at": "2026-11-25T01:10:28+08:00"
+        },
+        {
+          "url": "https://aiscuclub.github.io/nextweave2026/2026%E5%B9%B4NextWave%E7%AB%B6%E8%B3%BD%E6%8F%90%E6%A1%88%E6%9B%B8.odt",
+          "label": "NextWave 官方提案書",
+          "scope": "首次投稿、雙格式、全員簽名及證明",
+          "evidence": "提案書須上傳 Word 與 PDF。學生須附學生證影像或當學期在學證明，同意書與獎金代領授權書各列全員親簽。作品須首次投稿，未曾投稿其他競賽或活動。",
+          "accessed_at": "2026-11-25T01:10:28+08:00"
         }
       ],
       "priority_score": 21.9,
@@ -92240,10 +92335,10 @@
     },
     {
       "id": "vercel-ai-gateway-parallel-decisions-free-window",
-      "title": "Vercel AI Gateway：Parallel Decisions Fast 免費公告至 11/23，期後計價待核",
-      "summary": "Vercel 11-13 公告 Parallel Decisions Fast 免費至 2026-11-23，未列時區、時刻。11-24 台北時間查看時，公開模型頁仍顯示 Free，32K context、每次最多 100 題。實際計費切換、期後單價與一般 AI Gateway 免費額度適用性皆待核。",
+      "title": "Vercel AI Gateway｜Parallel Decisions Fast 免費期已結束，現列每千次 US$1",
+      "summary": "Vercel 11/13 公告免費至 11/23。11/24 模型頁仍標 Free，11/25 重讀已列 US$1／千次請求，每次最多 100 題、32K context。一般免費層目錄標示本模型符合資格，實際額度抵扣與帳戶出帳待核。",
       "record_type": "opportunity",
-      "status": "campaign_current_availability_unverified",
+      "status": "expired",
       "taiwan": "Unknown",
       "verification": "Official",
       "legal_status": "not_verified",
@@ -92251,24 +92346,23 @@
       "views": [],
       "setup_cost_usd": null,
       "recurring_cost_usd": null,
-      "cost_note": "公告限時至 2026-11-23，時區未載；公開模型牌價仍為 Free，期後實際費用未確認。方案欄位留空。",
+      "cost_note": "免費促銷截止後，公開牌價為 US$0.001／次請求。一般 Gateway 免費層每月 US$5 只適用目錄列明的模型，本模型公開資料顯示符合。台灣帳戶扣款及抵扣待核。",
       "quota_classification": "NO FIXED CAP PUBLISHED",
       "limited_confirmed": false,
-      "usage_type": "限時免費模型呼叫，期後計費待核",
-      "quota_details": "公開模型頁列 32K context 和每次最多 100 題；每日請求與 token 上限未公布。",
+      "usage_type": "已結束的限時免費模型呼叫，現依公開牌價按次計費",
+      "quota_details": "32K context，每次最多 100 題。一般免費層受個別模型速率限制，本模型每日總請求上限未核。",
       "eligibility": {
         "service_availability": "Vercel changelog 公布；需 Vercel 帳號與 AI Gateway API key；不需另開 Parallel 帳號。",
         "account_eligibility": "Vercel 帳號；是否需付款方式未載明。",
         "billing_country": "未列國家；台灣帳號與卡片未核。",
         "identity_residency": "未列居住地限制。",
-        "terms_restrictions": "按 AI Gateway 一般條款與用量計費；一般免費層限部分模型且逐模型限流，本促銷期後適用性待核。",
+        "terms_restrictions": "模型列於一般免費層適用目錄，逐模型限流。個別帳戶實際抵扣、付款與使用上限仍待核。",
         "taiwan_note": "Unknown：changelog 未提台灣；不因 AI Gateway 文件稱 all plans 推定個別帳號可用。"
       },
       "unknowns": [
-        "免費期結束時區、時刻與生效時間",
-        "是否需有效付款方式、rate limit 與每日上限",
-        "11/23 後價格與是否轉為一般模型計費",
-        "台灣帳號與付款可用性"
+        "免費期結束時區、時刻和實際計費切換時點",
+        "實際額度抵扣、有效付款方式需求、速率限制和每日上限",
+        "台灣帳戶及卡片可用性"
       ],
       "sources": [
         {
@@ -92297,29 +92391,65 @@
           "scope": "公開標價與模型限制",
           "evidence": "頁首與 provider 表格仍標 Free；表列 32K context，每個請求最多 100 題。公開頁未列何時變價，未執行請求。",
           "accessed_at": "2026-11-24T01:08:09+08:00"
+        },
+        {
+          "url": "https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free",
+          "label": "Vercel 發布公告",
+          "scope": "促銷截至日期",
+          "evidence": "11/13 公告免費至 2026-11-23，未列截止時刻與時區。",
+          "accessed_at": "2026-11-25T01:08:10+08:00",
+          "announcement_at": "2026-11-13"
+        },
+        {
+          "url": "https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast",
+          "label": "Vercel 模型頁",
+          "scope": "現行公開牌價與單次題數",
+          "evidence": "公開價每千次請求 US$1，每次最多 100 題，按請求計價。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://ai-gateway.vercel.sh/v1/models",
+          "label": "Vercel 公開模型目錄 API",
+          "scope": "模型牌價與 context",
+          "evidence": "parallel/parallel-decisions-fast 的 pricing.request 為 0.001，context_window 為 32000。",
+          "accessed_at": "2026-11-25T01:08:10+08:00"
+        },
+        {
+          "url": "https://vercel.com/ai-gateway/models?freeTier=true",
+          "label": "Vercel 免費層目錄",
+          "scope": "一般免費層適用標記",
+          "evidence": "模型在官方目錄的公開資料列 availableToFreeTier 為 true 且 isSyntheticFreeTier 為 false，另列按次牌價。",
+          "accessed_at": "2026-11-25T01:08:51+08:00"
+        },
+        {
+          "url": "https://vercel.com/docs/ai-gateway/pricing",
+          "label": "Vercel 一般定價文件",
+          "scope": "一般免費層與限流",
+          "evidence": "一般免費層每月含 US$5，用於合資格模型，適用各模型限流。",
+          "accessed_at": "2026-11-25T01:08:11+08:00"
         }
       ],
-      "verification_scope": "2026-11-24 01:11:49 台北時間，局部核對：Vercel 公告的免費期原文止於 11/23、未列時區或時刻。公開模型頁仍標 Free，未核帳戶實際扣款或轉付費時點。",
-      "access_risk": "公告免費期只列到 11/23，公開頁顯示 Free 的時間可能早於計費切換；付款方式、期後價格與限流仍待核。",
+      "verification_scope": "2026-11-25 台北時間局部複核，重讀公告期限、模型公開牌價、公開 API 目錄與一般免費層目錄。精確切換及個別帳戶未核。",
+      "access_risk": "11/24 模型頁仍標 Free，11/25 已列按請求計價。精確切換、抵扣及台灣帳戶實際出帳待核。",
       "usable_duration": "2026-11-13 公告免費至 2026-11-23；未載結束時區與時刻。",
       "cancellation": "無訂閱；停止呼叫即可。",
-      "verified_at": "2026-11-24T01:11:49+08:00",
+      "verified_at": "2026-11-25T01:08:51+08:00",
       "discovered_at": "2026-11-16T05:18:00+08:00",
       "announcement_at": "2026-11-13",
       "deadline_at": null,
-      "expires_at": null,
+      "expires_at": "2026-11-23",
       "regions": [],
-      "review_cadence": "daily",
-      "next_review_at": "2026-11-24T20:30:00+08:00",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "priority_score": 12.3,
+      "priority_score": 9.6,
       "priority_tier": "D",
-      "priority_note": "官方來源·活動現況待核·費用未知·台灣未標記·時間未知",
+      "priority_note": "官方來源·優惠已到期·費用未知·台灣未標記·時間未知",
       "expiry": {
-        "text": "公告免費至 2026-11-23，未列時區或時刻；查閱時模型頁仍標 Free。"
+        "text": "公告免費至 2026-11-23，未列時區或時刻。11/25 重讀模型頁已列按次牌價。"
       }
     },
     {
@@ -98146,14 +98276,14 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cost_note": "簡章列獎狀與證明，未列報名費或現金獎。",
-      "access_risk": "需事前取得指導教師簽名與後續確認；決賽須到成大。",
-      "verified_at": "2026-11-24T01:08:23+08:00",
+      "access_risk": "需指導教師簽署切結及後續回覆。待補件與審核未通過均要在 12/4 報名截止前修正。12/19 初賽作品 14:30 停止上傳，各隊員錄影另於 14:40–16:30 交，缺件視為無效。決賽須至成大。",
+      "verified_at": "2026-11-25T01:10:42+08:00",
       "discovered_at": "2026-11-24T01:08:23+08:00",
       "announcement_at": "2026-11-09",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-26T01:00:00+08:00",
       "deadline_at": "2026-12-04T17:00:00+08:00",
-      "verification_scope": "2026-11-24 01:08:23 台北時間，局部核對：主辦公告、競賽須知與教育部計畫頁核對活動年度、報名、學籍、獎勵與初決賽日期。",
+      "verification_scope": "2026-11-25 台北時間局部複核，核對官方競賽須知與公開報名頁的截止、補件、教師確認與錄影時段。帳戶內提交及審核未核。",
       "eligibility": {
         "service_availability": "公開競賽網站於 11/9 公告開始報名。台灣線上初賽，成大台南校區實體決賽。",
         "account_eligibility": "隊伍代表驗證電子信箱，填表並上傳指導教師簽署的同意暨參賽切結書；主辦方收到指導教師確認回覆後才正式取得資格。",
@@ -98187,6 +98317,20 @@
           "scope": "活動年度與截止交叉核對",
           "evidence": "公告標題寫 2026 年，活動內文與主辦方公告寫 2027 年。報名 2026/12/4 17:00 止、決賽 2027/1/16。",
           "accessed_at": "2026-11-24T01:08:23+08:00"
+        },
+        {
+          "url": "https://itsaaicontest.itsa.org.tw/role.php",
+          "label": "ITSA 競賽須知",
+          "scope": "報名與初賽繳件時間",
+          "evidence": "12/4 17:00 報名截止。12/19 初賽作品於 14:30 停止上傳，各隊員錄影檔另在 14:40–16:30 交，缺檔或份數不符無效。",
+          "accessed_at": "2026-11-25T01:08:11+08:00"
+        },
+        {
+          "url": "https://itsaaicontest.itsa.org.tw/register/index.php",
+          "label": "ITSA 報名入口",
+          "scope": "需登入、待補件及退件修正",
+          "evidence": "公開入口可讀，列待補件與審核不通過均須於 12/4 截止前補件或修正，逾期不受理。",
+          "accessed_at": "2026-11-25T01:10:42+08:00"
         }
       ],
       "priority_score": 16.8,
@@ -100876,7 +101020,7 @@
       "announcement_at": null,
       "expires_at": null,
       "discovered_at": "2026-11-24T19:09:49+08:00",
-      "verified_at": "2026-11-24T19:09:49+08:00",
+      "verified_at": "2026-11-25T01:08:51+08:00",
       "benefit_cost_ratio": null,
       "usable_benefit_usd": null,
       "savings_usd": null,
@@ -100899,6 +101043,20 @@
           "scope": "申請欄位、對象、作品與全額費用補助",
           "evidence": "公開頁列 12/9 場次與作品集問題，說明獲選後由 AIT 美國創新中心全額補助讀書會費用。",
           "accessed_at": "2026-11-24T19:09:49+08:00"
+        },
+        {
+          "url": "https://blindegg.kktix.cc/events/dec2026-codewithai",
+          "label": "主辦 KKTIX 活動頁",
+          "scope": "作品集期限與票期",
+          "evidence": "作品集仍寫 11/25 前、預計錄取 20 名。免費獎學金票期列到 12/9 21:30（台北）。",
+          "accessed_at": "2026-11-25T01:08:51+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/1l_u_27yQyqnE2enT8T8CVXjGJLXQWcQ7lwTz4loQMb8/viewform?edit_requested=true&pli=1",
+          "label": "主辦獎學金申請表",
+          "scope": "申請欄位、公開作品集與全額補助",
+          "evidence": "公開頁呈現 12/9 場次、作品集 URL 和送出控制項。作品集須讓評審讀取，入選者由 AIT 美國創新中心全額補助。",
+          "accessed_at": "2026-11-25T01:07:48+08:00"
         }
       ],
       "categories": [
@@ -100913,11 +101071,11 @@
       "setup_cost_usd": 0,
       "recurring_cost_usd": 0,
       "cost_note": "入選的獎學金票費為零，補助涵蓋讀書會費用。交通、設備與個人工具費用未列。",
-      "usable_duration": "主辦寫「11/25 前」送作品集，未說明是否包含 11/25 或精確時間。活動為 2026/12/9 19:30–21:30，KKTIX 票務期間另列至活動當日。",
-      "access_risk": "公開申請欄位可讀，取票流程和提交後受理待查。須攜帶可寫程式的設備，以進行中專案或程式碼參與同儕討論。",
+      "usable_duration": "主辦寫 11/25 前送作品集，是否包含當日及精確時刻待核。12/9 19:30–21:30 舉辦，KKTIX 獎學金票期另列至當日 21:30。",
+      "access_risk": "11/25 凌晨公開申請欄位和送出控制項仍可見，實際受理待查。作品集連結須讓主辦讀取。KKTIX 取票入口回 403，須攜可寫程式的設備到場。",
       "cancellation": null,
       "deadline_at": null,
-      "next_review_at": "2026-11-25T00:15:00+08:00",
+      "next_review_at": "2026-11-25T09:00:00+08:00",
       "review_cadence": "daily",
       "eligibility": {
         "service_availability": "台北市中正區慧邦科技 9 樓實體活動。",
@@ -100928,49 +101086,209 @@
         "taiwan_note": "Yes：在台灣可到場且符合主辦對象及作品條件者可申請。"
       },
       "unknowns": [
-        "「11/25 前」是否包含 11/25、精確停收時刻與實際受理",
-        "個別核准、剩餘名額及取票步驟",
+        "11/25 前是否包含當日、精確停收時刻與實際受理",
+        "個別核准、剩餘名額及取票步驟。KKTIX 取票入口回 403",
         "臨時取消與遞補規則"
       ],
-      "verification_scope": "2026-11-24 台北時間實讀主辦活動與公開申請表，核對場次、資格、名額、免費條件及期限措辭。KKTIX 取票入口未能核實。",
+      "verification_scope": "2026-11-25 台北時間局部複核，核對作品集期限措辭、公開表單、票期、活動及全額補助。取票入口讀取回 403，未核實際受理。",
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "ntu-unagentable-future-higher-ed-forum-2026",
+      "title": "臺大「無法被代理的未來」高等教育論壇暨成果展",
+      "summary": "臺大教發中心等單位於 12/5 09:30–17:30 在臺大博雅教學館舉辦，討論生成式 AI 對高教治理、教學與人才發展的影響，另有教學成果展。面向教師、學生、行政與產業人員，12/3 17:00 截止。費用、席次與實際收件待核。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "announcement_at": "2026-11-23",
+      "expires_at": null,
+      "discovered_at": "2026-11-25T01:09:52+08:00",
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": false,
+      "priority_tier": "S",
+      "priority_score": 15.6,
+      "categories": [
+        "QUALIFICATION"
+      ],
+      "views": [],
+      "usage_type": "一次性高等教育 AI 論壇及成果展",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "cost_note": "活動費用未公布，設定和續費欄均為未知。",
+      "usable_duration": "12/3 17:00 截止，12/5 09:30–17:30（台北）舉行。",
+      "access_risk": "主辦表單可讀到欄位與送出按鈕。席次與實際受理待核，部分英文場次現場無中譯。",
+      "cancellation": null,
+      "deadline_at": "2026-12-03T17:00:00+08:00",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
+      "review_cadence": "daily",
+      "eligibility": {
+        "service_availability": "台北市國立臺灣大學博雅教學館 101 教室與藝文走廊。實體場，無線上直播。",
+        "account_eligibility": "公告邀請教師、學生、高等教育行政與教學支持人員及產業從業者，可由公開表單報名。",
+        "billing_country": "主辦公告與公開表單未列報名費或付款方式。",
+        "identity_residency": "須能到台北現場，公告無另列國籍或學籍限制。",
+        "terms_restrictions": "部分英語講座無中文翻譯。公務人員選擇登錄終身學習時數時，表單另請填身分證號。",
+        "taiwan_note": "Yes：活動在台北，符合主辦列出的參加對象且可到場者適用。"
+      },
+      "unknowns": [
+        "活動費與付款規則未載明",
+        "席次上限、剩額與實際受理或候補",
+        "臨時變動及取消規則"
+      ],
+      "verification_scope": "2026-11-25 台北時間局部複核，讀臺大公告、大會報名頁與公開表單，核對日期、場地、對象、期限及場次條件。費用、名額、表單實際受理待核。",
+      "sources": [
+        {
+          "url": "https://aiinsight.ntu.edu.tw/zh-TW/events/18",
+          "label": "臺大教務處活動公告",
+          "scope": "主辦、活動對象及參加條件",
+          "evidence": "11/23 公告臺大博雅教學館 101 教室與藝文走廊場次，12/5 09:30–17:30。實體無直播，部分英語講座無中文翻譯。",
+          "accessed_at": "2026-11-25T01:09:52+08:00",
+          "announcement_at": "2026-11-23"
+        },
+        {
+          "url": "https://ntuctld20.conf.tw/site/mypage.aspx?pid=219&lang=en&sid=1788",
+          "label": "臺大論壇報名頁",
+          "scope": "官方網站與報名表對應",
+          "evidence": "大會報名頁嵌入報名表 262839125614460。",
+          "accessed_at": "2026-11-25T01:08:51+08:00"
+        },
+        {
+          "url": "https://form.jotform.com/262839125614460",
+          "label": "主辦公開報名表",
+          "scope": "報名截止、對象及時數欄位",
+          "evidence": "表單列 2026/12/3 17:00 截止，向師生、高教行政與產業人士開放。公務人員登錄學習時數可依表單提供身分證欄位，送出狀態未測。",
+          "accessed_at": "2026-11-25T01:07:48+08:00",
+          "deadline_at": "2026-12-03T17:00:00+08:00"
+        }
+      ],
+      "verified_at": "2026-11-25T01:09:52+08:00",
+      "priority_note": "官方來源·需符合條件·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "iii-nvidia-multi-node-agentic-ai-acceleration-2026",
+      "title": "資策會 × NVIDIA 端到端分散式代理 AI 加速技術研討會",
+      "summary": "資策會攜手 NVIDIA 於 12/8 13:30–17:30 在台北南港瓶蓋工廠 A2 棟辦理，涵蓋跨節點 GPU 通訊、DPU、分散式推論及實機展示。免費預約、人工審核，12/7 12:00 截止。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "announcement_at": "2026-11-20",
+      "expires_at": null,
+      "discovered_at": "2026-11-25T01:09:19+08:00",
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "effort_minutes_max": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": true,
+      "priority_tier": "S",
+      "priority_score": 19.6,
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "usage_type": "一次性分散式代理 AI 基礎架構技術研討會",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "cost_note": "邀請公文明列免費報名。交通與個人設備成本未估。",
+      "usable_duration": "12/7 12:00 截止，12/8 13:30–17:30，13:00 報到（台北）。",
+      "access_risk": "公開報名區與表單可讀，送出後才進入人工審核，個別結果與席次未知。",
+      "cancellation": null,
+      "deadline_at": "2026-12-07T12:00:00+08:00",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
+      "review_cadence": "daily",
+      "eligibility": {
+        "service_availability": "台北南港瓶蓋工廠 A2 棟實體研討會，須預先線上報名。",
+        "account_eligibility": "面向 AI 開發者、架構與基礎設施工程人員、工程主管和資訊相關師生。主辦審核，教授與學生填學校信箱。",
+        "billing_country": "資策會邀請文列免費報名及資格審核。",
+        "identity_residency": "須能到台北南港現場，主辦公開條件未另列國籍。",
+        "terms_restrictions": "提交後由主辦人工審核，通過者才收到通知。無現場報名。",
+        "taiwan_note": "Yes：在台北辦理，適用能到場且通過資格審核者。"
+      },
+      "unknowns": [
+        "場地總席次與剩餘席次未公布",
+        "實際收件、個別審核及交通或設備費用待核"
+      ],
+      "verification_scope": "2026-11-25 台北時間局部複核，讀資策會 11/20 邀請文、官方活動頁與主辦公開表單，核對費用、對象、審核、日期與精確截止。實際審核與席次待核。",
+      "sources": [
+        {
+          "url": "https://rd.hdut.edu.tw/p/406-1007-26871,r383.php?Lang=zh-tw",
+          "label": "資策會邀請公文（校方轉載）",
+          "scope": "免費、審核與主辦識別",
+          "evidence": "資型字第 1150002594 號，11/20 發文。資策會與 NVIDIA 合辦，免費報名及資格審核，場地名額有限。",
+          "accessed_at": "2026-11-25T01:09:19+08:00",
+          "announcement_at": "2026-11-20"
+        },
+        {
+          "url": "https://event.netmag.tw/2612nv/?source=iiii",
+          "label": "資策會與 NVIDIA 活動頁",
+          "scope": "議程、地點、報名截止及審核",
+          "evidence": "活動於 12/8 13:30–17:30 在南港瓶蓋工廠 A2 棟，13:00 報到。12/7 12:00 截止，預先線上報名並接受審核，無現場報名。",
+          "accessed_at": "2026-11-25T01:09:19+08:00",
+          "deadline_at": "2026-12-07T12:00:00+08:00"
+        },
+        {
+          "url": "https://form.jotform.com/263036153367052",
+          "label": "主辦公開報名表",
+          "scope": "表單和學校信箱要求",
+          "evidence": "可讀公開欄位與送出按鈕。教授和學生須填學校信箱，審核結果以電子郵件通知。",
+          "accessed_at": "2026-11-25T01:09:19+08:00"
+        }
+      ],
+      "verified_at": "2026-11-25T01:09:19+08:00",
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-24T19:14:05+08:00",
+  "latest_research_at": "2026-11-25T01:14:09+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T19:06:07+08:00",
-    "completed_at": "2026-11-24T19:14:05+08:00",
+    "started_at": "2026-11-25T01:05:59+08:00",
+    "completed_at": "2026-11-25T01:14:09+08:00",
     "reviewed_ids": [
-      "cyleague-cyber-navi-trial",
-      "microsoft-data-days-2026-free-exam-vouchers",
-      "miro-nonprofit-thirty-percent-all-paid-plans-ai",
-      "n8n-startup-fifty-percent-business-self-hosted",
-      "nthu-its-ai-certification-training-2027",
-      "ndhu-ai-productivity-workshop-2026"
+      "vercel-ai-gateway-parallel-decisions-free-window",
+      "gai-code-with-ai-reading-group-22-2026",
+      "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
+      "heygen-voice-turbo-free-api-until-2026-11-30",
+      "aicu-evaluation-ap",
+      "tw-itsa-generative-ai-web-design-contest-2027",
+      "nextwave-ai-legaltech-hackathon-2026",
+      "cht-gemini-shorts-contest-2026"
     ],
     "new_ids": [
-      "nthu-ai-agent-vibe-coding-fullstack-2027",
-      "gai-code-with-ai-reading-group-22-2026"
+      "ntu-unagentable-future-higher-ed-forum-2026",
+      "iii-nvidia-multi-node-agentic-ai-acceleration-2026"
     ],
-    "attempted_failed_ids": [
-      "akamai-cloud-rise-startup-credits"
-    ],
+    "attempted_failed_ids": [],
     "unreviewed_existing_count": 1221
   },
-  "generated_at": "2026-11-24T19:14:05+08:00",
+  "generated_at": "2026-11-25T01:14:09+08:00",
   "reviewed_ids": [
-    "cyleague-cyber-navi-trial",
-    "microsoft-data-days-2026-free-exam-vouchers",
-    "miro-nonprofit-thirty-percent-all-paid-plans-ai",
-    "n8n-startup-fifty-percent-business-self-hosted",
-    "nthu-its-ai-certification-training-2027",
-    "ndhu-ai-productivity-workshop-2026"
+    "vercel-ai-gateway-parallel-decisions-free-window",
+    "gai-code-with-ai-reading-group-22-2026",
+    "hsinchu-city-ai-youth-digital-tool-subsidy-2026",
+    "heygen-voice-turbo-free-api-until-2026-11-30",
+    "aicu-evaluation-ap",
+    "tw-itsa-generative-ai-web-design-contest-2027",
+    "nextwave-ai-legaltech-hackathon-2026",
+    "cht-gemini-shorts-contest-2026"
   ],
-  "attempted_failed_ids": [
-    "akamai-cloud-rise-startup-credits"
-  ],
+  "attempted_failed_ids": [],
   "new_ids": [
-    "nthu-ai-agent-vibe-coding-fullstack-2027",
-    "gai-code-with-ai-reading-group-22-2026"
+    "ntu-unagentable-future-higher-ed-forum-2026",
+    "iii-nvidia-multi-node-agentic-ai-acceleration-2026"
   ]
 }

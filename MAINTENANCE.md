@@ -7636,3 +7636,34 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 保留既有 ID、首次收錄時間、原來源網址與 3,005 筆歷史，追加 9 筆。資料品質修正聚焦在可能影響付款的計費、取消和配額說明。Akamai 的一般計費證據附在卡片，Rise 方案核實時間沿用既有資料，整筆列入追查失敗。
 
 本機 make check、make check-ui、git diff --check 和 390px／1280px 卡片逐筆驗證通過。正式發布核對涵蓋同一提交的 Frontend QA 和 Pages、公開資產位元組與公開站卡片行為。
+
+
+## 2026-11-25 01:05–2026-11-25 01:14 Asia/Taipei｜N=1,229 · R=8 · A=2 · U=1,221 · attempted=0
+
+起點 `16b5a47`。主線與遠端一致，工作樹乾淨，無開放 PR。上一版 Frontend QA 與 Pages 已成功。取得維護鎖後，由三位 GPT-6.2 Sol（high）唯讀研究代理處理已到點的促銷與補助、官方條款衝突與台灣新機會，主代理沿用會話配置並重讀採用的官方證據。環境未提供 Gemini 3.8 Flash。
+
+基準有 1,113 筆可行動、8 筆已到複核點、26 筆七日內到期（15 筆冷卻）、29 筆已有至少一個截止點過期（含歷史）。高風險 58 筆，為可行動紀錄內到期複核、七日內截止、最新追查失敗、暫時不限量或 ID 含 conflict 的聯集。複核範圍為已到點的全部 8 筆，較晚的限時案依原時點交接。
+
+### 證據與變更
+
+- `vercel-ai-gateway-parallel-decisions-free-window`｜Parallel Decisions Fast 免費促銷已到期。公開模型頁與目錄現列每千次 US$1。一般免費層目錄仍標為可用 US$5 月額度的模型，個別帳戶抵扣及實際出帳待核。 [Vercel 發布公告](https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free) [Vercel 模型頁](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [Vercel 公開模型目錄 API](https://ai-gateway.vercel.sh/v1/models) [Vercel 免費層目錄](https://vercel.com/ai-gateway/models?freeTier=true) [Vercel 一般定價文件](https://vercel.com/docs/ai-gateway/pricing)
+- `gai-code-with-ai-reading-group-22-2026`｜作品集仍寫 11/25 前，公開欄位可讀。KKTIX 的零元獎學金票期另到 12/9 21:30，作品集停收與實際受理仍待查。 [主辦 KKTIX 活動頁](https://blindegg.kktix.cc/events/dec2026-codewithai) [主辦獎學金申請表](https://docs.google.com/forms/d/1l_u_27yQyqnE2enT8T8CVXjGJLXQWcQ7lwTz4loQMb8/viewform?edit_requested=true&pli=1)
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`｜市府申辦服務 1323 仍列餘額 NT$24,784（0.4%），受理至 11/30 或額滿／用罄。購買期已於 10/31 結束。代付憑證與切結書所列身分口徑待釐清。 [新竹市府服務 1323](https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323)
+- `heygen-voice-turbo-free-api-until-2026-11-30`｜HeyGen 公告與 API 文件仍列免費至 11/30，精確時刻與時區未載。文件重申應指定 Turbo Free 型號，預設與付費 Turbo 另計。 [HeyGen 發布問答](https://www.heygen.com/blog/heygen-voice-turbo) [HeyGen 語音 API 文件](https://developers.heygen.com/docs/voices/heygen-voice-speech)
+- `aicu-evaluation-ap`｜補首次試用金鑰 14 天與免費點數到期日的區別。只使用免費點數做語音合成須綁卡，綁卡本身不扣款。AP 換算與購買效期仍有官方差異。 [AICU 首頁](https://api.aicu.ai/) [AICU API 文件](https://api.aicu.ai/docs/api-reference/) [AICU 官方更新](https://api.aicu.ai/news) [AICU FAQ](https://api.aicu.ai/faq) [AICU 使用條款](https://api.aicu.ai/terms)
+- `tw-itsa-generative-ai-web-design-contest-2027`｜補 ITSA 待補件與退件修正規則，以及初賽作品及逐人錄影的兩個上傳窗口。 [ITSA 競賽須知](https://itsaaicontest.itsa.org.tw/role.php) [ITSA 報名入口](https://itsaaicontest.itsa.org.tw/register/index.php)
+- `nextwave-ai-legaltech-hackathon-2026`｜NextWave 官方提案範本明定作品為首次投稿，並要求 Word 與 PDF 雙格式及全員親簽。補工作坊派代表與決賽前繳件時點。報名表仍回 401。 [NextWave 競賽簡章](https://aiscuclub.github.io/nextweave2026/NextWave_AI%E6%B3%95%E5%89%B5%E9%BB%91%E5%AE%A2%E6%9D%BE_%E7%B0%A1%E7%AB%A0.pdf) [NextWave 提案下載頁](https://aiscuclub.github.io/nextweave2026/proposal.html) [NextWave 官方提案書](https://aiscuclub.github.io/nextweave2026/2026%E5%B9%B4NextWave%E7%AB%B6%E8%B3%BD%E6%8F%90%E6%A1%88%E6%9B%B8.odt)
+- `cht-gemini-shorts-contest-2026`｜補中華電信 Shorts 的審核前不公開、審核後將同一支影片轉公開及不得替換規則。正式報名入口可達，實際欄位與收件仍待核。 [中華電信活動辦法](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html) [中華電信報名入口](https://festival.cht.com.tw/gemini)
+- `ntu-unagentable-future-higher-ed-forum-2026`｜新收錄臺大 12/5 高教論壇與成果展，12/3 17:00 報名截止。費用、席次與實際收件待核。 [臺大教務處活動公告](https://aiinsight.ntu.edu.tw/zh-TW/events/18) [臺大論壇報名頁](https://ntuctld20.conf.tw/site/mypage.aspx?pid=219&lang=en&sid=1788) [主辦公開報名表](https://form.jotform.com/262839125614460)
+- `iii-nvidia-multi-node-agentic-ai-acceleration-2026`｜新收錄資策會 × NVIDIA 12/8 技術研討會，免費審核制，12/7 12:00 截止。 [資策會邀請公文（校方轉載）](https://rd.hdut.edu.tw/p/406-1007-26871,r383.php?Lang=zh-tw) [資策會與 NVIDIA 活動頁](https://event.netmag.tw/2612nv/?source=iiii) [主辦公開報名表](https://form.jotform.com/263036153367052)
+
+### 下一輪
+
+- Code With AI 於 11/25 09:00 追主辦是否明示作品集停收或展延。取票入口回 403，申請表的可見欄位與 KKTIX 票期各自保留。新竹市餘額 11/26 01:00 再查。個案代付資格以市府釐清為準。 [主辦讀書會](https://blindegg.kktix.cc/events/dec2026-codewithai) [新竹市申辦頁](https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323)
+- HeyGen、AICU、ITSA、NextWave 與中華電信依各筆 11/26 01:00 回查。HeyGen 追免費窗精確切換；AICU 舊 ch.aicu.ai FAQ 連線逾時，追官方 AP 換算與效期是否統一；NextWave 追公開報名替代入口，原表單回 401；中華電信第三次週抽原定 11/25 14:00。Vercel 促銷結案，後續有帳務或新活動公告時再追。 [HeyGen](https://developers.heygen.com/docs/voices/heygen-voice-speech) [AICU](https://api.aicu.ai/news) [NextWave](https://aiscuclub.github.io/nextweave2026/proposal.html) [中華電信](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html)
+- 清大 ITS 02:08、Microsoft Fabric 04:30、Firebase 與東華 06:00、CyLeague 09:00、臺大閱讀場中午與 17:00、Akamai 19:00 延續 11/25 原交接。11/26 00:00 後查阿里雲預覽的退出，Fireworks 按原排程追 DPO／RL。
+- 兩個新案依 11/26 09:00 追席次、受理與臺大費用。待選線索依期限先查 11/27 截止的前瞻 AI 安全論壇，再查亞洲大學 12/3–4 物理人工智慧研討會。後者的中英文開始時間、費用與截止需主辦確認。 [臺大論壇](https://aiinsight.ntu.edu.tw/zh-TW/events/18) [資策會研討會](https://event.netmag.tw/2612nv/?source=iiii) [TACC 公告](https://www.tacc.tw/news/detail?id=75) [亞洲大學公告](https://sec.asia.edu.tw/p/406-1001-18078,r11.php?Lang=zh-tw)
+
+### 品質與發布
+
+程式逐筆比對 ID、首次收錄時間及來源。保留原有 3,014 筆政策歷史，追加 10 筆。兩個新案依主辦、名稱、日期、正規化網址和表單編號去重。未能讀取的個別來源留在證據缺口，本次八筆均有可讀的官方證據。資料品質修正限本輪記錄，沿用前端與既有工具。本機 make check、make check-ui、git diff --check 均通過。Chrome 390px／1280px 核對本輪卡片的來源、截止、費用與篩選。正式發布以同一 SHA 的 Frontend QA、Pages 部署以及公開站檔案與卡片核對為判據。
