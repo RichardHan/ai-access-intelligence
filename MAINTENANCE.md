@@ -7720,3 +7720,26 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 比較基準和寫入後的資料計算批次、類型與 README 統計。保留既有 ID、首次收錄時間與來源網址。政策歷史保留 3,033 筆並追加 4 筆。本輪以資料欄位改善卡片上的費用與資格說明。發布門檻為本機資料及瀏覽器測試、同一提交的 Frontend QA 與 Pages 成功，以及公開資產和本輪卡片核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 04:05–2026-11-25 04:12 Asia/Taipei｜N=1,234 · R=1 · A=1 · U=1,233 · attempted=1
+
+基準 `d9f77e6`。主線與遠端一致，工作樹乾淨，無開放 PR 或先前維護鎖，前版 Frontend QA 與 Pages 成功。已持鎖進行本輪。佇列有 1,117 筆可行動、0 筆已到複核點、28 筆七日內截止（含 16 筆冷卻中）。全庫有 30 筆至少一個截止點已過（含歷史）。高風險待處理 56 筆，按佇列可行動紀錄的複核逾期、七日內截止、最近追查失敗、暫時不限量或 ID 含 conflict 取聯集。
+
+三位唯讀研究代理以 GPT-6.2 Sol high 分查近期截止、跨供應商的證據缺口與台灣新案。Gemini 3.8 Flash 未提供，主代理沿用會話配置。Firebase 的額外配額距截止不足 24 小時，提早查閱。Gemma 只找主辦新訊號，東華與數發部沿用上輪排程。Fabric 提早探查兩個不同的官方發布入口。
+
+### 證據與變更
+
+- `google-buildhybridai-2026-firebase-ai-logic`｜主賽台北 12/1 06:00 交件。選用的進階模型配額在 11/26 02:00 截止，逾期不核准，11/27 PT 預計發放，四天有效。補每專案每輪一個帳戶、團隊代表、姓名一致、政府機構聘僱限制、英文及開源交件條件。主辦規章／概覽列後續輪次可替新專案申請，表單稱已獲配額的專案有餘額時可再取得。實際收件、帳戶數與既有專案可否再領仍待查。讀取器無法讀表單，以公開 HTML 實讀。 [規章](https://firebasehybridaihackathon.devpost.com/rules) [賽事頁](https://firebasehybridaihackathon.devpost.com/) [配額表單](https://forms.gle/uPcDhaYW3iVo2AYw5)
+- `microsoft-data-days-2026-free-exam-vouchers`｜改查 Azure Cosmos DB 與 Azure SQL 官方部落格，公開讀取器及直接 HTTP 均回 403。記錄追查時間與失敗原因，維持既有核實日期。實際受理、餘券及完整條款待可讀官方入口。 [Azure Cosmos DB](https://devblogs.microsoft.com/cosmosdb/chatgpt-runs-on-azure-cosmos-db-prove-you-can-build-whats-next/) [Azure SQL](https://devblogs.microsoft.com/azure-sql/dp-800-sql-ai-certification/)
+- `utaipei-ai-tools-literacy-workshop-2026`｜以課程代碼 A115015、主辦、場次、標題及網址比對機會與政策歷史後收錄。兩堂免費課為 12/1、12/8 18:30–21:30，限北市大在學學生。校方系統列 12/1 結束報名，名額 45 人，11/25 04:09 顯示餘 27。主辦以至少 15 人為開課原則。實際收件、開課、停收時刻和錄取待核。 [校方公告](https://hesp.utaipei.edu.tw/p/406-1108-135268,r754.php) [校方報名資訊](https://tms.utaipei.edu.tw/course/1505)
+- Gemma 競賽的最新官方置頂回覆指向既有評測公告，仍無主辦澄清待評作品可否選為終件。AI21 舊版服務條款的評估產品預設期限未證實適用自助額度。兩筆僅找新訊號，沿用既有核實時間。 [Kaggle 評測公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [AI21 更新紀錄](https://docs.ai21.com/changelog) [AI21 條款](https://lp.ai21.com/hubfs/resources/AI21-Models-Terms-of-Service.pdf)
+
+### 下一輪
+
+- 11/25 04:30 查 Fabric 全額／半額折抵券正式條款、餘額與受理。先找可讀官方條款，避開本輪兩個 403 入口。11/25 12:00 查 Gemma 是否更新待評作品規則；18:00 查東華兩份場次表單。數發部依 11/26 04:00，Microsoft Copilot harness 依 11/26 03:30。 [Fabric 活動](https://community.fabric.microsoft.com/blog/community_blog/data-days--certification-vouchers/5376271) [Gemma 賽程](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview) [東華主辦頁](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php)
+- 11/26 02:05 查 Firebase 主辦有無最後一輪停收或延長公告，之後繼續追主賽交件。11/26 09:00 查北市大開課通知及 12/1 具體停收時刻。其餘 Code With AI、CyLeague、政大、臺大閱讀場、Akamai 與阿里雲沿用各筆原排程。 [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [北市大 TMS+](https://tms.utaipei.edu.tw/course/1505)
+- 臺大生命教育中心 12/19 免費教師研習保留為待追線索。主辦活動頁列額滿截止、10/5 起陸續通知。公開報名表說明同時保留 10/2 截止與 10/5 通知，公開欄位仍列 12/19。先查主辦更新及兼任教師填報方式。AI 簡單學 12/1 主辦活動頁標免費，公開活動正文未列票券狀態與截止。直心健康 Gamma 會員條件、非會員費及實際收件仍需確認。 [臺大主辦頁](https://www.lec.ntu.edu.tw/platforms/activity_page/1/153) [桃園市教育局](https://www.tyc.edu.tw/News_Content.aspx?n=5143&s=1878399) [臺大公開表單](https://docs.google.com/forms/d/e/1FAIpQLScdpoyLmDNIYG_5PjAML-JAz38Q3uuKVvYyFmZHXZ40-AdpnQ/viewform?usp=dialog) [AI 簡單學](https://www.accupass.com/event/2611220448431990581999) [直心健康](https://www.accupass.com/event/2607290735458465803630)
+
+### 品質與發布
+
+比對基準 JSON 並依實際差異產生批次及 README 統計。既有 ID、首次收錄時間及證據網址保留。政策歷史保留 3,037 筆並追加 3 筆。本輪在資料層改善配額截止與條款的標示。發布核對依同一提交的 Frontend QA、Pages 部署、公開資產逐位元比對及 390px／1280px 卡片檢查。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
