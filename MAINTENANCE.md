@@ -7363,3 +7363,39 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 4. 依更新後的 `next_review_at` 再查本輪付款、結轉及教育資格差異。PromptLayer 定價頁的 Free 超額破折號與 FAQ 仍並存，本輪預查未找到能釐清適用費率的證據，維持既有核實紀錄。 [PromptLayer 定價](https://www.promptlayer.com/pricing/)
 
 資料與發布使用 `make check`、`make check-ui`、本輪卡片桌面與手機核對，再以成功的 Frontend QA、Pages 部署和公開檔案雜湊判定正式發布。
+
+
+## 2026-11-24 12:06–2026-11-24 12:15 Asia/Taipei｜N=1,213 · R=7 · A=3 · U=1,206 · attempted=0
+
+起點 `5359145`。main 與遠端一致，工作樹乾淨，無開放 PR 或進行中的發布。本輪持有維護鎖。基準有 993 筆機會、50 筆政策、170 筆觀察線索。可行動紀錄逾複核時點 0 筆，七日內有截止點 23 筆，其中 21 筆在冷卻期，另有 4 筆上次整筆追查失敗且未到回查時點。七日內截止、上次整筆失敗、暫時不限量、官方說法衝突四類去重共 82 筆。全庫已標終止或併入 114 筆，至少一個已過的截止點 27 筆（含歷史及多截止點紀錄）。
+
+本輪先預篩兩筆當日截止案例，再查有報名期限或重大模型、付款及資格差異的輪替候選。近期複核過且未見新訊號的案例沿用交接時段。三位唯讀研究子代理均完成，使用環境提供的 GPT-6.2 Sol（high）。Gemini 3.8 Flash 在此環境未提供。
+
+### 本輪局部複核
+
+- `antigravity-free`｜改正 US$0 個人方案文字與免費欄，Hydrogen 已列 Free／Plus 預設，11/30 移除也包含 Gemini 3.8 Flash。Free／Plus 的公開方案基礎用量每週刷新，個別帳戶的額度與移除時刻待核。 [定價](https://antigravity.google/pricing) [模型](https://antigravity.google/docs/models) [方案](https://antigravity.google/docs/plans)
+- `kaggle-google-gemma-4-developer-agent-competition`｜台北 11/26 07:59 加入及組隊截止已納入排序，12/3 07:59 為已加入者的終件截止。區分規約主賽與 Overview 合計，補每日一次、前筆待評限制及官方當時的 20–24 小時估計。截止時待評作品能否選作終件仍待查。部分擷取只回空殼，研究子代理以公開瀏覽器讀 Overview、規約及置頂原文。 [Overview](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview) [規約](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules) [小型獎公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/751104) [Kaggle 評測更新](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471)
+- `seldon-pilot-up-to-three-k-ninety-days-terms-gap`｜新版 Functions 試行頁和首頁收斂 Live Audit 分歧，狀態改為申請審核制。保留 90 天最高 US$3,000、25 家、核准才需卡；一般 Functions 編譯與呼叫使用工作區預付。試行額度發放及期後帳務待核。 [試行頁](https://seldon-ai.com/startup-program) [首頁](https://seldon-ai.com/) [帳務](https://seldon-ai.com/docs/concepts/billing-and-limits)
+- `hackclub-ai-teen-free-api-budget-conflict`｜AI Rules 的年齡上限包含 18 歲，三個官方口徑已同步每日 US$3。分類改為有明確限制。台灣身分查驗和個別帳戶待核。 [AI Rules](https://docs.ai.hackclub.com/guide/rules.html) [社群首頁](https://readme.hackclub.com/) [服務介紹](https://readme.hackclub.com/services)
+- `scholarcy-free-summarizer-quota-conflict-watch`｜兩個官方頁並存 10 份、每日 1 份及每日 3 份，實際免費額度待核。付費 Library 的獨立 7 日試用需有效付款方式，未取消將自動扣款。 [定價](https://www.scholarcy.com/pricing) [摘要工具](https://www.scholarcy.com/article-summarizer) [Library 條款](https://www.scholarcy.com/scholarcy-library-terms-of-service)
+- `stackone-starter-monthly-thousand-credit-terms-conflict`｜補 75% 通用提示、達額暫停及期中加購全額。保留無卡個案適用、定價的每席 credits 與契約 Action Calls 差異。 [產品更新](https://www.stackone.com/changelog/plan-limit-alerts/) [定價](https://www.stackone.com/pricing/) [消費附表](https://www.stackone.com/terms/service-consumption-schedule/) [SaaS 條款](https://www.stackone.com/terms/saas-terms/)
+- `replit-startup-partner-credits-pro`｜補 Select Partner 頁列免費 Pro 及 Partner Network 福利卡月額 US$100。保留核准後六／十二個月、Pro 一年／合作期、個人信箱及台灣個案差異。原始頁擷取只有外殼，改讀原站 HTML 與公開網頁資產文字。 [新創方案](https://replit.com/startups) [Pro 條款](https://replit.com/pro-agreement)
+
+### 新增與證據缺口
+
+- `techorange-taiwan-robotics-conference-2026`｜12/9 台北免費 Physical AI 主論壇，公開表單要求企業資料，成功者由主辦通知。挑戰賽和工作坊為不同報名途徑。主論壇固定截止與席次待查。 [主辦與報名頁](https://2026-taiwan-robotics-conference.techorange.com/)
+- `tairoa-kpmg-ai-robotics-forum-2026`｜12/7 台中免費產業交流，12/2 截止或額滿提前，每企兩名。工研院公開原站與公告可以互證，表單回傳外殼，即時席次與個案收件待核。 [TAIROA 公告](https://www.tairoa.org.tw/activity/act_detail.aspx?column_id=17749&column_type_id=5) [工研院報名頁](https://college.itri.org.tw/edm/D3/010/29/index.html)
+- `taoyuan-unemployed-ai-visual-marketing-web-training-2026`｜11/26 截止，額定 30 人、300 小時，一般自負 NT$6,504，合資格失業者可全額補助。市府開班表預定 12/8–2/17，職缺地圖列 9/21–12/4，兩處訓期差異保留於卡片。市府新聞擷取正文不完整，使用原站與附件文字複核。 [市府新聞及開班表](https://lhrb.tycg.gov.tw/News_Content.aspx?n=4860&s=1954321) [職缺地圖](https://jobmap.tycg.gov.tw/job-course-info.aspx?id=35073&openExternalBrowser=1)
+
+國立空大 12/4、12/11 教材工作坊的公告及附件仍未列費用，沿用先前交接。臺師大 EMI／Claude 與 JCMIT 醫療 AI 皆已有正式紀錄。三個新場次以主辦、班名、場地、日期、表單與來源 URL 比對兩份 JSON 及維護紀錄。 [國立空大公告](https://www2.nou.edu.tw/nepac/Document/Detail?docid=64816&pid=4850&uid=4850)
+
+### 下一輪優先
+
+1. 11/24 依原排程回查 Swarms（13:00）、IteraCompute（15:30 預查、16:00 切換後核共享資格與舊戶保留）、資策會 Edge AI（16:30 核受理、18:00 截止後核狀態）、Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30 核延長或期後價）。IteraCompute 與資策會由研究子代理在中午預查，現行條件與上午紀錄一致，保留原核實時間。 [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+2. 11/25 04:30 起按原排程查 Microsoft 考券的官方替代來源，09:00 起查 AOCAI MLOps、CoreWeave 與陽明交大班號 165782。中午前後查桃園職訓同班開課日及收件、Kaggle 是否公告待評終件規則。台北 11/26 07:59 加入截止後確認狀態，已加入者仍需看到 12/3 的終件時點。 [勞動部班級](https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782) [Kaggle 官方競賽](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview)
+3. 隨官方新訊號追 Scholarcy 免費計量、StackOne Starter 免卡耗盡、Replit 核准時效與帳務。11/30 前核 Antigravity 移除公告與免費方案實際進度。機器人年會與台中交流會查額滿或受理；國立空大有正式費用或受理資訊時再收錄。 [Google 模型表](https://antigravity.google/docs/models) [StackOne 定價](https://www.stackone.com/pricing/) [Replit 新創](https://replit.com/startups)
+4. 依既有 `next_review_at` 續查上一輪交接所列 OpenAI 學術研究者、Civo、新北、東華、Google 額外配額、南大、AW#34、DevFest、臺大 Google 與 AOCAI 場次。
+
+### 資料品質與發布判據
+
+逐筆比對基準與最終 JSON，保留所有既有 ID、首次收錄時間及引用網址。政策歷史原有 2,945 筆，追加 10 筆。使用 `make check`、`make check-ui` 及桌面和手機的批次卡片驗證。正式發布以提交對應的 Frontend QA 與 Pages 部署成功、公開資產逐檔比對與公開介面實查為判據。
