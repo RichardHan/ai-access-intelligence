@@ -7797,3 +7797,30 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 依基準及實際資料差異產生批次與 README 統計。保留所有既有 ID、首次收錄時間及來源；既有政策歷史 3,046 筆，追加 5 筆。本輪品質修正集中在費用與用量口徑、可查的截止及台灣入口。本機 `make check`、`make check-ui` 及 Chrome 390px／1280px 本輪卡片檢查均通過。公開驗收以同一提交的 Frontend QA、Pages 成功、公開資產逐位元比對與 390px／1280px 卡片核對為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 07:06–2026-11-25 07:13 Asia/Taipei｜N=1,238 · R=4 · A=2 · U=1,234 · attempted=0
+
+基準 `b3a8d28`。工作樹乾淨、主線與遠端一致、無開放 PR。起始未見其他維護鎖，前版 Frontend QA 與 Pages 成功，本輪持鎖。佇列基準為 1,121 筆開放或待定、0 筆到複核點、29 筆七日內截止（其中 16 筆冷卻），全庫 30 筆至少有一個已過截止點（含歷史）。高風險待處理聯集 103 筆，依工具可排入紀錄的複核逾期、七日內截止、最近整筆追查失敗、暫時不限量、ID 或狀態標為衝突計算。
+
+三位唯讀研究代理使用 GPT-6.2 Sol high，分查近期截止、舊案條款矛盾與台灣新案。環境未提供 Gemini 3.8 Flash，主代理沿用會話配置。東華、Gemma、Code With AI 優先篩新訊號。舊案中納入能補實質費用、註冊或額度證據的資料，主代理重讀關鍵來源。兩筆新案以課程／活動 ID、主辦、日期、名稱及來源比對現有機會與政策歷史。
+
+### 證據與變更
+
+- `openalex-free-daily-api-budget`｜計價範例 11/15 版列無金鑰每日 US$0.10，免費金鑰每日 US$1，網站與 API 共用。免費金鑰可下載已有快取的單檔全文並按日額扣費。整庫同步另屬付費加購。台灣個別帳戶及付款待核。 [計價範例](https://help.openalex.org/access/example-costs/) [認證](https://help.openalex.org/api/authentication/) [全文](https://help.openalex.org/access/fulltext/) [定價](https://help.openalex.org/access/pricing/)
+- `gamma-free-credits-taiwan-unverified`｜官方 Help 明列初始 400 點無到期日、用後不刷新，Free 無法購點。另購點數於取消日起一年到期。原廠行動版 Help 仍列美加，Apple 台灣店面列相同 App ID 及內購。台灣實裝、網頁新戶及入帳依然待核。 [免費與升級](https://help.gamma.app/en/articles/8077107-how-can-i-upgrade-my-gamma-subscription) [購點](https://help.gamma.app/en/articles/12466653-how-do-i-purchase-more-credits) [行動版](https://help.gamma.app/en/articles/11016450-does-gamma-have-a-mobile-app) [Apple 台灣](https://apps.apple.com/tw/app/gamma-ai-slides-design/id6768404578)
+- `ai21-trial-duration-conflict`｜定價 7 天，帳戶與用量文件三個月。公開註冊連結轉企業首頁，另核組織帳戶及每電郵一個組織規則。實際效期、自助開通、台灣資格及既有帳號/API 狀態待核。 [定價](https://www.ai21.com/pricing/) [用量文件](https://docs.ai21.com/docs/usage-cost) [帳戶文件](https://docs.ai21.com/docs/managing-your-account) [註冊連結](https://studio.ai21.com/sign-up)
+- `memobase-free-credit-operation-conflict`｜首頁每月 500 credits、條款每月 50 operations。隱私政策佐證有按月操作次數供帳務額度控管。計量如何換算、是否雙上限、台灣帳戶及超額都待核。 [首頁](https://memobase.ai/) [條款](https://memobase.ai/terms) [隱私政策](https://memobase.ai/privacy)
+- `nthu-taica-key-technology-ai-public-mooc-2026`｜清華磨課師課號 459，免費課與免費 AI 學習履歷，12/31 日期級截止。課題標 2026 年 6–12 月，公開欄位的起點則標 2025 年。校方 HTML 可讀，網頁讀取器逾時。登入後實際收件、停收時間與學分待核。 [校方課程頁](https://mooc.nthu.edu.tw/course/info/459)
+- `aicollective-taipei-lovable-office-hours-2026`｜Luma 主辦頁及公開票券資料列 12/7 台北 19:00–22:00、Teams 中英一對一、每人 10 分鐘、18 席。Standard 免費、須審核，讀取時頁面未標售罄。其他公告另列 19:00–21:00 示範及 Pro／100 點，待確認兩公告關係與優惠適用，現只收錄 Luma 諮詢。 [主辦 Luma](https://luma.com/aic-ta-12-7_main) [ACCUPASS 另一公告](https://www.accupass.com/event/2610241141411518111327)
+
+### 下一輪
+
+- 11/25 09:00 查 `gai-code-with-ai-reading-group-22-2026` 的「11/25 前」是否涵蓋當日。公開表單仍有 12/9 選項和提交按鈕，實際收件未確認。清華 AOCAI 文件、在職班及陽明交大班等依既有排程。 [Code With AI 主辦](https://blindegg.kktix.cc/events/dec2026-codewithai)
+- 11/25 12:00 查 `kaggle-google-gemma-4-developer-agent-competition` 的待評作品可否手動或自動選終件。已有參賽者詢問，未見官方答覆。11/25 18:00 查 `ndhu-ai-productivity-workshop-2026` 有無關閉或展延，兩表單仍列 12/5，校方第二次公告未更新期限。三筆篩查沿用原核實時間。 [Gemma 評測公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [東華主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php)
+- 11/25 19:00 回查 Akamai Rise，11/26 02:05 查 Firebase 配額最後時段，05:30 查 Fabric 的正式條款，06:15 查 Fireflies Free 已知口徑差異。各案沿前輪交接。 [Akamai Rise](https://www.akamai.com/cloud/start-ups/rise) [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [Fabric 活動](https://community.fabric.microsoft.com/blog/community_blog/data-days--certification-vouchers/5376271) [Fireflies 定價](https://fireflies.ai/pricing)
+- 11/26 07:10 核 `ai21-trial-duration-conflict` 有無公開有效替代入口或官方遷移公告。07:15 查 Gamma 原廠地區說明及 Memobase 操作／點數的換算或公開額度說明。OpenAlex 依月輪替追查台灣帳戶、付費與全文適用差異。 [AI21 Developer Hub](https://www.ai21.com/developer-hub/) [Gamma 行動版](https://help.gamma.app/en/articles/11016450-does-gamma-have-a-mobile-app) [Memobase 帳務條款](https://memobase.ai/terms)
+- 11/26 09:00 查 Luma 收件與主辦是否釐清 Pro、點數及停收，並追清華 459 起始欄、學習履歷及精確關閉時刻。AI 簡單學 12/1 活動頁標免費，票種及收件仍待核。台灣其他課程與公開活動線索沿前輪交接。 [主辦 Luma](https://luma.com/aic-ta-12-7_main) [清華課程](https://mooc.nthu.edu.tw/course/info/459) [AI 簡單學](https://www.accupass.com/event/2611220448431990581999)
+
+### 品質與發布
+
+由基準與實際 JSON 差異計算批次、README 及下次佇列基準。保留全部既有 ID、首次收錄時間及來源網址。既有政策歷史 3,051 筆逐筆保留，新增 6 筆。本輪品質修正集中於卡片的實際入場條件、用量及來源適用範圍。本機 `make check`、`make check-ui` 與 Chrome 390px／1280px 批次卡片皆通過。公開驗收以同一提交的 Frontend QA、Pages、公開資產逐位元比對和 390px／1280px 批次卡片核對為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)

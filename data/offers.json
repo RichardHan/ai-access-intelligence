@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T06:13:47+08:00",
-  "scope": "2026-11-25 06:06–2026-11-25 06:13 Asia/Taipei 局部複核 4 筆既有紀錄，新增 1 筆，整筆追查失敗 0 筆，其餘 1,233 筆既有紀錄未完成本輪複核。更正 Laminar Signals 與 Cognee 的額度及計費，補 Fireflies 會議儲存口徑與工研院 AOCAI 班次，新增 Fireflies Talk 個人聽寫。",
+  "updated_at": "2026-11-25T07:13:54+08:00",
+  "scope": "2026-11-25 07:06–2026-11-25 07:13 Asia/Taipei 局部複核 4 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆，其餘 1,234 筆既有紀錄未完成本輪複核。補 OpenAlex 無金鑰預算與全文入口、Gamma 點數效期、AI21 自助入口及 Memobase 計量證據，新增清華磨課師與 Lovable 諮詢。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -40654,7 +40654,7 @@
     {
       "id": "ai21-trial-duration-conflict",
       "title": "AI21：免卡10美元，7天與3個月文件衝突",
-      "summary": "官方定價頁仍列新戶US$10免卡、7天；官方用量文件仍列新戶US$10可用三個月，期限衝突未解，不承諾90天或推定變更日。到期或額度耗盡後需提供有效帳單資料才能續用，之後按月依用量收費。官方條款（2026-08-02更新）限試用於internal evaluation，並要求成年且具締約能力。",
+      "summary": "AI21 定價頁列新戶 US$10 免卡、7 天。用量與帳戶文件皆寫三個月；個別帳戶的適用期限待核。帳戶文件的公開註冊連結在 11/25 導向 AI21 企業首頁，自助開通待確認。依用量文件，試用到期或用盡後須先提供有效帳單資料，續用按月計量。",
       "categories": [
         "FREE",
         "EASY-EFFORT"
@@ -40679,17 +40679,17 @@
       "valuation_scenario": null,
       "cancellation": "未提供付款資訊的試用到期/耗盡不能繼續；不是保證自動續費",
       "usable_duration": "官方7天與3個月衝突，未確定",
-      "access_risk": "資格、服務條款、試用結束或額度耗盡可能失去存取；未讀個人帳戶",
-      "verified_at": "2026-11-15T05:20:00+08:00",
+      "access_risk": "公開註冊連結導向 AI21 企業首頁。尚未核實現行自助入口、台灣開通及實際到期日。",
+      "verified_at": "2026-11-25T07:09:21+08:00",
       "discovered_at": "2026-10-24T07:05:29+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-15T05:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T07:10:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
-        "account_eligibility": "新帳戶；條款要求至少18歲（或所在地成年年齡）、具締約能力且未曾被停權或移除。",
+        "service_availability": "定價和官方文件可讀。帳戶文件所連公開註冊網址本輪轉企業首頁，自助開通及既有帳戶存取待核。",
+        "account_eligibility": "新帳戶；條款要求至少18歲（或所在地成年年齡）、具締約能力且未曾被停權或移除。 帳戶文件以組織為帳戶，每個電郵可屬一個組織。",
         "billing_country": "未核",
         "identity_residency": "未核；地區標籤不代表該國所有人均符合",
         "terms_restrictions": "2026-08-02版條款限試用internal evaluation且得隨時終止；不允許繞過額度／存取限制。到期或額度耗盡後需有效帳單資料才可繼續，後續按使用量月結。",
@@ -40698,26 +40698,41 @@
       "unknowns": [
         "個別console究竟7天或三個月",
         "政策實際變更日",
-        "台灣註冊與付款國支援"
+        "台灣註冊與付款國支援",
+        "公開自助註冊的有效替代入口與實際發額"
       ],
       "sources": [
         {
           "url": "https://www.ai21.com/pricing/",
-          "scope": "定價頁 $10 額度 7 天有效與免卡標示",
-          "evidence": "2026-11-15 重讀定價頁：$10 credits for 7 days，No credit card needed。",
-          "accessed_at": "2026-11-15T05:20:00+08:00"
+          "scope": "定價頁新戶免卡、US$10、7 天",
+          "evidence": "Free Trial 卡片列 7 天 US$10 額度，無須信用卡。",
+          "accessed_at": "2026-11-25T07:09:21+08:00"
         },
         {
           "url": "https://docs.ai21.com/docs/usage-cost",
-          "scope": "用量文件 $10 額度三個月有效標示",
-          "evidence": "2026-11-15 重讀用量手冊：New accounts are given a $10 credit good for three months。",
-          "accessed_at": "2026-11-15T05:20:00+08:00"
+          "scope": "用量文件的新戶額度與續用計費",
+          "evidence": "用量章列新戶 US$10 可用三個月，試用超額或到期須提供有效帳單資料續用，後續自帳戶建立日按月計量。",
+          "accessed_at": "2026-11-25T07:09:21+08:00"
         },
         {
           "url": "https://www.ai21.com/terms-policies/terms-of-use/",
           "scope": "2026-08-02 服務條款之評估用途與隨時終止權",
           "evidence": "2026-11-15 重讀條款：年滿 18 歲、限 internal evaluation、AI21 得隨時終止。",
           "accessed_at": "2026-11-15T05:20:00+08:00"
+        },
+        {
+          "url": "https://docs.ai21.com/docs/managing-your-account",
+          "scope": "帳戶文件的三個月用量與組織資格",
+          "evidence": "帳戶章列新組織帳戶 US$10 有效三個月、續用需帳單資訊，同一電郵最多屬一個組織。",
+          "accessed_at": "2026-11-25T07:09:21+08:00",
+          "label": "AI21｜帳戶文件"
+        },
+        {
+          "url": "https://studio.ai21.com/sign-up",
+          "scope": "帳戶文件的公開註冊連結轉址",
+          "evidence": "未登入 GET 經一次轉址，回到 https://www.ai21.com/ 企業首頁。未取得自助註冊表單。",
+          "accessed_at": "2026-11-25T07:09:21+08:00",
+          "label": "AI21 Studio｜公開註冊連結"
         }
       ],
       "record_type": "opportunity",
@@ -40731,7 +40746,7 @@
       "priority_tier": "B",
       "priority_note": "官方來源·需符合條件·零設定費·台灣未標記·≤15分鐘",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-15 05:15（Asia/Taipei）重讀官方定價頁、usage-cost 原文與 2026-08-02 版服務條款：新註冊 US$10 額度免卡未變；定價頁（7天）與用量手冊（3個月）之文件矛盾持續存在；未開新帳戶、未查個別 console 到期日、未呼叫 API。",
+      "verification_scope": "2026-11-25 局部實讀 AI21 定價、用量與帳戶文件，並沿公開註冊連結核對轉址。個別額度及到期、有效自助路徑、台灣資格與 API 服務狀態待核；先前取用條款仍列在來源。",
       "cost_note": "新戶US$10免卡。Jamba Mini input US$0.20/M、output US$0.40/M tokens；Jamba Large input US$2/M、output US$8/M。超過試用額或期滿須有效billing資訊才續用，後續依帳戶建立日月結實際用量；第三方雲平台各自計價。",
       "legal_and_terms_note": "條款仍Last Updated August 2, 2026，18歲/所在地成年且可締約、無先前停權；Evaluation Products只限internal evaluation且可隨時終止；不得繞過usage/rate/access limits及未授權競品benchmark。一般條款不以Customer Data訓練foundation/generally available模型，另約除外。未見台灣明確資格清單，不能推定Yes。"
     },
@@ -58256,7 +58271,7 @@
     {
       "id": "gamma-free-credits-taiwan-unverified",
       "title": "Gamma Free：一次400 AI credits，台灣資格待核",
-      "summary": "官方Help再次確認「Each new Free user receives 400 credits when initially signing up」，並補足：Free點數不刷新、用完只能靠推薦或升級；訂閱到期後方案點數降回Free的400；推薦每成功一次200點、每位免費使用者同時上限2,000點、花掉可再賺；點數不可跨帳號轉移。定價頁仍標「No credit card required」，價格卡為動態渲染未取得金額。條款（2025-09-09）§15明言對美國以外不作可用性聲明，仍未列台灣。",
+      "summary": "Gamma Free 新戶免卡，起始 400 AI 點無到期日，使用後不刷新。合格推薦每次 200 點，同時最多持有 2,000 點。Free 無法單買點數，須先升付費方案；另購點數與月配點數分開，取消後最多保留至取消日滿一年。台灣帳戶註冊與付費支付仍待核。 Gamma 的行動版地區說明與台灣 App Store 列示有差異。",
       "categories": [
         "FREE",
         "QUALIFICATION"
@@ -58271,35 +58286,35 @@
       "taiwan": "Unknown",
       "regions": [],
       "verification": "Official",
-      "usage_type": null,
+      "usage_type": "Free 新戶一次性 400 AI 點數，另有合格推薦機制。",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": null,
-      "usable_duration": null,
-      "access_risk": "未核台灣服務資格；不以缺少排除條款推定台灣已支援。",
-      "verified_at": "2026-11-16T03:10:00+08:00",
+      "cancellation": "付費方案取消後，另購點數保留至取消日起一年；月配點數在付費方案結束時按 Free 口徑重設為 400 點。",
+      "usable_duration": "Free 無試用倒數，初始 400 點無到期日、不刷新。另購點數適用獨立效期。",
+      "access_risk": "Gamma Help 稱行動版目前限美加，Apple 台灣店面有同 App ID 的免費下載頁及內購項目。台灣實裝、網頁註冊與 400 點入帳待核。",
+      "verified_at": "2026-11-25T07:12:01+08:00",
       "discovered_at": "2026-10-25T12:48:13+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-08T16:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T07:15:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "官方免費方案存在；此筆保留為待核線索，不宣稱台灣可用。",
         "account_eligibility": "新Free用戶註冊獲一次400 credits；條款要求至少16歲、具締約能力並遵守適用法律。",
-        "billing_country": "官方Free定價明列免信用卡；台灣付費支付資格未核。",
+        "billing_country": "Free 免信用卡。Gamma Help 稱供應商無一般發卡國封鎖，仍受支付處理與發卡行條件影響。台灣扣款及稅額待核。",
         "identity_residency": "未找到官方明列台灣支援/資格清單，Unknown不等同不可用。",
         "terms_restrictions": "Free額度不刷新、按成員個別配置且不可跨帳戶轉移。每次合格推薦200點，同時最多持有2,000點，花掉可再賺，非終身上限。條款不保證美國境外可用；特定Free Trial可能依註冊時明示轉付費，不可混同常態Free。",
-        "taiwan_note": "台灣地區或個人資格未有可用官方證據；待直接向供應商官方地區/帳務資訊查核。"
+        "taiwan_note": "Apple 台灣店面顯示 Gamma iOS App，供應商 Help 仍列美加限定。台灣實裝、Android、網頁新戶領點及扣款待核。"
       },
       "unknowns": [
-        "初始400點是否有到期日（Help只說不刷新）",
         "台灣是否可註冊並實際取得400點的官方佐證",
-        "台灣付費支付資格與各方案當地稅額"
+        "台灣付費支付資格與各方案當地稅額",
+        "iOS 台灣實際安裝與帳戶資格，以及 Gamma 行動版說明是否更新"
       ],
       "sources": [
         {
@@ -58323,6 +58338,41 @@
           "scope": "本輪局部複核：年齡、締約能力、國際使用與Free Trial界線；不作法律判斷",
           "evidence": "2026-10-29 18:06–18:07 Asia/Taipei查閱：靜態讀取403，未登入Chromium成功開啟條款；§2.3至少16歲且具締約能力，§15不保證美國以外適用或可用；§9.4特定Free Trial僅於註冊明示時自動轉付費，不能推及常態Free。條款頁Effective Date為2025-09-09，非本輪政策公告日；台灣資格仍未明列。｜較早紀錄：2026-10-25 12:46–12:48 Asia/Taipei直接查閱：至少16歲且有締約能力；未找到台灣免費方案的國別適用承諾。",
           "accessed_time_range": "2026-10-29T18:06:34+08:00–2026-10-29T18:07:26+08:00"
+        },
+        {
+          "url": "https://help.gamma.app/en/articles/8077107-how-can-i-upgrade-my-gamma-subscription",
+          "scope": "Free 起始點數、信用卡、效期與刷新",
+          "evidence": "新戶從免卡、無試用時限的 Free 開始，有 400 點；初始點數無效期，Free 點數不刷新。",
+          "accessed_at": "2026-11-25T07:08:43+08:00",
+          "label": "Gamma Help｜免費方案與升級"
+        },
+        {
+          "url": "https://help.gamma.app/en/articles/12466653-how-do-i-purchase-more-credits",
+          "scope": "加購門檻、價格及取消後點數效期",
+          "evidence": "Free 不能加購。加購 Help 列 1,500 點 $6 起，確認前見適用幣別。另購點數於取消日起一年到期，此規則限另外購買的點數。",
+          "accessed_at": "2026-11-25T07:08:43+08:00",
+          "label": "Gamma Help｜加購點數"
+        },
+        {
+          "url": "https://help.gamma.app/en/articles/11048302-what-payment-methods-does-gamma-accept",
+          "scope": "發卡國與支付處理的適用範圍",
+          "evidence": "Gamma 說明其本身不按國家封鎖卡片，仍有 Stripe 及發卡行限制與拒絕情形。此處未個別確認台灣適用。",
+          "accessed_at": "2026-11-25T07:08:43+08:00",
+          "label": "Gamma Help｜支付方式"
+        },
+        {
+          "url": "https://help.gamma.app/en/articles/11016450-does-gamma-have-a-mobile-app",
+          "scope": "原廠行動版地區說明與 iOS 連結",
+          "evidence": "Gamma Help 將行動版標為 early access，列美國及加拿大，所連 iOS App ID 為 6768404578。",
+          "accessed_at": "2026-11-25T07:12:01+08:00",
+          "label": "Gamma Help｜行動版"
+        },
+        {
+          "url": "https://apps.apple.com/tw/app/gamma-ai-slides-design/id6768404578",
+          "scope": "Apple 台灣店面列示與原廠 App ID",
+          "evidence": "Apple 台灣店面列同一 App ID 6768404578，供應商 Gamma Tech, Inc.，標示免費下載並有內購。未實裝及登入。",
+          "accessed_at": "2026-11-25T07:12:01+08:00",
+          "label": "Apple 台灣｜Gamma iOS"
         }
       ],
       "record_type": "watchlist",
@@ -58336,8 +58386,9 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-16 03:04（Asia/Taipei）重讀 Gamma Help credits 全文與定價頁：確認新 Free 用戶一次 400 credits、Free 不刷新、推薦每次 200 且同時上限 2,000、AI 動作失敗或要求澄清不扣點、定價仍 No credit card required。未註冊、未使用推薦，400 點到期日與台灣資格未核；條款頁未重讀。",
-      "quota_note": "新 Free 用戶一次性 400 credits、不刷新；推薦每次 200、同時上限 2,000、可重複賺取；AI 動作失敗／要求澄清不扣點；初始 400 點效期未公布。"
+      "verification_scope": "2026-11-25 局部實讀 Gamma 三份官方 Help，核對初始 400 點效期、購點及取消後保留規則與一般支付政策，另比對 Gamma 行動版 Help 與 Apple 台灣店面的同一 App ID。台灣註冊、扣款、稅額及個別帳戶額度待核。",
+      "quota_note": "初始 400 點不過期、不刷新。合格推薦每次 200、同時上限 2,000，花掉後可再賺。AI 動作失敗或要求澄清不扣點。",
+      "cost_note": "Free 免卡、無月費且無法加購。加購說明列 1,500 點 $6 起，結帳前顯示適用幣別及金額。"
     },
     {
       "id": "fathom-free-meeting-summary-taiwan-unverified",
@@ -59852,7 +59903,7 @@
     {
       "id": "memobase-free-credit-operation-conflict",
       "title": "Memobase免費額度：首頁500 credits與條款50 operations不一致",
-      "summary": "首頁 2026-11-16 明列 Free 為「$0 /forever、500 credits / month」，並載「Monthly limits reset on the first of each month」、store_memory=10 credits、search=1 credit、forget_memory 免費；公開條款則以 50 operations 描述免費層，兩者單位不同（credits vs operations）且換算關係官方未說明，衝突未解。兩頁對「每月第一日重置」一致，時區未載。",
+      "summary": "首頁列 Free 每月 500 credits，儲存一次 10 點、搜尋一次 1 點、刪除免費。條款列每月 50 operations。隱私政策另說明按月記錄記憶操作次數以執行帳務額度。實際換算或是否同時執行兩個上限仍未釐清。首頁和條款列每月第一日重置，時區未載。",
       "categories": [],
       "views": [],
       "setup_cost_usd": 0,
@@ -59870,13 +59921,13 @@
       "valuation_scenario": null,
       "cancellation": null,
       "usable_duration": "每月第一日重置（首頁與條款一致）；時區未載。",
-      "access_risk": "首頁與條款額度單位不一；台灣個人帳戶未核",
-      "verified_at": "2026-11-16T05:07:00+08:00",
+      "access_risk": "免費方案上限存在兩種官方計量口徑，實際扣量、超額與台灣個別帳戶待核。",
+      "verified_at": "2026-11-25T07:08:43+08:00",
       "discovered_at": "2026-10-25T15:06:18+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-12-10T09:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T07:15:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "首頁、文件、條款及 dashboard 路徑在線；文件仍提供免費註冊與 MCP 連接流程，未登入測試。",
@@ -59887,7 +59938,7 @@
         "taiwan_note": "Unknown：未明列排除不等於明確支持台灣。"
       },
       "unknowns": [
-        "credits 與 operations 的換算關係官方未說明",
+        "credits 與 operations 的換算關係及是否同時實施兩個門檻",
         "免費層是否綁卡、超額處理",
         "重置時區",
         "管轄法域（條款僅寫 applicable law）"
@@ -59895,15 +59946,15 @@
       "sources": [
         {
           "url": "https://memobase.ai/",
-          "scope": "Free 方案額度、計費單位與重置（2026-11-09 14:16 重讀）",
-          "evidence": "2026-11-16 重讀：「Free $0 /forever」「500 credits / month」「Monthly limits reset on the first of each month」「store_memory = 10 credits, search = 1 credit」「forget_memory (always free)」；Pro「$9 /per month」「5,000 credits / month」；Unlimited「$29 /per month」。較早紀錄同額度。",
-          "accessed_at": "2026-11-16T05:03:00+08:00"
+          "scope": "首頁免費點數、操作扣量與重置",
+          "evidence": "Free 每月 500 credits，儲存 10、搜尋 1、刪除免費，每月第一日重置。此前同一頁已記錄相同口徑。 先前同頁亦記載 Pro US$9／月含 5,000 點、Unlimited US$29／月。",
+          "accessed_at": "2026-11-25T07:08:43+08:00"
         },
         {
           "url": "https://memobase.ai/terms",
-          "scope": "衝突額度（50 operations）與重置條款（Last updated: March 2, 2026，2026-11-09 重讀未變）",
-          "evidence": "2026-11-16 重讀：「Last updated: March 2, 2026」；§5「The Free plan includes 50 operations per month at no charge.」「Operation counts reset on the first day of each calendar month.」；至少 13 歲、禁止共享帳戶及繞 rate limits；付費訂閱自動續訂。",
-          "accessed_at": "2026-11-16T05:03:00+08:00"
+          "scope": "條款免費操作額度與付費續訂",
+          "evidence": "2026-03-02 版 §5 列每月 50 次免費操作，每個曆月第一天重置。付費按月自動續訂，除非於續訂日前取消。",
+          "accessed_at": "2026-11-25T07:08:43+08:00"
         },
         {
           "url": "https://memobase.ai/docs",
@@ -59916,6 +59967,13 @@
           "scope": "帳戶入口存續",
           "evidence": "可取得 My Memories 頁面標題；靜態內容未呈現登入後額度、綁卡或台灣資格。",
           "accessed_at": "2026-11-08T09:20:00+08:00"
+        },
+        {
+          "url": "https://memobase.ai/privacy",
+          "scope": "隱私政策的額度計量與保留",
+          "evidence": "2026-03-02 版 §2、§3、§7 記載按月計算記憶操作次數作帳務額度控管，計數每月重置，未釋出與點數的換算。",
+          "accessed_at": "2026-11-25T07:08:43+08:00",
+          "label": "Memobase 隱私政策"
         }
       ],
       "record_type": "watchlist",
@@ -59924,7 +59982,7 @@
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
-      "verification_scope": "2026-11-16 05:03–05:07 重讀 memobase.ai 首頁定價區與 /terms：Free 仍首頁 500 credits/月、條款 50 operations/月（條款版次仍 2026-03-02），每月 1 日重置一致，衝突未解；未登入實測餘額、未核綁卡與時區。"
+      "verification_scope": "2026-11-25 局部實讀 Memobase 首頁、服務條款和隱私政策，核對 500 credits、50 operations、按月重置及操作次數用於額度控管。未登入查帳戶餘額、綁卡、扣點或台灣資格。"
     },
     {
       "id": "camber-student-compute-agent-monthly",
@@ -79540,7 +79598,7 @@
     {
       "id": "openalex-free-daily-api-budget",
       "title": "OpenAlex API：免費金鑰每日 US$1 用量，免付款方式",
-      "summary": "OpenAlex（美國 501(c)(3) 非營利）採「資料免費、服務收費」：建立免費帳號即取得 API key，含每日 US$1 用量、免付款方式，每日 UTC 午夜重置；新帳號前 US$1 另有節流（每 5 分鐘最多 US$0.10）。無 key 仍可呼叫但每秒 10 次、免費 key 每秒 30 次，語意搜尋每秒 1 次。全部紀錄為 CC0 公有領域，可商用、可下載每季更新的全量 snapshot；付費 prepaid 只在免費日額度用完後才扣，且自最後一次購買起 3 個月到期。這是研究資料與語意檢索 API（非模型推論），適合 RAG、書目計量與機構分析；US$1 對應的請求次數隨查詢型態變動，官方另列 example costs。",
+      "summary": "OpenAlex 免費 API 金鑰每日有 US$1 用量，免付款方式；無金鑰每日 US$0.10，均在 UTC 午夜重置。瀏覽 OpenAlex 網站與 API 共用預算。單筆書目查詢免費，搜尋通常按用量扣額；有快取全文的項目可用免費金鑰按次下載。新戶首 US$1 受節流，一般速率為無金鑰每秒 10 次、免費金鑰每秒 30 次，語意搜尋每秒 1 次。預付額度用完免費日額度後才扣，最後購買起三個月到期。",
       "record_type": "opportunity",
       "status": "active_verified",
       "verification": "Official",
@@ -79557,7 +79615,7 @@
       "effort_minutes_max": 15,
       "effort_basis": "分析者估計：註冊帳號、收驗證信、建立 API key",
       "taiwan": "Unknown",
-      "usage_type": "每日 US$1 API 用量預算（UTC 重置）",
+      "usage_type": "金鑰每日 US$1，無金鑰 US$0.10。網站和 API 共用，UTC 午夜重置。",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
       "usable_benefit_usd": null,
@@ -79566,43 +79624,56 @@
       "valuation_scenario": null,
       "cancellation": "免費帳號無需付款方式、無訂閱可取消；加購 prepaid 為自願且到期作廢。",
       "cost_note": "API 免費層 US$0；超過每日 US$1 需自購 prepaid（US$1 起）或年費方案（Member US$5,000／年起）。",
-      "usable_duration": "每日自由重置；免費層無到期日，但官方保留調整定價權利（現行版本頁面標 Last updated November 3, 2026）。",
-      "access_risk": "US$1 用量換算成請求數隨查詢複雜度變動；新帳號有 5 分鐘 US$0.10 節流；語意搜尋僅 1 RPS；只提供學術中繼資料，不含全文（PDF sync 需 Member+ 以上）。",
-      "verified_at": "2026-11-09T17:30:50+08:00",
+      "usable_duration": "日用量於 UTC 午夜重置，即台北時間每日 08:00。",
+      "access_risk": "每日預算會受操作與重排影響。新帳戶首 US$1 最多每 5 分鐘花 US$0.10。全文下載須有快取檔且有 API 金鑰，整庫 PDF 同步是付費加購。",
+      "verified_at": "2026-11-25T07:09:21+08:00",
       "discovered_at": "2026-11-09T17:30:50+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-12-09T17:30:50+08:00",
+      "next_review_at": "2026-12-25T07:09:21+08:00",
       "deadline_at": null,
       "expires_at": null,
       "eligibility": {
-        "service_availability": "help.openalex.org 公開列定價與每日重置規則；API 可直接呼叫，無 key 亦可。",
-        "account_eligibility": "以可收信 email 建立免費帳號並驗證即可取得 key；官方未設學籍、機構或審核門檻。",
+        "service_availability": "基本 API 可不帶金鑰，公開文件列按日計價與重置。有快取全文者可持免費金鑰逐檔下載。",
+        "account_eligibility": "帳戶免費。API 金鑰需驗證電子郵件後生效，官方文件未列學籍、機構或審核門檻。",
         "billing_country": "免費層免付款方式；付費 prepaid 需付款，台灣卡片與稅務未核。",
         "identity_residency": "官方未公布國別限制；台灣未點名。",
-        "terms_restrictions": "資料為 CC0，可商用與再散布；呼叫須遵守速率限制；sync filters 需 Member+／Partner 方案。",
+        "terms_restrictions": "OpenAlex 書目紀錄為 CC0。API 受速率及每日用量限制，全文檔案另看原作品授權；整庫 PDF sync 是 Member+／Partner 的付費加購。",
         "taiwan_note": "Unknown；官方定價與 API 文件未列地區限制，但也未點名台灣。"
       },
       "unknowns": [
-        "無 key 的每日預算金額未直接寫出（僅稱 key 可提高 10 倍）",
-        "US$1 對應多少請求需看 example costs 頁逐項換算（本輪未逐項核）",
+        "混合查詢、網站額外分面與重排會改變實際扣額",
         "付費與稅務對台灣使用者的處理方式",
         "是否對特定國家或機構封鎖"
       ],
-      "verification_scope": "2026-11-09T17:30 實讀 OpenAlex 定價說明頁（Markdown 版）：免費 US$1/日、免付款方式、UTC 午夜重置、prepaid 僅在免費額度用完後扣且 3 個月到期、CC0、501(c)(3) 非營利、頁面 Last updated November 3, 2026。速率與節流數字來自同一站台的 authentication 頁（平行研究 17:22 讀取）。未註冊、未取得 key、未實測呼叫。",
+      "verification_scope": "2026-11-25 局部實讀 OpenAlex 定價、認證、計價範例與 Fulltext，核對免費預算、網站共用、速率及單檔全文。未註冊、未呼叫 API；台灣帳戶、付款及稅務仍待核。",
       "sources": [
         {
           "url": "https://help.openalex.org/access/pricing/",
-          "scope": "免費每日 US$1、免付款方式、重置時間、CC0 與付費層",
-          "evidence": "「Create a free OpenAlex account and you get an API key with $1 of usage per day — no payment method required.」「The budget resets every midnight UTC」「A new free account spends its first $1 a little more slowly, at up to $0.10 every 5 minutes」「Prepaid usage is only drawn down after your free daily budget runs out, and it expires 3 months after your most recent purchase」「Every record is released under a CC0 public-domain license」；頁面標 Last updated November 3, 2026。",
-          "accessed_at": "2026-11-09T17:30:50+08:00"
+          "scope": "免費金鑰用量、付款資料、重置和預付",
+          "evidence": "免費金鑰每日 US$1、免付款方式，UTC 午夜重置。免費額度用完後才扣預付餘額，最後一次購買起三個月到期。書目資料採 CC0。",
+          "accessed_at": "2026-11-25T07:09:21+08:00"
         },
         {
           "url": "https://help.openalex.org/api/authentication/",
-          "scope": "速率限制、免費 key 的每日預算倍數、語意搜尋與新帳號節流",
-          "evidence": "「free API key: it raises your daily budget 10×」；速率表「No API key | 10」「Free API key, or prepaid usage | 30」；「semantic search is 1 request per second」；「A new free account spends its first $1 at up to $0.10 every 5 minutes」。",
-          "accessed_at": "2026-11-09T17:22:17+08:00"
+          "scope": "速率、游標分頁與首筆免費額度節流",
+          "evidence": "無金鑰一般每秒 10 次、免費金鑰 30 次、語意搜尋 1 次。新戶首 US$1 每 5 分鐘可花 US$0.10；游標分頁超過第一頁須有金鑰。",
+          "accessed_at": "2026-11-25T07:09:21+08:00"
+        },
+        {
+          "url": "https://help.openalex.org/access/example-costs/",
+          "scope": "無金鑰日預算、網站共用與操作計價",
+          "evidence": "11/15 版列無金鑰每日 US$0.10，網站瀏覽與 API 共用預算。單一實體免費，普通搜尋 US$1／千次，快取全文下載 US$10／千次。",
+          "accessed_at": "2026-11-25T07:08:43+08:00",
+          "label": "OpenAlex Help｜計價範例"
+        },
+        {
+          "url": "https://help.openalex.org/access/fulltext/",
+          "scope": "逐檔全文下載與整庫同步的方案界線",
+          "evidence": "有快取全文時任何 API 金鑰皆可逐檔下載，免費金鑰也可，按日預算計價。同步整套全文檔案是 Member+／Partner 的付費加購。",
+          "accessed_at": "2026-11-25T07:09:21+08:00",
+          "label": "OpenAlex Help｜全文"
         }
       ],
       "priority_score": 20.6,
@@ -102083,33 +102154,168 @@
       "priority_score": 23.0,
       "priority_tier": "S",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知"
+    },
+    {
+      "id": "nthu-taica-key-technology-ai-public-mooc-2026",
+      "title": "清華磨課師 TAICA｜關鍵科技探索：人工智慧免費線上課",
+      "summary": "清華磨課師課號 459，由郭柏志帶領初學者認識機器學習、影像辨識、語言生成及可信任 AI。課程與 AI 學習履歷申請免費，報名及修課均列至 12/31。須登入清華磨課師報名，校方不受理此課程的線上成績單申請。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "usage_type": "人工智慧基礎線上課。",
+      "quota_classification": "UNKNOWN",
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "benefit_cost_ratio": null,
+      "verified_at": "2026-11-25T07:09:01+08:00",
+      "discovered_at": "2026-11-25T07:09:01+08:00",
+      "announcement_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
+      "deadline_at": "2026-12-31",
+      "cost_note": "清華課程頁列課程免費、AI 學習履歷申請免費。",
+      "usable_duration": "報名與開課欄均列至 2026/12/31，頁面未標關閉時刻。",
+      "eligibility": {
+        "service_availability": "清華磨課師公開課程頁，線上修習須依平台報名。",
+        "account_eligibility": "公開頁面向初學者，報名連結導向校方磨課師登入。",
+        "billing_country": "課程與 AI 學習履歷申請免費。",
+        "identity_residency": "公開課程頁未列國籍、居住或學籍門檻。",
+        "terms_restrictions": "可依平台流程申請 AI 學習履歷，校方不受理線上成績單申請。",
+        "taiwan_note": "台灣使用者可依公開課程入口報名，個別帳戶受理待核。"
+      },
+      "unknowns": [
+        "12/31 精確停收及課程關閉時刻、名額與實際受理狀態",
+        "課名標 2026 年 6–12 月，報名與開課欄的起始日期列 2025 年；對應關係待校方確認",
+        "個別學習履歷的取得、校際學分與證明資格"
+      ],
+      "verification_scope": "2026-11-25 直接實讀清華磨課師課號 459 的公開 HTML 正文，核對主辦、費用、期限、報名入口與學習履歷。未登入或測報名。",
+      "sources": [
+        {
+          "url": "https://mooc.nthu.edu.tw/course/info/459",
+          "scope": "課號 459、講師、課程費、報名及授課欄位",
+          "evidence": "標題為 2026 TAICA 關鍵科技探索，講師郭柏志。報名欄 2025/09/01 至 2026/12/31，開課欄 2025/09/08 至 2026/12/31。課程及 AI 學習履歷申請免費，報名導向清華磨課師登入。",
+          "accessed_at": "2026-11-25T07:09:01+08:00",
+          "label": "清華磨課師｜關鍵科技探索"
+        }
+      ],
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知"
+    },
+    {
+      "id": "aicollective-taipei-lovable-office-hours-2026",
+      "title": "The AI Collective Taipei｜12/7 Lovable 免費一對一諮詢",
+      "summary": "The AI Collective 的 Luma 主辦頁列 12/7 19:00–22:00 台北時間，以 Microsoft Teams 提供中英文 Lovable 專案諮詢。共 18 席，每人 10 分鐘，免費提出申請，經審核後由主辦電郵告知時段。其他活動頁的議程與 Lovable Pro 福利是否適用於此場次待主辦確認。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "usage_type": "一次 10 分鐘的一對一諮詢，公開活動說明列 18 席。",
+      "quota_classification": "UNKNOWN",
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "benefit_cost_ratio": null,
+      "discovered_at": "2026-11-25T07:09:55+08:00",
+      "verified_at": "2026-11-25T07:12:16+08:00",
+      "announcement_at": null,
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
+      "deadline_at": null,
+      "expires_at": null,
+      "usable_duration": "台北時間 2026/12/07 19:00–22:00，個人時段 10 分鐘，以主辦通知為準。",
+      "cost_note": "Luma 公開票券資料列 Standard 免費。Lovable 方案、活動點數及加購條件待確認。",
+      "access_risk": "申請須經主辦審核，Luma 未列公開停收時刻。ACCUPASS 同主持人的活動列 19:00–21:00 示範及提問，另提到 Pro 福利，是否適用於本諮詢待確認。",
+      "verification_scope": "2026-11-25 實讀主辦 Luma 的公開原始 HTML 及內嵌票券資料，核對日期、Teams、語言、名額、費用及審核流程。另讀 ACCUPASS 比對議程與福利。未送件，實際受理、錄取及兌換待核。",
+      "eligibility": {
+        "service_availability": "Microsoft Teams 線上，中文或英文皆可。",
+        "account_eligibility": "依 Luma 選可出席時段及填寫問題，審核後由主辦電郵通知。",
+        "billing_country": "Luma Standard 票為免費，Lovable 服務方案另依其適用條款。",
+        "identity_residency": "主辦 Luma 頁未列居住或國籍限制。",
+        "terms_restrictions": "每人一個 10 分鐘諮詢時段，共 18 席，須主辦審核。",
+        "taiwan_note": "主辦以台灣時間列線上活動，台灣使用者可依同一入口提出申請。"
+      },
+      "unknowns": [
+        "精確停收時刻及實際收件與錄取",
+        "ACCUPASS 公告的一個月 Pro 和 100 點，是否由 Luma 這個場次提供及其兌換條件"
+      ],
+      "sources": [
+        {
+          "url": "https://luma.com/aic-ta-12-7_main",
+          "scope": "主辦時段、語言、票種與審核",
+          "evidence": "主辦頁列 12/7 19:00–22:00 台北時間，Teams 中英一對一，每人 10 分鐘，共 18 席。公開票券資料為免費 Standard、要求審核、售罄欄為否。截止欄為 null。",
+          "accessed_at": "2026-11-25T07:12:16+08:00",
+          "label": "The AI Collective｜Luma 主辦頁"
+        },
+        {
+          "url": "https://www.accupass.com/event/2610241141411518111327",
+          "scope": "同主持人的另一公告及待釐清福利",
+          "evidence": "ACCUPASS 公告列 12/7 19:00–21:00 示範及自由提問，另提到一個月 Pro 含 100 點。與主辦 Luma 資料的時段與流程不同，福利適用範圍待主辦確認。",
+          "accessed_at": "2026-11-25T07:12:01+08:00",
+          "label": "ACCUPASS｜同主持人活動公告"
+        }
+      ],
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-25T06:13:47+08:00",
+  "latest_research_at": "2026-11-25T07:13:54+08:00",
   "last_research_run": {
-    "started_at": "2026-11-25T06:06:59+08:00",
-    "completed_at": "2026-11-25T06:13:47+08:00",
+    "started_at": "2026-11-25T07:06:48+08:00",
+    "completed_at": "2026-11-25T07:13:54+08:00",
     "reviewed_ids": [
-      "aocai-working-free-ai-courses-2026",
-      "cognee-free-memory-token-grant-conflict-watch",
-      "fireflies-free-auto-join-storage-credit-conflicts",
-      "laminar-free-gb-hard-cap-signals-conflict"
+      "ai21-trial-duration-conflict",
+      "gamma-free-credits-taiwan-unverified",
+      "memobase-free-credit-operation-conflict",
+      "openalex-free-daily-api-budget"
     ],
     "new_ids": [
-      "fireflies-talk-free-unlimited-dictation"
+      "aicollective-taipei-lovable-office-hours-2026",
+      "nthu-taica-key-technology-ai-public-mooc-2026"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1233
+    "unreviewed_existing_count": 1234
   },
-  "generated_at": "2026-11-25T06:13:47+08:00",
+  "generated_at": "2026-11-25T07:13:54+08:00",
   "reviewed_ids": [
-    "aocai-working-free-ai-courses-2026",
-    "cognee-free-memory-token-grant-conflict-watch",
-    "fireflies-free-auto-join-storage-credit-conflicts",
-    "laminar-free-gb-hard-cap-signals-conflict"
+    "ai21-trial-duration-conflict",
+    "gamma-free-credits-taiwan-unverified",
+    "memobase-free-credit-operation-conflict",
+    "openalex-free-daily-api-budget"
   ],
   "attempted_failed_ids": [],
   "new_ids": [
-    "fireflies-talk-free-unlimited-dictation"
+    "aicollective-taipei-lovable-office-hours-2026",
+    "nthu-taica-key-technology-ai-public-mooc-2026"
   ]
 }
