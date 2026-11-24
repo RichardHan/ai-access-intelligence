@@ -7667,3 +7667,33 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 程式逐筆比對 ID、首次收錄時間及來源。保留原有 3,014 筆政策歷史，追加 10 筆。兩個新案依主辦、名稱、日期、正規化網址和表單編號去重。未能讀取的個別來源留在證據缺口，本次八筆均有可讀的官方證據。資料品質修正限本輪記錄，沿用前端與既有工具。本機 make check、make check-ui、git diff --check 均通過。Chrome 390px／1280px 核對本輪卡片的來源、截止、費用與篩選。正式發布以同一 SHA 的 Frontend QA、Pages 部署以及公開站檔案與卡片核對為判據。
+
+
+## 2026-11-25 02:06–2026-11-25 02:13 Asia/Taipei｜N=1,231 · R=7 · A=2 · U=1,224 · attempted=0
+
+起點 `d1ae576`。主線與遠端一致，工作樹乾淨，無開放 PR 或既有維護鎖，前一提交的 Frontend QA 與 Pages 成功。本輪持有維護鎖。起始基準有 1,114 筆可行動、0 筆已到複核點、26 筆七日內到期（含 15 筆冷卻）、30 筆已有至少一個截止點過期（含歷史）。高風險 54 筆，為可行動紀錄中已到複核點、七日內截止、最近追查失敗、暫時不限量或 ID 含 conflict 的聯集。
+
+02:07–02:09 到點的全部 7 筆列入本輪，較晚案件依原排程。三位唯讀研究代理採 GPT-6.2 Sol（high），分查限時案件、計費／授權衝突及台灣機會。環境未提供 Gemini 3.8 Flash，主代理沿用會話配置並重讀採用來源。新案依主辦、活動名稱、日期、場次或表單識別碼及正規化網址去重。
+
+### 證據與變更
+
+- `ai-collective-taiwan-gemini-build-night-2026`｜Luma 顯示可提出參加請求並須主辦審核。確認免費、12/17 時地、約 40–50 人的活動規模及空間有限。精確上限、剩額、截止與實作 API 費用待核。 [主辦活動頁](https://luma.com/aic-ta-12-17)
+- `nthu-its-ai-certification-training-2027`｜補志工團保留名額流用、跨院備取抽籤、1/8 補考須於 1/7 23:59 前另向 CERTIPORT 台灣報名。活動 1317 的公開入口導向登入，未見剩額、錄取或個人繳款期限。 [清大公告](https://ccd.nthu.edu.tw/event/1317) [報名入口](https://ccd.nthu.edu.tw/regi/1317)
+- `google-cloud-tts-monthly-free-characters`｜依入門指南更正停用方式，可停用專案的 TTS API。產品頁列 WaveNet 月免費 100 萬，定價表列 400 萬且與 Standard 同 SKU。實際適用級距及是否共用待核。 [產品概覽](https://cloud.google.com/text-to-speech) [定價](https://cloud.google.com/text-to-speech/pricing) [入門指南](https://docs.cloud.google.com/text-to-speech/docs/get-started?hl=en) [帳單報告](https://docs.cloud.google.com/billing/docs/how-to/reports)
+- `wispr-flow-student-three-month-pro-annual-half`｜符合免卡年度 Student 資格的直接付費 Pro 得切換既有訂閱。Apple 須走原付款管道，三個月新 Pro 優惠的付款方式、首扣與台灣校域仍待核。 [學生促銷](https://wisprflow.ai/students) [支援中心](https://docs.wisprflow.ai/articles/1128761434) [服務條款](https://wisprflow.ai/terms-of-service)
+- `tripo-studio-free-200-monthly`｜定價列非商用，指南列署名及 IP 歸 Tripo，11/19 教學列 CC BY 4.0，11/13 正式條款按權利範圍列免署名商用。依正式條款，付費、刪除及變更可見性不撤回已生效的公眾授權。保留差異及台灣個案缺口。 [定價](https://www.tripo3d.ai/pricing) [指南](https://www.tripo3d.ai/product-doc/getting-started/pricing-credits) [官方教學](https://www.tripo3d.ai/blog/prompt-to-3d) [服務條款](https://www.tripo3d.ai/terms)
+- `tripo-api-free-credits-index-mismatch`｜公開價目列預購從 US$1 起。12/1 控制台美元數值是點數折算，僅供抵 API 及相關費用。失敗及取消任務可釋放凍結點數，官方公開頁仍無新戶贈額證據。 [開發者定價](https://developers.tripo3d.ai/en/pricing) [計費文件](https://developers.tripo3d.ai/en/docs/billing) [Studio／API 分池](https://www.tripo3d.ai/help/api-plugins/tripo-studiotripo-api)
+- `fgu-three-good-ai-innovation-contest-2026`｜主辦範本列作品說明書 PDF 一份、最多 10 頁及 10 MB，切結須全員親簽並授權主辦在指定用途內使用完整作品及其他提交素材。11/30 同為流程與開放公告的截止日期，10/1 與 10/9 開放口徑及報名費仍各自保留。 [主辦首頁](https://3goodai.fgu.edu.tw/) [官方消息](https://3goodai.fgu.edu.tw/News/Index) [主辦下載專區](https://3goodai.fgu.edu.tw/download)
+- `tacc-ntu-advanced-ai-safety-forum-2026`｜新收錄 12/6 臺大實體論壇，11/27 日期截止、按報名順序保留席位、以成功通知為準。短網址在網頁讀取器未能讀到表單，直接讀主辦表單正文成功。費用、精確截止時刻及實際收件待查。 [TACC 公告](https://www.tacc.tw/news/detail?id=75) [主辦官網](https://sites.google.com/g.ntu.edu.tw/2026-advanced-ai-safety-forum)
+- `advantech-yuntech-robotics-one-day-workshop-2026`｜新收錄 12/3 雲科大工作坊，免費審核制，以確認信為準。直接 HTTP 403，公開讀取器可讀主辦正文。票種、截止、名額和實際收件待核。 [研華主辦活動頁](https://www.accupass.com/event/2610160551252898232440)
+
+### 下一輪
+
+- 11/25 04:00 查數發部公務 AI Agent 研習，04:30 查 Microsoft Fabric 折抵券條款及可用名額。06:00 查東華場次選項與 Firebase 最後一輪配額（台北 11/26 02:00 截止）。09:00 延續 Code With AI 作品集、CyLeague、政大及其餘上輪交接，12:00 與 17:00 優先核對臺大閱讀場。Akamai、Fireworks 及阿里雲依各筆原排程。 [上一輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/d1ae5766fb528e38a34d4118854b5802fc2d1fed/MAINTENANCE.md#L7660) [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [臺大場次](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05)
+- 11/26 09:00 先核對前瞻論壇是否停收、費用、席次及 11/27 當日界線，再查雲科大票券窗口、Gemini Build Night 入口、清大 ITS 名額及佛光競賽有無時刻或補件公告。 [TACC 公告](https://www.tacc.tw/news/detail?id=75) [雲科大工作坊](https://www.accupass.com/event/2610160551252898232440) [Gemini Build Night](https://luma.com/aic-ta-12-17) [清大 ITS](https://ccd.nthu.edu.tw/event/1317) [佛光競賽](https://3goodai.fgu.edu.tw/News/Index)
+- 11/26 09:00 按紀錄追 Google WaveNet 官頁及同 SKU、Tripo Studio 授權口徑和 Wispr 學生資格。Tripo API 待 12/1 回查控制台顯示切換及是否有公開新戶額度。 [Google TTS 定價](https://cloud.google.com/text-to-speech/pricing) [Tripo Studio 條款](https://www.tripo3d.ai/terms) [Tripo API 計費](https://developers.tripo3d.ai/en/docs/billing) [Wispr 支援中心](https://docs.wisprflow.ai/articles/1128761434)
+- 亞洲大學物理人工智慧與機器人研討會的協辦公告列 11/19 截止，表單仍可讀，展延或候補訊號出現再追。直心健康 12/9 Gamma 線上課是 LINE 學習社群會員免費，待查會員資格、非會員費用及收件後再決定是否收錄。 [亞洲大學公告](https://sec.asia.edu.tw/p/406-1001-18078,r11.php?Lang=zh-tw) [協辦公告](https://www-test.cmuh.cmu.edu.tw/NewsInfo/NewsArticle?no=10204) [Gamma 主辦頁](https://www.accupass.com/event/2607290735458465803630)
+
+### 品質與發布
+
+依基準與本輪 JSON 差異核算批次與 README，保留既有 ID、首次收錄時間和來源網址。政策歷史保留 3,024 筆並追加 9 筆。品質改善採資料層修正，沿用既有介面、schema 和驗證工具。本機檢查包括 `make check`、`make check-ui`、卡片及來源在 390px／1280px 的檢查。發布核對以同一提交的 Frontend QA、GitHub Pages 部署、公開資產逐位元比對及公開站卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
