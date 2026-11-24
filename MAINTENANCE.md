@@ -7772,3 +7772,28 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 批次與 README 統計以基準及本輪實際紀錄差異產生，保留全部既有 ID、首次收錄時間和原來源網址。政策歷史保留 3,040 筆並追加 6 筆。品質改善落在資料欄位，讓精確截止、報名入口與地區規則可以在原有畫面中查閱。發布核對依同一提交的 Frontend QA 與 Pages 執行結果、公開資產及本輪卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 06:06–2026-11-25 06:13 Asia/Taipei｜N=1,237 · R=4 · A=1 · U=1,233 · attempted=0
+
+基準 `b1dc423`。台北時間 06:06 查主線與遠端一致、工作樹乾淨、無開放 PR 或既有維護鎖，前版 Frontend QA 與 Pages 皆成功。本輪持有維護鎖。起始佇列有 1,120 筆可行動、0 筆到複核點、29 筆七日內截止，其中 16 筆在冷卻期。全庫 30 筆已有至少一個截止點過期，含歷史。高風險 103 筆，按可行動紀錄的到期複核、七日內截止、最近整筆讀取失敗、暫時不限量，以及 ID 或狀態標為衝突取聯集。
+
+三位唯讀研究代理以 GPT-6.2 Sol high 分查臨近截止、11/16 尚有實質帳務或用量矛盾的舊案，以及台灣新案。環境未提供 Gemini 3.8 Flash，主代理沿用會話配置。Firebase 配額先沿用 04:08 成果及原排程。本輪採用的變更有主代理實讀官方頁交叉核對，早於排程的舊案只收有新證據的內容。
+
+### 證據與變更
+
+- `laminar-free-gb-hard-cap-signals-conflict`｜現行定價與兩份文件一致寫 Free 不含 Signals。Free 每帳期壓縮後 1 GB，硬停且拒收資料不回補。14 日 Pro 試用另含免用量費的匯入與 Signals，首扣、期滿切換及舊戶適用待核。10/12 官方比較文仍列一次 US$5；舊 Markdown 路徑的直接讀取有 403，官方 HTML 可讀。 [定價](https://laminar.sh/pricing) [用量文件](https://laminar.sh/docs/platform/usage-limits) [Signals](https://laminar.sh/docs/signals/introduction) [10/12 比較文](https://laminar.sh/article/llm-observability-pricing)
+- `cognee-free-memory-token-grant-conflict-watch`｜現行定價、帳務、入門與 FAQ 一致支持免卡一次 US$10、按 US$0.10／百萬 tokens 約 1 億。手動儲值最低 US$5，額外工作區 US$5／月，開通可能候補。9/28 文章仍載舊額度和舊費率，舊戶遷移待核。保留 ID，原觀察線索改列條件式機會。 [定價](https://www.cognee.ai/pricing) [帳務文件](https://docs.cognee.ai/cognee-cloud/functionality/account-and-billing) [入門](https://docs.cognee.ai/cognee-cloud/quickstart) [9/28 比較文](https://www.cognee.ai/cheapest-ai-memory-platforms-pricing)
+- `fireflies-free-auto-join-storage-credit-conflicts`｜儲存指南補明每人 400 分鐘合併全隊、無月重置、額滿須刪舊檔才可存取新會議。定價仍列每隊 400 分鐘。摘要扣逐字稿點或 AI 點、20 AI 點發放週期與單檔音訊 100／500 MB 繼續列明來源差異。 [定價](https://fireflies.ai/pricing) [儲存指南](https://guide.fireflies.ai/articles/4777633252-learn-about-meeting-storage-limits) [逐字稿點數](https://guide.fireflies.ai/articles/1055386295-learn-about-transcription-credits) [上傳指南](https://guide.fireflies.ai/articles/3893959957-how-to-upload-and-transcribe-audio-or-video-files-in-fireflies)
+- `aocai-working-free-ai-courses-2026`｜工研院 2326100064 是同計畫新班次，併入原案。12/18 日期級截止，12/21 至 2027/1/8 混成 30 小時，遴選通過免費，能到實體課者優先。即時收件及停收時刻待核。 [工研院班級頁](https://college.itri.org.tw/Lesson/LessonData/05604949-128D-418E-8253-9A9482CB1448)
+- `fireflies-talk-free-unlimited-dictation`｜新收錄免費不限量個人聽寫。台灣 App Store 有原廠 Talk 功能說明，iPhone 使用門檻為 iOS 18 與相應鍵盤權限。桌面原廠條款另列即時個人聽寫用途及資料處理。以功能、供應商、網址與 App ID 比對機會及歷史，現有會議轉錄案屬另一功能。個別台灣帳戶、Android 商店及實際輸出待核。 [產品](https://fireflies.ai/talk) [台灣 App Store](https://apps.apple.com/tw/app/fireflies-ai-note-taker/id6463164203) [功能條款](https://fireflies.ai/terms/talk)
+
+### 下一輪
+
+- 11/25 09:00 延續清華 AOCAI 11/27 文件地址、在職 AOCAI 班次、陽明交大班、Code With AI、CyLeague 及政大原佇列。12:00 查 Gemma 待評作品能否手動或自動選為終件，並核臺大閱讀場。東華兩份表單均仍列 12/5，11/17 校方二次通知只重申活動，18:00 查停收或展延。東華及 Gemma 本輪只追新訊號，沿用原核實時間。 [Gemma 評測公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [東華第二次通知](https://announce.ndhu.edu.tw/mail_display.php?timestamp=1794886103)
+- 11/26 02:05 查 Firebase 最後配額停收或展延，05:30 回查 Fabric 正式條款，06:15 查 Fireflies Free 儲存、摘要實扣、AI 點發放週期和音訊上傳口徑。其他時間依前輪交接。Laminar 12/8 追 Pro 試用轉換與舊戶，Cognee 12/10 追台灣與舊戶移轉。 [Firebase 規章](https://firebasehybridaihackathon.devpost.com/rules) [Fabric 公告](https://community.fabric.microsoft.com/blog/community_blog/data-days--certification-vouchers/5376271) [Fireflies 計費](https://guide.fireflies.ai/articles/9606045468-fireflies-billing-terms)
+- 新案線索留待追查：AI 簡單學 12/1 主辦頁標免費，公開票種、到期與收件待查。臺大生命教育 12/19 表單仍列該場，主辦頁稱額滿截止、表單前言列 10/2 截止，查逾期收件與剩額。直心健康 Gamma 社群會員及高科大產業新尖兵班沿前輪交接。 [AI 簡單學](https://www.accupass.com/event/2611220448431990581999) [臺大主辦頁](https://www.lec.ntu.edu.tw/platforms/activity_page/1/153)
+
+### 品質與發布
+
+依基準及實際資料差異產生批次與 README 統計。保留所有既有 ID、首次收錄時間及來源；既有政策歷史 3,046 筆，追加 5 筆。本輪品質修正集中在費用與用量口徑、可查的截止及台灣入口。本機 `make check`、`make check-ui` 及 Chrome 390px／1280px 本輪卡片檢查均通過。公開驗收以同一提交的 Frontend QA、Pages 成功、公開資產逐位元比對與 390px／1280px 卡片核對為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
