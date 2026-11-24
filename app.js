@@ -564,9 +564,9 @@ function createDetails(offer) {
   // 卡片正面已由 `latestAttemptFailed()` 不標「追查未成功」，但詳情若仍把舊失敗列為「最近來源追查」，
   // 就會在「核實時間 2026/11/14 09:18」正下方同時宣稱「最近來源追查 2026/11/09 17:46；…本輪未能重讀官方頁」
   // （2026-11-14 統計全庫 20 筆屬此類，含 kimi-free-web-app、qoder-lite、coze-free-builder-daily-credits）。
-  // 保留歷史追查內容不刪，但依最新證據是否仍為失敗區分標籤。
+  // 後續的核實可能來自其他來源，當時失敗的來源仍可能無法讀取。
   if (offer.last_review_attempt_at) {
-    const attemptLabel = latestAttemptFailed(offer) ? '最近來源追查' : '過往追查紀錄（後續已核實）';
+    const attemptLabel = latestAttemptFailed(offer) ? '最近來源追查' : '過往追查紀錄（後續有核實資料）';
     addRow(grid, attemptLabel, `${dateLabel(offer.last_review_attempt_at, true)}${offer.last_review_attempt_reason ? `；${offer.last_review_attempt_reason}` : ''}`);
   }
   details.append(grid, text('h4', '來源與支持的主張', 'detail-heading'));

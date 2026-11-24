@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-24T16:12:25+08:00",
-  "scope": "2026-11-24 16:06–2026-11-24 16:12 Asia/Taipei。局部複核 6 筆既有紀錄，新增 0 筆，整筆追查失敗 0 筆，其餘 1,216 筆既有紀錄未完成本輪複核。更新 IteraCompute 促銷截止、Fireworks 訓練收費範圍、Neon／Databricks 申請付款條件，以及 Nomic、Dust、Hugging Face 的方案限制。",
+  "updated_at": "2026-11-24T17:15:14+08:00",
+  "scope": "2026-11-24 17:06–2026-11-24 17:15 Asia/Taipei。局部複核 6 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆，其餘 1,216 筆既有紀錄未完成本輪複核。更新 Kaggle 免費運算與官方文件差異、四項活動的報名或參賽規則、Cities Deliver 城市條件，新增三重 AI 音樂及北科大教師工作坊。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -57725,7 +57725,7 @@
     {
       "id": "kaggle-free-notebook-compute",
       "title": "Kaggle Notebooks：免費GPU運算，官方列每週30小時浮動配額",
-      "summary": "官方GPU文件確認免費GPU與每週重置配額，列30小時或依需求與資源提高；不是無限或保證可用。Notebooks文件目前仍列P100及免費TPU，但TPU專頁明示下方硬體教學屬已不支援的舊版本，不能把T4 x2、TPU v3-8或TPU 30小時/週當作當期保證。GPU/TPU須門號驗證；限額、排隊與硬體依帳戶當下顯示。",
+      "summary": "Kaggle GPU 指南列免費運算配額每週重置，通常 30 小時，視需求或資源有時更高。官方文件對互動閒置中止分別寫 60 與 20 分鐘。P100 退役公告與仍列 P100 的使用文件並存。登入後硬體、排隊與台灣驗證待核。",
       "categories": [
         "FREE",
         "QUALIFICATION",
@@ -57749,9 +57749,9 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "免費Notebook本身無需取消付費訂閱；外接Google Cloud服務可能另行計費。",
-      "usable_duration": "官方GPU文件列每週重置30小時或更高（依需求與資源），互動session閒置60分鐘會終止；未發布免費方案終止日。",
-      "access_risk": "需可成功完成門號驗證；GPU可排隊，配額與硬體可變。官方TPU文件含明示已不支援之舊硬體內容，不得保證v3-8或T4 x2。未實測台灣門號。",
-      "verified_at": "2026-11-08T19:11:03+08:00",
+      "usable_duration": "GPU 文件列每週重置 30 小時或視供需調高。Notebooks 文件列 CPU／GPU 單次 12 小時、TPU 9 小時。互動閒置中止時間在 GPU 指南為 60 分鐘，在 Notebook 編輯說明為 20 分鐘。",
+      "access_risk": "硬體和排隊依資源與帳戶而異。P100 退役公告與指南仍列 P100 有落差。Kaggle 帳戶及門號驗證沿用較早來源，TPU 身分驗證細則與台灣門號待查。",
+      "verified_at": "2026-11-24T17:15:03+08:00",
       "discovered_at": "2026-10-25T12:35:00+08:00",
       "announcement_at": null,
       "effective_at": null,
@@ -57759,22 +57759,22 @@
       "expires_at": null,
       "previous_limit": null,
       "review_cadence": "monthly",
-      "next_review_at": "2026-11-24T17:00:00+08:00",
+      "next_review_at": "2026-12-24T17:00:00+08:00",
       "priority": "watch",
       "eligibility": {
-        "service_availability": "官方Notebooks與GPU文件提供免費運算；繁忙時GPU/TPU可能排隊，無資源可用保證。未取得明列台灣Notebook存取的官方地區清單。",
-        "account_eligibility": "須Kaggle帳戶；Kaggle Staff官方回覆要求GPU/TPU使用者完成Phone Verification。無學生或公司資格限定之公開要求；組織使用者每人須獨立帳戶且不得共用。",
+        "service_availability": "Kaggle 文件列免費 GPU／TPU 運算，繁忙時可能排隊。Kaggle 公告列 P100 於 2026-09-15 退役，Notebooks 文件仍列 P100 與 T4 x2 規格。實際裝置與地區支援依帳戶情況。",
+        "account_eligibility": "Kaggle 帳戶及門號驗證要求沿用較早 Staff 回覆。另有官方 TPU 公告摘要指向身分驗證要求，本輪未讀到完整正文。無學生或公司資格限定之公開要求；組織使用者每人須有獨立帳戶。",
         "billing_country": "免費Notebook無公布帳單國家或信用卡要求；外接需計費GCP服務不包含在零成本範圍。",
         "identity_residency": "須提供真實、完整、更新的註冊資料並符合訂約年齡／家長同意規定；台灣門號可否完成驗證未實測。",
         "terms_restrictions": "2025-06-22生效Terms限定own internal, personal, non-commercial use，非代表或為第三方利益；禁止多個活躍帳戶、帳號共用及cryptomining；資料、模型與競賽另受各自授權或規則約束。",
         "taiwan_note": "Taiwan Unknown：本次未取得明確涵蓋台灣Notebook/GPU與+886門號驗證的官方條文；不得以其他地區競賽規則或社群成功案例推定。"
       },
       "unknowns": [
-        "台灣Notebook/GPU服務地區支援及+886門號驗證成功率",
-        "登入後當期GPU硬體（未核實T4 x2）及帳戶實際配額",
-        "當期TPU硬體與配額；官方TPU頁列20小時/週、9小時/session，但同頁明示後續為已不支援舊版本教學，不能保證v3-8或30小時/週",
-        "免費運算方案首次公告與生效日期、未來終止日期",
-        "適用特定工作負載之台灣法律／監管狀態未獨立核實"
+        "台灣 Notebook／GPU 支援與 +886 門號驗證成功率",
+        "登入後可用硬體、實際 GPU／TPU 配額及排隊時間",
+        "官方兩份文件的互動閒置 60／20 分鐘差異、各 GPU 的身分驗證要求及 TPU 公告完整規則",
+        "免費運算方案首次公告、生效與未來終止日期",
+        "適用特定工作負載的台灣法律／監管狀態"
       ],
       "sources": [
         {
@@ -57807,6 +57807,48 @@
           "label": "Kaggle官方使用條款",
           "scope": "帳戶、非商業使用、費用與禁止行為",
           "evidence": "2026-10-25以瀏覽器讀取active version，Effective Date June 22, 2025。要求真實資料、每人帳戶、不得多個活躍帳戶；限own internal, personal, non-commercial use；禁止cryptomining。無成本版本開始收費前會通知。條款日期不是免費運算福利首次公告或生效日。"
+        },
+        {
+          "url": "https://www.kaggle.com/docs/efficient-gpu-usage.md",
+          "scope": "免費 GPU、浮動週額與閒置",
+          "evidence": "官方 Markdown 列每週重置，通常 30 小時，依需求與資源有時更高。此指南仍列 P100，並寫互動閒置 60 分鐘。",
+          "type": "official_document",
+          "accessed_at": "2026-11-24T17:08:26+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/docs/notebooks.md",
+          "scope": "Notebook 硬體規格、時數與付費 Colab 實驗",
+          "evidence": "文件列 CPU／GPU 單次 12 小時、TPU 9 小時，編輯時閒置 20 分鐘，並列 P100 和 T4 x2 的硬體規格。另載已付費的 Colab Pro／Pro+ 綁定後，在實驗中分別增加每週 15／30 GPU 小時。",
+          "type": "official_document",
+          "accessed_at": "2026-11-24T17:08:26+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/docs/tpu.md",
+          "scope": "TPU 文件週量、單次限制與舊教學",
+          "evidence": "頁首列 TPU 免費、每週最多 20 小時且單次最多 9 小時。頁面指明後續教學為 Kaggle 已不支援的舊 TPU 版本。",
+          "type": "official_document",
+          "accessed_at": "2026-11-24T17:08:34+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/product-announcements/735239",
+          "scope": "Kaggle P100 退役公告公開標題及摘要",
+          "evidence": "官方公告頁的標題與公開描述列 Kaggle P100 於 2026-09-15 退役。頁面完整討論未實讀，本來源限支持該退役日期。",
+          "type": "official_announcement_metadata",
+          "accessed_at": "2026-11-24T17:08:26+08:00"
+        },
+        {
+          "url": "https://docs.cloud.google.com/compute/docs/eol/p100-eos",
+          "scope": "Google Cloud 的 P100 終止支援",
+          "evidence": "Google Cloud 文件列其 P100 於 2026-09-15 結束支援。此文件適用 Google Cloud，Kaggle 的退役依其自身公告。",
+          "type": "official_document",
+          "accessed_at": "2026-11-24T17:14:53+08:00"
+        },
+        {
+          "url": "https://www.kaggle.com/discussions/product-announcements/670573",
+          "scope": "TPU 身分驗證公告摘要與正文缺口",
+          "evidence": "公告公開摘要提到要求身分驗證。完整正文未能讀取，無法核對實施日期、方法或 GPU 各型號條件。",
+          "type": "official_announcement_metadata",
+          "accessed_at": "2026-11-24T17:15:03+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -57820,9 +57862,10 @@
       "priority_score": 20.5,
       "priority_tier": "A",
       "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知·有資格門檻",
-      "verification_scope": "本輪僅重讀列明來源的免費額度、費用、資格與重置敘述；未登入、未申請、未付款，未核台灣個案資格與法律狀態。",
+      "verification_scope": "2026-11-24 台北時間局部複核。以官方公開 Markdown 核對免費運算、浮動週額、工作階段、P100 文件差異與另付費的 Colab 實驗。Staff 討論正文、帳戶裝置、台灣資格與門號仍待查。",
       "last_review_attempt_at": "2026-11-23T17:15:00+08:00",
-      "last_review_attempt_reason": "官方 Kaggle 說明頁面 https://www.kaggle.com/docs/efficient-gpu-usage 與 Notebooks 相關網址連線時回傳 Cloudflare reCAPTCHA 驗證頁面（RecaptchaChallengePageUi），依安全規範與硬紅線不繞過反爬蟲機制，保留既有 verified_at，排入下次重試"
+      "last_review_attempt_reason": "官方 Kaggle 說明頁面 https://www.kaggle.com/docs/efficient-gpu-usage 與 Notebooks 相關網址連線時回傳 Cloudflare reCAPTCHA 驗證頁面（RecaptchaChallengePageUi），依安全規範與硬紅線不繞過反爬蟲機制，保留既有 verified_at，排入下次重試",
+      "quota_details": "GPU 每週配額通常 30 小時、可能調高。TPU 文件頁首另列每週最多 20 小時及每次最多 9 小時，但後續教學屬已不支援的舊 TPU 版本，當期帳戶配額待核。已付費且成功綁定的 Colab Pro／Pro+ 實驗另列每週額外 15／30 GPU 小時。"
     },
     {
       "id": "google-colab-free-compute",
@@ -69266,12 +69309,12 @@
       "cancellation": "點數共同到期；公告未載自動續訂安排。若另購訂閱，須依付款協議及一般條款處理。",
       "usable_duration": "2026-11-23 00:00至11-29 23:59（UTC+8）；每期獎勵於該期結束時各自到期，不結轉。",
       "access_risk": "本期 M11W4 的點數於 11/29 23:59（UTC+8）到期。非商業限制沿用較早核讀的一般條款 VI.2；台灣資格與領取介面待核。",
-      "verified_at": "2026-11-24T01:11:49+08:00",
+      "verified_at": "2026-11-24T17:09:33+08:00",
       "discovered_at": "2026-11-07T13:05:48+08:00",
       "announcement_at": "2026-11-06T17:12:19+08:00",
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
       "expires_at": "2026-11-29T23:59:00+08:00",
       "priority": "watch",
       "eligibility": {
@@ -69288,7 +69331,7 @@
         "需卡、最低儲值及各模型點數換算",
         "首頁新戶贈點與每期贈點是否疊加，後續各期是否沿用同一領取流程"
       ],
-      "verification_scope": "2026-11-24 01:11:49 台北時間，局部核對：AutoClaw 英文 M11W4 公告確認 11/23–11/29、每帳戶 50M Tokens／5,000 Credits 與獎勵到期；台灣資格、付款與領取畫面未重核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。英文官方索引已列 M11W4，並核對活動公告的點數、一次限制與到期。台灣帳務、領取畫面及下期未核。",
       "sources": [
         {
           "url": "https://autoclaw.z.ai/blog/news/M11W4/",
@@ -69323,9 +69366,9 @@
         },
         {
           "url": "https://autoclaw.z.ai/blog/",
-          "scope": "索引是否有新一期",
-          "evidence": "2026-11-19 重讀英文 blog 索引：置頂是 M10W4，日期顯示 Nov 19 2026，正文期間是 October 26 to November 1。M11W3 仍在列表，寫 November 16 to November 22、100 million Tokens。未見 M11W4。",
-          "accessed_at": "2026-11-23T01:15:00+08:00"
+          "scope": "官方索引的當期活動入口",
+          "evidence": "原網址轉往英文索引，索引直接列出 11/23–11/29 的 50M Tokens 公告。下期公告仍未見。 較早紀錄（2026-11-23T01:15:00+08:00）：2026-11-19 重讀英文 blog 索引：置頂是 M10W4，日期顯示 Nov 19 2026，正文期間是 October 26 to November 1。M11W3 仍在列表，寫 November 16 to November 22、100 million Tokens。未見 M11W4。",
+          "accessed_at": "2026-11-24T17:09:33+08:00"
         },
         {
           "url": "https://autoclaw.z.ai/blog/news/M11W2/",
@@ -69348,9 +69391,9 @@
         {
           "url": "https://autoclaw.z.ai/en/blog/news/M11W4/",
           "label": "AutoClaw 2026-11-20 M11W4 公告",
-          "scope": "本期額度、期限與一次限制",
-          "evidence": "公告列 11/23 00:00 至 11/29 23:59 UTC+8，50M Tokens（5,000 Credits），每帳戶限領一次，獎勵同時到期。",
-          "accessed_at": "2026-11-24T01:11:49+08:00"
+          "scope": "本期額度、領取限制及截止",
+          "evidence": "11/20 官方公告列活動 11/23 00:00 至 11/29 23:59（UTC+8），每帳戶一次 50M Tokens／5,000 Credits，獎勵同時到期。 較早紀錄（2026-11-24T01:11:49+08:00）：公告列 11/23 00:00 至 11/29 23:59 UTC+8，50M Tokens（5,000 Credits），每帳戶限領一次，獎勵同時到期。",
+          "accessed_at": "2026-11-24T17:09:28+08:00"
         }
       ],
       "record_type": "watchlist",
@@ -90002,16 +90045,16 @@
       "savings_usd": null,
       "valuation_scenario": "第一名 NT$100,000（約 US$3,125，按 1 美元兌 32 新臺幣）、第二 NT$50,000、第三 NT$30,000、優等 2 隊各 NT$15,000、佳作 5 隊各 NT$8,000、評審特別獎 1 隊獲國網 GPU 資源值 NT$50,000；總池暫定 NT$300,000 含 GPU，主辦保留調整權。僅全隊於報名時具中華民國在學身分者可領獎金與 GPU；社會人士組僅獲獎狀。",
       "cancellation": "公費教育競賽，免繳報名費，無退費或續約問題",
-      "usable_duration": "主辦 11/2 公告寫報名延長至 2026-11-30 23:59:59（台北），時程表仍列舊截止 11/16，實際新隊報名待核。成果於 2027 年初評定。",
+      "usable_duration": "主辦 11/2 公告寫報名延長至 2026-11-30 23:59:59（台北），時程表仍列舊截止 11/16，實際新隊報名待核。成果於 2027 年初評定。 已報名隊伍的預測結果提交於 2026-12-04 23:59:59（台北）截止。",
       "access_risk": "學生需提供有效在學證明，得獎需配合成果發表及依所得稅法扣繳",
-      "verified_at": "2026-11-24T01:08:12+08:00",
+      "verified_at": "2026-11-24T17:11:26+08:00",
       "discovered_at": "2026-11-15T05:20:00+08:00",
       "announcement_at": "2026-09-01",
       "deadline_at": "2026-11-30T23:59:59+08:00",
       "expires_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T01:00:00+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
       "priority": "standard",
       "eligibility": {
         "service_availability": "AIdea 賽事頁仍在，但報名是否仍開放有三種官方說法並存。go.aicup.tw 要求登入，本次未確認表單能否送出。",
@@ -90042,9 +90085,9 @@
         },
         {
           "url": "https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699",
-          "scope": "延長公告、組隊提示及獎勵公開資料",
-          "evidence": "11/2 主辦公告寫 11/30 23:59:59，活動時程表仍寫 11/16，公開頁同時顯示倒數皆為 00 和 Non-open Topic。總獎勵暫定新臺幣 30 萬元，含價值新臺幣 5 萬元的國網 GPU；現金及實物僅限報名時全隊有中華民國學籍。 較早紀錄（2026-11-23T04:13:00+08:00；報名截止與延長公告、獎金分配、學生組／社會人士組領獎限制）：2026-11-19 19:16 繁中頁：11/02 公告延長至 11 月 30 日 23:59:59。時間表報名期間至 2026-11-16 23:59:59。距離組隊結束時間為 00。標非開放議題。總獎勵暫定新臺幣 300,000 元，含國網 GPU。；較早紀錄：2026-11-16 瀏覽器實讀：Begin 09/16、Register end 11/30、Closed 01/13；2026/11/02 公告「延長報名截止時間：即日起至 11 月 30 日（一）23:59:59 止」；First Place 1 team NT$100,000、Second NT$50,000、Third NT$30,000、Outstanding 2 teams NT$15,000、Honorable Mention 5 teams NT$8,000、Jury Special Award 1 team NCHC GPU valued NT$50,000；Prize only teams composed entirely of students with active student status in the Republic of China at registration；General Division 僅證書、無獎金或物質獎勵。",
-          "accessed_at": "2026-11-24T01:08:12+08:00",
+          "scope": "延長公告、舊時程、獎勵及預測提交規則",
+          "evidence": "11/02 公告延長報名至 11/30 23:59:59，時程表仍列 11/16，組隊倒數 00。預測提交至 12/4 23:59:59，每隊每個日曆日 3 次，最後一次有效提交供 Private 評測。期限皆為台北時間。 較早紀錄（2026-11-24T01:08:12+08:00）：11/2 主辦公告寫 11/30 23:59:59，活動時程表仍寫 11/16，公開頁同時顯示倒數皆為 00 和 Non-open Topic。總獎勵暫定新臺幣 30 萬元，含價值新臺幣 5 萬元的國網 GPU；現金及實物僅限報名時全隊有中華民國學籍。 較早紀錄（2026-11-23T04:13:00+08:00；報名截止與延長公告、獎金分配、學生組／社會人士組領獎限制）：2026-11-19 19:16 繁中頁：11/02 公告延長至 11 月 30 日 23:59:59。時間表報名期間至 2026-11-16 23:59:59。距離組隊結束時間為 00。標非開放議題。總獎勵暫定新臺幣 300,000 元，含國網 GPU。；較早紀錄：2026-11-16 瀏覽器實讀：Begin 09/16、Register end 11/30、Closed 01/13；2026/11/02 公告「延長報名截止時間：即日起至 11 月 30 日（一）23:59:59 止」；First Place 1 team NT$100,000、Second NT$50,000、Third NT$30,000、Outstanding 2 teams NT$15,000、Honorable Mention 5 teams NT$8,000、Jury Special Award 1 team NCHC GPU valued NT$50,000；Prize only teams composed entirely of students with active student status in the Republic of China at registration；General Division 僅證書、無獎金或物質獎勵。",
+          "accessed_at": "2026-11-24T17:11:26+08:00",
           "label": "AIdea 官方賽事頁"
         },
         {
@@ -90066,8 +90109,9 @@
       "priority_score": 21.4,
       "priority_tier": "S",
       "priority_note": "官方來源·官方說法有差異·免費·台灣Yes·時間未知·有資格門檻",
-      "verification_scope": "2026-11-24 01:08:12 台北時間，局部核對：AIdea 延長公告、舊時程、組隊倒數及獎勵分組均已核對。官方報名入口要求登入，仍無法由公開頁確認收件。",
-      "closes_at": "2026-11-30T23:59:59+08:00"
+      "verification_scope": "2026-11-24 台北時間局部複核。重讀賽事公告、時程表、獎勵上限及已報名隊伍的上傳規則。新隊實際受理與國網 GPU 發放規格仍待查。",
+      "closes_at": "2026-11-30T23:59:59+08:00",
+      "quota_details": "測試集預測每隊每個日曆日最多提交 3 次，Public 與 Private 共用次數。期限前最後一次有效提交會用於 Private 評測。國網 GPU 實際卡數及時數待核。"
     },
     {
       "id": "kaggle-google-agent-harness-ple-2027",
@@ -91513,15 +91557,15 @@
       "cancellation": "正式規則免申請費，無需捐款或購買。獲選後依補助協議及 24 個月期程執行。",
       "usable_duration": "24 個月；2026-11-29 Round 1 截止、2027-03-01 Round 2 截止、2027-04 公布。",
       "access_risk": "個人、政府機關、國家級機構與多邊組織不得直接申請；必須有城市政府夥伴 LOI；提案與溝通以英文為主；OFAC／制裁與當地法律審查；台灣無明文。不得為申請而付款給政府官員。",
-      "verified_at": "2026-11-24T02:09:19+08:00",
+      "verified_at": "2026-11-24T17:11:26+08:00",
       "discovered_at": "2026-11-16T03:12:00+08:00",
       "announcement_at": "2026-10-14",
       "deadline_at": "2026-11-29T23:59:00-05:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T02:09:19+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
       "eligibility": {
         "service_availability": "全球公開徵案，2026-10-14 開放；非洲、中東北非、亞洲、拉美加勒比、歐洲、北美與大洋洲的城市均可參與。",
-        "account_eligibility": "限合資格組織。大學的實驗室、中心或其他單位須透過大學申請。政府不能直接申請，每案須有城市政府夥伴承諾，第一輪須附意向書。營利組織須符合第 2.D 節的附加條件。",
+        "account_eligibility": "限合資格組織。大學的實驗室、中心或其他單位須透過大學申請。政府不能直接申請，每案須有城市政府夥伴承諾，第一輪須附意向書。營利組織須符合第 2.D 節的附加條件。 正式條款 §1.E 定義城市為人口至少 50,000、具有自身市政機關的自治都市社群。11/4 更新 FAQ 另列數個相鄰城市合計 50,000 人可列入考慮，每市均須意向書。當地語言意向書可附英文譯本。",
         "billing_country": "正式規則明列申請或獲選不需繳費、捐款或購買。補助以美元計，可能適用的稅費依正式條款處理。",
         "identity_residency": "全球開放，但不得位於或於美國 OFAC 全面制裁國家／地區營運；申請者須依其營運地法律具受領資格。台灣未被點名，也未排除。",
         "terms_restrictions": "專案須有慈善目的與 frontier AI 成分，受補助產出須開放授權。不得把補助直接撥給城市政府或購買實體設備。正式條款 §1.F 對合資格非營利組織列補助總額 15% 為間接成本上限。11/4 FAQ 改用扣除顧問費及次級補助後的直接成本 15%，並列營利組織不得回收間接成本。主辦頁指示兩者衝突時以正式條款為準。",
@@ -91530,16 +91574,16 @@
       "unknowns": [
         "台灣組織與台灣城市政府夥伴的個案受領資格",
         "兩版公開資料對間接成本 15% 計算基準不同，第二輪實際預算填法待主辦確認",
-        "城市定義對台灣都會區的個案適用"
+        "相鄰城市例外、城市定義與台灣縣市政府的個案適用"
       ],
-      "verification_scope": "2026-11-24 02:09 台北實讀。核對正式規則免申請費、第一輪美東時限及正式條款與 11/4 FAQ 的 15% 分母差異。台灣個案未核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。重讀主辦頁、正式條款 §1.E 與更新 FAQ 的城市門檻、跨城市申請和意向書規則。台灣個案、例外是否適用與受領仍待查。",
       "sources": [
         {
           "url": "https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services",
           "label": "官方來源",
-          "scope": "第一輪截止、補助區間、條款優先順序",
-          "evidence": "第一輪限 2026-11-29 美國東部 23:59。補助 US$500,000 至 US$2M，為期 24 個月。主辦明載 FAQ 與條款衝突時由條款優先。",
-          "accessed_at": "2026-11-24T02:09:19+08:00"
+          "scope": "第一輪時間與條款優先順序",
+          "evidence": "11/29 23:59 美東截止。官網指示 FAQ 與正式條款衝突時，以正式條款為準。 較早紀錄（2026-11-24T02:09:19+08:00）：第一輪限 2026-11-29 美國東部 23:59。補助 US$500,000 至 US$2M，為期 24 個月。主辦明載 FAQ 與條款衝突時由條款優先。",
+          "accessed_at": "2026-11-24T17:11:26+08:00"
         },
         {
           "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-FAQs-Final.pdf",
@@ -91551,15 +91595,15 @@
         {
           "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/11/Cities-Deliver-AI-Solutions-for-Public-Services-Additional-Updated-FAQs-Final.pdf",
           "label": "官方來源",
-          "scope": "11/4 更新 FAQ 的間接成本基準",
-          "evidence": "更新 FAQ 以扣除顧問費與次級補助後的直接成本作 15% 的基礎，並列營利組織不得回收間接成本。",
-          "accessed_at": "2026-11-24T02:09:19+08:00"
+          "scope": "11/4 更新 FAQ 的相鄰城市與文件語言",
+          "evidence": "相鄰數市合計人口至少 50,000 時可列入審查，每市都應提交意向書；當地語言意向書可附英文譯本。 較早紀錄（2026-11-24T02:09:19+08:00）：更新 FAQ 以扣除顧問費與次級補助後的直接成本作 15% 的基礎，並列營利組織不得回收間接成本。",
+          "accessed_at": "2026-11-24T17:11:26+08:00"
         },
         {
           "url": "https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-Terms-and-Conditions-Final.pdf",
-          "scope": "正式規則申請費、合格組織與 §1.F 間接成本",
-          "evidence": "正式規則首頁列申請或獲選無須付費、捐款或購買。§1.F 對合格非營利組織以 total grant amount 為間接成本 15% 上限。§2.A 列大學單位須透過大學，以及第一輪政府夥伴意向書。",
-          "accessed_at": "2026-11-24T02:09:19+08:00"
+          "scope": "正式條款 §1.E 城市定義",
+          "evidence": "城市須為人口至少 50,000 的自治都市社群，有自身市政機關。州、省、區域與國家級政府可作額外夥伴。 較早紀錄（2026-11-24T02:09:19+08:00）：正式規則首頁列申請或獲選無須付費、捐款或購買。§1.F 對合格非營利組織以 total grant amount 為間接成本 15% 上限。§2.A 列大學單位須透過大學，以及第一輪政府夥伴意向書。",
+          "accessed_at": "2026-11-24T17:11:26+08:00"
         }
       ],
       "priority_score": 14.3,
@@ -98301,7 +98345,7 @@
     {
       "id": "ntu-rtc-local-ai-multimodal-workshop-2026",
       "title": "臺大免費多模態 Local AI 工作坊：12/4 校本部實作",
-      "summary": "臺大蘋果區域培訓中心 Local AI 系列第 5 堂，12/4 在臺大校本部以中文實作語言模型、語音轉文字及影像辨識。免學費，11/30 12:00（台北）報名截止，須經錄取。建議具基本程式概念，自備合規 MacBook 者優先。",
+      "summary": "臺大蘋果區域培訓中心 Local AI 系列第 5 堂，12/4 在臺大校本部以中文實作語言模型、語音轉文字及影像辨識。免學費，11/30 12:00（台北）報名截止，須經錄取。建議具基本程式概念，自備合規 MacBook 者優先。 11/13 單堂公告已提供報名表，8/28 系列總覽仍寫尚未開放。",
       "record_type": "opportunity",
       "status": "application_based",
       "verification": "Official",
@@ -98326,21 +98370,21 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "discovered_at": "2026-11-24T04:08:12+08:00",
-      "verified_at": "2026-11-24T04:08:42+08:00",
+      "verified_at": "2026-11-24T17:14:53+08:00",
       "announcement_at": "2026-11-13",
       "deadline_at": "2026-11-30T12:00:00+08:00",
       "expires_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T04:00:00+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
       "priority_tier": "S",
       "priority_score": 19.6,
       "usage_type": "單堂實體工作坊與完課證書",
       "usable_duration": "2026-12-04 09:30–12:30（台北），臺大校本部綜合教學館 401。完整參與可獲該堂完課證書。",
       "setup_cost_basis": "主辦公告明列免費。依設備需求及借用結果，參加者可能需自備硬體並自行到場。",
       "access_risk": "主辦列 Apple silicon MacBook、至少 16 GB、macOS 27 以上、Xcode 27 與 LM Studio。可在表單選借用，設備數量有限。",
-      "verification_scope": "2026-11-24 台北時間實讀臺大公告及官方報名表公開欄位。核對費用、活動及報名時間、設備、借用、表單身分選項與完課條件。剩餘席次和個案錄取未核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。核對系列總覽、單堂公告及公開表單。單堂公告列 11/30 12:00 截止，系列總覽第五堂仍寫尚未開放；剩餘席次、實際收件及個案錄取待查。",
       "eligibility": {
-        "service_availability": "臺大校本部實體課程，採中文授課。",
+        "service_availability": "臺大校本部實體課程，採中文授課。單堂公告已連至報名表，較早的系列總覽仍顯示尚未開放。",
         "account_eligibility": "表單可選臺大教師及學生、他校教師及學生或其他。建議具備基本程式設計概念。",
         "billing_country": "報名及課程費用皆為零。個人交通或設備成本未估。",
         "identity_residency": "未列國籍或戶籍門檻。表單接受他校師生及其他身分選項。",
@@ -98349,22 +98393,30 @@
       },
       "unknowns": [
         "總席次、剩餘席次與借用設備數量",
-        "公告列 12/1 前通知，表單寫「11/30 (二)」，日期與星期對不上，實際通知以主辦寄發為準"
+        "公告列 12/1 前通知，表單寫「11/30 (二)」，日期與星期對不上，實際通知以主辦寄發為準",
+        "公開表單可看到報名欄位，後端實際收件與個案錄取未驗證"
       ],
       "sources": [
         {
           "url": "https://www.dlc.ntu.edu.tw/2026/11/13/local-ai-workshop-05/",
           "label": "臺大主辦公告",
-          "scope": "2026-11-13 公告，課程、期限、費用、設備與證書",
-          "evidence": "主辦列「費用: 免費」「11/30 日(一) 中午12:00 截止」，並列 12/4 09:30–12:30、設備與借機條件。",
-          "accessed_at": "2026-11-24T04:08:12+08:00"
+          "scope": "11/13 單堂公告有報名連結與截止",
+          "evidence": "單堂公告連出報名表，列 11/30 12:00 截止和 12/1 前通知。 較早紀錄（2026-11-24T04:08:12+08:00）：主辦列「費用: 免費」「11/30 日(一) 中午12:00 截止」，並列 12/4 09:30–12:30、設備與借機條件。",
+          "accessed_at": "2026-11-24T17:14:53+08:00"
         },
         {
           "url": "https://forms.gle/4uaiyRFharpH9EwG9",
           "label": "臺大主辦報名表",
-          "scope": "公開表單身分及借用選項",
-          "evidence": "表單列「他校老師」「他校學生」「其他」，可選自備或借用設備。通知欄寫 11/30（二），公告列 12/1（二）前。",
-          "accessed_at": "2026-11-24T04:08:42+08:00"
+          "scope": "公開表單及通知文字",
+          "evidence": "表單可見填寫欄位與提交控制項；通知文字為「11/30 (二)」，日期與星期不同步。未確認後端受理。 較早紀錄（2026-11-24T04:08:42+08:00）：表單列「他校老師」「他校學生」「其他」，可選自備或借用設備。通知欄寫 11/30（二），公告列 12/1（二）前。",
+          "accessed_at": "2026-11-24T17:09:26+08:00"
+        },
+        {
+          "url": "https://www.dlc.ntu.edu.tw/2026/08/28/local-ai-workshop-overview/",
+          "scope": "系列總覽的第五堂報名文字",
+          "evidence": "8/28 總覽第五堂列 12/4，報名欄仍寫尚未開放。",
+          "type": "official_announcement",
+          "accessed_at": "2026-11-24T17:14:53+08:00"
         }
       ],
       "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
@@ -98567,10 +98619,10 @@
       "deadline_at": "2026-11-24T18:00:00+08:00",
       "announcement_at": null,
       "expires_at": null,
-      "verified_at": "2026-11-24T15:10:03+08:00",
+      "verified_at": "2026-11-24T17:08:26+08:00",
       "discovered_at": "2026-11-24T06:09:12+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-24T16:30:00+08:00",
+      "next_review_at": "2026-11-24T18:00:00+08:00",
       "eligibility": {
         "service_availability": "台北實體工作坊，由資策會主辦、DIGITIMES 執行。 DIGITIMES 報名入口顯示額滿，iEvent 仍有場次選擇。",
         "account_eligibility": "主辦列製造業員工、企業在職人員及即將就業的應屆畢業生為適合對象。須經主辦審核。",
@@ -98580,7 +98632,7 @@
         "taiwan_note": "Yes：公告對象含台灣製造業員工、企業在職人員及符合條件的應屆畢業生，目前須向主辦確認有無候補或可用入口。"
       },
       "unknowns": [
-        "iEvent 實際受理、候補、個案審核及正式報到通知",
+        "iEvent 後端實際受理、候補、個案審核及正式報到通知",
         "同頁時間及頁首區別差異的最終更正",
         "課程工具帳戶及額度未核"
       ],
@@ -98588,16 +98640,16 @@
         {
           "url": "https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0",
           "label": "資策會主辦頁",
-          "scope": "日期、詳情地址、審核、費用、名額及報名截止",
-          "evidence": "報名欄列免費、120 人、11/24 18:00 截止。詳情列 11/25 09:30–17:30、松山區民生東路四段 133 號 14 樓。場次欄時間與頁首區別另有差異。",
-          "accessed_at": "2026-11-24T06:09:12+08:00"
+          "scope": "主辦活動、名額、費用與截止",
+          "evidence": "活動頁列免費、120 名、11/24 18:00 截止及報名後審核。 較早紀錄（2026-11-24T06:09:12+08:00）：報名欄列免費、120 人、11/24 18:00 截止。詳情列 11/25 09:30–17:30、松山區民生東路四段 133 號 14 樓。場次欄時間與頁首區別另有差異。",
+          "accessed_at": "2026-11-24T17:08:07+08:00"
         },
         {
           "url": "https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0",
           "label": "資策會報名表",
-          "scope": "公開場次欄",
-          "evidence": "仍列場次選擇及 09:00–17:00。實際能否送件或候補待核。 較早紀錄（2026-11-24T06:09:28+08:00）：公開表單應付費用 0，場次列 09:00–17:00。",
-          "accessed_at": "2026-11-24T15:10:03+08:00"
+          "scope": "主辦公開表單與場次",
+          "evidence": "讀取表單 HTML，仍顯示場次及應付 NT$0。後端收件與候補未知。 較早紀錄（2026-11-24T15:10:03+08:00）：仍列場次選擇及 09:00–17:00。實際能否送件或候補待核。 較早紀錄（2026-11-24T06:09:28+08:00）：公開表單應付費用 0，場次列 09:00–17:00。",
+          "accessed_at": "2026-11-24T17:08:06+08:00"
         },
         {
           "url": "https://www.digitimes.com.tw/edm/edm_ITRI_20261125.HTM",
@@ -98609,14 +98661,14 @@
         {
           "url": "https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0",
           "label": "DIGITIMES 報名入口",
-          "scope": "報名頁額滿提示",
-          "evidence": "公開 HTML 的頁面提示為「此場研討會已額滿!」。唯讀檢查 HTML，未執行頁面腳本或送件。",
-          "accessed_at": "2026-11-24T15:10:03+08:00"
+          "scope": "執行單位報名入口額滿提示",
+          "evidence": "原始回應含「此場研討會已額滿!」。僅讀取回應，未執行頁面腳本。 較早紀錄（2026-11-24T15:10:03+08:00）：公開 HTML 的頁面提示為「此場研討會已額滿!」。唯讀檢查 HTML，未執行頁面腳本或送件。",
+          "accessed_at": "2026-11-24T17:08:26+08:00"
         }
       ],
       "priority_tier": "S",
       "priority_score": 20.8,
-      "verification_scope": "2026-11-24 15:10 台北時間局部複核。核對 DIGITIMES 電子報連出的報名入口額滿提示，以及資策會公開表單仍顯示場次。表單實際受理、候補及到場安排待核。",
+      "verification_scope": "2026-11-24 台北時間局部複核。主辦活動頁仍列 11/24 18:00、免費與 120 名。iEvent 公開表單仍列可選場次，執行單位入口回應仍標額滿。正取、候補與後端送件未知。",
       "priority_note": "官方來源·有限度開放·免費·台灣Yes·時間未知·有資格門檻"
     },
     {
@@ -100198,33 +100250,192 @@
         }
       ],
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知"
+    },
+    {
+      "id": "ntpc-digital-academy-sanchong-ai-music-2026",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "discovered_at": "2026-11-24T17:10:22+08:00",
+      "verified_at": "2026-11-24T17:10:34+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
+      "review_cadence": "daily",
+      "expires_at": null,
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "effort_minutes_max": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "verification_scope": "2026-11-24 台北時間實讀。核對總覽與兩班公開詳情的報名截止、地點、費用、招生名額及平台身分查驗規則。實際受理和工具帳戶待查。",
+      "sources": [
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/college/5?page=3",
+          "scope": "兩班報名時段及學員一般規則",
+          "evidence": "兩班列 11/19 18:00 至 12/12 00:00。招生 22／25，平台通則要求到場攜身分證件查驗。",
+          "type": "official_course_catalog",
+          "accessed_at": "2026-11-24T17:10:34+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses/detail/22365",
+          "scope": "D11512014 課綱、時間及費用",
+          "evidence": "12/15 09:00–11:00，三重勞工中心 901，招生 22 人，報名及其他費用皆為 0；可見報名入口。",
+          "type": "official_course_listing",
+          "accessed_at": "2026-11-24T17:10:22+08:00"
+        },
+        {
+          "url": "https://ezlearn.ntpc.gov.tw/courses/detail/22366",
+          "scope": "D11512015 課綱、時間及費用",
+          "evidence": "12/15 13:30–15:30，三重勞工中心 901，招生 25 人，報名及其他費用皆為 0；可見報名入口。",
+          "type": "official_course_listing",
+          "accessed_at": "2026-11-24T17:10:22+08:00"
+        }
+      ],
+      "title": "新北數位學院免費 AI 音樂創作工作坊｜三重 12/15 兩班",
+      "summary": "新北市政府資訊中心 12/15 在三重開 AI 音樂創作工作坊，實作用文字生成旋律、曲風及歌聲。上午班招生 22 人，下午班 25 人。兩班免課程費，12/12 00:00（台北）截止。",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "announcement_at": null,
+      "effective_at": "2026-11-19T18:00:00+08:00",
+      "deadline_at": "2026-12-12T00:00:00+08:00",
+      "usage_type": "兩場同課綱的實體工作坊",
+      "quota_details": "D11512014 招生 22 人，D11512015 招生 25 人。剩餘名額未公布。",
+      "usable_duration": "12/15 09:00–11:00 或 13:30–15:30（台北）。地點為三重勞工中心 9 樓 901 教室。",
+      "setup_cost_basis": "兩班官方詳情均列報名費用與其他費用 NT$0。交通與第三方工具費未估。",
+      "access_risk": "數位學院一般規則要求到場出示身分證件。第三方 AI 工具、帳戶及免費額度未公布。",
+      "eligibility": {
+        "service_availability": "新北市三重區實體課程。兩班官方頁面皆可見報名入口。",
+        "account_eligibility": "平台公開頁列免帳密、新北卡與 Google 報名選項。實際收件及個案錄取待查。",
+        "billing_country": "兩班課程頁列報名及其他費用 NT$0。工具與交通成本未估。",
+        "identity_residency": "到場須帶身分證件核對。數位學院另有 12 歲以下兒童陪同通則；兩班個別年齡及戶籍門檻待確認。",
+        "terms_restrictions": "按各班招生上限受理，實際到場依主辦通知。",
+        "taiwan_note": "Yes：新北市實體課程，台灣學員依平台報名及身分核對規則參與。"
+      },
+      "unknowns": [
+        "實際收件、剩餘席次及候補",
+        "兩班個別年齡或戶籍限制、兒童陪同規則的適用",
+        "課堂工具、帳戶條件及第三方費用"
+      ],
+      "priority_note": "官方來源·申請審核制·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "ntut-ai-teaching-modules-workshop-2026",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "discovered_at": "2026-11-24T17:11:07+08:00",
+      "verified_at": "2026-11-24T17:11:13+08:00",
+      "next_review_at": "2026-11-25T17:00:00+08:00",
+      "review_cadence": "daily",
+      "expires_at": null,
+      "priority_tier": "S",
+      "priority_score": 16.8,
+      "effort_minutes_max": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "verification_scope": "2026-11-24 台北時間實讀。實讀主辦原公文及公開表單，核對大專教職資格、截止、名額、付費工具經驗建議及電子證明條件。活動費、收件與剩餘席次待查。",
+      "sources": [
+        {
+          "url": "https://info.tcu.edu.tw/hot_news/attch/1151117025/430323-11511755-1.pdf",
+          "scope": "北科大原公文、對象、活動、截止與招生",
+          "evidence": "11/10 北科大教字第 1150100606 號。活動資訊（二）列 12/8 09:00–12:00、全國大專校院教師、限額 500，12/7 11:00 截止，額滿提前關表。",
+          "type": "official_letter",
+          "accessed_at": "2026-11-24T17:11:13+08:00"
+        },
+        {
+          "url": "https://forms.gle/gVDe8TW3Vw9wCoxv8",
+          "scope": "公開報名表、工具經驗建議與參與證明",
+          "evidence": "表單建議有三個月以上使用任一 AI 付費方案的經驗，舉例每月 US$20 以上。電子證明要求在線至少 2.5 小時及填回饋。活動費未列。",
+          "type": "official_form",
+          "accessed_at": "2026-11-24T17:11:07+08:00"
+        }
+      ],
+      "title": "北科大 AI 教學模組開發工作坊｜全台大專教師可報名",
+      "summary": "北科大教學實踐研究計畫北區基地 12/8 舉辦線上學科專屬 AI 教學模組工作坊。全國大專校院教師可報名，限 500 名，12/7 11:00（台北）或額滿截止。表單建議具三個月以上 AI 付費方案使用經驗，課費未公布。",
+      "categories": [
+        "QUALIFICATION"
+      ],
+      "views": [],
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
+      "announcement_at": "2026-11-10",
+      "deadline_at": "2026-12-07T11:00:00+08:00",
+      "usage_type": "單場線上教學工作坊與參與證明",
+      "quota_details": "公文列招生上限 500 名，額滿可提前關閉表單。剩餘席次未公布。",
+      "usable_duration": "2026-12-08 09:00–12:00（台北），Google Meet。全程參與、在線至少 2.5 小時並填回饋者可獲電子參與證明。",
+      "cost_note": "公文與表單未列活動費。表單以每月 US$20 以上為付費方案經驗的例子。",
+      "access_risk": "報名表可讀且有提交控制項，後端實際收件、額滿狀態與個案錄取待查。",
+      "eligibility": {
+        "service_availability": "Google Meet 線上講座；主辦表單可公開讀取。",
+        "account_eligibility": "公文列全國大專校院教師。表單建議具至少三個月使用 AI 付費方案的經驗。",
+        "billing_country": "活動費與續費未公布；AI 付費方案之費用依供應商方案。",
+        "identity_residency": "依主辦公文核對台灣大專校院教職，表單的非教師選項是否也具資格待查。",
+        "terms_restrictions": "招生 500 人，額滿可能提早關表。電子證明另須達到上線與回饋條件。",
+        "taiwan_note": "Yes：正式公文列台灣各大專校院教師為參與對象。"
+      },
+      "unknowns": [
+        "活動費、工具是否須現持訂閱",
+        "剩餘席次、送件是否成功及個案錄取",
+        "表單中的行政人員或助理選項是否符合正式資格"
+      ],
+      "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-24T16:12:25+08:00",
+  "latest_research_at": "2026-11-24T17:15:14+08:00",
   "last_research_run": {
-    "started_at": "2026-11-24T16:06:08+08:00",
-    "completed_at": "2026-11-24T16:12:25+08:00",
+    "started_at": "2026-11-24T17:06:33+08:00",
+    "completed_at": "2026-11-24T17:15:14+08:00",
     "reviewed_ids": [
-      "iteracompute-free-qwen-3-8-27b-monthly-30m",
-      "fireworks-glimmer-sft",
-      "neon-databricks-startup-combined-cap",
-      "nomic-individual-work-email-twenty-trial",
-      "dust-free-lifetime-not-programmatic",
-      "huggingface-classrooms-free-hosting"
+      "iii-edge-ai-adoption-workshop-2026",
+      "kaggle-free-notebook-compute",
+      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+      "ntu-rtc-local-ai-multimodal-workshop-2026",
+      "cities-deliver-rockefeller-openai-2026",
+      "tw-moe-aicup-2026-vlm-solar-inspection"
     ],
-    "new_ids": [],
+    "new_ids": [
+      "ntpc-digital-academy-sanchong-ai-music-2026",
+      "ntut-ai-teaching-modules-workshop-2026"
+    ],
     "attempted_failed_ids": [],
     "unreviewed_existing_count": 1216
   },
-  "generated_at": "2026-11-24T16:12:25+08:00",
+  "generated_at": "2026-11-24T17:15:14+08:00",
   "reviewed_ids": [
-    "iteracompute-free-qwen-3-8-27b-monthly-30m",
-    "fireworks-glimmer-sft",
-    "neon-databricks-startup-combined-cap",
-    "nomic-individual-work-email-twenty-trial",
-    "dust-free-lifetime-not-programmatic",
-    "huggingface-classrooms-free-hosting"
+    "iii-edge-ai-adoption-workshop-2026",
+    "kaggle-free-notebook-compute",
+    "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+    "ntu-rtc-local-ai-multimodal-workshop-2026",
+    "cities-deliver-rockefeller-openai-2026",
+    "tw-moe-aicup-2026-vlm-solar-inspection"
   ],
   "attempted_failed_ids": [],
-  "new_ids": []
+  "new_ids": [
+    "ntpc-digital-academy-sanchong-ai-music-2026",
+    "ntut-ai-teaching-modules-workshop-2026"
+  ]
 }

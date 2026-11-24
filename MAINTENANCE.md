@@ -7543,3 +7543,33 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 原有 2,984 筆政策歷史逐筆保留，追加 6 筆。保留既有 ID、首次發現時間與來源網址。移除 Fireworks 摘要的固定倒數，讀者可直接用既有期限排序與動態日期查找。
 
 發布前 `make check`、`make check-ui`、`git diff --check` 及 390px／1280px Chrome 批次檢查通過。逐張確認本輪卡片與官方來源，驗證 IteraCompute 與 Neon／Databricks 退出免費專區，Fireworks 仍顯示免費 SFT 與截止時間。以本輪提交的 CI、Pages 部署、公開檔案雜湊與瀏覽器核對確認發布。
+
+
+## 2026-11-24 17:06–2026-11-24 17:15 Asia/Taipei｜N=1,222 · R=6 · A=2 · U=1,216 · attempted=0
+
+起點 `4647f12`。主線與遠端一致，工作樹乾淨，無開放 PR，前一版 Frontend QA 與 Pages 皆成功。維護鎖於查核前取得。起始 1,107 筆可行動、2 筆已到複核時點、25 筆距截止不到七日，其中 15 筆冷卻，2 筆舊失敗尚未到回查時點。全庫 28 筆至少有一個截止點已過，含歷史紀錄。高風險 55 筆為可行動紀錄中已到複核時點、七日內截止、最新追查失敗、暫時不限量或 ID 含 conflict 的聯集。
+
+三位唯讀研究代理使用環境預設 GPT-6.2 Sol，分查急件、舊案與證據缺口、台灣新機會。主代理重讀採用的頁面、原始公開表單及正式文件。優先處理已到時點的資策會和 Kaggle，另採納有新來源或讀者行動條件的紀錄。兩筆新案依主辦、日期、主題、班號與網址去重。全程使用公開資料。
+
+### 證據與實質變更
+
+- `iii-edge-ai-adoption-workshop-2026`｜16:30 追點後，主辦仍列 18:00 截止且公開表單可見場次；執行單位入口仍提示額滿。保留有限度開放，於 18:00 追停止收件、延期或候補。 [來源 1](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [來源 2](https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0) [來源 3](https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0)
+- `kaggle-free-notebook-compute`｜恢復查閱三份公開 Markdown。GPU 浮動週額維持，並列互動閒置 60／20 分鐘，補 TPU 與單次執行時數、P100 退役與舊文件差異及付費 Colab 選項。 [來源 1](https://www.kaggle.com/docs/efficient-gpu-usage.md) [來源 2](https://www.kaggle.com/docs/notebooks.md) [來源 3](https://www.kaggle.com/docs/tpu.md) [來源 4](https://www.kaggle.com/product-announcements/735239) [來源 5](https://docs.cloud.google.com/compute/docs/eol/p100-eos) [來源 6](https://www.kaggle.com/discussions/product-announcements/670573)
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`｜官方索引現直接列當期 M11W4。50M Tokens／5,000 Credits、一次領取與 11/29 23:59 到期照舊，實際領取與台灣資格待核。 [來源 1](https://autoclaw.z.ai/blog/) [來源 2](https://autoclaw.z.ai/en/blog/news/M11W4/)
+- `ntu-rtc-local-ai-multimodal-workshop-2026`｜補系列總覽仍寫尚未開放與 11/13 單堂公告已連表單的落差。保留公告截止、實際收件與錄取待查。 [來源 1](https://www.dlc.ntu.edu.tw/2026/08/28/local-ai-workshop-overview/) [來源 2](https://www.dlc.ntu.edu.tw/2026/11/13/local-ai-workshop-05/) [來源 3](https://forms.gle/4uaiyRFharpH9EwG9)
+- `cities-deliver-rockefeller-openai-2026`｜補正式條款的 50,000 人與市政機關條件，以及更新 FAQ 的相鄰城市合計、每市意向書及英文譯本。 [來源 1](https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services) [來源 2](https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-Terms-and-Conditions-Final.pdf) [來源 3](https://www.rockefellerfoundation.org/wp-content/uploads/2026/11/Cities-Deliver-AI-Solutions-for-Public-Services-Additional-Updated-FAQs-Final.pdf)
+- `tw-moe-aicup-2026-vlm-solar-inspection`｜補已報名隊伍的 12/4 23:59:59 預測提交截止、每隊每天 3 次及最後一次有效提交用於 Private 評測。原報名時間衝突保留。 [來源 1](https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699)
+- `ntpc-digital-academy-sanchong-ai-music-2026`｜新北市政府資訊中心 12/15 在三重開 AI 音樂創作工作坊，實作用文字生成旋律、曲風及歌聲。上午班招生 22 人，下午班 25 人。兩班免課程費，12/12 00:00（台北）截止。 [來源 1](https://ezlearn.ntpc.gov.tw/college/5?page=3) [來源 2](https://ezlearn.ntpc.gov.tw/courses/detail/22365) [來源 3](https://ezlearn.ntpc.gov.tw/courses/detail/22366)
+- `ntut-ai-teaching-modules-workshop-2026`｜北科大教學實踐研究計畫北區基地 12/8 舉辦線上學科專屬 AI 教學模組工作坊。全國大專校院教師可報名，限 500 名，12/7 11:00（台北）或額滿截止。表單建議具三個月以上 AI 付費方案使用經驗，課費未公布。 [來源 1](https://info.tcu.edu.tw/hot_news/attch/1151117025/430323-11511755-1.pdf) [來源 2](https://forms.gle/gVDe8TW3Vw9wCoxv8)
+
+### 證據缺口與下一輪
+
+- 11/24 18:00 核對 `iii-edge-ai-adoption-workshop-2026` 是否停止、延期或公布候補。資策會入口可見場次，DIGITIMES 額滿。截止已過且沒有延期證據時，依公告記申請截止並轉有新訊號時追。 [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [執行單位入口](https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0)
+- 保留 `akamai-cloud-rise-startup-credits` 11/24 19:00、`vercel-ai-gateway-parallel-decisions-free-window` 20:30、阿里雲 11/26 00:00 及 Fireworks 11/25 的原定追點。 [Akamai](https://www.akamai.com/cloud/start-ups/rise) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [阿里雲](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview) [Fireworks](https://fireworks.ai/pricing)
+- 依本輪日更時點追 AutoClaw 下期公告、臺大第五堂收件與通知、Cities Deliver 地區與間接成本及 AI CUP 新隊入口。數發部 `moda-civil-service-ai-agent-seminar-2026` 本次重讀仍有公所／簡章開放日期差異，表單內嵌關閉訊息與可見欄位並存，維持前次狀態與排程。 [數發部轉知](https://www.guanshan.gov.tw/news/detail/3607) [報名表](https://gov.tw/wqZ)
+- Kaggle 的公開 Markdown 已恢復可讀。按月回查閒置時間差異、TPU 身分驗證正文及台灣門號。P100 公告僅取可讀標題和公開描述，個別硬體未登入查驗。 [GPU 文件](https://www.kaggle.com/docs/efficient-gpu-usage.md) [Notebooks](https://www.kaggle.com/docs/notebooks.md) [TPU 身分驗證公告](https://www.kaggle.com/discussions/product-announcements/670573)
+- 新案追三重兩班的剩額、兒童與工具規則，以及北科大費用、額滿關表及非教師資格。國立空大公告期限尚未到，連出表單已停收。雲科大／研華活動文字列免費審核，但公開頁未見票券。木柵高工課程連結轉首頁。這三案保留於交接。 [空大公告](https://www2.nou.edu.tw/nepac/Document/Detail?docid=64816&pid=4850&uid=4850) [空大表單](https://forms.gle/miP9TZ4rV9BzDPaw7) [雲科大／研華活動](https://www.accupass.com/event/2610160551252898232440) [木柵高工研習](https://insc.tp.edu.tw/Manage/ClassSignUp?ClsID=1SUPD700CE2DA17QHY0LVA%3D%3D)
+
+### 品質與發布
+
+保留所有既有 ID、首次收錄時間、來源網址及 2,990 筆政策歷史，追加 8 筆。卡片的舊失敗追查標為「後續有核實資料」，適用後續局部複核仍有原來源缺口的情況。驗證使用 `make check`、`make check-ui` 與本輪卡片的手機／桌面 Chrome 核對。正式發布以同一提交的 Frontend QA、Pages 部署、公開檔案逐位元比對和公開站瀏覽器核對為判據。
