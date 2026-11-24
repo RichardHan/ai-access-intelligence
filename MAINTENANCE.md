@@ -7477,3 +7477,39 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 保留所有既有 ID、首次收錄日期、來源網址及 2,961 筆政策歷史，追加 10 筆。隔離複本重現首頁範圍的追查失敗及未複核筆數寫錯仍能通過驗證，補上這兩項及新增必填筆數的檢查。
 
 發布前 `make check`、`make check-ui` 均通過。Chrome 390px／1280px 核對 10 張本輪卡片、免費篩選與來源顯示。隔離複本把新增、失敗及未複核數字逐項改錯，驗證均有攔截。正式發布以同一提交的 Frontend QA 和 Pages 成功、公開檔案雜湊一致與手機及桌面瀏覽器實查為判據。
+
+## 2026-11-24 15:06–2026-11-24 15:15 Asia/Taipei｜N=1,219 · R=10 · A=3 · U=1,209 · attempted=0
+
+起點 `407e1f5`。主線與遠端一致，工作樹乾淨，無進行中的 Pages 部署或開放 PR。本輪取得維護鎖。基準為 1,000 筆機會、50 筆政策、169 筆觀察線索。可行動 1,105 筆，逾複核時點 0 筆，七日內到期 25 筆（15 筆冷卻中），3 筆先前失敗且未到回查時點。近期截止、逾期、追查失敗、暫時不限量與 ID 含 conflict 的可行動案例聯集 55 筆。全庫有 27 筆至少一個截止點已過，含歷史與多截止點紀錄。
+
+優先複核近截止的申請入口與付款風險，以較久未解的資格、額度及條款缺口補位。AWS 原紀錄雖已停止新 IDE 註冊，主控台改名是可行動入口的新訊號。三位唯讀研究代理以 GPT-6.2 Sol（high）完成，整合採用本會話配置，主代理重讀採用的官方證據。
+
+### 實質變更與新增
+
+- `iii-edge-ai-adoption-workshop-2026`｜DIGITIMES 報名入口顯示額滿，資策會 iEvent 仍有場次。保留原公告 18:00 截止，待核實際收件及候補。 [官方來源 1](https://www.digitimes.com.tw/edm/edm_ITRI_20261125.HTM) [官方來源 2](https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0) [官方來源 3](https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0)
+- `taipei-industry-incentive-ai-rd-batch2-2026`｜補臺北市 AI 研發補助的三擇一附件、有薪實習、首款擔保與尾款核銷。公告日期截止仍為 11/30。 [官方來源 1](https://www.industry-incentive.taipei/news_detail/497) [官方來源 2](https://www.industry-incentive.taipei/filedown.php?file=%E8%87%BA%E5%8C%97%E5%B8%82%E7%94%A2%E6%A5%AD%E7%99%BC%E5%B1%95%E7%A0%94%E7%99%BC%E8%A3%9C%E5%8A%A9%E7%94%B3%E8%AB%8B%E9%A0%88%E7%9F%A5.pdf&site=dXBsb2FkLzIwMjUvMDgvMjAyNTA4MjIxNDE1MjE4MDYwLnBkZg%3D%3D)
+- `alibaba-model-studio-token-plan-personal-new-user-discount`｜區分已列出的正式 qwen4-max 與 11/25 午夜結束的 qwen4-max-preview。11/30 截止的是個人版新戶五折。 [官方來源 1](https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview) [官方來源 2](https://www.alibabacloud.com/help/en/model-studio/qwen4-max) [官方來源 3](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)
+- `amazon-q-developer-free-signup-conflict`｜AWS 將網頁及手機 Console 改稱 AWS assistant。補 IAM 存取條件、現行免費及代呼叫服務可能計費，標明 50 次月額適用 IDE／CLI。 [官方來源 1](https://aws.amazon.com/about-aws/whats-new/2026/11/q-developer-renamed-aws-assistant/) [官方來源 2](https://docs.aws.amazon.com/assistant/latest/userguide/getting-started.html) [官方來源 3](https://aws.amazon.com/q/developer/pricing/) [官方來源 4](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/)
+- `render-startup-body-missing`｜Render 補付費服務需保有付款方式、US$1 驗卡與預估用量預授權、帳單優先抵扣。GPU 實例與台灣卡支援待核。 [官方來源 1](https://render.com/terms) [官方來源 2](https://render.com/docs/credits)
+- `iteracompute-free-qwen-3-8-27b-monthly-30m`｜共享 Auto 月額用完回 429、無自動超額扣款。補請求用量預留與保留等級的淨儲值口徑，實際切換待核。 [官方來源 1](https://iteracompute.com/free/)
+- `taiwan-multi-store-ai-upgrade-tier3-2026`｜商業署多店補助補上首期審查、逐月使用紀錄及尾款會計查核。公開申請費未獲證實，改列未知。 [官方來源 1](https://www.aoc.gov.tw/showPublic/807) [官方來源 2](https://www.smebiz.org.tw/getfile.php?k=news&f=2&c=f422C5I63D&nid=259)
+- `azure-students`｜Azure Students 先套用合資格免費量，超出後扣 US$100；主動升級不會重算原免費期。 [官方來源 1](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/azurestudents-subscription-disabled)
+- `falkordb-cloud-free-hundred-mb`｜FalkorDB 補 Cloud 帳戶終止理由和存取後果；保留台灣資格、年齡及制裁缺口。 [官方來源 1](https://app.falkordb.cloud/terms-of-use) [官方來源 2](https://docs.falkordb.com/cloud/tiers/free.md)
+- `grok-watch`｜Grok 補舊額度可再申請但需揭露、計畫終止與自行退出的帳戶餘額條件，Cursor 適用差異待核。 [官方來源 1](https://x.ai/legal/startup-program-terms) [官方來源 2](https://x.ai/startups)
+- `cjcu-google-ai-creative-workshop-2026`｜新增長榮大學 12/11 Gemini 實作，12/10 日期截止、免費報名、48 席，考照費與校外申請待核。 [官方來源 1](https://eweb.cjcu.edu.tw/act/act.aspx?id=20322)
+- `gdg-devfest-changhua-2026`｜新增彰化 12/6 免費 DevFest，主辦顯示 RSVP，固定截止和席次待查。 [官方來源 1](https://gdg.community.dev/events/details/google-gdg-changhua-presents-devfest-changhua-2026/) [官方來源 2](https://gdg.community.dev/gdg-changhua/)
+- `nthu-taica-generative-text-image-mooc-2026`｜新增清華 TAICA 課程 471，課程與履歷申請免費、12/31 截止，第三方工具費及起課差異待核。 [官方來源 1](https://mooc.nthu.edu.tw/course/info/471)
+
+### 下一輪
+
+- IteraCompute 15:30 及 16:00 後依原時點查切換與合資格帳戶的共享池。資策會 16:30 案件查 iEvent 是否停止、候補是否公告，18:00 後追延期或停止收件。Kaggle Notebook（17:00）、Akamai RISE（19:00）、Vercel（20:30）維持原節點。
+- 阿里雲於 11/26 00:00 台北時間後查預覽退出與正式模型的 credits 說明，11/30 新戶折扣另追。臺北市與商業署補助追收件與費用，保持未公開費用為未知。
+- 長榮大學追校外受理、考照費、額滿及候補；彰化 DevFest 日追 RSVP 狀態；清華磨課師 471 查正式起課日、登入後狀態及各工具明列的費用。
+- 數發部 12/10 公務人員研討會仍待確認受理。轉知頁列 11/30 15:00，表單 HTML 同時含可讀填寫欄位及設定的截止訊息，未確認送件。桃園市圖 12/19 繪本活動的兒童工具帳戶適用方式待主辦澄清。 [轉知公告](https://www.guanshan.gov.tw/news/detail/3607) [主辦表單](https://gov.tw/wqZ) [桃園市圖](https://www.typl.gov.tw/kids/Activity/Content/10329)
+- 前輪未處理項目按各筆 `next_review_at` 回查。Render GPU 與台灣付款、Grok Cursor 額度、FalkorDB 台灣帳戶與年齡、Azure Students 模型部署及 AWS assistant 主控台實際免費額度待核。
+
+### 品質與發布
+
+保留所有既有 ID、首次收錄時間、來源網址及 2,971 筆政策歷史，追加 13 筆。驗證器現會攔截漏列本輪失敗追查的資料，以及落在批次時間窗之外的失敗時間。隔離測試涵蓋兩種無效資料與前批歷史相容性。
+
+發布前 `make check`、`make check-ui`、`git diff --check` 與 390px／1280px Chrome 批次檢查通過。逐張核對本輪卡片與來源、資策會截止，以及三張新增卡片的免費篩選。正式發布以同一提交的 Frontend QA 和 Pages 成功、公開檔案雜湊一致及公開站瀏覽器實查為判據。

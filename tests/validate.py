@@ -207,8 +207,12 @@ for rid in reviewed+new:
  _scope_text=offers_by_id[rid].get('verification_scope')
  assert isinstance(_scope_text,str) and _scope_text.strip(), f'missing verification_scope for a batch record: {rid}'
  assert run_day in _scope_text, f'verification_scope does not state this batch date ({run_day}) — the card would show 核實 {run_day} next to a scope from an older read: {rid}'
+batch_start=parse_stamp(run['started_at'])
+batch_end=parse_stamp(run['completed_at'])
+attempted_ids=set(attempted)
 for aid in attempted:
- assert offers_by_id[aid].get('last_review_attempt_at') and parse_stamp(offers_by_id[aid]['last_review_attempt_at'])>=parse_stamp(run['started_at']), f'stale last_review_attempt_at for attempted ID: {aid}'
+ stamp=parse_stamp(offers_by_id[aid].get('last_review_attempt_at'))
+ assert stamp is not None and batch_start<=stamp<=batch_end, f'last_review_attempt_at outside this batch window for attempted ID: {aid}'
  assert isinstance(offers_by_id[aid].get('last_review_attempt_reason'), str) and offers_by_id[aid]['last_review_attempt_reason'].strip(), f'missing last_review_attempt_reason for attempted ID: {aid}'
  assert not offers_by_id[aid].get('verified_at') or parse_stamp(offers_by_id[aid]['verified_at'])<parse_stamp(run['started_at']), f'verified_at refreshed for failed attempted ID: {aid}'
 # 追查失敗只留時間、沒留原因，等於把「那天為什麼讀不到」丟掉：下一輪無法判斷要換哪條路線，
@@ -218,6 +222,11 @@ for aid in attempted:
 for o in d['offers']:
  if o.get('last_review_attempt_at'):
   assert isinstance(o.get('last_review_attempt_reason'), str) and o['last_review_attempt_reason'].strip(), f'last_review_attempt_at without a recorded reason in {o["id"]}'
+  stamp=parse_stamp(o['last_review_attempt_at'])
+  verified=parse_stamp(o.get('verified_at'))
+  # 未填入批次的失敗仍會顯示在卡片，卻不會出現在本輪摘要。已成功補查者保留較早的失敗紀錄。
+  if stamp is not None and stamp>=batch_start and (verified is None or stamp>verified):
+   assert o['id'] in attempted_ids, f'current failed lookup missing from attempted_failed_ids: {o["id"]}'
 tiers={'S','A','B','C','D'};dead={'expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','resolved_rumor_disproven','duplicate_merged'}
 valid_statuses={'active','active_verified','conditional','expired','expired_unverified','closed','applications_closed','closed_to_new_subscriptions','sunset_announced','paused','restricted','application_based','limited_availability','terms_conflict','conflicting_official_usage_claims','unverified','needs_verification','unverified_numeric_claims','unverified_redemption','campaign_current_availability_unverified','taiwan_availability_unverified','unverified_taiwan_eligibility','application_based_unverified','application_based_unverified_terms','account_specific_unverified','grant_terms_unverified','resolved_rumor_disproven','amount_and_eligibility_unverified','eligibility_unverified','current_approval_unverified','grant_delivery_unverified','legacy_closed_new_path_conditional','duplicate_merged','quota_and_taiwan_eligibility_unverified','taiwan_not_listed_supported_region','watchlist'}
 assert dead <= valid_statuses, 'dead statuses not subset of valid statuses'
