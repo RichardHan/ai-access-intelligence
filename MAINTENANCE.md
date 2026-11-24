@@ -7431,3 +7431,49 @@ FalkorDB 和 Dust 預篩讀到的限額與主要風險已有記錄，未更新�
 ### 發布判據
 
 本機 `make check`、`make check-ui` 與 Chrome 390px／1280px 批次檢查通過。逐張核對本輪卡片、來源、截止及免費篩選。正式發布以提交對應的 Frontend QA 與 Pages 部署成功，以及公開資產與提交一致、公開頁卡片實查為判據。
+
+## 2026-11-24 14:06–2026-11-24 14:15 Asia/Taipei｜N=1,218 · R=9 · A=1 · U=1,209 · attempted=0
+
+起點 `e3ca225`。main 與遠端一致，工作樹原先乾淨、無開放 PR 或進行中的部署。本輪持有維護鎖。基準有 999 筆機會、50 筆政策、169 筆觀察線索。可行動紀錄 1,104 筆，嚴格逾複核時點 0 筆，七日內有截止點 25 筆（16 筆冷卻中），上次整筆追查失敗且未到回查時間 3 筆。另有暫時不限量 4 筆及 ID 含 conflict 23 筆。上述風險聯集 55 筆。全庫有 27 筆至少一個截止點已過，包含歷史和多截止點紀錄。
+
+先查七日內的報名、免費窗及經費消耗風險。以輪替補公開表單和付款缺口。台灣研究同步查主辦及圖書館公開資訊。三位唯讀研究子代理均完成，使用 GPT-6.2 Sol（high）。環境未提供 Gemini 3.8 Flash，主代理沿用本會話配置並重讀採用的證據。IteraCompute、資策會 Edge AI 與待重試案件按上一輪列明時間續查。
+
+### 實質變更與新增
+
+- `hsinchu-city-ai-youth-digital-tool-subsidy-2026`｜市府申辦頁 14:07 顯示餘額 NT$24,784（0.4%），前值 NT$50,453（0.8%）。補代付證明條件，實際收件待核。 [來源 1](https://dgservice.hccg.gov.tw/serviceNotice.do?rule=guest&id=1323)
+
+- `moe-library-aihub-seat-trial-free-paid-ai`｜教育部確認 11/18 三所國立圖書館開放免費「讀享AI」，各 5 席，按各館借閱證和年齡規則登記。國資圖市圖證說明與規範並列。弘光科大校內試辦另列。 [來源 1](https://www.moe.gov.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=EE0FB1660EDBB982&sms=169B8E91BB75571F) [來源 2](https://www.ncl.edu.tw/tw/XMDoc/Cont?SId=0Q315522518118567440&XsmSId=0Q035516446883671026&sq=) [來源 3](https://www.ntl.edu.tw/wSite/public/Attachment/611189201492.pdf) [來源 4](https://www.nlpi.edu.tw/Announcement/news?PageType=1&id=9a6bd6f2-6010-4056-8bfa-c87c4d1c1158&pageIndex=1) [來源 5](https://www.nlpi.edu.tw/StaticPage/readenjoyai) [來源 6](https://www.nlpi.edu.tw/FileList/government-information?ID=d2f7356c-35af-43b5-8025-b90ad32f3488&PageIndex=2&PageType=1&SubCategoryID=dd974b1b-0001-4382-ae82-b1040e2f0d2d)
+
+- `sapling-api-thirty-day-trial-automation-terms-gap`｜補 Sapling 月結 API 的 US$5 一次性入帳及每 US$50 出帳，仍有免卡試用及獨立預付選項。自動化條款分歧未解。 [來源 1](https://sapling.ai/docs/api/pricing/)
+
+- `heygen-voice-turbo-free-api-until-2026-11-30`｜HeyGen 官方新增引用支持 Voice Turbo Free 免信用卡、10/21 公告，11/30 仍僅有截止日期。免費期後用量及台灣資格待核。 [來源 1](https://www.heygen.com/blog/heygen-voice-turbo) [來源 2](https://www.heygen.com/blog/heygen-october-2026-release)
+
+- `cht-gemini-shorts-contest-2026`｜中華電信 Gemini Shorts 補指定標籤、兩款官方圖樣及提示詞和生成歷程的保留義務。11/30 18:00 截止，個案送件待核。 [來源 1](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html) [來源 2](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/assets/download/pattern-dark.png) [來源 3](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/assets/download/pattern-light.png)
+
+- `nextwave-ai-legaltech-hackathon-2026`｜NextWave 補 10/15 主辦開放公告，修正網站來源先前對主辦與 AWS 資源的錯引，表單唯讀回 401，費用和實際收件待核。 [來源 1](https://aiscuclub.github.io/nextweave2026/) [來源 2](https://aiscuclub.github.io/nextweave2026/assets/index-BMtHPSpd.js) [來源 3](https://aiscuclub.github.io/nextweave2026/NextWave_AI%E6%B3%95%E5%89%B5%E9%BB%91%E5%AE%A2%E6%9D%BE_%E7%B0%A1%E7%AB%A0.pdf)
+
+- `thinking-machines-tinker-research-teaching-grants-watch`｜Tinker 補教學與研究兩份官方連出表單的實際題目，個案、台灣及非大學身分仍待核。 [來源 1](https://form.typeform.com/to/JgPkuMvB) [來源 2](https://form.typeform.com/to/E9wVFZJJ) [來源 3](https://thinkingmachines.ai/news/tinker-research-and-teaching-grants/)
+
+- `xiaomi-mimo-signup-credit-current-issuance-watch`｜Xiaomi MiMo 官網確認海外首儲加贈 US$0.72、限抵 API、效期 40 日。保留單純註冊及台灣付款未知，移除免費分區標記。 [來源 1](https://mimo.mi.com/docs/en-US/quick-start/promotions/Welcome%20Bonus) [來源 2](https://mimo.mi.com/docs/en-US/quick-start/faq/promotions) [來源 3](https://mimo.mi.com/docs/en-US/updates/feature/platform)
+
+- `gdg-devfest-tainan-2026`｜12/12 台南成大免費 DevFest，有公開 RSVP、名額有限，議程含 Gemini、AI 協作與雲端監控。固定截止及剩額待核。 [來源 1](https://gdg.community.dev/events/details/google-gdg-tainan-presents-devfest-tainan-2026-build-what-you-can-see/)
+
+- `confluent-startups-cloud-credits-watch`｜Confluent 官方頁內新創申請表可讀，所在地及公司總部皆可選 Taiwan。實際收件、核准及額度待核。 [來源 1](https://www.confluent.io/startups/) [來源 2](https://go.confluent.io/index.php/form/getForm?munchkinId=582-QHX-262&form=8138&url=https%3A%2F%2Fwww.confluent.io%2Fstartups%2F&callback=render)
+
+### 保留的證據缺口與下一輪
+
+- 11/24 15:30 與 16:00 後查 IteraCompute 免費模式切換及舊戶保留。資策會 Edge AI 16:30 再看受理、18:00 後追停止收件或延期。依原時點查 Kaggle Notebook（17:00）、Akamai RISE（19:00）及 Vercel（20:30）。 [IteraCompute](https://iteracompute.com/free/) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast)
+
+- 11/25 按原排程輪替：04:30 後 Microsoft 考券改查官方替代頁，09:00 起追 AOCAI MLOps、CoreWeave、陽明交大 165782、桃園職訓訓期，並追 Swarms 分級入口和 Kaggle 終件規則。Alibaba Qwen4 預覽按官方 11/25 24:00（UTC+8）結束，五折另於 11/30 截止。 [Alibaba 模型文件](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)
+
+- 新竹市下一個排程追餘額耗盡或停止受理，DevFest Tainan 日追額滿。讀享 AI 月輪替查看各館資格及市圖借閱證適用說明。NextWave 表單未登入回 401，僅以主辦公開簡章及公告核對，不推定能送件或有免費額度。
+
+- AutoClaw 英文索引已列 M11W4，獎勵、期限及資格未見實質變化，保留原核實時間，依原排程追續期。Quillbot 官方確認一般 Premium 預設續訂，美國與印度驗證夥伴的優惠限各自區域，台灣折扣、學生續訂優惠仍無明確證據，維持原卡片與核實時間。 [AutoClaw 公告](https://autoclaw.z.ai/en/blog/news/M11W4/) [Quillbot 續訂](https://help.quillbot.com/hc/en-us/articles/22033595681559-When-and-how-will-my-subscription-renew)
+
+- 臺大 12/19 Gemini／Notebook 教師研習的主辦活動頁寫額滿截止，官方連出表單明列 10/2 截止，可讀首段但未確認 12/19 仍收件，留待主辦澄清。GDG Taipei、JCMIT 已有紀錄。 [臺大活動頁](https://www.lec.ntu.edu.tw/platforms/activity_page/1/153) [主辦表單](https://docs.google.com/forms/d/e/1FAIpQLScdpoyLmDNIYG_5PjAML-JAz38Q3uuKVvYyFmZHXZ40-AdpnQ/viewform?usp=dialog)
+
+### 品質與發布
+
+保留所有既有 ID、首次收錄日期、來源網址及 2,961 筆政策歷史，追加 10 筆。隔離複本重現首頁範圍的追查失敗及未複核筆數寫錯仍能通過驗證，補上這兩項及新增必填筆數的檢查。
+
+發布前 `make check`、`make check-ui` 均通過。Chrome 390px／1280px 核對 10 張本輪卡片、免費篩選與來源顯示。隔離複本把新增、失敗及未複核數字逐項改錯，驗證均有攔截。正式發布以同一提交的 Frontend QA 和 Pages 成功、公開檔案雜湊一致與手機及桌面瀏覽器實查為判據。

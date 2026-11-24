@@ -505,8 +505,16 @@ _scope_start=parse_stamp(run['started_at'])
 _scope_end=parse_stamp(run['completed_at'])
 _scope_window=f"{_scope_start:%Y-%m-%d %H:%M}–{_scope_end:%Y-%m-%d %H:%M} Asia/Taipei"
 assert _scope_window in _scope, f'top-level scope must contain this batch window ({_scope_window}) — same-day counts alone cannot detect a stale round'
-_m=re.search(r'新增\s*\*{0,2}([\d,]+)\s*筆',_scope)
-if _m: assert int(_m.group(1).replace(',',''))==len(new), f'top-level scope claims {_m.group(1)} new records but new_ids has {len(new)}'
+# 首頁摘要與旁邊的批次數字並列，四個數字都必須對應同一批次。
+for _pattern, _label, _expected in (
+ (r'新增\s*\*{0,2}([\d,]+)\s*筆', 'new', len(new)),
+ (r'整筆追查失敗\s*\*{0,2}([\d,]+)\s*筆', 'failed', len(attempted)),
+ (r'其餘\s*\*{0,2}([\d,]+)\s*筆', 'unreviewed', run['unreviewed_existing_count']),
+):
+ _match=re.search(_pattern,_scope)
+ assert _match, f'top-level scope must state the {_label} count'
+ assert int(_match.group(1).replace(',',''))==_expected, (
+  f'top-level scope claims {_match.group(1)} {_label} records but last_research_run has {_expected}')
 # scope 只描述「這一輪做了什麼」。`tools/prioritize.py` 舊版會在每次執行時把
 # 「YYYY-MM-DD 加入優先度評分與 S–D 分層」追加到 scope 尾端（條件是字串不含該句，而 scope 每輪
 # 都會被改寫，所以等於每輪都追加），首頁於是宣稱本輪新增了 2026-10-24 就上線的評分機制。
