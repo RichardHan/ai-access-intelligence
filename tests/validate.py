@@ -114,14 +114,19 @@ for o in d['offers']:
  if o.get('verified_at') and parse_stamp(o['verified_at'])>=parse_stamp(run['started_at']) and o['id'] not in _batch_claim:
   raise AssertionError(f'{o["id"]} has verified_at {o["verified_at"]} inside this batch window but is not in reviewed_ids/new_ids/attempted_failed_ids: report it or keep the older verified_at')
 run_day=parse_stamp(run['started_at']).date().isoformat()
+batch_start=parse_stamp(run['started_at'])
+batch_end=parse_stamp(run['completed_at'])
 # 存取時間是自由文字（ISO、ISO 區間、甚至「2026-10-25（Asia/Taipei）」這種帶註記的寫法）。
 # 舊版用 `raw.split('/')[-1][:10]` 取日期，遇到帶註記的值會取到「Taipei）」這種片段，
 # 與 run_day 做字串比較時因為首字元 'T' 大於 '2' 而恆為真：2026-11-10 實測 adobe-firefly-assistant
 # 的舊來源「2026-10-25（Asia/Taipei）」被算成「本批次查核」，於是同一 URL 當天出現兩筆就
 # 誤報重複；反過來，一筆只有舊自由文字日期的紀錄也能通過下面的「本批次至少一個查閱時間」。
 # 一律抽出字串裡最後一個 YYYY-MM-DD 再比較。
+def accessed_stamp(source):
+ return parse_stamp(source.get('accessed_at') or source.get('accessed_time_range') or source.get('accessed_date'))
+
 def accessed_day(source):
- stamp=parse_stamp(source.get('accessed_at') or source.get('accessed_time_range') or source.get('accessed_date'))
+ stamp=accessed_stamp(source)
  return stamp.date().isoformat() if stamp else ''
 # 金額經 shell 展開後失去數字（US$110,000 → US,000）不會讓 JSON 失效，卻會讓證據變成
 # 「總獎金池 US,000」，卡片其餘欄位照樣顯示一個看似合理的金額。2026-11-16 全庫掃到 6 筆
@@ -193,8 +198,9 @@ for rid in reviewed+new:
  for url,group in by_url.items():
   same_day=[s for s in group if accessed_day(s)>=run_day]
   assert len(same_day)<=1, f'source URL checked twice in this batch (update the existing entry instead of appending): {rid} {url}'
- stamps=[accessed_day(s) for s in offers_by_id[rid]['sources']]
- assert any(stamp>=run_day for stamp in stamps), f'no per-source accessed time for this batch record: {rid}'
+ stamps=[accessed_stamp(s) for s in offers_by_id[rid]['sources']]
+ assert any(stamp is not None and batch_start<=stamp<=batch_end for stamp in stamps), (
+  f'no per-source accessed time inside this batch window: {rid}')
  # 卡片把 `verified_at`（核實 <日期>）與 `verification_scope`（核實範圍）並排顯示，讀者自然
  # 假設兩句講同一次查核。但 verified_at 會因為某個來源當天被重讀而更新，scope 那句話不一定
  # 跟著改寫：2026-11-11 統計 31 筆可行動機會的 scope 只剩比 verified_at 更早的日期
@@ -207,8 +213,6 @@ for rid in reviewed+new:
  _scope_text=offers_by_id[rid].get('verification_scope')
  assert isinstance(_scope_text,str) and _scope_text.strip(), f'missing verification_scope for a batch record: {rid}'
  assert run_day in _scope_text, f'verification_scope does not state this batch date ({run_day}) — the card would show 核實 {run_day} next to a scope from an older read: {rid}'
-batch_start=parse_stamp(run['started_at'])
-batch_end=parse_stamp(run['completed_at'])
 attempted_ids=set(attempted)
 for aid in attempted:
  stamp=parse_stamp(offers_by_id[aid].get('last_review_attempt_at'))

@@ -7573,3 +7573,33 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 保留所有既有 ID、首次收錄時間、來源網址及 2,990 筆政策歷史，追加 8 筆。卡片的舊失敗追查標為「後續有核實資料」，適用後續局部複核仍有原來源缺口的情況。驗證使用 `make check`、`make check-ui` 與本輪卡片的手機／桌面 Chrome 核對。正式發布以同一提交的 Frontend QA、Pages 部署、公開檔案逐位元比對和公開站瀏覽器核對為判據。
+
+
+## 2026-11-24 18:06–2026-11-24 18:14 Asia/Taipei｜N=1,224 · R=4 · A=3 · U=1,220 · attempted=0
+
+起點 `6734ceb`。主線與遠端一致，工作樹乾淨，無開放 PR，前一版 Frontend QA 與 Pages 皆成功。複核前取得維護鎖。起始有 1,109 筆可行動、1 筆已到複核時點、24 筆七日內到期，其中 19 筆冷卻中，2 筆舊失敗未到回查時間。全庫有 29 筆至少一個截止點已過，含歷史紀錄。高風險 54 筆為可行動紀錄中已到複核時點、七日內截止、最新追查失敗、暫時不限量或 ID 含 conflict 的聯集。
+
+三位唯讀研究代理使用 GPT-6.2 Sol（high），分查限時案件、較舊的證據缺口及台灣新機會。現有工具未提供 Gemini 3.8 Flash，主代理採會話配置並實讀入庫證據。優先處理 18:00 已到的資策會，再核對近期報名入口與較舊的付款、留存和教育資格問題。佛光競賽和雅婷 Basic+ 的主要未解條件無新增可定論的證據，保留原排程。跨場次的臺大卡使用最後一場報名截止作全案期限，閱讀場另列截止並排定提早查核。
+
+### 實質變更與新增
+
+- `iii-edge-ai-adoption-workshop-2026`｜18:00 後 iEvent 場次標示已截止，DIGITIMES 仍顯示額滿。公開報名移出可行動專區，保留 11/25 活動日期和原始截止，改為新訊號觸發。 [活動頁](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0) [iEvent 表單](https://ievents.iii.org.tw/JoinPNew.aspx?id=3611&t=0) [執行單位入口](https://www.digitimes.com.tw/OnLine/DataInput.asp?ProdGroup=053AF1140-0)
+- `nccu-high-school-ai-entrepreneurship-camp-2026`｜政大公告維持 11/30 17:00 和免費資格，最新公告的表單在未登入時回 HTTP 401 並顯示登入要求。登入後收件待查。 [政大主辦公告](https://cicii.nccu.edu.tw/news-66.html) [公告所連表單](https://docs.google.com/forms/d/e/1FAIpQLSeUyNcnuTrHdbUiB215VEc7wwY_FX5RK4Sgxzv5nAdn61P5Cg/viewform)
+- `vocal-separator-free-two-jobs-daily`｜免費上限維持 2 次；付費包公開列 US$9.99／90 分鐘及 12 個月效期，付款商說法不同。免費檔案存滿一日符合清除條件，實體刪除非同步，業者稱上傳不供自家模型訓練。 [定價](https://vocalseparator.com/pricing) [隱私](https://vocalseparator.com/privacy) [使用條款](https://vocalseparator.com/terms)
+- `deepnote-education-basic-unlimited`｜免費 Basic 時數維持。教育 FAQ 和總覽排除 Deepnote AI 與排程，驗證首段說可使用所有功能。GitHub 把學生包列為 Team，Deepnote 稱 Education。Education Agent 次數未知。 [教育 FAQ](https://deepnote.com/docs/education-faqs) [驗證頁](https://deepnote.com/docs/edu-verification) [GitHub 學生包](https://education.github.com/pack) [Deepnote 學生入口](https://deepnote.com/github-student-pack)
+- `ntpu-generative-ai-intro-cohort-2-2027`｜臺北大學生成式 AI 實戰入門班，2027/1/5 開課，NT$5,600，主辦寫 12/20 前早鳥 NT$5,300。官網截止 12/31、簡章 12/30，卡片採較早日期提示，兩份文件均保留。 [課程頁](https://dce.ntpu.edu.tw/list.php?p=3263) [簡章](https://dce.ntpu.edu.tw/lyadmin/pages/uploads/file/cus2_r9aofl07kp.pdf) [公開報名頁](https://cof.ntpu.edu.tw/pls/cini/third_stud_register.step1?dpno=1543)
+- `ntu-koolib-ai-academic-english-workshops-2026`｜臺大兩場免費學生工作坊，閱讀與寫作分別至 11/25 17:00、12/2 17:00 報名，各限 30 人。校外學生實際資格及後續剩額待查。 [主辦場次總表](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05)
+- `ntcu-adl-highschool-math-ai-workshop-2026`｜中教大因材網免費高中職線上工作坊，12/12 10:00–12:00，12/9 日期截止。名額與精確截止時刻未知，錄取以通知為準。 [公文轉知與附件](https://www.mdhs.ntpc.edu.tw/p/404-1000-22025.php) [主辦表單](https://docs.google.com/forms/d/e/1FAIpQLSd5C8Q1AjMll4cmOkcFtHiUj37bM-Dvh2kEPiFlXMFkOd9UWA/viewform)
+
+### 證據缺口與下一輪
+
+- 依原排程查 `akamai-cloud-rise-startup-credits` 11/24 19:00、`vercel-ai-gateway-parallel-decisions-free-window` 20:30、Fireworks 11/25 與阿里雲預覽 11/26 00:00。保留其餘前輪已排時點。 [Akamai](https://www.akamai.com/cloud/start-ups/rise) [Vercel](https://vercel.com/ai-gateway/models/parallel/parallel-decisions-fast) [Fireworks](https://fireworks.ai/pricing) [阿里雲](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)
+- 11/25 12:00 優先查臺大閱讀場席次及停收。17:00 後先更新閱讀場，再依寫作場的 12/2 17:00 與剩額安排複核。中教大查名額與精確停收時刻。資策會僅在主辦公布候補、延期或新入口時再查。 [臺大總表](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05) [中教大公文轉知](https://www.mdhs.ntpc.edu.tw/p/404-1000-22025.php) [資策會](https://ievents.iii.org.tw/EventS.aspx?id=3611&t=0)
+- 11/25 18:00 查 Vocal Separator 付款商公告、Deepnote 教育及學生包條款、臺北大學統一截止和早鳥日期邊界。付費結帳、教育帳戶核准及大學開班待官方更新。 [Vocal Separator](https://vocalseparator.com/pricing) [Deepnote 教育 FAQ](https://deepnote.com/docs/education-faqs) [臺北大學](https://dce.ntpu.edu.tw/list.php?p=3263)
+- 政大按原 11/25 09:00 查是否釋出公開申請狀態。佛光競賽 10/1 流程與 10/9 正式開放公告差異仍在，參賽費、截止時刻與登入後收件待查。雅婷 Basic+ 原 12/9 追點保留，免費重置、綁卡和現行 Studio 專屬條款待核。 [政大](https://cicii.nccu.edu.tw/news-66.html) [佛光競賽](https://3goodai.fgu.edu.tw/News/Index) [雅婷](https://studio.yating.tw/account/plan)
+
+### 品質與發布
+
+保留既有 ID、首次收錄時間、來源網址及 2,998 筆政策歷史，追加 7 筆。批次驗證現要求每筆成功複核或新增至少有一個來源查閱時間落在實際批次時間窗。這可攔截同一日早班讀取時間被拿來支持晚班的情況。
+
+發布驗證涵蓋 `make check`、`make check-ui`、`git diff --check`、錯置來源時間的隔離反例，以及本輪卡片的 390px／1280px Chrome 實查。正式發布以本輪提交的 Frontend QA 和 Pages 成功、公開資產與 Git 內容一致及公開站卡片核對為判據。
