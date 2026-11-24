@@ -7743,3 +7743,32 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 比對基準 JSON 並依實際差異產生批次及 README 統計。既有 ID、首次收錄時間及證據網址保留。政策歷史保留 3,037 筆並追加 3 筆。本輪在資料層改善配額截止與條款的標示。發布核對依同一提交的 Frontend QA、Pages 部署、公開資產逐位元比對及 390px／1280px 卡片檢查。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 05:05–2026-11-25 05:13 Asia/Taipei｜N=1,235 · R=3 · A=2 · U=1,232 · attempted=1
+
+基準 `8ba54cf`。主線與遠端一致，工作樹乾淨，無開放 PR 或既有維護鎖，前版 Frontend QA 與 Pages 成功。本輪持鎖。佇列有 1,118 筆可行動、1 筆到複核點、29 筆七日內截止，58 筆高風險待處理。高風險為複核逾期、七日內截止、最近追查失敗、暫時不限量或 ID 含 conflict 的聯集。全庫有 30 筆至少一個已過截止點（含歷史）。
+
+三位唯讀研究代理以 GPT-6.2 Sol high 分查到期與高風險、舊案及台灣新案。Gemini 3.8 Flash 未提供，主代理沿用本次會話配置。Fabric 到期先查，Kiroween、桃園職訓與南大競賽因期限接近且出現具體證據變動納入。Gemma 及清華只篩新訊號，沿原排程。東華、Firebase 與其他近期已查案依前輪時間接續。
+
+### 證據與變更
+
+- `kiroween-2026-hackathon-4000-credits`｜11/16 規則納入澳洲。補團隊、組織、居住國欄位、先到順序及 Didit 驗證。額度台北 12/2 04:00 截止申請，12/4 PT 兌換時刻未公布，台北 12/5 06:00 是賽事交件截止。主辦不確認即時庫存及台灣證件類型。 [規則](https://kiroween.devpost.com/rules) [資格更新](https://kiroween.devpost.com/updates/47777-eligibility-update-australia-now-included) [活動資源](https://kiroween.devpost.com/resources) [額度申請表](https://docs.google.com/forms/d/e/1FAIpQLSftsMeJiN3UlSplnFlQ84hHFGEW9v-eQvAs5FdTJU6zfwNrog/viewform)
+- `taoyuan-unemployed-ai-visual-marketing-web-training-2026`｜台灣就業通班級 166984 列 11/26 20:00 停收、11/30 甄試、12/8–次年 2/17 預定訓期，及一般報名 34 人／招生 30 名。保留職缺地圖訓期差異、實際收件與候補未知。網頁讀取器未開啟，以公開 HTTP 讀到班級正文。 [台灣就業通](https://its.taiwanjobs.gov.tw/Course/Detail?ID=166984) [桃園市府公告](https://lhrb.tycg.gov.tw/News_Content.aspx?n=4860&s=1954321) [職缺地圖](https://jobmap.tycg.gov.tw/job-course-info.aspx?id=35073&openExternalBrowser=1)
+- `nutn-national-ai-project-competition-2026`｜主辦專區及表單列 12/5 榮譽校區初賽、12/19 府城校區決賽。一般收件至 12/1 23:59:59。共同報名區另列同日 24:00，專用表單未標獨立截止。一般表單須授權，報名費與組別實際收件待核。 [主辦](https://phpweb4.nutn.edu.tw/ilt/wordpress/?page_id=4308) [專區](https://sites.google.com/asap.nutn.edu.tw/2026quantumai/home?authuser=0) [組別表單](https://docs.google.com/forms/d/e/1FAIpQLScFanMBS93NdXIkGX2CfPKDHdu1F97ml0euBTvnCXT2CQz4pQ/viewform?usp=dialog)
+- `microsoft-data-days-2026-free-exam-vouchers`｜正式全額、半額條款及 FAQ 直接 HTTP 轉址後 403，網頁讀取器回頁框或錯誤。活動索引可見級別與應考日期，未取得本輪可讀正式條款。保留核實日期，記錄失敗並安排短期回查。 [全額條款](https://aka.ms/dd/cert100/terms) [半額條款](https://aka.ms/dd/cert50/terms) [FAQ](https://aka.ms/FBC-VoucherFAQ)
+- `yuanjhen-twnic-ai-brand-marketing-2026`｜新收錄 12/9 遠振資訊與 TWNIC 台北免費 AI 品牌行銷講座，60 席，有公開報名表。逾 13:50 未報到可能釋出席次，精確停收、即時收件及剩額未核。 [主辦公告](https://host.com.tw/twproduct/2026event) [ACCUPASS](https://www.accupass.com/event/2611030910341187569645)
+- `digiknow-ai-video-workflow-webinar-2026`｜新收錄鼎新知識學院 12/8 免費 AI 影音講座。就享知有公開報名入口，主辦列活動前兩小時簡訊寄直播連結。活動日期、費用及入口可核，實際收件、名額、停收時刻待核。 [就享知](https://www.digiknow.com.tw/activity/f082f53964ed4) [ACCUPASS](https://www.accupass.com/event/2611170251501417089090) [活動資料](https://api-nest.digiknow.com.tw/api/digi-acts/view?uuid=f082f53964ed4)
+
+兩個新案按主辦、標題、場次、活動碼及網址比對機會與政策歷史。工研院 OMO 班已在 AOCAI 紀錄。高科大 12/28 班為既有產業新尖兵計畫的新梯次，留待同案補充。AI 簡單學 12/1 有免費活動公告，缺票況與截止；維持交接線索。
+
+### 下一輪
+
+- 11/25 09:00 回到清華 AOCAI 11/27 文件寄送地址，以及 Code With AI、CyLeague、政大等原佇列。清華頁仍列寄送或親送中華大學 M515，公開附件無寄送地址。
+- 11/25 12:00 查 Gemma 評測未完成的提交能否選終件，18:00 查東華兩份 12/5 場次表單；11/26 02:05 查 Firebase 配額停收或延長。各預定時間沿前輪交接。 [Gemma](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Firebase](https://firebasehybridaihackathon.devpost.com/rules)
+- 11/26 05:30 回查 Fabric 的主辦通知、正式條款及當期受理。優先看半額券應考年份、地域、練習評量、取消與領券要求。既有全額條款引文的年齡文義與卡片中文，也須在正式原文重新可讀時校正。
+- 11/26 09:00 查 Kiroween 庫存及兌換精確時刻、南大 Quantum 組截止和費用、兩筆新收錄的剩額與收件，並接續北市大開課通知。11/26 12:00 查桃園課程 20:00 停收前有無新公告、候補或甄試通知。
+- AI 簡單學 12/1 優先查可讀票券期間。高科大產業新尖兵班 UUID `8E017AC3811943F2BC1DF3537EF2677C` 適合併入既有計畫，複核時確認適用對象與費用。Gamma 會員免費與臺大生命教育教師研習沿前輪缺口追查。 [AI 簡單學](https://www.accupass.com/event/2611220448431990581999)
+
+### 品質與發布
+
+批次與 README 統計以基準及本輪實際紀錄差異產生，保留全部既有 ID、首次收錄時間和原來源網址。政策歷史保留 3,040 筆並追加 6 筆。品質改善落在資料欄位，讓精確截止、報名入口與地區規則可以在原有畫面中查閱。發布核對依同一提交的 Frontend QA 與 Pages 執行結果、公開資產及本輪卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
