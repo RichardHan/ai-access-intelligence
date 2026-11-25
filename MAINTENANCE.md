@@ -8134,3 +8134,30 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 品質改善集中於讀者會用到的收件狀態、身分資格、費用、報到與設備條件。批次及 README 數字以基準與實際 JSON 差異計算。保留既有 ID、首次收錄日期、來源網址與原有 3,141 則政策歷史，追加 8 則。驗收以本機資料與瀏覽器測試、同提交 Frontend QA 和 Pages、公開資產及手機與桌面批次卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 19:06–2026-11-25 19:14 Asia/Taipei｜N=1,259 · R=4 · A=2 · U=1,255 · attempted=0
+
+基準 `e8d1cd6`。主線與遠端一致、工作樹乾淨、無開放 PR。上一版 Frontend QA 與 Pages 通過，本輪取得維護鎖。基準有 1,142 筆可行動或待定，全庫 30 筆至少一個截止點已過。高風險聯集 112 筆，含可行動或待定紀錄的到複核時點、七日內截止、最近追查失敗、暫時不限量及 ID 或狀態帶衝突標記。有 1 筆已到複核時點，36 筆七日內有截止點，其中 20 筆仍在冷卻。
+
+依交接先查到時的 Akamai Rise，再取超過冷卻、接近截止且有收件或資格缺口的台灣案例。東華兩份表單依原排程回查，Gemma 保留終件與組隊鎖定時點。三位唯讀研究代理使用 GPT-6.2 Sol high，環境未提供 Gemini 3.8 Flash。主代理沿用會話模型，並直接閱讀採用的官方資料。
+
+### 證據與變更
+
+- `akamai-cloud-rise-startup-credits`。官方頁全文可讀。英中 FAQ 排除現有客戶，Linode 西文 FAQ 允許依一般條件送審。補可運作公司網站、相符網域的公司信箱及有效卡，並按用量費表述。台灣資格、實際受理、月限額與第 2–3 年折扣比率待核。 [英文計畫頁](https://www.akamai.com/cloud/start-ups/rise) [中文計畫頁](https://www.akamai.com/zh/cloud/start-ups/rise) [Linode 西文計畫頁](https://www.linode.com/es/start-ups/rise/) [一般計費 FAQ](https://techdocs.akamai.com/cloud-computing/docs/billing-faqs)
+- `nccu-high-school-ai-entrepreneurship-camp-2026`。補主辦窗口與課前連結寄送方式。以 10/19 公告的最新表單為入口。未登入回 401，實際席次、收件與候補待核。 [主辦公告](https://cicii.nccu.edu.tw/news-66.html) [活動簡章](https://drive.google.com/uc?export=download&id=1wPIBiXdvYhrJTR-ES_bSUBIU7rUFbymL) [公告報名表](https://docs.google.com/forms/d/e/1FAIpQLSeUyNcnuTrHdbUiB215VEc7wwY_FX5RK4Sgxzv5nAdn61P5Cg/viewform)
+- `cht-gemini-shorts-contest-2026`。補圖形驗證與登錄後修改限制，確認第三週已公布抽獎名單。徵件仍至 11/30 18:00，實際收件與審核時程待核。 [活動辦法](https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html) [報名表](https://festival.cht.com.tw/gemini) [第三週公告](https://www.cht.com.tw/en/home/cht/-/media/eShop-Images/IPM%20DOC/other%20PDF/2026geminiawards/week3.pdf)
+- `nextwave-ai-legaltech-hackathon-2026`。主辦寫明收到資料後回信。Word 與 PDF 在公開報名入口上傳，無須另寄。表單未登入回 401，實際收件及費用待核。 [主辦網站](https://aiscuclub.github.io/nextweave2026/) [提案原檔](https://aiscuclub.github.io/nextweave2026/2026%E5%B9%B4NextWave%E7%AB%B6%E8%B3%BD%E6%8F%90%E6%A1%88%E6%9B%B8.odt) [主辦報名表](https://docs.google.com/forms/d/1pV3JRWR1VF0grXSnMURSD6RUXyooklGbZhrUU8SW9fA/viewform)
+- `tcfst-ai-agent-finance-workflow-15w350-2026`。新增 12/5 及 12/12 線上 12 小時班。原價 NT$15,000，會員 11/27（含）前報名早鳥 NT$13,500，另有會員與團報價。班級總截止、即時席次與端點費待核。 [主辦課程頁](https://edu.tcfst.org.tw/web/tw/class/show.asp?courseidori=15W350) [非會員表單](https://edu.tcfst.org.tw/online_register3.asp?cost=15000&courseidfi=15W350&farfrom=&plancode=115TJ17F1) [報名與退費一般規則](https://edu.tcfst.org.tw/web/tw/about/06.asp)
+- `wda-photography-association-ai-brand-workflow-173101`。新增 12/17 起板橋 42 小時第 01 期。主辦列總費 NT$8,210、一般核准後淨負擔 NT$1,642，及 12/14 18:00 截止。官方班網導向維護，保留受理與名額未知。 [承訓單位班頁](https://www.tpqc.com.tw/173101-ai-creative/) [勞發署方案](https://course.taiwanjobs.gov.tw/about/recommended) [官方班頁](https://ojt.wda.gov.tw/ClassSearch/Detail?OCID=173101&plantype=1) [維護公告](https://maintain.ejob.gov.tw/)
+- `moda-civil-service-ai-agent-seminar-2026` 重讀所得與上午紀錄一致，混搭出席及核發時數仍無新證據，沿用原查閱與排程。AOCAI 2326100096 與既有 `aocai-working-free-ai-courses-2026` 同期且同班，未重複收錄。Akamai 另一筆部署試作 US$100 促銷留待補查，活動頁的啟用後 60 日與一般條款的促銷碼一年是不同時鐘，台灣付款資格未知。 [數發部公開表單](https://gov.tw/wqZ) [工研院班頁](https://college.itri.org.tw/Lesson/LessonData/4665A6CA-82A0-4A6C-B2F7-28B2B11A6B9C) [Akamai 試作活動](https://www.akamai.com/lp/build-ai-apps-agents) [一般促銷規則](https://www.akamai.com/legal/promotion-redemption-rules-conditions)
+
+### 下一輪
+
+- 11/25 23:30 沿用 `ndhu-ai-productivity-workshop-2026` 兩份公開表單回查，11/26 過日後再依實際停收與公告調整，保留截止日期精度。 [東華主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php)
+- 11/26 02:05 查 `google-buildhybridai-2026-firebase-ai-logic` 的額外配額終輪表單，保留主賽交件截止。05:30 按前輪交接換官方路徑查 Fabric。07:45 查 Gemma 終件選取，07:59 後查加入和組隊鎖定。 [Firebase 競賽規章](https://firebasehybridaihackathon.devpost.com/rules) [Gemma 競賽規章](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules)
+- 11/26 08:00 查板橋產投班 173101、桃園 166984、高師大 01 期的官方班網及替代主辦入口。09:00 查臺菲論壇回覆期限與政大報名入口變動。 [板橋班級入口](https://ojt.wda.gov.tw/ClassSearch/Detail?OCID=173101&plantype=1) [桃園班級入口](https://its.taiwanjobs.gov.tw/Course/Detail?ID=166984) [高師大青年職訓班](https://ttms.etraining.gov.tw/eYVTR/YipClassApply/Detail?UUID=8A6D893F2E594ED7A7DC6329F9A36689) [臺菲論壇主辦頁](https://www.teema.org.tw/education.aspx?infoid=54548) [政大主辦頁](https://cicii.nccu.edu.tw/news-66.html)
+- 11/26 19:00 按佇列優先查 Akamai 既有客戶適用版本與台灣帳單、自強基金會早鳥、NextWave 實際收件信號及中華電信審核公告。其餘沿前輪安排，無新訊號者維持複核時點。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/e8d1cd6dc93c8b145f92243266e32ae703a3d7b1/MAINTENANCE.md)
+
+### 資料與發布
+
+本輪以資料修正為主。計數從基準 JSON 與實際紀錄差異產生，保留既有 ID、首次收錄日、來源 URL 及 3,149 則既有政策歷史，追加 6 則。發布驗收以本機資料及瀏覽器檢查、同提交 Frontend QA 和 Pages、公開資產及桌面和手機的本輪卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)

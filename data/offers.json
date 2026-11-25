@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T18:13:51+08:00",
-  "scope": "2026-11-25 18:06–2026-11-25 18:13 Asia/Taipei 局部複核 5 筆，新增 2 筆，整筆追查失敗 1 筆，其餘 1,252 筆既有紀錄未完成本輪複核。核對東華表單、臺北大學早鳥與截止、中教大參訓條件、ITSA 競賽要求與 AICU 付款條款，新增 TMBA 培訓與高師大職訓。桃園班級頁維護，待回查。",
+  "updated_at": "2026-11-25T19:14:54+08:00",
+  "scope": "2026-11-25 19:06–2026-11-25 19:14 Asia/Taipei 局部複核 4 筆，新增 2 筆，整筆追查失敗 0 筆，其餘 1,255 筆既有紀錄未完成本輪複核。補 Akamai Rise 既有客戶條款差異、政大營隊聯絡與上課通知、中華電信登錄及 NextWave 收件流程。新增自強基金會金融 AI 班與板橋產投班，後者班網維護中。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -78354,21 +78354,19 @@
     },
     {
       "id": "akamai-cloud-rise-startup-credits",
-      "title": "Akamai Cloud Rise：新創首年最高US$120,000雲端額度，需公司網域與信用卡",
-      "summary": "Akamai Cloud（前 Linode）Rise 為三年新創計畫：首年發放 US$500 至 US$120,000 雲端 credits（依審核，非保證上限），第二、三年改為折扣而非 credits；未用額度不逐月或跨年結轉，超過每月上限當月按量收費。資格為成立未滿 7 年的營利公司、有員工／實際用戶／初期營收／VC 募資任一、規劃以 Akamai Cloud 為主要基礎設施，既有客戶不符；申請前須以公司網域 email 建立新帳號並綁有效信用卡（需為商業帳戶），審核約 1–2 週，代理商與託管商不適用。頁面未列國別清單。 Akamai Cloud 計費 FAQ 說明，服務留在帳戶上時，關機或閒置仍可能計費。",
-      "status": "application_based",
+      "title": "Akamai Cloud Rise｜新創首年最高 US$120,000，需公司網站、同網域信箱及信用卡",
+      "summary": "Akamai Cloud Rise 為三年新創計畫。首年額度 US$500–120,000，依審查核定。第二、三年提供折扣，未用首年額度不逐月或跨年結轉。超過每月上限會收費。成立未滿 7 年的營利新創須備可運作的公司網站、對應網域的公司信箱與有效信用卡，並建立商業帳戶。Akamai 英中 FAQ 排除既有客戶，Linode 西文 FAQ 則請既有客戶依一般條件送審。台灣實體及帳務資格待核。",
+      "status": "terms_conflict",
       "categories": [
-        "FREE",
         "QUALIFICATION",
         "HIGH-QUOTA"
       ],
       "views": [
-        "free",
         "quota",
         "developer"
       ],
-      "setup_cost_usd": 0,
-      "recurring_cost_usd": 0,
+      "setup_cost_usd": null,
+      "recurring_cost_usd": null,
       "effort_minutes_max": 45,
       "taiwan": "Unknown",
       "regions": [],
@@ -78379,29 +78377,30 @@
         "first_year_credits_ceiling_usd": 120000,
         "program_years": 3,
         "year_two_three": "折扣而非 credits",
-        "reset_cycle": "每月上限（金額未公布）"
+        "reset_cycle": "每月上限（金額未公布）",
+        "monthly_credit_cap_usd": null
       },
       "credit_card_required": true,
-      "review_cadence": "monthly",
-      "next_review_at": "2026-11-25T19:00:00+08:00",
-      "verification_scope": "2026-11-09 以 Wayback 2026-10-09 官方頁快照讀取 akamai.com/cloud/start-ups/rise（live 直取 403）：US$500–120,000 首年 credits、三年計畫、未滿 7 年、新客限定、需公司網域與信用卡、月度不結轉、超額收費、審核 1–2 週。未確認 live 頁現況、未申請、未核台灣實體與帳單。",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T19:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核。閱讀 Rise 英中正文、Linode 西文頁及 Akamai 計費 FAQ，核對首年額度、申請用網站與公司網域、商業帳號、信用卡、超額費及官方語系差異。實際受理、台灣資格與每月額度待核。",
       "usable_duration": "首年 credits（每月上限，未用不結轉）；第 2–3 年為折扣。",
       "cancellation": "依 Akamai Cloud 計費 FAQ，保留的服務閒置或關機仍會計費。刪除服務可停止該服務新增費用，已累積費用仍會出帳。暫停的資料庫叢集另有免計費例外。Rise 關戶後的剩餘抵用額處理待核。",
-      "cost_note": "申請免費；credits 本身 US$0，但申請前必須綁有效信用卡並建立商業帳號。超過每月 credit 上限的用量當月按標準費率收費；第 2–3 年僅折扣。",
-      "access_risk": "既有客戶、代理商、託管商、MSP 與系統整合商列為不適用。台灣公司網域及帳單條件、現行申請狀態待核。",
+      "cost_note": "申請入口要求有效信用卡。首年核定抵用額可折抵符合條件的用量，超過月上限按額外用量收費。第 2–3 年提供折扣，折扣比率與個別帳單未公布。",
+      "access_risk": "Akamai 英中 FAQ 排除既有客戶，Linode 西文 FAQ 請既有客戶依一般條件送審。現有客戶適用口徑及台灣公司、信用卡和實際收件待供應商確認。管理型託管商、MSP、系統整合商及其他轉售商被計畫頁排除。",
       "eligibility": {
         "service_availability": "Akamai Cloud 全球服務；計畫頁未列可用國家清單。",
-        "account_eligibility": "成立未滿 7 年營利公司、新客戶、需公司網域 email 與商業帳號；審核制。",
+        "account_eligibility": "成立未滿 7 年的營利新創，須具創辦人以外受薪員工、非親友／投資人的活躍使用者、初期營收或創投資助至少一項，並規劃擴大基礎設施、將 Akamai Cloud 列為主要供應商之一。申請前須以公司實體資料開立商業帳戶，提供可運作的公司網站、相符網域的公司信箱與有效信用卡。",
         "billing_country": "須綁有效信用卡；台灣公司卡與帳單國家是否通過未核。",
-        "identity_residency": "未列居住地或國別限制；僅一般制裁與出口條款。",
-        "terms_restrictions": "不得為既有客戶；代理商／託管商不適用；未用額度不結轉、超額收費。",
+        "identity_residency": "讀到的 Rise 計畫頁未列居住地或國別清單。",
+        "terms_restrictions": "Akamai 英中 FAQ 排除既有客戶，Linode 西文 FAQ 對既有客戶列一般審查流程。未用額度不結轉，月額度外用量收費。",
         "taiwan_note": "Unknown：頁面未列國別白名單或排除，台灣公司能否通過審核未證實。"
       },
       "unknowns": [
-        "每月 credit 上限與級距",
-        "台灣公司＋網域＋信用卡能否通過審核",
-        "Rise 即時方案頁、官方新創目錄及日文方案頁於 2026-11-24 直讀回 HTTP 403，尚無可核實的現行受理、額度與資格條件。",
-        "稅務與發票處理"
+        "每月額度上限與核定級距、第 2–3 年折扣比率",
+        "台灣公司、公司網域、信用卡與帳單國家能否通過審核",
+        "既有客戶適用哪一版本及實際收件狀態",
+        "稅務、發票及關戶後抵用額處理"
       ],
       "sources": [
         {
@@ -78422,6 +78421,34 @@
           "scope": "保留資源、關機、刪除與已產生費用的一般計費規則",
           "evidence": "帳戶上的資源即使閒置或關機仍會計費。刪除服務可停止新增費用，當期已累積的費用仍會出帳。FAQ 另列已暫停的資料庫叢集免計費例外。",
           "accessed_at": "2026-11-24T19:08:59+08:00"
+        },
+        {
+          "url": "https://www.akamai.com/cloud/start-ups/rise",
+          "label": "Akamai Rise 英文計畫頁",
+          "scope": "首年額度、網站和公司信箱、付款、既有客戶及收件流程",
+          "evidence": "官方頁列首年 US$500–120,000、兩年後續折扣、需可運作網站、對應公司網域的信箱與有效信用卡。英文 FAQ 排除既有客戶，並列當月超額收費、首年未用額度不結轉。公開頁列提交、審查、會談及核發流程。",
+          "accessed_at": "2026-11-25T19:07:32+08:00"
+        },
+        {
+          "url": "https://www.akamai.com/zh/cloud/start-ups/rise",
+          "label": "Akamai Rise 中文計畫頁",
+          "scope": "既有客戶、公司網域與信用卡",
+          "evidence": "已讀中文頁 FAQ 排除既有客戶，亦要求可運作的網站、同網域公司信箱與有效信用卡。可讀全文未見既有客戶 US$3,000 例外。",
+          "accessed_at": "2026-11-25T19:08:07+08:00"
+        },
+        {
+          "url": "https://www.linode.com/es/start-ups/rise/",
+          "label": "Linode Rise 西文計畫頁",
+          "scope": "既有客戶資格的不同口徑",
+          "evidence": "既有客戶 FAQ 指示符合一般要求者送審。列可運作網站、公司網域信箱及有效卡，首年 US$500–120,000。台灣的適用條款以及與 Akamai 英中頁的關係待核。",
+          "accessed_at": "2026-11-25T19:08:07+08:00"
+        },
+        {
+          "url": "https://techdocs.akamai.com/cloud-computing/docs/billing-faqs",
+          "label": "Akamai Cloud 計費 FAQ",
+          "scope": "一般計費、刪除服務與已產生的費用",
+          "evidence": "帳戶保留的服務即使關機或閒置仍計費。刪除可停止新增費用，已累積費用仍出帳。暫停的資料庫叢集是 FAQ 所列例外。",
+          "accessed_at": "2026-11-25T19:07:32+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -78434,10 +78461,10 @@
       "usable_benefit_usd": null,
       "announcement_at": null,
       "discovered_at": "2026-11-09T11:38:32+08:00",
-      "verified_at": "2026-11-09T11:38:32+08:00",
-      "priority_score": 18.6,
-      "priority_tier": "B",
-      "priority_note": "官方來源·申請審核制·免費·台灣未標記·≤45分鐘·有資格門檻",
+      "verified_at": "2026-11-25T19:08:07+08:00",
+      "priority_score": 14.6,
+      "priority_tier": "C",
+      "priority_note": "官方來源·官方條款有差異·費用未知·台灣未標記·≤45分鐘·有資格門檻",
       "last_review_attempt_at": "2026-11-24T19:07:41+08:00",
       "last_review_attempt_reason": "Rise 即時方案、官方新創目錄及日文方案頁皆回 HTTP 403。搜尋索引為較舊內容。另讀到一般雲端計費 FAQ，僅修正停止計費說明。"
     },
@@ -86790,7 +86817,7 @@
     {
       "id": "cht-gemini-shorts-contest-2026",
       "title": "中華電信「Gemini 超行」YouTube Shorts 創作大賽：11/30 18:00 截稿，需用 Google AI 工具，限中華民國國籍 18 歲以上",
-      "summary": "中華電信主辦的 Shorts 創作競賽，活動期間 2026-11-04 12:00 至 12-23，作品徵件至 2026-11-30 18:00。限報名時已年滿 18 歲且具中華民國國籍之自然人。作品須使用至少一種 Google AI 生成工具，並保留提示詞和生成歷程。旗艦大獎 1 名總值 NT$82,149。最佳觀看獎：金獎 Pixel 11 Pro Fold 1 名、銀獎 Pixel 11 Pro XL 2 名、銅獎 Pixel 11 Pro 2 名，以 2026-12-14 14:00 公開累積觀看數排名。週週抽預定 2026-11-11、11-18、11-25、12-04 各 14:00 公告。中獎總價值超過 NT$20,001 的境內居住者，活動辦法寫須先扣繳 10%。這是獎品競賽，不是模型額度。",
+      "summary": "中華電信主辦的 Shorts 創作競賽，活動期間 2026-11-04 12:00 至 12-23，作品徵件至 2026-11-30 18:00。限報名時已年滿 18 歲且具中華民國國籍之自然人。作品須使用至少一種 Google AI 生成工具，並保留提示詞和生成歷程。旗艦大獎 1 名總值 NT$82,149。最佳觀看獎：金獎 Pixel 11 Pro Fold 1 名、銀獎 Pixel 11 Pro XL 2 名、銅獎 Pixel 11 Pro 2 名，以 2026-12-14 14:00 公開累積觀看數排名。第三週抽獎名單已公布，第四週預定 2026-12-04 14:00 公告。中獎總價值超過 NT$20,001 的境內居住者，活動辦法寫須先扣繳 10%。這是獎品競賽，不是模型額度。",
       "categories": [
         "VALUE-DEAL",
         "QUALIFICATION"
@@ -86816,14 +86843,14 @@
       "valuation_scenario": null,
       "cancellation": "審核前以不公開（Unlisted）送件並勿散布連結；審核通過後須將同一作品改為公開。通過後不得替換、重傳、刪除或改回非公開。",
       "usable_duration": "徵件 2026-11-04 12:00–2026-11-30 18:00；最佳觀看獎與旗艦大獎觀看數統計截止 2026-12-14 14:00，得獎公告 2026-12-23 14:00。",
-      "access_risk": "限「報名時已年滿 18 歲且具有中華民國國籍之自然人」，非本國籍者不符；每人最多 3 件作品、週週抽僅能中 1 次；獎項不得折現或轉讓；中獎價值超過 NT$20,001 需先扣繳 10% 機會中獎稅（非境內居住者 20%）。未使用指定圖樣、比例或 Hashtag 即不符資格。 報名前先以不公開連結送審，通知通過後再將同一作品改公開。通過後不得替換、重傳、刪除或改為非公開。",
-      "verified_at": "2026-11-25T01:10:41+08:00",
-      "verification_scope": "2026-11-25 台北時間局部複核，重讀主辦活動辦法的格式、作品公開順序、授權與徵件日，核對官方報名入口可達。未取得實際登入後或送出結果。",
+      "access_risk": "限「報名時已年滿 18 歲且具有中華民國國籍之自然人」，非本國籍者不符；每人最多 3 件作品、週週抽僅能中 1 次；獎項不得折現或轉讓；中獎價值超過 NT$20,001 需先扣繳 10% 機會中獎稅（非境內居住者 20%）。未使用指定圖樣、比例或 Hashtag 即不符資格。 報名前先以不公開連結送審，通知通過後再將同一作品改公開。通過後不得替換、重傳、刪除或改為非公開。 公開登錄表含圖形驗證碼，並提示「登記後不可更改」。送出前須核對資料與作品連結。",
+      "verified_at": "2026-11-25T19:10:43+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核。閱讀主辦活動辦法、公開登錄表文字與第三週抽獎 PDF，核對表單驗證、登記後修改限制與公告狀態。實際送件及審核時程待核。",
       "discovered_at": "2026-11-11T07:25:00+08:00",
       "announcement_at": "2026-11-04",
       "previous_limit": "未收錄",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-26T01:00:00+08:00",
+      "next_review_at": "2026-11-26T19:00:00+08:00",
       "deadline_at": "2026-11-30T18:00:00+08:00",
       "eligibility": {
         "service_availability": "全台活動，報名與作品上傳皆線上（活動網站＋本人 YouTube 帳號）；主辦單位為中華電信，執行單位李奧貝納。",
@@ -86834,7 +86861,7 @@
         "taiwan_note": "Yes：限具中華民國國籍者，台灣使用者為主要適用對象；外籍人士不符。"
       },
       "unknowns": [
-        "活動平台入口可達，個別表單呈現、實際送件與審核所需時間待核",
+        "公開登錄欄位已核，實際收件與個別作品審核所需時間待核。",
         "使用免費 Gemini 層是否符合「至少一種 Google AI 生成工具」的查驗標準",
         "觀看數統計是否計入 Shorts 以外的播放來源"
       ],
@@ -86862,10 +86889,10 @@
         },
         {
           "url": "https://www.cht.com.tw/home/campaign/gemini_youtubeshorts/index.html",
-          "label": "中華電信活動辦法",
-          "scope": "投稿規格、公開順序及期限",
-          "evidence": "11/30 18:00 截止。原創短片限 9:16、1080×1920、3 分鐘內 MP4。先用本人 YouTube 不公開連結報名，收到通過通知才把同一支改公開。審核通過後不得更換、重傳、刪除或再轉非公開。",
-          "accessed_at": "2026-11-25T01:08:10+08:00"
+          "label": "中華電信競賽活動辦法",
+          "scope": "徵件與公告期程、表單資料",
+          "evidence": "活動辦法列徵件至 11/30 18:00，姓名、電話、身分證後四碼、信箱及作品連結，並列第三週 11/25 14:00 和第四週 12/4 14:00 公告。 較早紀錄（2026-11-25T01:08:10+08:00，投稿規格、公開順序及期限）原載。11/30 18:00 截止。原創短片限 9:16、1080×1920、3 分鐘內 MP4。先用本人 YouTube 不公開連結報名，收到通過通知才把同一支改公開。審核通過後不得更換、重傳、刪除或再轉非公開。",
+          "accessed_at": "2026-11-25T19:09:18+08:00"
         },
         {
           "url": "https://festival.cht.com.tw/gemini",
@@ -86873,6 +86900,21 @@
           "scope": "官方活動平台公開入口",
           "evidence": "主辦活動連到中華電信活動平台，公開入口可達。未填資料、啟動驗證或送件。",
           "accessed_at": "2026-11-25T01:10:41+08:00"
+        },
+        {
+          "url": "https://festival.cht.com.tw/assets/GeminiYT-CE9PblT4.js",
+          "label": "中華電信報名表公開文字資產",
+          "scope": "登錄欄位、驗證及修改限制",
+          "evidence": "唯讀檢視報名表公開資產。可核對「登記後不可更改」、活動來源選項、圖形驗證及確認登錄文字。",
+          "accessed_at": "2026-11-25T19:10:43+08:00"
+        },
+        {
+          "url": "https://www.cht.com.tw/en/home/cht/-/media/eShop-Images/IPM%20DOC/other%20PDF/2026geminiawards/week3.pdf",
+          "label": "中華電信第三週抽獎公告 PDF",
+          "scope": "第三週抽獎名單已公開",
+          "evidence": "讀取中華電信第三週活動 PDF，確認可讀公告標題。僅記錄公告狀態。",
+          "accessed_at": "2026-11-25T19:10:35+08:00",
+          "announcement_at": "2026-11-25"
         }
       ],
       "record_type": "opportunity",
@@ -88888,16 +88930,16 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": "以官方第一名獎金 NT$20,000 按 1 美元兌 32 新臺幣折算之潛在獎金；佳作與最佳簡報獎金額更低，且須通過初賽與決賽評選。",
-      "verified_at": "2026-11-25T01:10:28+08:00",
+      "verified_at": "2026-11-25T19:10:35+08:00",
       "discovered_at": "2026-11-14T13:05:00+08:00",
       "announcement_at": "2026-10-15",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-26T01:00:00+08:00",
-      "verification_scope": "2026-11-25 台北時間局部複核，讀主辦簡章、提案下載頁及 ODT 內容，核對首投限制、附件與隊伍時程。Google 表單 401，實際送件未核。",
-      "usable_duration": "11/30 23:59 報名與初賽繳件截止。12/6 19:00–21:00 各隊派代表參加線上工作坊。12/25 23:59 前交決賽簡報與成品，12/27 在東吳城中校區決賽。",
+      "next_review_at": "2026-11-26T19:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部複核。閱讀主辦公告文字與提案原檔，核對收件回信、入選通知及 Word／PDF 上傳方式。公開表單要求登入，個別收件與費用待核。",
+      "usable_duration": "11/30 23:59 報名與初賽繳件截止。12/6 19:00–21:00 各隊派代表參加線上工作坊。12/25 23:59 前交決賽簡報與成品，12/27 在東吳城中校區決賽。 收件回信確認資料送達，決賽入選另於 12/2 前寄信並公布名單。",
       "cancellation": "簡章未列退費或取消報名機制；主辦單位保留修改簡章與最終解釋權。",
       "cost_note": "簡章未載明報名費；報名需填寫線上表單並上傳學生身分證明，費用欄位留空待核。",
-      "access_risk": "提案書要求線上提交 Word 與 PDF，附學生證或當學期在學證明，以及全體隊員親簽文件。公開 Google 報名表回 401，實際受理及帳號限制待核。",
+      "access_risk": "提案書的 Word 與 PDF 檔透過線上表單上傳，並附學生證或當學期在學證明，以及全體隊員親簽文件。主辦表示收到報名資料後會回信，提案書無須另寄電子郵件。Google 表單未登入回 401，實際收件待核。",
       "offer_validity": "nextwave-2026-brief",
       "terms_compliance": "參賽者同意主辦單位蒐集及利用個人資料；作品智慧財產權歸參賽隊伍所有；未盡事宜由主辦單位保留修改與最終解釋權。",
       "eligibility": {
@@ -88910,7 +88952,7 @@
       },
       "unknowns": [
         "報名費是否收取（簡章未列）",
-        "報名表是否限特定 Google 帳號及實際送件狀態",
+        "主辦公告採收件回信，表單可用帳號、實際收件及回信時間待核。",
         "初賽入選隊數、評審及 AWS 或其他資源是否發放",
         "決賽交通或材料補助",
         "法律與監管未核"
@@ -88954,9 +88996,23 @@
         {
           "url": "https://aiscuclub.github.io/nextweave2026/2026%E5%B9%B4NextWave%E7%AB%B6%E8%B3%BD%E6%8F%90%E6%A1%88%E6%9B%B8.odt",
           "label": "NextWave 官方提案書",
-          "scope": "首次投稿、雙格式、全員簽名及證明",
-          "evidence": "提案書須上傳 Word 與 PDF。學生須附學生證影像或當學期在學證明，同意書與獎金代領授權書各列全員親簽。作品須首次投稿，未曾投稿其他競賽或活動。",
-          "accessed_at": "2026-11-25T01:10:28+08:00"
+          "scope": "上傳格式及送件路徑",
+          "evidence": "提案須以 Word 及 PDF 檔經線上報名表上傳，無須另外寄電子郵件。 較早紀錄（2026-11-25T01:10:28+08:00，首次投稿、雙格式、全員簽名及證明）原載。提案書須上傳 Word 與 PDF。學生須附學生證影像或當學期在學證明，同意書與獎金代領授權書各列全員親簽。作品須首次投稿，未曾投稿其他競賽或活動。",
+          "accessed_at": "2026-11-25T19:10:35+08:00"
+        },
+        {
+          "url": "https://aiscuclub.github.io/nextweave2026/assets/index-BMtHPSpd.js",
+          "label": "NextWave 主辦網站公告文字",
+          "scope": "收件回信與決賽通知分開",
+          "evidence": "主辦網站公開文字列收到報名資料後回信，並分列 12/2 前寄信通知及公布決賽名單。",
+          "accessed_at": "2026-11-25T19:09:18+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/1pV3JRWR1VF0grXSnMURSD6RUXyooklGbZhrUU8SW9fA/viewform",
+          "label": "NextWave 主辦報名表",
+          "scope": "公開讀取邊界",
+          "evidence": "主辦網頁連向此登入型表單。未登入 GET 回 401，顯示登入要求。未取得收件或名額資訊。",
+          "accessed_at": "2026-11-25T19:09:31+08:00"
         }
       ],
       "priority_score": 21.9,
@@ -99398,9 +99454,9 @@
       "limited_confirmed": null,
       "quota_details": "兩場線上工作坊各 80 人，實體營 80 人。額滿列候補，個別席次未知。",
       "usage_type": "兩場線上 AI 工作坊與一場實體營",
-      "usable_duration": "2026/12/2、12/9 19:30–20:30 線上，12/19 08:30–17:30 於政大研創大樓。",
+      "usable_duration": "2026/12/2、12/9 19:30–20:30 線上，12/19 08:30–17:30 於政大研創大樓。 線上課程連結在各場活動前寄到報名信箱。",
       "cancellation": "候補遞補由主辦另行通知，個別取消流程未核。",
-      "access_risk": "請從主辦公告的報名連結進入。線上工作坊採本人身分出席，須開鏡頭，主辦會錄影並規劃公開上架。實際剩餘席次待核。",
+      "access_risk": "現行入口以 10/19 主辦公告為準，Google 表單要求登入，實際收件及席次待查。線上課程連結在各場前寄至報名信箱。活動窗口為政大創新育成中心，電話 02-29393091 分機 67080 或 69348，電郵 iic.nccu@gmail.com。線上出席須開鏡頭，主辦將錄影並規劃公開上架。",
       "announcement_at": "2026-10-19",
       "discovered_at": "2026-11-24T03:09:12+08:00",
       "deadline_at": "2026-11-30T17:00:00+08:00",
@@ -99416,7 +99472,8 @@
       "unknowns": [
         "剩餘席次及個別候補結果",
         "實際登入後表單狀態",
-        "適用法律與監管限制未核實"
+        "適用法律與監管限制未核實",
+        "主辦尚未公布線上課程連結的精確寄發時點。"
       ],
       "sources": [
         {
@@ -99439,15 +99496,30 @@
           "scope": "未登入存取狀態",
           "evidence": "從公告短網址確認目的頁。公開 GET 回應 HTTP 401，顯示「你必須登入才能存取這項內容」。登入後狀態待查。",
           "accessed_at": "2026-11-24T18:09:56+08:00"
+        },
+        {
+          "url": "https://cicii.nccu.edu.tw/news-66.html",
+          "label": "政大 10/19 主辦公告",
+          "scope": "現行報名連結、免費規則及截止",
+          "evidence": "公告連至現行表單，收件至 11/30 17:00。全國高中職在學學生可分場免費報名，依完成報名順序保留名額。",
+          "accessed_at": "2026-11-25T19:09:00+08:00",
+          "announcement_at": "2026-10-19"
+        },
+        {
+          "url": "https://drive.google.com/uc?export=download&id=1wPIBiXdvYhrJTR-ES_bSUBIU7rUFbymL",
+          "label": "政大創業營活動辦法",
+          "scope": "課前連結寄發、活動聯絡窗口與完整報名",
+          "evidence": "簡章列每場前寄出上課連結至報名信箱，另列政大創新育成中心承辦電話分機 67080／69348。兩份簽署文件及表單均完成才視為完成報名。",
+          "accessed_at": "2026-11-25T19:09:00+08:00"
         }
       ],
       "priority_score": 19.6,
       "priority_tier": "S",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻",
-      "verified_at": "2026-11-24T18:09:12+08:00",
+      "verified_at": "2026-11-25T19:09:00+08:00",
       "review_cadence": "daily",
       "next_review_at": "2026-11-26T09:00:00+08:00",
-      "verification_scope": "2026-11-24 台北時間局部複核。主辦公告維持免費及 11/30 17:00 截止。公告連出的 Google 表單需要登入，登入後實際收件與候補待查。",
+      "verification_scope": "2026-11-25 台北時間局部複核。閱讀主辦公告與簡章，核對現行入口、課前寄送與活動窗口。表單未登入顯示登入要求，實際收件及候補未核。",
       "last_review_attempt_at": "2026-11-25T09:08:24+08:00",
       "last_review_attempt_reason": "本次追查公開收件新訊號。主辦表單 HTTP 401 並要求 Google 登入；政大公告維持 11/30 17:00，沒有公布登入後受理、剩餘席次或候補現況。"
     },
@@ -104453,41 +104525,211 @@
         "本班正式簡章的補助返還、一般自費名額與費用細節"
       ],
       "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "tcfst-ai-agent-finance-workflow-15w350-2026",
+      "title": "自強基金會金融 AI Agent 線上實戰班 15W350｜會員早鳥 NT$13,500",
+      "summary": "自強工業科學基金會於 12/5、12/12 開設 12 小時線上班，練習 NVIDIA NIM、RAG 與多代理工作流程。定價 NT$15,000，會員於 11/27（含）前報名可享 NT$13,500 早鳥。需具 Python 及 LLM 基礎。主辦提供會員和非會員報名路徑，實際收件與席次待查。",
+      "record_type": "opportunity",
+      "status": "application_based",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "VALUE-DEAL",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "value",
+        "education"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "taiwan": "Yes",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "deadline_at": null,
+      "expires_at": null,
+      "announcement_at": null,
+      "discovered_at": "2026-11-25T19:08:46+08:00",
+      "verified_at": "2026-11-25T19:10:01+08:00",
+      "next_review_at": "2026-11-26T19:00:00+08:00",
+      "review_cadence": "daily",
+      "sources": [
+        {
+          "url": "https://edu.tcfst.org.tw/web/tw/class/show.asp?courseidori=15W350",
+          "label": "自強基金會 15W350 課程頁",
+          "scope": "日期、費用、優惠及課前要求",
+          "evidence": "12/5 及 12/12 線上共 12 小時。定價 NT$15,000。11/27（含）前會員早鳥 NT$13,500。另有一般會員完成報名繳費及兩人團報價格。需具 Python 及 LLM 基礎，課程使用雲端 NIM，不需自備 GPU。",
+          "accessed_at": "2026-11-25T19:08:46+08:00"
+        },
+        {
+          "url": "https://edu.tcfst.org.tw/web/tw/about/06.asp",
+          "label": "自強基金會學員須知",
+          "scope": "付款、額滿及一般退費方式",
+          "evidence": "報名及繳費均須於截止前完成，額滿可提早停收。信用卡確認開課後扣款。開訓前退訓退七成、全期前三分之一內退半數，逾三分之一不退。",
+          "accessed_at": "2026-11-25T19:08:46+08:00"
+        },
+        {
+          "url": "https://edu.tcfst.org.tw/ismember.asp?cost=15000&courseidfi=15W350&farfrom=&plancode=115TJ17F1",
+          "label": "自強基金會會員／非會員報名選擇頁",
+          "scope": "非會員路徑與優惠需登入",
+          "evidence": "入口可選會員登入，也可不加入會員直接進非會員表單。",
+          "accessed_at": "2026-11-25T19:09:18+08:00"
+        },
+        {
+          "url": "https://edu.tcfst.org.tw/online_register3.asp?cost=15000&courseidfi=15W350&farfrom=&plancode=115TJ17F1",
+          "label": "自強基金會 15W350 非會員公開表單",
+          "scope": "公開表單與費用確認",
+          "evidence": "非會員表單可讀，列學員資料、發票與付款方式。優惠實付金額依主辦報名成功回函。",
+          "accessed_at": "2026-11-25T19:10:01+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 17.6,
+      "usage_type": "兩日線上實作培訓",
+      "quota_details": "班級總額及剩餘名額未公布。",
+      "usable_duration": "12/5 和 12/12 各 09:30–16:30，合計 12 小時。會員早鳥至 11/27（含），主辦未列班級整體截止時點。",
+      "cost_note": "定價 NT$15,000。會員早鳥 NT$13,500，另有開課前七天完成報名繳費的會員價 NT$14,000，及會員兩人同行 NT$13,500。優惠擇一，金額依報名回函。美元換算未列。",
+      "access_risk": "課程頁標示招生中。會員早鳥需用會員途徑申請，公開表單亦提供非會員按定價報名。主辦可能額滿停收。雲端 NIM 端點由誰提供及是否另計待核。",
+      "cancellation": "依主辦一般須知，開訓前退訓返還七成，受訓未逾全期三分之一退半數，逾三分之一不退。可能另有退費手續費。",
+      "eligibility": {
+        "service_availability": "台灣主辦機構開設全線上課。",
+        "account_eligibility": "需具 Python 與 LLM 基礎，金融背景及自備 GPU 非必要。",
+        "billing_country": "依主辦以新臺幣付款。會員及團報優惠按各自條件認定。",
+        "identity_residency": "可走一般非會員入口，主辦未列國籍作為一般修課門檻。",
+        "terms_restrictions": "優惠擇一使用，報名、繳費及開課確認依主辦流程。",
+        "taiwan_note": "Yes，台灣使用者可依主辦付費、先備能力及席次條件申請。"
+      },
+      "verification_scope": "2026-11-25 台北時間局部複核。讀取 15W350 班頁、一般學員須知及報名入口，核對期間、早鳥和一般費用、非會員路徑、先備能力與退費。實際收件、剩餘名額及雲端端點費用待核。",
+      "unknowns": [
+        "班級確切收件期限、早鳥截止時刻、即時席次及開班確認",
+        "雲端帳戶或費用是否由主辦提供，以及 VIP 實付金額"
+      ],
+      "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "wda-photography-association-ai-brand-workflow-173101",
+      "title": "板橋 AI 文創品牌營運與智慧工具班 173101｜一般補助核准後自付 NT$1,642",
+      "summary": "中華攝影師技能教育協會刊登產投方案 173101 第 01 期，12/17 至 2027/2/4 在新北板橋實體上課，共 42 小時，涵蓋品牌圖文影音、LINE、Vibe Coding 與流程自動化。主辦列 12/14 18:00 報名截止。總費 NT$8,210，按一般八成補助核准後淨負擔 NT$1,642，須符合投保、身分及結訓條件。官方班級入口導向維護公告，收件與招生名額待核。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "VALUE-DEAL",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "value",
+        "education"
+      ],
+      "regions": [
+        "Taiwan"
+      ],
+      "taiwan": "Yes",
+      "setup_cost_usd": null,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "benefit_cost_ratio": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "deadline_at": "2026-12-14T18:00:00+08:00",
+      "expires_at": null,
+      "announcement_at": null,
+      "discovered_at": "2026-11-25T19:09:50+08:00",
+      "verified_at": "2026-11-25T19:10:35+08:00",
+      "next_review_at": "2026-11-26T08:00:00+08:00",
+      "review_cadence": "daily",
+      "sources": [
+        {
+          "url": "https://www.tpqc.com.tw/173101-ai-creative/",
+          "label": "承訓單位 173101 課程頁",
+          "scope": "班號、課期、主辦、學費、招生時點與設備",
+          "evidence": "第 01 期在板橋 TCCC B404，12/17 至 2027/2/4 共 42 小時。刊登報名 11/17 12:00 至 12/14 18:00。總費 NT$8,210、一般補助 NT$6,568，列結算後負擔 NT$1,642。須自備 Windows 或 macOS 筆電。",
+          "accessed_at": "2026-11-25T19:10:01+08:00"
+        },
+        {
+          "url": "https://course.taiwanjobs.gov.tw/about/recommended",
+          "label": "勞發署職訓整合網產投方案說明",
+          "scope": "在職投保身分、先繳費與結訓後補助",
+          "evidence": "須年滿 15 歲、具指定投保身分的在職勞工，並符合國籍或指定居留工作條件。產業人才投資計畫的一般參訓者先繳全額，取得結訓資格後由承訓單位協助申領。一般補助八成，符合特定條件可全額補助。",
+          "accessed_at": "2026-11-25T19:10:01+08:00"
+        },
+        {
+          "url": "https://ojt.wda.gov.tw/ClassSearch/Detail?OCID=173101&plantype=1",
+          "label": "勞發署 173101 班級報名入口",
+          "scope": "班級頁公開存取狀態",
+          "evidence": "唯讀 GET 轉至勞發署維護頁。實際收件、名額、錄取及班別付款細節待查。",
+          "accessed_at": "2026-11-25T19:10:01+08:00"
+        },
+        {
+          "url": "https://maintain.ejob.gov.tw/",
+          "label": "勞發署系統維護公告",
+          "scope": "班級入口的轉向頁",
+          "evidence": "維護頁說明系統正在維護或主機重啟，未提供具體恢復時點。",
+          "accessed_at": "2026-11-25T19:10:35+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 17.6,
+      "usage_type": "產投方案實體在職培訓與條件式學費補助",
+      "quota_details": "課程招生與即時剩餘名額未核，承訓單位另列場地容量供場地介紹。",
+      "usable_duration": "報名公告為 2026/11/17 12:00 至 12/14 18:00。2026/12/17 至 2027/2/4 逢週四 09:30–12:30 及 13:30–16:30，12/31 停課，共 42 小時。",
+      "cost_note": "課程總費 NT$8,210。依勞發署產業人才投資計畫一般規則，通常須先繳清訓練費，再於結訓合格後協助申請補助。本班主辦列一般補助 NT$6,568，核准後淨負擔 NT$1,642。付款細節及個案補助依承訓單位與勞發署審查。",
+      "access_risk": "承訓單位提供在職訓練網班級連結。查閱時導向勞發署系統維護公告，實際收件、名額與付款通知待核。",
+      "cancellation": null,
+      "eligibility": {
+        "service_availability": "新北市板橋區 TCCC B404 實體上課，主辦要求自備 Windows 或 macOS 筆電。",
+        "account_eligibility": "年滿 15 歲、具基本電腦能力。報名走臺灣就業通會員及在職訓練網，補助須符合指定投保的在職勞工資格。",
+        "billing_country": "費用以新臺幣計。一般補助經核准後撥付，個別繳款及補助金額待確認。",
+        "identity_residency": "方案以開訓日審查指定投保及身分條件。適用本國籍，另列符合條件的居留與工作身分。",
+        "terms_restrictions": "條件式補助須結訓合格及完成資格審查。主辦依網路報名時序及資格處理，班別受理狀態待核。",
+        "taiwan_note": "Yes，符合身分、在職投保、現場出席及結訓條件的台灣使用者可依規則申請。"
+      },
+      "verification_scope": "2026-11-25 台北時間局部複核。讀取承訓單位班次頁、勞發署方案說明與班級入口維護公告。核對班號、課期、報名公布時段、八成補助及資格。班級頁實際受理與名額待核。",
+      "unknowns": [
+        "班網實際受理、即時剩餘名額、是否已額滿或改期",
+        "班別付款、退費、個案補助結果及撥款時間"
+      ],
+      "priority_note": "官方來源·需符合條件·費用未知·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-25T18:13:51+08:00",
+  "latest_research_at": "2026-11-25T19:14:54+08:00",
   "last_research_run": {
-    "started_at": "2026-11-25T18:06:34+08:00",
-    "completed_at": "2026-11-25T18:13:51+08:00",
+    "started_at": "2026-11-25T19:06:42+08:00",
+    "completed_at": "2026-11-25T19:14:54+08:00",
     "reviewed_ids": [
-      "aicu-evaluation-ap",
-      "tw-itsa-generative-ai-web-design-contest-2027",
-      "ndhu-ai-productivity-workshop-2026",
-      "ntpu-generative-ai-intro-cohort-2-2027",
-      "ntcu-adl-highschool-math-ai-workshop-2026"
+      "akamai-cloud-rise-startup-credits",
+      "cht-gemini-shorts-contest-2026",
+      "nextwave-ai-legaltech-hackathon-2026",
+      "nccu-high-school-ai-entrepreneurship-camp-2026"
     ],
     "new_ids": [
-      "tmba-ipas-ai-planner-member-training-2026",
-      "nknu-youth-ai-edge-computing-2026-01"
+      "tcfst-ai-agent-finance-workflow-15w350-2026",
+      "wda-photography-association-ai-brand-workflow-173101"
     ],
-    "attempted_failed_ids": [
-      "taoyuan-unemployed-ai-visual-marketing-web-training-2026"
-    ],
-    "unreviewed_existing_count": 1252
+    "attempted_failed_ids": [],
+    "unreviewed_existing_count": 1255
   },
-  "generated_at": "2026-11-25T18:13:51+08:00",
+  "generated_at": "2026-11-25T19:14:54+08:00",
   "reviewed_ids": [
-    "aicu-evaluation-ap",
-    "tw-itsa-generative-ai-web-design-contest-2027",
-    "ndhu-ai-productivity-workshop-2026",
-    "ntpu-generative-ai-intro-cohort-2-2027",
-    "ntcu-adl-highschool-math-ai-workshop-2026"
+    "akamai-cloud-rise-startup-credits",
+    "cht-gemini-shorts-contest-2026",
+    "nextwave-ai-legaltech-hackathon-2026",
+    "nccu-high-school-ai-entrepreneurship-camp-2026"
   ],
-  "attempted_failed_ids": [
-    "taoyuan-unemployed-ai-visual-marketing-web-training-2026"
-  ],
+  "attempted_failed_ids": [],
   "new_ids": [
-    "tmba-ipas-ai-planner-member-training-2026",
-    "nknu-youth-ai-edge-computing-2026-01"
+    "tcfst-ai-agent-finance-workflow-15w350-2026",
+    "wda-photography-association-ai-brand-workflow-173101"
   ]
 }
