@@ -8107,3 +8107,30 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 批次、README 及本段計數由基準 JSON 與實際差異產生。既有 ID、首次收錄日、來源網址與原有 3,135 筆政策歷史均保留，追加 6 筆。品質改善集中在期限、招生狀態、資格及費用。發布驗收以資料與前端檢查、同一提交的 Frontend QA 與 Pages、公開資產比對和桌面／手機卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 18:06–2026-11-25 18:13 Asia/Taipei｜N=1,257 · R=5 · A=2 · U=1,252 · attempted=1
+
+基準 `052e913`。主線與遠端一致，工作樹乾淨，無開放 PR 或他人持有維護鎖，上一版 Frontend QA 與 Pages 均完成。本輪取得鎖。起始 1,140 筆可行動或待定、3 筆到複核時點、35 筆七日內有截止點，其中 19 筆在冷卻。全庫 30 筆至少一個截止點已過，含歷史。高風險聯集 112 筆，涵蓋可行動或待定紀錄的排程到期、七日內截止、追查失敗、暫時不限量及 ID 或狀態帶衝突標記。
+
+依交接先核東華兩份表單及同時點到期的臺北大學、中教大。另補近截止的桃園職訓、可行動的 ITSA 與 AICU 付款風險，避開已在近期查過且另有關鍵回查時點的 Gemma 及其它冷卻案。三位唯讀研究代理完成分工，用 GPT-6.2 Sol high，環境未提供 Gemini 3.8 Flash。主代理沿用會話模型並實讀採納來源。新案例依名稱、班期、主辦、活動識別碼及網址比對資料與政策歷史。
+
+### 證據與變更
+
+- `ndhu-ai-productivity-workshop-2026`。18:00 後兩份公開表單仍有 12/5 場次選項。校方仍只公布 11/25 截止，精確停收及收件待查。 [東華主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [一般生表單](https://docs.google.com/forms/d/e/1FAIpQLSeeR4BpzWl2JAi_xk2F829CvGYLitFIqFZgQr6uTOWl4DmNmw/viewform) [起飛生表單](https://docs.google.com/forms/d/e/1FAIpQLSfjOPBKD8QDc7PyKzdEMnEL282s2_6NIiSGR7lv4VUhtJq8Yw/viewform)
+- `ntpu-generative-ai-intro-cohort-2-2027`。確認網頁 12/31 與同班簡章 12/30 仍衝突。補兩處均列早鳥、個別繳費帳號及第一步必填身分證號碼。 [臺北大學課程頁](https://dce.ntpu.edu.tw/list.php?p=3263) [招生簡章](https://dce.ntpu.edu.tw/lyadmin/pages/uploads/file/cus2_r9aofl07kp.pdf) [公開報名第一步](https://cof.ntpu.edu.tw/pls/cini/third_stud_register.step1?dpno=1543)
+- `ntcu-adl-highschool-math-ai-workshop-2026`。補因材網登入、裝置建議、課程錄影及時數證明條件。公開表單可讀，個案收件與錄取待查。 [主辦公文及校方轉知](https://www.mdhs.ntpc.edu.tw/p/404-1000-22025.php) [主辦公開報名表](https://docs.google.com/forms/d/e/1FAIpQLSd5C8Q1AjMll4cmOkcFtHiUj37bM-Dvh2kEPiFlXMFkOd9UWA/viewform)
+- `taoyuan-unemployed-ai-visual-marketing-web-training-2026`。台灣就業通班級頁轉維護公告。市府資料仍可讀，班級實際收件、候補與是否延長待核。維持原核實時間並排 11/26 08:00 回查。 [台灣就業通班級](https://its.taiwanjobs.gov.tw/Course/Detail?ID=166984) [勞動力發展署維護公告](https://maintain.ejob.gov.tw/) [桃園職缺地圖](https://jobmap.tycg.gov.tw/job-course-info.aspx?id=35073&openExternalBrowser=1)
+- `aicu-evaluation-ap`。補較早套組公告的 24 個月及兩種付款管道，與現行條款 180 日及 FAQ 90 日並列。區分正式期新金鑰與免費語音的綁卡規則。 [AICU 首頁](https://api.aicu.ai/) [9/21 套組公告](https://api.aicu.ai/news/260921) [10/15 語音公告](https://api.aicu.ai/news/261015) [服務條款](https://api.aicu.ai/terms) [FAQ](https://api.aicu.ai/faq)
+- `tw-itsa-generative-ai-web-design-contest-2027`。補初賽 Windows 環境與決賽報到雙證件，保留主辦 1/25、計畫轉載 2/23 的決賽分數公告日差異。 [主辦競賽須知](https://itsaaicontest.itsa.org.tw/role.php) [正式須知附件](https://itsaaicontest.itsa.org.tw/file/2027%E5%B9%B4%20ITSA%E7%94%9F%E6%88%90%E5%BC%8FAI%E6%87%89%E7%94%A8%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD%28%E8%A9%A6%E8%BE%A6%E8%B3%BD%29%E7%AB%B6%E8%B3%BD%E9%A0%88%E7%9F%A5.pdf) [教育部計畫公告](https://proj.moe.edu.tw/itsa/News_Content.aspx?n=2308&s=24666&sms=12739)
+- `tmba-ipas-ai-planner-member-training-2026`。新增 12/18 台中 iPAS 初級培訓。會員廠商每家最多 3 人免課費，非會員 NT$6,000，考照另行報名。截止、總名額與收件待查。 [TMBA 主辦公告](https://www.tmba.org.tw/zh-TW/news/info/2583) [主辦公開表單](https://docs.google.com/forms/d/e/1FAIpQLScQ0aZOQAniH1fdtaQps_yuqRWb6ZVAXJ_cZTgYKkxIhpL50g/viewform?usp=send_form)
+- `nknu-youth-ai-edge-computing-2026-01`。新增高師大 231 小時日間實體班。班表列 11/30 截止、12/1 甄試、20 人、總費 NT$70,000 及自付額 NT$10,000。即時報名路徑維護，收件及本班返還細節待核。 [青年職訓資源網班表](https://ttms.etraining.gov.tw/eYVTR/YipClassApply/Detail?UUID=8A6D893F2E594ED7A7DC6329F9A36689) [高師大資訊教育中心](https://sites.google.com/iec-nknu.page/iec/home) [高屏澎東分署](https://kpptr.wda.gov.tw/Content_List.aspx?n=1880ADD9E1017A68) [當年度計畫招生轉知](https://www.vac.gov.tw/cp-1616-195002-115.html)
+
+### 下一輪
+
+- 11/25 19:00 接 `akamai-cloud-rise-startup-credits` 的公司網域與付款資格，23:30 再看東華兩個公開表單，11/26 過日後核對收件狀態，依證據更新截止狀態及後續錄取通知。保留校方 11/25 日期精度。
+- 11/26 05:30 換官方路徑追查 Microsoft Fabric 條款。07:45 接 Gemma 終件選取提示，07:59 後查加入與組隊鎖定。08:00 優先查桃園班級 166984 和高師大班網是否恢復，區分桃園 20:00 平台截止與市府辦訓單位的收件方式。09:00 沿前輪接臺菲論壇回覆期限。
+- 11/26 18:00 續查臺北大學截止及替代證件、中教大收件與名額、ITSA 決賽分數公告差異、AICU 付款效期與 TMBA 收件時點。其餘仍按既有複核安排。 [上一輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/052e913fdb276d22ebd2b875135fed3d9d1d5990/MAINTENANCE.md)
+
+### 資料與發布
+
+品質改善集中於讀者會用到的收件狀態、身分資格、費用、報到與設備條件。批次及 README 數字以基準與實際 JSON 差異計算。保留既有 ID、首次收錄日期、來源網址與原有 3,141 則政策歷史，追加 8 則。驗收以本機資料與瀏覽器測試、同提交 Frontend QA 和 Pages、公開資產及手機與桌面批次卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
