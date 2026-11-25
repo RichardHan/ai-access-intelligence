@@ -7851,3 +7851,29 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 以基準及本輪資料差異推導批次與 README，原有穩定 ID、首次收錄時間、來源網址及 3,057 筆政策歷史均保留，追加 8 筆歷史。資料品質改善集中於額度適用、報名文件、舊入口與時效。本機 make check、make check-ui 與 Chrome 390px／1280px 批次卡片檢查均通過。發布驗收以同提交的 Frontend QA、Pages、公開資產位元組及批次卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 09:06–2026-11-25 09:14 Asia/Taipei｜N=1,241 · R=8 · A=2 · U=1,233 · attempted=2
+
+基準 dbcda21。台北時間 09:06 開始，工作樹乾淨，主線與遠端一致，無開放 PR 或既存維護鎖，前版 Frontend QA 與 Pages 通過。起始全庫有 30 筆至少一個截止點已過（含歷史）；可行動或待定 1,124 筆，其中 19 筆到複核點、30 筆七日內達截止點（18 筆冷卻）。可行動紀錄的到期複核、七日內截止、最近追查失敗、暫時不限量與 ID 或狀態標記衝突，高風險聯集 114 筆。
+
+三位唯讀研究代理實際使用 GPT-6.2 Sol high，分查近期限、供應商條款與台灣新機會。工具未提供 Gemini 3.8 Flash，主代理沿用會話配置。優先採納可改變報名方式、地區、付款或隱私判斷的證據。AppWorks 和 DevFest 公開頁仍列原活動安排，卡片沿用原核實時間；其中 AppWorks 仍有未公布的精確收件時刻，DevFest 工作坊各別登記待查。
+
+### 證據與變更
+
+- 商發署與成大班頁現均列第 2 班 12/21 開訓。成大列 12/15 截止、38 人且須面試。清華文件頁列 11/27 前，中華大學 10/21 繳交公告列 11/6 前；兩頁均列觀光學院 M515，完整郵寄資訊待核。成大公開表單回 HTTP 401，要求 Google 登入。 [商發署](https://serv.gcis.nat.gov.tw/AOCAI/courses/youth) [成大](https://ncku-ihq-gif.github.io/ncku-ai-class/) [成大表單](https://forms.gle/79xXrv7HmVZEvCYy8) [清華](https://exten.site.nthu.edu.tw/p/412-1213-23213.php) [中華大學](https://tourism.chu.edu.tw/p/406-1068-46964,r1193.php?Lang=zh-tw)
+- 資策會 MLOps 班 11/27 12:30 截止，公開表單僅列線上。12/14 零售班活動頁列 12/11 17:00 截止，頁首列臺北大安、內文列臺中北屯加線上。原站現行公開表單參訓方式只有一個線上選項，實體席次及實際受理待核。 [MLOps 公告](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3585) [MLOps 表單](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3585) [零售班公告](https://ievents.iii.org.tw/EventS.aspx?t=0&id=3588) [零售班表單](https://ievents.iii.org.tw/JoinPNew.aspx?t=0&id=3588)
+- AWS 新註冊體驗依台灣聯絡地址分配雪梨專案，Polly 列新版 Free Tier、有雪梨端點。中文聲線表列普通話與廣東話，未列台灣中文。若被要求付款驗證，新流程列短暫預授權。Free Tier 條款列抵用金開戶後 12 個月到期，FAQ 各節仍有 6／12 個月差異。各帳戶字元月額與實際效期待核。 [區域](https://docs.aws.amazon.com/accounts/latest/reference/project-regions.html) [服務](https://docs.aws.amazon.com/accounts/latest/reference/supported-services-sign-up-new.html) [聲線](https://docs.aws.amazon.com/polly/latest/dg/available-voices.html) [端點](https://docs.aws.amazon.com/general/latest/gr/pol.html) [條款](https://aws.amazon.com/free/terms/) [FAQ](https://aws.amazon.com/free/free-tier-faqs/)
+- CoreWeave 快速入門要求組織有私測權限，定價稱帳務面板上的私測用量只供查看，產品頁仍列底層費率。Civo 補可接受卡別、欠款停用與資源回收規則。Antigravity 補 Pro 試用及付費 Pro 的 Claude 型號差異，保留免費欄四款 11/30 移除。 [CoreWeave 定價](https://coreweave.com/forge-pricing/post-training) [CoreWeave 產品](https://coreweave.com/products/coreweave-forge/model-distillation) [CoreWeave 快速入門](https://docs.coreweave.com/model-distillation/quickstart) [Civo 帳務](https://www.civo.com/docs/account/billing) [Antigravity 定價](https://antigravity.google/pricing)
+- OpenAI 學術研究者 FAQ 補 11/16 後核准的 Plus 條件與專案資料用途。API FAQ 補少數帳戶的安全分類器訓練與評測用途，超額兩種公開說法仍待釐清。 [學術研究者](https://help.openai.com/en/articles/20001406-chatgpt-for-academic-researchers) [API 資料分享](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai)
+- 新增 12/10 14:00 中研院免費免報名混成演講，及 12/1 20:00 AI 簡單學免費線上講座。前者時間由官方海報核對，後者公開頁正文和註冊資料列免費及登入，票期與實際出票待核。按活動識別碼、網址、主辦、日期及名稱比對機會與歷史。 [中研院](https://www.rchss.sinica.edu.tw/main/posts/13750) [AI 簡單學](https://www.accupass.com/event/2611220448431990581999)
+- Code With AI 與政大原公告可讀。本輪針對實際受理的追查未成功，前者取票頁 HTTP 403，作品集表單公開欄位仍顯示 12/9；後者表單 HTTP 401，仍須登入。兩筆的核實時間沿用上次，記錄失敗與再查時間。 [Code With AI](https://blindegg.kktix.cc/events/dec2026-codewithai) [政大](https://cicii.nccu.edu.tw/news-66.html)
+
+### 下一輪
+
+- 11/25 12:00 查 Gemma 待評作品選為終件，以及臺大閱讀場；17:00 查 AutoClaw 跨語系衝突；18:00 查東華兩份表單；19:00 接 Akamai Rise。近期已查的 Luma、中興、陽明交大、臺師大與 Firebase 等依各筆排程。 [上一輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/dbcda2110161b32456195a85f86dac866e9a2d8a/MAINTENANCE.md#L7845)
+- 11/26 00:15 核 Code With AI 有無正式停收或展延，作品集和票期分開。09:00 查清華文件日期和收件人、兩班資策會表單、政大公告新訊號，以及本輪付款與條款缺口。Civo、CoreWeave、AWS、OpenAI 優先追新文件或公開更正；若仍只見原說法，保留現有核實時間。
+- 淡江 ASBX1024AI 免費校內場有 AI 遊戲開發案例，但 AI 僅為部分議程，對象欄列學生、內文列本校師生。先保留交接線索。 [淡江活動頁](https://enroll.tku.edu.tw/course.aspx?cid=ASBX1024AI&l=c)
+
+### 品質與發布
+
+本輪以資料欄位修正為最小品質改善。JSON 與 Git 基準差異推導批次和 README，保留既有 ID、首次收錄欄及 3,065 筆政策歷史，追加 12 筆。本機 make check、make check-ui、git diff --check 及 Chrome 390px／1280px 批次卡片均通過。發布驗收查同一提交的 Frontend QA、Pages、公開資產逐位元比對及手機／桌面批次卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
