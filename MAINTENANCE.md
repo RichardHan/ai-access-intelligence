@@ -8079,3 +8079,31 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 最小改善放在資格、報名路徑、付款條款、獎勵及時間欄位。由基準和實際差異計算批次與 README。保留既有 ID、首次收錄日期、來源網址及原有 3,127 筆政策歷史，追加 8 筆。發布驗收包含本機 make check、make check-ui、手機與桌面批次卡片、同提交 Frontend QA 與 Pages，以及公開資產逐位元組核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 17:06–2026-11-25 17:13 Asia/Taipei｜N=1,255 · R=4 · A=2 · U=1,251 · attempted=0
+
+基準 `9d166c7`。主線與遠端一致，工作樹乾淨，無開放 PR，前版 Frontend QA 與 Pages 成功。本輪取得維護鎖。起始有 1,138 筆可行動或待定、1 筆到複核時點、35 筆七日內有截止點，其中 20 筆在冷卻。全庫 30 筆至少一個截止點已過，含歷史。高風險聯集 111 筆，涵蓋可行動紀錄的排程到期、七日內截止、最近追查失敗、暫時不限量及 ID 或狀態帶條款衝突標記。
+
+先處理臺大 17:05 交接及 HeyGen 近截止，並選同一輪替時點的 Deepnote 與 Vocal Separator 處理教育資格與付費條件。東華與 Gemma 已有按關鍵時點安排的回查。本輪三位唯讀代理用 GPT-6.2 Sol high，因環境未提供 Gemini 3.8 Flash。主代理沿用本會話模型並實讀採納的官方證據。兩份新案以名稱、主辦、期別或班號、活動識別碼及網址查重。
+
+### 證據與變更
+
+- `ntu-koolib-ai-academic-english-workshops-2026`。閱讀場按時截止，寫作場公開總表仍開放但總表及詳情均顯示餘 0 席。保留寫作場 12/2 17:00 個別截止。 [臺大系列場次總表](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05) [臺大閱讀場次](https://my.ntu.edu.tw/actregister/sessionView.aspx?actID=20261911_05&sesID=3) [臺大寫作場次](https://my.ntu.edu.tw/actregister/sessionView.aspx?actID=20261911_05&sesID=4)
+- `heygen-voice-turbo-free-api-until-2026-11-30`。11/24 發布頁改成泛稱限時，TTS 文件與 10 月回顧仍列 11/30。保留原期限，補獨立付費 Turbo 費率。 [HeyGen Voice Turbo 官方發布頁](https://www.heygen.com/blog/heygen-voice-turbo) [HeyGen 10 月產品回顧](https://www.heygen.com/blog/heygen-october-2026-release) [HeyGen TTS 文件](https://developers.heygen.com/docs/voices/heygen-voice-speech) [HeyGen 官方 API 價目表](https://help.heygen.com/en/articles/10060327-heygen-api-pricing-credits-explained)
+- `deepnote-education-basic-unlimited`。補 Deepnote 資格查核權及 GitHub 學生驗證兩年效期，列出 Agent 文件適用方案。Education 與 Pack 的權限及續期保留待查。 [官方教育 FAQ](https://deepnote.com/docs/education-faqs) [官方條款](https://deepnote.com/terms) [Deepnote Agent 官方文件](https://deepnote.com/docs/deepnote-agent) [GitHub Student Developer Pack 條款](https://docs.github.com/en/education/about-github-education/github-education-for-students/github-terms-and-conditions-for-the-student-developer-pack)
+- `vocal-separator-free-two-jobs-daily`。補免費雲端輸入格式、WAV 輸出、付費逐檔進位與批次上限，以及退款的未使用與結清條件。 [Vocal Separator 官方產品頁](https://vocalseparator.com/) [官方定價與免費限制](https://vocalseparator.com/pricing) [官方使用條款](https://vocalseparator.com/terms) [官方退款政策](https://vocalseparator.com/refunds)
+- `nkust-youth-ai-agent-automation-2026-01`。高科大建工校區全日實體班，12/22 截止、12/23 甄試。2026/12/28 至 2027/2/22 共 245 小時，招生 25 人。計畫生為符合條件的 15–29 歲本國籍待業青年，先繳 NT$10,000，結訓並符合就保等條件後可申請返還。一般自費 NT$70,000，考照另計。 [勞動部青年職訓資源網第 01 期](https://ttms.etraining.gov.tw/eYVTR/YipClassApply/Detail?UUID=8E017AC3811943F2BC1DF3537EF2677C) [高科大正式招生簡章](https://elite.taiwanjobs.gov.tw/Files/05784880-1700-4d20-b938-cf8c26f3d89a.pdf) [高科大 ESG 與數位科技應用中心](https://ictc.nkust.edu.tw/p/404-1050-107934.php)
+- `vac-vtc-ai-data-system-design-116-1`。桃園日間班 12/6 截止、12/19 甄試，2027/1/19 至 7/9 共 904 小時、預訓 20 人。符合簡章身分且自辦與委外合計前 4 次免訓練費，必考檢定費由學員自付。一般民眾有餘額時可電話申請自費參訓。 [雲林縣榮民服務處招生公告](https://www.vac.gov.tw/vac_service/yunlin/cp-3129-207241-111.html) [退輔會職業訓練網公開班表](https://eis.vac.gov.tw/ClassSearch/Classlist?UNIT_ID=40) [退輔會 116 年自辦訓練正式簡章](https://www.vtc.gov.tw/upload/news/NF202609151530590.pdf) [退輔會 115–116 年開放民眾參訓試辦計畫](https://www.vtc.gov.tw/upload/news/NF202603131028550.pdf)
+
+- JCMIT 大會命中既有 `tw-jcmit-medical-ai-conference-2026`，本輪沿用既有紀錄。TMBA 12/18 iPAS 課程留交接，會員廠商每家最多 3 人免費、非會員 NT$6,000，考照另報。報名截止、總名額及實際收件待核。 [JCMIT](https://jcmit2026.medinfo.org.tw/) [TMBA 主辦公告](https://www.tmba.org.tw/zh-TW/news/info/2583)
+
+### 下一輪
+
+- 11/25 18:00 回查東華一般生與起飛生兩份表單，19:00 接 Akamai Rise。11/26 05:30 換官方路線追查 Fabric 條款。11/26 07:45 核 Gemma 終件選取，07:59 後另查加入與組隊鎖定。
+- 11/26 09:00 先查臺菲論壇回覆規則與不同入口截止。其餘未到期案沿用既有時點。 [上一輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/9d166c7f0f3f4c0586d499416afe60f9253273e9/MAINTENANCE.md)
+- 11/26 16:45 核 HeyGen 是否刊明新的精確截止或期滿政策。11/26 17:00 核臺大寫作場是否釋位或有候補、Deepnote 教育方案續期與 Agent 權限、Vocal Separator 付款商差異，以及兩個新職訓班的公開報名狀態與未公布費用。
+- TMBA 待主辦公布收件期限、名額或更清楚的收件狀態。GAIC、東南科大海報及淡江微學分沿前輪證據缺口續查。
+
+### 資料與發布
+
+批次、README 及本段計數由基準 JSON 與實際差異產生。既有 ID、首次收錄日、來源網址與原有 3,135 筆政策歷史均保留，追加 6 筆。品質改善集中在期限、招生狀態、資格及費用。發布驗收以資料與前端檢查、同一提交的 Frontend QA 與 Pages、公開資產比對和桌面／手機卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
