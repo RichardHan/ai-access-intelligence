@@ -8050,3 +8050,32 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 最小品質改善落在票況、公開報名入口、資格與費用等資料欄位。批次與 README 計數由基準 JSON 及紀錄差異生成。保留既有 ID、首次收錄日期、來源網址與 3,119 筆政策歷史，追加 8 筆。發布驗收含 make check、make check-ui、手機與桌面批次卡片、同提交 Frontend QA／Pages 與公開資產逐位元組比對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 16:06–2026-11-25 16:15 Asia/Taipei｜N=1,253 · R=6 · A=2 · U=1,247 · attempted=0
+
+基準 `fd0f3c0`。主線與遠端一致，工作樹乾淨，無開放 PR 或其他維護鎖，前版 Frontend QA 和 Pages 成功。起始有 1,136 筆可行動或待定，0 筆到複核時點，34 筆七日內有截止點，其中 19 筆在冷卻。全庫 30 筆至少一個截止點已過，含歷史。高風險聯集 109 筆，涵蓋可行動紀錄中的複核到期、七日內截止、最近追查失敗、暫時不限量，以及 ID 或狀態帶衝突標記。
+
+優先處理近截止、17:00 左右輪替及 AutoClaw 付款證據缺口。東華和 Gemma 按上輪指定時點。三位唯讀代理使用 GPT-6.2 Sol high，因環境未提供 Gemini 3.8 Flash，主代理沿用會話模型並實讀採納來源。兩筆新案依主辦、標題、期別、網址及識別碼比對資料與政策歷史。新增範圍含教職員研習與產業論壇。
+
+### 證據與變更
+
+- `ntu-rtc-local-ai-multimodal-workshop-2026`。補官方報名表直連、無經驗選項及借機欄位。11/30 12:00 截止。單堂與較早系列總覽的報名狀態、單堂與表單的通知日期仍有出入。 [臺大 RTC 第五堂主辦公告](https://www.dlc.ntu.edu.tw/2026/11/13/local-ai-workshop-05/) [臺大 RTC 第五堂公開報名表](https://docs.google.com/forms/d/e/1FAIpQLSdHt3c5XB1FDaCP7_k80_A2vki1oS7bxcSVjRc7cpehfcErFg/viewform?usp=send_form) [臺大 RTC 系列總覽](https://www.dlc.ntu.edu.tw/2026/08/28/local-ai-workshop-overview/)
+- `cities-deliver-rockefeller-openai-2026`。區分初篩與完整首輪送件，補具權限官員簽署的意向書、最長 5 分鐘影片、法人文件及語言選項。台灣個案資格待核。 [洛克斐勒基金會主辦頁](https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services) [Cities Deliver 正式條款](https://www.rockefellerfoundation.org/wp-content/uploads/2026/10/Cities-Deliver-AI-Solutions-for-Public-Services-Terms-and-Conditions-Final.pdf) [Cities Deliver 11/4 更新 FAQ](https://www.rockefellerfoundation.org/wp-content/uploads/2026/11/Cities-Deliver-AI-Solutions-for-Public-Services-Additional-Updated-FAQs-Final.pdf) [Cities Deliver 官方申請入口](https://citiesdeliver.rockefellerfoundation.org/) [Cities Deliver 官方初篩及第一輪題本](https://citiesdeliver.rockefellerfoundation.org/docs/RFNPrograms/CitiesDeliver_ScreeningandRound1Proposal.pdf)
+- `tw-moe-aicup-2026-vlm-solar-inspection`。修正社會人士組獎狀核發者及門檻，補指定隊伍 12/16 23:59:59 文件截止。11/30 延長公告與同頁舊時程、組隊畫面仍不一致，新隊實際收件待查。 [AI CUP 官方 2026 專頁](https://www.aicup.tw/ai-cup-2026-competition) [AIdea 太陽能板競賽繁中規程](https://www.aidea-web.tw/topic/3c8ec48b-0dff-4b14-9b5e-d91bbb98c699?lang=zh) [AI CUP 官方報名入口](https://go.aicup.tw/)
+- `autoclaw-weekly-perk-november-nine-hundred-million-tokens`。保留中英文額度差異，補兩版營運主體、非商業限制及中文連續包月規則。英文付款協議導向登入，台灣適用版本與實際入帳待核。 [AutoClaw M11W4 英文](https://autoclaw.z.ai/en/blog/news/M11W4/) [AutoClaw M11W4 中文](https://autoclaw.z.ai/cn/blog/news/M11W4/) [AutoClaw 英文一般使用條款](https://autoclaw.z.ai/en/privacy/md2html/?favicon=autoglm&md=autoclaw_agreement) [AutoClaw 中文一般使用條款](https://autoclaw.z.ai/cn/privacy/md2html/?favicon=autoglm&md=autoclaw_agreement) [AutoClaw 中文付費服務協議原文](https://autoglm.aminer.cn/web/md2html/autoclaw_pay_agreement.md)
+- `ntpc-digital-academy-sanchong-ai-music-2026`。補一般課程的兒童陪同、自備連網設備、每季正取及遞補通則。兩班未公布錄取，手機報名提示互異，實際收件待查。 [新北數位學院課程清單與通則](https://ezlearn.ntpc.gov.tw/college/5?page=3) [新北數位學院三重 AI 音樂上午班](https://ezlearn.ntpc.gov.tw/courses/detail/22365) [新北數位學院三重 AI 音樂下午班](https://ezlearn.ntpc.gov.tw/courses/detail/22366)
+- `ntut-ai-teaching-modules-workshop-2026`。補主辦表單的每週四成功通知及 12/7 暫定寄送會議連結。公文仍限大專教師，表單可選行政人員／助理，該身分資格待核。 [北科大原公文（慈大存檔）](https://info.tcu.edu.tw/hot_news/attch/1151117025/430323-11511755-1.pdf) [北科大主辦公開報名表](https://forms.gle/gVDe8TW3Vw9wCoxv8)
+- `nuk-ai-teaching-research-workshops-2026`。新增國立高雄大學兩場線上教師研習，保留公文及表單對公務人員範圍的差異。費用、截止與名額未公布。 [屏科大轉載高雄大學公文](https://www.npust.edu.tw/news1/content.aspx?id=117245) [高雄大學 12/14 公開表單](https://forms.gle/iBgA22pY15QSCtSq6) [高雄大學 12/16 公開表單](https://forms.gle/L2CjTJ5Sa8uCUcZV8) [慈大轉載高雄大學主辦公告](https://info.tcu.edu.tw/hot_news/news_NEW.asp?id=1151116009)
+- `teema-taiwan-philippines-ai-smart-manufacturing-forum-2026`。新增臺菲 AI 智慧製造免費分論壇。電電公會邀請函為 11/27 前，資策會場次列 12/4 23:59，保留各入口日期未設定統一截止。 [電電公會子論壇主辦公告](https://www.teema.org.tw/education.aspx?infoid=54548) [電電公會邀請函及回執](https://www.teema.org.tw/download/doc/2026%E8%87%BA%E8%8F%B2%E7%94%A2%E6%A5%AD%E9%8F%88%E7%B5%90%E9%AB%98%E5%B3%B0%E8%AB%96%E5%A3%87-%E8%B3%87%E8%A8%8A%E9%9B%BB%E5%AD%90%E5%89%B5%E6%96%B0%E6%87%89%E7%94%A8%E5%88%86%E8%AB%96%E5%A3%87_%E9%82%80%E8%AB%8B%E5%87%BD%E6%9A%A8%E8%AD%B0%E7%A8%8B%E8%A1%A8%5B20261118%5D.pdf) [資策會 iEvents 官方場次資訊](https://ievents.iii.org.tw/EventS.aspx?id=3619&t=0) [資策會 iEvents 公開表單](https://ievents.iii.org.tw/JoinPNew.aspx?id=3619&t=0)
+- GAIC 公務 AI 共通核心能力認證第四梯暫留交接。公告列 12/15，公開場次全列 12/13，匿名報名入口回首頁。電腦技能基金會 115 年優惠 NT$1,500，12/30 為考試日。登入後適用截止、席次及收件待核。 [第四梯公告](https://gaic.csf.org.tw/gaic/ViewTemplate/images/index/tempnews/20261117/news1/content.pdf) [場次資訊](https://gaic.csf.org.tw/gaic/eannouncement.aspx) [認證費用](https://gaic.csf.org.tw/gaic/certintrogaic.aspx)
+
+### 下一輪
+
+- 11/25 17:05 接臺大閱讀場收件截止，18:00 核東華一般生與起飛生兩份表單，19:00 接 Akamai Rise。Gemma 11/26 07:45 核終件選取，07:59 後另查加入與組隊鎖定。沿用前輪 Fabric 11/26 05:30 回查。
+- 11/26 09:00 先查臺菲論壇 11/27 回覆規則、兩入口截止與席次。16:00 依佇列接 AutoClaw 適用版本、臺大第五堂收件、Cities Deliver 入口和補助條款、AI CUP 新隊及文件複審、新北兩班手機入口、北科大通知、高雄大學兩場費用和資格。
+- GAIC 待主辦明示招生截止或公開報名狀態。前版未到期的查核與追查維持原排程。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/fd0f3c0ae1dd88c423c6ce002f42924478fbe5d5/MAINTENANCE.md)
+
+### 資料與發布
+
+最小改善放在資格、報名路徑、付款條款、獎勵及時間欄位。由基準和實際差異計算批次與 README。保留既有 ID、首次收錄日期、來源網址及原有 3,127 筆政策歷史，追加 8 筆。發布驗收包含本機 make check、make check-ui、手機與桌面批次卡片、同提交 Frontend QA 與 Pages，以及公開資產逐位元組核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
