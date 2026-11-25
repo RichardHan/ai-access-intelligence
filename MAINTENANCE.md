@@ -7877,3 +7877,33 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 本輪以資料欄位修正為最小品質改善。JSON 與 Git 基準差異推導批次和 README，保留既有 ID、首次收錄欄及 3,065 筆政策歷史，追加 12 筆。本機 make check、make check-ui、git diff --check 及 Chrome 390px／1280px 批次卡片均通過。發布驗收查同一提交的 Frontend QA、Pages、公開資產逐位元比對及手機／桌面批次卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 10:06–2026-11-25 10:14 Asia/Taipei｜N=1,243 · R=9 · A=1 · U=1,234 · attempted=1
+
+基準 b6055ee。台北時間 10:06 開始，工作樹乾淨，主線與遠端一致，無開放 PR 或其他維護鎖，前版 Frontend QA 與 Pages 成功。起始有 1,126 筆可行動或待定、10 筆到複核點、31 筆七天內達截止點（20 筆冷卻），全庫有 30 筆至少一個截止點已過（含歷史）。到複核點、七天內截止、最近追查失敗、暫時不限量與 ID 或狀態標記衝突的可行動紀錄，高風險聯集 113 筆。
+
+三位唯讀代理使用 GPT-6.2 Sol high，分查到期案例、供應商條款和台灣新機會。環境未提供 Gemini 3.8 Flash，主代理沿用會話配置。依到期與付款風險選案，利用文大新訊號補查既有產業新尖兵。上一輪已查的 DevFest Taipei 公開安排沿用原核實時間，獨立工作坊收件仍待查。Gemma 與東華依上一輪交接的排程。本輪以公開頁面和唯讀 GET 讀表單及文件。
+
+### 證據與資料品質
+
+- `appworks-accelerator-aw34`：公開表單列首輪 11/29、最終輪 12/27，均為台北 23:59；主要創辦人或 CEO 須提交一分鐘英文自介。合作商額度未知。 [活動頁](https://appworks.tw/accelerator/) [申請表](https://8uwiwslakq0.typeform.com/aw34application)
+- `ntpc-digital-academy-wugu-generative-ai-2026`、`ntpc-digital-academy-bali-ai-agent-2026`：各班 25 人是招生上限。一般正取通知於開課日前三天發送，適用兒童程序須填陪同家長資料，家長到場，每人最多陪兩名兒童。 [五股班](https://ezlearn.ntpc.gov.tw/courses/detail/22358) [八里班](https://ezlearn.ntpc.gov.tw/courses/detail/22367) [一般規則](https://ezlearn.ntpc.gov.tw/latestNew/detail/131) [兒童規則](https://ezlearn.ntpc.gov.tw/latestNew/detail/133)
+- `tw-jcmit-medical-ai-conference-2026`：大會列 12/14 截止及一般聽會免費。報名表明示申請繼續教育積分才需填身分證字號，核定和餘額待核。 [大會官網](https://jcmit2026.medinfo.org.tw/) [公開報名表](https://forms.gle/xuE47kVz1JTRSHjq9)
+- `nthu-taica-intro-ai-public-mooc-2026`：教發中心連至同一清華磨課師課號 458，列約 23 小時及 11 週。自學修完不授學分，可申請免費 AI 學習履歷。課名月份和 2025 年起始欄仍有差異。 [課號 458](https://mooc.nthu.edu.tw/course/info/458) [教發中心](https://ctld.site.nthu.edu.tw/p/406-1217-317391,r12043.php?Lang=zh-tw)
+- `ntu-google-ai-cross-disciplinary-workshop-2026`：到期局部複核。表單仍列共同教學館 103、12/7 前通知；校方不同刊登處的場地用詞與 12/2、12/5、12/7 通知日期仍並存。 [活動公告](https://www.dlc.ntu.edu.tw/2026/11/15/google-ai-05/) [校方資訊網](https://aiinsight.ntu.edu.tw/zh-TW/events/14) [公開表單](https://docs.google.com/forms/d/e/1FAIpQLSeYhoF_VrOPaVa69_mmDUi8ok8X_FgmijRGnQdVq6H9Au97iA/viewform)
+- `jenni-free-daily-ten-autocomplete-lifetime-workflows`：兩處資料列每份 PDF 最多 25 MB、150 頁。免費 AI 請求共用與分列仍矛盾；條款第 2、7 節分別記內部業務授權與營收活動限制。 [定價](https://jenni.ai/pricing) [計費](https://docs.jenni.ai/docs/account/plans-and-billing/) [條款](https://jenni.ai/terms)
+- `viktor-free-hundred-credit-workspace`：一般 Gmail 可註冊，拋棄式信箱無起始額度，仍受商務用途條款約束。正式刷卡付款須商務卡，免費驗卡卡種、觸發與台灣工作區待核。 [入門](https://viktor.com/docs/getting-started) [條款](https://viktor.com/legal/general-terms) [驗卡](https://viktor.com/help/category/credits/starter-credits-and-card-check)
+- `cyleague-cyber-navi-trial`：表單 GET HTTP 403。公司公告與產品頁仍只支持原活動及正式購買條件，無台灣法人或試用驗卡欄位證據。沿用原核實時間並記入整筆追查失敗。 [試用表單](https://ai.cyleague.jp/signup/trial) [公司公告](https://www.cyleague.jp/topics/20260930_1/) [產品頁](https://www.cyleague.jp/service/cyber-navi/)
+- `taiwan-nsp-youth-ai-training-subsidy-2026`：政府正文要求先繳 NT$10,000，移除零美元及免費標記，以原幣呈現。青年職訓網可免登入查課，正式申請須登入；文大第 10 梯公告與簡章各列線上書審及 12/10 當場甄試，實際新站受理待核。依同一補助計畫併入既有 ID。 [政府計畫](https://ttms.etraining.gov.tw/eYVTR/ePlaninfo/Index16?type=7) [新站查課](https://ttms.etraining.gov.tw/eYVTR/YipClassApply) [文大班頁](https://www.sce.pccu.edu.tw/courses/0IJTB5120) [簡章](https://elite.taiwanjobs.gov.tw/Files/0e99a013-6cc5-4d1f-a9a4-95cb7f21bc07.pdf)
+- `viktor-build-with-viktor-challenge-2026`：新收錄獨立的公開評測活動。每平台各一位得主，個別可選 US$5,000 或 US$7,500 點數。台灣工作區不在地區清單。依主辦、標題、活動網址、時間及領取機制對比資料與政策歷史，和 Viktor 起始工作區額度為不同活動。 [競賽條款](https://viktor.com/challenge#conditions)
+- 台灣新案候選經去重與可行動性判斷。文大納入既有方案，iLink 冬季教師工作坊已有同場紀錄，工研院製造業班截止，醫材公會 12/2 班收費且一般個人受理待核。 [iLink](https://www.ilink-hss.org/AIEA) [工研院](https://college.itri.org.tw/Lesson/LessonData/B220227C-EAB0-4F61-A2DE-B0E35FAB4974) [醫材公會](https://www.tmica.org.tw/form.php?id=116)
+
+### 下一輪
+
+- 11/25 12:00 照既定時間回查 Gemma 終件選取及臺大閱讀場。17:00 查 AutoClaw 跨語系條款，18:00 查東華兩份表單，19:00 接 Akamai Rise。DevFest Taipei 優先查工作坊是否須另行登記。 [Gemma](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [AutoClaw](https://autoclaw.z.ai/cn/blog/news/M11W4/) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Akamai Rise](https://www.akamai.com/cloud/start-ups/rise) [DevFest Taipei](https://devfest-taipei.gdg.tw/2026/)
+- 11/26 10:00 查 CyLeague 是否有可讀官方申請說明或法人資格答覆、AppWorks 首輪表單、文大甄試更正及 Viktor 競賽條款。11/30 舊站停用時再查青年職訓網能否找到文大第 10 梯。Jenni、Viktor Free、台灣課程各按新增的複核時點回查可見證據。 [CyLeague](https://www.cyleague.jp/topics/20260930_1/) [AppWorks 表單](https://8uwiwslakq0.typeform.com/aw34application) [新站查課](https://ttms.etraining.gov.tw/eYVTR/YipClassApply) [Viktor 競賽](https://viktor.com/challenge)
+- Code With AI 與政大表單、Luma、陽明交大、臺師大與 Firebase 等延續前輪記錄的時點。來源仍無可核新主張時，維持原已核範圍。
+
+### 資料與發布
+
+本輪最小品質改動在資料及讀者可見的費用、區域、申請和期限欄位。批次與 README 計數由資料差異生成，原有 ID、首次收錄時間與 3,077 筆政策歷史保留，追加 11 筆。發布驗收使用 make check、make check-ui、手機及桌面批次卡片檢查、同提交的 Frontend QA 和 Pages，以及公開資產逐位元組比對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
