@@ -7907,3 +7907,32 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 本輪最小品質改動在資料及讀者可見的費用、區域、申請和期限欄位。批次與 README 計數由資料差異生成，原有 ID、首次收錄時間與 3,077 筆政策歷史保留，追加 11 筆。發布驗收使用 make check、make check-ui、手機及桌面批次卡片檢查、同提交的 Frontend QA 和 Pages，以及公開資產逐位元組比對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 11:06–2026-11-25 11:15 Asia/Taipei｜N=1,244 · R=9 · A=1 · U=1,235 · attempted=0
+
+基準 `9556e55`。起始主線、遠端一致，工作樹乾淨，無開放 PR 或維護鎖，前版 Frontend QA 和 Pages 成功。基準有 1,244 筆，1,127 筆可行動或待定，9 筆到複核點，31 筆七天內到截止點。全庫 30 筆至少一個截止點已過，含歷史紀錄。高風險聯集 106 筆，納入可行動紀錄中到複核點、七天內截止、最近追查失敗、暫時不限量，或 ID／狀態帶衝突者。
+
+本輪複核全部九筆到期案例，優先查臺灣活動收件途徑及供應商額度、付款或資格衝突。近期已有核實且按時點交接的案件沿用原安排。三位唯讀代理使用 GPT-6.2 Sol high，環境未提供 Gemini 3.8 Flash，主代理沿用本會話配置。公開來源一律唯讀。
+
+### 證據與變更
+
+- `gdg-devfest-taipei-2026`：確認主辦連至大會 RSVP，並補兩場工作坊同時舉行。工作坊另行登記、剩餘席次及截止待核。 [主來源](https://devfest-taipei.gdg.tw/2026/) [補充來源](https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taipei-2026/cohost-gdg-taipei/) [佐證](https://devfest-taipei.gdg.tw/2026/data/agenda.json?v=20261124-v3)
+- `ntpclib-xindian-senior-ai-workshop-2026`：補 12/9 AI 場的獨立公開表單與 11/25 11:08 台北時間頁面顯示正取剩 24 名的快照。 [主來源](https://atpass.ntpclib.gov.tw/activities/detail?cntId=7747dc459be14a5c8de2fec198b3c400&svcId=8e109e8bb57a4b44b21e31c34db87dba) [補充來源](https://atpass.ntpclib.gov.tw/registrationForm/8e109e8bb57a4b44b21e31c34db87dba/7747dc459be14a5c8de2fec198b3c400/47e7bce22e924e2ca090d600e2d8875d)
+- `taipei-ywca-her-way-ai-intro-2026`：到期重讀主辦頁，非會員 NT$0 及開放報名標示仍在。補主辦請無法出席者及早取消。 [主來源](https://newcourse.ywca-taipei.org.tw/course/6ABC88884E648)
+- `taiwan-sd-ai-annual-meeting-2026`：補免費票每筆最多 1 張、議程所列抽獎問卷及不供餐。保留 12/19 08:00 停售和票量待核。 [主來源](https://aiarttw.com/activity/2026sd)
+- `blaxel-starting-credit-payment-bonus`：補標準條款的促銷點數酌發及餘額 90 天帳戶終止和資料刪除風險，實際起始贈額與免卡條件仍待核。 [主來源](https://blaxel.ai/legal/terms/2025-12-10-blaxel-terms-and-conditions.pdf) [補充來源](https://blaxel.ai/pricing)
+- `kapwing-free-ten-ai-credits`：補定價 5 GB 與儲存政策 2 GB 的工作區上限差異，與單檔 2 GB／250 MB 差異分開呈現。區分匯出次數與每月影片時長。 [主來源](https://www.kapwing.com/pricing) [補充來源](https://www.kapwing.com/help/cloud-storage-policy/) [佐證](https://www.kapwing.com/help/how-do-kapwing-credits-work/)
+- `dify-education-200-total`：補教育折扣每次驗證限一個工作區及套用角色，與校友信箱不能重申請或取代原信箱的限制。保留離校後年度重驗差異。 [主來源](https://www.dify.ai/education) [補充來源](https://docs.dify.ai/en/cloud/use-dify/workspace/subscription-management#dify-for-education)
+- `together-research-invite-grants`：補服務條款第 6.1 節的一般有效付款方式及初始預付餘額。研究補助的付款豁免仍未核實。 [主來源](https://www.together.ai/terms-of-service) [補充來源](https://www.together.ai/research-credits-program-request) [佐證](https://docs.together.ai/docs/billing-credits) [客服說明](https://support.together.ai/articles/1862638756-changes-to-free-tier-and-billing-july-2025)
+- `vizard-free-monthly-sixty-video-credits`：說明付費方案結轉文件的適用範圍，補 Agent MCP 與 Agent 網站使用同一帳戶點數。Free 實際結轉與傳統剪輯是否共池待核。 [主來源](https://vizard.ai/pricing) [補充來源](https://help.vizard.ai/en/articles/8767574-how-does-the-pricing-plan-work) [佐證](https://help.vizard.ai/en/articles/10441977-how-to-upgrade-or-downgrade-your-plan) [客服說明](https://mcp.agent.vizard.ai/docs)
+- `niea-genai-ml-soc-blue-team-workshop-2026-12-18`：新增 12/18 獨立防禦性 AI 課程。台灣公司員工限定，聯盟企業成員須免費申請且以確認信為準，另有付費價。 [主來源](https://www.niea.org.tw/course/normal/673) [補充來源](https://docs.google.com/forms/d/e/1FAIpQLSclJ_bXadjO0e6OWJm4SkG0do3PjliL-7e_4FvPcrH_bbCCIQ/viewform) [佐證](https://tinai.org.tw/programmes-startup-week)
+
+### 下一輪
+
+- 11/25 12:00 查 Gemma 終件選取、臺大閱讀場及已排入輪替的 12:00 案。17:00 查 AutoClaw 跨語系條款，18:00 查東華兩份表單，19:00 接 Akamai Rise。各案沿既定時點。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/9556e55c57432ac849c682e2cc6f9e35b4fa36ee/MAINTENANCE.md#L7901)
+- 11/26 11:00 核 DevFest 獨立工作坊票種、新北市圖與 YWCA 公開入口、SD 年會票面與體驗、NIEA 表單及額滿狀態。供應商同時點回查具體缺口，尤其是 Kapwing 上傳及儲存衝突、Together 研究贈額豁免、Blaxel 免卡到帳額和 Dify 離校重驗。
+- 東南科大英文 AI 海報競賽有全國大專在學生資格、12/13 截止及首獎 NT$5,000 的主辦公告。表單匿名 GET 回 401，費用與精確截止未核實，待公開簡章或表單可讀。淡江 Google Cloud 微學分為已有的暫緩線索，確認特定場次費用及適用對象後再收錄。 [東南科大公告](https://tr.tnu.edu.tw/zh_tw/news/-%E7%AB%B6%E8%B3%BD%E5%85%AC%E5%91%8A-2026-AI%E5%89%B5%E6%84%8F%E6%A0%A1%E5%9C%92%E5%BD%A2%E8%B1%A1%E8%8B%B1%E6%96%87%E6%B5%B7%E5%A0%B1%E8%A8%AD%E8%A8%88%E7%AB%B6%E8%B3%BD-%E9%82%80%E8%AB%8B%E5%85%A8%E5%9C%8B%E5%A4%A7%E5%B0%88%E5%AD%B8%E7%94%9F%E4%BB%A5AI%E5%89%B5%E6%83%B3%E6%A0%A1%E5%9C%92%E6%9C%AA%E4%BE%86-99914365) [淡江校方資訊](https://tkutimes.tku.edu.tw/dtl.aspx?no=60994)
+
+### 資料與發布
+
+最小品質改善落在來源、公開報名及費用、資格、用量等資料欄位。批次與 README 由基準及實際差異計算，保留穩定 ID、首次收錄日期及原有 3,088 筆政策歷史，追加 10 筆。發布驗收以 make check、make check-ui、批次卡片、同一提交的 Frontend QA 與 Pages、公開資產和公開卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
