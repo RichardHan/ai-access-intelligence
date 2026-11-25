@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T12:13:34+08:00",
-  "scope": "2026-11-25 12:06–2026-11-25 12:13 Asia/Taipei，局部複核 7 筆既有紀錄、新增 2 筆、整筆追查失敗 0 筆，其餘 1,238 筆既有紀錄未完成本輪複核。補 Gemma 終件、台灣活動報名與供應商付款或額度差異，新增台南與台中免費 AI 學習機會。",
+  "updated_at": "2026-11-25T13:12:43+08:00",
+  "scope": "2026-11-25 13:06–2026-11-25 13:12 Asia/Taipei 局部複核 4 筆，新增 2 筆，整筆追查失敗 0 筆，其餘 1,243 筆既有紀錄未完成本輪複核。釐清 Qodo 試用上限及 Swarms 收件缺口，補兩場校園或社群活動報名證據，新增高雄論壇及工研院現場候補機會。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -3036,11 +3036,9 @@
       "verification": "Official",
       "legal_status": "not_verified",
       "categories": [
-        "FREE",
         "QUALIFICATION"
       ],
       "views": [
-        "free",
         "developer"
       ],
       "setup_cost_usd": null,
@@ -3054,16 +3052,16 @@
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "verified_at": "2026-11-24T13:08:09+08:00",
+      "verified_at": "2026-11-25T13:08:25+08:00",
       "discovered_at": "2026-11-02T16:10:09+08:00",
       "announcement_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T13:00:00+08:00",
-      "verification_scope": "2026-11-24 台北時間局部核對。官網公開方案提供通話連結。通用預約清單可讀，分級申請連結回 404。實際收件、個案資格、超額及法律條件待核。",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部核對。讀到官方方案、團隊聯絡方式、通用預約目錄及一般會議頁。分級表單、實際收件、台灣個案、參與費用與超額條款待核。",
       "cancellation": "未核實",
-      "access_risk": "通用預約目錄未見新創專用項目，各分級連結回 HTTP 404。實際收件、台灣個案與超額收費待核。",
+      "access_risk": "分級預約連結未能開啟。官網列新創團隊信箱 kye@swarms.world，通用目錄及一般會議頁可讀，實際收件、回覆、台灣個案與超額收費待核。",
       "eligibility": {
-        "service_availability": "官方列全球合資格新創。分級申請連結回 404，現行收件待核。",
+        "service_availability": "官方列全球合資格新創。通用預約可讀，分級連結未能開啟。",
         "account_eligibility": "實際帳戶資格未核",
         "billing_country": "台灣付款及帳單資格未核",
         "identity_residency": "個人身分及居住條件未核",
@@ -3072,10 +3070,10 @@
       },
       "id": "swarms-startup-program-up-to-tenk",
       "title": "Swarms Startup Program：最高 US$10,000，分級收件入口待核",
-      "summary": "公開方案列 Launch US$2,500、Growth US$5,000、Scale US$10,000，依成立年限、融資或成長條件審核，額度自加入起有效 12 個月。官網列全球合資格新創可申請，方案福利無須讓股。通用預約頁可開啟，三個分級申請連結皆回 404，現行收件待核。",
+      "summary": "公開方案列 Launch US$2,500、Growth US$5,000、Scale US$10,000，依成立年限、融資或成長條件審核。全球合資格新創可申請，額度自加入起有效 12 個月，方案福利無須讓股。官網列新創團隊信箱及通用預約，分級收件仍待核。",
       "usage_type": "申請制新創額度",
       "unknowns": [
-        "三個分級入口是否修復、通用預約是否受理計畫申請",
+        "分級入口是否恢復、團隊信箱或一般會議是否受理新創計畫申請",
         "台灣企業個案審核、服務及付款資格",
         "超額計費及完整新創條款"
       ],
@@ -3089,22 +3087,29 @@
         },
         {
           "url": "https://www.swarms.ai/programs/startups",
-          "scope": "官方方案及指向的通話入口",
-          "evidence": "網站擷取可讀三級方案與新創團隊聯絡。一般申請指向公開 Cal.com 目錄，分級連結對應 startup-launch、startup-growth、startup-scale。官方域名直連回 HTTP 429。",
-          "accessed_at": "2026-11-24T13:08:09+08:00"
+          "scope": "官方方案、資格與新創團隊聯絡",
+          "evidence": "網頁擷取正文列三級額度、入案後 12 個月使用期、全球合資格新創及免讓股。通用申請連至 Cal.com，頁尾列新創團隊信箱 kye@swarms.world。網站直連由研究代理觀察到 HTTP 429。",
+          "accessed_at": "2026-11-25T13:08:25+08:00"
         },
         {
           "url": "https://cal.com/swarms",
-          "scope": "官方連出的公開預約清單與同路徑分級入口",
-          "evidence": "通用目錄 HTTP 200，顯示 Kye Gomez 及通用、策略、導入等預約。三個分級路徑經公開 GET 均回 HTTP 404。",
-          "accessed_at": "2026-11-24T13:08:09+08:00"
+          "scope": "官方連出的公開預約目錄",
+          "evidence": "目錄可讀，一般會議、策略、導入及技術支援等項目可見，未見專列新創申請。分級連結經網頁擷取為 HTTP 404，另一路公開 GET 回 HTTP 403。",
+          "accessed_at": "2026-11-25T13:08:03+08:00"
+        },
+        {
+          "url": "https://cal.com/swarms/30min",
+          "scope": "通用目錄的一般會議說明",
+          "evidence": "可讀公開 30 分鐘 Google Meet 會議頁，描述為一般會議。實際新創收件待核。 研究代理公開 GET 與主代理網頁擷取可讀，主代理另一路公開 GET 回 HTTP 403。",
+          "accessed_at": "2026-11-25T13:08:19+08:00"
         }
       ],
-      "priority_score": 19.8,
+      "priority_score": 16.8,
       "priority_tier": "S",
       "priority_note": "官方來源·申請審核制·費用未知·台灣Yes·時間未知·有資格門檻",
-      "last_review_attempt_at": "2026-11-24T02:08:43+08:00",
-      "last_review_attempt_reason": "追查現行申請入口未取得可用證據。另一官方網域 www.swarms.ai/programs/startups 直連 HTTP 429，網頁工具可讀同頁舊有公開條件，未能確認當前入口。官方文件概覽未提供本計畫的替代申請證據。保留預定 13:00 回查。"
+      "last_review_attempt_at": "2026-11-25T13:08:19+08:00",
+      "last_review_attempt_reason": "三個分級連結的網頁擷取回 HTTP 404，另一公開 GET 閘道回 HTTP 403。官方方案網域直連回 HTTP 429，網頁擷取可讀方案正文，通用目錄及一般會議頁可讀。分級及實際收件待追。",
+      "cost_note": "官方列點數與免讓股。參與費用、台灣帳單及超額計費待核。"
     },
     {
       "record_type": "opportunity",
@@ -38469,8 +38474,8 @@
     },
     {
       "id": "qodo-fourteen-day-unlimited-trial",
-      "title": "Qodo：14 天免卡不限試用，Pro Team 點數與費率有差異",
-      "summary": "14 天試用免信用卡，官方列不限 reviews 與 credits。試用期滿暫停審查，選付費方案後恢復。定價頁列 Pro Team US$30／月起、2,000 點、每點 US$0.015，首頁 FAQ 列 2,500 點及每點 US$0.012。兩頁的結帳適用條件待核。",
+      "title": "Qodo：14 天免卡試用，文件列每日 100 次審查上限",
+      "summary": "開通工作區起 14 天免卡。官方使用文件列每工作區跨所有 repo 每天最多 100 次程式碼審查，台北 08:00 重置。定價頁與首頁仍稱 reviews 與 credits 不限。未啟用付費計費時試用期滿暫停。Pro Team 點數與單價亦有兩種官方說法。",
       "categories": [
         "FREE",
         "UNLIMITED-CLAIM",
@@ -38488,33 +38493,33 @@
         "Global"
       ],
       "verification": "Official",
-      "usage_type": "Unlimited",
-      "quota_classification": "TEMPORARILY UNLIMITED",
-      "limited_confirmed": false,
+      "usage_type": "14 天限量程式碼審查試用",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "cancellation": "試用免卡，結束停止；付費每月credits不累積",
+      "cancellation": "未啟用付費計費時試用到期暫停。一般條款 §10.2 列付費訂閱預設同週期續約，通常至少提前 14 天取消，方案另訂規則時依方案。付費點數每月到期。",
       "usable_duration": "14天",
-      "access_risk": "試用期滿暫停審查。付費超額累計至自訂上限，首頁與定價頁的點數及單價有差異。定價 FAQ 與一般條款對資料使用的適用範圍待核。",
-      "verified_at": "2026-11-24T13:09:46+08:00",
+      "access_risk": "試用應按使用文件的日上限規劃。付費超額計至自訂上限，首頁與定價的點數及單價有差異。資料用途亦有官網 FAQ 與一般條款的適用疑問。",
+      "verified_at": "2026-11-25T13:11:08+08:00",
       "discovered_at": "2026-10-24T04:05:37+08:00",
       "announcement_at": null,
       "previous_limit": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T13:00:00+08:00",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀，實際台灣帳戶存取未驗",
         "account_eligibility": "可登入且擁有repo安裝Admin權限；未代授權",
         "billing_country": "未核",
         "identity_residency": "未核；地區標籤不代表該國所有人均符合",
-        "terms_restrictions": "試用 14 天、免卡，安裝需 repo Admin 權限。付費點數每月到期，超額依帳戶方案費率計至自訂上限。定價 FAQ 稱不以程式碼訓練，一般條款 §4.4 另列廣泛客戶資料授權。",
+        "terms_restrictions": "試用 14 天免卡，安裝需 repo 管理權限。使用文件列跨所有 repo 合計每天 100 次程式碼審查。付費點數每月到期，超額依帳戶費率計至自訂上限。定價 FAQ 與一般條款 §4.4 分別描述審查程式碼及客戶資料用途。",
         "taiwan_note": "台灣帳戶／付款資格未經實測，維持Unknown；法律／監管未核，與公開試用狀態分開。"
       },
       "unknowns": [
-        "試用unlimited公平使用的完整適用條件",
+        "官方使用文件與行銷頁日上限口徑不同。開始生效日、實際執行及帳戶例外待核。",
         "General資料訓練授權與定價不訓練承諾如何適用",
         "台灣資格與付費卡接受度",
         "實際PR規模消耗",
@@ -38541,27 +38546,39 @@
         },
         {
           "url": "https://www.qodo.ai/pricing/",
-          "scope": "14 天免卡試用及專責定價頁的 Pro Team 報價",
-          "evidence": "試用含不限 reviews 與 credits。Pro Team US$30／月、2,000 點、每點 US$0.015，超額同單價，達自訂上限後暫停。FAQ 稱審查程式碼只供產生審查結果。",
-          "accessed_at": "2026-11-24T13:09:46+08:00"
+          "scope": "免卡試用、Pro Team 定價、期滿和審查程式碼 FAQ",
+          "evidence": "仍宣稱「Unlimited reviews and credits」。試用 14 天免卡，期滿暫停並提示選方案。Pro Team US$30／月起、2,000 點、US$0.015／點，超額同價至自訂上限。FAQ 稱程式碼僅用於產生審查結果。",
+          "accessed_at": "2026-11-25T13:08:04+08:00"
         },
         {
           "url": "https://www.qodo.ai/",
-          "scope": "官網首頁 FAQ 的另一組點數與費率",
-          "evidence": "首頁 FAQ 仍列每點 US$0.012 及 2,500／5,000／20,000 點級距，列相同的 14 天免卡不限試用。",
-          "accessed_at": "2026-11-24T13:09:46+08:00"
+          "scope": "首頁 FAQ 的試用及另一組 Pro Team 報價",
+          "evidence": "同樣標示免卡、不限審查與點數。Pro Team 每點 US$0.012，列 2,500／5,000／20,000 點級距。",
+          "accessed_at": "2026-11-25T13:08:04+08:00"
         },
         {
           "url": "https://www.qodo.ai/terms/",
-          "scope": "一般條款 §4.4 客戶資料授權",
-          "evidence": "§4.4 授權在使用關係期間用 Customer Data 訓練或改進 Qodo 模型與服務。",
-          "accessed_at": "2026-11-24T13:09:46+08:00"
+          "scope": "一般條款 §4.4 客戶資料授權及 §10.2 訂閱續約",
+          "evidence": "Last Updated 2025-02-17。§4.4 授權在使用關係期間用 Customer Data 訓練或改進模型與服務。§10.2 訂閱預設同週期自動續約，原則上至少提前 14 天取消，方案另定者依方案。",
+          "accessed_at": "2026-11-25T13:08:04+08:00"
         },
         {
           "url": "https://www.qodo.ai/business-terms-of-service/",
-          "scope": "商業條款 §4.4 適用對象及例外",
-          "evidence": "Enterprise／離線訂單用商業條款。§4.4 限制模型訓練，保留客戶專屬環境改善與書面請求的客戶專屬微調。",
-          "accessed_at": "2026-11-24T13:09:46+08:00"
+          "scope": "商業條款適用脈絡及 §4.4 訓練限制",
+          "evidence": "Last Updated 2026-01-07。Enterprise／離線訂單依商業條款。限制模型訓練，保留客戶專屬環境改善及書面請求的專屬微調。",
+          "accessed_at": "2026-11-25T13:08:29+08:00"
+        },
+        {
+          "url": "https://docs.qodo.ai/pricing-and-usage",
+          "scope": "官方使用文件的試用上限與期滿行為",
+          "evidence": "每工作區 14 天試用，跨所有 repo 每天最多 100 次程式碼審查。00:00 UTC 重置，選付費方案後解除這項日上限。期滿時若沒有啟用付費計費，使用停止。",
+          "accessed_at": "2026-11-25T13:08:29+08:00"
+        },
+        {
+          "url": "https://docs.qodo.ai/pricing-and-usage.md",
+          "scope": "同一份官方使用文件的公開 Markdown 版本",
+          "evidence": "正文同列試用每工作區跨所有 repo 每天最多 100 次程式碼審查，00:00 UTC 重置。",
+          "accessed_at": "2026-11-25T13:11:08+08:00"
         }
       ],
       "record_type": "opportunity",
@@ -38570,14 +38587,15 @@
         "additional_cost_usd": null,
         "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
       },
-      "priority_score": 20.6,
-      "priority_tier": "A",
-      "priority_note": "官方來源·方案仍列示·免費·台灣未標記·時間未知·有資格門檻",
-      "status": "active",
+      "priority_score": 17.3,
+      "priority_tier": "B",
+      "priority_note": "官方來源·官方說法有差異·免費·台灣未標記·時間未知·有資格門檻",
+      "status": "conflicting_official_usage_claims",
       "legal_status": "not_verified",
-      "verification_scope": "2026-11-24 台北時間局部核對。核對首頁 FAQ、定價、一般及商業條款。14 天免卡不限試用說法一致，Pro Team 點數與費率有差異，試用資料使用另有合約範圍差異。帳戶實際計費與資料處理待核。",
+      "verification_scope": "2026-11-25 台北時間局部核對。交叉核對官方試用日上限、重置時區、期滿行為、兩組 Pro Team 報價及一般條款續約。帳戶上限、台灣資格與資料政策的實際適用待核。",
       "cost_note": "定價頁列 Pro Team US$30／月起、2,000 點、每點 US$0.015，超額按同單價至自訂每月上限。首頁 FAQ 另列每點 US$0.012 及 2,500／5,000／20,000 點。個別帳戶結帳顯示的點數、費率及適用日待核。試用期滿暫停審查，須選方案才續用。",
-      "legal_and_terms_note": "一般條款標示 2025-02-17，適用一般方案。定價 FAQ 稱審查程式碼只用於產生審查結果，一般條款 §4.4 授權在使用關係期間使用 Customer Data 訓練及改進模型與服務。2026-01-07 商業條款適用 Enterprise 或離線訂單，限制模型訓練，保留客戶專屬環境改善或書面請求的客戶專屬微調。一般付費方案續約取消依當期方案或條款，試用到期先暫停。"
+      "legal_and_terms_note": "一般條款標示 2025-02-17，適用一般方案。定價 FAQ 稱審查程式碼只用於產生審查結果，一般條款 §4.4 授權在使用關係期間使用 Customer Data 訓練及改進模型與服務。2026-01-07 商業條款適用 Enterprise 或離線訂單，限制模型訓練，保留客戶專屬環境改善或書面請求的客戶專屬微調。一般付費方案續約取消依當期方案或條款，試用到期先暫停。",
+      "quota_details": "官方使用文件列所有 repo 合計每天 100 次程式碼審查，00:00 UTC（台北 08:00）重置。選付費方案後解除這項日上限，付費仍受共用點數及超額上限約束。官網行銷頁的不限字樣與文件規則並存。"
     },
     {
       "id": "llamaparse-free-tenk",
@@ -100865,25 +100883,25 @@
       "usage_type": "一次性實體 AI 工作坊",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "quota_details": "場次名額 50 人，公開頁於 2026-11-24 查閱時顯示已報名 4 人。",
+      "quota_details": "總名額 50 人。2026-11-25 13:08 台北時間，校方系統顯示已報名 6 人，前次快照為 4 人。實際錄取及可用席次待核。",
       "effort_minutes_max": null,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
-      "usable_duration": "2026-12-09 12:30–14:30，輔大文開樓 LE403 電腦教室。",
+      "usable_duration": "2026-12-09 12:30–14:30，輔大文開樓 LE403 電腦教室。 校方公告提供蛋奶素餐盒，電腦教室不可用餐。",
       "access_risk": "限輔大學生，額定 50 人。公告日為 11/24，系統列報名開始 11/19 13:00，兩處截止同為 12/3 12:00。",
       "cancellation": null,
       "discovered_at": "2026-11-24T13:08:42+08:00",
-      "verified_at": "2026-11-24T13:08:47+08:00",
+      "verified_at": "2026-11-25T13:08:54+08:00",
       "announcement_at": "2026-11-24",
       "deadline_at": "2026-12-03T12:00:00+08:00",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T13:00:00+08:00",
-      "verification_scope": "2026-11-24 台北時間局部核對。核對校方公告、公開報名表的學生資格、付費欄、時間、地點、名額及報名連結。實際錄取待核。",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部核對。核對公告及公開報名頁，確認 12/3 12:00 截止、免付費、學生資格、總名額與報名人數快照。系統實際受理及錄取待核。",
       "eligibility": {
         "service_availability": "新北輔大校內實體工作坊，由教師發展與教學資源中心主辦。",
-        "account_eligibility": "校方活動系統只開放輔大學生報名。",
+        "account_eligibility": "校方系統只開放輔大學生報名。未登入可見「我要報名」入口，登入後是否受理待核。",
         "billing_country": "主辦活動系統付費欄列無。",
         "identity_residency": "限輔大在校學生。",
         "terms_restrictions": "線上報名到 12/3 中午，校方場次列總名額 50 人。",
@@ -100896,17 +100914,17 @@
       "sources": [
         {
           "url": "https://www.net.fju.edu.tw/main/04v2/s_news.php?id=aZHrvZ1EcZA&keyword=&part=0&sel=1",
-          "scope": "2026-11-24 校方公告與工作坊內容",
-          "evidence": "教資中心公告活動 12/9 12:30–14:30、文開樓 LE403，報名到 12/3 中午，活動 34208。教材範圍含 Gemini 與 NotebookLM。",
-          "accessed_at": "2026-11-24T13:08:47+08:00",
+          "scope": "校方公告、日期、教室及報名指引",
+          "evidence": "教資中心 11/24 公告列 12/9 12:30–14:30 文開樓 LE403。12/3 中午前在活動系統報名。提供蛋奶素餐盒，教室不可用餐。",
+          "accessed_at": "2026-11-25T13:07:44+08:00",
           "announcement_at": "2026-11-24",
           "deadline_at": "2026-12-03T12:00:00+08:00"
         },
         {
           "url": "https://activity.dsa.fju.edu.tw/Activity.jsp?activityID=34208",
-          "scope": "輔大活動 34208、場次 48001 的官方報名資料",
-          "evidence": "付費欄列無、全校學生，僅學生選項開放。系統列 11/19 13:00 至 12/3 12:00，查閱時顯示 4／50 與公開報名入口。",
-          "accessed_at": "2026-11-24T13:08:47+08:00",
+          "scope": "輔大活動 34208、場次 48001 的公開報名資料",
+          "evidence": "網路報名免付費，僅學生欄開放。系統列 11/19 13:00 至 12/3 12:00，未登入顯示「我要報名」。已報名／總名額快照 6／50，實際錄取待核。",
+          "accessed_at": "2026-11-25T13:08:54+08:00",
           "opens_at": "2026-11-19T13:00:00+08:00",
           "deadline_at": "2026-12-03T12:00:00+08:00"
         }
@@ -100941,46 +100959,46 @@
       "usage_type": "一次性實體 AI 工作坊",
       "quota_classification": "HIGH BUT LIMITED",
       "limited_confirmed": true,
-      "quota_details": "主辦列名額有限。2026-11-24 活動頁顯示 42 次 RSVP。總名額與剩餘名額待核。",
+      "quota_details": "主辦列名額有限。2026-11-25 活動頁網頁擷取顯示 42 次 RSVP，公開頁面的活動設定列 43 人。General Admission 票種設定總數 60、available 10。票種欄位與 RSVP 統計口徑未核，工作坊席次待核。",
       "effort_minutes_max": null,
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
       "valuation_scenario": null,
       "usable_duration": "2026-12-05 09:30–16:30，工作坊 14:10–16:10。桃園市中壢區環北路 398 號 17 樓之 2。",
-      "access_risk": "須先 RSVP 並自備筆電。主辦保留參與資格判斷權，公開頁未列固定截止。",
+      "access_risk": "大會免費，RSVP 須登入，工作坊須自備筆電。主辦公告正文未列固定截止。一般票設定的結束時間自活動結束時間衍生。",
       "cancellation": "主辦說明如無法出席，應預先在 My Ticket 取消 RSVP。曾報名未到場會影響後續活動報名。",
       "discovered_at": "2026-11-24T13:08:42+08:00",
-      "verified_at": "2026-11-24T13:08:42+08:00",
+      "verified_at": "2026-11-25T13:08:53+08:00",
       "announcement_at": null,
       "deadline_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T13:00:00+08:00",
-      "verification_scope": "2026-11-24 台北時間局部核對。核對主辦活動頁及社群活動列表的免費 RSVP、時地、Google ADK 議程與自備筆電要求。額度及實際受理待核。",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部核對。核對主辦正文、社群活動列表及公開頁票種設定。一般票價格和登入設定已讀，工作坊另行報名、剩餘席次及 credit 條件待核。",
       "eligibility": {
         "service_availability": "桃園中壢實體活動，由 GDG Taoyuan 籌辦。",
-        "account_eligibility": "邀請開發者、技術愛好者及社群成員預先 RSVP，主辦保留參與資格判斷權。",
+        "account_eligibility": "邀請開發者、技術愛好者及社群成員。活動頁設定要求登入才能 RSVP，主辦保留參與資格判斷權。",
         "billing_country": "主辦明列免費參加。",
         "identity_residency": "主辦公告未列國籍或居住條件，須能在中壢到場。",
         "terms_restrictions": "須遵守活動行為守則，自備工作坊筆電。主辦公告有到場與取消機制。",
         "taiwan_note": "Yes：台灣參與者可依主辦公開 RSVP 流程報名中壢場次。"
       },
       "unknowns": [
-        "固定報名截止、總名額、剩餘席次與個案受理",
+        "實際 RSVP 受理、主辦固定截止、一般票剩餘席次及工作坊是否須另行登記",
         "議程所列 credit 的供應商、適用對象、金額、單位與有效期"
       ],
       "sources": [
         {
           "url": "https://gdg.community.dev/events/details/google-gdg-taoyuan-presents-devfest-taoyuan-2026/",
-          "scope": "在地 GDG 主辦活動頁、RSVP 與議程",
-          "evidence": "12/5 在桃園中壢舉辦，整日 09:30–16:30，名額有限且免費。14:10–16:10 議程列 Google ADK 實作及 credit 領取，工作坊需自備筆電。查閱時活動頁列 42 RSVP。",
-          "accessed_at": "2026-11-24T13:08:42+08:00"
+          "scope": "主辦公告、議程及頁面公開的 RSVP 設定",
+          "evidence": "12/5 中壢場免費，工作坊 14:10–16:10、自備筆電。議程僅提 credit 領取。網頁擷取正文顯示 42 RSVP，公開頁面設定的 attendee_count 為 43。General Admission 價格 NT$0、設定總數 60、available 10，RSVP 需登入。設定讀值為本次快照，實際受理和工作坊庫存待核。",
+          "accessed_at": "2026-11-25T13:08:53+08:00"
         },
         {
           "url": "https://gdg.community.dev/gdg-taoyuan/",
-          "scope": "在地主辦社群活動列表",
-          "evidence": "GDG Taoyuan 的 Upcoming events 列 12/5 的 DevFest Taoyuan 2026 為 Free registration。",
-          "accessed_at": "2026-11-24T13:08:42+08:00"
+          "scope": "主辦社群列表的大會費用",
+          "evidence": "Upcoming events 列 12/5 DevFest Taoyuan 2026 為 Free registration，提示名額有限、工作坊自備筆電。",
+          "accessed_at": "2026-11-25T13:08:25+08:00"
         }
       ],
       "priority_tier": "S",
@@ -103161,41 +103179,180 @@
       "priority_tier": "S",
       "priority_score": 20.8,
       "priority_note": "官方來源·有限度開放·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "kaohsiung-carbon-price-ai-forum-2026",
+      "title": "高雄免費「雙軸進化論」碳價與 AI 實戰論壇｜12/9",
+      "summary": "高雄市政府經濟發展局 12/9 在承億酒店辦免費論壇，包含企業 AI 數位應用、碳價與減碳實踐。13:30 開放報到，14:00–16:30 為論壇。公開表單要填服務單位及職稱。入場採先到先入座，達場地安全上限會停止入場。",
+      "record_type": "opportunity",
+      "status": "conditional",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "setup_cost_basis": "主辦公開表單明列免費講座與免費報名。",
+      "effort_minutes_max": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "usage_type": "免費實體企業 AI 應用論壇",
+      "quota_classification": "HIGH BUT LIMITED",
+      "limited_confirmed": true,
+      "quota_details": "先到先入座，達場地安全容留上限停止入場。總名額及剩餘席次未公開。",
+      "usable_duration": "2026-12-09 13:30 報到，14:00–16:30 論壇。高雄承億酒店 11F 晨星廳。",
+      "deadline_at": null,
+      "expires_at": null,
+      "announcement_at": null,
+      "discovered_at": "2026-11-25T13:08:39+08:00",
+      "verified_at": "2026-11-25T13:08:39+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部核對。核對主辦活動頁及公開表單的免費、日期、報到、場地、必填欄位及入場方式。收件及席次待核。",
+      "eligibility": {
+        "service_availability": "高雄市前鎮區實體活動。",
+        "account_eligibility": "表單須填姓名、服務單位名稱／職稱及手機等資料。",
+        "billing_country": "主辦列免費講座。",
+        "identity_residency": "公開表單未列國籍或居住限制，須能在高雄到場。",
+        "terms_restrictions": "依現場先到先入座，場地達安全容留上限即停止入場。",
+        "taiwan_note": "Yes：台灣參加者可依主辦公開表單報名高雄場，須符合入場規則。"
+      },
+      "unknowns": [
+        "固定報名截止、總名額、剩餘席次與實際收件狀態",
+        "表單必填服務單位名稱／職稱，無服務單位的個案是否受理未核實。"
+      ],
+      "sources": [
+        {
+          "url": "https://www.accupass.com/event/2611050253381390325750",
+          "scope": "高雄市政府經濟發展局活動頁",
+          "evidence": "主辦列 12/9 13:30–16:30，高雄承億酒店 11F 晨星廳，議題含企業 AI 數位應用及碳價與減碳實踐。",
+          "accessed_at": "2026-11-25T13:08:25+08:00"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf08PO5jqtFSVp7-0T86zdTrJHL50r6iMj_bX1FZBwAUokpFQ/viewform?usp=send_form",
+          "scope": "主辦公開報名表、議程與席次規則",
+          "evidence": "表單列 13:30 報到、14:00–16:30 論壇，免費，先到先入座，場地達安全容留上限即停止入場。可見必填服務單位名稱／職稱、手機及送出介面。",
+          "accessed_at": "2026-11-25T13:08:39+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 20.8,
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "itri-innosight-forum-ai-healthcare-2026",
+      "title": "工研院 Innosight Forum 2026｜11/27 免費 AI 智慧醫療論壇・現場候補",
+      "summary": "工研院產科所 11/27 在臺北政大公企中心辦 AI 智慧醫療論壇，英文進行並有中文同步口譯。線上報名已於 11/25 11:00 截止，主辦活動詳情明列可到場候補。現場受理時間、席次與入場結果待核。",
+      "record_type": "opportunity",
+      "status": "limited_availability",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "setup_cost_basis": "主辦活動詳情列現金 NT$0、點數 0，免報名費。",
+      "effort_minutes_max": null,
+      "usable_benefit_usd": null,
+      "benefit_cost_ratio": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "usage_type": "免費實體 AI 智慧醫療論壇現場候補",
+      "quota_classification": "UNKNOWN",
+      "limited_confirmed": null,
+      "quota_details": "主辦公開說明允許現場候補。候補人數、剩餘席次與實際入場未核。",
+      "usable_duration": "2026-11-27 09:00–16:30。臺北市大安區金華街187號10樓，政大公企中心 A1034 會議室。全程英文，現場備中文同步口譯機。",
+      "deadline_at": null,
+      "expires_at": "2026-11-27T16:30:00+08:00",
+      "announcement_at": null,
+      "discovered_at": "2026-11-25T13:11:09+08:00",
+      "verified_at": "2026-11-25T13:11:09+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T13:00:00+08:00",
+      "verification_scope": "2026-11-25 台北時間局部核對。核對官方詳情和總覽的費用、地點、活動時間、線上報名截止及現場候補。現場受理未測。",
+      "eligibility": {
+        "service_availability": "臺北實體論壇，現場候補。",
+        "account_eligibility": "邀請關注智慧醫療、AI 等議題的產官學研專業人士。線上報名已截止。",
+        "billing_country": "主辦列免報名費、現金 NT$0、點數 0。",
+        "identity_residency": "主辦未列國籍或居住限制，須能在臺北到場。",
+        "terms_restrictions": "主辦保留報名審核權。活動詳情載線上截止後可現場候補，候補受理時間和入場機會待核。",
+        "taiwan_note": "Yes：台灣參加者可依主辦條件到場候補。"
+      },
+      "unknowns": [
+        "現場候補開始、停止受理時間、候補名額及實際入場結果",
+        "活動總覽同頁有「報名中」與「報名截止」標示，線上截止依活動詳情。"
+      ],
+      "sources": [
+        {
+          "url": "https://iekweb2.iek.org.tw/IEKConf/Client/confinfo.aspx?conf_no=930185935&mode=confinfo",
+          "scope": "工研院活動詳情、免費、時間及候補辦法",
+          "evidence": "活動資訊列 11/27 09:00–16:30、政大公企中心 A1034、英文及中文同步口譯。線上報名 11/25 11:00 截止，明列「線上報名截止後，可於現場候補入場」。免報名費。",
+          "accessed_at": "2026-11-25T13:11:09+08:00",
+          "opens_at": "2026-11-02",
+          "deadline_at": "2026-11-25T11:00:00+08:00"
+        },
+        {
+          "url": "https://ieknet.iek.org.tw/iekevents/EventsList.aspx",
+          "scope": "工研院總覽與活動詳情的差異",
+          "evidence": "總覽列免費、11/27 09:00–16:25，並同時出現「報名中」連結和報名截止文字。精確線上截止和整體結束時刻依活動詳情，16:25 是末場議程時刻。",
+          "accessed_at": "2026-11-25T13:11:08+08:00"
+        }
+      ],
+      "priority_tier": "S",
+      "priority_score": 19.6,
+      "priority_note": "官方來源·有限度開放·免費·台灣Yes·時間未知·有資格門檻",
+      "access_risk": "線上報名已於 11/25 11:00 截止。詳情列 11/27 可現場候補。16:30 是活動結束，現場候補可能更早停止。"
     }
   ],
-  "latest_research_at": "2026-11-25T12:13:34+08:00",
+  "latest_research_at": "2026-11-25T13:12:43+08:00",
   "last_research_run": {
-    "started_at": "2026-11-25T12:06:18+08:00",
-    "completed_at": "2026-11-25T12:13:34+08:00",
+    "started_at": "2026-11-25T13:06:00+08:00",
+    "completed_at": "2026-11-25T13:12:43+08:00",
     "reviewed_ids": [
-      "kaggle-google-gemma-4-developer-agent-competition",
-      "ntu-koolib-ai-academic-english-workshops-2026",
-      "replit-startup-partner-credits-pro",
-      "scholarcy-free-summarizer-quota-conflict-watch",
-      "stackone-starter-monthly-thousand-credit-terms-conflict",
-      "tairoa-kpmg-ai-robotics-forum-2026",
-      "techorange-taiwan-robotics-conference-2026"
+      "fju-ai-knowledge-workflow-34208-2026",
+      "gdg-devfest-taoyuan-2026-google-adk-workshop",
+      "qodo-fourteen-day-unlimited-trial",
+      "swarms-startup-program-up-to-tenk"
     ],
     "new_ids": [
-      "itri-taichung-smart-manufacturing-ai-workflow-2026",
-      "twtbia-ai-microbiome-precision-health-forum-2026"
+      "itri-innosight-forum-ai-healthcare-2026",
+      "kaohsiung-carbon-price-ai-forum-2026"
     ],
     "attempted_failed_ids": [],
-    "unreviewed_existing_count": 1238
+    "unreviewed_existing_count": 1243
   },
-  "generated_at": "2026-11-25T12:13:34+08:00",
+  "generated_at": "2026-11-25T13:12:43+08:00",
   "reviewed_ids": [
-    "kaggle-google-gemma-4-developer-agent-competition",
-    "ntu-koolib-ai-academic-english-workshops-2026",
-    "replit-startup-partner-credits-pro",
-    "scholarcy-free-summarizer-quota-conflict-watch",
-    "stackone-starter-monthly-thousand-credit-terms-conflict",
-    "tairoa-kpmg-ai-robotics-forum-2026",
-    "techorange-taiwan-robotics-conference-2026"
+    "fju-ai-knowledge-workflow-34208-2026",
+    "gdg-devfest-taoyuan-2026-google-adk-workshop",
+    "qodo-fourteen-day-unlimited-trial",
+    "swarms-startup-program-up-to-tenk"
   ],
   "attempted_failed_ids": [],
   "new_ids": [
-    "itri-taichung-smart-manufacturing-ai-workflow-2026",
-    "twtbia-ai-microbiome-precision-health-forum-2026"
+    "itri-innosight-forum-ai-healthcare-2026",
+    "kaohsiung-carbon-price-ai-forum-2026"
   ]
 }

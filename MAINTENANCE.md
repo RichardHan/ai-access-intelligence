@@ -7966,3 +7966,29 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 保留既有 ID、首次收錄日期及原有 3,098 筆政策歷史，追加 9 筆。本機 make check 與 make check-ui 通過，另以 390px、1280px 查本輪卡片、證據詳情及報名連結。發布以主線同一提交的 Frontend QA 與 Pages、公開資產及本輪卡片核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 13:06–2026-11-25 13:12 Asia/Taipei｜N=1,247 · R=4 · A=2 · U=1,243 · attempted=0
+
+基準 `8ebb8c3`。主線與遠端一致，工作樹乾淨，無開放 PR 或其他維護鎖，前版 Frontend QA 及 Pages 成功。起始 1,130 筆可行動或待定、4 筆到複核時間、31 筆七天內到截止點，其中 20 筆在冷卻。全庫 30 筆至少一個截止點已過，含歷史。高風險聯集 109 筆，取可行動紀錄的排程到期、七日內截止、最近追查失敗、暫時不限量及 ID 或狀態含衝突的聯集。
+
+本輪查完四筆到複核時點的案件，兼顧台灣活動、計費風險及收件證據。東華和 Gemma 已有近期證據與交接時點，沿既定排程。三位唯讀代理採 GPT-6.2 Sol high，主代理沿用會話配置。Gemini 3.8 Flash 未提供。新案依主辦、標題、活動 ID 及網址對照資料與政策歷史，收錄兩筆；JCMIT 與工研院班號 2326100064 分別命中既有大會及產業課程紀錄。
+
+### 來源與變更
+
+- `qodo-fourteen-day-unlimited-trial`：官方使用文件列每工作區、跨所有 repo、每天 100 次程式碼審查，台北 08:00 重置。定價及首頁仍稱不限，Pro Team 點數及費率也有兩套。用量改列有限並退出不限量篩選，補付費預設續約，保留實際上限生效日、台灣資格與資料授權缺口。 [使用文件](https://docs.qodo.ai/pricing-and-usage) [定價](https://www.qodo.ai/pricing/) [首頁](https://www.qodo.ai/) [一般條款](https://www.qodo.ai/terms/)
+- `swarms-startup-program-up-to-tenk`：讀到官網的公開新創團隊聯絡及可讀的一般會議。分級連結網頁擷取回 404，主代理另一路公開 GET 回 403。官網直連曾回 429，正文擷取可讀。參與費用未明，卡片退出免費專區。收件、回信及超額仍待核。 [方案頁](https://www.swarms.ai/programs/startups) [預約目錄](https://cal.com/swarms) [公開一般會議](https://cal.com/swarms/30min)
+- `fju-ai-knowledge-workflow-34208-2026`：校方活動頁由公開 GET 讀到只開放學生、免費、12/3 12:00 停收及 6／50 已報名快照。錄取與可用席次待核。 [公告](https://www.net.fju.edu.tw/main/04v2/s_news.php?id=aZHrvZ1EcZA&keyword=&part=0&sel=1) [報名頁](https://activity.dsa.fju.edu.tw/Activity.jsp?activityID=34208)
+- `gdg-devfest-taoyuan-2026-google-adk-workshop`：一般票免費且 RSVP 需登入。網頁擷取正文 42 次與頁面設定 43 人的讀值分別留存，一般票設定與工作坊席次的關係待核。主辦未在正文列固定截止或 credit 條件。 [活動](https://gdg.community.dev/events/details/google-gdg-taoyuan-presents-devfest-taoyuan-2026/) [社群](https://gdg.community.dev/gdg-taoyuan/)
+- `kaohsiung-carbon-price-ai-forum-2026`：12/9 高雄免費論壇，13:30 報到，14:00 開始。公開表單列服務單位與職稱必填和先到先入座。截止、實際受理及席次未知。 [主辦公告](https://www.accupass.com/event/2611050253381390325750) [公開表單](https://docs.google.com/forms/d/e/1FAIpQLSf08PO5jqtFSVp7-0T86zdTrJHL50r6iMj_bX1FZBwAUokpFQ/viewform?usp=send_form)
+- `itri-innosight-forum-ai-healthcare-2026`：11/27 臺北免費論壇可現場候補，線上已於 11/25 11:00 截止。活動詳情列 16:30 結束，總覽列末場議程的 16:25，且其報名標籤有兩種。候補開始、停止時間與實際入場未知。 [活動詳情](https://iekweb2.iek.org.tw/IEKConf/Client/confinfo.aspx?conf_no=930185935&mode=confinfo) [活動總覽](https://ieknet.iek.org.tw/iekevents/EventsList.aspx)
+
+### 下一輪
+
+- 11/25 14:30 接 `gdg-devfest-tainan-2026`，15:10–15:20 依佇列回查臺北 AI 研發補助、連鎖門市升級、Alibaba Token Plan 及同時段到期案例。17:00 查 AutoClaw，17:05 核臺大閱讀場收件，18:00 核東華兩份表單，19:00 接 Akamai Rise。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/8ebb8c39ec3e1e786e8d033d87cf58912dee8529/MAINTENANCE.md)
+- 11/26 07:45 查 Gemma 待評終件，07:59 後另核加入、組隊鎖定。保留 12/3 終件獨立期限。 [Gemma 規約](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules)
+- 11/26 13:00 查 Qodo 使用文件與定價是否對齊、新創分級有無修復、輔大及 GDG 公開頁的報名、兩件台灣新增活動的收件變更。Innosight 優先核候補，11/27 活動後依新官方證據轉歷史。直心健康 Gamma 活動留為線索，待公開票種、收件與會員條件可核再評估。 [Gamma 活動](https://www.accupass.com/event/2607290735458465803630)
+
+### 資料與發布
+
+批次欄位和 README 由基準 JSON 與實際差異計算。保留既有 ID、首次收錄時間、來源 URL 和原有 3,107 筆政策歷史，追加 6 筆。發布驗收含 make check、make check-ui、本輪六張卡片、同一提交的 Frontend QA 與 Pages、公網資產和卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
