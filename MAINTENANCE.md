@@ -8021,3 +8021,32 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 
 
 批次與 README 數字由基準 JSON 與本輪差異計算。保留既有 ID、首次收錄時間、來源 URL 與原有 3,113 筆政策歷史，追加 6 筆。本機 make check、make check-ui 和 390px／1280px 批次卡片檢查通過。公開驗收依同一提交的 Frontend QA 與 Pages，並比對公開檔案和本輪卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 15:06–2026-11-25 15:17 Asia/Taipei｜N=1,251 · R=6 · A=2 · U=1,245 · attempted=0
+
+基準 `68fdea7`。起始工作樹乾淨，主線與遠端一致，無開放 PR 或維護鎖，前版 Frontend QA 與 Pages 成功。基準有 1,134 筆可行動或待定、1 筆到複核點及 34 筆七日內有截止點，其中 20 筆在冷卻。全庫有 30 筆至少一個截止點已過，包含歷史紀錄。高風險聯集 110 筆，含可行動紀錄中的到複核點、七日內截止、最近整筆追查失敗、暫時不限量，以及 ID 或狀態帶衝突標記。
+
+範圍優先處理台南 DevFest 逾期與臺大論壇近截止，再查即將到複核點且近 24 小時未核的 Grok、長榮、彰化與清大課程。Gemma 午間已核，沿用截止前安排。三位唯讀研究代理使用 GPT-6.2 Sol high，因環境未提供 Gemini 3.8 Flash。主代理沿用會話模型，實讀採納來源。
+
+### 證據與資料變更
+
+- `gdg-devfest-tainan-2026`。補會眾票開放訊號及雙軌時段。票務欄的結束時間由活動結束時間推導，名額口徑仍待核，保留截止日與剩餘席次未知。 [GDG Tainan 官方場次](https://gdg.community.dev/events/details/google-gdg-tainan-presents-devfest-tainan-2026-build-what-you-can-see/) [GDG Tainan 主辦章節](https://gdg.community.dev/gdg-tainan/)
+- `tacc-ntu-advanced-ai-safety-forum-2026`。補 11/10 的共同主辦公告和公開表單必填欄位、午餐。既有 TACC 公告日期仍為 11/11，11/27 截止時刻、費用及實際收件待核。 [臺大論壇主辦公開報名表](https://docs.google.com/forms/d/e/1FAIpQLSewZnMB9M7u026sV95YI_FvGJhjycvneRO73oaBq0E-_SjxlA/viewform) [臺灣人工智慧卓越中心共同主辦公告](https://www.twaicoe.org/advanced-ai-safety-forum-research-and-technology-frontiers-2026-tw)
+- `grok-watch`。新創表單要求 Team ID 及符合團隊與公司網域的信箱。條款排除稅費和第三方服務，額度耗盡後按適用條款計費。Cursor、台灣帳務和核准額度待核。 [Grok for Startups 官方 FAQ](https://x.ai/startups) [Grok for Startups 計畫條款（2026-10-27）](https://x.ai/legal/startup-program-terms) [Grok 新創公開申請表](https://x.ai/startups/apply)
+- `cjcu-google-ai-creative-workshop-2026`。單場頁 48 席上限，查閱時 54 人報名、44 人核准。主辦索引仍標報名中，實際剩餘和考照費待核。 [長榮大學官方活動系統](https://eweb.cjcu.edu.tw/act/act.aspx?id=20322) [長榮大學教學資源中心場次索引](https://eweb.cjcu.edu.tw/act/ActiveList.aspx?siteid=B2800)
+- `gdg-devfest-changhua-2026`。活動頁仍顯示 RSVP。唯一公開實體票種在查閱時已用完 50 席，未啟用候補，暫移出可行動專區並保留短期回查。 [GDG Changhua 活動頁](https://gdg.community.dev/events/details/google-gdg-changhua-presents-devfest-changhua-2026/) [GDG Changhua 主辦章節](https://gdg.community.dev/gdg-changhua/)
+- `nthu-taica-generative-text-image-mooc-2026`。教發中心確認不限身分、免費自主選讀，入口提供非清大帳戶註冊。課程推薦約 19.4 小時、8 週，平台的開課日期差異仍在。 [清華磨課師官方課程 471](https://mooc.nthu.edu.tw/course/info/471) [清大教發中心課程公告](https://ctld.site.nthu.edu.tw/p/406-1217-303263,r11492.php?Lang=zh-tw) [清大教發中心課程推薦](https://ctld.site.nthu.edu.tw/p/406-1217-317391,r12043.php?Lang=zh-tw) [清大公告所連課號 471 登入入口](https://mooc.nthu.edu.tw/classroom/news/471)
+- `pccu-ewant-chatgpt-mooc-2026-fall`。新增文大 2026 秋季班。一般學員免費選修，12/10 截止，電子證書費待核。 [ewant 文大課號 17891](https://www.ewant.org/admin/tool/mooccourse/mnetcourseinfo.php?hostid=35&id=17891) [ewant 資訊科技課程目錄](https://www.ewant.org/category_course_list.php?categoryid=36) [ewant 官方登入說明](https://www.ewant.org/login/index.php) [陽明交大跨校通識數位課程計畫手冊](https://www.ntin.edu.tw/upload_data/news/45666/%E5%9C%8B%E7%AB%8B%E9%99%BD%E6%98%8E%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%B8%E3%80%8C%E8%B7%A8%E6%A0%A1%E9%80%9A%E8%AD%98%E6%95%B8%E4%BD%8D%E8%AA%B2%E7%A8%8B%EF%BC%88General%20Education%20Online%EF%BC%89%E3%80%8D%E8%A8%88%E7%95%AB.pdf)
+- `scu-ewant-ai-chatbot-mooc-2026-fall`。新增東吳 2026 秋季班，合併 TaiwanLIFE、ewant 與公務學習平台入口。12/18 截止，證明 NT$250 為選購，平台另有暫時付款安排。 [TaiwanLIFE 東吳大學課號 4416](https://taiwanlife.org/admin/tool/mooccourse/mnetcourseinfo.php?hostid=13&id=4416) [ewant 東吳大學課號 18265](https://www.ewant.org/admin/tool/mooccourse/mnetcourseinfo.php?hostid=12&id=18265) [e等公務園＋同課程入口](https://elearn.hrd.gov.tw/info/10047504) [TaiwanLIFE 付費課程說明](https://taiwanlife.org/mod/forum/discuss.php?d=1935) [TaiwanLIFE 證書付款公告](https://taiwanlife.org/mod/forum/discuss.php?d=1984)
+- 東華 `ndhu-ai-productivity-workshop-2026`。校方 11/17 提醒連回同一公告，未見停收或延長新訊號，本輪不刷新核實時間。按 18:00 回查一般生和起飛生表單。 [校園提醒](https://announce.ndhu.edu.tw/mail_display.php?timestamp=1794886103) [主辦公告](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php)
+- Microsoft Agent Factory Day 只讀到活動頁外殼，另一路公開查詢未提供活動條款。日期、資格、費用與收件仍待主辦正文，本輪留交接線索。兩門新課按正規化名稱、期別、老師、活動 ID 和網址比對兩份 JSON。工研院 2326100064 與台灣大哥大第四季班已收錄。 [Microsoft 活動頁](https://msevents.microsoft.com/event?id=1819813360)
+
+### 下一輪
+
+- 11/25 17:00 回查 AutoClaw 跨語系條款，17:05 查臺大閱讀場截止。18:00 回查東華單獨的兩份表單，19:00 查 Akamai Rise。Gemma 依 11/26 07:45 及 07:59 後兩個時點查終件選取以及加入、組隊狀態。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/68fdea73bd8df8170d2a5588313cb65b7f65d2bf/MAINTENANCE.md)
+- 11/26 09:00 核彰化是否釋位、另開候補或獨立入口，以及臺大論壇主辦是否補報名時刻或費用。台南、Grok、長榮、清大與兩門 ewant 新課 15:30 再查上述缺口。臺北獎補助維護恢復、Alibaba 新戶扣點、多店收件與 Fireworks 費用維持前輪時間。
+
+### 資料與發布
+
+最小品質改善落在票況、公開報名入口、資格與費用等資料欄位。批次與 README 計數由基準 JSON 及紀錄差異生成。保留既有 ID、首次收錄日期、來源網址與 3,119 筆政策歷史，追加 8 筆。發布驗收含 make check、make check-ui、手機與桌面批次卡片、同提交 Frontend QA／Pages 與公開資產逐位元組比對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
