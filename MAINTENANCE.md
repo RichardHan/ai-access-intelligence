@@ -7936,3 +7936,33 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 最小品質改善落在來源、公開報名及費用、資格、用量等資料欄位。批次與 README 由基準及實際差異計算，保留穩定 ID、首次收錄日期及原有 3,088 筆政策歷史，追加 10 筆。發布驗收以 make check、make check-ui、批次卡片、同一提交的 Frontend QA 與 Pages、公開資產和公開卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 12:06–2026-11-25 12:13 Asia/Taipei｜N=1,245 · R=7 · A=2 · U=1,238 · attempted=0
+
+基準 `e1c45e4`。主線與遠端一致，工作樹乾淨，無開放 PR 或其他維護鎖。前版 Frontend QA 及 Pages 成功。起始有 1,128 筆可行動或待定、7 筆到複核點、31 筆七日內有截止點（20 筆仍在冷卻），全庫 30 筆至少一個截止點已過。高風險聯集 109 筆，涵蓋可行動紀錄中的複核到期、七日內截止、最近整筆追查失敗、暫時不限量及 ID 或狀態標為衝突者。
+
+複核範圍為全部 7 筆已到複核時間的案例，另查台灣新機會。三位唯讀代理使用 GPT-6.2 Sol high，環境未提供 Gemini 3.8 Flash，主代理沿用本會話配置。東華 12/5 場次凌晨已核，依前輪交接保留 18:00 回查兩份表單。其餘未到複核點的既有案沿用既定時點。
+
+### 證據與變更
+
+- `scholarcy-free-summarizer-quota-conflict-watch`。三種免費摘要口徑仍並存。補 Library 付費後取消可用至期末，以及官方退款政策的法律例外。 [來源 1](https://www.scholarcy.com/pricing) [來源 2](https://www.scholarcy.com/article-summarizer) [來源 3](https://www.scholarcy.com/scholarcy-library-terms-of-service)
+- `stackone-starter-monthly-thousand-credit-terms-conflict`。補 Gateway Starter 定價與契約的自訂連接器差異，以及加購點數由組織共用。保留既有計量、專案與超額衝突。 [來源 1](https://www.stackone.com/pricing/) [來源 2](https://www.stackone.com/terms/service-consumption-schedule/) [來源 3](https://www.stackone.com/changelog/plan-limit-alerts/) [來源 4](https://www.stackone.com/terms/saas-terms/)
+- `replit-startup-partner-credits-pro`。修正一般條款中的契約指引，已分別連結 Pro 與 Enterprise。補 Pro 權限期限依購買流程，並保留新創額度六／十二個月差異。 [來源 1](https://replit.com/startups) [來源 2](https://replit.com/terms-of-service) [來源 3](https://replit.com/pro-agreement) [來源 4](https://replit.com/enterprise-agreement)
+- `kaggle-google-gemma-4-developer-agent-competition`。加入與組隊仍是 11/26 07:59、終件仍是 12/3 07:59（台北）。補未手選時由 Kaggle 自動選取的一般規則，保留待評作品的證據缺口。 [來源 1](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules) [來源 2](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview) [來源 3](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471)
+- `techorange-taiwan-robotics-conference-2026`。補主論壇時段及工作坊表單可代報主論壇的選項。該表仍須公司統編，兩場工作坊同步、各 50 名、限選一場。 [來源 1](https://2026-taiwan-robotics-conference.techorange.com/) [來源 2](https://www.surveycake.com/s/YNeO7)
+- `tairoa-kpmg-ai-robotics-forum-2026`。加入工研院所連公開表單。補公司名稱及部門或職稱必填，協會會員身分可選否。 [來源 1](https://www.tairoa.org.tw/activity/act_detail.aspx?column_id=17749&column_type_id=5) [來源 2](https://college.itri.org.tw/edm/D3/010/29/index.html) [來源 3](https://itricollege.surveycake.biz/s/6RV8O)
+- `ntu-koolib-ai-academic-english-workshops-2026`。兩場 11/25 午間仍標開放。詳情頁快照閱讀餘 6、寫作餘 1，依場次頁即時更新。另修正圖書館主辦、雙語教育中心協辦的分工。 [來源 1](https://my.ntu.edu.tw/actregister/sessionList.aspx?actID=20261911_05) [來源 2](https://my.ntu.edu.tw/actregister/sessionView.aspx?actID=20261911_05&sesID=3) [來源 3](https://my.ntu.edu.tw/actregister/sessionView.aspx?actID=20261911_05&sesID=4)
+- `twtbia-ai-microbiome-precision-health-forum-2026`。新增 12/4 台南免費 AI 與精準健康論壇。會員及非會員均可填表，須填公司或部門與職稱。 [來源 1](https://www.twtbia.org.tw/index.php/?q=zh/news/show/1883) [來源 2](https://www.rocaic.org/news_detail.php?id=3606) [來源 3](https://forms.gle/uVqsRtQpuNYEeLPM8)
+- `itri-taichung-smart-manufacturing-ai-workflow-2026`。新增台中免費智慧製造 AI 實作班。工研院四日課程共 30 小時、40 名，表單要求公司統編。 [來源 1](https://eii.nat.gov.tw/moeai-plus/) [來源 2](https://amplifier-ai-course.pages.dev/#signup) [來源 3](https://amplifier-ai-course.pages.dev/courses/ai-workflow/course.js)
+
+### 下一輪
+
+- 11/25 13:00 接 Swarms、桃園 DevFest、輔大及 Qodo。17:00 續查 AutoClaw，17:05 核臺大閱讀場是否按時收件截止。18:00 核東華兩份表單，19:00 接 Akamai Rise。 [上輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/e1c45e4a6a2ea197819ea3fe5434b66ad18c9752/MAINTENANCE.md)
+- 11/26 07:45 前查 Gemma 是否出現官方待評終件說明，07:59 後再核加入和組隊鎖定。12/3 終件為已加入者保留的獨立時點。 [規約](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules) [評測公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471)
+- 11/26 午間回查 Scholarcy 同一免費工具的有效額度、StackOne Starter 無卡達額行為與 Replit 核准期限。確認兩場機器人論壇及新增兩案有無改期、滿額或停收。工作坊費用、工研院課程候補形式與台南論壇剩餘名額目前未核。
+- 11/26 11:00 沿前輪交接核 DevFest Taipei、新北市圖、YWCA、SD 年會、NIEA 與供應商證據缺口。東南科大英文 AI 海報與淡江 Google Cloud 微學分維持待補來源。
+
+### 資料與發布
+
+保留既有 ID、首次收錄日期及原有 3,098 筆政策歷史，追加 9 筆。本機 make check 與 make check-ui 通過，另以 390px、1280px 查本輪卡片、證據詳情及報名連結。發布以主線同一提交的 Frontend QA 與 Pages、公開資產及本輪卡片核對。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
