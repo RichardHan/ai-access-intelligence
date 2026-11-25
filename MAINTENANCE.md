@@ -7992,3 +7992,32 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 資料與發布
 
 批次欄位和 README 由基準 JSON 與實際差異計算。保留既有 ID、首次收錄時間、來源 URL 和原有 3,107 筆政策歷史，追加 6 筆。發布驗收含 make check、make check-ui、本輪六張卡片、同一提交的 Frontend QA 與 Pages、公網資產和卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+
+## 2026-11-25 14:06–2026-11-25 14:12 Asia/Taipei｜N=1,249 · R=4 · A=2 · U=1,245 · attempted=0
+
+基準 `45fd2d4`。主線與遠端一致，工作樹乾淨，無開放 PR 或其他維護鎖。前版 Frontend QA 及 Pages 成功。起始 1,132 筆可行動或待定，0 筆到複核時間，32 筆七日內有截止點，17 筆在冷卻。全庫 30 筆至少一個截止點已過，包含歷史。可行動紀錄中，高風險聯集 107 筆，包含期限、複核到期、暫時不限、最近追查失敗及 ID 或狀態標記衝突。
+
+依佇列挑四筆已逾 22 小時且七日內截止的案例，涵蓋臺灣補助、付費訂閱及限時訓練。東華與 Gemma 依既有安排查核，避免重覆本日已讀的來源。三位唯讀研究代理各自執行，使用環境預設模型，Gemini 3.8 Flash 未提供。主代理沿用會話模型並複核採納的來源。
+
+### 證據與變更
+
+- `alibaba-model-studio-token-plan-personal-new-user-discount`。11/25 官方文件已公告 Qwen4-Max 預覽退役，舊 ID 自動轉正式並按正式標準扣點。個人版新戶價格至 11/30 23:59:59（台北）。補自動續訂及達額停用，保留原預覽期限與折抵於歷史。總覽擷取逾時，匿名 GET 200 取到正文。實際切換分鐘、正式版扣點及台灣帳務待核。 [方案](https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview) [正式模型](https://www.alibabacloud.com/help/en/model-studio/qwen4-max) [用量](https://www.alibabacloud.com/help/en/model-studio/token-plan-usage-quota)
+- `taipei-industry-incentive-ai-rd-batch2-2026`。補 11/26 12:30–13:00 網站維護、公開登入資料及補助至多占總經費 50%。修正登記地與設立年資的表述。11/30 截止時刻、遷入個案資格、申請費及登入後收件待核。 [徵件公告](https://www.industry-incentive.taipei/news_detail/497) [維護公告](https://www.industry-incentive.taipei/news_detail/504) [申請文件](https://www.industry-incentive.taipei/download/7)
+- `taiwan-multi-store-ai-upgrade-tier3-2026`。補經貿影響佐證、淨值與銀行信用、工商憑證、送件後不得撤回與資格文件補正。11/30 17:00 保留。PDF 擷取解碼失敗後透過匿名 GET 和文字抽取讀到須知。剩餘經費、即時受理及申請費待核。 [第三梯公告](https://www.aoc.gov.tw/showPublic/807) [執行單位方案](https://www.smebiz.org.tw/project-tenacity_case.php)
+- `fireworks-glimmer-sft`。補官方 starter 逾期的付費確認、一般帳戶併發預設 32 及正式部署另計。保留優惠 12/1 16:00 前啟動、評估費、公告與付費 RL 範例差異。促銷額度、台灣資格及 DPO／RL 免費路徑待核。 [Starter](https://docs.fireworks.ai/fine-tuning/training-api/cookbook/muse-glimmer.md) [Serverless 指南](https://docs.fireworks.ai/fine-tuning/training-api/serverless.md) [促銷公告](https://fireworks.ai/blog/train-muse-glimmer-for-free)
+- `aipost-open-lab-ai-build-challenge-2026`。新增免費線上投稿、臺北決賽與 50 組開發額度。規章列暫定 11/27 23:59:59，額度剩餘及實際收件待核。年會另有票種。 [競賽規章](https://openlab-ai-build-challenge.davincwc.workers.dev/rules) [報名](https://openlab-ai-build-challenge.davincwc.workers.dev/) [年會](https://luma.com/zr1k4qa5)
+- `ncu-k12-ai-literacy-conference-2026`。新增中央大學研討會。表單 11/27 23:59 截止，發表教師優先後依序開放 80 名。公文列可報 100 人，兩來源活動結束時間差 10 分鐘。匿名 GET 讀到表單。費用、實際收件與剩餘席次待核。兩件新案依名稱、主辦方、活動身分識別資訊及 URL 對照兩份 JSON，未見重複。 [校方公文](https://newboe.chc.edu.tw/download/%E5%A4%A7%E5%AD%B8%E5%85%AC%E6%96%87.pdf/85731) [表單](https://reurl.cc/OQOGDv)
+- PM Team 12/5 台北工作坊維持線索，場地和低消待公告。KEN 12/22 線上課維持線索，社群會員票條件與收件待核。清華青年班已收錄為 `aocai-youth-ai-training-2026`。 [PM Team](https://luma.com/znj1ncik) [KEN](https://www.accupass.com/event/2611030454321073723984) [清華招生](https://exten.site.nthu.edu.tw/p/412-1213-23213.php?Lang=zh-tw)
+
+### 下一輪
+
+- 11/25 14:30 核 `gdg-devfest-tainan-2026`。15:15–15:20 接 Grok、長榮大學、彰化 DevFest 與清大 MOOC。17:00 核 AutoClaw 跨語系條款，17:05 核臺大閱讀場截止，18:00 查東華兩份表單，19:00 查 Akamai Rise。Gemma 依 11/26 07:45 與 07:59 後分別查提交選取及加入組隊鎖定。 [前輪交接](https://github.com/RichardHan/ai-access-intelligence/blob/45fd2d45d55a8d39a2662ee3da0b95dd1370c819/MAINTENANCE.md)
+- 11/26 13:15 核臺北獎補助網站恢復與精確截止公告，14:00 核多店方案是否提前停收、Alibaba 首購續訂與實際扣點文件、Fireworks DPO／RL 費用，以及 AI 郵報與中央大學報名狀態。AI 郵報再查正式截止及開發額度，中央大學再查費用、錄取母數與結束時間。11/26 13:00 的 Qodo、Swarms、輔大、桃園 DevFest 與前輪新活動照原排程。
+
+### 資料與發布
+
+最小品質改善落在讀者可見的資格、用量、計費、報名來源、期限及證據範圍。
+
+
+批次與 README 數字由基準 JSON 與本輪差異計算。保留既有 ID、首次收錄時間、來源 URL 與原有 3,113 筆政策歷史，追加 6 筆。本機 make check、make check-ui 和 390px／1280px 批次卡片檢查通過。公開驗收依同一提交的 Frontend QA 與 Pages，並比對公開檔案和本輪卡片。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
