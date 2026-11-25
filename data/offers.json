@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T07:13:54+08:00",
-  "scope": "2026-11-25 07:06–2026-11-25 07:13 Asia/Taipei 局部複核 4 筆既有紀錄，新增 2 筆，整筆追查失敗 0 筆，其餘 1,234 筆既有紀錄未完成本輪複核。補 OpenAlex 無金鑰預算與全文入口、Gamma 點數效期、AI21 自助入口及 Memobase 計量證據，新增清華磨課師與 Lovable 諮詢。",
+  "updated_at": "2026-11-25T08:14:31+08:00",
+  "scope": "2026-11-25 08:06–2026-11-25 08:14 Asia/Taipei 局部複核 6 筆既有紀錄，新增 1 筆，整筆追查失敗 1 筆，其餘 1,234 筆既有紀錄未完成本輪複核。釐清 AutoClaw 中英文額度、Luma 試用、Airtop 停服後入口、Relevance AI 點數單位與兩項校方報名條件，新增中興大學工作坊。",
   "offers": [
     {
       "id": "octoparse-ai-free-new-user-five-credit",
@@ -18441,7 +18441,7 @@
     {
       "id": "airtop-free-monthly-thousand-signup-bonus-conflict",
       "title": "Airtop Free：新註冊已關閉，11月13日停服",
-      "summary": "停服公告仍載「Airtop is shutting down on November 13, 2026」，並已停止新註冊與升級付費或高階方案；既有帳戶仍可登入管理訂閱、降級或取消。定價頁仍列Free $0/月、1,000 credits、10,000一次性點數與註冊按鈕，屬殘留文案，以停服公告為準。退款、資料匯出與台灣資格未載。",
+      "summary": "Airtop 停服前公告列 2026/11/13 停服，當時已停止新註冊與升級，既有客戶曾可登入管理。11/25 公開定價仍有舊免費方案，頁首改為新專案預告。該頁登入及註冊連到無法解析的 Portal，停服後的登入、管理、匯出及退款仍待核。",
       "record_type": "watchlist",
       "status": "closed",
       "verification": "Official",
@@ -18464,21 +18464,21 @@
       "usable_benefit_usd": null,
       "benefit_cost_ratio": null,
       "savings_usd": null,
-      "cancellation": "舊帳務文件列可升降級，但停服公告明確已關閉升級，既有帳戶可降級或取消。一般退款限最近一次扣款五工作日內且當期未使用點數，並非停服退款承諾；自動續訂及關閉政策未核。",
+      "cancellation": "停服前公告曾允許既有帳戶降級或取消。一般帳務文件的退款條件為最近一次扣款五個工作日內且當期未用點。停服後可用的訂閱管理和退款流程待核。",
       "usable_duration": "2026-11-13停止服務；停服時區及鐘點未列。",
-      "access_risk": "新註冊及升級已關閉；一般條款稱帳戶終止可能毀損內容且不保證復原，付款義務可能存續；停服資料匯出及退款未核。",
+      "access_risk": "11/25 讀取時 Portal 主機無法解析，停服後的帳戶管理、匯出、退款與 API 狀態未核。一般帳戶終止風險沿原條款存證。",
       "eligibility": {
-        "service_availability": "新註冊及升級關閉，既有帳戶仍可登入、管理訂閱、降級或取消；11月13日停服。",
+        "service_availability": "停服前公告列 11/13 停服，並記載新註冊與升級已關閉及既有帳戶當時仍可登入。11/25 讀取時 Portal 無法解析，停服後登入及管理狀態待核。",
         "account_eligibility": "不再接受新註冊；既有用戶個案未驗。",
         "billing_country": "台灣付款、免卡及自動扣款設定未知。",
         "identity_residency": "未明列台灣資格。",
-        "terms_restrictions": "舊帳務文件列月點不累積、迎新僅首期及升級比例計費；停服公告現已關閉升級。完整用途條款未核。",
+        "terms_restrictions": "舊帳務文件列迎新僅首期、月點不累積。停服前公告已關閉升級。",
         "taiwan_note": "Unknown，未登入或註冊。"
       },
       "unknowns": [
-        "現行迎新贈額是10,000還是30,000",
-        "停服鐘點與時區、資料匯出和退款安排",
-        "台灣資格、免卡、自動續訂與服務條款"
+        "停服後的登入、管理、匯出及退款入口",
+        "停服時區、鐘點及 API 實際狀態",
+        "新專案的開放時程與適用條件"
       ],
       "sources": [
         {
@@ -18516,20 +18516,43 @@
           "scope": "一般帳戶終止風險",
           "evidence": "帳戶終止可能造成內容毀損，無法保證復原；付款義務可存續。非停服專屬資料匯出或退款承諾。",
           "accessed_time_range": "2026-11-06T02:06:00+08:00/2026-11-06T02:10:18+08:00"
+        },
+        {
+          "url": "https://www.airtop.ai/pricing",
+          "label": "Airtop 定價",
+          "scope": "新專案橫幅及舊 Portal 連結",
+          "evidence": "頁首列 Airtop is working on something new. Stay tuned!。舊定價及註冊連結仍在，連往 portal.airtop.ai。",
+          "accessed_at": "2026-11-25T08:09:13+08:00"
+        },
+        {
+          "url": "https://dns.google/resolve?name=portal.airtop.ai&type=A",
+          "label": "Google Public DNS 查詢",
+          "scope": "Portal 主機的公開 A 記錄",
+          "evidence": "查閱時回 NOERROR，無 A 答案，直接 HTTPS 存取亦回報主機無法解析。此查詢僅核對當時的 DNS 可達性。",
+          "accessed_at": "2026-11-25T08:09:13+08:00"
+        },
+        {
+          "url": "https://www.airtop.ai/help/billing/billing.md",
+          "label": "Airtop 舊帳務文件",
+          "scope": "歷史迎新點數及一般帳務文件",
+          "evidence": "可讀的一般帳務文件仍列一次 30,000 點，與定價殘留的 10,000 點不同。文件沒有新增停服後管理方案。",
+          "accessed_at": "2026-11-25T08:09:50+08:00"
         }
       ],
-      "review_cadence": "monthly",
-      "verified_at": "2026-11-15T02:11:00+08:00",
+      "review_cadence": "on_new_signal",
+      "verified_at": "2026-11-25T08:09:50+08:00",
       "discovered_at": "2026-10-29T19:05:58+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "next_review_at": "2026-12-15T09:00:00+08:00",
-      "verification_scope": "2026-11-15 複核 Airtop 官方停服通知與定價頁：官方於 2026-11-13 全面終止服務（Portal shutdown），所有新註冊與 API 服務已中斷關閉。",
+      "next_review_at": null,
+      "verification_scope": "2026-11-25 台北時間局部複核定價橫幅、公開 Portal 連結、DNS 和一般帳務頁。11/13 停服日沿存證。Portal 停服通知無法重讀，帳戶、API 與停服退款未核。",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "valuation_scenario": null,
-      "quota_details": "定價頁殘留：Free 1,000 credits／月、10,000一次性迎新、3併發session、1已部署agent；舊帳務文件另列一次30,000／起始31,000。新註冊與升級已關閉，以上額度已不可再取得。"
+      "quota_details": "定價頁殘留：Free 1,000 credits／月、10,000一次性迎新、3併發session、1已部署agent；舊帳務文件另列一次30,000／起始31,000。新註冊與升級已關閉，以上額度已不可再取得。",
+      "last_review_attempt_at": "2026-11-25T08:09:13+08:00",
+      "last_review_attempt_reason": "停服通知主機無法解析，公開 DNS A 查詢無答案。定價與一般帳務文件可讀，保留原停服公告查閱時間。若官方發布新的帳戶管理或停服說明，換來源追查。"
     },
     {
       "id": "sourcery-oss-free-rolling-diff-budget",
@@ -37866,7 +37889,7 @@
       "previous_limit": null,
       "id": "relevance-free-availability-conflict",
       "title": "Relevance AI：舊免費額度不可直接沿用",
-      "summary": "官方文件再次明文「The Free plan is retired for new signups and existing accounts」，原Free組織須升級Pro或Team，故判定為已結束（新舊帳號皆無Free）。付費結構：Pro年繳US$19/月或月繳US$29、Team年繳US$234/月或月繳US$349；Pro含30,000 Actions/年與US$240 Vendor Credits/年。同一官方頁另有數字衝突：功能比較表把Pro的Vendor Credits寫成每月10,000、Team 35,000，與方案內文的US$20／US$70不一致，保留不裁決。",
+      "summary": "官方文件列 Free 對新註冊與既有組織皆已退役。Pro／Team 的 Vendor Credits 在內文分別以每月 US$20／US$70 表示，方案表列每月 10,000／35,000 點。按官方公布的加購比率 US$20／10,000 點試算，兩種口徑對得上。內含點數實際入帳與換算細則仍待核。",
       "categories": [
         "UNLIMITED-CLAIM"
       ],
@@ -37885,10 +37908,10 @@
       "limited_confirmed": false,
       "usable_duration": null,
       "access_risk": "資格、額度與方案可能改變；未核實個人帳戶",
-      "verified_at": "2026-11-08T16:08:00+08:00",
+      "verified_at": "2026-11-25T08:09:50+08:00",
       "discovered_at": "2026-10-24T03:05:00+08:00",
-      "review_cadence": "monthly_or_new_signal",
-      "next_review_at": "2026-12-08T16:00:00+08:00",
+      "review_cadence": "on_new_signal",
+      "next_review_at": null,
       "priority": "watch",
       "eligibility": {
         "service_availability": "公開頁可讀；地區完整清單未核",
@@ -37899,10 +37922,9 @@
         "taiwan_note": "Unknown，台灣帳戶及使用者資格未核"
       },
       "unknowns": [
-        "Pro Vendor Credits是US$20/月或每月10,000點（同一頁兩處不一致）",
-        "Team對應數字同樣兩說",
+        "套餐內含 Vendor Credits 的帳戶實際入帳與正式換算口徑",
         "台灣帳戶與付款國家資格",
-        "既有Free組織未升級時的資料保存期限"
+        "既有 Free 組織未升級時的資料保存期限"
       ],
       "sources": [
         {
@@ -37917,6 +37939,20 @@
           "scope": "本輪重查：Free退役範圍與付費結構",
           "evidence": "「The Free plan is retired for new signups and existing accounts. If your Organization was on Free, upgrade to Pro or Team to keep using it.」；「Pro — $19 / month annual, $29 / month monthly」「30,000 Actions / year (or 2,500 / month)」「$240 Vendor Credits / year (or $20 / month)」；功能比較表另列Pro「Vendor Credits / month 10,000」與內文衝突。",
           "accessed_at": "2026-11-08T16:08:00+08:00"
+        },
+        {
+          "url": "https://relevanceai.com/docs/get-started/pricing",
+          "label": "Relevance AI 定價文件",
+          "scope": "Free 退役及付費額度的兩種計量",
+          "evidence": "同頁指 Free 已對新舊帳戶退役。Pro／Team 內文分別列每月 US$20／US$70，方案表列 10,000／35,000 Vendor Credits。",
+          "accessed_at": "2026-11-25T08:09:50+08:00"
+        },
+        {
+          "url": "https://relevanceai.com/docs/admin/subscriptions/plans",
+          "label": "Relevance AI 帳務文件",
+          "scope": "額外 Vendor Credits 的採購比率",
+          "evidence": "加購欄列 US$20 每 10,000 Vendor Credits。用此比率試算兩組數字相容；來源未明定套餐點數沿用同一換算。",
+          "accessed_at": "2026-11-25T08:09:50+08:00"
         }
       ],
       "record_type": "policy",
@@ -37930,7 +37966,7 @@
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "verification_scope": "主研究者依文件頁與行銷定價頁確認Free對新註冊與既有帳號皆退役、Pro／Team價格與Actions／Vendor Credits遞延規則；未登入、未升級、未付款；Vendor Credits兩套敘述衝突原樣保留。"
+      "verification_scope": "2026-11-25 台北時間局部複核官方定價及帳務文件的 Free 退役、Pro／Team Vendor Credits、加購比率。套餐換算為依加購價的試算；台灣付款、實際入帳及資料保留期限待核。"
     },
     {
       "setup_cost_usd": null,
@@ -56629,8 +56665,8 @@
     },
     {
       "id": "luma-dream-machine-free-generation-watchlist",
-      "title": "Luma Dream Machine：定價頁無Free、FAQ仍列Free，官方文件互相矛盾",
-      "summary": "現行主定價只列Plus／Pro／Ultra及商業方案，未列Free或免費月額；Payments FAQ（標示Updated January 25th, 2026）仍稱Free可生成Photon圖片及Ray3.14 draft影片，720p、有浮水印、限個人用途；ToS另用未定義的「Free Use」。三份官方文件不一致，保留watchlist並改判terms_conflict，不應升為已確認新戶免費生成，也不能沿用30部影片／月。",
+      "title": "Luma 生成試用：官方提免費點數，方案與領取條件待核",
+      "summary": "Luma 11/19 更新的官方產品說明稱各方案包含免費試用點數，產品頁提供 Try for free。現行網頁定價仍只列個人付費與商業方案，較早 FAQ 另列 Free。Apple 台灣店面標示可免費下載並列內購。試用是否需先付費或綁卡、點數、效期及台灣新戶資格待核。",
       "categories": [],
       "sources": [
         {
@@ -56656,9 +56692,38 @@
           "scope": "免費產出的商用與浮水印（沿用 2026-11-08 證據）",
           "evidence": "「Free and Lite Plans … personal use only」；watermark不能移除，「even if you later upgrade your subscription」。該頁明言只是條款摘要。",
           "accessed_at": "2026-11-08T19:15:50+08:00"
+        },
+        {
+          "url": "https://lumalabs.ai/llm-info",
+          "label": "Luma 官方產品說明",
+          "scope": "11/19 更新的試用點數與現行方案",
+          "evidence": "官方說明標示 Last updated November 19, 2026。定價段列各方案含免費試用點數，未說明點數量、先決條件、期限或台灣適用。",
+          "accessed_at": "2026-11-25T08:10:50+08:00",
+          "source_updated_at": "2026-11-19"
+        },
+        {
+          "url": "https://lumalabs.ai/pricing",
+          "label": "Luma 主定價",
+          "scope": "現行個人方案及商業方案",
+          "evidence": "主定價列 Plus、Pro、Ultra、Team 與 Enterprise，未列獨立 Free 或試用細則。",
+          "accessed_at": "2026-11-25T08:10:50+08:00"
+        },
+        {
+          "url": "https://lumalabs.ai/app",
+          "label": "Luma 產品入口",
+          "scope": "免費試用入口文字",
+          "evidence": "產品頁列 Try for free 並連至 app.lumalabs.ai，公開產品頁未列該入口的免費點數。",
+          "accessed_at": "2026-11-25T08:10:50+08:00"
+        },
+        {
+          "url": "https://apps.apple.com/tw/app/luma-dream-machine/id6478852867",
+          "label": "Apple 台灣 App Store",
+          "scope": "iOS 上架與內購",
+          "evidence": "原廠 App 標示「免費 · App內購買」，內購列 Lite、Plus、Unlimited 等。上架及下載標示無法證明台灣新戶免費生成。",
+          "accessed_at": "2026-11-25T08:11:08+08:00"
         }
       ],
-      "verified_at": "2026-11-16T06:10:35+08:00",
+      "verified_at": "2026-11-25T08:11:08+08:00",
       "taiwan": "Unknown",
       "verification": "Official",
       "quota_classification": "UNKNOWN",
@@ -56671,17 +56736,17 @@
         "guaranteed_queue_seconds": null
       },
       "eligibility": {
-        "service_availability": "主定價只列Plus／Pro／Ultra與商業方案；FAQ仍描述Free；ToS使用未定義的Free Use。",
+        "service_availability": "Luma 產品頁提供 Try for free。現行定價未列獨立 Free，舊 FAQ 仍描述 Free；ToS 使用 Free Use。Apple 台灣店面可見原廠 iOS App。",
         "account_eligibility": "需以真實、完整、最新資料註冊；13歲以下禁止，13至17歲需父母或法定監護人同意。Free是否對新戶開放未證。",
         "billing_country": "付費方案以美元計價；免費候選是否需付款方式及台灣帳單支援未確認。",
         "identity_residency": "官方未列台灣可用國家清單；ToS稱不保證美國以外可用。",
         "terms_restrictions": "免費產出不可商用或在外部marketplace出售；不可移除浮水印、metadata/content credentials；不得繞過存取限制。免費輸入及輸出授權包含公開展示、散布、模型訓練；不應上傳無授權或機密素材。之後升級不使免費產出取得商用權。",
-        "taiwan_note": "Unknown：ToS不保證美國以外可用，但也未點名台灣排除；免費新帳戶權益未證。"
+        "taiwan_note": "Unknown：台灣 App Store 可見免費下載及付費內購；台灣帳戶能否取得免費生成試用仍待核。"
       },
       "unknowns": [
-        "現行新帳戶是否仍可免費生成及Web／iOS差異",
-        "Photon、Ray3.14 draft的實際免費存取是否仍適用",
-        "免費月額、重置週期、免費queue時間",
+        "新帳戶是否能在未購買訂閱、未綁卡時領取試用點數，及 Web／iOS 差異",
+        "試用點數適用模型、是否等同舊 FAQ 的 Photon 或 Ray3.14 draft",
+        "試用點數數量、有效期、是否重置、免費佇列時間",
         "ToS的Free Use是否會更新或移除",
         "台灣帳戶與服務可用性"
       ],
@@ -56703,21 +56768,21 @@
       "savings_usd": null,
       "valuation_scenario": null,
       "cancellation": "若另外購買訂閱，Web由Manage Subscription／Stripe取消、iOS由App Store取消；法律條款要求最遲期滿前一天收到取消。刪帳號不能取代取消訂閱。",
-      "usable_duration": "未公布免費月額或新戶固定額度；FAQ標示個人用途。",
-      "access_risk": "主要風險是三份官方文件互相矛盾：主定價無Free、FAQ仍列Free、ToS用未定義的Free Use。即使能免費生成，也非商用且帶浮水印；升級不追溯更改舊免費產出授權，亦不宜上傳機密素材。",
+      "usable_duration": "公開文案未列試用點數效期或固定發放週期。舊 Free FAQ 標示個人用途。",
+      "access_risk": "官網現行試用點數文案未交代訂閱、領取與授權細則。舊 FAQ 對 Free 產出列個人用途與浮水印，其適用範圍待核。",
       "discovered_at": "2026-10-25T09:20:00+08:00",
       "announcement_at": null,
       "previous_limit": null,
-      "review_cadence": "monthly_or_new_signal",
-      "next_review_at": "2027-01-16T06:10:35+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T08:10:00+08:00",
       "priority": "watch",
       "vpn_research": {
         "status": "not_verified",
         "additional_cost_usd": null,
         "eligibility_note": "換IP不授予居住、付款或帳戶資格；未操作VPN或推薦繞限制。"
       },
-      "verification_scope": "2026-11-16T06:10:35+08:00 重讀 Luma 主定價、Payments FAQ與ToS：主定價無Free、FAQ仍列Free生成、ToS用未定義Free Use且不保證美國以外可用。未登入、未生成、未核台灣帳戶與法律。",
-      "cost_note": "公開主定價無Free方案；免費生成是否對新戶開放及免費月額均為null，不把Plus付費10,000點配置給Free。Dream Machine訂閱點數不適用API。"
+      "verification_scope": "2026-11-25 台北時間局部複核 Luma 11/19 產品說明、主定價、網頁產品入口與 Apple 台灣上架。查到試用點數文案及免費下載標示，未核點數發放、實際生成、付款與台灣帳戶。",
+      "cost_note": "網頁主定價只列付費及商業方案。台灣 App Store 的「免費」指下載價格。試用點數、是否須先訂閱或綁卡及月額留待查證。訂閱與 API 點數分開。"
     },
     {
       "id": "raycast-student-pro-discount",
@@ -69552,8 +69617,8 @@
     },
     {
       "id": "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
-      "title": "AutoClaw 週福利：11/23–11/29 登入領 50M Tokens（M11W4 本期進行中）",
-      "summary": "M11W4 官方公告於 2026-11-20 發布，活動期間為 2026-11-23 00:00 至 11/29 23:59（UTC+8）。登入領取額度降為 50M Tokens（5,000 credits），每帳戶限領一次，獎勵於 11/29 23:59（UTC+8）到期不結轉。前一期 M11W3（100M Tokens）已於 2026-11-22 23:59 截止。未登入、未實測領取。台灣帳號資格與一般條款 VI.2 非商業限制仍未解除。",
+      "title": "AutoClaw 週福利 M11W4：中英文公告額度不同，11/29 到期",
+      "summary": "AutoClaw 11/20 的 M11W4 英文公告列 50M Tokens（5,000 credits），中文公告列 100M Tokens（10,000 積分）。兩頁都列 11/23 00:00 至 11/29 23:59（UTC+8）、每帳戶一次，獎勵同時到期。公告未說明哪種帳戶適用哪一個額度，台灣實際入帳待核。",
       "categories": [
         "FREE",
         "HIGH-QUOTA",
@@ -69580,8 +69645,8 @@
       "valuation_scenario": null,
       "cancellation": "點數共同到期；公告未載自動續訂安排。若另購訂閱，須依付款協議及一般條款處理。",
       "usable_duration": "2026-11-23 00:00至11-29 23:59（UTC+8）；每期獎勵於該期結束時各自到期，不結轉。",
-      "access_risk": "本期 M11W4 的點數於 11/29 23:59（UTC+8）到期。非商業限制沿用較早核讀的一般條款 VI.2；台灣資格與領取介面待核。",
-      "verified_at": "2026-11-24T17:09:33+08:00",
+      "access_risk": "同一期中英文活動額度不同，適用口徑與台灣入帳待核。兩版本獎勵均於 11/29 23:59（UTC+8）到期。一般條款 VI.2 的非商業限制沿較早證據。",
+      "verified_at": "2026-11-25T08:11:08+08:00",
       "discovered_at": "2026-11-07T13:05:48+08:00",
       "announcement_at": "2026-11-06T17:12:19+08:00",
       "previous_limit": null,
@@ -69598,12 +69663,12 @@
         "taiwan_note": "Unknown：UTC+8 與台灣相同只證明時間換算，不能證明台灣帳戶、IP、門號或付款資格。"
       },
       "unknowns": [
-        "登入後是否顯示本期 M11W4 的 50M 領取入口、是否提前發完（公告未載總名額）",
+        "中英文額度按何種帳戶或地區適用、登入後顯示及實際入帳、是否提早發完",
         "台灣帳戶註冊、IP、門號與付款資格",
         "需卡、最低儲值及各模型點數換算",
         "首頁新戶贈點與每期贈點是否疊加，後續各期是否沿用同一領取流程"
       ],
-      "verification_scope": "2026-11-24 台北時間局部複核。英文官方索引已列 M11W4，並核對活動公告的點數、一次限制與到期。台灣帳務、領取畫面及下期未核。",
+      "verification_scope": "2026-11-25 台北時間局部複核 M11W4 中英文官方正文的點數、每帳戶一次及到期。台灣資格、實際入帳與非商業限制本輪未實測或重核。",
       "sources": [
         {
           "url": "https://autoclaw.z.ai/blog/news/M11W4/",
@@ -69666,6 +69731,22 @@
           "scope": "本期額度、領取限制及截止",
           "evidence": "11/20 官方公告列活動 11/23 00:00 至 11/29 23:59（UTC+8），每帳戶一次 50M Tokens／5,000 Credits，獎勵同時到期。 較早紀錄（2026-11-24T01:11:49+08:00）：公告列 11/23 00:00 至 11/29 23:59 UTC+8，50M Tokens（5,000 Credits），每帳戶限領一次，獎勵同時到期。",
           "accessed_at": "2026-11-24T17:09:28+08:00"
+        },
+        {
+          "url": "https://autoclaw.z.ai/en/blog/news/M11W4/",
+          "label": "AutoClaw M11W4 英文",
+          "scope": "英文額度、每帳戶限制與截止",
+          "evidence": "同一期活動列 50 million Tokens（5,000 credits），每帳戶一次，11/29 23:59（UTC+8）到期。",
+          "accessed_at": "2026-11-25T08:10:51+08:00",
+          "announcement_at": "2026-11-20"
+        },
+        {
+          "url": "https://autoclaw.z.ai/cn/blog/news/M11W4/",
+          "label": "AutoClaw M11W4 中文",
+          "scope": "中文額度、每帳戶限制與截止",
+          "evidence": "同一期活動正文列 100M Tokens（10,000 積分），每帳戶一次，11/29 23:59（北京時間）到期。沒有說明中英文額度按何種帳戶適用。",
+          "accessed_at": "2026-11-25T08:11:08+08:00",
+          "announcement_at": "2026-11-20"
         }
       ],
       "record_type": "watchlist",
@@ -69674,13 +69755,14 @@
         "additional_cost_usd": null,
         "eligibility_note": "VPN僅是網路情境；不授予身分、居住、門號或帳單資格。未推薦或操作跨區繞限制。"
       },
-      "status": "conditional",
+      "status": "conflicting_official_usage_claims",
       "setup_cost_basis": "公告僅載登入領取活動獎勵；未確認完整流程費用、免卡或付款協議。",
       "priority_score": null,
       "priority_tier": null,
       "priority_note": "非機會紀錄（政策/待覆核），未評級",
       "legal_status": "not_verified",
-      "cost_note": "不可宣稱已核實免卡、零帳單風險或無國別限制；第三方API不在贈點承諾內。"
+      "cost_note": "不可宣稱已核實免卡、零帳單風險或無國別限制；第三方API不在贈點承諾內。",
+      "quota_details": "同一期公開數字：英文 50M Tokens／5,000 credits，中文 100M Tokens／10,000 積分。按帳戶、地區或版本適用的額度未公布。"
     },
     {
       "id": "agentset-free-thousand-pages-tenk-monthly-retrievals",
@@ -90352,7 +90434,9 @@
       "expiry": {
         "date": "2026-12-03T07:59:00+08:00",
         "text": "已加入者的最終交件截止。"
-      }
+      },
+      "last_review_attempt_at": "2026-11-25T08:10:49+08:00",
+      "last_review_attempt_reason": "Kaggle 評測公告的網頁讀取無正文，直接 HTTP 僅回頁面外殼，討論索引也無可讀回覆。官方規約只有通用終件選取規則，未能核對待評作品適用。維持 11/25 12:00 回查。"
     },
     {
       "id": "kaggle-neurips-2026-smart-buildings-competition",
@@ -99701,15 +99785,15 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "benefit_cost_ratio": null,
-      "verified_at": "2026-11-24T09:09:38+08:00",
+      "verified_at": "2026-11-25T08:10:50+08:00",
       "discovered_at": "2026-11-24T09:08:22+08:00",
-      "announcement_at": null,
+      "announcement_at": "2026-09-14",
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T09:00:00+08:00",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
       "deadline_at": "2026-11-29",
       "eligibility": {
         "service_availability": "線上中文工作坊，分享 Claude AI 在大學工程數學課堂的實際經驗。",
-        "account_eligibility": "主辦表單邀高等教育機構教師及博士生；校方活動頁另列教職員、學生、校友與其他。",
+        "account_eligibility": "主辦表單邀請高教教師及博士生，職稱欄另可填博士後研究員、教學助理或其他。較廣對象的受理須由主辦認定。",
         "billing_country": "校方活動頁明列免費報名。",
         "identity_residency": "公開表單未列國籍或居住條件；個別受理依主辦。",
         "terms_restrictions": "主辦表單載活動錄影拍照及影像公開使用聲明，並列 11/30 發活動通知。",
@@ -99720,7 +99804,7 @@
         "剩餘名額及校方活動頁較廣對象的個別受理",
         "活動回放是否會開放"
       ],
-      "verification_scope": "2026-11-24 實讀臺師大校方第三場活動資訊與正式報名表，核對課程語言、免費、目標對象與收件日期。",
+      "verification_scope": "2026-11-25 台北時間局部複核教發中心正式公告日期、第三場報名表職稱選項、日期級截止及通知日。實際受理與名額待核。",
       "sources": [
         {
           "url": "https://pr.ntnu.edu.tw/chirpy/ntnu_event.php?event=10782&redirect=true",
@@ -99735,6 +99819,21 @@
           "evidence": "表單列 11/29 報名截止、11/30 發活動通知，邀請高等教育機構教師與博士生，說明會錄影、拍攝及公開利用。未填寫或送出。",
           "accessed_at": "2026-11-24T09:09:38+08:00",
           "label": "臺師大教發中心｜第三場表單"
+        },
+        {
+          "url": "https://forms.gle/68q8EsRqhZwEMpn6A",
+          "label": "臺師大教發中心｜第三場表單",
+          "scope": "報名對象、職稱選項與日期",
+          "evidence": "表單公告 11/29 截止、11/30 發通知，職稱含博士後研究員、教學助理、其他。實際受理未測。",
+          "accessed_at": "2026-11-25T08:09:51+08:00"
+        },
+        {
+          "url": "https://ctld.ntnu.edu.tw/活動公告與報名/30192",
+          "label": "臺師大教發中心正式公告",
+          "scope": "活動發布日期與第三場表單連結",
+          "evidence": "教發中心頁標示發布時間為 2026-09-14 10:50:40，列 12/3 10:00–11:30 第三場及其表單。",
+          "accessed_at": "2026-11-25T08:10:50+08:00",
+          "announcement_at": "2026-09-14"
         }
       ],
       "priority_tier": "S",
@@ -99810,7 +99909,7 @@
     {
       "id": "nycu-mol-semiconductor-ai-pretraining-165782-2026",
       "title": "陽明交大半導體與 AI 職前班第 06 期｜一般自付 NT$12,500",
-      "summary": "陽明交大與勞動部桃竹苗分署第 06 期職前班，11/27 10:00 截止，12/2 筆試及口試，甄選 40 人。一般學員自付 NT$12,500，符合免負擔身分並檢具證明者可免自付。12/14 起安排新竹實體或遠距課程。",
+      "summary": "陽明交大與勞動部桃竹苗分署第 06 期職前班，11/27 10:00 截止，12/2 筆試及口試，甄選 40 人。一般學員自付 NT$12,500，符合免負擔身分者可依簡章檢具證明。報名時尚在保可走專案管道，最晚 12/1 退保並在甄試當天帶退保證明。",
       "record_type": "opportunity",
       "status": "conditional",
       "verification": "Official",
@@ -99833,15 +99932,15 @@
       "usable_benefit_usd": null,
       "savings_usd": null,
       "benefit_cost_ratio": null,
-      "verified_at": "2026-11-24T09:12:57+08:00",
+      "verified_at": "2026-11-25T08:09:55+08:00",
       "discovered_at": "2026-11-24T09:09:40+08:00",
       "announcement_at": null,
       "review_cadence": "daily",
-      "next_review_at": "2026-11-25T09:00:00+08:00",
+      "next_review_at": "2026-11-26T09:00:00+08:00",
       "deadline_at": "2026-11-27T10:00:00+08:00",
       "eligibility": {
         "service_availability": "新竹陽明交大實體及遠距，含半導體與 AI 應用，共 231 小時。",
-        "account_eligibility": "15 歲以上的合資格失待業人士，須經筆試及口試。一般管道須於報名時已退保。甄試前及參訓期間失業而報名時尚在保者，簡章另列專案管道。",
+        "account_eligibility": "合資格失待業人士須經筆試及口試。一般管道報名時須退保。報名時尚在保者可填簡章所列專案表，最晚於甄試前一日（12/1）退保，並於 12/2 甄試攜帶退保證明。",
         "billing_country": "一般總訓練費 NT$67,500，政府負擔 NT$55,000，學員自付 NT$12,500。符合免負擔身分須依簡章提供證明。",
         "identity_residency": "面向合資格失待業國民，簡章另列新住民等特定身分類別需提供證明。",
         "terms_restrictions": "一般申請須有台灣就業通會員；非自願離職者須依簡章先取得公立就業服務機構推介。",
@@ -99849,9 +99948,10 @@
       },
       "unknowns": [
         "個別收件、甄試結果及免負擔身分的認定",
-        "招生簡章同列百分比與分項金額，比例無法精確對應，採官方班級分項金額"
+        "招生簡章同列百分比與分項金額，比例無法精確對應，採官方班級分項金額",
+        "專案表未另列停收時間，個別應試資格、收件及證明認定依校方。"
       ],
-      "verification_scope": "2026-11-24 實讀勞動部課程明細、陽明交大班別概要與招生簡章，核對本班截止、甄試、費用、免負擔與退費適用範圍。",
+      "verification_scope": "2026-11-25 台北時間局部複核，對照官方班級、招生簡章及簡章附的專案表，核對一般報名截止、甄試日期、公開人數及專案退保證明。個別收件、錄取與資格待核。",
       "sources": [
         {
           "url": "https://base.stem.lasercenter.nycu.edu.tw/about/class-pre-training",
@@ -99873,13 +99973,28 @@
           "evidence": "費用段落列一般自付 NT$12,500，憑符合規定的特定失業者身分文件得免繳。首頁列有投保紀錄且已退保待業的失業者全免，詳細認定依簡章身分規定。一般管道須是退保失業者，在保期間另有專案報名條件。",
           "accessed_at": "2026-11-24T09:12:57+08:00",
           "label": "陽明交大｜第 06 期招生簡章"
+        },
+        {
+          "url": "https://forms.gle/E1cLkbK2XyDvECDE8",
+          "label": "陽明交大｜第 06 期專案報名表",
+          "scope": "在保申請者退保時限及甄試證明",
+          "evidence": "表單列最晚在甄試前一天完成勞保退保，甄試日帶退保證明。依同班 12/2 甄試換算為 12/1。",
+          "accessed_at": "2026-11-25T08:09:13+08:00"
+        },
+        {
+          "url": "https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782",
+          "label": "職前訓練網｜班號 165782",
+          "scope": "當期一般報名人數、招生及截止",
+          "evidence": "11/25 08:09 公開頁列一般訓練人數 40、目前一般報名 82、一般報名到 11/27 10:00。",
+          "accessed_at": "2026-11-25T08:09:55+08:00",
+          "deadline_at": "2026-11-27T10:00:00+08:00"
         }
       ],
       "priority_tier": "S",
       "priority_score": 16.8,
       "cost_note": "費用為新臺幣。這期公示一般自付 NT$12,500，政府負擔 NT$55,000，總費用為 NT$67,500。特定身分可按簡章免繳。",
       "usable_duration": "2026/12/14–2027/02/26，合計 231 小時。2026/12/02 甄試。",
-      "access_risk": "公開頁查閱時列一般報名 76 人、招生 40 人，須甄試錄取。一般自付與免負擔資格以本期簡章及個案認定為準。",
+      "access_risk": "公開班級頁 11/25 08:09 列一般報名 82 人、招生 40 人。專案管道核驗退保證明，合資格及錄取依個案認定。",
       "limited_confirmed": true,
       "cancellation": "簡章列已繳費者須於開訓前提出退費；逾期除班次停辦外不予退費。",
       "priority_note": "官方來源·需符合條件·費用未知·台灣Yes·時間未知·有資格門檻"
@@ -102287,35 +102402,116 @@
       "priority_score": 19.6,
       "priority_tier": "S",
       "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
+    },
+    {
+      "id": "nchu-ai-chatbot-research-workshop-2026",
+      "title": "中興大學 Chatbot 研究工作坊｜限校內，11/28 中午或額滿截止",
+      "summary": "中興大學管理學院與科管所 12/5 開辦免費線上工作坊，限中興學生及教職員。表單列 11/28 12:00 或額滿停收，課程 13:10 開始。校方公告列 16:10 結束，表單列 16:00。課程涵蓋 ChatGPT、Gemini 與 NotebookLM 的研究應用。",
+      "status": "conditional",
+      "record_type": "opportunity",
+      "verification": "Official",
+      "legal_status": "not_verified",
+      "taiwan": "Yes",
+      "regions": [
+        "Taiwan"
+      ],
+      "categories": [
+        "FREE",
+        "QUALIFICATION"
+      ],
+      "views": [
+        "free",
+        "education"
+      ],
+      "usage_type": "一次性線上研究工作坊",
+      "quota_classification": "UNKNOWN",
+      "setup_cost_usd": 0,
+      "recurring_cost_usd": 0,
+      "effort_minutes_max": null,
+      "usable_benefit_usd": null,
+      "savings_usd": null,
+      "valuation_scenario": null,
+      "benefit_cost_ratio": null,
+      "setup_cost_basis": "主辦公開表單寫講座完全免費，無須支付費用。",
+      "usable_duration": "2026/12/5 12:50 開始簽到、13:10 正式開始。表單列至 16:00，主辦公告列至 16:10。",
+      "access_risk": "額滿會提前關表單。表單公開可讀，實際收件、名額與會議連結待主辦確認。兩份官方來源的結束時間相差 10 分鐘。",
+      "discovered_at": "2026-11-25T08:10:29+08:00",
+      "verified_at": "2026-11-25T08:11:09+08:00",
+      "announcement_at": "2026-11-12",
+      "deadline_at": "2026-11-28T12:00:00+08:00",
+      "review_cadence": "daily",
+      "next_review_at": "2026-11-26T08:10:00+08:00",
+      "eligibility": {
+        "service_availability": "中興大學管理學院與科管所共同辦理線上工作坊，報名成功後以信件寄會議連結。",
+        "account_eligibility": "限中興大學學生和教職員。表單說明不限碩專班。",
+        "billing_country": "主辦表單列免費。",
+        "identity_residency": "依中興大學在校身分受理。",
+        "terms_restrictions": "自備可連線電腦及有權使用的練習材料。主辦要求避免上傳未授權資料、個資或機密。",
+        "taiwan_note": "Yes：具中興大學學生或教職員身分者可依主辦流程申請。"
+      },
+      "unknowns": [
+        "實際受理、名額總數與是否已額滿",
+        "12/5 究竟 16:00 或 16:10 結束",
+        "實作工具是否要求特定方案及活動回放"
+      ],
+      "verification_scope": "2026-11-25 台北時間局部核對校方公告、公開表單的費用、校內資格、時間、截止與停收條件。兩來源結束時間不同；未送件。",
+      "sources": [
+        {
+          "url": "https://www2.nchu.edu.tw/news-detail/id/62847",
+          "label": "中興大學主辦公告",
+          "scope": "場次、校內資格、線上形式與連結",
+          "evidence": "校方列 12/5 13:10–16:10，對象為本校教職員及學生，線上辦理。頁面列 11/12 發布、11/19 更新。",
+          "accessed_at": "2026-11-25T08:11:09+08:00",
+          "announcement_at": "2026-11-12",
+          "source_updated_at": "2026-11-19"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSelT4ReAVMLNP7S8y4p7mIoPurXufyGPcdWHNvK5VsxwFaugg/viewform",
+          "label": "中興大學主辦表單",
+          "scope": "免費、名額限制、截止及開始時間",
+          "evidence": "表單明列免費、限中興學生及教職員、11/28 中午或額滿截止。12/5 列 12:50 簽到、13:10–16:00。",
+          "accessed_at": "2026-11-25T08:10:29+08:00",
+          "deadline_at": "2026-11-28T12:00:00+08:00"
+        }
+      ],
+      "priority_score": 19.6,
+      "priority_tier": "S",
+      "priority_note": "官方來源·需符合條件·免費·台灣Yes·時間未知·有資格門檻"
     }
   ],
-  "latest_research_at": "2026-11-25T07:13:54+08:00",
+  "latest_research_at": "2026-11-25T08:14:31+08:00",
   "last_research_run": {
-    "started_at": "2026-11-25T07:06:48+08:00",
-    "completed_at": "2026-11-25T07:13:54+08:00",
+    "started_at": "2026-11-25T08:06:39+08:00",
+    "completed_at": "2026-11-25T08:14:31+08:00",
     "reviewed_ids": [
-      "ai21-trial-duration-conflict",
-      "gamma-free-credits-taiwan-unverified",
-      "memobase-free-credit-operation-conflict",
-      "openalex-free-daily-api-budget"
+      "airtop-free-monthly-thousand-signup-bonus-conflict",
+      "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+      "luma-dream-machine-free-generation-watchlist",
+      "ntnu-emi-ai-engineering-math-workshop-2026",
+      "nycu-mol-semiconductor-ai-pretraining-165782-2026",
+      "relevance-free-availability-conflict"
     ],
     "new_ids": [
-      "aicollective-taipei-lovable-office-hours-2026",
-      "nthu-taica-key-technology-ai-public-mooc-2026"
+      "nchu-ai-chatbot-research-workshop-2026"
     ],
-    "attempted_failed_ids": [],
+    "attempted_failed_ids": [
+      "kaggle-google-gemma-4-developer-agent-competition"
+    ],
     "unreviewed_existing_count": 1234
   },
-  "generated_at": "2026-11-25T07:13:54+08:00",
+  "generated_at": "2026-11-25T08:14:31+08:00",
   "reviewed_ids": [
-    "ai21-trial-duration-conflict",
-    "gamma-free-credits-taiwan-unverified",
-    "memobase-free-credit-operation-conflict",
-    "openalex-free-daily-api-budget"
+    "airtop-free-monthly-thousand-signup-bonus-conflict",
+    "autoclaw-weekly-perk-november-nine-hundred-million-tokens",
+    "luma-dream-machine-free-generation-watchlist",
+    "ntnu-emi-ai-engineering-math-workshop-2026",
+    "nycu-mol-semiconductor-ai-pretraining-165782-2026",
+    "relevance-free-availability-conflict"
   ],
-  "attempted_failed_ids": [],
+  "attempted_failed_ids": [
+    "kaggle-google-gemma-4-developer-agent-competition"
+  ],
   "new_ids": [
-    "aicollective-taipei-lovable-office-hours-2026",
-    "nthu-taica-key-technology-ai-public-mooc-2026"
+    "nchu-ai-chatbot-research-workshop-2026"
   ]
 }

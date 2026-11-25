@@ -7824,3 +7824,30 @@ Fireworks 先前引用的模型發布路徑無法讀取，採用實讀的發布�
 ### 品質與發布
 
 由基準與實際 JSON 差異計算批次、README 及下次佇列基準。保留全部既有 ID、首次收錄時間及來源網址。既有政策歷史 3,051 筆逐筆保留，新增 6 筆。本輪品質修正集中於卡片的實際入場條件、用量及來源適用範圍。本機 `make check`、`make check-ui` 與 Chrome 390px／1280px 批次卡片皆通過。公開驗收以同一提交的 Frontend QA、Pages、公開資產逐位元比對和 390px／1280px 批次卡片核對為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
+
+## 2026-11-25 08:06–2026-11-25 08:14 Asia/Taipei｜N=1,240 · R=6 · A=1 · U=1,234 · attempted=1
+
+基準 dc77ebd。工作樹乾淨，主線與遠端一致，無開放 PR 或既有維護鎖。前版 Frontend QA 與 Pages 成功。本輪持有維護鎖。起始佇列有 1,123 筆可行動或待定、0 筆到複核點、29 筆七天內到截止點（15 筆冷卻），全庫有 30 筆至少一個截止點已過，含歷史。可行動紀錄的到期複核、七日內截止、最近追查失敗、暫時不限量及 ID 或狀態標記衝突，高風險聯集共 103 筆。
+
+三位唯讀研究代理使用 GPT-6.2 Sol high，分查臨近截止、舊案矛盾、新機會。內建代理工具未提供 Gemini 3.8 Flash，主代理沿用會話配置。優先處理迫近截止與有效期中的額度衝突，舊案只納入能修正讀者判斷的新證據。東華掃未見新停收或延展訊號，沿用原排程。新線索按專案代碼、URL、主辦、場次及名稱比對機會和歷史。
+
+### 證據與變更
+
+- AutoClaw M11W4 英文 50M Tokens／5,000 credits，中文 100M／10,000。每帳戶一次及 11/29 23:59 UTC+8 到期一致，適用帳戶未公布，台灣入帳仍待核。 [英文公告](https://autoclaw.z.ai/en/blog/news/M11W4/) [中文公告](https://autoclaw.z.ai/cn/blog/news/M11W4/)
+- Luma 11/19 更新說明列各方案含試用點數，產品頁有免費試用入口，主定價未列獨立 Free 或細則。Apple 台灣可見原廠 App 免費下載及內購。試用金額、效期、綁卡、適用模型與台灣新戶均待核。 [產品說明](https://lumalabs.ai/llm-info) [主定價](https://lumalabs.ai/pricing) [產品入口](https://lumalabs.ai/app) [Apple 台灣](https://apps.apple.com/tw/app/luma-dream-machine/id6478852867)
+- Airtop 定價改列新專案預告，殘留免費方案及舊 Portal 連結。DNS 查詢沒有 A 答案，直接存取亦無法解析。舊通知只支持停服前既有用戶可登入的說明，停服後管理、匯出、API 與退款待核。 [定價](https://www.airtop.ai/pricing) [停服通知歷史網址](https://portal.airtop.ai/shutdown) [DNS 查詢](https://dns.google/resolve?name=portal.airtop.ai&type=A)
+- Relevance AI 文件確認 Free 已退役。付費方案內文的 US$20 與 US$70 按公開加購單價試算，分別對應方案表的 10,000 與 35,000 點，內含額度正式換算仍待核。 [定價文件](https://relevanceai.com/docs/get-started/pricing) [帳務文件](https://relevanceai.com/docs/admin/subscriptions/plans)
+- 陽明交大第 06 期一般報名截止 11/27 10:00。另有在保者專案申請，最晚 12/1 退保，12/2 甄試帶證明。公開頁 11/25 08:09 顯示一般報名 82 人、招生 40 人。 [招生簡章](https://base.stem.lasercenter.nycu.edu.tw/storage/backend/courses/cca4f5a4f126fa9cc697e4d9dc026e1a.pdf) [專案報名表](https://forms.gle/E1cLkbK2XyDvECDE8) [勞動部班級頁](https://its.taiwanjobs.gov.tw/Course/Detail?ID=165782)
+- 臺師大正式公告發布於 9/14。第三場表單職稱選項含博士後研究員、教學助理及其他；主辦邀請對象仍以高教教師及博士生為主。 [主辦公告](https://ctld.ntnu.edu.tw/活動公告與報名/30192) [第三場表單](https://forms.gle/68q8EsRqhZwEMpn6A)
+- 中興大學新案為 12/5 Chatbot 研究工作坊，限本校教職員及學生，免費，11/28 12:00 或額滿截止。主辦公告與公開表單各列 16:10 與 16:00 結束。 [校方公告](https://www2.nchu.edu.tw/news-detail/id/62847) [公開表單](https://docs.google.com/forms/d/e/1FAIpQLSelT4ReAVMLNP7S8y4p7mIoPurXufyGPcdWHNvK5VsxwFaugg/viewform)
+- Gemma 待評作品的終件選取證據未讀到。讀取器無正文，直接 HTTP 回前端外殼，公開討論索引也無可讀回覆。通用規約未處理此例，保留原核實時間。 [評測公告](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [競賽規約](https://www.kaggle.com/competitions/gemma-4-developer-agent/rules)
+
+### 下一輪
+
+- 11/25 09:00 接清華 AOCAI 文件、Code With AI、CyLeague、政大等前輪佇列。12:00 查 Gemma 待評作品選終件，以可讀的主辦公告或答覆為準。18:00 查東華 12/5 兩份表單停收或延展。19:00 接 Akamai Rise 的既定回查。 [Gemma](https://www.kaggle.com/competitions/gemma-4-developer-agent/discussion/760471) [東華](https://icanfly.ndhu.edu.tw/p/404-1162-264042.php) [Akamai Rise](https://www.akamai.com/cloud/start-ups/rise)
+- 11/25 17:00 追 AutoClaw 官方跨語系適用與更正。11/26 08:10 查 Luma 試用細則及中興報名狀態、兩處結束時刻。11/26 09:00 查陽明交大專案收件、臺師大實際對象與截止時刻，並接前輪清華磨課師及 Lovable 追查。Airtop、Relevance AI 的舊途徑依新官方消息追蹤。 [AutoClaw 中文](https://autoclaw.z.ai/cn/blog/news/M11W4/) [Luma](https://lumalabs.ai/pricing) [中興](https://docs.google.com/forms/d/e/1FAIpQLSelT4ReAVMLNP7S8y4p7mIoPurXufyGPcdWHNvK5VsxwFaugg/viewform) [陽明交大](https://forms.gle/E1cLkbK2XyDvECDE8) [臺師大](https://forms.gle/68q8EsRqhZwEMpn6A)
+- Firebase 11/26 02:05、Fabric 05:30、Fireflies 06:15、AI21 07:10、Gamma 與 Memobase 07:15 的追點沿前輪交接。本輪 AI 簡單學 12/1 有免費宣傳，公開票期與收件仍待核。輔大 34196 查讀時為 50／50 額滿，臺科大 12/8 主辦頁標額滿，暫列線索。臺大 Google AI、臺大 Local AI 與研華雲科大已有紀錄。 [AI 簡單學](https://www.accupass.com/event/2611220448431990581999) [輔大 34196](https://activity.dsa.fju.edu.tw/Activity.jsp?activityID=34196) [臺科大](https://ctld.ntust.edu.tw/p/404-1051-150806.php?Lang=zh-tw)
+
+### 品質與發布
+
+以基準及本輪資料差異推導批次與 README，原有穩定 ID、首次收錄時間、來源網址及 3,057 筆政策歷史均保留，追加 8 筆歷史。資料品質改善集中於額度適用、報名文件、舊入口與時效。本機 make check、make check-ui 與 Chrome 390px／1280px 批次卡片檢查均通過。發布驗收以同提交的 Frontend QA、Pages、公開資產位元組及批次卡片為準。 [GitHub Actions](https://github.com/RichardHan/ai-access-intelligence/actions)
